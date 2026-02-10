@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #0066CC;
+  --primary-dark: #c0191e;
+  --secondary: #1A1A1A;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --white: #ffffff;
+  --light-gray: #f9f9f9;
+  --border-color: #e5e5e5;
+
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+  --container-width: 1280px;
+  --header-height: 80px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 4px;
+  /* Slightly rounded, professional */
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(227, 30, 36, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+.section-padding {
+  padding: var(--spacing-xl) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+h2 {
+  font-size: 36px;
+  color: var(--secondary);
+}
+
+p {
+  color: var(--text-light);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Responsive Navigation */
+.mobile-menu-btn {
+  display: block;
+}
+
+.desktop-nav,
+.header-actions {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: block;
+  }
+
+  .header-actions {
+    display: block;
+  }
+
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .hero {
+    padding-top: 100px;
+    flex-direction: column-reverse;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .cta-group {
+    justify-content: center;
+  }
+}
+
+/* Dropdown Hover Logic */
+.nav-item-group:hover .submenu {
+  display: flex !important;
+  animation: fadeInDown 0.3s ease;
+}
+
+.submenu::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: transparent;
+  z-index: -1;
+}
+
+.submenu-item-group:hover .sub-submenu {
+  display: flex !important;
+}
+
+/* Modern Mega Menu Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Service Card Hover Effects */
+.mega-service-card:hover .card-bg-effect {
+  opacity: 1 !important;
+}
+
+.mega-service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.mega-service-card:hover .service-title {
+  color: var(--primary) !important;
+}
+
+.service-subitem:hover {
+  color: var(--primary) !important;
+  padding-left: 8px !important;
+}
+
+.service-subitem:hover .bullet {
+  transform: scale(1.5);
+}
+
+/* Smooth Scrolling for Mega Menu */
+.mega-menu-modern {
+  scroll-behavior: smooth;
+}
+
+.mega-menu-modern::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mega-menu-modern::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.mega-menu-modern::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.mega-menu-modern::-webkit-scrollbar-thumb:hover {
+  background: #0052a3;
+}
