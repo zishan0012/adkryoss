@@ -1,4 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+/* Main Navigation Backdrop Blur */
+.desktop-nav::after {
+  content: "";
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.desktop-nav:has(.nav-item-group:hover .mega-menu-modern:not([style*="display: none"]))::after {
+  opacity: 1;
+}
+
+.nav-item-group:hover~.desktop-nav::after {
+  opacity: 1;
+}
+
 
 :root {
   --primary: #0066CC;

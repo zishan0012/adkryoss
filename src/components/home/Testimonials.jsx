@@ -21,7 +21,7 @@ const Testimonials = () => {
                         {[1, 2, 3, 4, 5].map(i => <Star key={i} fill="currentColor" size={24} />)}
                     </div>
                     <p style={{ fontSize: '20px', fontStyle: 'italic', marginBottom: '30px', color: '#555' }}>
-                        "Adkross has been an incredible partner for us. Their SEO strategies have helped us increase our organic traffic by 300% in just one year. Highly recommended!"
+                        "Adkryoss has been an incredible partner for us. Their SEO strategies have helped us increase our organic traffic by 300% in just one year. Highly recommended!"
                     </p>
                     <h4 style={{ marginBottom: '5px' }}>Marketing Director</h4>
                     <p style={{ fontSize: '14px', color: '#999' }}>Leading EdTech Company</p>
