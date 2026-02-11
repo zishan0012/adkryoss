@@ -1,20 +1,39 @@
 import React from 'react';
-import Hero from '../components/home/Hero';
-import ClientStrip from '../components/home/ClientStrip';
-import ServicesSection from '../components/home/ServicesSection';
-import CaseStudies from '../components/home/CaseStudies';
-import Testimonials from '../components/home/Testimonials';
-import ContactCTA from '../components/home/ContactCTA';
-
+// import Hero from '../components/home/Hero';
+// import ClientStrip from '../components/home/ClientStrip';
+// import ServicesSection from '../components/home/ServicesSection';
+// import CaseStudies from '../components/home/CaseStudies';
+// import Testimonials from '../components/home/Testimonials';
+// import ContactCTA from '../components/home/ContactCTA';
+import HeroNewOld from '../components/home/HeroNewOld';
+import Clients from '../components/home/Clients';
+import ServicesTabs from '../components/home/ServicesTabs';
+import VideoSection from '../components/home/VideoSection';
+import TrafficGrowthSection from '../components/home/TrafficGrowthSection';
+import AwardsSection from '../components/home/AwardsSection';
+import CaseStudySection from '../components/home/CaseStudySection';
+import ClientTestimonials from '../components/home/ClientTestinomials';
+import SearchTrendsReports from './SearchTrendsReports';
+import LatestBlogs from '../components/home/LatestBlogs';
 const Home = () => {
     return (
         <div className="home-page">
-            <Hero />
+            {/* <Hero />
             <ClientStrip />
             <ServicesSection />
             <CaseStudies />
             <Testimonials />
-            <ContactCTA />
+            <ContactCTA /> */}
+            <HeroNewOld/>
+            <Clients/>
+            <ServicesTabs/>
+            <VideoSection/>
+            <TrafficGrowthSection/>
+            <AwardsSection/>
+            <CaseStudySection/>
+            <ClientTestimonials/>
+            <SearchTrendsReports/>
+            <LatestBlogs/>
         </div>
     );
 };
