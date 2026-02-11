@@ -46,7 +46,7 @@ const HeroSection = () => {
                 fontSize: "18px",
               }}
             >
-              We make sure you get found.
+              {/* We make sure you get found. */}
             </p>
 
             <h1
@@ -153,7 +153,7 @@ const HeroSection = () => {
 
 
 
-          
+
         </div>
       </div>
     </>
