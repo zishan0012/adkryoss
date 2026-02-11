@@ -66,7 +66,7 @@ const Footer = () => {
                                 { name: 'Digital Marketing', path: '/services/digital-marketing' },
                                 { name: 'App Marketing', path: '/services/app-marketing' },
                                 { name: 'Content Marketing', path: '/services/content-marketing' },
-                                { name: 'PPC/Paid Marketing', path: '/services/ppc' },
+                                { name: 'PPC/Paid Marketing', path: '/services/paid-marketing' },
                                 { name: 'Marketing Technology', path: '/services/martech' },
                                 { name: 'Web Designing & Development', path: '/services/web-design' }
                             ].map(service => (
@@ -167,6 +167,41 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
+
+                        <h3 style={{
+                            color: '#fff',
+                            fontSize: '18px',
+                            marginBottom: '20px',
+                            marginTop: '50px',
+                            fontWeight: '600'
+                        }}>Quick Links</h3>
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: '1fr 1fr',
+                            gap: '12px 30px'
+                        }}>
+                            {[
+                                { name: 'Blog', path: '/blog' },
+                                { name: 'FAQs', path: '/faqs' },
+                                { name: 'Web Stories', path: '/web-stories' },
+                                { name: 'Case Studies', path: '/work/case-study' },
+                                { name: 'Testimonial', path: '/work/testimonial' },
+                                { name: 'Portfolio', path: '/work/portfolio' },
+                                { name: 'Search Trends Report', path: '/search-trends' },
+                                { name: 'Digital Report Card', path: '/digital-report-card' },
+                                { name: 'BlogX', path: '/blogx' },
+                                { name: 'Contact Us', path: '/contact' }
+                            ].map(link => (
+                                <Link key={link.name} to={link.path} style={{
+                                    color: '#ccc',
+                                    fontSize: '14px',
+                                    transition: 'color 0.2s',
+                                    textDecoration: 'none'
+                                }} onMouseEnter={(e) => e.target.style.color = '#fff'} onMouseLeave={(e) => e.target.style.color = '#ccc'}>
+                                    {link.name}
+                                </Link>
+                            ))}
+                        </div>
                     </div>
 
                     {/* Column 5: Contact Info */}
@@ -208,40 +243,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Column 6: Quick Links */}
-                    {/* <div>
-                        <h3 style={{
-                            color: '#fff',
-                            fontSize: '18px',
-                            marginBottom: '20px',
-                            fontWeight: '600'
-                        }}>Quick Links</h3>
-                        <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px', listStyle: 'none', padding: 0 }}>
-                            {[
-                                { name: 'Blog', path: '/blog' },
-                                { name: 'FAQs', path: '/faqs' },
-                                { name: 'Web Stories', path: '/web-stories' },
-                                { name: 'Case Studies', path: '/work/case-study' },
-                                { name: 'Testimonial', path: '/testimonials' },
-                                { name: 'Portfolio', path: '/portfolio' },
-                                { name: 'Search Trends Report', path: '/search-trends' },
-                                { name: 'Digital Report Card', path: '/digital-report-card' },
-                                { name: 'BlogX', path: '/blogx' },
-                                { name: 'Contact Us', path: '/contact' }
-                            ].map(link => (
-                                <li key={link.name}>
-                                    <Link to={link.path} style={{
-                                        color: '#ccc',
-                                        fontSize: '14px',
-                                        transition: 'color 0.2s',
-                                        textDecoration: 'none'
-                                    }} onMouseEnter={(e) => e.target.style.color = '#fff'} onMouseLeave={(e) => e.target.style.color = '#ccc'}>
-                                        {link.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div> */}
+
 
                 </div>
 

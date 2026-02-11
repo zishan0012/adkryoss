@@ -154,6 +154,7 @@ const Header = () => {
                 { name: 'Ecommerce', path: '/industry/ecommerce' },
             ]
         },
+        { name: 'Partners', path: '/partners' },
         { name: 'Blog', path: '/blog' },
         { name: 'Contact', path: '/contact' },
     ];
@@ -207,7 +208,7 @@ const Header = () => {
                                 {item.subItems ? (
                                     <div className="nav-item-has-submenu" style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', height: '100%' }}>
                                         <Link to={item.path} style={{
-                                            fontWeight: '500',
+                                            fontWeight: '600',
                                             fontSize: '15px',
                                             color: 'var(--secondary)',
                                             display: 'flex',
@@ -228,28 +229,29 @@ const Header = () => {
                                                 boxShadow: '0 10px 40px rgba(0,0,0,0.15)',
                                                 borderRadius: '12px',
                                                 borderTop: '4px solid var(--primary)',
-                                                display: openDropdown === item.name ? 'block' : 'none',
+                                                display: openDropdown === item.name ? 'flex' : 'none',
+                                                flexDirection: 'column',
                                                 zIndex: 1001,
                                                 minWidth: 'auto',
                                                 width: '96vw',
                                                 maxWidth: '1400px',
-                                                maxHeight: '90vh',
-                                                overflowY: 'auto',
-                                                marginTop: '0'
+                                                maxHeight: 'calc(100vh - 100px)',
+                                                marginTop: '0',
+                                                overflow: 'hidden'
                                             }}>
-                                                {/* Category Tabs Row */}
+                                                {/* Category Tabs Row - Fixed Header */}
                                                 <div style={{
                                                     backgroundColor: '#fff',
                                                     padding: '20px 40px',
-                                                    borderBottom: '1px solid #f0f0f0'
+                                                    borderBottom: '1px solid #f0f0f0',
+                                                    flexShrink: 0
                                                 }}>
                                                     {/* Category Tabs Row (Row 1) */}
                                                     <div style={{
                                                         display: 'flex',
                                                         justifyContent: 'flex-start',
                                                         gap: '10px',
-                                                        flexWrap: 'wrap',
-                                                        marginBottom: '15px'
+                                                        flexWrap: 'wrap'
                                                     }}>
                                                         {item.subItems.map((sub) => (
                                                             <div
@@ -286,15 +288,19 @@ const Header = () => {
                                                             </div>
                                                         ))}
                                                     </div>
+                                                </div>
 
-                                                    {/* Sub-items Grid (2 Columns with Bullets) */}
+                                                {/* Sub-items Grid - Scrollable Content */}
+                                                <div style={{
+                                                    flex: 1,
+                                                    overflowY: 'auto',
+                                                    overflowX: 'hidden'
+                                                }}>
                                                     {item.subItems.find(sub => sub.name === activeCategory) && (
                                                         <div style={{
                                                             padding: '25px 40px',
                                                             backgroundColor: '#fff',
-                                                            minHeight: '250px',
-                                                            borderTop: '1px solid #f0f0f0',
-                                                            animation: 'fadeIn 0.3s ease'
+                                                            minHeight: '250px'
                                                         }}>
                                                             <div style={{
                                                                 display: 'grid',
@@ -398,7 +404,7 @@ const Header = () => {
                                     </div>
                                 ) : (
                                     <Link to={item.path} style={{
-                                        fontWeight: '500',
+                                        fontWeight: '600',
                                         fontSize: '15px',
                                         color: 'var(--secondary)',
                                         display: 'flex',
@@ -436,7 +442,9 @@ const Header = () => {
                     boxShadow: '0 5px 10px rgba(0,0,0,0.1)',
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: '15px'
+                    gap: '15px',
+                    maxHeight: 'calc(100vh - 80px)',
+                    overflowY: 'auto'
                 }}>
                     {navItems.map((item) => (
                         <div key={item.name}>

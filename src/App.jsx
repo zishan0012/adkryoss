@@ -92,6 +92,7 @@ import Education from './pages/industry/Education';
 import Ecommerce from './pages/industry/Ecommerce';
 
 // Standalone Pages
+import Partners from './pages/Partners';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import RequestQuote from './pages/RequestQuote';
@@ -202,6 +203,7 @@ function App() {
         <Route path="/industry/ecommerce" element={<Ecommerce />} />
 
         {/* ==================== STANDALONE ROUTES ==================== */}
+        <Route path="/partners" element={<Partners />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/request-quote" element={<RequestQuote />} />
