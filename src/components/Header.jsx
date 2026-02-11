@@ -5,9 +5,34 @@ import { Menu, X, ChevronDown, Phone, Search, Monitor, Smartphone, FileText, Mou
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeCategory, setActiveCategory] = useState("Search Engine Optimization");
+    const [openDropdown, setOpenDropdown] = useState(null);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const handleLinkClick = () => {
+        setOpenDropdown(null);
+    };
+
+    const getServiceIcon = (categoryName) => {
+        const iconProps = { size: 18, strokeWidth: 2 };
+        switch (categoryName) {
+            case 'Search Engine Optimization':
+                return <Search {...iconProps} />;
+            case 'Digital Marketing':
+                return <Monitor {...iconProps} />;
+            case 'App Marketing':
+                return <Smartphone {...iconProps} />;
+            case 'Content Marketing':
+                return <FileText {...iconProps} />;
+            case 'PPC/Paid Marketing':
+                return <MousePointerClick {...iconProps} />;
+            case 'MarTech / Data Analytics':
+                return <Database {...iconProps} />;
+            default:
+                return null;
+        }
     };
 
     const navItems = [
@@ -37,6 +62,7 @@ const Header = () => {
                         { name: 'White Label SEO Services', path: '/services/seo/white-label-seo-services' },
                         { name: 'HyperLocal Marketing', path: '/services/seo/hyperlocal-marketing' },
                         { name: 'AI SEO', path: '/services/seo/ai-seo' },
+                        { name: 'Agentic AI SEO', path: '/services/seo/agentic-ai-seo' },
                         { name: 'Ecommerce SEO', path: '/services/seo/ecommerce-seo' },
                         { name: 'Javascript SEO', path: '/services/seo/javascript-seo' },
                         { name: 'Multilingual SEO Services', path: '/services/seo/multilingual-seo-services' },
@@ -173,7 +199,11 @@ const Header = () => {
                                 position: item.name === 'Our Services' ? 'static' : 'relative',
                                 display: 'flex',
                                 height: '100%'
-                            }} className="nav-item-group">
+                            }}
+                                className="nav-item-group"
+                                onMouseEnter={() => item.subItems && setOpenDropdown(item.name)}
+                                onMouseLeave={() => setOpenDropdown(null)}
+                            >
                                 {item.subItems ? (
                                     <div className="nav-item-has-submenu" style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', height: '100%' }}>
                                         <Link to={item.path} style={{
@@ -183,7 +213,7 @@ const Header = () => {
                                             display: 'flex',
                                             alignItems: 'center',
                                             height: '100%'
-                                        }}>
+                                        }} onClick={handleLinkClick}>
                                             {item.name}
                                         </Link>
                                         <ChevronDown size={14} style={{ marginLeft: '4px', color: 'var(--secondary)' }} />
@@ -198,7 +228,7 @@ const Header = () => {
                                                 boxShadow: '0 10px 40px rgba(0,0,0,0.15)',
                                                 borderRadius: '12px',
                                                 borderTop: '4px solid var(--primary)',
-                                                display: 'none',
+                                                display: openDropdown === item.name ? 'block' : 'none',
                                                 zIndex: 1001,
                                                 minWidth: 'auto',
                                                 width: '96vw',
@@ -233,8 +263,18 @@ const Header = () => {
                                                                     backgroundColor: activeCategory === sub.name ? 'var(--primary)' : '#f5f5f5',
                                                                     border: '1px solid',
                                                                     borderColor: activeCategory === sub.name ? 'var(--primary)' : '#eee',
+                                                                    display: 'flex',
+                                                                    alignItems: 'center',
+                                                                    gap: '8px'
                                                                 }}
                                                             >
+                                                                <span style={{
+                                                                    display: 'flex',
+                                                                    alignItems: 'center',
+                                                                    color: activeCategory === sub.name ? '#fff' : '#666'
+                                                                }}>
+                                                                    {getServiceIcon(sub.name)}
+                                                                </span>
                                                                 <span style={{
                                                                     fontSize: '13px',
                                                                     fontWeight: '600',
@@ -272,6 +312,7 @@ const Header = () => {
                                                                         }}></div>
                                                                         <Link
                                                                             to={subSub.path}
+                                                                            onClick={handleLinkClick}
                                                                             style={{
                                                                                 color: '#444',
                                                                                 fontSize: '14.5px',
@@ -302,13 +343,13 @@ const Header = () => {
                                                 width: '220px',
                                                 padding: '10px 0',
                                                 borderRadius: '4px',
-                                                display: 'none',
+                                                display: openDropdown === item.name ? 'flex' : 'none',
                                                 flexDirection: 'column',
                                                 zIndex: 1001
                                             }}>
                                                 {item.subItems.map(sub => (
                                                     <div key={sub.name} style={{ position: 'relative' }} className="submenu-item-group">
-                                                        <Link to={sub.path} style={{
+                                                        <Link to={sub.path} onClick={handleLinkClick} style={{
                                                             display: 'flex',
                                                             alignItems: 'center',
                                                             justifyContent: 'space-between',
@@ -337,7 +378,7 @@ const Header = () => {
                                                                 zIndex: 1002
                                                             }}>
                                                                 {sub.subItems.map(subSub => (
-                                                                    <Link key={subSub.name} to={subSub.path} style={{
+                                                                    <Link key={subSub.name} to={subSub.path} onClick={handleLinkClick} style={{
                                                                         display: 'block',
                                                                         padding: '10px 20px',
                                                                         color: '#333',

@@ -3,13 +3,98 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 
-// Placeholder component for other pages
-const PlaceholderPage = ({ title }) => (
-  <div className="container" style={{ padding: '80px 0', textAlign: 'center' }}>
-    <h1 style={{ fontSize: '48px', color: 'var(--primary)', marginBottom: '20px' }}>{title}</h1>
-    <p style={{ fontSize: '20px', color: '#666' }}>This page is under construction as per the base structure plan.</p>
-  </div>
-);
+// Services Pages
+import Services from './pages/our-services';
+
+// SEO Services (18 pages)
+import SEO from './pages/our-services/seo';
+import SEOServices from './pages/our-services/seo/SEOServices';
+import EnterpriseSEO from './pages/our-services/seo/EnterpriseSEO';
+import SEOMigrationServices from './pages/our-services/seo/SEOMigrationServices';
+import VernacularSEOServices from './pages/our-services/seo/VernacularSEOServices';
+import WhiteLabelSEOServices from './pages/our-services/seo/WhiteLabelSEOServices';
+import HyperLocalMarketing from './pages/our-services/seo/HyperLocalMarketing';
+import AISEO from './pages/our-services/seo/AISEO';
+import AgenticAISEO from './pages/our-services/seo/AgenticAISEO';
+import EcommerceSEO from './pages/our-services/seo/EcommerceSEO';
+import JavascriptSEO from './pages/our-services/seo/JavascriptSEO';
+import MultilingualSEOServices from './pages/our-services/seo/MultilingualSEOServices';
+import SEOAudit from './pages/our-services/seo/SEOAudit';
+import GooglePenaltyRecovery from './pages/our-services/seo/GooglePenaltyRecovery';
+import LLMOptimization from './pages/our-services/seo/LLMOptimization';
+import TechnicalSEO from './pages/our-services/seo/TechnicalSEO';
+import LocalSEO from './pages/our-services/seo/LocalSEO';
+import LinkBuildingServices from './pages/our-services/seo/LinkBuildingServices';
+import SEOResellerServices from './pages/our-services/seo/SEOResellerServices';
+
+// Digital Marketing Services
+import DigitalMarketing from './pages/our-services/digital-marketing';
+import DigitalMarketingServices from './pages/our-services/digital-marketing/DigitalMarketingServices';
+import AffiliateMarketing from './pages/our-services/digital-marketing/AffiliateMarketing';
+import EmailMarketing from './pages/our-services/digital-marketing/EmailMarketing';
+import ORMServices from './pages/our-services/digital-marketing/ORMServices';
+import AIMarketing from './pages/our-services/digital-marketing/AIMarketing';
+import AgenticAI from './pages/our-services/digital-marketing/AgenticAI';
+import YoutubeMarketing from './pages/our-services/digital-marketing/YoutubeMarketing';
+
+// Content Marketing Services
+import ContentMarketing from './pages/our-services/content-marketing';
+import ContentMarketingServices from './pages/our-services/content-marketing/ContentMarketingServices';
+import GuestPosting from './pages/our-services/content-marketing/GuestPosting';
+import ContentWritingServices from './pages/our-services/content-marketing/ContentWritingServices';
+import DigitalPR from './pages/our-services/content-marketing/DigitalPR';
+import SEOCopywriting from './pages/our-services/content-marketing/SEOCopywriting';
+
+// Paid Marketing Services
+import PaidMarketing from './pages/our-services/paid-marketing';
+import PPCServices from './pages/our-services/paid-marketing/PPCServices';
+import MobileAdvertising from './pages/our-services/paid-marketing/MobileAdvertising';
+import AmazonAdvertising from './pages/our-services/paid-marketing/AmazonAdvertising';
+import PPCReseller from './pages/our-services/paid-marketing/PPCReseller';
+import SocialMediaAdvertising from './pages/our-services/paid-marketing/SocialMediaAdvertising';
+
+// App Marketing Services
+import AppMarketing from './pages/our-services/app-marketing';
+import ASOServices from './pages/our-services/app-marketing/ASOServices';
+import MobileAppMarketing from './pages/our-services/app-marketing/MobileAppMarketing';
+import AppCRO from './pages/our-services/app-marketing/AppCRO';
+
+// MarTech Services
+import MarTech from './pages/our-services/martech';
+import CROServices from './pages/our-services/martech/CROServices';
+import EcommerceCRO from './pages/our-services/martech/EcommerceCRO';
+import GA4Consulting from './pages/our-services/martech/GA4Consulting';
+import ShopifyCRO from './pages/our-services/martech/ShopifyCRO';
+import MartechServices from './pages/our-services/martech/MartechServices';
+import CDPServices from './pages/our-services/martech/CDPServices';
+import B2BCRO from './pages/our-services/martech/B2BCRO';
+
+// Company Pages
+import Company from './pages/company';
+import AboutUs from './pages/company/AboutUs';
+import Careers from './pages/company/Careers';
+import Awards from './pages/company/Awards';
+import PressReleases from './pages/company/PressReleases';
+import BestPlaceToWork from './pages/company/BestPlaceToWork';
+
+// Work Pages
+import Work from './pages/work';
+import Portfolio from './pages/work/Portfolio';
+import CaseStudy from './pages/work/CaseStudy';
+import Testimonial from './pages/work/Testimonial';
+
+// Industry Pages
+import Industry from './pages/industry';
+import BFSI from './pages/industry/BFSI';
+import B2B from './pages/industry/B2B';
+import Healthcare from './pages/industry/Healthcare';
+import Education from './pages/industry/Education';
+import Ecommerce from './pages/industry/Ecommerce';
+
+// Standalone Pages
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+import RequestQuote from './pages/RequestQuote';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -25,98 +110,101 @@ function App() {
     <Layout>
       <ScrollToTop />
       <Routes>
+        {/* Home */}
         <Route path="/" element={<Home />} />
-        {/* Company Subpages */}
-        <Route path="/company" element={<PlaceholderPage title="Company Overview" />} />
-        <Route path="/company/about-us" element={<PlaceholderPage title="About Us" />} />
-        <Route path="/company/careers" element={<PlaceholderPage title="Careers" />} />
-        <Route path="/company/awards" element={<PlaceholderPage title="Awards" />} />
-        <Route path="/company/press-releases" element={<PlaceholderPage title="Press Releases" />} />
-        <Route path="/company/best-place-to-work" element={<PlaceholderPage title="Best Place to Work" />} />
 
+        {/* ==================== COMPANY ROUTES ==================== */}
+        <Route path="/company" element={<Company />} />
+        <Route path="/company/about-us" element={<AboutUs />} />
+        <Route path="/company/careers" element={<Careers />} />
+        <Route path="/company/awards" element={<Awards />} />
+        <Route path="/company/press-releases" element={<PressReleases />} />
+        <Route path="/company/best-place-to-work" element={<BestPlaceToWork />} />
 
-        {/* Services Main Page */}
-        <Route path="/services" element={<PlaceholderPage title="Services" />} />
+        {/* ==================== SERVICES ROUTES ==================== */}
+        <Route path="/services" element={<Services />} />
 
-        {/* SEO Services */}
-        <Route path="/services/seo" element={<PlaceholderPage title="Search Engine Optimization" />} />
-        <Route path="/services/seo/seo-services" element={<PlaceholderPage title="SEO Services" />} />
-        <Route path="/services/seo/enterprise-seo" element={<PlaceholderPage title="Enterprise SEO" />} />
-        <Route path="/services/seo/seo-migration-services" element={<PlaceholderPage title="SEO Migration Services" />} />
-        <Route path="/services/seo/vernacular-seo-services" element={<PlaceholderPage title="Vernacular SEO Services" />} />
-        <Route path="/services/seo/white-label-seo-services" element={<PlaceholderPage title="White Label SEO Services" />} />
-        <Route path="/services/seo/hyperlocal-marketing" element={<PlaceholderPage title="HyperLocal Marketing" />} />
-        <Route path="/services/seo/ai-seo" element={<PlaceholderPage title="AI SEO" />} />
-        <Route path="/services/seo/ecommerce-seo" element={<PlaceholderPage title="Ecommerce SEO" />} />
-        <Route path="/services/seo/javascript-seo" element={<PlaceholderPage title="Javascript SEO" />} />
-        <Route path="/services/seo/multilingual-seo-services" element={<PlaceholderPage title="Multilingual SEO Services" />} />
-        <Route path="/services/seo/seo-audit" element={<PlaceholderPage title="SEO Audit" />} />
-        <Route path="/services/seo/google-penalty-recovery" element={<PlaceholderPage title="Google Penalty Recovery" />} />
-        <Route path="/services/seo/llm-optimization" element={<PlaceholderPage title="LLM Optimization" />} />
-        <Route path="/services/seo/technical-seo" element={<PlaceholderPage title="Technical SEO" />} />
-        <Route path="/services/seo/local-seo" element={<PlaceholderPage title="Local SEO" />} />
-        <Route path="/services/seo/link-building-services" element={<PlaceholderPage title="Link Building Services" />} />
-        <Route path="/services/seo/seo-reseller-services" element={<PlaceholderPage title="SEO Reseller Services" />} />
+        {/* SEO Services (18 pages) */}
+        <Route path="/services/seo" element={<SEO />} />
+        <Route path="/services/seo/seo-services" element={<SEOServices />} />
+        <Route path="/services/seo/enterprise-seo" element={<EnterpriseSEO />} />
+        <Route path="/services/seo/seo-migration-services" element={<SEOMigrationServices />} />
+        <Route path="/services/seo/vernacular-seo-services" element={<VernacularSEOServices />} />
+        <Route path="/services/seo/white-label-seo-services" element={<WhiteLabelSEOServices />} />
+        <Route path="/services/seo/hyperlocal-marketing" element={<HyperLocalMarketing />} />
+        <Route path="/services/seo/ai-seo" element={<AISEO />} />
+        <Route path="/services/seo/agentic-ai-seo" element={<AgenticAISEO />} />
+        <Route path="/services/seo/ecommerce-seo" element={<EcommerceSEO />} />
+        <Route path="/services/seo/javascript-seo" element={<JavascriptSEO />} />
+        <Route path="/services/seo/multilingual-seo-services" element={<MultilingualSEOServices />} />
+        <Route path="/services/seo/seo-audit" element={<SEOAudit />} />
+        <Route path="/services/seo/google-penalty-recovery" element={<GooglePenaltyRecovery />} />
+        <Route path="/services/seo/llm-optimization" element={<LLMOptimization />} />
+        <Route path="/services/seo/technical-seo" element={<TechnicalSEO />} />
+        <Route path="/services/seo/local-seo" element={<LocalSEO />} />
+        <Route path="/services/seo/link-building-services" element={<LinkBuildingServices />} />
+        <Route path="/services/seo/seo-reseller-services" element={<SEOResellerServices />} />
 
-        {/* Digital Marketing */}
-        <Route path="/services/digital-marketing" element={<PlaceholderPage title="Digital Marketing" />} />
-        <Route path="/services/digital-marketing/services" element={<PlaceholderPage title="Digital Marketing Services" />} />
-        <Route path="/services/digital-marketing/affiliate-marketing" element={<PlaceholderPage title="Affiliate Marketing" />} />
-        <Route path="/services/digital-marketing/email-marketing" element={<PlaceholderPage title="Email Marketing Services" />} />
-        <Route path="/services/digital-marketing/orm-services" element={<PlaceholderPage title="ORM Services" />} />
-        <Route path="/services/digital-marketing/ai-marketing" element={<PlaceholderPage title="AI Digital Marketing Services" />} />
-        <Route path="/services/digital-marketing/agentic-ai" element={<PlaceholderPage title="Agentic AI Digital Marketing" />} />
-        <Route path="/services/digital-marketing/youtube-marketing" element={<PlaceholderPage title="Youtube Video Marketing" />} />
+        {/* Digital Marketing Services */}
+        <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
+        <Route path="/services/digital-marketing/services" element={<DigitalMarketingServices />} />
+        <Route path="/services/digital-marketing/affiliate-marketing" element={<AffiliateMarketing />} />
+        <Route path="/services/digital-marketing/email-marketing" element={<EmailMarketing />} />
+        <Route path="/services/digital-marketing/orm-services" element={<ORMServices />} />
+        <Route path="/services/digital-marketing/ai-marketing" element={<AIMarketing />} />
+        <Route path="/services/digital-marketing/agentic-ai" element={<AgenticAI />} />
+        <Route path="/services/digital-marketing/youtube-marketing" element={<YoutubeMarketing />} />
 
-        {/* Content Marketing */}
-        <Route path="/services/content-marketing" element={<PlaceholderPage title="Content Marketing" />} />
-        <Route path="/services/content-marketing/services" element={<PlaceholderPage title="Content Marketing Services" />} />
-        <Route path="/services/content-marketing/guest-posting" element={<PlaceholderPage title="Guest Posting" />} />
-        <Route path="/services/content-marketing/writing-services" element={<PlaceholderPage title="Content Writing Services" />} />
-        <Route path="/services/content-marketing/digital-pr" element={<PlaceholderPage title="Digital PR" />} />
-        <Route path="/services/content-marketing/seo-copywriting" element={<PlaceholderPage title="SEO Copywriting" />} />
+        {/* Content Marketing Services */}
+        <Route path="/services/content-marketing" element={<ContentMarketing />} />
+        <Route path="/services/content-marketing/services" element={<ContentMarketingServices />} />
+        <Route path="/services/content-marketing/guest-posting" element={<GuestPosting />} />
+        <Route path="/services/content-marketing/writing-services" element={<ContentWritingServices />} />
+        <Route path="/services/content-marketing/digital-pr" element={<DigitalPR />} />
+        <Route path="/services/content-marketing/seo-copywriting" element={<SEOCopywriting />} />
 
-        {/* Paid Marketing */}
-        <Route path="/services/paid-marketing" element={<PlaceholderPage title="PPC/Paid Marketing" />} />
-        <Route path="/services/paid-marketing/ppc-services" element={<PlaceholderPage title="PPC Services" />} />
-        <Route path="/services/paid-marketing/mobile-advertising" element={<PlaceholderPage title="Mobile Advertising Services" />} />
-        <Route path="/services/paid-marketing/amazon-advertising" element={<PlaceholderPage title="Amazon Advertising" />} />
-        <Route path="/services/paid-marketing/ppc-reseller" element={<PlaceholderPage title="PPC Reseller Services" />} />
-        <Route path="/services/paid-marketing/social-media-advertising" element={<PlaceholderPage title="Social Media Advertising" />} />
+        {/* Paid Marketing Services */}
+        <Route path="/services/paid-marketing" element={<PaidMarketing />} />
+        <Route path="/services/paid-marketing/ppc-services" element={<PPCServices />} />
+        <Route path="/services/paid-marketing/mobile-advertising" element={<MobileAdvertising />} />
+        <Route path="/services/paid-marketing/amazon-advertising" element={<AmazonAdvertising />} />
+        <Route path="/services/paid-marketing/ppc-reseller" element={<PPCReseller />} />
+        <Route path="/services/paid-marketing/social-media-advertising" element={<SocialMediaAdvertising />} />
 
-        {/* App Marketing */}
-        <Route path="/services/app-marketing" element={<PlaceholderPage title="App Marketing" />} />
-        <Route path="/services/app-marketing/aso" element={<PlaceholderPage title="ASO Services" />} />
-        <Route path="/services/app-marketing/mobile-app-marketing" element={<PlaceholderPage title="Mobile App Marketing Services" />} />
-        <Route path="/services/app-marketing/app-cro" element={<PlaceholderPage title="App CRO" />} />
+        {/* App Marketing Services */}
+        <Route path="/services/app-marketing" element={<AppMarketing />} />
+        <Route path="/services/app-marketing/aso" element={<ASOServices />} />
+        <Route path="/services/app-marketing/mobile-app-marketing" element={<MobileAppMarketing />} />
+        <Route path="/services/app-marketing/app-cro" element={<AppCRO />} />
 
-        {/* Marketing Technology / Data Analytics */}
-        <Route path="/services/martech" element={<PlaceholderPage title="MarTech / Data Analytics" />} />
-        <Route path="/services/martech/cro-services" element={<PlaceholderPage title="CRO Services" />} />
-        <Route path="/services/martech/ecommerce-cro" element={<PlaceholderPage title="Ecommerce CRO" />} />
-        <Route path="/services/martech/ga4-consulting" element={<PlaceholderPage title="GA 4 Consulting" />} />
-        <Route path="/services/martech/shopify-cro" element={<PlaceholderPage title="Shopify CRO" />} />
-        <Route path="/services/martech/martech-services" element={<PlaceholderPage title="Martech Services" />} />
-        <Route path="/services/martech/cdp-services" element={<PlaceholderPage title="CDP Services" />} />
-        <Route path="/services/martech/b2b-cro" element={<PlaceholderPage title="B2B CRO" />} />
+        {/* MarTech / Data Analytics Services */}
+        <Route path="/services/martech" element={<MarTech />} />
+        <Route path="/services/martech/cro-services" element={<CROServices />} />
+        <Route path="/services/martech/ecommerce-cro" element={<EcommerceCRO />} />
+        <Route path="/services/martech/ga4-consulting" element={<GA4Consulting />} />
+        <Route path="/services/martech/shopify-cro" element={<ShopifyCRO />} />
+        <Route path="/services/martech/martech-services" element={<MartechServices />} />
+        <Route path="/services/martech/cdp-services" element={<CDPServices />} />
+        <Route path="/services/martech/b2b-cro" element={<B2BCRO />} />
 
-        {/* Work Subpages */}
-        <Route path="/work" element={<PlaceholderPage title="Our Work" />} />
-        <Route path="/work/portfolio" element={<PlaceholderPage title="Portfolio" />} />
-        <Route path="/work/case-study" element={<PlaceholderPage title="Case Studies" />} />
-        <Route path="/work/testimonial" element={<PlaceholderPage title="Testimonials" />} />
+        {/* ==================== WORK ROUTES ==================== */}
+        <Route path="/work" element={<Work />} />
+        <Route path="/work/portfolio" element={<Portfolio />} />
+        <Route path="/work/case-study" element={<CaseStudy />} />
+        <Route path="/work/testimonial" element={<Testimonial />} />
 
-        {/* Industry Subpages */}
-        <Route path="/industry" element={<PlaceholderPage title="Industries" />} />
-        <Route path="/industry/bfsi" element={<PlaceholderPage title="BFSI" />} />
-        <Route path="/industry/b2b" element={<PlaceholderPage title="B2B" />} />
-        <Route path="/industry/healthcare" element={<PlaceholderPage title="Healthcare" />} />
-        <Route path="/industry/education" element={<PlaceholderPage title="Education" />} />
-        <Route path="/industry/ecommerce" element={<PlaceholderPage title="Ecommerce" />} />
+        {/* ==================== INDUSTRY ROUTES ==================== */}
+        <Route path="/industry" element={<Industry />} />
+        <Route path="/industry/bfsi" element={<BFSI />} />
+        <Route path="/industry/b2b" element={<B2B />} />
+        <Route path="/industry/healthcare" element={<Healthcare />} />
+        <Route path="/industry/education" element={<Education />} />
+        <Route path="/industry/ecommerce" element={<Ecommerce />} />
 
-        <Route path="/blog" element={<PlaceholderPage title="Blog" />} />
-        <Route path="/contact" element={<PlaceholderPage title="Contact Us" />} />
-        <Route path="/request-quote" element={<PlaceholderPage title="Request a Quote" />} />
+        {/* ==================== STANDALONE ROUTES ==================== */}
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/request-quote" element={<RequestQuote />} />
       </Routes>
     </Layout>
   );

@@ -1,0 +1,18 @@
+import React from 'react';
+
+const DigitalPR = () => {
+    return (
+        <div className="container" style={{ padding: '80px 0' }}>
+            <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                <h1 style={{ fontSize: '48px', color: 'var(--primary)', marginBottom: '20px' }}>
+                    Digital PR
+                </h1>
+                <p style={{ fontSize: '20px', color: '#666', maxWidth: '800px', margin: '0 auto' }}>
+                    Amplify your brand's reach with strategic digital PR campaigns.
+                </p>
+            </div>
+        </div>
+    );
+};
+
+export default DigitalPR;
