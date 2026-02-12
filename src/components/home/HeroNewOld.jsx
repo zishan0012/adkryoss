@@ -46,19 +46,18 @@ const HeroSection = () => {
                 fontSize: "18px",
               }}
             >
-              {/* We make sure you get found. */}
+              We make sure you get found.
             </p>
 
             <h1
               style={{
-                fontSize: "48px",
+                fontSize: "36px",
                 fontWeight: 800,
                 marginTop: "20px",
                 lineHeight: "1.2",
               }}
             >
-              Drive Traffic, Leads & Revenue with Expert Digital Marketing
-              Services
+              We Build Digital Growth Systems That Drive Revenue. 
             </h1>
 
             <p
@@ -69,9 +68,9 @@ const HeroSection = () => {
                 color: "#e0e0e0",
               }}
             >
-              To succeed in business, you first need to succeed in search
-              results. Our digital marketing services connect you with your
-              customers’ journey from end to end - from discovery to retention.
+              Not just traffic. Not just engagement. 
+              <br />
+We engineer data-driven marketing strategies that turn clicks into customers and brands into market leaders. 
             </p>
 
             <div style={{ marginTop: "35px", display: "flex", gap: "20px" }}>
@@ -85,7 +84,7 @@ const HeroSection = () => {
                   fontSize: "15px",
                 }}
               >
-                Speak to an SEO Expert →
+                Get a Free Growth Audit →
               </button>
 
               <button
@@ -99,7 +98,7 @@ const HeroSection = () => {
                   background: "transparent",
                 }}
               >
-                Our Services →
+                Talk to a Growth Strategist →
               </button>
             </div>
           </div>
@@ -119,7 +118,7 @@ const HeroSection = () => {
       </section>
 
       {/* BOTTOM LINK BAR */}
-      <div
+      {/* <div
         style={{
           marginTop: "30px",
           position: "relative",
@@ -155,7 +154,7 @@ const HeroSection = () => {
 
 
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
