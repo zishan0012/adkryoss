@@ -137,10 +137,10 @@ const JavascriptSEO = () => {
             >
                 <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '56px', fontWeight: '800', marginBottom: '16px', letterSpacing: '-1.5px', color: '#000', lineHeight: '1.1' }}>
+                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1.5px', color: '#000', lineHeight: '1.1' }}>
                             JavaScript SEO Services
                         </h1>
-                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
                             Make Your Dynamic Website Search-Ready
                         </h3>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
@@ -148,7 +148,7 @@ const JavascriptSEO = () => {
                         </p>
                         <div style={{ background: 'rgba(255,255,255,0.05)', padding: '24px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)' }}>
                             <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                At Adkryoss managed by <span style={{ fontWeight: '800', color: '#000' }}>Clink Consultancy Services Private Limited</span>, we bridge the gap between advanced development and search engine accessibility.
+                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span>, we bridge the gap between advanced development and search engine accessibility.
                             </p>
                         </div>
                     </div>
@@ -171,7 +171,7 @@ const JavascriptSEO = () => {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: 'minmax(300px, 1fr) 1.2fr', gap: '60px', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>
+                            <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>
                                 Why JavaScript SEO Matters
                             </h2>
                             <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.8', marginBottom: '24px' }}>
@@ -182,7 +182,7 @@ const JavascriptSEO = () => {
                                     <div key={i} style={{ display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
                                         <div style={{ color: '#0066cc', marginTop: '4px' }}>{item.icon}</div>
                                         <div>
-                                            <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#0f172a', marginBottom: '4px' }}>{item.title}</h4>
+                                            <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#0f172a', marginBottom: '4px' }}>{item.title}</h4>
                                             <p style={{ fontSize: '15px', color: '#64748b' }}>{item.desc}</p>
                                         </div>
                                     </div>
@@ -202,10 +202,10 @@ const JavascriptSEO = () => {
             <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '20px', color: '#0f172a' }}>
+                        <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#0f172a' }}>
                             Our JavaScript SEO Approach
                         </h2>
-                        <p style={{ fontSize: '20px', color: '#64748b', fontWeight: '600' }}>Technical Precision. Strategic SEO Engineering.</p>
+                        <p style={{ fontSize: '20px', color: '#64748b', fontWeight: '500' }}>Technical Precision. Strategic SEO Engineering.</p>
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '40px' }}>
                         {framework.map((phase, i) => (
@@ -234,7 +234,7 @@ const JavascriptSEO = () => {
                                     e.currentTarget.style.borderColor = '#e2e8f0';
                                 }}>
                                 <div style={{ color: '#0066cc', marginBottom: '24px' }}>{phase.icon}</div>
-                                <h3 style={{ fontSize: '24px', fontWeight: '800', marginBottom: '20px', color: '#0f172a' }}>{phase.title}</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '20px', color: '#0f172a' }}>{phase.title}</h3>
                                 <p style={{ fontSize: '16px', color: '#475569', marginBottom: '30px', lineHeight: '1.7' }}>{phase.desc}</p>
                                 <ul className="space-y-6">
                                     {phase.points.map((pt, idx) => (
@@ -253,7 +253,7 @@ const JavascriptSEO = () => {
             {/* Framework Expertise */}
             <section style={{ padding: '80px 0', backgroundColor: '#0f172a', color: '#fff' }}>
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '20px', color: '#fff' }}>Framework-Specific Expertise</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#fff' }}>Framework-Specific Expertise</h2>
                     <p style={{ fontSize: '20px', color: '#cbd5e1', marginBottom: '60px', maxWidth: '800px', margin: '0 auto 60px' }}>
                         Whether you're running eCommerce, SaaS, or an Enterprise app, we align SEO with your development stack.
                     </p>
@@ -276,7 +276,7 @@ const JavascriptSEO = () => {
                                     e.currentTarget.style.transform = 'translateY(-5px)';
                                 }}>
                                 <div style={{ color: '#60a5fa' }}>{tech.icon}</div>
-                                <span style={{ fontWeight: '700', fontSize: '16px' }}>{tech.name}</span>
+                                <span style={{ fontWeight: '600', fontSize: '16px' }}>{tech.name}</span>
                             </div>
                         ))}
                     </div>
@@ -286,7 +286,7 @@ const JavascriptSEO = () => {
             {/* Industries we support */}
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '20px', color: '#0f172a' }}>Industries We Support</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#0f172a' }}>Industries We Support</h2>
                     <p style={{ fontSize: '20px', color: '#64748b', marginBottom: '60px' }}>
                         Each industry demands a custom rendering and crawl strategy, which we design with long-term scalability in mind.
                     </p>
@@ -298,7 +298,7 @@ const JavascriptSEO = () => {
                                     e.currentTarget.style.transform = 'translateY(-5px)';
                                 }}>
                                 <div style={{ color: '#0066cc', marginBottom: '20px' }}>{ind.icon}</div>
-                                <h4 style={{ fontSize: '20px', fontWeight: '800', color: '#0f172a', marginBottom: '10px' }}>{ind.name}</h4>
+                                <h4 style={{ fontSize: '20px', fontWeight: '700', color: '#0f172a', marginBottom: '10px' }}>{ind.name}</h4>
                                 <p style={{ fontSize: '15px', color: '#475569', lineHeight: '1.6' }}>{ind.desc}</p>
                             </div>
                         ))}
@@ -314,7 +314,7 @@ const JavascriptSEO = () => {
                         <div style={{ background: '#fff', padding: '50px', borderRadius: '40px', border: '1px solid #e2e8f0' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }}>
                                 <BarChart3 size={32} style={{ color: '#0066cc' }} />
-                                <h3 style={{ fontSize: '28px', fontWeight: '800', color: '#0f172a' }}>Our Working Model</h3>
+                                <h3 style={{ fontSize: '28px', fontWeight: '700', color: '#0f172a' }}>Our Working Model</h3>
                             </div>
                             <p style={{ fontSize: '16px', color: '#64748b', marginBottom: '24px', lineHeight: '1.6' }}>
                                 We don’t treat JavaScript SEO as a one-time fix. It’s an ongoing technical alignment process.
@@ -322,7 +322,7 @@ const JavascriptSEO = () => {
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '30px' }}>
                                 {workingModelSteps.map((step, i) => (
                                     <React.Fragment key={i}>
-                                        <span style={{ padding: '8px 16px', background: '#f0f9ff', color: '#0066cc', borderRadius: '20px', fontWeight: '700', fontSize: '14px', border: '1px solid #bae6fd' }}>
+                                        <span style={{ padding: '8px 16px', background: '#f0f9ff', color: '#0066cc', borderRadius: '20px', fontWeight: '600', fontSize: '14px', border: '1px solid #bae6fd' }}>
                                             {step}
                                         </span>
                                         {i < workingModelSteps.length - 1 && <span style={{ color: '#94a3b8', display: 'flex', alignItems: 'center' }}>→</span>}
@@ -330,7 +330,7 @@ const JavascriptSEO = () => {
                                 ))}
                             </div>
                             <p style={{ fontSize: '15px', color: '#475569', lineHeight: '1.6' }}>
-                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#0f172a' }}>Clink Consultancy Services Private Limited</span>, we collaborate with your developers, track rendering performance after deployment, and continuously optimize based on real search data.
+                                At Adkryoss managed by <span style={{ fontWeight: '600', color: '#0f172a' }}>Clink Consultancy Services Private Limited</span>, we collaborate with your developers, track rendering performance after deployment, and continuously optimize based on real search data.
                             </p>
                         </div>
 
@@ -338,13 +338,13 @@ const JavascriptSEO = () => {
                         <div style={{ background: '#fff', padding: '50px', borderRadius: '40px', border: '1px solid #e2e8f0' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }}>
                                 <Lightbulb size={32} style={{ color: '#0066cc' }} />
-                                <h3 style={{ fontSize: '28px', fontWeight: '800', color: '#0f172a' }}>Why Choose Us</h3>
+                                <h3 style={{ fontSize: '28px', fontWeight: '700', color: '#0f172a' }}>Why Choose Us</h3>
                             </div>
                             <div className="space-y-6">
                                 {whyChooseUs.map((item, i) => (
                                     <div key={i} style={{ display: 'flex', gap: '15px' }}>
                                         <div style={{ width: '8px', height: '8px', background: '#0066cc', borderRadius: '50%', marginTop: '10px', flexShrink: 0 }}></div>
-                                        <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#0f172a' }}>{item}</h4>
+                                        <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#0f172a' }}>{item}</h4>
                                     </div>
                                 ))}
                             </div>
@@ -361,7 +361,7 @@ const JavascriptSEO = () => {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '60px', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>
+                            <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>
                                 What Results You Can Expect
                             </h2>
                             <div className="space-y-6">
@@ -374,7 +374,7 @@ const JavascriptSEO = () => {
                                     <div key={i} style={{ display: 'flex', gap: '15px' }}>
                                         <CheckCircle2 size={24} style={{ color: '#0066cc', flexShrink: 0, marginTop: '4px' }} />
                                         <div>
-                                            <h4 style={{ fontSize: '18px', fontWeight: '800', color: '#0f172a', marginBottom: '4px' }}>{item.t}</h4>
+                                            <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#0f172a', marginBottom: '4px' }}>{item.t}</h4>
                                             <p style={{ fontSize: '15px', color: '#475569' }}>{item.d}</p>
                                         </div>
                                     </div>
@@ -383,11 +383,11 @@ const JavascriptSEO = () => {
                         </div>
                         <div style={{ background: '#f8fafc', padding: '50px', borderRadius: '30px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
                             <Activity size={60} style={{ color: '#0066cc', margin: '0 auto 24px' }} />
-                            <h3 style={{ fontSize: '24px', fontWeight: '800', color: '#0f172a', marginBottom: '16px' }}>Ready to Scale?</h3>
+                            <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#0f172a', marginBottom: '16px' }}>Ready to Scale?</h3>
                             <p style={{ color: '#64748b', fontSize: '17px', marginBottom: '32px' }}>
                                 JavaScript should power your growth — not block it. Let's make your dynamic website search-ready.
                             </p>
-                            <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#0066cc', color: '#fff', padding: '15px 40px', borderRadius: '50px', fontWeight: '700', textDecoration: 'none' }}>
+                            <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#0066cc', color: '#fff', padding: '15px 40px', borderRadius: '50px', fontWeight: '600', textDecoration: 'none' }}>
                                 Talk to JS SEO Experts <ArrowRight size={20} />
                             </Link>
                         </div>

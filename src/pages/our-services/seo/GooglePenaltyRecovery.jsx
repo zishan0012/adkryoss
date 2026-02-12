@@ -105,19 +105,19 @@ const GooglePenaltyRecovery = () => {
                     <div className="text-left relative z-10">
                         {/* <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.05)', padding: '8px 16px', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '24px' }}>
                             <RefreshCcw size={16} className="text-blue-400" />
-                            <span style={{ fontSize: '14px', fontWeight: '600', letterSpacing: '1px', textTransform: 'uppercase' }}>Forensic Search Recovery</span>
+                            <span style={{ fontSize: '14px', fontWeight: '500', letterSpacing: '1px', textTransform: 'uppercase' }}>Forensic Search Recovery</span>
                         </div> */}
-                        <h1 style={{ fontSize: '56px', fontWeight: '600', marginBottom: '16px', letterSpacing: '-1px', lineHeight: '1.1', color: '#000' }}>
+                        <h1 style={{ fontSize: '48px', fontWeight: '500', marginBottom: '16px', letterSpacing: '-1px', lineHeight: '1.1', color: '#000' }}>
                             Google Penalty Recovery Services
                         </h1>
-                        <h3 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
                             Recover Rankings. Restore Authority. Rebuild Growth.
                         </h3>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '20px' }}>
                             When organic traffic drops overnight, revenue follows. A Google penalty can severely damage your visibility, but it's not the end. We diagnose, repair, and engineer long-term search resilience.
                         </p>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff' }}>
-                            At Adkryoss managed by <span style={{ color: '#000', fontWeight: '600' }}>Clink Consultancy Services Private Limited</span>, we rebuild your SEO foundation stronger than before.
+                            At Adkryoss managed by <span style={{ color: '#000', fontWeight: '500' }}>Clink Consultancy Services Private Limited</span>, we rebuild your SEO foundation stronger than before.
                         </p>
                         {/* <div style={{ display: 'flex', gap: '20px' }}>
                             <a href="#audit" style={{ padding: '15px 40px', background: '#0066cc', color: '#fff', borderRadius: '50px', fontWeight: '700', textDecoration: 'none', transition: 'all 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
@@ -145,7 +145,7 @@ const GooglePenaltyRecovery = () => {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>
+                            <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>
                                 We Don't Just Remove Penalties. We Rebuild Your DNA.
                             </h2>
                             <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.8', marginBottom: '24px' }}>
@@ -154,13 +154,13 @@ const GooglePenaltyRecovery = () => {
 
                         </div>
                         <div style={{ background: '#f8fafc', padding: '40px', borderRadius: '30px', border: '1px solid #e2e8f0' }}>
-                            <h3 style={{ fontSize: '24px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>Why Penalties Happen:</h3>
+                            <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>Why Penalties Happen:</h3>
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                                 {commonReasons.map((reason, i) => (
                                     <div key={i} style={{ display: 'flex', gap: '15px' }}>
                                         <div style={{ color: '#0066cc' }}>{reason.icon}</div>
                                         <div>
-                                            <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#0f172a', marginBottom: '4px' }}>{reason.title}</h4>
+                                            <h4 style={{ fontSize: '16px', fontWeight: '600', color: '#0f172a', marginBottom: '4px' }}>{reason.title}</h4>
                                             <p style={{ fontSize: '13px', color: '#64748b' }}>{reason.desc}</p>
                                         </div>
                                     </div>
@@ -174,7 +174,7 @@ const GooglePenaltyRecovery = () => {
             {/* Penalty Types Section */}
             <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
                         Types of Google Penalties We Handle
                     </h2>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '30px' }}>
@@ -197,7 +197,7 @@ const GooglePenaltyRecovery = () => {
                                     e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0,0,0,0.1)';
                                 }}>
                                 <div style={{ color: '#0066cc', marginBottom: '24px' }}>{type.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '800', marginBottom: '16px', color: '#0f172a' }}>{type.title}</h3>
+                                <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '16px', color: '#0f172a' }}>{type.title}</h3>
                                 <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.7' }}>{type.desc}</p>
                             </div>
                         ))}
@@ -209,10 +209,10 @@ const GooglePenaltyRecovery = () => {
             <section id="audit" style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '20px', color: '#0f172a' }}>
+                        <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#0f172a' }}>
                             Our Google Penalty Recovery Framework
                         </h2>
-                        <p style={{ fontSize: '20px', color: '#64748b', fontWeight: '600' }}>Strategic. Data-Led. Transparent. Sustainable.</p>
+                        <p style={{ fontSize: '20px', color: '#64748b', fontWeight: '500' }}>Strategic. Data-Led. Transparent. Sustainable.</p>
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '30px' }}>
                         {phases.map((phase, i) => (
@@ -234,8 +234,8 @@ const GooglePenaltyRecovery = () => {
                                     e.currentTarget.style.borderColor = '#e2e8f0';
                                     e.currentTarget.style.background = '#f8fafc';
                                 }}>
-                                <span style={{ fontSize: '14px', fontWeight: '800', color: '#0066cc', marginBottom: '16px', display: 'block' }}>0{i + 1}</span>
-                                <h3 style={{ fontSize: '20px', fontWeight: '800', marginBottom: '16px', color: '#0f172a' }}>{phase.title}</h3>
+                                <span style={{ fontSize: '14px', fontWeight: '700', color: '#0066cc', marginBottom: '16px', display: 'block' }}>0{i + 1}</span>
+                                <h3 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '16px', color: '#0f172a' }}>{phase.title}</h3>
                                 <p style={{ fontSize: '15px', color: '#475569', marginBottom: '20px', lineHeight: '1.6' }}>{phase.desc}</p>
                                 <ul style={{ listStyle: 'none', padding: 0 }}>
                                     {phase.points.map((pt, idx) => (
@@ -256,13 +256,13 @@ const GooglePenaltyRecovery = () => {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '60px', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '42px', fontWeight: '800', color: '#fff', marginBottom: '30px' }}>
+                            <h2 style={{ fontSize: '42px', fontWeight: '700', color: '#fff', marginBottom: '30px' }}>
                                 Signs You Need Immediate Penalty Recovery
                             </h2>
                             <p style={{ fontSize: '18px', color: '#cbd5e1', lineHeight: '1.8', marginBottom: '30px' }}>
                                 If your organic traffic vanishes or keywords disappear from the SERP, every day you wait is a day of lost revenue.
                             </p>
-                            <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', color: '#60a5fa', fontWeight: '700', textDecoration: 'none', fontSize: '18px' }}>
+                            <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', color: '#60a5fa', fontWeight: '600', textDecoration: 'none', fontSize: '18px' }}>
                                 Get a Free Analysis <ArrowRight size={20} />
                             </Link>
                         </div>
@@ -270,7 +270,7 @@ const GooglePenaltyRecovery = () => {
                             {signs.map((sign, i) => (
                                 <div key={i} style={{ padding: '24px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '15px' }}>
                                     <AlertTriangle size={24} style={{ color: '#f59e0b', marginBottom: '15px' }} />
-                                    <p style={{ fontSize: '16px', fontWeight: '700', color: '#fff', margin: 0 }}>{sign}</p>
+                                    <p style={{ fontSize: '16px', fontWeight: '600', color: '#fff', margin: 0 }}>{sign}</p>
                                 </div>
                             ))}
                         </div>
@@ -281,7 +281,7 @@ const GooglePenaltyRecovery = () => {
             {/* Working Approach Comparison */}
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '60px', color: '#0f172a' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '60px', color: '#0f172a' }}>
                         What Makes Our Recovery Approach Different?
                     </h2>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
@@ -293,7 +293,7 @@ const GooglePenaltyRecovery = () => {
                             "Core Web Vitals compliance",
                             "E-E-A-T reinforcement"
                         ].map((item, i) => (
-                            <div key={i} style={{ padding: '15px 30px', background: '#f8fafc', borderRadius: '50px', border: '1px solid #e2e8f0', fontWeight: '700', color: '#0f172a' }}>
+                            <div key={i} style={{ padding: '15px 30px', background: '#f8fafc', borderRadius: '50px', border: '1px solid #e2e8f0', fontWeight: '600', color: '#0f172a' }}>
                                 ✔ {item}
                             </div>
                         ))}
@@ -307,21 +307,21 @@ const GooglePenaltyRecovery = () => {
             {/* Expected Timeline */}
             <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '50px', color: '#0f172a' }}>Recovery Timeline</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '50px', color: '#0f172a' }}>Recovery Timeline</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
                         <div style={{ padding: '40px', background: '#fff', borderRadius: '24px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
-                            <h3 style={{ fontSize: '20px', fontWeight: '800', color: '#0066cc', marginBottom: '15px' }}>Minor Algorithmic Issue</h3>
-                            <p style={{ fontSize: '32px', fontWeight: '800', color: '#0f172a', marginBottom: '10px' }}>4–8 Weeks</p>
+                            <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#0066cc', marginBottom: '15px' }}>Minor Algorithmic Issue</h3>
+                            <p style={{ fontSize: '32px', fontWeight: '700', color: '#0f172a', marginBottom: '10px' }}>4–8 Weeks</p>
                             <p style={{ color: '#64748b' }}>Focused cleanup and quality improvement.</p>
                         </div>
                         <div style={{ padding: '40px', background: '#fff', borderRadius: '24px', border: '2px solid #0066cc' }}>
-                            <h3 style={{ fontSize: '20px', fontWeight: '800', color: '#0066cc', marginBottom: '15px' }}>Manual Action</h3>
-                            <p style={{ fontSize: '32px', fontWeight: '800', color: '#0f172a', marginBottom: '10px' }}>2–4 Months</p>
+                            <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#0066cc', marginBottom: '15px' }}>Manual Action</h3>
+                            <p style={{ fontSize: '32px', fontWeight: '700', color: '#0f172a', marginBottom: '10px' }}>2–4 Months</p>
                             <p style={{ color: '#64748b' }}>Outreach, cleanup, and reconsideration process.</p>
                         </div>
                         <div style={{ padding: '40px', background: '#fff', borderRadius: '24px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
-                            <h3 style={{ fontSize: '20px', fontWeight: '800', color: '#0066cc', marginBottom: '15px' }}>Severe Link Penalty</h3>
-                            <p style={{ fontSize: '32px', fontWeight: '800', color: '#0f172a', marginBottom: '10px' }}>3–6 Months</p>
+                            <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#0066cc', marginBottom: '15px' }}>Severe Link Penalty</h3>
+                            <p style={{ fontSize: '32px', fontWeight: '700', color: '#0f172a', marginBottom: '10px' }}>3–6 Months</p>
                             <p style={{ color: '#64748b' }}>Extensive forensic link audit and authority rebuilding.</p>
                         </div>
                     </div>
@@ -331,7 +331,7 @@ const GooglePenaltyRecovery = () => {
             {/* FAQ Section */}
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>Recovery Intelligence (FAQs)</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>Recovery Intelligence (FAQs)</h2>
                     <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                         {[
                             { q: "How do I know if I've been penalized?", a: "Check Google Search Console for 'Manual Actions' and analyze traffic drop patterns aligned with known algorithm updates." },
@@ -340,7 +340,7 @@ const GooglePenaltyRecovery = () => {
                             { q: "Should I disavow all backlinks?", a: "No. Only toxic, manipulative, or paid links should be disavowed after a careful forensic link audit." }
                         ].map((faq, i) => (
                             <div key={i} style={{ marginBottom: '24px', padding: '30px', background: '#f8fafc', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-                                <h3 style={{ fontSize: '18px', fontWeight: '800', color: '#0f172a', marginBottom: '10px', display: 'flex', gap: '10px' }}>
+                                <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#0f172a', marginBottom: '10px', display: 'flex', gap: '10px' }}>
                                     <HelpCircle size={20} className="text-blue-500" /> {faq.q}
                                 </h3>
                                 <p style={{ fontSize: '16px', color: '#475569', lineHeight: '1.7', margin: 0 }}>{faq.a}</p>
@@ -353,7 +353,7 @@ const GooglePenaltyRecovery = () => {
             {/* Final CTA */}
             <section style={{ padding: '100px 0', textAlign: 'center', background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', color: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '56px', fontWeight: '800', color: '#fff', marginBottom: '24px' }}>
+                    <h2 style={{ fontSize: '56px', fontWeight: '700', color: '#fff', marginBottom: '24px' }}>
                         Ready to Take Control of Your Rankings?
                     </h2>
                     <p style={{ fontSize: '22px', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', color: '#eff6ff' }}>
@@ -368,7 +368,7 @@ const GooglePenaltyRecovery = () => {
                         padding: '20px 60px',
                         borderRadius: '50px',
                         fontSize: '20px',
-                        fontWeight: '800',
+                        fontWeight: '700',
                         textDecoration: 'none',
                         transition: 'all 0.3s',
                         boxShadow: '0 10px 40px rgba(0,0,0,0.3)'

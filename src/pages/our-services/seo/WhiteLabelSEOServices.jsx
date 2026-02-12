@@ -82,10 +82,10 @@ const WhiteLabelSEOServices = () => {
                 <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             White Label SEO Services
                         </h1>
-                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
                             Scale Faster. Deliver Better. Grow Without Hiring.
                         </h3>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
@@ -120,7 +120,7 @@ const WhiteLabelSEOServices = () => {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '50px', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '24px', color: '#1a1a1a' }}>
+                            <h2 style={{ fontSize: '36px', fontWeight: '600', marginBottom: '24px', color: '#1a1a1a' }}>
                                 Why Choose White Label SEO?
                             </h2>
                             <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '30px', fontSize: '17px' }}>
@@ -138,7 +138,7 @@ const WhiteLabelSEOServices = () => {
                                         display: 'flex',
                                         gap: '12px',
                                         marginBottom: '18px',
-                                        fontWeight: '600',
+                                        fontWeight: '500',
                                         color: '#333',
                                         fontSize: '16px',
                                         transition: 'transform 0.3s'
@@ -158,7 +158,7 @@ const WhiteLabelSEOServices = () => {
                             border: '1px solid #eee',
                             textAlign: 'center'
                         }}>
-                            <p style={{ fontSize: '24px', fontWeight: '800', color: '#1a1a1a', lineHeight: '1.4' }}>
+                            <p style={{ fontSize: '24px', fontWeight: '700', color: '#1a1a1a', lineHeight: '1.4' }}>
                                 We handle execution.<br />
                                 <span style={{ color: '#0066CC', fontSize: '32px' }}>You own the client.</span>
                             </p>
@@ -170,7 +170,7 @@ const WhiteLabelSEOServices = () => {
             {/* Framework Section */}
             <section style={{ padding: '80px 0' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#1a1a1a' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#1a1a1a' }}>
                         Our White Label SEO Framework
                     </h2>
                     <div style={{
@@ -203,7 +203,7 @@ const WhiteLabelSEOServices = () => {
                                     e.currentTarget.style.borderColor = '#eee';
                                 }}>
                                 <div style={{ color: '#0066CC', marginBottom: '20px' }}>{step.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '20px', color: '#1a1a1a' }}>{step.title}</h3>
+                                <h3 style={{ fontSize: '22px', fontWeight: '600', marginBottom: '20px', color: '#1a1a1a' }}>{step.title}</h3>
                                 <ul style={{ listStyle: 'none', padding: 0 }}>
                                     {step.points.map((pt, idx) => (
                                         <li key={idx} style={{ fontSize: '15px', color: '#555', marginBottom: '20px', display: 'flex', gap: '10px', lineHeight: '1.5' }}>
@@ -221,7 +221,7 @@ const WhiteLabelSEOServices = () => {
             {/* Who We Work With */}
             <section style={{ padding: '80px 0', backgroundColor: '#111', color: '#fff' }}>
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '50px', color: '#fff' }}>Who We Work With</h2>
+                    <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '50px', color: '#fff' }}>Who We Work With</h2>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
                         {audiences.map((aud, i) => (
                             <div key={i} style={{
@@ -230,7 +230,7 @@ const WhiteLabelSEOServices = () => {
                                 borderRadius: '50px',
                                 border: '1px solid rgba(255,255,255,0.2)',
                                 transition: 'all 0.3s',
-                                fontWeight: '600'
+                                fontWeight: '500'
                             }}
                                 onMouseEnter={(e) => {
                                     e.currentTarget.style.background = '#0066CC';
@@ -252,7 +252,7 @@ const WhiteLabelSEOServices = () => {
             {/* Why Partner */}
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#1a1a1a' }}>Why Partner with Adkryoss?</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#1a1a1a' }}>Why Partner with Adkryoss?</h2>
                     <div style={{
                         display: 'flex',
                         flexWrap: 'wrap',
@@ -288,7 +288,7 @@ const WhiteLabelSEOServices = () => {
                                     e.currentTarget.style.transform = 'translateY(0)';
                                     e.currentTarget.style.boxShadow = 'none';
                                 }}>
-                                <h3 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
+                                <h3 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
                                 <p style={{ color: '#666', fontSize: '15px', lineHeight: '1.6' }}>{item.desc}</p>
                             </div>
                         ))}
@@ -304,7 +304,7 @@ const WhiteLabelSEOServices = () => {
                 textAlign: 'center'
             }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '24px', color: '#fff' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '24px', color: '#fff' }}>
                         Ready to Scale Without Expanding Your Team?
                     </h2>
                     <p style={{ fontSize: '20px', marginBottom: '40px', color: '#fff', opacity: 1, fontWeight: '500' }}>
@@ -319,7 +319,7 @@ const WhiteLabelSEOServices = () => {
                         padding: '20px 50px',
                         borderRadius: '12px',
                         fontSize: '18px',
-                        fontWeight: '800',
+                        fontWeight: '700',
                         textDecoration: 'none',
                         transition: 'all 0.3s'
                     }}

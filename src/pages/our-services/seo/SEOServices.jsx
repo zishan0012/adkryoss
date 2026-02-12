@@ -188,10 +188,10 @@ const SEOServices = () => {
                 <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             SEO Services
                         </h1>
-                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
                             Drive Organic Growth. Build Authority. Dominate Search.
                         </h3>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
@@ -236,7 +236,7 @@ const SEOServices = () => {
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <h2 style={{
                             fontSize: '42px',
-                            fontWeight: '700',
+                            fontWeight: '600',
                             color: '#1a1a1a',
                             marginBottom: '20px'
                         }}>
@@ -293,7 +293,7 @@ const SEOServices = () => {
                                 </div>
                                 <p style={{
                                     fontSize: '16px',
-                                    fontWeight: '600',
+                                    fontWeight: '500',
                                     color: '#1a1a1a',
                                     lineHeight: '1.6'
                                 }}>
@@ -307,7 +307,7 @@ const SEOServices = () => {
                         textAlign: 'center',
                         marginTop: '50px',
                         fontSize: '20px',
-                        fontWeight: '600',
+                        fontWeight: '500',
                         color: '#0066CC'
                     }}>
                         That's exactly how we approach it.
@@ -321,7 +321,7 @@ const SEOServices = () => {
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <h2 style={{
                             fontSize: '42px',
-                            fontWeight: '700',
+                            fontWeight: '600',
                             color: '#1a1a1a',
                             marginBottom: '20px'
                         }}>
@@ -330,7 +330,7 @@ const SEOServices = () => {
                         <p style={{
                             fontSize: '20px',
                             color: '#0066CC',
-                            fontWeight: '600'
+                            fontWeight: '500'
                         }}>
                             Strategic. Technical. Performance-Oriented.
                         </p>
@@ -387,7 +387,7 @@ const SEOServices = () => {
                                 </div>
                                 <h3 style={{
                                     fontSize: '20px',
-                                    fontWeight: '700',
+                                    fontWeight: '600',
                                     color: '#1a1a1a',
                                     marginBottom: '20px'
                                 }}>
@@ -426,7 +426,7 @@ const SEOServices = () => {
                     }}>
                         <p style={{
                             fontSize: '18px',
-                            fontWeight: '600',
+                            fontWeight: '500',
                             color: '#1a1a1a'
                         }}>
                             Every keyword is aligned to business outcomes.
@@ -441,7 +441,7 @@ const SEOServices = () => {
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <h2 style={{
                             fontSize: '42px',
-                            fontWeight: '700',
+                            fontWeight: '600',
                             color: '#1a1a1a',
                             marginBottom: '20px'
                         }}>
@@ -490,7 +490,7 @@ const SEOServices = () => {
                                 </div>
                                 <p style={{
                                     fontSize: '16px',
-                                    fontWeight: '600',
+                                    fontWeight: '500',
                                     color: '#1a1a1a'
                                 }}>
                                     {industry.name}
@@ -507,7 +507,7 @@ const SEOServices = () => {
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <h2 style={{
                             fontSize: '42px',
-                            fontWeight: '700',
+                            fontWeight: '600',
                             color: '#1a1a1a',
                             marginBottom: '20px'
                         }}>
@@ -516,7 +516,7 @@ const SEOServices = () => {
                         <p style={{
                             fontSize: '20px',
                             color: '#0066CC',
-                            fontWeight: '600',
+                            fontWeight: '500',
                             marginBottom: '12px'
                         }}>
                             Discover → Strategize → Optimize → Scale → Measure
@@ -554,14 +554,14 @@ const SEOServices = () => {
                                     right: '16px',
                                     fontSize: '48px',
 
-                                    fontWeight: '800',
+                                    fontWeight: '700',
                                     opacity: 0.15
                                 }}>
                                     {index + 1}
                                 </div>
                                 <p style={{
                                     fontSize: '18px',
-                                    fontWeight: '600',
+                                    fontWeight: '500',
                                     position: 'relative',
                                     zIndex: 2,
                                     color: '#fff'
@@ -580,7 +580,7 @@ const SEOServices = () => {
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <h2 style={{
                             fontSize: '42px',
-                            fontWeight: '700',
+                            fontWeight: '600',
                             color: '#1a1a1a',
                             marginBottom: '20px'
                         }}>
@@ -623,7 +623,7 @@ const SEOServices = () => {
                                 </div>
                                 <h3 style={{
                                     fontSize: '20px',
-                                    fontWeight: '700',
+                                    fontWeight: '600',
                                     color: '#1a1a1a',
                                     marginBottom: '12px'
                                 }}>
@@ -648,7 +648,7 @@ const SEOServices = () => {
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <h2 style={{
                             fontSize: '42px',
-                            fontWeight: '700',
+                            fontWeight: '600',
                             color: '#1a1a1a',
                             marginBottom: '20px'
                         }}>
@@ -657,7 +657,7 @@ const SEOServices = () => {
                         <p style={{
                             fontSize: '18px',
                             color: '#0066CC',
-                            fontWeight: '600'
+                            fontWeight: '500'
                         }}>
                             Growth is measurable. And we prove it.
                         </p>
@@ -699,7 +699,7 @@ const SEOServices = () => {
                                 <BarChart3 size={24} style={{ flexShrink: 0 }} />
                                 <span style={{
                                     fontSize: '16px',
-                                    fontWeight: '600'
+                                    fontWeight: '500'
                                 }}>
                                     {metric}
                                 </span>
@@ -715,7 +715,7 @@ const SEOServices = () => {
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                         <h2 style={{
                             fontSize: '42px',
-                            fontWeight: '700',
+                            fontWeight: '600',
                             color: '#1a1a1a',
                             marginBottom: '20px'
                         }}>
@@ -743,7 +743,7 @@ const SEOServices = () => {
                                 }}>
                                 <h3 style={{
                                     fontSize: '18px',
-                                    fontWeight: '700',
+                                    fontWeight: '600',
                                     color: '#1a1a1a',
                                     marginBottom: '12px'
                                 }}>
@@ -772,7 +772,7 @@ const SEOServices = () => {
                 <div className="container">
                     <h2 style={{
                         fontSize: '42px',
-                        fontWeight: '700',
+                        fontWeight: '600',
                         marginBottom: '24px',
                         color: '#fff'
                     }}>
@@ -796,7 +796,7 @@ const SEOServices = () => {
                     </p>
                     <p style={{
                         fontSize: '22px',
-                        fontWeight: '700',
+                        fontWeight: '600',
                         marginBottom: '40px',
                         color: '#fff'
                     }}>
@@ -819,7 +819,7 @@ const SEOServices = () => {
                         padding: '18px 40px',
                         borderRadius: '8px',
                         fontSize: '18px',
-                        fontWeight: '700',
+                        fontWeight: '600',
                         textDecoration: 'none',
                         transition: 'all 0.3s ease'
                     }}

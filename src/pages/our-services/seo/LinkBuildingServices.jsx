@@ -139,10 +139,10 @@ const LinkBuildingServices = () => {
             >
                 <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             Link Building Services
                         </h1>
-                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
                             Authority That Ranks. Links That Convert.
                         </h3>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
@@ -179,7 +179,7 @@ const LinkBuildingServices = () => {
             <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px' }}>
+                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
                             Why Link Building Still Defines SEO Success
                         </h2>
                         <p style={{ fontSize: '20px', color: '#666', maxWidth: '850px', margin: '0 auto' }}>
@@ -189,7 +189,7 @@ const LinkBuildingServices = () => {
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div style={{ background: '#0066cc', color: '#fff', padding: '50px', borderRadius: '40px', boxShadow: '0 20px 40px rgba(0,102,204,0.15)' }}>
-                            <h3 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '30px' }}>Modern Link Building Strategy</h3>
+                            <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '30px' }}>Modern Link Building Strategy</h3>
                             <p style={{ fontSize: '18px', opacity: 0.9, lineHeight: '1.8', marginBottom: '30px', color: '#fff' }}>
                                 It’s no longer about volume—it’s about context, quality, and strategic placement. Adkryoss designs link acquisition frameworks that focus on:
                             </p>
@@ -205,22 +205,22 @@ const LinkBuildingServices = () => {
                                         <div style={{ background: 'rgba(255,255,255,0.2)', padding: '5px', borderRadius: '50%' }}>
                                             <CheckCircle2 size={18} />
                                         </div>
-                                        <span style={{ fontSize: '17px', fontWeight: '600' }}>{item}</span>
+                                        <span style={{ fontSize: '17px', fontWeight: '500' }}>{item}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div className="space-y-8">
                             <div style={{ padding: '30px', borderLeft: '4px solid #0066cc', background: '#f8f9fa' }}>
-                                <p style={{ fontSize: '20px', color: '#1a1a1a', fontWeight: '700', marginBottom: '10px' }}>Contextual Relevance</p>
+                                <p style={{ fontSize: '20px', color: '#1a1a1a', fontWeight: '600', marginBottom: '10px' }}>Contextual Relevance</p>
                                 <p style={{ color: '#666', lineHeight: '1.6' }}>We ensure links come from pages related to your business to maximize ranking power.</p>
                             </div>
                             <div style={{ padding: '30px', borderLeft: '4px solid #0066cc', background: '#f8f9fa' }}>
-                                <p style={{ fontSize: '20px', color: '#1a1a1a', fontWeight: '700', marginBottom: '10px' }}>Authority Growth</p>
+                                <p style={{ fontSize: '20px', color: '#1a1a1a', fontWeight: '600', marginBottom: '10px' }}>Authority Growth</p>
                                 <p style={{ color: '#666', lineHeight: '1.6' }}>Every link we build aims to increase your overall domain rating and trust score.</p>
                             </div>
                             <div style={{ padding: '30px', borderLeft: '4px solid #0066cc', background: '#f8f9fa' }}>
-                                <p style={{ fontSize: '20px', color: '#1a1a1a', fontWeight: '700', marginBottom: '10px' }}>Risk Management</p>
+                                <p style={{ fontSize: '20px', color: '#1a1a1a', fontWeight: '600', marginBottom: '10px' }}>Risk Management</p>
                                 <p style={{ color: '#666', lineHeight: '1.6' }}>We strictly follow white-hat practices to ensure long-term visibility without penalties.</p>
                             </div>
                         </div>
@@ -232,7 +232,7 @@ const LinkBuildingServices = () => {
             <section style={{ padding: '100px 0', backgroundColor: '#f1f5f9' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px' }}>
+                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
                             Our Strategic Link Building Framework
                         </h2>
                         <p style={{ fontSize: '20px', color: '#666' }}>
@@ -260,7 +260,7 @@ const LinkBuildingServices = () => {
                                     e.currentTarget.style.borderColor = '#e2e8f0';
                                 }}>
                                 <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
                                 <p style={{ color: '#666', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
                                 <ul style={{ listStyle: 'none', padding: 0, marginTop: '20px' }}>
                                     {item.points.map((p, j) => (
@@ -270,7 +270,7 @@ const LinkBuildingServices = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ fontSize: '14px', fontWeight: '600', color: '#0066cc', marginTop: '20px' }}>{item.extra}</p>
+                                <p style={{ fontSize: '14px', fontWeight: '500', color: '#0066cc', marginTop: '20px' }}>{item.extra}</p>
                             </div>
                         ))}
                     </div>
@@ -295,7 +295,7 @@ const LinkBuildingServices = () => {
                                     e.currentTarget.style.borderColor = '#e2e8f0';
                                 }}>
                                 <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
                                 <p style={{ color: '#666', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
                                 <ul style={{ listStyle: 'none', padding: 0 }}>
                                     {item.points.map((p, j) => (
@@ -305,7 +305,7 @@ const LinkBuildingServices = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                {item.extra && <p style={{ fontSize: '14px', fontWeight: '600', color: '#0066cc', marginTop: '20px' }}>{item.extra}</p>}
+                                {item.extra && <p style={{ fontSize: '14px', fontWeight: '500', color: '#0066cc', marginTop: '20px' }}>{item.extra}</p>}
                             </div>
                         ))}
                     </div>
@@ -316,14 +316,14 @@ const LinkBuildingServices = () => {
             <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px' }}>What Makes Our Link Building Different?</h2>
+                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>What Makes Our Link Building Different?</h2>
                         <p style={{ fontSize: '20px', color: '#666' }}>We focus on domain authority growth and measurable ranking movement.</p>
                     </div>
                     <div className="grid md:grid-cols-4 gap-8">
                         {differentiators.map((item, i) => (
                             <div key={i} style={{ textAlign: 'center', padding: '30px', background: '#f8f9fa', borderRadius: '20px', border: '1px solid #eee' }}>
                                 <div style={{ color: '#0066cc', marginBottom: '15px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
-                                <h4 style={{ fontSize: '20px', fontWeight: '700', color: '#1a1a1a', marginBottom: '10px' }}>{item.title}</h4>
+                                <h4 style={{ fontSize: '20px', fontWeight: '600', color: '#1a1a1a', marginBottom: '10px' }}>{item.title}</h4>
                                 <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.6' }}>{item.desc}</p>
                             </div>
                         ))}
@@ -336,7 +336,7 @@ const LinkBuildingServices = () => {
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16">
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '40px', color: '#fff' }}>Industries We Build Authority For</h2>
+                            <h2 style={{ fontSize: '36px', fontWeight: '600', marginBottom: '40px', color: '#fff' }}>Industries We Build Authority For</h2>
                             <div className="flex flex-wrap gap-4">
                                 {[
                                     { name: "E-commerce & D2C", icon: <ShoppingCart size={18} /> },
@@ -364,7 +364,7 @@ const LinkBuildingServices = () => {
                             </div>
                         </div>
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '40px', color: '#fff' }}>SEO + Link Building = Scalable Growth</h2>
+                            <h2 style={{ fontSize: '36px', fontWeight: '600', marginBottom: '40px', color: '#fff' }}>SEO + Link Building = Scalable Growth</h2>
                             <p style={{ color: '#e2e8f0', fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
                                 Link building works best when integrated with complete SEO architecture. At Adkryoss, we align link acquisition with:
                             </p>
@@ -376,7 +376,7 @@ const LinkBuildingServices = () => {
                                     "Digital PR",
                                     "Performance Analytics"
                                 ].map((tag, i) => (
-                                    <span key={i} style={{ padding: '8px 20px', background: 'rgba(59, 130, 246, 0.1)', color: '#60a5fa', borderRadius: '50px', fontSize: '14px', fontWeight: '700', border: '1px solid rgba(59, 130, 246, 0.2)' }}>{tag}</span>
+                                    <span key={i} style={{ padding: '8px 20px', background: 'rgba(59, 130, 246, 0.1)', color: '#60a5fa', borderRadius: '50px', fontSize: '14px', fontWeight: '600', border: '1px solid rgba(59, 130, 246, 0.2)' }}>{tag}</span>
                                 ))}
                             </div>
                         </div>
@@ -388,7 +388,7 @@ const LinkBuildingServices = () => {
             <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px' }}>Results You Can Expect</h2>
+                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>Results You Can Expect</h2>
                         <p style={{ fontSize: '20px', color: '#666' }}>High-authority links that compound your digital equity over time.</p>
                     </div>
                     <div className="grid md:grid-cols-5 gap-6">
@@ -400,8 +400,8 @@ const LinkBuildingServices = () => {
                             { label: "Long-Term ROI", val: "SEO Momentum" }
                         ].map((res, i) => (
                             <div key={i} style={{ textAlign: 'center', padding: '30px', background: '#f8f9fa', borderRadius: '24px', border: '1px solid #eee' }}>
-                                <div style={{ fontSize: '24px', fontWeight: '800', color: '#0066cc', marginBottom: '5px' }}>{res.label}</div>
-                                <div style={{ fontSize: '14px', color: '#666', fontWeight: '600' }}>{res.val}</div>
+                                <div style={{ fontSize: '24px', fontWeight: '700', color: '#0066cc', marginBottom: '5px' }}>{res.label}</div>
+                                <div style={{ fontSize: '14px', color: '#666', fontWeight: '500' }}>{res.val}</div>
                             </div>
                         ))}
                     </div>
@@ -411,11 +411,11 @@ const LinkBuildingServices = () => {
             {/* FAQs */}
             <section style={{ padding: '100px 0', backgroundColor: '#f8f9fa' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '36px', fontWeight: '700', textAlign: 'center', marginBottom: '50px' }}>Frequently Asked Questions</h2>
+                    <h2 style={{ fontSize: '36px', fontWeight: '600', textAlign: 'center', marginBottom: '50px' }}>Frequently Asked Questions</h2>
                     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
                         {faqs.map((faq, i) => (
                             <div key={i} style={{ marginBottom: '20px', background: '#fff', padding: '24px', borderRadius: '16px', border: '1px solid #eee' }}>
-                                <h4 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '10px', color: '#1a1a1a' }}>{faq.question}</h4>
+                                <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>{faq.question}</h4>
                                 <p style={{ color: '#666', lineHeight: '1.6', margin: 0 }}>{faq.answer}</p>
                             </div>
                         ))}
@@ -426,11 +426,11 @@ const LinkBuildingServices = () => {
             {/* CTA */}
             <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, #0066cc 0%, #004999 100%)', color: '#fff', textAlign: 'center' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#fff' }}>Let’s Build Authority That Compounds</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>Let’s Build Authority That Compounds</h2>
                     <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: '#fff' }}>
                         Partner with Adkryoss managed by Clink Consultancy Services Private Limited to build a powerful link ecosystem that drives sustainable SEO growth.
                     </p>
-                    <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#fff', color: '#0066cc', padding: '18px 40px', borderRadius: '50px', fontWeight: '700', textDecoration: 'none', transition: 'all 0.3s' }}
+                    <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#fff', color: '#0066cc', padding: '18px 40px', borderRadius: '50px', fontWeight: '600', textDecoration: 'none', transition: 'all 0.3s' }}
                         onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
                         onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
                         Start Building Smarter Links Today <ArrowRight size={20} />
