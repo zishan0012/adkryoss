@@ -91,38 +91,51 @@ const GooglePenaltyRecovery = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section style={{
-                background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-                color: '#fff',
-                padding: '120px 0 80px',
-                textAlign: 'center',
-                position: 'relative',
-                overflow: 'hidden'
-            }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.1, pointerEvents: 'none' }}>
-                    <div style={{ position: 'absolute', top: '10%', left: '5%', width: '400px', height: '400px', background: '#e11d48', borderRadius: '50%', filter: 'blur(120px)', opacity: 0.2 }}></div>
-                    <div style={{ position: 'absolute', bottom: '10%', right: '5%', width: '300px', height: '300px', background: '#0066cc', borderRadius: '50%', filter: 'blur(100px)', opacity: 0.3 }}></div>
-                </div>
-                <div className="container">
-                    <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.05)', padding: '8px 16px', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '24px' }}>
+            <section
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                style={{
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+                    color: '#fff',
+                    position: 'relative',
+                    overflow: 'hidden'
+                }}
+            >
+                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    {/* LEFT CONTENT */}
+                    <div className="text-left relative z-10">
+                        {/* <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.05)', padding: '8px 16px', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '24px' }}>
                             <RefreshCcw size={16} className="text-blue-400" />
                             <span style={{ fontSize: '14px', fontWeight: '600', letterSpacing: '1px', textTransform: 'uppercase' }}>Forensic Search Recovery</span>
-                        </div>
-                        <h1 style={{ fontSize: '64px', fontWeight: '800', marginBottom: '24px', letterSpacing: '-2px', lineHeight: '1.1' }}>
+                        </div> */}
+                        <h1 style={{ fontSize: '56px', fontWeight: '600', marginBottom: '16px', letterSpacing: '-1px', lineHeight: '1.1', color: '#000' }}>
                             Google Penalty Recovery Services
                         </h1>
-                        <p style={{ fontSize: '24px', fontWeight: '600', marginBottom: '24px', color: '#0066cc' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
                             Recover Rankings. Restore Authority. Rebuild Growth.
-                        </p>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px' }}>
+                        </h3>
+                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '20px' }}>
                             When organic traffic drops overnight, revenue follows. A Google penalty can severely damage your visibility, but it's not the end. We diagnose, repair, and engineer long-term search resilience.
                         </p>
-                        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff' }}>
+                            At Adkryoss managed by <span style={{ color: '#000', fontWeight: '600' }}>Clink Consultancy Services Private Limited</span>, we rebuild your SEO foundation stronger than before.
+                        </p>
+                        {/* <div style={{ display: 'flex', gap: '20px' }}>
                             <a href="#audit" style={{ padding: '15px 40px', background: '#0066cc', color: '#fff', borderRadius: '50px', fontWeight: '700', textDecoration: 'none', transition: 'all 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
                                 Request Forensic Audit
                             </a>
-                        </div>
+                        </div> */}
+                    </div>
+                    {/* RIGHT IMAGE */}
+                    <div className="flex justify-center md:justify-end relative z-10">
+                        <img
+                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Penalty-Recovery.webp"
+                            alt="Google Penalty Recovery"
+                            style={{
+                                maxWidth: '450px',
+                                width: '100%',
+                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
+                            }}
+                        />
                     </div>
                 </div>
             </section>
@@ -138,9 +151,7 @@ const GooglePenaltyRecovery = () => {
                             <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.8', marginBottom: '24px' }}>
                                 Google's ecosystem evolves constantly. Updates like SpamCore, Helpful Content, and Core Algorithm changes are designed to reward quality. If you've been hit, it's a signal that your SEO foundation needs more than just a quick fix.
                             </p>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', fontWeight: '600', color: '#0066cc' }}>
-                                At Adkryoss managed by Clink Consultancy Services Private Limited, we rebuild your SEO foundation stronger than before.
-                            </p>
+
                         </div>
                         <div style={{ background: '#f8fafc', padding: '40px', borderRadius: '30px', border: '1px solid #e2e8f0' }}>
                             <h3 style={{ fontSize: '24px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>Why Penalties Happen:</h3>
@@ -228,7 +239,7 @@ const GooglePenaltyRecovery = () => {
                                 <p style={{ fontSize: '15px', color: '#475569', marginBottom: '20px', lineHeight: '1.6' }}>{phase.desc}</p>
                                 <ul style={{ listStyle: 'none', padding: 0 }}>
                                     {phase.points.map((pt, idx) => (
-                                        <li key={idx} style={{ fontSize: '14px', color: '#64748b', marginBottom: '10px', display: 'flex', gap: '8px' }}>
+                                        <li key={idx} style={{ fontSize: '14px', color: '#64748b', marginBottom: '20px', display: 'flex', gap: '8px' }}>
                                             <CheckCircle2 size={16} style={{ color: '#0066cc', flexShrink: 0 }} />
                                             {pt}
                                         </li>

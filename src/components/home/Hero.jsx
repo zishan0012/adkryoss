@@ -20,7 +20,7 @@
 //         }}
 //       >
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          
+
 //           {/* Left Content */}
 //           <div className="text-center md:text-left">
 //             <span className="text-green-500 font-semibold text-sm sm:text-base">
@@ -132,7 +132,6 @@ const HeroSection = () => {
             <h1
               style={{
                 color: "#ffffff",
-                color: 'black',
                 fontSize: "10px",
                 fontWeight: "500",
                 marginTop: "12px",
