@@ -176,64 +176,56 @@ const SEOServices = () => {
     return (
         <div style={{ backgroundColor: '#fff' }}>
             {/* Hero Section */}
-            <section style={{
-                background: 'linear-gradient(135deg, #0066CC 0%, #004999 100%)',
-                color: '#fff',
-                padding: '100px 0 80px',
-                position: 'relative',
-                overflow: 'hidden'
-            }}>
-                <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-                    <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-                        <h1 style={{
-                            fontSize: '56px',
-                            fontWeight: '800',
-                            marginBottom: '24px',
-                            lineHeight: '1.2'
-                        }}>
+            <section
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                style={{
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+                    color: '#fff',
+                    position: 'relative',
+                    overflow: 'hidden'
+                }}
+            >
+                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    {/* LEFT CONTENT */}
+                    <div className="text-left relative z-10">
+                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             SEO Services
                         </h1>
-                        <p style={{
-                            fontSize: '24px',
-                            marginBottom: '16px',
-                            color: '#fff',
-                            fontWeight: '600',
-                            opacity: 0.95
-                        }}>
+                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
                             Drive Organic Growth. Build Authority. Dominate Search.
-                        </p>
-                        <p style={{
-                            fontSize: '18px',
-                            lineHeight: '1.8',
-                            color: '#fff',
-                            opacity: 1,
-                            marginBottom: '40px'
-                        }}>
+                        </h3>
+                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
                             In today's search-first world, visibility is not optional — it's survival. Customers don't scroll endlessly; they click what ranks, what builds trust, and what delivers value instantly.
                         </p>
-                        <p style={{
-                            fontSize: '18px',
-                            lineHeight: '1.8',
-                            color: '#fff',
-                            opacity: 1,
-                            marginBottom: '40px'
-                        }}>
-                            Adkryoss managed by Clink Consultancy Services pvt.ltd delivers data-driven, performance-focused SEO services designed to increase traffic, improve rankings, and convert search intent into measurable revenue.
+                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
+                            Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span> delivers data-driven, performance-focused SEO services designed to increase traffic, improve rankings, and convert search intent into measurable revenue.
                         </p>
                         <div style={{
-                            fontSize: '22px',
+                            fontSize: '20px',
                             fontWeight: '700',
                             marginTop: '32px',
-                            padding: '24px',
-                            background: 'rgba(255,255,255,0.15)',
+                            padding: '20px',
+                            background: 'rgba(255,255,255,0.05)',
                             borderRadius: '12px',
-                            border: '1px solid rgba(255,255,255,0.2)',
+                            border: '1px solid rgba(255,255,255,0.1)',
                             backdropFilter: 'blur(10px)',
-                            color: '#fff'
+                            color: '#000'
                         }}>
                             We don't chase rankings.<br />
                             We build long-term organic growth engines.
                         </div>
+                    </div>
+                    {/* RIGHT IMAGE */}
+                    <div className="flex justify-center md:justify-end relative z-10">
+                        <img
+                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Search-Engine-Optimization.webp"
+                            alt="SEO Services"
+                            style={{
+                                maxWidth: '450px',
+                                width: '100%',
+                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
+                            }}
+                        />
                     </div>
                 </div>
             </section>

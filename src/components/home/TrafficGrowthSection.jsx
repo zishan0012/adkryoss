@@ -183,8 +183,8 @@ const TrafficGrowthSection = () => {
                 lineHeight: "1.2",
               }}
             >
-              Achieve a 2x Increase in <br />
-              Avg. Monthly Traffic
+              Our Growth Framework  <br />
+              
             </h2>
 
             <p
@@ -193,8 +193,7 @@ const TrafficGrowthSection = () => {
                 marginBottom: "24px",
               }}
             >
-              Dedicated Teams for AI, Automation, and Data Analytics
-              to improve campaign performance and drive scalable growth.
+             We follow a structured, research-driven, and performance-focused process: 
             </p>
 
             <button

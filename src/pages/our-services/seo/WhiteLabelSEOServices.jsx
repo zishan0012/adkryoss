@@ -70,31 +70,47 @@ const WhiteLabelSEOServices = () => {
     return (
         <div style={{ backgroundColor: '#fff' }}>
             {/* Hero Section */}
-            <section style={{
-                background: 'linear-gradient(135deg, #004999 0%, #0066CC 100%)',
-                color: '#fff',
-                padding: '100px 0 80px',
-                textAlign: 'center'
-            }}>
-                <div className="container">
-                    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-                        <h1 style={{ fontSize: '56px', fontWeight: '800', marginBottom: '24px', color: '#fff' }}>
+            <section
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                style={{
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+                    color: '#fff',
+                    position: 'relative',
+                    overflow: 'hidden'
+                }}
+            >
+                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    {/* LEFT CONTENT */}
+                    <div className="text-left relative z-10">
+                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             White Label SEO Services
                         </h1>
-                        <p style={{ fontSize: '24px', fontWeight: '600', marginBottom: '24px', color: '#fff' }}>
+                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
                             Scale Faster. Deliver Better. Grow Without Hiring.
+                        </h3>
+                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
+                            Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span> delivers fully managed White Label SEO solutions for agencies and consultants who want to scale revenue without operational complexity.
                         </p>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '40px' }}>
-                            Adkryoss managed by Clink Consultancy Services pvt.ltd delivers fully managed White Label SEO solutions for agencies and consultants who want to scale revenue without operational complexity.
-                        </p>
-                        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.15)', padding: '10px 20px', borderRadius: '50px' }}>
-                                <CheckCircle2 size={20} /> <span>100% Confidential</span>
+                        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.05)', padding: '10px 20px', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                                <CheckCircle2 size={20} style={{ color: '#000' }} /> <span style={{ color: '#fff' }}>100% Confidential</span>
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.15)', padding: '10px 20px', borderRadius: '50px' }}>
-                                <CheckCircle2 size={20} /> <span>Scalable Models</span>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.05)', padding: '10px 20px', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                                <CheckCircle2 size={20} style={{ color: '#000' }} /> <span style={{ color: '#fff' }}>Scalable Models</span>
                             </div>
                         </div>
+                    </div>
+                    {/* RIGHT IMAGE */}
+                    <div className="flex justify-center md:justify-end relative z-10">
+                        <img
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/11/white-Label-seo-services.webp"
+                            alt="White Label SEO"
+                            style={{
+                                maxWidth: '450px',
+                                width: '100%',
+                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
+                            }}
+                        />
                     </div>
                 </div>
             </section>
@@ -190,7 +206,7 @@ const WhiteLabelSEOServices = () => {
                                 <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '20px', color: '#1a1a1a' }}>{step.title}</h3>
                                 <ul style={{ listStyle: 'none', padding: 0 }}>
                                     {step.points.map((pt, idx) => (
-                                        <li key={idx} style={{ fontSize: '15px', color: '#555', marginBottom: '10px', display: 'flex', gap: '10px', lineHeight: '1.5' }}>
+                                        <li key={idx} style={{ fontSize: '15px', color: '#555', marginBottom: '20px', display: 'flex', gap: '10px', lineHeight: '1.5' }}>
                                             <div style={{ width: '6px', height: '6px', background: '#0066CC', borderRadius: '50%', marginTop: '8px', flexShrink: 0 }}></div>
                                             {pt}
                                         </li>

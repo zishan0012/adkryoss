@@ -111,36 +111,52 @@ const MultilingualSEOServices = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section style={{
-                background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-                color: '#fff',
-                padding: '120px 0 80px',
-                textAlign: 'center',
-                position: 'relative'
-            }}>
+            <section
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                style={{
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+                    color: '#fff',
+                    position: 'relative',
+                    overflow: 'hidden'
+                }}
+            >
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.05, pointerEvents: 'none', background: 'url("https://www.transparenttextures.com/patterns/world-map.png")' }}></div>
-                <div className="container">
-                    <div style={{ maxWidth: '900px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-                        <h1 style={{ fontSize: '56px', fontWeight: '800', marginBottom: '24px', letterSpacing: '-1px' }}>
+                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    {/* LEFT CONTENT */}
+                    <div className="text-left relative z-10">
+                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             Multilingual SEO Services
                         </h1>
-                        <p style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#0066cc' }}>
+                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
                             Expand Beyond Borders. Rank in Every Language.
-                        </p>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '40px' }}>
+                        </h3>
+                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
                             Your audience is no longer limited by geography. They search in their native language, expect localized experiences, and trust brands that speak to them naturally.
                         </p>
                         <div style={{
                             background: 'rgba(255,255,255,0.05)',
-                            padding: '30px',
+                            padding: '24px',
                             borderRadius: '20px',
                             border: '1px solid rgba(255,255,255,0.1)',
-                            backdropFilter: 'blur(10px)'
+                            backdropFilter: 'blur(10px)',
+                            marginBottom: '32px'
                         }}>
                             <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                At Adkryoss managed by Clink Consultancy Services pvt.ltd delivers powerful multilingual SEO frameworks that help businesses rank across countries, languages, and search engines.
+                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span> delivers powerful multilingual SEO frameworks that help businesses rank across countries, languages, and search engines.
                             </p>
                         </div>
+                    </div>
+                    {/* RIGHT IMAGE */}
+                    <div className="flex justify-center md:justify-end relative z-10">
+                        <img
+                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Multilingual-SEO.webp"
+                            alt="Multilingual SEO"
+                            style={{
+                                maxWidth: '450px',
+                                width: '100%',
+                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
+                            }}
+                        />
                     </div>
                 </div>
             </section>
@@ -249,7 +265,7 @@ const MultilingualSEOServices = () => {
                                 <p style={{ fontSize: '15px', color: '#475569', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
                                 <ul style={{ listStyle: 'none', padding: 0, marginBottom: '20px' }}>
                                     {item.points.map((pt, idx) => (
-                                        <li key={idx} style={{ display: 'flex', gap: '10px', marginBottom: '12px', fontSize: '14px', color: '#334155' }}>
+                                        <li key={idx} style={{ display: 'flex', gap: '10px', marginBottom: '20px', fontSize: '14px', color: '#334155' }}>
                                             <div style={{ width: '6px', height: '6px', background: '#0066cc', borderRadius: '50%', marginTop: '8px', flexShrink: 0 }}></div>
                                             {pt}
                                         </li>
@@ -369,7 +385,7 @@ const MultilingualSEOServices = () => {
             {/* Final CTA */}
             <section style={{ padding: '100px 0', textAlign: 'center', background: 'linear-gradient(135deg, #0066cc 0%, #004e92 100%)', color: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px' }}>
+                    <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px', color: '#fff' }}>
                         Ready to Go Global?
                     </h2>
                     <p style={{ fontSize: '22px', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', color: '#eff6ff' }}>

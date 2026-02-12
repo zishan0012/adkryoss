@@ -109,44 +109,54 @@ const AISEO = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section style={{
-                background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-                color: '#fff',
-                padding: '120px 0 80px',
-                textAlign: 'center',
-                position: 'relative',
-                overflow: 'hidden'
-            }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.1, pointerEvents: 'none' }}>
-                    <div style={{ position: 'absolute', top: '10%', left: '5%', width: '300px', height: '300px', background: '#0066cc', borderRadius: '50%', filter: 'blur(100px)' }}></div>
-                    <div style={{ position: 'absolute', bottom: '10%', right: '5%', width: '250px', height: '250px', background: '#004e92', borderRadius: '50%', filter: 'blur(100px)' }}></div>
-                </div>
-                <div className="container">
-                    <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-                        <h1 style={{ fontSize: '56px', fontWeight: '800', marginBottom: '24px', letterSpacing: '-1px' }}>
+            <section
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                style={{
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+                    color: '#fff',
+                    position: 'relative',
+                    overflow: 'hidden'
+                }}
+            >
+                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    {/* LEFT CONTENT */}
+                    <div className="text-left relative z-10">
+                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             AI SEO Services
                         </h1>
-                        <p style={{ fontSize: '24px', fontWeight: '600', marginBottom: '24px', color: '#3b82f6' }}>
+                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
                             Rank Beyond Keywords. Dominate AI-Driven Search Ecosystems.
-                        </p>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '40px' }}>
+                        </h3>
+                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
                             Search is no longer just about Google rankings. It’s about visibility across AI engines, voice assistants, zero-click results, and generative search experiences.
                         </p>
                         <div style={{
                             background: 'rgba(255,255,255,0.05)',
-                            padding: '30px',
+                            padding: '24px',
                             borderRadius: '20px',
                             border: '1px solid rgba(255,255,255,0.1)',
                             backdropFilter: 'blur(10px)',
-                            marginBottom: '40px'
+                            marginBottom: '32px'
                         }}>
                             <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                Adkryoss managed by Clink Consultancy Services pvt.ltd delivers next-generation AI SEO solutions that help businesses become discoverable across modern search landscapes — from traditional SERPs to AI-generated answers.
+                                Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span> delivers next-generation AI SEO solutions that help businesses become discoverable across modern search landscapes.
                             </p>
                         </div>
                         <p style={{ fontSize: '20px', fontWeight: '600', color: '#fff' }}>
                             We combine human expertise with machine intelligence to build scalable, future-ready SEO systems.
                         </p>
+                    </div>
+                    {/* RIGHT IMAGE */}
+                    <div className="flex justify-center md:justify-end relative z-10">
+                        <img
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/11/AI-SEO.webp"
+                            alt="AI SEO"
+                            style={{
+                                maxWidth: '450px',
+                                width: '100%',
+                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
+                            }}
+                        />
                     </div>
                 </div>
             </section>
@@ -243,7 +253,7 @@ const AISEO = () => {
                                 <p style={{ fontSize: '15px', color: '#64748b', marginBottom: '20px', lineHeight: '1.6' }}>{step.desc}</p>
                                 <ul style={{ listStyle: 'none', padding: 0, marginBottom: '20px' }}>
                                     {step.points.map((pt, idx) => (
-                                        <li key={idx} style={{ display: 'flex', gap: '10px', marginBottom: '12px', fontSize: '14px', color: '#334155' }}>
+                                        <li key={idx} style={{ display: 'flex', gap: '10px', marginBottom: '20px', fontSize: '14px', color: '#334155' }}>
                                             <CheckCircle2 size={16} style={{ color: '#3b82f6', flexShrink: 0, marginTop: '2px' }} />
                                             {pt}
                                         </li>
@@ -410,7 +420,7 @@ const AISEO = () => {
             {/* Final CTA */}
             <section style={{ padding: '100px 0', textAlign: 'center', background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)', color: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px' }}>
+                    <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px', color: '#fff' }}>
                         Let’s Build AI-Powered Organic Growth
                     </h2>
                     <p style={{ fontSize: '22px', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', color: '#eff6ff' }}>

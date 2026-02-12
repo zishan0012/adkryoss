@@ -127,34 +127,51 @@ const SEOMigrationServices = () => {
     return (
         <div style={{ backgroundColor: '#fff' }}>
             {/* Hero Section */}
-            <section style={{
-                background: 'linear-gradient(135deg, #2D3436 0%, #000000 100%)',
-                color: '#fff',
-                padding: '100px 0 80px',
-                textAlign: 'center'
-            }}>
-                <div className="container">
-                    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-                        <h1 style={{ fontSize: '56px', fontWeight: '800', marginBottom: '24px', color: '#fff' }}>
+            <section
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                style={{
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+                    color: '#fff',
+                    position: 'relative',
+                    overflow: 'hidden'
+                }}
+            >
+                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    {/* LEFT CONTENT */}
+                    <div className="text-left relative z-10">
+                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             SEO Migration Services
                         </h1>
-                        <p style={{ fontSize: '24px', fontWeight: '600', marginBottom: '24px', color: '#0066CC' }}>
+                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
                             Safeguard Rankings. Preserve Traffic. Accelerate Growth.
-                        </p>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '30px' }}>
+                        </h3>
+                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
                             When websites evolve, rankings shouldn't collapse. Redesigns, domain changes, platform shifts, or international expansion — every structural change impacts visibility.
                         </p>
                         <div style={{
-                            background: 'rgba(255,255,255,0.12)',
-                            padding: '30px',
-                            borderRadius: '15px',
-                            border: '1px solid rgba(255,255,255,0.2)',
-                            backdropFilter: 'blur(10px)'
+                            background: 'rgba(255,255,255,0.05)',
+                            padding: '24px',
+                            borderRadius: '20px',
+                            border: '1px solid rgba(255,255,255,0.1)',
+                            backdropFilter: 'blur(10px)',
+                            marginBottom: '32px'
                         }}>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', margin: 0, color: '#fff' }}>
-                                Adkryoss managed by Clink Consultancy Services pvt.ltd delivers precision-driven SEO Migration Services that protect your organic equity while unlocking future scalability.
+                            <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
+                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span>, we deliver a zero-drop migration framework to protect your organic authority during transition.
                             </p>
                         </div>
+                    </div>
+                    {/* RIGHT IMAGE */}
+                    <div className="flex justify-center md:justify-end relative z-10">
+                        <img
+                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Domain-Migration-Services.webp"
+                            alt="SEO Migration"
+                            style={{
+                                maxWidth: '450px',
+                                width: '100%',
+                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
+                            }}
+                        />
                     </div>
                 </div>
             </section>
@@ -257,7 +274,7 @@ const SEOMigrationServices = () => {
                                         <li key={i} style={{
                                             display: 'flex',
                                             gap: '10px',
-                                            marginBottom: '12px',
+                                            marginBottom: '20px',
                                             color: '#555',
                                             fontSize: '15px'
                                         }}>

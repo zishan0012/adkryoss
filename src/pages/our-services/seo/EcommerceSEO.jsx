@@ -134,34 +134,51 @@ const EcommerceSEO = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section style={{
-                background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-                color: '#fff',
-                padding: '120px 0 80px',
-                textAlign: 'center'
-            }}>
-                <div className="container">
-                    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-                        <h1 style={{ fontSize: '56px', fontWeight: '800', marginBottom: '24px', letterSpacing: '-1px' }}>
+            <section
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                style={{
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+                    color: '#fff',
+                    position: 'relative',
+                    overflow: 'hidden'
+                }}
+            >
+                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    {/* LEFT CONTENT */}
+                    <div className="text-left relative z-10">
+                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             Ecommerce SEO Services
                         </h1>
-                        <p style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#0066cc' }}>
+                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
                             Turn Product Pages into Revenue Engines
-                        </p>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '40px' }}>
+                        </h3>
+                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
                             Ecommerce is no longer about just listing products. It’s about owning high-intent search moments. When customers search with buying intent, your store must appear first — not just visible, but irresistible.
                         </p>
                         <div style={{
                             background: 'rgba(255,255,255,0.05)',
-                            padding: '30px',
+                            padding: '24px',
                             borderRadius: '20px',
                             border: '1px solid rgba(255,255,255,0.1)',
-                            backdropFilter: 'blur(10px)'
+                            backdropFilter: 'blur(10px)',
+                            marginBottom: '32px'
                         }}>
                             <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                At Adkryoss managed by Clink Consultancy Services Private Limited, we build performance-driven Ecommerce SEO strategies designed to increase visibility, improve product discoverability, and maximize conversion value.
+                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span>, we build performance-driven Ecommerce SEO strategies designed to increase visibility, improve product discoverability, and maximize conversion value.
                             </p>
                         </div>
+                    </div>
+                    {/* RIGHT IMAGE */}
+                    <div className="flex justify-center md:justify-end relative z-10">
+                        <img
+                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Ecommerce-SEO.webp"
+                            alt="Ecommerce SEO"
+                            style={{
+                                maxWidth: '450px',
+                                width: '100%',
+                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
+                            }}
+                        />
                     </div>
                 </div>
             </section>
@@ -264,7 +281,7 @@ const EcommerceSEO = () => {
                                 <p style={{ fontSize: '15px', color: '#475569', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
                                 <ul style={{ listStyle: 'none', padding: 0, marginBottom: '20px' }}>
                                     {item.points.map((pt, idx) => (
-                                        <li key={idx} style={{ display: 'flex', gap: '10px', marginBottom: '12px', fontSize: '14px', color: '#334155' }}>
+                                        <li key={idx} style={{ display: 'flex', gap: '10px', marginBottom: '20px', fontSize: '14px', color: '#334155' }}>
                                             <CheckCircle2 size={16} style={{ color: '#0066cc', flexShrink: 0, marginTop: '2px' }} />
                                             {pt}
                                         </li>
@@ -337,7 +354,7 @@ const EcommerceSEO = () => {
                             </div>
                         ))}
                     </div>
-                    <p style={{ marginTop: '50px', fontSize: '20px', color: '#cbd5e1', maxWidth: '900px', margin: '50px auto 0' }}>
+                    <p style={{ marginTop: '50px', fontSize: '20px', color: '#e2e8f0', maxWidth: '900px', margin: '50px auto 0' }}>
                         Adkryoss managed by Clink Consultancy Services Private Limited doesn’t offer isolated SEO services — we build organic revenue ecosystems.
                     </p>
                 </div>
@@ -413,7 +430,7 @@ const EcommerceSEO = () => {
             {/* Final CTA */}
             <section style={{ padding: '100px 0', textAlign: 'center', background: 'linear-gradient(135deg, #0066cc 0%, #004e92 100%)', color: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px' }}>
+                    <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px', color: '#fff' }}>
                         Ready to Scale Your Ecommerce Revenue?
                     </h2>
                     <p style={{ fontSize: '22px', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', color: '#eff6ff' }}>

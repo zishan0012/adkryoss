@@ -1,0 +1,6 @@
+﻿
+D:\adkryoss\src\components\home\Hero.jsx
+  135:17  error  Duplicate key 'color'  no-dupe-keys
+
+Γ£û 1 problem (1 error, 0 warnings)
+

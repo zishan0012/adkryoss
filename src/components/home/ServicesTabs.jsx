@@ -194,16 +194,17 @@ import React, { useState } from "react";
 
 const tabs = [
   "Search Engine Optimization",
-  "Paid Marketing",
-  "Content Marketing",
-  "Mobile App Marketing",
-  "Marketing Technology & Automation",
+  "Performance Marketing (PPC & Paid Media)",
+  "Social Media Marketing",
+  "E-Commerce Marketing ",
+  "Content & Inbound Marketing ",
+  "Conversion Rate Optimization (CRO)"
 ];
 
 const tabContent = {
   "Search Engine Optimization": {
     title: "Search Engine Optimization",
-    desc: "Greater visibility. Higher rankings. Higher traffic. Better quality leads.",
+    desc: "Dominate search rankings with technical SEO, content strategy, high-authority link building, and AI-optimized search frameworks. We focus on traffic that converts — not vanity metrics. .",
     button: "Discover SEO Services",
     services: [
       "AI SEO Services",
@@ -213,25 +214,25 @@ const tabContent = {
     image:
       "https://www.techmagnate.com/wp-content/uploads/2025/01/seo-services.webp",
   },
-  "Paid Marketing": {
-    title: "Paid Marketing",
-    desc: "Maximize ROI with data-driven paid campaigns across platforms.",
+  "Performance Marketing (PPC & Paid Media)": {
+    title: "Performance Marketing (PPC & Paid Media)",
+    desc: "Google Ads, Meta Ads, LinkedIn Ads & programmatic campaigns engineered for maximum ROI. Smart bidding, advanced targeting, and CRO-backed landing strategies. ",
     button: "Discover Paid Marketing Services",
     services: ["PPC Services", "PPC Reseller Services", "Mobile Advertising"],
     image:
       "https://www.techmagnate.com/wp-content/uploads/2025/04/ppc-services-company.webp",
   },
-  "Content Marketing": {
-    title: "Content Marketing",
-    desc: "Content that attracts, engages, and converts your audience.",
+  "Social Media Marketing": {
+    title: "Social Media Marketing",
+    desc: "From brand storytelling to paid social scaling — we build community, engagement, and measurable conversions across Instagram, LinkedIn, Facebook, and emerging platforms. ",
     button: "Discover Content Marketing Services",
     services: ["Content Writing Services", "Guest Posting"],
     image:
       "https://www.techmagnate.com/wp-content/uploads/2025/04/content-marketing-services.webp",
   },
-  "Mobile App Marketing": {
-    title: "Mobile App Marketing",
-    desc: "Boost app installs and retention with targeted strategies.",
+  "E-Commerce Marketing ": {
+    title: "E-Commerce Marketing ",
+    desc: "Marketplace optimization, product feed management, dynamic ads, and performance scaling strategies for Shopify, WooCommerce & Amazon brands.",
     button: "Discover App Marketing Services",
     services: [
       "App Store Optimization Services",
@@ -240,9 +241,21 @@ const tabContent = {
     image:
       "https://www.techmagnate.com/wp-content/uploads/2025/04/mobile-app-marketing-services.webp",
   },
-  "Marketing Technology & Automation": {
-    title: "Marketing Technology & Automation",
-    desc: "Automate, optimize, and scale marketing operations.",
+  "Content & Inbound Marketing ": {
+    title: "Content & Inbound Marketing ",
+    desc: "SEO blogs, thought leadership, video marketing, and funnel-driven content that attracts, nurtures, and converts your audience. ",
+    button: "Discover Martech Services",
+    services: [
+      "Martech Consulting Services",
+      "Conversion Rate Optimization",
+      "Customer Data Platform Services",
+    ],
+    image:
+      "https://www.techmagnate.com/wp-content/uploads/2025/04/Martech1.webp",
+  },
+  "Conversion Rate Optimization (CRO)": {
+    title: "Conversion Rate Optimization (CRO) ",
+    desc: "We turn traffic into revenue using heatmaps, A/B testing, UX audits, and behavioral analytics. ",
     button: "Discover Martech Services",
     services: [
       "Martech Consulting Services",
@@ -283,7 +296,7 @@ const ServicesTabs = () => {
             color: "#000",
           }}
         >
-          Data Backed Services to Grow Your Revenue
+          📊 OUR CORE DIGITAL MARKETING SERVICES
         </h2>
 
         <p
@@ -294,8 +307,7 @@ const ServicesTabs = () => {
             margin: "16px auto 0",
           }}
         >
-          To experience 360-degree growth for your business, you need a
-          360-degree approach.
+          Integrated Digital Marketing Solutions Under One Roof 
         </p>
 
         <p
@@ -306,22 +318,9 @@ const ServicesTabs = () => {
             margin: "8px auto 0",
           }}
         >
-          Do you want to rank higher on search engines, optimize ad campaigns, or
-          enhance visibility? Leveraging the right data and marketing channels is
-          key to sustained business growth. Techmagnate can help.
+      We provide 360° digital marketing services tailored to startups, SMEs, enterprises, and D2C brands. 
         </p>
 
-        <p
-          style={{
-            textAlign: "center",
-            color: "#4b5563",
-            maxWidth: "896px",
-            margin: "8px auto 0",
-          }}
-        >
-          Partner with the best in digital marketing. Let’s drive measurable
-          growth.
-        </p>
 
         {/* Tabs */}
         <div

@@ -14,7 +14,7 @@ import AwardsSection from '../components/home/AwardsSection';
 import CaseStudySection from '../components/home/CaseStudySection';
 import ClientTestimonials from '../components/home/ClientTestinomials';
 import SearchTrendsReports from './SearchTrendsReports';
-import LatestBlogs from '../components/home/LatestBlogs';
+import GrowthPartner from '../components/home/GrowthPartner';
 const Home = () => {
     return (
         <div className="home-page">
@@ -31,9 +31,9 @@ const Home = () => {
             <TrafficGrowthSection/>
             <AwardsSection/>
             <CaseStudySection/>
-            <ClientTestimonials/>
             <SearchTrendsReports/>
-            <LatestBlogs/>
+            <GrowthPartner/>
+            <ClientTestimonials/>
         </div>
     );
 };
