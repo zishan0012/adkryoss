@@ -163,10 +163,10 @@ const TechnicalSEO = () => {
             >
                 <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             Technical SEO Services
                         </h1>
-                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
                             Build a Search-Ready Foundation that Scales
                         </h3>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
@@ -203,7 +203,7 @@ const TechnicalSEO = () => {
             <section style={{ padding: '100px 0', backgroundColor: '#fff', position: 'relative' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px' }}>
+                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
                             Why Technical SEO Is Non-Negotiable in 2026
                         </h2>
                         <p style={{ fontSize: '20px', color: '#666', maxWidth: '800px', margin: '0 auto' }}>
@@ -226,7 +226,7 @@ const TechnicalSEO = () => {
                                     <div style={{ background: '#0066cc', color: '#fff', borderRadius: '50%', padding: '4px' }}>
 
                                     </div>
-                                    <span style={{ fontSize: '18px', fontWeight: '600', color: '#1a1a1a' }}>{item}</span>
+                                    <span style={{ fontSize: '18px', fontWeight: '500', color: '#1a1a1a' }}>{item}</span>
                                 </div>
                             ))}
                         </div>
@@ -244,7 +244,7 @@ const TechnicalSEO = () => {
             <section style={{ padding: '100px 0', backgroundColor: '#f1f5f9' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px' }}>
+                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
                             Our Technical SEO Framework
                         </h2>
                         <p style={{ fontSize: '20px', color: '#666' }}>
@@ -272,7 +272,7 @@ const TechnicalSEO = () => {
                                     e.currentTarget.style.borderColor = '#e2e8f0';
                                 }}>
                                 <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
                                 <p style={{ color: '#666', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
                                 <ul style={{ listStyle: 'none', padding: 0, marginTop: '20px' }}>
                                     {item.points.map((p, j) => (
@@ -282,7 +282,7 @@ const TechnicalSEO = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ fontSize: '14px', fontWeight: '600', color: '#0066cc', marginTop: '20px' }}>{item.extra}</p>
+                                <p style={{ fontSize: '14px', fontWeight: '500', color: '#0066cc', marginTop: '20px' }}>{item.extra}</p>
                             </div>
                         ))}
                     </div>
@@ -307,7 +307,7 @@ const TechnicalSEO = () => {
                                     e.currentTarget.style.borderColor = '#e2e8f0';
                                 }}>
                                 <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
                                 <p style={{ color: '#666', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
                                 <ul style={{ listStyle: 'none', padding: 0 }}>
                                     {item.points.map((p, j) => (
@@ -317,7 +317,7 @@ const TechnicalSEO = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ fontSize: '14px', fontWeight: '600', color: '#0066cc', marginTop: '20px' }}>{item.extra}</p>
+                                <p style={{ fontSize: '14px', fontWeight: '500', color: '#0066cc', marginTop: '20px' }}>{item.extra}</p>
                             </div>
                         ))}
                     </div>
@@ -328,7 +328,7 @@ const TechnicalSEO = () => {
             <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px' }}>Our Working Approach</h2>
+                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>Our Working Approach</h2>
                         <p style={{ fontSize: '20px', color: '#666' }}>We combine strategic planning with technical execution.</p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-6">
@@ -342,8 +342,8 @@ const TechnicalSEO = () => {
                                 border: '1px solid #eee',
                                 textAlign: 'center'
                             }}>
-                                <div style={{ fontSize: '14px', fontWeight: '800', color: '#0066cc', marginBottom: '10px', textTransform: 'uppercase' }}>{item.step}</div>
-                                <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#1a1a1a', marginBottom: '10px' }}>{item.title}</h4>
+                                <div style={{ fontSize: '14px', fontWeight: '700', color: '#0066cc', marginBottom: '10px', textTransform: 'uppercase' }}>{item.step}</div>
+                                <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#1a1a1a', marginBottom: '10px' }}>{item.title}</h4>
                                 <p style={{ fontSize: '14px', color: '#666', lineHeight: '1.5' }}>{item.desc}</p>
                             </div>
                         ))}
@@ -356,7 +356,7 @@ const TechnicalSEO = () => {
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16">
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '40px', color: '#fff' }}>Who Needs Technical SEO?</h2>
+                            <h2 style={{ fontSize: '36px', fontWeight: '600', marginBottom: '40px', color: '#fff' }}>Who Needs Technical SEO?</h2>
                             <div className="grid grid-cols-2 gap-4">
                                 {[
                                     { name: "Enterprise websites", icon: <Building2 size={18} /> },
@@ -377,7 +377,7 @@ const TechnicalSEO = () => {
                             </p>
                         </div>
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '40px', color: '#fff' }}>Why Choose Us</h2>
+                            <h2 style={{ fontSize: '36px', fontWeight: '600', marginBottom: '40px', color: '#fff' }}>Why Choose Us</h2>
                             <div className="space-y-6">
                                 {[
                                     { t: "Data-driven execution", d: "Every fix is backed by hard search data." },
@@ -388,7 +388,7 @@ const TechnicalSEO = () => {
                                     <div key={i} style={{ display: 'flex', gap: '15px' }}>
                                         <div style={{ marginTop: '4px' }}><ArrowRight size={20} className="text-blue-400" /></div>
                                         <div>
-                                            <h4 style={{ fontSize: '18px', fontWeight: '700' }}>{item.t}</h4>
+                                            <h4 style={{ fontSize: '18px', fontWeight: '600' }}>{item.t}</h4>
                                             <p style={{ color: '#e2e8f0', lineHeight: '1.7' }}>{item.d}</p>
                                         </div>
                                     </div>
@@ -404,18 +404,18 @@ const TechnicalSEO = () => {
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16">
                         <div style={{ borderRight: '1px solid #eee', paddingRight: '40px' }}>
-                            <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#000' }}>What Makes Our Technical SEO Different?</h2>
+                            <h2 style={{ fontSize: '42px', fontWeight: '600', marginBottom: '20px', color: '#000' }}>What Makes Our Technical SEO Different?</h2>
                             <div className="flex flex-wrap gap-3">
                                 {[
                                     "GSC", "GA4", "Screaming Frog", "Ahrefs", "SEMrush", "PageSpeed Insights", "GTmetrix", "Schema Generators", "CDN Tools"
                                 ].map((tool, i) => (
-                                    <span key={i} style={{ padding: '8px 20px', background: '#f1f5f9', color: '#1a1a1a', borderRadius: '50px', fontSize: '14px', fontWeight: '600' }}>{tool}</span>
+                                    <span key={i} style={{ padding: '8px 20px', background: '#f1f5f9', color: '#1a1a1a', borderRadius: '50px', fontSize: '14px', fontWeight: '500' }}>{tool}</span>
                                 ))}
                             </div>
                             <p style={{ marginTop: '20px', color: '#666' }}>We combine automation with expert analysis for precision results.</p>
                         </div>
                         <div>
-                            <h3 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '30px' }}>Results You Can Expect</h3>
+                            <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '30px' }}>Results You Can Expect</h3>
                             <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                                 {[
                                     "Improved crawl efficiency",
@@ -427,7 +427,7 @@ const TechnicalSEO = () => {
                                 ].map((res, i) => (
                                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                                         <TrendingUp size={18} className="text-green-500" />
-                                        <span style={{ fontWeight: '600', color: '#333' }}>{res}</span>
+                                        <span style={{ fontWeight: '500', color: '#333' }}>{res}</span>
                                     </div>
                                 ))}
                             </div>
@@ -439,11 +439,11 @@ const TechnicalSEO = () => {
             {/* FAQs */}
             <section style={{ padding: '100px 0', backgroundColor: '#f8f9fa' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '36px', fontWeight: '700', textAlign: 'center', marginBottom: '50px' }}>Frequently Asked Questions</h2>
+                    <h2 style={{ fontSize: '36px', fontWeight: '600', textAlign: 'center', marginBottom: '50px' }}>Frequently Asked Questions</h2>
                     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
                         {faqs.map((faq, i) => (
                             <div key={i} style={{ marginBottom: '20px', background: '#fff', padding: '24px', borderRadius: '16px', border: '1px solid #eee' }}>
-                                <h4 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '10px', color: '#1a1a1a' }}>{faq.question}</h4>
+                                <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>{faq.question}</h4>
                                 <p style={{ color: '#666', lineHeight: '1.6', margin: 0 }}>{faq.answer}</p>
                             </div>
                         ))}
@@ -454,11 +454,11 @@ const TechnicalSEO = () => {
             {/* CTA */}
             <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, #0066cc 0%, #004999 100%)', color: '#fff', textAlign: 'center' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#fff' }}>Let’s Strengthen Your Digital Foundation</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>Let’s Strengthen Your Digital Foundation</h2>
                     <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: '#fff' }}>
                         Partner with Adkryoss managed by Clink Consultancy Services Private Limited and build a website that search engines trust — and customers love.
                     </p>
-                    <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#fff', color: '#0066cc', padding: '18px 40px', borderRadius: '50px', fontWeight: '700', textDecoration: 'none', transition: 'all 0.3s' }}
+                    <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#fff', color: '#0066cc', padding: '18px 40px', borderRadius: '50px', fontWeight: '600', textDecoration: 'none', transition: 'all 0.3s' }}
                         onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
                         onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
                         Unlock Your Search Potential <ArrowRight size={20} />

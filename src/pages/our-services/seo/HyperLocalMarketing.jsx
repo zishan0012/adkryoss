@@ -127,10 +127,10 @@ const HyperLocalMarketing = () => {
             >
                 <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             Hyperlocal Marketing Services
                         </h1>
-                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
                             Dominate Your Neighborhood. Be the first choice when your customers search “near me.”
                         </h3>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
@@ -167,7 +167,7 @@ const HyperLocalMarketing = () => {
             <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px' }}>
+                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
                             What is Hyperlocal Marketing?
                         </h2>
                         <p style={{ fontSize: '20px', color: '#666', maxWidth: '850px', margin: '0 auto' }}>
@@ -180,12 +180,12 @@ const HyperLocalMarketing = () => {
                             <p style={{ fontSize: '18px', color: '#444', lineHeight: '1.8', marginBottom: '24px' }}>
                                 In today’s mobile-first world, search queries like “best café near me” or “plumber nearby” are high-intent and conversion-ready.
                             </p>
-                            <p style={{ fontSize: '18px', color: '#1a1a1a', fontWeight: '600', lineHeight: '1.8' }}>
+                            <p style={{ fontSize: '18px', color: '#1a1a1a', fontWeight: '500', lineHeight: '1.8' }}>
                                 Adkryoss managed by Clink Consultancy Services Private Limited helps businesses capture this intent by combining location intelligence and local SEO to drive transactions.
                             </p>
                         </div>
                         <div style={{ background: '#0f172a', padding: '50px', borderRadius: '40px', color: '#fff' }}>
-                            <h3 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '30px', color: '#fff' }}>Why It Matters Now</h3>
+                            <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '30px', color: '#fff' }}>Why It Matters Now</h3>
                             <div className="space-y-6">
                                 {[
                                     "80%+ of local searches convert within 24h",
@@ -208,7 +208,7 @@ const HyperLocalMarketing = () => {
             <section style={{ padding: '100px 0', backgroundColor: '#f1f5f9' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px' }}>
+                        <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
                             Our Hyperlocal Marketing Solutions
                         </h2>
                         <p style={{ fontSize: '18px', color: '#666' }}>
@@ -239,7 +239,7 @@ const HyperLocalMarketing = () => {
                                     e.currentTarget.style.borderColor = '#e2e8f0';
                                 }}>
                                 <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
+                                <h3 style={{ fontSize: '22px', fontWeight: '600', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
                                 <p style={{ color: '#666', marginBottom: '20px', lineHeight: '1.6', fontSize: '15px' }}>{item.desc}</p>
                                 <ul style={{ listStyle: 'none', padding: 0 }}>
                                     {item.points.map((p, j) => (
@@ -260,7 +260,7 @@ const HyperLocalMarketing = () => {
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1a1a1a', marginBottom: '30px' }}>What Makes Our Strategy Different?</h2>
+                            <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#1a1a1a', marginBottom: '30px' }}>What Makes Our Strategy Different?</h2>
                             <p style={{ fontSize: '18px', color: '#666', lineHeight: '1.8', marginBottom: '30px' }}>
                                 We focus on driving actions — calls, direction requests, walk-ins, and bookings — not just simple impressions.
                             </p>
@@ -272,14 +272,14 @@ const HyperLocalMarketing = () => {
                                     { t: "Heat Mapping", d: "Advanced competitor visibility heat mapping." }
                                 ].map((item, i) => (
                                     <div key={i}>
-                                        <h4 style={{ fontWeight: '700', color: '#0066cc', marginBottom: '5px' }}>{item.t}</h4>
+                                        <h4 style={{ fontWeight: '600', color: '#0066cc', marginBottom: '5px' }}>{item.t}</h4>
                                         <p style={{ fontSize: '14px', color: '#666' }}>{item.d}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div style={{ background: '#0f172a', padding: '60px', borderRadius: '40px', color: '#fff' }}>
-                            <h3 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '30px' }}>Benefits You'll See</h3>
+                            <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '30px' }}>Benefits You'll See</h3>
                             <div className="space-y-6">
                                 {[
                                     "Increased physical foot traffic",
@@ -304,12 +304,12 @@ const HyperLocalMarketing = () => {
             <section style={{ padding: '100px 0', backgroundColor: '#f1f5f9' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px' }}>Industries We Serve</h2>
+                        <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>Industries We Serve</h2>
                         <p style={{ fontSize: '18px', color: '#666' }}>Hyperlocal marketing bridges the gap between online discovery and offline conversion.</p>
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
                         {targetingIndustries.map((item, i) => (
-                            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', background: '#fff', padding: '15px 25px', borderRadius: '12px', border: '1px solid #e2e8f0', fontWeight: '600', color: '#1e293b' }}>
+                            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', background: '#fff', padding: '15px 25px', borderRadius: '12px', border: '1px solid #e2e8f0', fontWeight: '500', color: '#1e293b' }}>
                                 <span className="text-blue-500">{item.icon}</span>
                                 {item.name}
                             </div>
@@ -322,7 +322,7 @@ const HyperLocalMarketing = () => {
             <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1a1a1a', marginBottom: '20px' }}>Our Working Approach</h2>
+                        <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>Our Working Approach</h2>
                         <p style={{ fontSize: '18px', color: '#666' }}>Adkryoss managed by Clink Consultancy Services Private Limited ensures you lead locally.</p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-6">
@@ -336,8 +336,8 @@ const HyperLocalMarketing = () => {
                                 textAlign: 'center',
                                 border: '1px solid #eee',
                             }}>
-                                <div style={{ fontSize: '14px', fontWeight: '800', color: '#0066cc', marginBottom: '10px' }}>{item.step}</div>
-                                <h4 style={{ fontSize: '20px', fontWeight: '700', color: '#1a1a1a', marginBottom: '10px' }}>{item.title}</h4>
+                                <div style={{ fontSize: '14px', fontWeight: '700', color: '#0066cc', marginBottom: '10px' }}>{item.step}</div>
+                                <h4 style={{ fontSize: '20px', fontWeight: '600', color: '#1a1a1a', marginBottom: '10px' }}>{item.title}</h4>
                                 <p style={{ fontSize: '13px', color: '#666', lineHeight: '1.6' }}>{item.desc}</p>
                             </div>
                         ))}
@@ -351,19 +351,19 @@ const HyperLocalMarketing = () => {
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div style={{ background: 'rgba(255,255,255,0.05)', padding: '60px', borderRadius: '40px', border: '1px solid rgba(255,255,255,0.1)' }}>
                             <TrendingUp size={48} className="text-blue-400 mb-6" />
-                            <h3 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '20px' }}>Dominating Near-Me Search</h3>
+                            <h3 style={{ fontSize: '32px', fontWeight: '600', marginBottom: '20px' }}>Dominating Near-Me Search</h3>
                             <p style={{ fontSize: '18px', color: '#e2e8f0', marginBottom: '30px' }}>If your customers are searching nearby, your business should be visible instantly. Early adoption means:</p>
                             <div className="grid grid-cols-2 gap-4">
                                 {["Lower acquisition cost", "Higher community trust", "Hyper-targeted leads", "Instant map visibility"].map((item, i) => (
                                     <div key={i} style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                                         <CheckCircle2 size={16} className="text-blue-400" />
-                                        <span style={{ fontWeight: '600' }}>{item}</span>
+                                        <span style={{ fontWeight: '500' }}>{item}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#fff', marginBottom: '30px' }}>Ready to Own Your Local Market?</h2>
+                            <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#fff', marginBottom: '30px' }}>Ready to Own Your Local Market?</h2>
                             <p style={{ fontSize: '18px', color: '#e2e8f0', lineHeight: '1.8', marginBottom: '32px' }}>
                                 Adkryoss managed by Clink Consultancy Services Private Limited helps you build a hyperlocal growth engine that drives results in your immediate market.
                             </p>
@@ -378,11 +378,11 @@ const HyperLocalMarketing = () => {
             {/* CTA */}
             <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, #0066cc 0%, #004999 100%)', color: '#fff', textAlign: 'center' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#fff' }}>Dominance Within Miles. Start Now.</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>Dominance Within Miles. Start Now.</h2>
                     <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 1, color: '#fff', fontWeight: '500' }}>
                         Turn proximity into profit. Partner with us and lead your local market.
                     </p>
-                    <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#fff', color: '#0066cc', padding: '18px 40px', borderRadius: '50px', fontWeight: '700', textDecoration: 'none', transition: 'all 0.3s' }}
+                    <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#fff', color: '#0066cc', padding: '18px 40px', borderRadius: '50px', fontWeight: '600', textDecoration: 'none', transition: 'all 0.3s' }}
                         onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
                         onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
                         Start Your Hyperlocal Growth <ArrowRight size={20} />

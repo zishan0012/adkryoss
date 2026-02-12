@@ -124,10 +124,10 @@ const MultilingualSEOServices = () => {
                 <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             Multilingual SEO Services
                         </h1>
-                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
                             Expand Beyond Borders. Rank in Every Language.
                         </h3>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
@@ -165,7 +165,7 @@ const MultilingualSEOServices = () => {
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>
+                        <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>
                             Why Multilingual SEO is a Growth Multiplier
                         </h2>
                         <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.8', maxWidth: '900px', margin: '0 auto' }}>
@@ -210,12 +210,12 @@ const MultilingualSEOServices = () => {
                                     e.currentTarget.style.color = '#0f172a';
                                 }}>
                                 <CheckCircle2 size={24} />
-                                <span style={{ fontWeight: '700' }}>{benefit}</span>
+                                <span style={{ fontWeight: '600' }}>{benefit}</span>
                             </div>
                         ))}
                     </div>
                     <div style={{ textAlign: 'center' }}>
-                        <p style={{ fontSize: '20px', fontWeight: '700', color: '#0066cc' }}>
+                        <p style={{ fontSize: '20px', fontWeight: '600', color: '#0066cc' }}>
                             This isn’t translation. This is strategic localization powered by data.
                         </p>
                     </div>
@@ -225,7 +225,7 @@ const MultilingualSEOServices = () => {
             {/* Approach Section */}
             <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
                         Our Multilingual SEO Approach
                     </h2>
                     <div style={{
@@ -259,7 +259,7 @@ const MultilingualSEOServices = () => {
                                     e.currentTarget.style.borderColor = '#e2e8f0';
                                 }}>
                                 <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '800', marginBottom: '15px', color: '#0f172a' }}>
+                                <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '15px', color: '#0f172a' }}>
                                     {i + 1}. {item.title}
                                 </h3>
                                 <p style={{ fontSize: '15px', color: '#475569', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
@@ -271,7 +271,7 @@ const MultilingualSEOServices = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ fontSize: '14px', color: '#0066cc', fontWeight: '600', padding: '15px', background: '#eff6ff', borderRadius: '12px', margin: 0 }}>
+                                <p style={{ fontSize: '14px', color: '#0066cc', fontWeight: '500', padding: '15px', background: '#eff6ff', borderRadius: '12px', margin: 0 }}>
                                     {item.extra}
                                 </p>
                             </div>
@@ -283,7 +283,7 @@ const MultilingualSEOServices = () => {
             {/* Who Needs Section */}
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>Who Needs Multilingual SEO?</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>Who Needs Multilingual SEO?</h2>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '15px' }}>
                         {needsMultilingual.map((need, i) => (
                             <div key={i} style={{
@@ -291,7 +291,7 @@ const MultilingualSEOServices = () => {
                                 background: '#eff6ff',
                                 color: '#0f172a',
                                 borderRadius: '50px',
-                                fontWeight: '700',
+                                fontWeight: '600',
                                 border: '1px solid #e2e8f0',
                                 transition: 'all 0.3s'
                             }}
@@ -309,7 +309,7 @@ const MultilingualSEOServices = () => {
                             </div>
                         ))}
                     </div>
-                    <p style={{ textAlign: 'center', marginTop: '40px', fontSize: '18px', color: '#475569', fontWeight: '600' }}>
+                    <p style={{ textAlign: 'center', marginTop: '40px', fontSize: '18px', color: '#475569', fontWeight: '500' }}>
                         If your audience speaks more than one language, your SEO strategy should too.
                     </p>
                 </div>
@@ -318,7 +318,7 @@ const MultilingualSEOServices = () => {
             {/* Why Choose Our Multilingual SEO Services? */}
             <section style={{ padding: '80px 0', backgroundColor: '#0f172a', color: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#fff' }}>Why Choose Our Multilingual SEO Services?</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#fff' }}>Why Choose Our Multilingual SEO Services?</h2>
                     <div style={{
                         display: 'flex',
                         flexWrap: 'wrap',
@@ -347,7 +347,7 @@ const MultilingualSEOServices = () => {
                                 maxWidth: '380px'
                             }}>
                                 <CheckCircle2 size={24} style={{ color: '#0066cc' }} />
-                                <span style={{ fontWeight: '700', fontSize: '16px' }}>{item}</span>
+                                <span style={{ fontWeight: '600', fontSize: '16px' }}>{item}</span>
                             </div>
                         ))}
                     </div>
@@ -357,7 +357,7 @@ const MultilingualSEOServices = () => {
             {/* Working Model */}
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '60px', color: '#0f172a' }}>Our Working Model</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '60px', color: '#0f172a' }}>Our Working Model</h2>
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
                         {["Discover", "Strategize", "Localize", "Optimize", "Scale"].map((step, i) => (
                             <React.Fragment key={i}>
@@ -366,7 +366,7 @@ const MultilingualSEOServices = () => {
                                     background: '#0066cc',
                                     color: '#fff',
                                     borderRadius: '12px',
-                                    fontWeight: '800',
+                                    fontWeight: '700',
                                     fontSize: '20px',
                                     boxShadow: '0 10px 20px rgba(0, 102, 204, 0.2)'
                                 }}>
@@ -385,7 +385,7 @@ const MultilingualSEOServices = () => {
             {/* Final CTA */}
             <section style={{ padding: '100px 0', textAlign: 'center', background: 'linear-gradient(135deg, #0066cc 0%, #004e92 100%)', color: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px', color: '#fff' }}>
+                    <h2 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '24px', color: '#fff' }}>
                         Ready to Go Global?
                     </h2>
                     <p style={{ fontSize: '22px', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', color: '#eff6ff' }}>
@@ -400,7 +400,7 @@ const MultilingualSEOServices = () => {
                         padding: '20px 50px',
                         borderRadius: '50px',
                         fontSize: '18px',
-                        fontWeight: '800',
+                        fontWeight: '700',
                         textDecoration: 'none',
                         transition: 'all 0.3s',
                         boxShadow: '0 10px 30px rgba(0,0,0,0.3)'

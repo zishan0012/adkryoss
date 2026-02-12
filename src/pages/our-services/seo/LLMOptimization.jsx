@@ -126,10 +126,10 @@ const LLMOptimization = () => {
             >
                 <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '56px', fontWeight: '800', marginBottom: '16px', letterSpacing: '-1.5px', color: '#000', lineHeight: '1.1' }}>
+                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1.5px', color: '#000', lineHeight: '1.1' }}>
                             LLM Optimization Services
                         </h1>
-                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
                             Be the Answer. Not Just Another Result.
                         </h3>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
@@ -137,7 +137,7 @@ const LLMOptimization = () => {
                         </p>
                         <div style={{ background: 'rgba(255,255,255,0.05)', padding: '24px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)' }}>
                             <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                At Adkryoss managed by <span style={{ fontWeight: '800', color: '#000' }}>Clink Consultancy Services Private Limited</span>, we future-proof your digital presence for AI-driven discovery.
+                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span>, we future-proof your digital presence for AI-driven discovery.
                             </p>
                         </div>
                     </div>
@@ -160,7 +160,7 @@ const LLMOptimization = () => {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '60px', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>
+                            <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>
                                 What is LLM Optimization?
                             </h2>
                             <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.8', marginBottom: '24px' }}>
@@ -175,13 +175,13 @@ const LLMOptimization = () => {
                                 ].map((item, i) => (
                                     <div key={i} style={{ padding: '15px', background: '#f8fafc', borderRadius: '12px', display: 'flex', gap: '10px', alignItems: 'center', border: '1px solid #e2e8f0' }}>
                                         <div style={{ color: '#0066cc' }}>{item.i}</div>
-                                        <span style={{ fontWeight: '700', fontSize: '14px', color: '#0f172a' }}>{item.t}</span>
+                                        <span style={{ fontWeight: '600', fontSize: '14px', color: '#0f172a' }}>{item.t}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div style={{ background: '#f8fafc', padding: '40px', borderRadius: '30px', border: '1px solid #e2e8f0' }}>
-                            <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>Why It Matters Now:</h3>
+                            <h3 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '30px', color: '#0f172a' }}>Why It Matters Now:</h3>
                             <div className="space-y-6">
                                 {[
                                     { t: "Users ask full questions, not keywords", d: "Conversational queries are replacing short phrases." },
@@ -191,10 +191,10 @@ const LLMOptimization = () => {
                                 ].map((item, i) => (
                                     <div key={i} style={{ display: 'flex', gap: '15px' }}>
                                         <div style={{ width: '30px', height: '30px', background: '#fff', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #e2e8f0', flexShrink: 0 }}>
-                                            <span style={{ fontWeight: '800', color: '#0066cc' }}>{i + 1}</span>
+                                            <span style={{ fontWeight: '700', color: '#0066cc' }}>{i + 1}</span>
                                         </div>
                                         <div>
-                                            <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#0f172a', marginBottom: '4px' }}>{item.t}</h4>
+                                            <h4 style={{ fontSize: '18px', fontWeight: '500', color: '#0f172a', marginBottom: '4px' }}>{item.t}</h4>
                                             <p style={{ fontSize: '15px', color: '#64748b' }}>{item.d}</p>
                                         </div>
                                     </div>
@@ -209,8 +209,8 @@ const LLMOptimization = () => {
             <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '20px', color: '#0f172a' }}>Our LLM Optimization Approach</h2>
-                        <p style={{ fontSize: '20px', color: '#64748b', fontWeight: '600' }}>Structured. Data-Driven. AI-First.</p>
+                        <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#0f172a' }}>Our LLM Optimization Approach</h2>
+                        <p style={{ fontSize: '20px', color: '#64748b', fontWeight: '500' }}>Structured. Data-Driven. AI-First.</p>
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '40px' }}>
                         {approach.map((step, i) => (
@@ -236,7 +236,7 @@ const LLMOptimization = () => {
                                     e.currentTarget.style.borderColor = '#e2e8f0';
                                 }}>
                                 <div style={{ color: '#0066cc', marginBottom: '24px' }}>{step.icon}</div>
-                                <h3 style={{ fontSize: '24px', fontWeight: '800', marginBottom: '20px', color: '#0f172a' }}>{step.title}</h3>
+                                <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '20px', color: '#0f172a' }}>{step.title}</h3>
                                 <p style={{ fontSize: '16px', color: '#475569', marginBottom: '30px', lineHeight: '1.6' }}>{step.desc}</p>
                                 <ul className="space-y-6">
                                     {step.points.map((pt, idx) => (
@@ -259,12 +259,12 @@ const LLMOptimization = () => {
                         <div style={{ background: '#f8fafc', padding: '50px', borderRadius: '40px', border: '1px solid #e2e8f0' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }}>
                                 <Microscope size={32} style={{ color: '#0066cc' }} />
-                                <h3 style={{ fontSize: '28px', fontWeight: '800', color: '#0f172a' }}>What Makes Our Strategy Different</h3>
+                                <h3 style={{ fontSize: '28px', fontWeight: '700', color: '#0f172a' }}>What Makes Our Strategy Different</h3>
                             </div>
                             <div className="space-y-8">
                                 {strategyDifferent.map((item, i) => (
                                     <div key={i}>
-                                        <h4 style={{ fontSize: '18px', fontWeight: '800', color: '#0f172a', marginBottom: '8px' }}>{item.t}</h4>
+                                        <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#0f172a', marginBottom: '8px' }}>{item.t}</h4>
                                         <p style={{ fontSize: '15px', color: '#475569', lineHeight: '1.6' }}>{item.d}</p>
                                     </div>
                                 ))}
@@ -273,13 +273,13 @@ const LLMOptimization = () => {
                         <div style={{ background: '#f8fafc', padding: '50px', borderRadius: '40px', border: '1px solid #e2e8f0' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }}>
                                 <Cpu size={32} style={{ color: '#0066cc' }} />
-                                <h3 style={{ fontSize: '28px', fontWeight: '800', color: '#0f172a' }}>Technology & Research Stack</h3>
+                                <h3 style={{ fontSize: '28px', fontWeight: '700', color: '#0f172a' }}>Technology & Research Stack</h3>
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 {techStack.map((item, i) => (
                                     <div key={i} style={{ padding: '25px', background: '#fff', borderRadius: '20px', border: '1px solid #e2e8f0', textAlign: 'center', transition: 'all 0.3s' }}>
                                         <div style={{ color: '#0066cc', marginBottom: '15px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
-                                        <span style={{ fontSize: '14px', fontWeight: '700', color: '#0f172a' }}>{item.name}</span>
+                                        <span style={{ fontSize: '14px', fontWeight: '600', color: '#0f172a' }}>{item.name}</span>
                                     </div>
                                 ))}
                             </div>
@@ -291,7 +291,7 @@ const LLMOptimization = () => {
             {/* Benefits of LLM Optimization */}
             <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '20px', color: '#0f172a' }}>Benefits of LLM Optimization</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#0f172a' }}>Benefits of LLM Optimization</h2>
                     <p style={{ fontSize: '20px', color: '#64748b', marginBottom: '60px' }}>Future-proofing your brand's presence in the AI era.</p>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '30px' }}>
                         {benefits.map((item, i) => (
@@ -303,7 +303,7 @@ const LLMOptimization = () => {
                                 <div style={{ background: '#e0f2fe', width: '50px', height: '50px', borderRadius: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px' }}>
                                     <CheckCircle2 size={24} style={{ color: '#0066cc' }} />
                                 </div>
-                                <h4 style={{ fontSize: '20px', fontWeight: '800', color: '#0f172a', marginBottom: '12px' }}>{item.t}</h4>
+                                <h4 style={{ fontSize: '20px', fontWeight: '700', color: '#0f172a', marginBottom: '12px' }}>{item.t}</h4>
                                 <p style={{ fontSize: '15px', color: '#475569', lineHeight: '1.6' }}>{item.d}</p>
                             </div>
                         ))}
@@ -314,7 +314,7 @@ const LLMOptimization = () => {
             {/* Who Needs LLM Optimization */}
             <section style={{ padding: '80px 0', backgroundColor: '#0f172a', color: '#fff' }}>
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '20px', color: '#fff' }}>Who Needs LLM Optimization?</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#fff' }}>Who Needs LLM Optimization?</h2>
                     <p style={{ fontSize: '20px', color: '#cbd5e1', marginBottom: '60px', maxWidth: '800px', margin: '0 auto 60px' }}>
                         If your audience is asking AI for recommendations, your brand must be optimized for it.
                     </p>
@@ -323,7 +323,7 @@ const LLMOptimization = () => {
                             <div key={i} style={{ padding: '30px', background: 'rgba(255,255,255,0.05)', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.1)', transition: 'all 0.3s' }}
                                 onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}>
                                 <div style={{ color: '#60a5fa', marginBottom: '15px', display: 'flex', justifyContent: 'center' }}>{aud.icon}</div>
-                                <h4 style={{ fontSize: '18px', fontWeight: '700' }}>{aud.name}</h4>
+                                <h4 style={{ fontSize: '18px', fontWeight: '600' }}>{aud.name}</h4>
                             </div>
                         ))}
                     </div>
@@ -335,11 +335,11 @@ const LLMOptimization = () => {
                 <div className="container">
                     <div style={{ background: '#f8fafc', padding: '80px 40px', borderRadius: '40px', border: '1px solid #e2e8f0' }}>
                         <Bot size={60} style={{ color: '#0066cc', margin: '0 auto 24px' }} />
-                        <h2 style={{ fontSize: '48px', fontWeight: '800', color: '#0f172a', marginBottom: '24px' }}>Ready to Become AI-Discoverable?</h2>
+                        <h2 style={{ fontSize: '48px', fontWeight: '700', color: '#0f172a', marginBottom: '24px' }}>Ready to Become AI-Discoverable?</h2>
                         <p style={{ fontSize: '20px', color: '#64748b', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px' }}>
                             Search engines are evolving into answer engines. Businesses that adapt now will dominate tomorrow. Let's optimize your presence for the next generation of discovery.
                         </p>
-                        <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', background: '#0066cc', color: '#fff', padding: '20px 60px', borderRadius: '50px', fontSize: '20px', fontWeight: '800', textDecoration: 'none', transition: 'all 0.3s' }}
+                        <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', background: '#0066cc', color: '#fff', padding: '20px 60px', borderRadius: '50px', fontSize: '20px', fontWeight: '700', textDecoration: 'none', transition: 'all 0.3s' }}
                             onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
                             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
                             Future-Proof Your Visibility <ArrowRight size={24} />

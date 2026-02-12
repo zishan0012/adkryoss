@@ -139,10 +139,10 @@ const SEOMigrationServices = () => {
                 <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             SEO Migration Services
                         </h1>
-                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
                             Safeguard Rankings. Preserve Traffic. Accelerate Growth.
                         </h3>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
@@ -179,7 +179,7 @@ const SEOMigrationServices = () => {
             {/* Risk Section */}
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '40px' }}>
+                    <h2 style={{ fontSize: '36px', fontWeight: '600', marginBottom: '40px' }}>
                         Why SEO Migration Is High-Risk Without Strategy
                     </h2>
                     <div style={{
@@ -220,11 +220,11 @@ const SEOMigrationServices = () => {
                                     e.currentTarget.style.boxShadow = 'none';
                                 }}>
                                 <AlertTriangle size={20} style={{ color: '#F87171' }} />
-                                <span style={{ fontWeight: '600', color: '#B91C1C' }}>{risk}</span>
+                                <span style={{ fontWeight: '500', color: '#B91C1C' }}>{risk}</span>
                             </div>
                         ))}
                     </div>
-                    <p style={{ fontSize: '20px', fontWeight: '700', color: '#0066CC' }}>
+                    <p style={{ fontSize: '20px', fontWeight: '600', color: '#0066CC' }}>
                         We don't just "move" your website. We engineer a seamless search transition.
                     </p>
                 </div>
@@ -233,7 +233,7 @@ const SEOMigrationServices = () => {
             {/* Framework Section */}
             <section style={{ padding: '80px 0', backgroundColor: '#f8f9fa' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '600', textAlign: 'center', marginBottom: '60px' }}>
                         Our SEO Migration Framework
                     </h2>
                     <div style={{
@@ -266,7 +266,7 @@ const SEOMigrationServices = () => {
                                     e.currentTarget.style.borderColor = '#eee';
                                 }}>
                                 <div style={{ color: '#0066CC', marginBottom: '20px' }}>{step.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '20px', color: '#1a1a1a' }}>
+                                <h3 style={{ fontSize: '22px', fontWeight: '600', marginBottom: '20px', color: '#1a1a1a' }}>
                                     {index + 1}. {step.title}
                                 </h3>
                                 <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -292,7 +292,7 @@ const SEOMigrationServices = () => {
             {/* Migration Types */}
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '36px', fontWeight: '700', textAlign: 'center', marginBottom: '50px' }}>
+                    <h2 style={{ fontSize: '36px', fontWeight: '600', textAlign: 'center', marginBottom: '50px' }}>
                         Types of SEO Migration We Handle
                     </h2>
                     <div style={{
@@ -330,7 +330,7 @@ const SEOMigrationServices = () => {
                                     e.currentTarget.style.boxShadow = 'none';
                                 }}>
                                 <div style={{ color: '#0066CC' }}>{type.icon}</div>
-                                <span style={{ fontWeight: '700', color: '#1a1a1a' }}>{type.name}</span>
+                                <span style={{ fontWeight: '600', color: '#1a1a1a' }}>{type.name}</span>
                             </div>
                         ))}
                     </div>
@@ -340,7 +340,7 @@ const SEOMigrationServices = () => {
             {/* Different Section */}
             <section style={{ padding: '80px 0', backgroundColor: '#0066CC', color: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#fff' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '600', textAlign: 'center', marginBottom: '60px', color: '#fff' }}>
                         What Makes Us Different?
                     </h2>
                     <div style={{
@@ -370,7 +370,7 @@ const SEOMigrationServices = () => {
                                     e.currentTarget.style.transform = 'translateY(0)';
                                     e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
                                 }}>
-                                <h3 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '15px', color: '#fff' }}>{diff.title}</h3>
+                                <h3 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '15px', color: '#fff' }}>{diff.title}</h3>
                                 <p style={{ color: '#fff', opacity: 1, lineHeight: '1.6', fontSize: '15px' }}>{diff.description}</p>
                             </div>
                         ))}
@@ -381,7 +381,7 @@ const SEOMigrationServices = () => {
             {/* CTA */}
             <section style={{ padding: '100px 0', textAlign: 'center', backgroundColor: '#f8f9fa' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '24px', color: '#1a1a1a' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '24px', color: '#1a1a1a' }}>
                         Let's Migrate Without Losing Momentum
                     </h2>
                     <p style={{ fontSize: '20px', color: '#666', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px' }}>
@@ -396,7 +396,7 @@ const SEOMigrationServices = () => {
                         padding: '18px 45px',
                         borderRadius: '10px',
                         fontSize: '18px',
-                        fontWeight: '700',
+                        fontWeight: '600',
                         textDecoration: 'none',
                         transition: 'all 0.3s'
                     }}

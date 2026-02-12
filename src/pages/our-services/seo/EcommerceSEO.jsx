@@ -146,10 +146,10 @@ const EcommerceSEO = () => {
                 <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             Ecommerce SEO Services
                         </h1>
-                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
                             Turn Product Pages into Revenue Engines
                         </h3>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
@@ -186,7 +186,7 @@ const EcommerceSEO = () => {
             {/* Why Ecommerce SEO */}
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '40px', color: '#0f172a' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '40px', color: '#0f172a' }}>
                         Why Ecommerce SEO is a Growth Multiplier
                     </h2>
                     <p style={{ fontSize: '18px', color: '#475569', maxWidth: '800px', margin: '0 auto 50px' }}>
@@ -229,11 +229,11 @@ const EcommerceSEO = () => {
                                     e.currentTarget.style.boxShadow = 'none';
                                 }}>
                                 <Zap size={20} style={{ color: '#0066cc' }} />
-                                <span style={{ fontWeight: '700', color: '#1e293b' }}>{challenge}</span>
+                                <span style={{ fontWeight: '600', color: '#1e293b' }}>{challenge}</span>
                             </div>
                         ))}
                     </div>
-                    <p style={{ fontSize: '20px', fontWeight: '700', color: '#0066cc' }}>
+                    <p style={{ fontSize: '20px', fontWeight: '600', color: '#0066cc' }}>
                         Our approach blends technical precision, content depth, search intent mapping, and conversion intelligence to build scalable ecommerce growth.
                     </p>
                 </div>
@@ -242,7 +242,7 @@ const EcommerceSEO = () => {
             {/* Framework Section */}
             <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
                         Our Ecommerce SEO Framework
                     </h2>
                     <div style={{
@@ -275,7 +275,7 @@ const EcommerceSEO = () => {
                                     e.currentTarget.style.borderColor = '#e2e8f0';
                                 }}>
                                 <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '800', marginBottom: '15px', color: '#0f172a' }}>
+                                <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '15px', color: '#0f172a' }}>
                                     {i + 1}. {item.title}
                                 </h3>
                                 <p style={{ fontSize: '15px', color: '#475569', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
@@ -287,7 +287,7 @@ const EcommerceSEO = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ fontSize: '14px', color: '#0066cc', fontWeight: '600', padding: '15px', background: '#eff6ff', borderRadius: '12px', margin: 0 }}>
+                                <p style={{ fontSize: '14px', color: '#0066cc', fontWeight: '500', padding: '15px', background: '#eff6ff', borderRadius: '12px', margin: 0 }}>
                                     {item.extra}
                                 </p>
                             </div>
@@ -301,18 +301,18 @@ const EcommerceSEO = () => {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
                         <div>
-                            <h2 style={{ fontSize: '32px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>Platforms We Work With</h2>
+                            <h2 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>Platforms We Work With</h2>
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
                                 {platforms.map((plat, i) => (
-                                    <div key={i} style={{ padding: '12px 24px', background: '#f8fafc', borderRadius: '50px', fontWeight: '700', color: '#1e293b', border: '1px solid #e2e8f0' }}>{plat}</div>
+                                    <div key={i} style={{ padding: '12px 24px', background: '#f8fafc', borderRadius: '50px', fontWeight: '600', color: '#1e293b', border: '1px solid #e2e8f0' }}>{plat}</div>
                                 ))}
                             </div>
                         </div>
                         <div>
-                            <h2 style={{ fontSize: '32px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>Industries We Serve</h2>
+                            <h2 style={{ fontSize: '32px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>Industries We Serve</h2>
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
                                 {industries.map((ind, i) => (
-                                    <div key={i} style={{ padding: '12px 24px', background: '#0066cc', color: '#fff', borderRadius: '50px', fontWeight: '700' }}>{ind}</div>
+                                    <div key={i} style={{ padding: '12px 24px', background: '#0066cc', color: '#fff', borderRadius: '50px', fontWeight: '600' }}>{ind}</div>
                                 ))}
                             </div>
                         </div>
@@ -323,7 +323,7 @@ const EcommerceSEO = () => {
             {/* Why Choose Our Approach */}
             <section style={{ padding: '80px 0', backgroundColor: '#0f172a', color: '#fff' }}>
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '50px', color: '#fff' }}>Why Choose Our Ecommerce SEO Approach?</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '50px', color: '#fff' }}>Why Choose Our Ecommerce SEO Approach?</h2>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
                         {[
                             "Revenue-first SEO strategy",
@@ -337,7 +337,7 @@ const EcommerceSEO = () => {
                                 background: 'rgba(255,255,255,0.05)',
                                 borderRadius: '15px',
                                 border: '1px solid rgba(255,255,255,0.1)',
-                                fontWeight: '700',
+                                fontWeight: '600',
                                 fontSize: '18px',
                                 color: '#fff',
                                 transition: 'all 0.3s'
@@ -363,14 +363,14 @@ const EcommerceSEO = () => {
             {/* Working Model */}
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>Our Working Model</h2>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>Our Working Model</h2>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
                         {workingModel.map((model, i) => (
                             <div key={i} style={{
                                 padding: '20px 30px',
                                 background: '#f8fafc',
                                 borderRadius: '12px',
-                                fontWeight: '700',
+                                fontWeight: '600',
                                 color: '#1e293b',
                                 border: '1px solid #e2e8f0',
                                 textAlign: 'center',
@@ -382,7 +382,7 @@ const EcommerceSEO = () => {
                         ))}
                     </div>
                     <div style={{ textAlign: 'center', marginTop: '40px' }}>
-                        <p style={{ fontSize: '18px', fontWeight: '600', color: '#475569' }}>We operate as your extended growth partner — not just a vendor.</p>
+                        <p style={{ fontSize: '18px', fontWeight: '500', color: '#475569' }}>We operate as your extended growth partner — not just a vendor.</p>
                     </div>
                 </div>
             </section>
@@ -390,7 +390,7 @@ const EcommerceSEO = () => {
             {/* Results You Can Expect */}
             <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '50px', color: '#0f172a' }}>Results You Can Expect</h2>
+                    <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '50px', color: '#0f172a' }}>Results You Can Expect</h2>
                     <div style={{
                         display: 'flex',
                         flexWrap: 'wrap',
@@ -416,8 +416,8 @@ const EcommerceSEO = () => {
                                 flexGrow: 1,
                                 maxWidth: '350px'
                             }}>
-                                <h3 style={{ fontSize: '18px', fontWeight: '800', marginBottom: '10px', color: '#0066cc' }}>{item.title}</h3>
-                                <p style={{ color: '#334155', fontWeight: '600', margin: 0 }}>{item.txt}</p>
+                                <h3 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '10px', color: '#0066cc' }}>{item.title}</h3>
+                                <p style={{ color: '#334155', fontWeight: '500', margin: 0 }}>{item.txt}</p>
                             </div>
                         ))}
                     </div>
@@ -430,7 +430,7 @@ const EcommerceSEO = () => {
             {/* Final CTA */}
             <section style={{ padding: '100px 0', textAlign: 'center', background: 'linear-gradient(135deg, #0066cc 0%, #004e92 100%)', color: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px', color: '#fff' }}>
+                    <h2 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '24px', color: '#fff' }}>
                         Ready to Scale Your Ecommerce Revenue?
                     </h2>
                     <p style={{ fontSize: '22px', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', color: '#eff6ff' }}>
@@ -445,7 +445,7 @@ const EcommerceSEO = () => {
                         padding: '20px 50px',
                         borderRadius: '50px',
                         fontSize: '18px',
-                        fontWeight: '800',
+                        fontWeight: '700',
                         textDecoration: 'none',
                         transition: 'all 0.3s',
                         boxShadow: '0 10px 30px rgba(0,0,0,0.2)'

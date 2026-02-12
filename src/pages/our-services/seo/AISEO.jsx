@@ -121,10 +121,10 @@ const AISEO = () => {
                 <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '56px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
                             AI SEO Services
                         </h1>
-                        <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#000' }}>
+                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
                             Rank Beyond Keywords. Dominate AI-Driven Search Ecosystems.
                         </h3>
                         <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
@@ -142,7 +142,7 @@ const AISEO = () => {
                                 Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span> delivers next-generation AI SEO solutions that help businesses become discoverable across modern search landscapes.
                             </p>
                         </div>
-                        <p style={{ fontSize: '20px', fontWeight: '600', color: '#fff' }}>
+                        <p style={{ fontSize: '20px', fontWeight: '500', color: '#fff' }}>
                             We combine human expertise with machine intelligence to build scalable, future-ready SEO systems.
                         </p>
                     </div>
@@ -166,7 +166,7 @@ const AISEO = () => {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '50px', alignItems: 'center' }}>
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>
+                            <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>
                                 Why AI SEO is the Future of Organic Growth
                             </h2>
                             <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.8', marginBottom: '24px' }}>
@@ -183,7 +183,7 @@ const AISEO = () => {
                                         <div style={{ width: '24px', height: '24px', background: '#eff6ff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
                                             <Zap size={14} style={{ color: '#3b82f6' }} />
                                         </div>
-                                        <p style={{ fontSize: '16px', fontWeight: '600', color: '#334155', margin: 0 }}>{item}</p>
+                                        <p style={{ fontSize: '16px', fontWeight: '500', color: '#334155', margin: 0 }}>{item}</p>
                                     </div>
                                 ))}
                             </div>
@@ -209,7 +209,7 @@ const AISEO = () => {
             <section style={{ padding: '80px 0', backgroundColor: '#f1f5f9' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '20px', color: '#0f172a' }}>
+                        <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#0f172a' }}>
                             Our AI SEO Framework
                         </h2>
                         <p style={{ fontSize: '20px', color: '#64748b' }}>
@@ -247,7 +247,7 @@ const AISEO = () => {
                                     e.currentTarget.style.borderColor = '#e2e8f0';
                                 }}>
                                 <div style={{ color: '#3b82f6', marginBottom: '20px' }}>{step.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '800', marginBottom: '15px', color: '#0f172a' }}>
+                                <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '15px', color: '#0f172a' }}>
                                     {i + 1}. {step.title}
                                 </h3>
                                 <p style={{ fontSize: '15px', color: '#64748b', marginBottom: '20px', lineHeight: '1.6' }}>{step.desc}</p>
@@ -259,7 +259,7 @@ const AISEO = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ fontSize: '14px', color: '#3b82f6', fontWeight: '600', padding: '15px', background: '#eff6ff', borderRadius: '12px', margin: 0 }}>
+                                <p style={{ fontSize: '14px', color: '#3b82f6', fontWeight: '500', padding: '15px', background: '#eff6ff', borderRadius: '12px', margin: 0 }}>
                                     {step.extra}
                                 </p>
                             </div>
@@ -271,7 +271,7 @@ const AISEO = () => {
             {/* AI SEO Services List */}
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
                         AI SEO Services We Offer
                     </h2>
                     <div style={{
@@ -305,7 +305,7 @@ const AISEO = () => {
                                     e.currentTarget.style.boxShadow = 'none';
                                 }}>
                                 <div style={{ color: '#3b82f6', marginBottom: '15px' }}>{service.icon}</div>
-                                <h3 style={{ fontSize: '20px', fontWeight: '800', marginBottom: '12px', color: '#0f172a' }}>{service.title}</h3>
+                                <h3 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '12px', color: '#0f172a' }}>{service.title}</h3>
                                 <p style={{ color: '#475569', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>{service.desc}</p>
                             </div>
                         ))}
@@ -317,7 +317,7 @@ const AISEO = () => {
             <section style={{ padding: '80px 0', backgroundColor: '#0f172a', color: '#fff' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '20px', color: '#fff' }}>How We Work</h2>
+                        <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#fff' }}>How We Work</h2>
                         <p style={{ fontSize: '18px', color: '#94a3b8' }}>
                             At Adkryoss managed by Clink Consultancy Services Private Limited, our working model is structured, transparent, and performance-led.
                         </p>
@@ -331,7 +331,7 @@ const AISEO = () => {
                                 border: '1px solid rgba(255,255,255,0.1)',
                                 textAlign: 'center'
                             }}>
-                                <h3 style={{ fontSize: '18px', fontWeight: '800', marginBottom: '15px', color: '#3b82f6' }}>{item.step}</h3>
+                                <h3 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '15px', color: '#3b82f6' }}>{item.step}</h3>
                                 <p style={{ color: '#cbd5e1', fontSize: '14px', lineHeight: '1.6', margin: 0 }}>{item.desc}</p>
                             </div>
                         ))}
@@ -342,7 +342,7 @@ const AISEO = () => {
             {/* Why Choose Section */}
             <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
+                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
                         Why Choose Adkryoss for AI SEO?
                     </h2>
                     <div style={{
@@ -384,12 +384,12 @@ const AISEO = () => {
                                     e.currentTarget.style.background = '#f8fafc';
                                 }}>
                                 <CheckCircle2 size={20} style={{ color: '#3b82f6' }} />
-                                <span style={{ fontWeight: '700', color: '#0f172a' }}>{item}</span>
+                                <span style={{ fontWeight: '600', color: '#0f172a' }}>{item}</span>
                             </div>
                         ))}
                     </div>
                     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-                        <p style={{ fontSize: '20px', fontWeight: '800', color: '#0f172a' }}>
+                        <p style={{ fontSize: '20px', fontWeight: '700', color: '#0f172a' }}>
                             We don’t chase algorithm updates. We build systems that evolve with them.
                         </p>
                     </div>
@@ -400,12 +400,12 @@ const AISEO = () => {
             <section style={{ padding: '80px 0', backgroundColor: '#f1f5f9' }}>
                 <div className="container">
                     <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-                        <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>
+                        <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>
                             The Future of SEO is Intelligent
                         </h2>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', marginBottom: '40px' }}>
                             {["Context over keywords", "Authority over volume", "Experience over density", "Entities over isolated pages"].map((txt, i) => (
-                                <div key={i} style={{ padding: '20px', background: '#fff', borderRadius: '12px', fontWeight: '700', color: '#0f172a', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
+                                <div key={i} style={{ padding: '20px', background: '#fff', borderRadius: '12px', fontWeight: '600', color: '#0f172a', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
                                     {txt}
                                 </div>
                             ))}
@@ -420,7 +420,7 @@ const AISEO = () => {
             {/* Final CTA */}
             <section style={{ padding: '100px 0', textAlign: 'center', background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)', color: '#fff' }}>
                 <div className="container">
-                    <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px', color: '#fff' }}>
+                    <h2 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '24px', color: '#fff' }}>
                         Let’s Build AI-Powered Organic Growth
                     </h2>
                     <p style={{ fontSize: '22px', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', color: '#eff6ff' }}>
@@ -435,7 +435,7 @@ const AISEO = () => {
                         padding: '20px 50px',
                         borderRadius: '50px',
                         fontSize: '18px',
-                        fontWeight: '800',
+                        fontWeight: '700',
                         textDecoration: 'none',
                         transition: 'all 0.3s',
                         boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
