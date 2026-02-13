@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
     Search,
     Zap,
@@ -102,35 +103,25 @@ const AgenticAISEO = () => {
         <div style={{ backgroundColor: '#fff' }}>
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
                 style={{
-                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-                    color: '#fff',
-                    position: 'relative',
-                    overflow: 'hidden'
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
-                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    <div className="text-left relative z-10 text-white">
+                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
                             Agentic AI SEO Services
                         </h1>
-                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
-                            Smarter Search. Autonomous Growth.
+                        <h3 className="text-[24px] font-medium mb-6 text-white">
+                            The Search for Tomorrow. Driven by Autonomous Intelligence.
                         </h3>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
+                        <p className="text-[18px] leading-[1.8] text-white mb-8">
                             Search is evolving from keywords to intelligence. We build AI-driven SEO systems that don’t just optimize pages — they think, learn, and adapt in real time to dominate modern search ecosystems.
                         </p>
-                        <div style={{
-                            background: 'rgba(255,255,255,0.05)',
-                            padding: '24px',
-                            borderRadius: '20px',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            backdropFilter: 'blur(10px)',
-                            marginBottom: '32px'
-                        }}>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span>, we combine deep SEO expertise with advanced AI frameworks to create performance-driven growth engines.
+                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-8">
+                            <p className="text-[18px] leading-[1.8] text-white m-0">
+                                At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we deploy autonomous search agents that continuously monitor, analyze, and optimize your website for maximum organic output.
                             </p>
                         </div>
                     </div>
@@ -138,39 +129,35 @@ const AgenticAISEO = () => {
                         <img
                             src="https://www.techmagnate.com/wp-content/uploads/2026/01/Agentic-AI-SEO.webp"
                             alt="Agentic AI SEO Services"
-                            style={{
-                                maxWidth: '500px',
-                                width: '100%',
-                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
-                            }}
+                            className="max-w-[500px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
             </section>
 
             {/* What is Agentic SEO Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-[100px] bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">
                             What is Agentic AI SEO?
                         </h2>
-                        <p style={{ fontSize: '20px', color: '#666', maxWidth: '850px', margin: '0 auto' }}>
+                        <p className="text-[20px] text-[#666] max-w-[850px] mx-auto">
                             Agentic AI SEO is the next evolution of search optimization — powered by autonomous AI agents that continuously analyze data and execute improvements without constant manual intervention.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div style={{ background: '#f8f9fa', padding: '50px', borderRadius: '40px', border: '1px solid #eee' }}>
-                            <p style={{ fontSize: '18px', color: '#444', lineHeight: '1.8', marginBottom: '24px' }}>
+                        <div className="bg-[#f8f9fa] p-[50px] rounded-[40px] border border-[#eee]">
+                            <p className="text-[18px] text-[#444] leading-[1.8] mb-[24px]">
                                 Unlike traditional SEO that reacts to algorithm updates, Agentic AI anticipates shifts and adapts strategies instantly to scale performance intelligently.
                             </p>
-                            <p style={{ fontSize: '18px', color: '#1a1a1a', fontWeight: '500', lineHeight: '1.8' }}>
+                            <p className="text-[18px] text-[#1a1a1a] font-medium leading-[1.8]">
                                 At Adkryoss managed by Clink Consultancy Services Private Limited, we build self-learning systems that transform your website into an organic growth machine.
                             </p>
                         </div>
-                        <div style={{ background: '#0f172a', padding: '50px', borderRadius: '40px', color: '#fff' }}>
-                            <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '30px', color: '#fff' }}>Traditional vs Agentic SEO</h3>
+                        <div className="bg-[#0f172a] p-[50px] rounded-[40px] text-white">
+                            <h3 className="text-[28px] font-semibold mb-[30px] text-white">Traditional vs Agentic SEO</h3>
                             <div className="space-y-6">
                                 {[
                                     { t: "Traditional:", v: "Manual audits & reactive strategies" },
@@ -178,11 +165,11 @@ const AgenticAISEO = () => {
                                     { t: "Agentic:", v: "Continuous technical fixes & real-time intelligence" },
                                     { t: "Agentic:", v: "Multi-platform visibility (Search, AI, Voice)" }
                                 ].map((item, i) => (
-                                    <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
+                                    <div key={i} className="flex gap-[12px] items-start">
                                         <div className="bg-blue-500 rounded-full p-1 mt-1"><CheckCircle2 size={14} color="#fff" /></div>
                                         <div>
-                                            <span style={{ fontWeight: '600', color: '#3b82f6', marginRight: '8px' }}>{item.t}</span>
-                                            <span style={{ fontSize: '15px' }}>{item.v}</span>
+                                            <span className="font-semibold text-[#3b82f6] mr-[8px]">{item.t}</span>
+                                            <span className="text-[15px]">{item.v}</span>
                                         </div>
                                     </div>
                                 ))}
@@ -193,35 +180,27 @@ const AgenticAISEO = () => {
             </section>
 
             {/* Framework Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#f1f5f9' }}>
+            <section className="py-[100px] bg-[#f1f5f9]">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[36px] font-semibold text-[#1a1a1a] mb-[20px]">
                             Our Agentic AI SEO Framework
                         </h2>
-                        <p style={{ fontSize: '18px', color: '#666' }}>
+                        <p className="text-[18px] text-[#666]">
                             A structured yet adaptive methodology designed for performance and long-term authority.
                         </p>
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-8">
                         {agenticFramework.map((item, i) => (
-                            <div key={i} style={{
-                                flex: '1 1 350px',
-                                maxWidth: '380px',
-                                background: '#fff',
-                                padding: '40px',
-                                borderRadius: '24px',
-                                border: '1px solid #e2e8f0',
-                                boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)'
-                            }}>
-                                <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '600', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
-                                <p style={{ color: '#666', marginBottom: '20px', lineHeight: '1.6', fontSize: '15px' }}>{item.desc}</p>
-                                <ul style={{ listStyle: 'none', padding: 0 }}>
+                            <div key={i} className="flex-1 min-w-[350px] max-w-[380px] bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]">
+                                <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
+                                <h3 className="text-[22px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
+                                <p className="text-[#666] mb-[20px] leading-[1.6] text-[15px]">{item.desc}</p>
+                                <ul className="list-none p-0">
                                     {item.points.map((p, j) => (
-                                        <li key={j} style={{ display: 'flex', gap: '8px', marginBottom: '10px', color: '#444', fontSize: '14px' }}>
-                                            <div style={{ color: '#0066cc', marginTop: '4px' }}><CheckCircle2 size={14} /></div>
+                                        <li key={j} className="flex gap-[8px] mb-[10px] text-[#444] text-[14px]">
+                                            <div className="text-[#0066cc] mt-[4px]"><CheckCircle2 size={14} /></div>
                                             {p}
                                         </li>
                                     ))}
@@ -233,25 +212,25 @@ const AgenticAISEO = () => {
             </section>
 
             {/* Services List Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-[100px] bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#1a1a1a', marginBottom: '30px' }}>Our Agentic AI SEO Services</h2>
-                            <p style={{ fontSize: '18px', color: '#666', lineHeight: '1.8', marginBottom: '30px' }}>
+                            <h2 className="text-[36px] font-semibold text-[#1a1a1a] mb-[30px]">Our Agentic AI SEO Services</h2>
+                            <p className="text-[18px] text-[#666] leading-[1.8] mb-[30px]">
                                 We don't just use AI tools; we build intelligent SEO ecosystems that evolve with search engine expectations.
                             </p>
                             <div className="grid grid-cols-2 gap-y-4">
                                 {agenticServices.map((service, i) => (
-                                    <div key={i} style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                                    <div key={i} className="flex gap-[10px] items-center">
                                         <div className="bg-blue-100 p-1 rounded-full"><ArrowRight size={14} className="text-blue-600" /></div>
-                                        <span style={{ fontWeight: '500', color: '#1e293b' }}>{service}</span>
+                                        <span className="font-medium text-[#1e293b]">{service}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div style={{ background: '#0f172a', padding: '60px', borderRadius: '40px', color: '#fff' }}>
-                            <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '30px' }}>The Hybrid Advantage</h3>
+                        <div className="bg-[#0f172a] p-[60px] rounded-[40px] text-white">
+                            <h3 className="text-[28px] font-semibold mb-[30px]">The Hybrid Advantage</h3>
                             <div className="space-y-6">
                                 {[
                                     { t: "Strategic Oversight", d: "Human expertise guiding AI execution." },
@@ -260,8 +239,8 @@ const AgenticAISEO = () => {
                                     { t: "Technical Precision", d: "Error-free technical maintenance at any scale." }
                                 ].map((item, i) => (
                                     <div key={i}>
-                                        <h4 style={{ fontWeight: '600', color: '#3b82f6', marginBottom: '4px' }}>{item.t}</h4>
-                                        <p style={{ color: '#e2e8f0', fontSize: '15px' }}>{item.d}</p>
+                                        <h4 className="font-semibold text-[#3b82f6] mb-[4px]">{item.t}</h4>
+                                        <p className="text-[#e2e8f0] text-[15px]">{item.d}</p>
                                     </div>
                                 ))}
                             </div>
@@ -271,15 +250,15 @@ const AgenticAISEO = () => {
             </section>
 
             {/* Industries We Serve */}
-            <section style={{ padding: '100px 0', backgroundColor: '#f1f5f9' }}>
+            <section className="py-[100px] bg-[#f1f5f9]">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>Industries We Empower</h2>
-                        <p style={{ fontSize: '18px', color: '#666' }}>Every industry requires intelligent visibility — and we build it strategically.</p>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[36px] font-semibold text-[#1a1a1a] mb-[20px]">Industries We Empower</h2>
+                        <p className="text-[18px] text-[#666]">Every industry requires intelligent visibility — and we build it strategically.</p>
                     </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
+                    <div className="flex flex-wrap justify-center gap-[16px]">
                         {industriesEmpowered.map((item, i) => (
-                            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', background: '#fff', padding: '15px 25px', borderRadius: '12px', border: '1px solid #e2e8f0', fontWeight: '500', color: '#1e293b' }}>
+                            <div key={i} className="flex items-center gap-[10px] bg-white px-[25px] py-[15px] rounded-[12px] border border-[#e2e8f0] font-medium text-[#1e293b]">
                                 <span className="text-blue-500">{item.icon}</span>
                                 {item.name}
                             </div>
@@ -289,23 +268,23 @@ const AgenticAISEO = () => {
             </section>
 
             {/* The Future Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-[100px] bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div style={{ background: '#0f172a', padding: '60px', borderRadius: '40px', border: '1px solid #eee' }}>
+                        <div className="bg-[#0f172a] p-[60px] rounded-[40px] border border-[#eee]">
                             <BrainCircuit size={48} className="text-blue-400 mb-6" />
-                            <h3 style={{ fontSize: '32px', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>The Future is Autonomous</h3>
-                            <p style={{ fontSize: '18px', color: '#e2e8f0', lineHeight: '1.8' }}>
+                            <h3 className="text-[32px] font-semibold mb-[20px] text-white">The Future is Autonomous</h3>
+                            <p className="text-[18px] text-[#e2e8f0] leading-[1.8]">
                                 Search engines are integrating AI at their core. Brands that rely on manual SEO will struggle to scale. Adkryoss managed by Clink Consultancy Services Private Limited helps you transition to a system that learns faster, executes smarter, and delivers ROI predictably.
                             </p>
                         </div>
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#1a1a1a', marginBottom: '30px' }}>Lead the AI Search Revolution</h2>
-                            <p style={{ fontSize: '18px', color: '#666', lineHeight: '1.8', marginBottom: '32px' }}>
+                            <h2 className="text-[36px] font-semibold text-[#1a1a1a] mb-[30px]">Lead the AI Search Revolution</h2>
+                            <p className="text-[18px] text-[#666] leading-[1.8] mb-[32px]">
                                 The next era of SEO isn’t about ranking pages. It’s about building intelligent digital authority.
                             </p>
-                            <div style={{ padding: '30px', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '20px', borderLeft: '4px solid #3b82f6' }}>
-                                <p style={{ margin: 0, fontWeight: '500', color: '#1a1a1a' }}>"Partner with us to create a self-optimizing search ecosystem that drives consistent organic growth."</p>
+                            <div className="p-[30px] bg-[rgba(59,130,246,0.1)] rounded-[20px] border-l-4 border-[#3b82f6]">
+                                <p className="m-0 font-medium text-[#1a1a1a]">"Partner with us to create a self-optimizing search ecosystem that drives consistent organic growth."</p>
                             </div>
                         </div>
                     </div>
@@ -313,17 +292,15 @@ const AgenticAISEO = () => {
             </section>
 
             {/* CTA */}
-            <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, #0066cc 0%, #004999 100%)', color: '#fff', textAlign: 'center' }}>
+            <section className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>Ready to Build Your AI-Driven Advantage?</h2>
-                    <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 1, color: '#fff', fontWeight: '500' }}>
+                    <h2 className="text-[42px] font-semibold mb-[20px] text-white">Ready to Build Your AI-Driven Advantage?</h2>
+                    <p className="text-[20px] mb-[40px] opacity-100 text-white font-medium">
                         The future of search is now. Let's build your intelligent growth engine.
                     </p>
-                    <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#fff', color: '#0066cc', padding: '18px 40px', borderRadius: '50px', fontWeight: '600', textDecoration: 'none', transition: 'all 0.3s' }}
-                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    <Link to="/contact" className="inline-flex items-center gap-[10px] bg-white text-[#0066cc] py-[18px] px-[40px] rounded-[50px] font-semibold no-underline transition-all duration-300 hover:scale-[1.05]">
                         Start Your Agentic Strategy <ArrowRight size={20} />
-                    </a>
+                    </Link>
                 </div>
             </section>
         </div>

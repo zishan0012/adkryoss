@@ -174,43 +174,30 @@ const SEOServices = () => {
     ];
 
     return (
-        <div style={{ backgroundColor: '#fff' }}>
+        <div className="bg-white text-slate-900">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
                 style={{
-                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-                    color: '#fff',
-                    position: 'relative',
-                    overflow: 'hidden'
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
-                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                    <div className="text-left relative z-10 text-white">
+                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
                             SEO Services
                         </h1>
-                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
+                        <h3 className="text-[24px] font-medium mb-6 text-white">
                             Drive Organic Growth. Build Authority. Dominate Search.
                         </h3>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
+                        <p className="text-[18px] leading-[1.8] text-white mb-8">
                             In today's search-first world, visibility is not optional — it's survival. Customers don't scroll endlessly; they click what ranks, what builds trust, and what delivers value instantly.
                         </p>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
-                            Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span> delivers data-driven, performance-focused SEO services designed to increase traffic, improve rankings, and convert search intent into measurable revenue.
+                        <p className="text-[18px] leading-[1.8] text-white mb-8">
+                            Adkryoss managed by <span className="font-bold text-black">Clink Consultancy Services Private Limited</span> delivers data-driven, performance-focused SEO services designed to increase traffic, improve rankings, and convert search intent into measurable revenue.
                         </p>
-                        <div style={{
-                            fontSize: '20px',
-                            fontWeight: '700',
-                            marginTop: '32px',
-                            padding: '20px',
-                            background: 'rgba(255,255,255,0.05)',
-                            borderRadius: '12px',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            backdropFilter: 'blur(10px)',
-                            color: '#000'
-                        }}>
+                        <div className="text-[20px] font-bold mt-8 p-6 bg-white/5 rounded-[20px] border border-white/10 backdrop-blur-[10px] text-white italic">
                             We don't chase rankings.<br />
                             We build long-term organic growth engines.
                         </div>
@@ -220,195 +207,76 @@ const SEOServices = () => {
                         <img
                             src="https://www.techmagnate.com/wp-content/uploads/2026/01/Search-Engine-Optimization.webp"
                             alt="SEO Services"
-                            style={{
-                                maxWidth: '450px',
-                                width: '100%',
-                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
-                            }}
+                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
             </section>
 
             {/* Why SEO Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8f9fa' }}>
+            <section className="py-24 bg-slate-50">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{
-                            fontSize: '42px',
-                            fontWeight: '600',
-                            color: '#1a1a1a',
-                            marginBottom: '20px'
-                        }}>
+                    <div className="text-center mb-16">
+                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">
                             Why SEO is a Growth Multiplier
                         </h2>
-                        <p style={{
-                            fontSize: '18px',
-                            color: '#666',
-                            maxWidth: '800px',
-                            margin: '0 auto',
-                            lineHeight: '1.8'
-                        }}>
+                        <p className="text-[18px] text-slate-600 max-w-[800px] mx-auto leading-relaxed">
                             Search engines are evolving. AI-driven search, zero-click results, voice search, semantic intent mapping — the game has changed.
                         </p>
                     </div>
 
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '30px',
-                        marginTop: '40px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-8 mt-10">
                         {[
                             { icon: <Users size={32} />, text: "Understanding user intent, not just keywords" },
                             { icon: <Award size={32} />, text: "Creating topical authority, not random blogs" },
                             { icon: <Globe size={32} />, text: "Building search ecosystems, not isolated pages" },
                             { icon: <Zap size={32} />, text: "Optimizing for AI & search experience" }
                         ].map((item, index) => (
-                            <div key={index} style={{
-                                background: '#fff',
-                                padding: '32px',
-                                borderRadius: '12px',
-                                boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                cursor: 'pointer',
-                                width: 'calc(25% - 23px)',
-                                minWidth: '250px',
-                                flexGrow: 1,
-                                maxWidth: '300px'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
-                                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(0,102,204,0.18)';
-                                    e.currentTarget.querySelector('.icon-div').style.transform = 'scale(1.1) rotate(5deg)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                    e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
-                                    e.currentTarget.querySelector('.icon-div').style.transform = 'scale(1) rotate(0deg)';
-                                }}>
-                                <div className="icon-div" style={{ color: '#0066CC', marginBottom: '16px', transition: 'transform 0.3s ease' }}>
+                            <div key={index} className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 w-full md:w-[calc(25%-24px)] min-w-[250px] max-w-[300px] grow cursor-pointer group hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(0,102,204,0.18)] border border-transparent hover:border-[#0066CC]">
+                                <div className="text-[#0066CC] mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]">
                                     {item.icon}
                                 </div>
-                                <p style={{
-                                    fontSize: '16px',
-                                    fontWeight: '500',
-                                    color: '#1a1a1a',
-                                    lineHeight: '1.6'
-                                }}>
+                                <p className="text-[16px] font-bold text-slate-900 leading-relaxed m-0">
                                     {item.text}
                                 </p>
                             </div>
                         ))}
                     </div>
 
-                    <div style={{
-                        textAlign: 'center',
-                        marginTop: '50px',
-                        fontSize: '20px',
-                        fontWeight: '500',
-                        color: '#0066CC'
-                    }}>
+                    <div className="text-center mt-12 text-[20px] font-bold text-[#0066CC]">
                         That's exactly how we approach it.
                     </div>
                 </div>
             </section>
 
             {/* Our SEO Approach */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-24 bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{
-                            fontSize: '42px',
-                            fontWeight: '600',
-                            color: '#1a1a1a',
-                            marginBottom: '20px'
-                        }}>
+                    <div className="text-center mb-16">
+                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">
                             Our SEO Approach
                         </h2>
-                        <p style={{
-                            fontSize: '20px',
-                            color: '#0066CC',
-                            fontWeight: '500'
-                        }}>
+                        <p className="text-[20px] text-[#0066CC] font-bold">
                             Strategic. Technical. Performance-Oriented.
                         </p>
-                        <p style={{
-                            fontSize: '16px',
-                            color: '#666',
-                            marginTop: '12px'
-                        }}>
+                        <p className="text-[16px] text-slate-600 mt-3 max-w-[700px] mx-auto">
                             We follow a structured, insight-led methodology aligned with modern search algorithms and business goals.
                         </p>
                     </div>
 
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '40px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-10">
                         {approaches.map((approach, index) => (
-                            <div key={index} style={{
-                                background: '#fff',
-                                border: '2px solid #f0f0f0',
-                                borderRadius: '16px',
-                                padding: '32px',
-                                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                cursor: 'pointer',
-                                width: 'calc(25% - 30px)',
-                                minWidth: '300px',
-                                flexGrow: 1,
-                                maxWidth: '380px'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.borderColor = '#0066CC';
-                                    e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
-                                    e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,102,204,0.15)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.borderColor = '#f0f0f0';
-                                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}>
-                                <div style={{
-                                    width: '64px',
-                                    height: '64px',
-                                    background: 'linear-gradient(135deg, #0066CC 0%, #004999 100%)',
-                                    borderRadius: '12px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    color: '#fff',
-                                    marginBottom: '24px'
-                                }}>
+                            <div key={index} className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 w-full md:w-[calc(33.333%-27px)] min-w-[300px] max-w-[380px] grow cursor-pointer group hover:border-[#0066CC] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)]">
+                                <div className="w-16 h-16 bg-gradient-to-br from-[#0066CC] to-[#004999] rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
                                     {approach.icon}
                                 </div>
-                                <h3 style={{
-                                    fontSize: '20px',
-                                    fontWeight: '600',
-                                    color: '#1a1a1a',
-                                    marginBottom: '20px'
-                                }}>
+                                <h3 className="text-[20px] font-bold text-slate-900 mb-5 group-hover:text-[#0066CC] transition-colors leading-tight">
                                     {index + 1}. {approach.title}
                                 </h3>
-                                <ul style={{
-                                    listStyle: 'none',
-                                    padding: 0,
-                                    margin: 0
-                                }}>
+                                <ul className="list-none p-0 m-0 space-y-3">
                                     {approach.points.map((point, idx) => (
-                                        <li key={idx} style={{
-                                            display: 'flex',
-                                            alignItems: 'flex-start',
-                                            gap: '12px',
-                                            marginBottom: '12px',
-                                            fontSize: '15px',
-                                            color: '#555',
-                                            lineHeight: '1.6'
-                                        }}>
-                                            <CheckCircle2 size={18} style={{ color: '#0066CC', marginTop: '2px', flexShrink: 0 }} />
+                                        <li key={idx} className="flex items-start gap-3 text-[15px] text-slate-600 leading-relaxed">
+                                            <CheckCircle2 size={18} className="text-[#0066CC] mt-0.5 shrink-0" />
                                             <span>{point}</span>
                                         </li>
                                     ))}
@@ -417,18 +285,8 @@ const SEOServices = () => {
                         ))}
                     </div>
 
-                    <div style={{
-                        marginTop: '50px',
-                        padding: '32px',
-                        background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
-                        borderRadius: '16px',
-                        textAlign: 'center'
-                    }}>
-                        <p style={{
-                            fontSize: '18px',
-                            fontWeight: '500',
-                            color: '#1a1a1a'
-                        }}>
+                    <div className="mt-12 p-8 bg-slate-50 rounded-2xl text-center border border-slate-100">
+                        <p className="text-[18px] font-bold text-slate-900 m-0">
                             Every keyword is aligned to business outcomes.
                         </p>
                     </div>
@@ -436,63 +294,24 @@ const SEOServices = () => {
             </section>
 
             {/* Industries We Serve */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8f9fa' }}>
+            <section className="py-24 bg-slate-50">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{
-                            fontSize: '42px',
-                            fontWeight: '600',
-                            color: '#1a1a1a',
-                            marginBottom: '20px'
-                        }}>
+                    <div className="text-center mb-16">
+                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">
                             Industries We Serve
                         </h2>
-                        <p style={{
-                            fontSize: '16px',
-                            color: '#666'
-                        }}>
+                        <p className="text-[18px] text-slate-600 max-w-[700px] mx-auto">
                             We adapt SEO frameworks to industry-specific buying behavior and search patterns.
                         </p>
                     </div>
 
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '24px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-6">
                         {industries.map((industry, index) => (
-                            <div key={index} style={{
-                                background: '#fff',
-                                padding: '28px',
-                                borderRadius: '12px',
-                                textAlign: 'center',
-                                transition: 'all 0.3s ease',
-                                cursor: 'pointer',
-                                border: '2px solid transparent',
-                                width: 'calc(25% - 18px)',
-                                minWidth: '200px',
-                                flexGrow: 1,
-                                maxWidth: '280px'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.borderColor = '#0066CC';
-                                    e.currentTarget.style.transform = 'translateY(-8px) scale(1.05)';
-                                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,102,204,0.1)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.borderColor = 'transparent';
-                                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}>
-                                <div style={{ color: '#0066CC', marginBottom: '12px', display: 'flex', justifyContent: 'center' }}>
+                            <div key={index} className="bg-white p-7 rounded-2xl text-center transition-all duration-300 cursor-pointer border-2 border-transparent w-full md:w-[calc(25%-18px)] min-w-[200px] max-w-[280px] grow hover:border-[#0066CC] hover:-translate-y-2 hover:scale-[1.05] hover:shadow-[0_10px_30px_rgba(0,102,204,0.1)] group">
+                                <div className="text-[#0066CC] mb-3 flex justify-center group-hover:scale-110 transition-transform">
                                     {industry.icon}
                                 </div>
-                                <p style={{
-                                    fontSize: '16px',
-                                    fontWeight: '500',
-                                    color: '#1a1a1a'
-                                }}>
+                                <p className="text-[16px] font-bold text-slate-900 m-0 group-hover:text-[#0066CC] transition-colors">
                                     {industry.name}
                                 </p>
                             </div>
@@ -502,70 +321,27 @@ const SEOServices = () => {
             </section>
 
             {/* Process Framework */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-24 bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{
-                            fontSize: '42px',
-                            fontWeight: '600',
-                            color: '#1a1a1a',
-                            marginBottom: '20px'
-                        }}>
+                    <div className="text-center mb-16">
+                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">
                             Our Process Framework
                         </h2>
-                        <p style={{
-                            fontSize: '20px',
-                            color: '#0066CC',
-                            fontWeight: '500',
-                            marginBottom: '12px'
-                        }}>
+                        <p className="text-[20px] text-[#0066CC] font-bold mb-3">
                             Discover → Strategize → Optimize → Scale → Measure
                         </p>
-                        <p style={{
-                            fontSize: '16px',
-                            color: '#666'
-                        }}>
+                        <p className="text-[16px] text-slate-600">
                             Transparent dashboards. Clear KPIs. Measurable growth.
                         </p>
                     </div>
 
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '24px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-6">
                         {processSteps.map((step, index) => (
-                            <div key={index} style={{
-                                background: 'linear-gradient(135deg, #0066CC 0%, #004999 100%)',
-                                color: '#fff',
-                                padding: '32px 24px',
-                                borderRadius: '12px',
-                                position: 'relative',
-                                overflow: 'hidden',
-                                width: 'calc(33.333% - 16px)',
-                                minWidth: '250px',
-                                flexGrow: 1,
-                                maxWidth: '350px'
-                            }}>
-                                <div style={{
-                                    position: 'absolute',
-                                    top: '16px',
-                                    right: '16px',
-                                    fontSize: '48px',
-
-                                    fontWeight: '700',
-                                    opacity: 0.15
-                                }}>
+                            <div key={index} className="bg-gradient-to-br from-[#0066CC] to-[#004999] text-white p-10 rounded-2xl relative overflow-hidden w-full md:w-[calc(33.333%-16px)] min-w-[250px] max-w-[350px] grow transition-all duration-300 hover:scale-105 hover:shadow-xl group">
+                                <div className="absolute top-4 right-4 text-[48px] font-bold opacity-[0.15] group-hover:scale-125 transition-transform duration-500">
                                     {index + 1}
                                 </div>
-                                <p style={{
-                                    fontSize: '18px',
-                                    fontWeight: '500',
-                                    position: 'relative',
-                                    zIndex: 2,
-                                    color: '#fff'
-                                }}>
+                                <p className="text-[18px] font-bold relative z-[2] text-white leading-tight m-0">
                                     {step}
                                 </p>
                             </div>
@@ -575,65 +351,24 @@ const SEOServices = () => {
             </section>
 
             {/* What Makes Us Different */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8f9fa' }}>
+            <section className="py-24 bg-slate-50">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{
-                            fontSize: '42px',
-                            fontWeight: '600',
-                            color: '#1a1a1a',
-                            marginBottom: '20px'
-                        }}>
+                    <div className="text-center mb-16">
+                        <h2 className="text-[42px] font-bold text-slate-900 leading-tight">
                             What Makes Us Different?
                         </h2>
                     </div>
 
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '32px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-8">
                         {differentiators.map((item, index) => (
-                            <div key={index} style={{
-                                background: '#fff',
-                                padding: '40px 32px',
-                                borderRadius: '16px',
-                                boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                cursor: 'pointer',
-                                width: 'calc(50% - 16px)',
-                                minWidth: '300px',
-                                flexGrow: 1,
-                                maxWidth: '550px'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
-                                    e.currentTarget.style.boxShadow = '0 20px 50px rgba(0,102,204,0.18)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                    e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
-                                }}>
-                                <div style={{
-                                    color: '#0066CC',
-                                    marginBottom: '20px'
-                                }}>
+                            <div key={index} className="bg-white p-10 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 w-full md:w-[calc(50%-16px)] min-w-[300px] max-w-[550px] grow cursor-pointer group hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,102,204,0.18)] border border-transparent hover:border-[#0066CC]">
+                                <div className="text-[#0066CC] mb-6 group-hover:scale-110 transition-transform">
                                     {item.icon}
                                 </div>
-                                <h3 style={{
-                                    fontSize: '20px',
-                                    fontWeight: '600',
-                                    color: '#1a1a1a',
-                                    marginBottom: '12px'
-                                }}>
+                                <h3 className="text-[20px] font-bold text-slate-900 mb-4 group-hover:text-[#0066CC] transition-colors leading-tight">
                                     {item.title}
                                 </h3>
-                                <p style={{
-                                    fontSize: '15px',
-                                    color: '#666',
-                                    lineHeight: '1.7'
-                                }}>
+                                <p className="text-[15px] text-slate-600 leading-relaxed m-0">
                                     {item.description}
                                 </p>
                             </div>
@@ -643,64 +378,22 @@ const SEOServices = () => {
             </section>
 
             {/* SEO Metrics */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-24 bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{
-                            fontSize: '42px',
-                            fontWeight: '600',
-                            color: '#1a1a1a',
-                            marginBottom: '20px'
-                        }}>
+                    <div className="text-center mb-16">
+                        <h2 className="text-[42px] font-bold text-slate-900 mb-5 leading-tight">
                             SEO Metrics We Track
                         </h2>
-                        <p style={{
-                            fontSize: '18px',
-                            color: '#0066CC',
-                            fontWeight: '500'
-                        }}>
+                        <p className="text-[18px] text-[#0066CC] font-bold">
                             Growth is measurable. And we prove it.
                         </p>
                     </div>
 
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '20px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-5">
                         {metrics.map((metric, index) => (
-                            <div key={index} style={{
-                                background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
-                                padding: '24px',
-                                borderRadius: '12px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '16px',
-                                transition: 'all 0.3s ease',
-                                cursor: 'pointer',
-                                width: 'calc(25% - 15px)',
-                                minWidth: '250px',
-                                flexGrow: 1,
-                                maxWidth: '300px'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = 'linear-gradient(135deg, #0066CC 0%, #004999 100%)';
-                                    e.currentTarget.style.color = '#fff';
-                                    e.currentTarget.style.transform = 'translateY(-5px) scale(1.05)';
-                                    e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,102,204,0.2)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)';
-                                    e.currentTarget.style.color = '#1a1a1a';
-                                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}>
-                                <BarChart3 size={24} style={{ flexShrink: 0 }} />
-                                <span style={{
-                                    fontSize: '16px',
-                                    fontWeight: '500'
-                                }}>
+                            <div key={index} className="bg-slate-50 p-6 rounded-2xl flex items-center gap-4 transition-all duration-300 w-full md:w-[calc(25%-15px)] min-w-[250px] max-w-[300px] grow cursor-pointer group hover:bg-[#0066CC] hover:text-white hover:-translate-y-1.5 hover:scale-105 hover:shadow-lg hover:shadow-blue-600/20 border border-slate-100">
+                                <BarChart3 size={24} className="shrink-0 group-hover:scale-110 transition-transform" />
+                                <span className="text-[16px] font-bold">
                                     {metric}
                                 </span>
                             </div>
@@ -710,50 +403,21 @@ const SEOServices = () => {
             </section>
 
             {/* FAQ Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8f9fa' }}>
+            <section className="py-24 bg-slate-50">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{
-                            fontSize: '42px',
-                            fontWeight: '600',
-                            color: '#1a1a1a',
-                            marginBottom: '20px'
-                        }}>
+                    <div className="text-center mb-16">
+                        <h2 className="text-[42px] font-bold text-slate-900 mb-5 leading-tight">
                             Frequently Asked Questions
                         </h2>
                     </div>
 
-                    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+                    <div className="max-w-[900px] mx-auto">
                         {faqs.map((faq, index) => (
-                            <div key={index} style={{
-                                background: '#fff',
-                                padding: '32px',
-                                borderRadius: '12px',
-                                marginBottom: '20px',
-                                boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
-                                transition: 'all 0.3s ease'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
-                                    e.currentTarget.style.transform = 'translateX(10px)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
-                                    e.currentTarget.style.transform = 'translateX(0)';
-                                }}>
-                                <h3 style={{
-                                    fontSize: '18px',
-                                    fontWeight: '600',
-                                    color: '#1a1a1a',
-                                    marginBottom: '12px'
-                                }}>
+                            <div key={index} className="bg-white p-8 rounded-2xl mb-5 shadow-[0_2px_10px_rgba(0,0,0,0.05)] transition-all duration-300 group hover:shadow-xl hover:translate-x-2 border border-transparent hover:border-blue-100">
+                                <h3 className="text-[18px] font-bold text-slate-900 mb-3 group-hover:text-[#0066CC] transition-colors leading-tight">
                                     {faq.question}
                                 </h3>
-                                <p style={{
-                                    fontSize: '15px',
-                                    color: '#666',
-                                    lineHeight: '1.7'
-                                }}>
+                                <p className="text-[15px] text-slate-600 leading-relaxed m-0">
                                     {faq.answer}
                                 </p>
                             </div>
@@ -763,74 +427,24 @@ const SEOServices = () => {
             </section>
 
             {/* CTA Section */}
-            <section style={{
-                padding: '80px 0',
-                background: 'linear-gradient(135deg, #0066CC 0%, #004999 100%)',
-                color: '#fff',
-                textAlign: 'center'
-            }}>
+            <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center">
                 <div className="container">
-                    <h2 style={{
-                        fontSize: '42px',
-                        fontWeight: '600',
-                        marginBottom: '24px',
-                        color: '#fff'
-                    }}>
+                    <h2 className="text-[42px] font-bold mb-6 text-white leading-tight">
                         Ready to Dominate Search?
                     </h2>
-                    <p style={{
-                        fontSize: '20px',
-                        marginBottom: '16px',
-                        color: '#fff',
-                        opacity: 1
-                    }}>
+                    <p className="text-[20px] mb-4 text-[#eff6ff] opacity-90 font-medium">
                         Organic traffic is the most powerful digital asset you can build.
                     </p>
-                    <p style={{
-                        fontSize: '18px',
-                        marginBottom: '40px',
-                        color: '#fff',
-                        opacity: 1
-                    }}>
+                    <p className="text-[18px] mb-4 text-[#eff6ff] opacity-90">
                         If you're ready to move beyond temporary boosts and build long-term digital authority,
                     </p>
-                    <p style={{
-                        fontSize: '22px',
-                        fontWeight: '600',
-                        marginBottom: '40px',
-                        color: '#fff'
-                    }}>
-                        Partner with Adkryoss managed by Clink Consultancy Services pvt.ltd.
+                    <p className="text-[22px] font-bold mb-4 text-white">
+                        Partner with Adkryoss managed by <span className="text-white font-black">Clink Consultancy Services Private Limited</span>
                     </p>
-                    <p style={{
-                        fontSize: '18px',
-                        marginBottom: '40px',
-                        color: '#fff',
-                        opacity: 1
-                    }}>
+                    <p className="text-[18px] mb-10 text-[#eff6ff] opacity-90">
                         Let's transform search visibility into consistent business growth.
                     </p>
-                    <Link to="/contact" style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '12px',
-                        background: '#fff',
-                        color: '#0066CC',
-                        padding: '18px 40px',
-                        borderRadius: '8px',
-                        fontSize: '18px',
-                        fontWeight: '600',
-                        textDecoration: 'none',
-                        transition: 'all 0.3s ease'
-                    }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.transform = 'translateY(-5px) scale(1.05)';
-                            e.currentTarget.style.boxShadow = '0 15px 40px rgba(0,0,0,0.3)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                            e.currentTarget.style.boxShadow = 'none';
-                        }}>
+                    <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-[#0066CC] py-5 px-12 rounded-xl text-[18px] font-bold transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_40px_rgba(0,0,0,0.3)] hover:scale-105">
                         Get Started Today
                         <ArrowRight size={20} />
                     </Link>

@@ -5,9 +5,9 @@ import ScrollToTop from './ScrollToTop';
 
 const Layout = ({ children }) => {
     return (
-        <div className="layout">
+        <div className="flex flex-col min-h-screen">
             <Header />
-            <main style={{ paddingTop: '80px', minHeight: 'calc(100vh - 400px)' }}>
+            <main className="flex-1 pt-20 min-h-[calc(100vh-400px)]">
                 {children}
             </main>
             <Footer />

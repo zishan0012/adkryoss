@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
     Link2,
     Search,
@@ -129,35 +130,25 @@ const LinkBuildingServices = () => {
         <div style={{ backgroundColor: '#fff' }}>
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
                 style={{
-                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-                    color: '#fff',
-                    position: 'relative',
-                    overflow: 'hidden'
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
-                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    <div className="text-left relative z-10 text-white">
+                        <h1 className="text-[48px] font-bold mb-[16px] tracking-[-1px] text-white">
                             Link Building Services
                         </h1>
-                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
+                        <h3 className="text-[24px] font-medium mb-[24px] text-white">
                             Authority That Ranks. Links That Convert.
                         </h3>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
+                        <p className="text-[18px] leading-[1.8] text-white mb-[32px]">
                             Build powerful, high-authority backlinks that strengthen search visibility, improve domain credibility, and drive consistent organic growth. We create link ecosystems that search engines trust—and competitors struggle to match.
                         </p>
-                        <div style={{
-                            background: 'rgba(255,255,255,0.05)',
-                            padding: '24px',
-                            borderRadius: '20px',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            backdropFilter: 'blur(10px)',
-                            marginBottom: '32px'
-                        }}>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span>, we don’t chase links. We build digital authority.
+                        <div className="bg-[rgba(255,255,255,0.05)] p-[24px] rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-[32px]">
+                            <p className="text-[18px] leading-[1.8] text-white m-0">
+                                At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we don’t chase links. We build digital authority.
                             </p>
                         </div>
                     </div>
@@ -165,32 +156,28 @@ const LinkBuildingServices = () => {
                         <img
                             src="https://www.techmagnate.com/wp-content/uploads/2026/01/Link-Building.webp"
                             alt="Link Building Services"
-                            style={{
-                                maxWidth: '500px',
-                                width: '100%',
-                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
-                            }}
+                            className="max-w-[500px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
             </section>
 
             {/* Why Link Building Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-[100px] bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">
                             Why Link Building Still Defines SEO Success
                         </h2>
-                        <p style={{ fontSize: '20px', color: '#666', maxWidth: '850px', margin: '0 auto' }}>
+                        <p className="text-[20px] text-[#666] max-w-[850px] mx-auto">
                             Search engines evaluate trust through signals. Authoritative backlinks remain one of the strongest indicators of credibility and relevance in 2026.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div style={{ background: '#0066cc', color: '#fff', padding: '50px', borderRadius: '40px', boxShadow: '0 20px 40px rgba(0,102,204,0.15)' }}>
-                            <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '30px' }}>Modern Link Building Strategy</h3>
-                            <p style={{ fontSize: '18px', opacity: 0.9, lineHeight: '1.8', marginBottom: '30px', color: '#fff' }}>
+                        <div className="bg-[#0066cc] text-white p-[50px] rounded-[40px] shadow-[0_20px_40px_rgba(0,102,204,0.15)]">
+                            <h3 className="text-[28px] font-semibold mb-[30px]">Modern Link Building Strategy</h3>
+                            <p className="text-[18px] opacity-90 leading-[1.8] mb-[30px] text-white">
                                 It’s no longer about volume—it’s about context, quality, and strategic placement. Adkryoss designs link acquisition frameworks that focus on:
                             </p>
                             <div className="space-y-6">
@@ -201,27 +188,27 @@ const LinkBuildingServices = () => {
                                     "Organic anchor text diversification",
                                     "Sustainable long-term ranking stability"
                                 ].map((item, i) => (
-                                    <div key={i} style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-                                        <div style={{ background: 'rgba(255,255,255,0.2)', padding: '5px', borderRadius: '50%' }}>
+                                    <div key={i} className="flex gap-[15px] items-center">
+                                        <div className="bg-[rgba(255,255,255,0.2)] p-[5px] rounded-full">
                                             <CheckCircle2 size={18} />
                                         </div>
-                                        <span style={{ fontSize: '17px', fontWeight: '500' }}>{item}</span>
+                                        <span className="text-[17px] font-medium">{item}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div className="space-y-8">
-                            <div style={{ padding: '30px', borderLeft: '4px solid #0066cc', background: '#f8f9fa' }}>
-                                <p style={{ fontSize: '20px', color: '#1a1a1a', fontWeight: '600', marginBottom: '10px' }}>Contextual Relevance</p>
-                                <p style={{ color: '#666', lineHeight: '1.6' }}>We ensure links come from pages related to your business to maximize ranking power.</p>
+                            <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa]">
+                                <p className="text-[20px] text-[#1a1a1a] font-semibold mb-[10px]">Contextual Relevance</p>
+                                <p className="text-[#666] leading-[1.6]">We ensure links come from pages related to your business to maximize ranking power.</p>
                             </div>
-                            <div style={{ padding: '30px', borderLeft: '4px solid #0066cc', background: '#f8f9fa' }}>
-                                <p style={{ fontSize: '20px', color: '#1a1a1a', fontWeight: '600', marginBottom: '10px' }}>Authority Growth</p>
-                                <p style={{ color: '#666', lineHeight: '1.6' }}>Every link we build aims to increase your overall domain rating and trust score.</p>
+                            <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa]">
+                                <p className="text-[20px] text-[#1a1a1a] font-semibold mb-[10px]">Authority Growth</p>
+                                <p className="text-[#666] leading-[1.6]">Every link we build aims to increase your overall domain rating and trust score.</p>
                             </div>
-                            <div style={{ padding: '30px', borderLeft: '4px solid #0066cc', background: '#f8f9fa' }}>
-                                <p style={{ fontSize: '20px', color: '#1a1a1a', fontWeight: '600', marginBottom: '10px' }}>Risk Management</p>
-                                <p style={{ color: '#666', lineHeight: '1.6' }}>We strictly follow white-hat practices to ensure long-term visibility without penalties.</p>
+                            <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa]">
+                                <p className="text-[20px] text-[#1a1a1a] font-semibold mb-[10px]">Risk Management</p>
+                                <p className="text-[#666] leading-[1.6]">We strictly follow white-hat practices to ensure long-term visibility without penalties.</p>
                             </div>
                         </div>
                     </div>
@@ -229,83 +216,57 @@ const LinkBuildingServices = () => {
             </section>
 
             {/* Framework Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#f1f5f9' }}>
+            <section className="py-[100px] bg-[#f1f5f9]">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">
                             Our Strategic Link Building Framework
                         </h2>
-                        <p style={{ fontSize: '20px', color: '#666' }}>
+                        <p className="text-[20px] text-[#666]">
                             A high-authority approach to earning digital trust.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {linkFramework.map((item, i) => (
-                            <div key={i} style={{
-                                background: '#fff',
-                                padding: '40px',
-                                borderRadius: '24px',
-                                transition: 'all 0.3s',
-                                border: '1px solid #e2e8f0'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-10px)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
-                                    e.currentTarget.style.borderColor = '#0066cc';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                }}>
-                                <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
-                                <p style={{ color: '#666', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
-                                <ul style={{ listStyle: 'none', padding: 0, marginTop: '20px' }}>
+                            <div
+                                key={i}
+                                className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 group hover:-translate-y-[10px] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:border-[#0066cc]"
+                            >
+                                <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
+                                <h3 className="text-[24px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
+                                <p className="text-[#666] mb-[20px] leading-[1.6]">{item.desc}</p>
+                                <ul className="list-none p-0 mt-[20px]">
                                     {item.points.map((p, j) => (
-                                        <li key={j} style={{ display: 'flex', gap: '8px', marginBottom: '10px', color: '#444', fontSize: '15px' }}>
-                                            <div style={{ color: '#0066cc', marginTop: '4px' }}><CheckCircle2 size={14} /></div>
+                                        <li key={j} className="flex gap-[8px] mb-[10px] text-[#444] text-[15px]">
+                                            <div className="text-[#0066cc] mt-[4px]"><CheckCircle2 size={14} /></div>
                                             {p}
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ fontSize: '14px', fontWeight: '500', color: '#0066cc', marginTop: '20px' }}>{item.extra}</p>
+                                <p className="text-[14px] font-medium text-[#0066cc] mt-[20px]">{item.extra}</p>
                             </div>
                         ))}
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8 mt-8">
                         {additionalFramework.map((item, i) => (
-                            <div key={i} style={{
-                                background: '#fff',
-                                padding: '40px',
-                                borderRadius: '24px',
-                                transition: 'all 0.3s',
-                                border: '1px solid #e2e8f0'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-10px)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
-                                    e.currentTarget.style.borderColor = '#0066cc';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                }}>
-                                <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
-                                <p style={{ color: '#666', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
-                                <ul style={{ listStyle: 'none', padding: 0 }}>
+                            <div
+                                key={i}
+                                className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 group hover:-translate-y-[10px] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:border-[#0066cc]"
+                            >
+                                <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
+                                <h3 className="text-[24px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
+                                <p className="text-[#666] mb-[20px] leading-[1.6]">{item.desc}</p>
+                                <ul className="list-none p-0">
                                     {item.points.map((p, j) => (
-                                        <li key={j} style={{ display: 'flex', gap: '8px', marginBottom: '10px', color: '#444', fontSize: '15px' }}>
-                                            <div style={{ color: '#0066cc', marginTop: '4px' }}><CheckCircle2 size={14} /></div>
+                                        <li key={j} className="flex gap-[8px] mb-[10px] text-[#444] text-[15px]">
+                                            <div className="text-[#0066cc] mt-[4px]"><CheckCircle2 size={14} /></div>
                                             {p}
                                         </li>
                                     ))}
                                 </ul>
-                                {item.extra && <p style={{ fontSize: '14px', fontWeight: '500', color: '#0066cc', marginTop: '20px' }}>{item.extra}</p>}
+                                {item.extra && <p className="text-[14px] font-medium text-[#0066cc] mt-[20px]">{item.extra}</p>}
                             </div>
                         ))}
                     </div>
@@ -313,18 +274,18 @@ const LinkBuildingServices = () => {
             </section>
 
             {/* Differentiators */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-[100px] bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>What Makes Our Link Building Different?</h2>
-                        <p style={{ fontSize: '20px', color: '#666' }}>We focus on domain authority growth and measurable ranking movement.</p>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">What Makes Our Link Building Different?</h2>
+                        <p className="text-[20px] text-[#666]">We focus on domain authority growth and measurable ranking movement.</p>
                     </div>
                     <div className="grid md:grid-cols-4 gap-8">
                         {differentiators.map((item, i) => (
-                            <div key={i} style={{ textAlign: 'center', padding: '30px', background: '#f8f9fa', borderRadius: '20px', border: '1px solid #eee' }}>
-                                <div style={{ color: '#0066cc', marginBottom: '15px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
-                                <h4 style={{ fontSize: '20px', fontWeight: '600', color: '#1a1a1a', marginBottom: '10px' }}>{item.title}</h4>
-                                <p style={{ fontSize: '15px', color: '#666', lineHeight: '1.6' }}>{item.desc}</p>
+                            <div key={i} className="text-center p-[30px] bg-[#f8f9fa] rounded-[20px] border border-[#eee]">
+                                <div className="text-[#0066cc] mb-[15px] flex justify-center">{item.icon}</div>
+                                <h4 className="text-[20px] font-semibold text-[#1a1a1a] mb-[10px]">{item.title}</h4>
+                                <p className="text-[15px] text-[#666] leading-[1.6]">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -332,11 +293,11 @@ const LinkBuildingServices = () => {
             </section>
 
             {/* Industries & Integration */}
-            <section style={{ padding: '100px 0', backgroundColor: '#0f172a', color: '#fff' }}>
+            <section className="py-[100px] bg-[#0f172a] text-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16">
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '600', marginBottom: '40px', color: '#fff' }}>Industries We Build Authority For</h2>
+                            <h2 className="text-[36px] font-semibold mb-[40px] text-white">Industries We Build Authority For</h2>
                             <div className="flex flex-wrap gap-4">
                                 {[
                                     { name: "E-commerce & D2C", icon: <ShoppingCart size={18} /> },
@@ -347,16 +308,10 @@ const LinkBuildingServices = () => {
                                     { name: "Finance & BFSI", icon: <DollarSign size={18} /> },
                                     { name: "Corporate Enterprises", icon: <Briefcase size={18} /> }
                                 ].map((item, i) => (
-                                    <div key={i} style={{
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        gap: '10px',
-                                        background: 'rgba(255,255,255,0.05)',
-                                        padding: '15px',
-                                        borderRadius: '12px',
-                                        width: i === 6 ? '100%' : 'calc(50% - 8px)',
-                                        justifyContent: i === 6 ? 'center' : 'flex-start'
-                                    }}>
+                                    <div
+                                        key={i}
+                                        className={`flex items-center gap-[10px] bg-[rgba(255,255,255,0.05)] p-[15px] rounded-[12px] ${i === 6 ? 'w-full justify-center' : 'w-[calc(50%-8px)] justify-start'}`}
+                                    >
                                         <span className="text-blue-400">{item.icon}</span>
                                         <span>{item.name}</span>
                                     </div>
@@ -364,8 +319,8 @@ const LinkBuildingServices = () => {
                             </div>
                         </div>
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '600', marginBottom: '40px', color: '#fff' }}>SEO + Link Building = Scalable Growth</h2>
-                            <p style={{ color: '#e2e8f0', fontSize: '18px', lineHeight: '1.8', marginBottom: '30px' }}>
+                            <h2 className="text-[36px] font-semibold mb-[40px] text-white">SEO + Link Building = Scalable Growth</h2>
+                            <p className="text-[#e2e8f0] text-[18px] leading-[1.8] mb-[30px]">
                                 Link building works best when integrated with complete SEO architecture. At Adkryoss, we align link acquisition with:
                             </p>
                             <div className="flex flex-wrap gap-3">
@@ -376,7 +331,9 @@ const LinkBuildingServices = () => {
                                     "Digital PR",
                                     "Performance Analytics"
                                 ].map((tag, i) => (
-                                    <span key={i} style={{ padding: '8px 20px', background: 'rgba(59, 130, 246, 0.1)', color: '#60a5fa', borderRadius: '50px', fontSize: '14px', fontWeight: '600', border: '1px solid rgba(59, 130, 246, 0.2)' }}>{tag}</span>
+                                    <span key={i} className="py-[8px] px-[20px] bg-[rgba(59,130,246,0.1)] text-[#60a5fa] rounded-[50px] text-[14px] font-semibold border border-[rgba(59,130,246,0.2)]">
+                                        {tag}
+                                    </span>
                                 ))}
                             </div>
                         </div>
@@ -385,11 +342,11 @@ const LinkBuildingServices = () => {
             </section>
 
             {/* Results Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-[100px] bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>Results You Can Expect</h2>
-                        <p style={{ fontSize: '20px', color: '#666' }}>High-authority links that compound your digital equity over time.</p>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">Results You Can Expect</h2>
+                        <p className="text-[20px] text-[#666]">High-authority links that compound your digital equity over time.</p>
                     </div>
                     <div className="grid md:grid-cols-5 gap-6">
                         {[
@@ -399,9 +356,9 @@ const LinkBuildingServices = () => {
                             { label: "Brand Credibility", val: "Industry Trust" },
                             { label: "Long-Term ROI", val: "SEO Momentum" }
                         ].map((res, i) => (
-                            <div key={i} style={{ textAlign: 'center', padding: '30px', background: '#f8f9fa', borderRadius: '24px', border: '1px solid #eee' }}>
-                                <div style={{ fontSize: '24px', fontWeight: '700', color: '#0066cc', marginBottom: '5px' }}>{res.label}</div>
-                                <div style={{ fontSize: '14px', color: '#666', fontWeight: '500' }}>{res.val}</div>
+                            <div key={i} className="text-center p-[30px] bg-[#f8f9fa] rounded-[24px] border border-[#eee]">
+                                <div className="text-[24px] font-bold text-[#0066cc] mb-[5px]">{res.label}</div>
+                                <div className="text-[14px] text-[#666] font-medium">{res.val}</div>
                             </div>
                         ))}
                     </div>
@@ -409,14 +366,14 @@ const LinkBuildingServices = () => {
             </section>
 
             {/* FAQs */}
-            <section style={{ padding: '100px 0', backgroundColor: '#f8f9fa' }}>
+            <section className="py-[100px] bg-[#f8f9fa]">
                 <div className="container">
-                    <h2 style={{ fontSize: '36px', fontWeight: '600', textAlign: 'center', marginBottom: '50px' }}>Frequently Asked Questions</h2>
-                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                    <h2 className="text-[36px] font-semibold text-center mb-[50px]">Frequently Asked Questions</h2>
+                    <div className="max-w-[800px] mx-auto">
                         {faqs.map((faq, i) => (
-                            <div key={i} style={{ marginBottom: '20px', background: '#fff', padding: '24px', borderRadius: '16px', border: '1px solid #eee' }}>
-                                <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '10px', color: '#1a1a1a' }}>{faq.question}</h4>
-                                <p style={{ color: '#666', lineHeight: '1.6', margin: 0 }}>{faq.answer}</p>
+                            <div key={i} className="mb-[20px] bg-white p-[24px] rounded-[16px] border border-[#eee]">
+                                <h4 className="text-[18px] font-semibold mb-[10px] text-[#1a1a1a]">{faq.question}</h4>
+                                <p className="text-[#666] leading-[1.6] m-0">{faq.answer}</p>
                             </div>
                         ))}
                     </div>
@@ -424,17 +381,18 @@ const LinkBuildingServices = () => {
             </section>
 
             {/* CTA */}
-            <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, #0066cc 0%, #004999 100%)', color: '#fff', textAlign: 'center' }}>
+            <section className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>Let’s Build Authority That Compounds</h2>
-                    <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: '#fff' }}>
+                    <h2 className="text-[42px] font-semibold mb-[20px] text-white">Let’s Build Authority That Compounds</h2>
+                    <p className="text-[20px] mb-[40px] opacity-90 text-white">
                         Partner with Adkryoss managed by Clink Consultancy Services Private Limited to build a powerful link ecosystem that drives sustainable SEO growth.
                     </p>
-                    <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#fff', color: '#0066cc', padding: '18px 40px', borderRadius: '50px', fontWeight: '600', textDecoration: 'none', transition: 'all 0.3s' }}
-                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    <Link
+                        to="/contact"
+                        className="inline-flex items-center gap-[10px] bg-white text-[#0066cc] py-[18px] px-[40px] rounded-[50px] font-semibold no-underline transition-all duration-300 hover:scale-[1.05]"
+                    >
                         Start Building Smarter Links Today <ArrowRight size={20} />
-                    </a>
+                    </Link>
                 </div>
             </section>
         </div>

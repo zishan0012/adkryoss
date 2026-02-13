@@ -113,31 +113,28 @@ const LLMOptimization = () => {
     ];
 
     return (
-        <div style={{ backgroundColor: '#fff' }}>
+        <div className="bg-white">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
                 style={{
-                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-                    color: '#fff',
-                    position: 'relative',
-                    overflow: 'hidden'
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
-                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1.5px', color: '#000', lineHeight: '1.1' }}>
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    <div className="text-left relative z-10 text-white">
+                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
                             LLM Optimization Services
                         </h1>
-                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
+                        <h3 className="text-[24px] font-medium mb-6 text-white">
                             Be the Answer. Not Just Another Result.
                         </h3>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
+                        <p className="text-[18px] leading-[1.8] text-white mb-8">
                             AI platforms are redefining discovery. If your business isn't optimized for Large Language Models (LLMs) like ChatGPT and Gemini, you are invisible in the next generation of search. We ensure your brand becomes a trusted, cited answer.
                         </p>
-                        <div style={{ background: 'rgba(255,255,255,0.05)', padding: '24px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)' }}>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span>, we future-proof your digital presence for AI-driven discovery.
+                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px]">
+                            <p className="text-[18px] leading-[1.8] text-white m-0">
+                                At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we future-proof your digital presence for AI-driven discovery.
                             </p>
                         </div>
                     </div>
@@ -145,25 +142,21 @@ const LLMOptimization = () => {
                         <img
                             src="https://www.techmagnate.com/wp-content/uploads/2026/01/Search-Engine-Optimization-1.webp"
                             alt="LLM Optimization"
-                            style={{
-                                maxWidth: '450px',
-                                width: '100%',
-                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
-                            }}
+                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
             </section>
 
             {/* What is LLM Optimization */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-20 bg-white">
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '60px', alignItems: 'center' }}>
+                    <div className="grid md:grid-cols-[1fr_1.2fr] gap-[60px] items-center">
                         <div>
-                            <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>
+                            <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
                                 What is LLM Optimization?
                             </h2>
-                            <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.8', marginBottom: '24px' }}>
+                            <p className="text-[18px] text-[#475569] leading-[1.8] mb-6">
                                 Unlike traditional SEO that focuses on search engine rankings, LLM Optimization ensures your business becomes a trusted, contextually relevant answer inside AI-generated responses.
                             </p>
                             <div className="grid grid-cols-2 gap-4">
@@ -173,15 +166,15 @@ const LLMOptimization = () => {
                                     { t: "Knowledge Graphs", i: <Database size={20} /> },
                                     { t: "AI Authority Hubs", i: <Shield size={20} /> }
                                 ].map((item, i) => (
-                                    <div key={i} style={{ padding: '15px', background: '#f8fafc', borderRadius: '12px', display: 'flex', gap: '10px', alignItems: 'center', border: '1px solid #e2e8f0' }}>
-                                        <div style={{ color: '#0066cc' }}>{item.i}</div>
-                                        <span style={{ fontWeight: '600', fontSize: '14px', color: '#0f172a' }}>{item.t}</span>
+                                    <div key={i} className="p-[15px] bg-[#f8fafc] rounded-[12px] flex gap-[10px] items-center border border-[#e2e8f0]">
+                                        <div className="text-[#0066cc]">{item.i}</div>
+                                        <span className="font-semibold text-sm text-[#0f172a]">{item.t}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div style={{ background: '#f8fafc', padding: '40px', borderRadius: '30px', border: '1px solid #e2e8f0' }}>
-                            <h3 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '30px', color: '#0f172a' }}>Why It Matters Now:</h3>
+                        <div className="bg-[#f8fafc] p-10 rounded-[30px] border border-[#e2e8f0]">
+                            <h3 className="text-[24px] font-semibold mb-[30px] text-[#0f172a]">Why It Matters Now:</h3>
                             <div className="space-y-6">
                                 {[
                                     { t: "Users ask full questions, not keywords", d: "Conversational queries are replacing short phrases." },
@@ -189,13 +182,13 @@ const LLMOptimization = () => {
                                     { t: "Brand mentions matter more than backlinks", d: "Co-occurrence in AI training data drives recommendations." },
                                     { t: "Authority and trust signals drive recommendations", d: "AI models prioritize high-E-E-A-T sources for summaries." }
                                 ].map((item, i) => (
-                                    <div key={i} style={{ display: 'flex', gap: '15px' }}>
-                                        <div style={{ width: '30px', height: '30px', background: '#fff', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid #e2e8f0', flexShrink: 0 }}>
-                                            <span style={{ fontWeight: '700', color: '#0066cc' }}>{i + 1}</span>
+                                    <div key={i} className="flex gap-[15px]">
+                                        <div className="w-[30px] h-[30px] bg-white rounded-[10px] flex items-center justify-center border border-[#e2e8f0] shrink-0">
+                                            <span className="font-bold text-[#0066cc]">{i + 1}</span>
                                         </div>
                                         <div>
-                                            <h4 style={{ fontSize: '18px', fontWeight: '500', color: '#0f172a', marginBottom: '4px' }}>{item.t}</h4>
-                                            <p style={{ fontSize: '15px', color: '#64748b' }}>{item.d}</p>
+                                            <h4 className="text-[18px] font-medium text-[#0f172a] mb-1">{item.t}</h4>
+                                            <p className="text-[15px] text-[#64748b]">{item.d}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -206,42 +199,22 @@ const LLMOptimization = () => {
             </section>
 
             {/* Approach Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
+            <section className="py-20 bg-[#f8fafc]">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#0f172a' }}>Our LLM Optimization Approach</h2>
-                        <p style={{ fontSize: '20px', color: '#64748b', fontWeight: '500' }}>Structured. Data-Driven. AI-First.</p>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">Our LLM Optimization Approach</h2>
+                        <p className="text-[20px] text-[#64748b] font-medium">Structured. Data-Driven. AI-First.</p>
                     </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '40px' }}>
+                    <div className="flex flex-wrap justify-center gap-10">
                         {approach.map((step, i) => (
-                            <div key={i} style={{
-                                width: 'calc(33.333% - 27px)',
-                                minWidth: '350px',
-                                background: '#fff',
-                                padding: '50px 40px',
-                                borderRadius: '24px',
-                                border: '1px solid #e2e8f0',
-                                transition: 'all 0.3s',
-                                flexGrow: 1,
-                                maxWidth: '380px'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-10px)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,102,204,0.1)';
-                                    e.currentTarget.style.borderColor = '#0066cc';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                }}>
-                                <div style={{ color: '#0066cc', marginBottom: '24px' }}>{step.icon}</div>
-                                <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '20px', color: '#0f172a' }}>{step.title}</h3>
-                                <p style={{ fontSize: '16px', color: '#475569', marginBottom: '30px', lineHeight: '1.6' }}>{step.desc}</p>
+                            <div key={i} className="w-[calc(33.333%-27px)] min-w-[350px] bg-white p-[50px_40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 flex-grow max-w-[380px] hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
+                                <div className="text-[#0066cc] mb-6">{step.icon}</div>
+                                <h3 className="text-[24px] font-bold mb-5 text-[#0f172a]">{step.title}</h3>
+                                <p className="text-[16px] text-[#475569] mb-[30px] leading-[1.6]">{step.desc}</p>
                                 <ul className="space-y-6">
                                     {step.points.map((pt, idx) => (
-                                        <li key={idx} style={{ display: 'flex', gap: '12px', fontSize: '15px', color: '#334155', lineHeight: '1.5' }}>
-                                            <CheckCircle2 size={20} style={{ color: '#0066cc', flexShrink: 0, marginTop: '2px' }} />
+                                        <li key={idx} className="flex gap-3 text-[15px] text-[#334155] leading-[1.5]">
+                                            <CheckCircle2 size={20} className="text-[#0066cc] shrink-0 mt-0.5" />
                                             {pt}
                                         </li>
                                     ))}
@@ -253,33 +226,33 @@ const LLMOptimization = () => {
             </section>
 
             {/* Differentiators & Technology Stack */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-20 bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-12">
-                        <div style={{ background: '#f8fafc', padding: '50px', borderRadius: '40px', border: '1px solid #e2e8f0' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }}>
-                                <Microscope size={32} style={{ color: '#0066cc' }} />
-                                <h3 style={{ fontSize: '28px', fontWeight: '700', color: '#0f172a' }}>What Makes Our Strategy Different</h3>
+                        <div className="bg-[#f8fafc] p-[50px] rounded-[40px] border border-[#e2e8f0]">
+                            <div className="flex items-center gap-[15px] mb-[30px]">
+                                <Microscope size={32} className="text-[#0066cc]" />
+                                <h3 className="text-[28px] font-bold text-[#0f172a]">What Makes Our Strategy Different</h3>
                             </div>
                             <div className="space-y-8">
                                 {strategyDifferent.map((item, i) => (
                                     <div key={i}>
-                                        <h4 style={{ fontSize: '18px', fontWeight: '700', color: '#0f172a', marginBottom: '8px' }}>{item.t}</h4>
-                                        <p style={{ fontSize: '15px', color: '#475569', lineHeight: '1.6' }}>{item.d}</p>
+                                        <h4 className="text-[18px] font-bold text-[#0f172a] mb-2">{item.t}</h4>
+                                        <p className="text-[15px] text-[#475569] leading-[1.6]">{item.d}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div style={{ background: '#f8fafc', padding: '50px', borderRadius: '40px', border: '1px solid #e2e8f0' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '30px' }}>
-                                <Cpu size={32} style={{ color: '#0066cc' }} />
-                                <h3 style={{ fontSize: '28px', fontWeight: '700', color: '#0f172a' }}>Technology & Research Stack</h3>
+                        <div className="bg-[#f8fafc] p-[50px] rounded-[40px] border border-[#e2e8f0]">
+                            <div className="flex items-center gap-[15px] mb-[30px]">
+                                <Cpu size={32} className="text-[#0066cc]" />
+                                <h3 className="text-[28px] font-bold text-[#0f172a]">Technology & Research Stack</h3>
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 {techStack.map((item, i) => (
-                                    <div key={i} style={{ padding: '25px', background: '#fff', borderRadius: '20px', border: '1px solid #e2e8f0', textAlign: 'center', transition: 'all 0.3s' }}>
-                                        <div style={{ color: '#0066cc', marginBottom: '15px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
-                                        <span style={{ fontSize: '14px', fontWeight: '600', color: '#0f172a' }}>{item.name}</span>
+                                    <div key={i} className="p-[25px] bg-white rounded-[20px] border border-[#e2e8f0] text-center transition-all duration-300 hover:shadow-lg">
+                                        <div className="text-[#0066cc] mb-[15px] flex justify-center">{item.icon}</div>
+                                        <span className="text-sm font-semibold text-[#0f172a]">{item.name}</span>
                                     </div>
                                 ))}
                             </div>
@@ -289,22 +262,18 @@ const LLMOptimization = () => {
             </section>
 
             {/* Benefits of LLM Optimization */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
-                <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#0f172a' }}>Benefits of LLM Optimization</h2>
-                    <p style={{ fontSize: '20px', color: '#64748b', marginBottom: '60px' }}>Future-proofing your brand's presence in the AI era.</p>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '30px' }}>
+            <section className="py-20 bg-[#f8fafc] text-center">
+                <div className="container">
+                    <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">Benefits of LLM Optimization</h2>
+                    <p className="text-[20px] text-[#64748b] mb-[60px]">Future-proofing your brand's presence in the AI era.</p>
+                    <div className="flex flex-wrap justify-center gap-[30px]">
                         {benefits.map((item, i) => (
-                            <div key={i} style={{ width: 'calc(33.333% - 20px)', minWidth: '300px', padding: '40px', background: '#fff', borderRadius: '30px', border: '1px solid #e2e8f0', textAlign: 'left', transition: 'all 0.3s' }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-5px)';
-                                    e.currentTarget.style.borderColor = '#0066cc';
-                                }}>
-                                <div style={{ background: '#e0f2fe', width: '50px', height: '50px', borderRadius: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px' }}>
-                                    <CheckCircle2 size={24} style={{ color: '#0066cc' }} />
+                            <div key={i} className="w-[calc(33.333%-20px)] min-w-[300px] p-10 bg-white rounded-[30px] border border-[#e2e8f0] text-left transition-all duration-300 hover:-translate-y-[5px] hover:border-[#0066cc]">
+                                <div className="bg-[#e0f2fe] w-[50px] h-[50px] rounded-[15px] flex items-center justify-center mb-6">
+                                    <CheckCircle2 size={24} className="text-[#0066cc]" />
                                 </div>
-                                <h4 style={{ fontSize: '20px', fontWeight: '700', color: '#0f172a', marginBottom: '12px' }}>{item.t}</h4>
-                                <p style={{ fontSize: '15px', color: '#475569', lineHeight: '1.6' }}>{item.d}</p>
+                                <h4 className="text-[20px] font-bold text-[#0f172a] mb-3">{item.t}</h4>
+                                <p className="text-[15px] text-[#475569] leading-[1.6]">{item.d}</p>
                             </div>
                         ))}
                     </div>
@@ -312,18 +281,17 @@ const LLMOptimization = () => {
             </section>
 
             {/* Who Needs LLM Optimization */}
-            <section style={{ padding: '80px 0', backgroundColor: '#0f172a', color: '#fff' }}>
-                <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#fff' }}>Who Needs LLM Optimization?</h2>
-                    <p style={{ fontSize: '20px', color: '#cbd5e1', marginBottom: '60px', maxWidth: '800px', margin: '0 auto 60px' }}>
+            <section className="py-20 bg-[#0f172a] text-white text-center">
+                <div className="container">
+                    <h2 className="text-[42px] font-bold mb-5 text-white">Who Needs LLM Optimization?</h2>
+                    <p className="text-[20px] text-[#cbd5e1] mb-[60px] max-w-[800px] mx-auto">
                         If your audience is asking AI for recommendations, your brand must be optimized for it.
                     </p>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '30px' }}>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-[30px]">
                         {audiences.map((aud, i) => (
-                            <div key={i} style={{ padding: '30px', background: 'rgba(255,255,255,0.05)', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.1)', transition: 'all 0.3s' }}
-                                onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}>
-                                <div style={{ color: '#60a5fa', marginBottom: '15px', display: 'flex', justifyContent: 'center' }}>{aud.icon}</div>
-                                <h4 style={{ fontSize: '18px', fontWeight: '600' }}>{aud.name}</h4>
+                            <div key={i} className="p-[30px] bg-[rgba(255,255,255,0.05)] rounded-[20px] border border-[rgba(255,255,255,0.1)] transition-all duration-300 hover:bg-[rgba(255,255,255,0.1)]">
+                                <div className="text-[#60a5fa] mb-[15px] flex justify-center">{aud.icon}</div>
+                                <h4 className="text-[18px] font-semibold">{aud.name}</h4>
                             </div>
                         ))}
                     </div>
@@ -331,17 +299,15 @@ const LLMOptimization = () => {
             </section>
 
             {/* Final CTA */}
-            <section style={{ padding: '100px 0', textAlign: 'center', backgroundColor: '#fff' }}>
+            <section className="py-[100px] text-center bg-white">
                 <div className="container">
-                    <div style={{ background: '#f8fafc', padding: '80px 40px', borderRadius: '40px', border: '1px solid #e2e8f0' }}>
-                        <Bot size={60} style={{ color: '#0066cc', margin: '0 auto 24px' }} />
-                        <h2 style={{ fontSize: '48px', fontWeight: '700', color: '#0f172a', marginBottom: '24px' }}>Ready to Become AI-Discoverable?</h2>
-                        <p style={{ fontSize: '20px', color: '#64748b', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px' }}>
+                    <div className="bg-[#f8fafc] p-[80px_40px] rounded-[40px] border border-[#e2e8f0]">
+                        <Bot size={60} className="text-[#0066cc] mx-auto mb-6" />
+                        <h2 className="text-[48px] font-bold text-[#0f172a] mb-6">Ready to Become AI-Discoverable?</h2>
+                        <p className="text-[20px] text-[#64748b] mb-10 max-w-[800px] mx-auto">
                             Search engines are evolving into answer engines. Businesses that adapt now will dominate tomorrow. Let's optimize your presence for the next generation of discovery.
                         </p>
-                        <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', background: '#0066cc', color: '#fff', padding: '20px 60px', borderRadius: '50px', fontSize: '20px', fontWeight: '700', textDecoration: 'none', transition: 'all 0.3s' }}
-                            onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
-                            onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+                        <Link to="/contact" className="inline-flex items-center gap-3 bg-[#0066cc] text-white p-[20px_60px] rounded-[50px] text-[20px] font-bold no-underline transition-all duration-300 hover:-translate-y-[5px]">
                             Future-Proof Your Visibility <ArrowRight size={24} />
                         </Link>
                     </div>
