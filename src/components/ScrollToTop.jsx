@@ -34,35 +34,10 @@ const ScrollToTop = () => {
             {isVisible && (
                 <button
                     onClick={scrollToTop}
-                    style={{
-                        position: 'fixed',
-                        bottom: '40px',
-                        right: '40px',
-                        width: '50px',
-                        height: '50px',
-                        borderRadius: '50%',
-                        backgroundColor: 'var(--primary)',
-                        color: '#fff',
-                        border: 'none',
-                        cursor: 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        boxShadow: '0 4px 12px rgba(0, 102, 204, 0.3)',
-                        transition: 'all 0.3s ease',
-                        zIndex: 999
-                    }}
-                    onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = 'translateY(-5px)';
-                        e.currentTarget.style.boxShadow = '0 6px 16px rgba(0, 102, 204, 0.4)';
-                    }}
-                    onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = 'translateY(0)';
-                        e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 102, 204, 0.3)';
-                    }}
+                    className="fixed bottom-10 right-10 w-[50px] h-[50px] rounded-full bg-[#0066cc] text-white border-none cursor-pointer flex items-center justify-center shadow-[0_4px_12px_rgba(0,102,204,0.3)] transition-all duration-300 z-[999] hover:-translate-y-[5px] hover:shadow-[0_6px_16px_rgba(0,102,204,0.4)]"
                     aria-label="Scroll to top"
                 >
-                    <ArrowUp size={24} strokeWidth={2.5} />
+                    <ArrowUp size={34} strokeWidth={2.5} />
                 </button>
             )}
         </>

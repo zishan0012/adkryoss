@@ -89,79 +89,64 @@ const GooglePenaltyRecovery = () => {
     ];
 
     return (
-        <div>
+        <div className="bg-white">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
                 style={{
-                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-                    color: '#fff',
-                    position: 'relative',
-                    overflow: 'hidden'
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
-                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10">
-                        {/* <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.05)', padding: '8px 16px', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '24px' }}>
-                            <RefreshCcw size={16} className="text-blue-400" />
-                            <span style={{ fontSize: '14px', fontWeight: '500', letterSpacing: '1px', textTransform: 'uppercase' }}>Forensic Search Recovery</span>
-                        </div> */}
-                        <h1 style={{ fontSize: '48px', fontWeight: '500', marginBottom: '16px', letterSpacing: '-1px', lineHeight: '1.1', color: '#000' }}>
+                    <div className="text-left relative z-10 text-white">
+                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] leading-[1.1] text-white">
                             Google Penalty Recovery Services
                         </h1>
-                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
+                        <h3 className="text-[24px] font-medium mb-6 text-white">
                             Recover Rankings. Restore Authority. Rebuild Growth.
                         </h3>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '20px' }}>
+                        <p className="text-[18px] leading-[1.8] text-white mb-5">
                             When organic traffic drops overnight, revenue follows. A Google penalty can severely damage your visibility, but it's not the end. We diagnose, repair, and engineer long-term search resilience.
                         </p>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff' }}>
-                            At Adkryoss managed by <span style={{ color: '#000', fontWeight: '500' }}>Clink Consultancy Services Private Limited</span>, we rebuild your SEO foundation stronger than before.
-                        </p>
-                        {/* <div style={{ display: 'flex', gap: '20px' }}>
-                            <a href="#audit" style={{ padding: '15px 40px', background: '#0066cc', color: '#fff', borderRadius: '50px', fontWeight: '700', textDecoration: 'none', transition: 'all 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
-                                Request Forensic Audit
-                            </a>
-                        </div> */}
+                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px]">
+                            <p className="text-[18px] leading-[1.8] text-white m-0">
+                                At Adkryoss managed by <span className="text-white font-bold">Clink Consultancy Services Private Limited</span>, we rebuild your SEO foundation stronger than before.
+                            </p>
+                        </div>
                     </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
                             src="https://www.techmagnate.com/wp-content/uploads/2026/01/Penalty-Recovery.webp"
                             alt="Google Penalty Recovery"
-                            style={{
-                                maxWidth: '450px',
-                                width: '100%',
-                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
-                            }}
+                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
             </section>
 
             {/* Core Message */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-20 bg-white">
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] items-center">
                         <div>
-                            <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>
+                            <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
                                 We Don't Just Remove Penalties. We Rebuild Your DNA.
                             </h2>
-                            <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.8', marginBottom: '24px' }}>
+                            <p className="text-[18px] text-[#475569] leading-[1.8] mb-6">
                                 Google's ecosystem evolves constantly. Updates like SpamCore, Helpful Content, and Core Algorithm changes are designed to reward quality. If you've been hit, it's a signal that your SEO foundation needs more than just a quick fix.
                             </p>
-
                         </div>
-                        <div style={{ background: '#f8fafc', padding: '40px', borderRadius: '30px', border: '1px solid #e2e8f0' }}>
-                            <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>Why Penalties Happen:</h3>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                        <div className="bg-[#f8fafc] p-10 rounded-[30px] border border-[#e2e8f0]">
+                            <h3 className="text-[24px] font-bold mb-[30px] text-[#0f172a]">Why Penalties Happen:</h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 {commonReasons.map((reason, i) => (
-                                    <div key={i} style={{ display: 'flex', gap: '15px' }}>
-                                        <div style={{ color: '#0066cc' }}>{reason.icon}</div>
+                                    <div key={i} className="flex gap-[15px]">
+                                        <div className="text-[#0066cc] p-0.5">{reason.icon}</div>
                                         <div>
-                                            <h4 style={{ fontSize: '16px', fontWeight: '600', color: '#0f172a', marginBottom: '4px' }}>{reason.title}</h4>
-                                            <p style={{ fontSize: '13px', color: '#64748b' }}>{reason.desc}</p>
+                                            <h4 className="text-[16px] font-bold text-[#0f172a] mb-1">{reason.title}</h4>
+                                            <p className="text-[13px] text-[#64748b] leading-[1.4]">{reason.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -172,33 +157,17 @@ const GooglePenaltyRecovery = () => {
             </section>
 
             {/* Penalty Types Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
+            <section className="py-20 bg-[#f8fafc]">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
+                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">
                         Types of Google Penalties We Handle
                     </h2>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '30px' }}>
+                    <div className="flex flex-wrap justify-center gap-[30px]">
                         {penaltyTypes.map((type, i) => (
-                            <div key={i} style={{
-                                width: 'calc(50% - 15px)',
-                                minWidth: '320px',
-                                background: '#fff',
-                                padding: '40px',
-                                borderRadius: '24px',
-                                boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)',
-                                transition: 'all 0.3s'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-10px)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,102,204,0.1)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0,0,0,0.1)';
-                                }}>
-                                <div style={{ color: '#0066cc', marginBottom: '24px' }}>{type.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '16px', color: '#0f172a' }}>{type.title}</h3>
-                                <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.7' }}>{type.desc}</p>
+                            <div key={i} className="w-[calc(50%-15px)] min-w-[320px] bg-white p-10 rounded-[24px] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc] border border-transparent">
+                                <div className="text-[#0066cc] mb-6">{type.icon}</div>
+                                <h3 className="text-[22px] font-bold mb-4 text-[#0f172a]">{type.title}</h3>
+                                <p className="text-base text-[#64748b] leading-[1.7]">{type.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -206,41 +175,24 @@ const GooglePenaltyRecovery = () => {
             </section>
 
             {/* Framework Section */}
-            <section id="audit" style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section id="audit" className="py-20 bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '20px', color: '#0f172a' }}>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">
                             Our Google Penalty Recovery Framework
                         </h2>
-                        <p style={{ fontSize: '20px', color: '#64748b', fontWeight: '500' }}>Strategic. Data-Led. Transparent. Sustainable.</p>
+                        <p className="text-[20px] text-[#64748b] font-medium">Strategic. Data-Led. Transparent. Sustainable.</p>
                     </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '30px' }}>
+                    <div className="flex flex-wrap justify-center gap-[30px]">
                         {phases.map((phase, i) => (
-                            <div key={i} style={{
-                                width: 'calc(25% - 23px)',
-                                minWidth: '280px',
-                                background: '#f8fafc',
-                                padding: '30px',
-                                borderRadius: '20px',
-                                border: '1px solid #e2e8f0',
-                                flexGrow: 1,
-                                transition: 'all 0.3s'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.borderColor = '#0066cc';
-                                    e.currentTarget.style.background = '#fff';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                    e.currentTarget.style.background = '#f8fafc';
-                                }}>
-                                <span style={{ fontSize: '14px', fontWeight: '700', color: '#0066cc', marginBottom: '16px', display: 'block' }}>0{i + 1}</span>
-                                <h3 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '16px', color: '#0f172a' }}>{phase.title}</h3>
-                                <p style={{ fontSize: '15px', color: '#475569', marginBottom: '20px', lineHeight: '1.6' }}>{phase.desc}</p>
-                                <ul style={{ listStyle: 'none', padding: 0 }}>
+                            <div key={i} className="w-[calc(25%-23px)] min-w-[280px] bg-[#f8fafc] p-[30px] rounded-[20px] border border-[#e2e8f0] grow transition-all duration-300 hover:border-[#0066cc] hover:bg-white hover:shadow-lg">
+                                <span className="text-sm font-bold text-[#0066cc] mb-4 block uppercase tracking-wider">Phase 0{i + 1}</span>
+                                <h3 className="text-[20px] font-bold mb-4 text-[#0f172a]">{phase.title}</h3>
+                                <p className="text-[15px] text-[#475569] mb-5 leading-[1.6]">{phase.desc}</p>
+                                <ul className="list-none p-0 space-y-4">
                                     {phase.points.map((pt, idx) => (
-                                        <li key={idx} style={{ fontSize: '14px', color: '#64748b', marginBottom: '20px', display: 'flex', gap: '8px' }}>
-                                            <CheckCircle2 size={16} style={{ color: '#0066cc', flexShrink: 0 }} />
+                                        <li key={idx} className="text-[14px] text-[#666] flex gap-2.5 leading-[1.5]">
+                                            <CheckCircle2 size={16} className="text-[#0066cc] shrink-0 mt-0.5" />
                                             {pt}
                                         </li>
                                     ))}
@@ -252,25 +204,25 @@ const GooglePenaltyRecovery = () => {
             </section>
 
             {/* Signs You Need Recovery */}
-            <section style={{ padding: '80px 0', backgroundColor: '#0f172a', color: '#fff' }}>
+            <section className="py-20 bg-[#0f172a] text-white">
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '60px', alignItems: 'center' }}>
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-[60px] items-center">
                         <div>
-                            <h2 style={{ fontSize: '42px', fontWeight: '700', color: '#fff', marginBottom: '30px' }}>
+                            <h2 className="text-[42px] font-bold text-white mb-[30px]">
                                 Signs You Need Immediate Penalty Recovery
                             </h2>
-                            <p style={{ fontSize: '18px', color: '#cbd5e1', lineHeight: '1.8', marginBottom: '30px' }}>
+                            <p className="text-[18px] text-[#cbd5e1] leading-[1.8] mb-[30px]">
                                 If your organic traffic vanishes or keywords disappear from the SERP, every day you wait is a day of lost revenue.
                             </p>
-                            <Link to="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', color: '#60a5fa', fontWeight: '600', textDecoration: 'none', fontSize: '18px' }}>
+                            <Link to="/contact" className="inline-flex items-center gap-2.5 text-[#60a5fa] font-bold no-underline text-[18px] transition-all hover:gap-4">
                                 Get a Free Analysis <ArrowRight size={20} />
                             </Link>
                         </div>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             {signs.map((sign, i) => (
-                                <div key={i} style={{ padding: '24px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '15px' }}>
-                                    <AlertTriangle size={24} style={{ color: '#f59e0b', marginBottom: '15px' }} />
-                                    <p style={{ fontSize: '16px', fontWeight: '600', color: '#fff', margin: 0 }}>{sign}</p>
+                                <div key={i} className="p-6 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-[20px] transition-all duration-300 hover:bg-[rgba(255,255,255,0.1)]">
+                                    <AlertTriangle size={24} className="text-[#f59e0b] mb-4" />
+                                    <p className="text-base font-bold text-white m-0 leading-[1.4]">{sign}</p>
                                 </div>
                             ))}
                         </div>
@@ -279,12 +231,12 @@ const GooglePenaltyRecovery = () => {
             </section>
 
             {/* Working Approach Comparison */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-20 bg-white">
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '60px', color: '#0f172a' }}>
+                    <h2 className="text-[42px] font-bold mb-[60px] text-[#0f172a]">
                         What Makes Our Recovery Approach Different?
                     </h2>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
+                    <div className="flex flex-wrap justify-center gap-5">
                         {[
                             "AI-driven SERP evolution analysis",
                             "Entity-based SEO cleanup",
@@ -293,57 +245,58 @@ const GooglePenaltyRecovery = () => {
                             "Core Web Vitals compliance",
                             "E-E-A-T reinforcement"
                         ].map((item, i) => (
-                            <div key={i} style={{ padding: '15px 30px', background: '#f8fafc', borderRadius: '50px', border: '1px solid #e2e8f0', fontWeight: '600', color: '#0f172a' }}>
+                            <div key={i} className="py-4 px-8 bg-[#f8fafc] rounded-full border border-[#e2e8f0] font-bold text-[#0f172a] shadow-sm transition-all hover:border-[#0066cc] hover:text-[#0066cc] cursor-default">
                                 ✔ {item}
                             </div>
                         ))}
                     </div>
-                    <p style={{ marginTop: '50px', fontSize: '20px', color: '#64748b', maxWidth: '900px', margin: '50px auto 0' }}>
-                        Adkryoss managed by Clink Consultancy Services Private Limited doesn't just fix penalties temporarily. We build <strong>algorithm-proof digital ecosystems</strong>.
+                    <p className="mt-[50px] text-[20px] text-[#64748b] max-w-[900px] mx-auto leading-relaxed">
+                        Adkryoss managed by Clink Consultancy Services Private Limited doesn't just fix penalties temporarily. We build <strong className="text-[#0f172a]">algorithm-proof digital ecosystems</strong>.
                     </p>
                 </div>
             </section>
 
             {/* Expected Timeline */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
+            <section className="py-20 bg-[#f8fafc]">
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '50px', color: '#0f172a' }}>Recovery Timeline</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-                        <div style={{ padding: '40px', background: '#fff', borderRadius: '24px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
-                            <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#0066cc', marginBottom: '15px' }}>Minor Algorithmic Issue</h3>
-                            <p style={{ fontSize: '32px', fontWeight: '700', color: '#0f172a', marginBottom: '10px' }}>4–8 Weeks</p>
-                            <p style={{ color: '#64748b' }}>Focused cleanup and quality improvement.</p>
+                    <h2 className="text-[42px] font-bold mb-[50px] text-[#0f172a]">Recovery Timeline</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
+                        <div className="p-10 bg-white rounded-[24px] shadow-[0_4px_6px_rgba(0,0,0,0.05)] border border-transparent transition-all hover:border-[#0066cc]/20">
+                            <h3 className="text-[20px] font-bold text-[#0066cc] mb-4">Minor Algorithmic Issue</h3>
+                            <p className="text-[32px] font-bold text-[#0f172a] mb-2.5">4–8 Weeks</p>
+                            <p className="text-[#64748b] leading-relaxed">Focused cleanup and quality improvement.</p>
                         </div>
-                        <div style={{ padding: '40px', background: '#fff', borderRadius: '24px', border: '2px solid #0066cc' }}>
-                            <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#0066cc', marginBottom: '15px' }}>Manual Action</h3>
-                            <p style={{ fontSize: '32px', fontWeight: '700', color: '#0f172a', marginBottom: '10px' }}>2–4 Months</p>
-                            <p style={{ color: '#64748b' }}>Outreach, cleanup, and reconsideration process.</p>
+                        <div className="p-10 bg-white rounded-[24px] border-2 border-[#0066cc] shadow-xl shadow-blue-900/5 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 bg-[#0066cc] text-white text-[10px] px-3 py-1 font-bold uppercase tracking-widest">Crucial</div>
+                            <h3 className="text-[20px] font-bold text-[#0066cc] mb-4">Manual Action</h3>
+                            <p className="text-[32px] font-bold text-[#0f172a] mb-2.5">2–4 Months</p>
+                            <p className="text-[#64748b] leading-relaxed">Outreach, cleanup, and reconsideration process.</p>
                         </div>
-                        <div style={{ padding: '40px', background: '#fff', borderRadius: '24px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
-                            <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#0066cc', marginBottom: '15px' }}>Severe Link Penalty</h3>
-                            <p style={{ fontSize: '32px', fontWeight: '700', color: '#0f172a', marginBottom: '10px' }}>3–6 Months</p>
-                            <p style={{ color: '#64748b' }}>Extensive forensic link audit and authority rebuilding.</p>
+                        <div className="p-10 bg-white rounded-[24px] shadow-[0_4px_6px_rgba(0,0,0,0.05)] border border-transparent transition-all hover:border-[#0066cc]/20">
+                            <h3 className="text-[20px] font-bold text-[#0066cc] mb-4">Severe Link Penalty</h3>
+                            <p className="text-[32px] font-bold text-[#0f172a] mb-2.5">3–6 Months</p>
+                            <p className="text-[#64748b] leading-relaxed">Extensive forensic link audit and authority rebuilding.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* FAQ Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-20 bg-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>Recovery Intelligence (FAQs)</h2>
-                    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">Recovery Intelligence (FAQs)</h2>
+                    <div className="max-w-[900px] mx-auto space-y-6">
                         {[
                             { q: "How do I know if I've been penalized?", a: "Check Google Search Console for 'Manual Actions' and analyze traffic drop patterns aligned with known algorithm updates." },
                             { q: "Can you guarantee recovery?", a: "Ethical SEO cannot promise instant restoration, but a structured forensic cleanup significantly improves recovery probability and search trust." },
                             { q: "Will rankings return to previous levels?", a: "With correct authority rebuilding and compliance, many sites regain and eventually exceed their past performance." },
                             { q: "Should I disavow all backlinks?", a: "No. Only toxic, manipulative, or paid links should be disavowed after a careful forensic link audit." }
                         ].map((faq, i) => (
-                            <div key={i} style={{ marginBottom: '24px', padding: '30px', background: '#f8fafc', borderRadius: '20px', border: '1px solid #e2e8f0' }}>
-                                <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#0f172a', marginBottom: '10px', display: 'flex', gap: '10px' }}>
-                                    <HelpCircle size={20} className="text-blue-500" /> {faq.q}
+                            <div key={i} className="p-[30px] bg-[#f8fafc] rounded-[24px] border border-[#e2e8f0] transition-all hover:border-[#0066cc]/30 shadow-sm">
+                                <h3 className="text-[18px] font-bold text-[#0f172a] mb-3 flex gap-3">
+                                    <HelpCircle size={22} className="text-[#0066cc] shrink-0" /> {faq.q}
                                 </h3>
-                                <p style={{ fontSize: '16px', color: '#475569', lineHeight: '1.7', margin: 0 }}>{faq.a}</p>
+                                <p className="text-base text-[#475569] leading-[1.7] m-0 pl-[34px]">{faq.a}</p>
                             </div>
                         ))}
                     </div>
@@ -351,30 +304,15 @@ const GooglePenaltyRecovery = () => {
             </section>
 
             {/* Final CTA */}
-            <section style={{ padding: '100px 0', textAlign: 'center', background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', color: '#fff' }}>
+            <section className="py-24 text-center bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '56px', fontWeight: '700', color: '#fff', marginBottom: '24px' }}>
+                    <h2 className="text-[56px] font-bold text-white mb-6 leading-tight">
                         Ready to Take Control of Your Rankings?
                     </h2>
-                    <p style={{ fontSize: '22px', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', color: '#eff6ff' }}>
+                    <p className="text-[22px] mb-12 max-w-[800px] mx-auto text-[#eff6ff] opacity-90 leading-relaxed">
                         A penalty is a setback — not a failure. The faster you respond, the stronger your recovery. Request a comprehensive penalty audit today.
                     </p>
-                    <Link to="/contact" style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '12px',
-                        background: '#0066cc',
-                        color: '#fff',
-                        padding: '20px 60px',
-                        borderRadius: '50px',
-                        fontSize: '20px',
-                        fontWeight: '700',
-                        textDecoration: 'none',
-                        transition: 'all 0.3s',
-                        boxShadow: '0 10px 40px rgba(0,0,0,0.3)'
-                    }}
-                        onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px) scale(1.05)'}
-                        onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0) scale(1)'}>
+                    <Link to="/contact" className="inline-flex items-center gap-3.5 bg-[#0066cc] text-white py-5 px-[60px] rounded-full text-[20px] font-bold no-underline transition-all duration-300 shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:-translate-y-1.5 hover:scale-[1.05] hover:shadow-[#0066cc]/40">
                         Start Your Recovery Now
                         <ArrowRight size={22} />
                     </Link>

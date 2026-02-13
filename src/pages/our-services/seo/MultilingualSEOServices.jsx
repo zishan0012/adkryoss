@@ -109,40 +109,30 @@ const MultilingualSEOServices = () => {
     ];
 
     return (
-        <div>
+        <div className="bg-white">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
                 style={{
-                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-                    color: '#fff',
-                    position: 'relative',
-                    overflow: 'hidden'
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.05, pointerEvents: 'none', background: 'url("https://www.transparenttextures.com/patterns/world-map.png")' }}></div>
-                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                <div className="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/world-map.png')]"></div>
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                    <div className="text-left relative z-10 text-white">
+                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
                             Multilingual SEO Services
                         </h1>
-                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
-                            Expand Beyond Borders. Rank in Every Language.
+                        <h3 className="text-[24px] font-medium mb-6 text-white">
+                            Global Reach. Local Trust. Multilingual Search Dominance.
                         </h3>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
+                        <p className="text-[18px] leading-[1.8] text-white mb-8">
                             Your audience is no longer limited by geography. They search in their native language, expect localized experiences, and trust brands that speak to them naturally.
                         </p>
-                        <div style={{
-                            background: 'rgba(255,255,255,0.05)',
-                            padding: '24px',
-                            borderRadius: '20px',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            backdropFilter: 'blur(10px)',
-                            marginBottom: '32px'
-                        }}>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span> delivers powerful multilingual SEO frameworks that help businesses rank across countries, languages, and search engines.
+                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-8">
+                            <p className="text-[18px] leading-[1.8] text-white m-0">
+                                At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we deliver powerful multilingual SEO frameworks that help businesses rank across countries, languages, and search engines.
                             </p>
                         </div>
                     </div>
@@ -151,34 +141,24 @@ const MultilingualSEOServices = () => {
                         <img
                             src="https://www.techmagnate.com/wp-content/uploads/2026/01/Multilingual-SEO.webp"
                             alt="Multilingual SEO"
-                            style={{
-                                maxWidth: '450px',
-                                width: '100%',
-                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
-                            }}
+                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
             </section>
 
             {/* Why Multilingual SEO */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-20 bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '30px', color: '#0f172a' }}>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
                             Why Multilingual SEO is a Growth Multiplier
                         </h2>
-                        <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.8', maxWidth: '900px', margin: '0 auto' }}>
+                        <p className="text-[18px] text-[#475569] leading-[1.8] max-w-[900px] mx-auto">
                             Global users don’t just translate keywords — they search differently. Search intent varies by culture, phrasing differs by region, and even buying behavior shifts across markets.
                         </p>
                     </div>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '20px',
-                        marginBottom: '60px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-5 mb-[60px]">
                         {[
                             "Higher visibility in international SERPs",
                             "Improved regional organic traffic",
@@ -186,36 +166,14 @@ const MultilingualSEOServices = () => {
                             "Stronger brand credibility in local markets",
                             "Sustainable global expansion"
                         ].map((benefit, i) => (
-                            <div key={i} style={{
-                                padding: '24px',
-                                background: '#eff6ff',
-                                borderRadius: '15px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '15px',
-                                width: 'calc(33.333% - 14px)',
-                                minWidth: '280px',
-                                flexGrow: 1,
-                                maxWidth: '350px',
-                                transition: 'all 0.3s'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-5px)';
-                                    e.currentTarget.style.background = '#0066cc';
-                                    e.currentTarget.style.color = '#fff';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.background = '#eff6ff';
-                                    e.currentTarget.style.color = '#0f172a';
-                                }}>
-                                <CheckCircle2 size={24} />
-                                <span style={{ fontWeight: '600' }}>{benefit}</span>
+                            <div key={i} className="p-6 bg-[#eff6ff] rounded-[15px] flex items-center gap-[15px] w-[calc(33.333%-14px)] min-w-[280px] grow max-w-[350px] transition-all duration-300 hover:-translate-y-1.5 hover:bg-[#0066cc] hover:text-white group">
+                                <CheckCircle2 size={24} className="text-[#0066cc] group-hover:text-white" />
+                                <span className="font-bold">{benefit}</span>
                             </div>
                         ))}
                     </div>
-                    <div style={{ textAlign: 'center' }}>
-                        <p style={{ fontSize: '20px', fontWeight: '600', color: '#0066cc' }}>
+                    <div className="text-center">
+                        <p className="text-[20px] font-bold text-[#0066cc]">
                             This isn’t translation. This is strategic localization powered by data.
                         </p>
                     </div>
@@ -223,57 +181,30 @@ const MultilingualSEOServices = () => {
             </section>
 
             {/* Approach Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
+            <section className="py-20 bg-[#f8fafc]">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
+                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">
                         Our Multilingual SEO Approach
                     </h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '30px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-[30px]">
                         {approach.map((item, i) => (
-                            <div key={i} style={{
-                                background: '#fff',
-                                padding: '40px',
-                                borderRadius: '24px',
-                                border: '1px solid #e2e8f0',
-                                width: 'calc(33.333% - 20px)',
-                                minWidth: '320px',
-                                flexGrow: 1,
-                                maxWidth: '400px',
-                                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                cursor: 'pointer',
-                                boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 102, 204, 0.1)';
-                                    e.currentTarget.style.borderColor = '#0066cc';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                    e.currentTarget.style.boxShadow = '0 1px 3px 0 rgba(0, 0, 0, 0.1)';
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                }}>
-                                <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '15px', color: '#0f172a' }}>
+                            <div key={i} className="bg-white p-10 rounded-[24px] border border-[#e2e8f0] w-[calc(33.333%-20px)] min-w-[320px] grow max-w-[400px] transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
+                                <div className="text-[#0066cc] mb-5">{item.icon}</div>
+                                <h3 className="text-[22px] font-bold mb-[15px] text-[#0f172a]">
                                     {i + 1}. {item.title}
                                 </h3>
-                                <p style={{ fontSize: '15px', color: '#475569', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
-                                <ul style={{ listStyle: 'none', padding: 0, marginBottom: '20px' }}>
+                                <p className="text-[15px] text-[#475569] mb-5 leading-[1.6]">{item.desc}</p>
+                                <ul className="list-none p-0 mb-5 space-y-4">
                                     {item.points.map((pt, idx) => (
-                                        <li key={idx} style={{ display: 'flex', gap: '10px', marginBottom: '20px', fontSize: '14px', color: '#334155' }}>
-                                            <div style={{ width: '6px', height: '6px', background: '#0066cc', borderRadius: '50%', marginTop: '8px', flexShrink: 0 }}></div>
+                                        <li key={idx} className="flex gap-2.5 text-[14px] text-[#334155] leading-[1.6]">
+                                            <div className="w-1.5 h-1.5 bg-[#0066cc] rounded-full mt-2 shrink-0"></div>
                                             {pt}
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ fontSize: '14px', color: '#0066cc', fontWeight: '500', padding: '15px', background: '#eff6ff', borderRadius: '12px', margin: 0 }}>
+                                <div className="text-[14px] text-[#0066cc] font-bold p-[15px] bg-[#eff6ff] rounded-[12px]">
                                     {item.extra}
-                                </p>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -281,50 +212,27 @@ const MultilingualSEOServices = () => {
             </section>
 
             {/* Who Needs Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-20 bg-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>Who Needs Multilingual SEO?</h2>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '15px' }}>
+                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">Who Needs Multilingual SEO?</h2>
+                    <div className="flex flex-wrap justify-center gap-[15px]">
                         {needsMultilingual.map((need, i) => (
-                            <div key={i} style={{
-                                padding: '15px 35px',
-                                background: '#eff6ff',
-                                color: '#0f172a',
-                                borderRadius: '50px',
-                                fontWeight: '600',
-                                border: '1px solid #e2e8f0',
-                                transition: 'all 0.3s'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = '#0066cc';
-                                    e.currentTarget.style.color = '#fff';
-                                    e.currentTarget.style.transform = 'scale(1.05)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = '#eff6ff';
-                                    e.currentTarget.style.color = '#0f172a';
-                                    e.currentTarget.style.transform = 'scale(1)';
-                                }}>
+                            <div key={i} className="py-4 px-10 bg-[#eff6ff] text-[#0f172a] rounded-full font-bold border border-[#e2e8f0] transition-all duration-300 hover:bg-[#0066cc] hover:text-white hover:scale-105 cursor-default">
                                 {need}
                             </div>
                         ))}
                     </div>
-                    <p style={{ textAlign: 'center', marginTop: '40px', fontSize: '18px', color: '#475569', fontWeight: '500' }}>
+                    <p className="text-center mt-10 text-[18px] text-[#475569] font-bold italic">
                         If your audience speaks more than one language, your SEO strategy should too.
                     </p>
                 </div>
             </section>
 
-            {/* Why Choose Our Multilingual SEO Services? */}
-            <section style={{ padding: '80px 0', backgroundColor: '#0f172a', color: '#fff' }}>
+            {/* Why Choose Section */}
+            <section className="py-20 bg-[#0f172a] text-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', textAlign: 'center', marginBottom: '60px', color: '#fff' }}>Why Choose Our Multilingual SEO Services?</h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '20px'
-                    }}>
+                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-white">Why Choose Our Multilingual SEO Services?</h2>
+                    <div className="flex flex-wrap justify-center gap-5">
                         {[
                             "Data-driven international strategy",
                             "Native-language SEO specialists",
@@ -333,21 +241,9 @@ const MultilingualSEOServices = () => {
                             "Conversion-first content localization",
                             "Transparent performance tracking"
                         ].map((item, i) => (
-                            <div key={i} style={{
-                                padding: '24px 30px',
-                                background: 'rgba(255,255,255,0.05)',
-                                borderRadius: '15px',
-                                border: '1px solid rgba(255,255,255,0.1)',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '15px',
-                                width: 'calc(33.333% - 14px)',
-                                minWidth: '300px',
-                                flexGrow: 1,
-                                maxWidth: '380px'
-                            }}>
-                                <CheckCircle2 size={24} style={{ color: '#0066cc' }} />
-                                <span style={{ fontWeight: '600', fontSize: '16px' }}>{item}</span>
+                            <div key={i} className="p-6 bg-white/5 rounded-[15px] border border-white/10 flex items-center gap-[15px] w-[calc(33.333%-14px)] min-w-[300px] grow max-w-[380px] transition-all duration-300 hover:bg-[#0066cc]/20 hover:border-[#0066cc]">
+                                <CheckCircle2 size={24} className="text-[#0066cc]" />
+                                <span className="font-bold text-[16px]">{item}</span>
                             </div>
                         ))}
                     </div>
@@ -355,58 +251,35 @@ const MultilingualSEOServices = () => {
             </section>
 
             {/* Working Model */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-20 bg-white">
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '60px', color: '#0f172a' }}>Our Working Model</h2>
-                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
+                    <h2 className="text-[42px] font-bold mb-[60px] text-[#0f172a]">Our Working Model</h2>
+                    <div className="flex justify-center items-center flex-wrap gap-5">
                         {["Discover", "Strategize", "Localize", "Optimize", "Scale"].map((step, i) => (
                             <React.Fragment key={i}>
-                                <div style={{
-                                    padding: '25px 45px',
-                                    background: '#0066cc',
-                                    color: '#fff',
-                                    borderRadius: '12px',
-                                    fontWeight: '700',
-                                    fontSize: '20px',
-                                    boxShadow: '0 10px 20px rgba(0, 102, 204, 0.2)'
-                                }}>
+                                <div className="py-6 px-12 bg-[#0066cc] text-white rounded-[12px] font-bold text-[20px] shadow-[0_10px_20px_rgba(0,102,204,0.2)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(0,102,204,0.3)]">
                                     {step}
                                 </div>
-                                {i < 4 && <ArrowRight size={30} style={{ color: '#0066cc', opacity: 0.5 }} />}
+                                {i < 4 && <ArrowRight size={30} className="text-[#0066cc] opacity-50 hidden md:block" />}
                             </React.Fragment>
                         ))}
                     </div>
-                    <p style={{ maxWidth: '900px', margin: '50px auto 0', fontSize: '18px', color: '#4b5563', lineHeight: '1.8' }}>
+                    <p className="max-w-[900px] mx-auto mt-[50px] text-[18px] text-[#475569] leading-[1.8]">
                         We begin with market understanding, implement structured multilingual SEO systems, optimize continuously, and scale performance based on real-time data. This ensures your brand ranks globally — without losing local relevance.
                     </p>
                 </div>
             </section>
 
             {/* Final CTA */}
-            <section style={{ padding: '100px 0', textAlign: 'center', background: 'linear-gradient(135deg, #0066cc 0%, #004e92 100%)', color: '#fff' }}>
+            <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '24px', color: '#fff' }}>
+                    <h2 className="text-[48px] font-bold mb-6 text-white leading-tight">
                         Ready to Go Global?
                     </h2>
-                    <p style={{ fontSize: '22px', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', color: '#eff6ff' }}>
+                    <p className="text-[22px] mb-10 max-w-[800px] mx-auto text-[#eff6ff] opacity-90 leading-relaxed">
                         Your next customer may not speak your language — but your website should speak theirs. Let’s build a multilingual SEO strategy that expands your reach and increases international traffic.
                     </p>
-                    <Link to="/contact" style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '12px',
-                        background: '#fff',
-                        color: '#0066cc',
-                        padding: '20px 50px',
-                        borderRadius: '50px',
-                        fontSize: '18px',
-                        fontWeight: '700',
-                        textDecoration: 'none',
-                        transition: 'all 0.3s',
-                        boxShadow: '0 10px 30px rgba(0,0,0,0.3)'
-                    }}
-                        onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px) scale(1.05)'}
-                        onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0) scale(1)'}>
+                    <Link to="/contact" className="inline-flex items-center gap-3.5 bg-white text-[#0066cc] py-5 px-12 rounded-full text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1.5 hover:scale-[1.05] hover:shadow-white/20">
                         Connect With Us Today
                         <ArrowRight size={20} />
                     </Link>

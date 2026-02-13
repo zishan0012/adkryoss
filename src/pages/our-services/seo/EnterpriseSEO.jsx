@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
     Globe,
     Search,
@@ -131,35 +132,25 @@ const EnterpriseSEO = () => {
         <div style={{ backgroundColor: '#fff' }}>
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                className="bg-cover bg-center bg-no-repeat py-24 md:py-32 flex items-center relative overflow-hidden text-white"
                 style={{
-                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-                    color: '#fff',
-                    position: 'relative',
-                    overflow: 'hidden'
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
-                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    <div className="text-left relative z-10 text-white">
+                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
                             Enterprise SEO Services
                         </h1>
-                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
-                            Scale Rankings. Accelerate Revenue. Dominate Your Category.
+                        <h3 className="text-[24px] font-medium mb-6 text-white">
+                            SEO for the Complex. Scalability for the Ambitious.
                         </h3>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
+                        <p className="text-[18px] leading-[1.8] text-white mb-[32px]">
                             Enterprise SEO turns complex websites into scalable growth engines. We build data-driven strategies that help enterprises win visibility across thousands of keywords, markets, and product categories.
                         </p>
-                        <div style={{
-                            background: 'rgba(255,255,255,0.05)',
-                            padding: '24px',
-                            borderRadius: '20px',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            backdropFilter: 'blur(10px)',
-                            marginBottom: '32px'
-                        }}>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span>, we blend technical expertise, automation, and AI-led insights to drive measurable revenue growth.
+                        <div className="bg-[rgba(255,255,255,0.05)] p-[24px] rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-[32px]">
+                            <p className="text-[18px] leading-[1.8] text-white m-0">
+                                At Adkryoss managed by <span className="font-bold text-black">Clink Consultancy Services Private Limited</span>, we blend technical expertise, automation, and AI-led insights to drive measurable revenue growth.
                             </p>
                         </div>
                     </div>
@@ -167,24 +158,20 @@ const EnterpriseSEO = () => {
                         <img
                             src="https://www.techmagnate.com/wp-content/uploads/2026/01/Enterprise-SEO.webp"
                             alt="Enterprise SEO Services"
-                            style={{
-                                maxWidth: '500px',
-                                width: '100%',
-                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
-                            }}
+                            className="max-w-[500px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
             </section>
 
             {/* Why Enterprise Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-[100px] bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">
                             Why Enterprise SEO Demands a Different Approach
                         </h2>
-                        <p style={{ fontSize: '20px', color: '#666', maxWidth: '850px', margin: '0 auto' }}>
+                        <p className="text-[20px] text-[#666] max-w-[850px] mx-auto">
                             Large organizations face challenges that traditional SEO agencies simply cannot handle. We approach enterprise SEO as a business transformation initiative.
                         </p>
                     </div>
@@ -199,23 +186,23 @@ const EnterpriseSEO = () => {
                                 "Frequent algorithm volatility & search shifts",
                                 "Brand reputation & compliance sensitivity"
                             ].map((item, i) => (
-                                <div key={i} style={{ display: 'flex', gap: '15px', alignItems: 'center', background: '#f8f9fa', padding: '20px', borderRadius: '12px', border: '1px solid #eee' }}>
-                                    <div style={{ background: '#0066cc', color: '#fff', padding: '4px', borderRadius: '50%' }}>
+                                <div key={i} className="flex gap-[15px] items-center bg-[#f8f9fa] p-[20px] rounded-[12px] border border-[#eee]">
+                                    <div className="bg-[#0066cc] text-white p-1 rounded-full">
                                         <CheckCircle2 size={16} />
                                     </div>
-                                    <span style={{ fontSize: '16px', fontWeight: '500', color: '#1a1a1a' }}>{item}</span>
+                                    <span className="text-[16px] font-medium text-[#1a1a1a]">{item}</span>
                                 </div>
                             ))}
                         </div>
-                        <div style={{ background: '#0f172a', color: '#fff', padding: '50px', borderRadius: '40px', position: 'relative', overflow: 'hidden' }}>
-                            <div style={{ position: 'relative', zIndex: 1 }}>
+                        <div className="bg-[#0f172a] text-white p-[50px] rounded-[40px] relative overflow-hidden">
+                            <div className="relative z-10">
                                 <TrendingUp size={48} className="text-blue-500 mb-6" />
-                                <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px' }}>Strategic Integration</h3>
-                                <p style={{ fontSize: '18px', opacity: 0.8, lineHeight: '1.8', color: '#fff' }}>
+                                <h3 className="text-[28px] font-semibold mb-[24px]">Strategic Integration</h3>
+                                <p className="text-[18px] opacity-80 leading-[1.8] text-white">
                                     We don't just optimize for bots. We integrate SEO with your technology, content, analytics, and CRO teams to build a sustainable visibility engine that drives business value.
                                 </p>
                             </div>
-                            <div style={{ position: 'absolute', bottom: '-20px', right: '-20px', opacity: 0.1 }}>
+                            <div className="absolute -bottom-[20px] -right-[20px] opacity-10">
                                 <Globe size={200} />
                             </div>
                         </div>
@@ -224,78 +211,46 @@ const EnterpriseSEO = () => {
             </section>
 
             {/* Framework Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#f1f5f9' }}>
+            <section className="py-[100px] bg-[#f1f5f9]">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">
                             Our Enterprise SEO Framework
                         </h2>
-                        <p style={{ fontSize: '20px', color: '#666' }}>
+                        <p className="text-[20px] text-[#666]">
                             Structured for performance, built for scale.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {enterpriseFramework.map((item, i) => (
-                            <div key={i} style={{
-                                background: '#fff',
-                                padding: '40px',
-                                borderRadius: '24px',
-                                transition: 'all 0.3s',
-                                border: '1px solid #e2e8f0'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-10px)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,102,204,0.1)';
-                                    e.currentTarget.style.borderColor = '#0066cc';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                }}>
-                                <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
-                                <p style={{ color: '#666', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
-                                <ul style={{ listStyle: 'none', padding: 0, marginTop: '20px' }}>
+                            <div key={i} className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
+                                <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
+                                <h3 className="text-[24px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
+                                <p className="text-[#666] mb-[20px] leading-[1.6]">{item.desc}</p>
+                                <ul className="list-none p-0 mt-[20px]">
                                     {item.points.map((p, j) => (
-                                        <li key={j} style={{ display: 'flex', gap: '8px', marginBottom: '10px', color: '#444', fontSize: '15px' }}>
-                                            <div style={{ color: '#0066cc', marginTop: '4px' }}><CheckCircle2 size={14} /></div>
+                                        <li key={j} className="flex gap-[8px] mb-[10px] text-[#444] text-[15px]">
+                                            <div className="text-[#0066cc] mt-[4px]"><CheckCircle2 size={14} /></div>
                                             {p}
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ fontSize: '14px', fontWeight: '500', color: '#0066cc', marginTop: '20px' }}>{item.extra}</p>
+                                <p className="text-[14px] font-medium text-[#0066cc] mt-[20px]">{item.extra}</p>
                             </div>
                         ))}
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8 mt-8">
                         {additionalFramework.map((item, i) => (
-                            <div key={i} style={{
-                                background: '#fff',
-                                padding: '40px',
-                                borderRadius: '24px',
-                                transition: 'all 0.3s',
-                                border: '1px solid #e2e8f0'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-10px)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,102,204,0.1)';
-                                    e.currentTarget.style.borderColor = '#0066cc';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                }}>
-                                <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
-                                <p style={{ color: '#666', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
-                                <ul style={{ listStyle: 'none', padding: 0 }}>
+                            <div key={i} className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
+                                <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
+                                <h3 className="text-[24px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
+                                <p className="text-[#666] mb-[20px] leading-[1.6]">{item.desc}</p>
+                                <ul className="list-none p-0">
                                     {item.points.map((p, j) => (
-                                        <li key={j} style={{ display: 'flex', gap: '8px', marginBottom: '10px', color: '#444', fontSize: '15px' }}>
-                                            <div style={{ color: '#0066cc', marginTop: '4px' }}><CheckCircle2 size={14} /></div>
+                                        <li key={j} className="flex gap-[8px] mb-[10px] text-[#444] text-[15px]">
+                                            <div className="text-[#0066cc] mt-[4px]"><CheckCircle2 size={14} /></div>
                                             {p}
                                         </li>
                                     ))}
@@ -307,25 +262,15 @@ const EnterpriseSEO = () => {
             </section>
 
             {/* Solutions Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-[100px] bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>Enterprise SEO Solutions We Offer</h2>
-                        <p style={{ fontSize: '20px', color: '#666' }}>Tailored strategies for your industry dynamics and growth stage.</p>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">Enterprise SEO Solutions We Offer</h2>
+                        <p className="text-[20px] text-[#666]">Tailored strategies for your industry dynamics and growth stage.</p>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-4">
+                    <div className="flex flex-wrap justify-center gap-[16px]">
                         {solutionsOffered.map((sol, i) => (
-                            <div key={i} style={{ padding: '20px 40px', background: '#f8f9fa', borderRadius: '50px', border: '1px solid #eee', fontSize: '18px', fontWeight: '600', color: '#1a1a1a', transition: 'all 0.3s', cursor: 'pointer' }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = '#0066cc';
-                                    e.currentTarget.style.color = '#fff';
-                                    e.currentTarget.style.borderColor = '#0066cc';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = '#f8f9fa';
-                                    e.currentTarget.style.color = '#1a1a1a';
-                                    e.currentTarget.style.borderColor = '#eee';
-                                }}>
+                            <div key={i} className="py-[20px] px-[40px] bg-[#f8f9fa] rounded-[50px] border border-[#eee] text-[18px] font-semibold text-[#1a1a1a] transition-all duration-300 cursor-pointer hover:bg-[#0066cc] hover:text-white hover:border-[#0066cc]">
                                 {sol}
                             </div>
                         ))}
@@ -334,10 +279,10 @@ const EnterpriseSEO = () => {
             </section>
 
             {/* Differentiators */}
-            <section style={{ padding: '100px 0', backgroundColor: '#0f172a', color: '#fff' }}>
+            <section className="py-[100px] bg-[#0f172a] text-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>What Makes Our Enterprise SEO Different?</h2>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-semibold mb-[20px] text-white">What Makes Our Enterprise SEO Different?</h2>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
@@ -348,10 +293,10 @@ const EnterpriseSEO = () => {
                             { t: "Transparent Intelligence", d: "Clear, business-driven metrics and predictive growth modeling.", i: <BarChart3 size={32} /> },
                             { t: "Regulatory Alignment", d: "We ensure compliance with healthcare, finance, or brand standards.", i: <Shield size={32} /> }
                         ].map((item, i) => (
-                            <div key={i} style={{ padding: '40px', background: 'rgba(255,255,255,0.05)', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                            <div key={i} className="p-[40px] bg-[rgba(255,255,255,0.05)] rounded-[24px] border border-[rgba(255,255,255,0.1)]">
                                 <div className="text-blue-500 mb-6">{item.i}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '600', marginBottom: '15px', color: '#fff' }}>{item.t}</h3>
-                                <p style={{ color: '#e2e8f0', lineHeight: '1.7' }}>{item.d}</p>
+                                <h3 className="text-[22px] font-semibold mb-[15px] text-white">{item.t}</h3>
+                                <p className="text-[#e2e8f0] leading-[1.7]">{item.d}</p>
                             </div>
                         ))}
                     </div>
@@ -359,24 +304,18 @@ const EnterpriseSEO = () => {
             </section>
 
             {/* Working Model */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-[100px] bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>Our Working Model</h2>
-                        <p style={{ fontSize: '20px', color: '#666' }}>Operating as an extended enterprise growth partner.</p>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-bold text-[#1a1a1a] mb-[20px]">Our Working Model</h2>
+                        <p className="text-[20px] text-[#666]">Operating as an extended enterprise growth partner.</p>
                     </div>
-                    <div className="grid md:grid-cols-5 gap-6">
+                    <div className="grid md:grid-cols-5 gap-[24px]">
                         {workingModel.map((item, i) => (
-                            <div key={i} style={{
-                                background: '#f8f9fa',
-                                padding: '30px',
-                                borderRadius: '24px',
-                                textAlign: 'center',
-                                border: '1px solid #eee',
-                            }}>
-                                <div style={{ fontSize: '32px', fontWeight: '700', color: 'rgba(0,102,204,0.1)', marginBottom: '10px' }}>{item.step}</div>
-                                <h4 style={{ fontSize: '20px', fontWeight: '600', color: '#1a1a1a', marginBottom: '10px' }}>{item.title}</h4>
-                                <p style={{ fontSize: '14px', color: '#666', lineHeight: '1.6' }}>{item.desc}</p>
+                            <div key={i} className="bg-[#f8f9fa] p-[30px] rounded-[24px] text-center border border-[#eee]">
+                                <div className="text-[32px] font-bold text-[rgba(0,102,204,0.1)] mb-[10px]">{item.step}</div>
+                                <h4 className="text-[20px] font-semibold text-[#1a1a1a] mb-[10px]">{item.title}</h4>
+                                <p className="text-[14px] text-[#666] leading-[1.6]">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -384,12 +323,12 @@ const EnterpriseSEO = () => {
             </section>
 
             {/* Industries */}
-            <section style={{ padding: '100px 0', backgroundColor: '#f1f5f9' }}>
+            <section className="py-[100px] bg-[#f1f5f9]">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>Industries We Empower</h2>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-bold text-[#1a1a1a] mb-[20px]">Industries We Empower</h2>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-[24px]">
                         {[
                             { name: "Ecommerce & Retail", icon: <ShoppingCart size={20} /> },
                             { name: "EdTech & Education", icon: <GraduationCap size={20} /> },
@@ -400,27 +339,9 @@ const EnterpriseSEO = () => {
                             { name: "Corporate Enterprises", icon: <Briefcase size={20} /> },
                             { name: "Global Marketplaces", icon: <Globe size={20} /> }
                         ].map((item, i) => (
-                            <div key={i} style={{
-                                background: '#fff',
-                                padding: '24px 20px',
-                                borderRadius: '20px',
-                                textAlign: 'center',
-                                boxShadow: '0 10px 20px rgba(0,0,0,0.05)',
-                                transition: 'all 0.3s',
-                                border: '1px solid #f1f5f9'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-5px)';
-                                    e.currentTarget.style.borderColor = '#0066cc';
-                                    e.currentTarget.style.boxShadow = '0 15px 30px rgba(0,102,204,0.1)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.borderColor = '#f1f5f9';
-                                    e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)';
-                                }}>
-                                <div style={{ color: '#0066cc', marginBottom: '15px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
-                                <div style={{ fontWeight: '600', color: '#1e293b', fontSize: '15px' }}>{item.name}</div>
+                            <div key={i} className="bg-white p-[24px_20px] rounded-[20px] text-center shadow-[0_10px_20px_rgba(0,0,0,0.05)] transition-all duration-300 border border-[#f1f5f9] hover:-translate-y-[5px] hover:border-[#0066cc] hover:shadow-[0_15px_30px_rgba(0,102,204,0.1)]">
+                                <div className="text-[#0066cc] mb-[15px] flex justify-center">{item.icon}</div>
+                                <div className="font-semibold text-[#1e293b] text-[15px]">{item.name}</div>
                             </div>
                         ))}
                     </div>
@@ -428,11 +349,11 @@ const EnterpriseSEO = () => {
             </section>
 
             {/* Results Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-[100px] bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '30px' }}>Results You Can Expect</h2>
+                            <h2 className="text-[42px] font-bold text-[#1a1a1a] mb-[30px]">Results You Can Expect</h2>
                             <div className="space-y-6">
                                 {[
                                     "Increased organic visibility across thousands of high-value keywords",
@@ -442,19 +363,19 @@ const EnterpriseSEO = () => {
                                     "Stronger conversion rates through category-level optimization",
                                     "Long-term search dominance in your industry segment"
                                 ].map((res, i) => (
-                                    <div key={i} style={{ display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
-                                        <div style={{ background: '#e0f2fe', color: '#0369a1', padding: '4px', borderRadius: '5px', marginTop: '4px' }}>
+                                    <div key={i} className="flex gap-[15px] items-start">
+                                        <div className="bg-[#e0f2fe] text-[#0369a1] p-1 rounded-[5px] mt-[4px]">
                                             <TrendingUp size={18} />
                                         </div>
-                                        <p style={{ fontSize: '17px', color: '#334155', fontWeight: '500', margin: 0 }}>{res}</p>
+                                        <p className="text-[17px] text-[#334155] font-medium m-0">{res}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', padding: '60px', borderRadius: '40px', color: '#fff', textAlign: 'center' }}>
+                        <div className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] p-[60px] rounded-[40px] text-white text-center">
                             <PieChart size={64} className="text-blue-500 mb-8 mx-auto" />
-                            <h3 style={{ fontSize: '32px', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>Dominance at Scale</h3>
-                            <p style={{ fontSize: '18px', opacity: 0.8, lineHeight: '1.8', color: '#fff' }}>
+                            <h3 className="text-[32px] font-semibold mb-[20px] text-white">Dominance at Scale</h3>
+                            <p className="text-[18px] opacity-80 leading-[1.8] text-white">
                                 Enterprise SEO is not a campaign — it’s a competitive advantage that builds a wide moat around your digital presence.
                             </p>
                         </div>
@@ -463,17 +384,15 @@ const EnterpriseSEO = () => {
             </section>
 
             {/* CTA */}
-            <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, #0066cc 0%, #004999 100%)', color: '#fff', textAlign: 'center' }}>
+            <section className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>Ready to Lead Your Industry in Search?</h2>
-                    <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 0.9, color: '#fff' }}>
+                    <h2 className="text-[42px] font-semibold mb-[20px] text-white">Ready to Lead Your Industry in Search?</h2>
+                    <p className="text-[20px] mb-[40px] opacity-90 text-white">
                         Partner with Adkryoss managed by Clink Consultancy Services Private Limited to build a scalable search growth engine.
                     </p>
-                    <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#fff', color: '#0066cc', padding: '18px 40px', borderRadius: '50px', fontWeight: '600', textDecoration: 'none', transition: 'all 0.3s' }}
-                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    <Link to="/contact" className="inline-flex items-center gap-[10px] bg-white text-[#0066cc] py-[18px] px-[40px] rounded-[50px] font-semibold no-underline transition-all duration-300 hover:scale-[1.05]">
                         Build Your Enterprise Dominance <ArrowRight size={20} />
-                    </a>
+                    </Link>
                 </div>
             </section>
         </div>

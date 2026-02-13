@@ -65,7 +65,7 @@ const jobs = [
 ];
 
 const Careers = () => {
-   const [expandedIndex, setExpandedIndex] = useState(null);
+
 
 
   return (
@@ -166,7 +166,8 @@ const Careers = () => {
     />
   </div>
 
-</div>
+      <section className="py-14 bg-white">
+        <div className="max-w-5xl mx-auto px-6 text-center">
 
 {/* FINAL STATEMENT - FULL WIDTH BELOW IMAGE */}
 <p className="text-gray-500 mt-16 text-lg font-medium italic text-center max-w-4xl mx-auto">
@@ -375,6 +376,8 @@ const Careers = () => {
   </div>
 </section>
 
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-blue-50 to-white">
+        <div className="max-w-5xl mx-auto px-6 text-center">
 
 <section className="py-12 bg-gradient-to-br from-blue-50 via-white to-blue-50">
   <div className="max-w-[1500px] mx-auto px-8">

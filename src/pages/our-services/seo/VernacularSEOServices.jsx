@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
     Languages,
     Search,
@@ -114,38 +115,28 @@ const VernacularSEOServices = () => {
     ];
 
     return (
-        <div style={{ backgroundColor: '#fff' }}>
+        <div className="bg-white text-slate-900">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
                 style={{
-                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-                    color: '#fff',
-                    position: 'relative',
-                    overflow: 'hidden'
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
-                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    <div className="text-left relative z-10 text-white">
+                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
                             Vernacular SEO Services
                         </h1>
-                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
+                        <h3 className="text-[24px] font-medium mb-6 text-white">
                             India Doesn’t Search in One Language. We Help You Rank in All of Them.
                         </h3>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
+                        <p className="text-[18px] leading-[1.8] text-white mb-8">
                             India’s digital growth is happening beyond English. From Hindi and Tamil to Bengali, Marathi, Telugu and more — regional language searches are exploding across Google, YouTube, and voice platforms.
                         </p>
-                        <div style={{
-                            background: 'rgba(255,255,255,0.05)',
-                            padding: '24px',
-                            borderRadius: '20px',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            backdropFilter: 'blur(10px)',
-                            marginBottom: '32px'
-                        }}>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span>, we help brands unlock massive untapped regional search demand with precision-driven Vernacular SEO strategies that drive traffic, trust, and transactions.
+                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-8">
+                            <p className="text-[18px] leading-[1.8] text-white m-0">
+                                At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we help brands unlock massive untapped regional search demand with precision-driven Vernacular SEO strategies that drive traffic, trust, and transactions.
                             </p>
                         </div>
                     </div>
@@ -153,90 +144,67 @@ const VernacularSEOServices = () => {
                         <img
                             src="https://www.techmagnate.com/wp-content/uploads/2026/01/Vernacular-SEO.webp"
                             alt="Vernacular SEO Services"
-                            style={{
-                                maxWidth: '500px',
-                                width: '100%',
-                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
-                            }}
+                            className="max-w-[500px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
             </section>
 
             {/* Why Vernacular SEO Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-24 bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
+                    <div className="text-center mb-16">
+                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">
                             Why Vernacular SEO is the Next Growth Engine
                         </h2>
-                        <p style={{ fontSize: '20px', color: '#666', maxWidth: '850px', margin: '0 auto' }}>
+                        <p className="text-[20px] text-slate-600 max-w-[850px] mx-auto leading-relaxed">
                             Over 75% of new internet users in India prefer consuming content in their native language. Regional searches are increasing year after year.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div style={{ background: '#f8f9fa', padding: '50px', borderRadius: '40px', border: '1px solid #eee' }}>
-                            <p style={{ fontSize: '18px', color: '#444', lineHeight: '1.8', marginBottom: '24px' }}>
+                        <div className="bg-slate-50 p-12 rounded-[40px] border border-slate-100 italic transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/5">
+                            <p className="text-[18px] text-slate-700 leading-[1.8] mb-6">
                                 If your brand communicates only in English, you are invisible to millions of ready-to-buy customers in Tier 2 and Tier 3 cities where buying intent is high but competition is still low.
                             </p>
-                            <p style={{ fontSize: '18px', color: '#1a1a1a', fontWeight: '500', lineHeight: '1.8' }}>
+                            <p className="text-[18px] text-slate-900 font-bold leading-[1.8] not-italic">
                                 Vernacular SEO bridges this gap by optimizing your digital presence for multiple regional languages — ensuring discoverability, cultural relevance, and conversion power.
                             </p>
                         </div>
-                        <div className="relative">
-                            <img src="https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/vernacular-seo-side.webp" alt="Market Opportunity" style={{ width: '100%', borderRadius: '30px' }} />
+                        <div className="relative group overflow-hidden rounded-[30px]">
+                            <img src="https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/vernacular-seo-side.webp" alt="Market Opportunity" className="w-full h-auto transition-transform duration-500 group-hover:scale-105" />
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Framework Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#f1f5f9' }}>
+            <section className="py-24 bg-slate-50">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>
+                    <div className="text-center mb-16">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5">
                             Our Vernacular SEO Framework
                         </h2>
-                        <p style={{ fontSize: '18px', color: '#666' }}>
+                        <p className="text-[18px] text-slate-600">
                             We combine linguistic intelligence, search data science, and cultural nuance.
                         </p>
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-8">
                         {vernacularFramework.map((item, i) => (
-                            <div key={i} style={{
-                                flex: '1 1 350px',
-                                maxWidth: '400px',
-                                background: '#fff',
-                                padding: '40px',
-                                borderRadius: '24px',
-                                transition: 'all 0.3s',
-                                border: '1px solid #e2e8f0',
-                                boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-10px)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
-                                    e.currentTarget.style.borderColor = '#0066cc';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0,0,0,0.1)';
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                }}>
-                                <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '600', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
-                                <p style={{ color: '#666', marginBottom: '20px', lineHeight: '1.6', fontSize: '15px' }}>{item.desc}</p>
-                                <ul style={{ listStyle: 'none', padding: 0 }}>
+                            <div key={i} className="flex-1 min-w-[320px] max-w-[400px] bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc] group">
+                                <div className="text-[#0066cc] mb-5">{item.icon}</div>
+                                <h3 className="text-[22px] font-bold mb-4 text-slate-900">{item.title}</h3>
+                                <p className="text-slate-600 mb-5 leading-relaxed text-[15px]">{item.desc}</p>
+                                <ul className="list-none p-0 space-y-3">
                                     {item.points.map((p, j) => (
-                                        <li key={j} style={{ display: 'flex', gap: '8px', marginBottom: '10px', color: '#444', fontSize: '14px' }}>
-                                            <div style={{ color: '#0066cc', marginTop: '4px' }}><CheckCircle2 size={14} /></div>
+                                        <li key={j} className="flex gap-2 text-[14px] text-slate-700">
+                                            <div className="text-[#0066cc] mt-1 shrink-0"><CheckCircle2 size={14} /></div>
                                             {p}
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ fontSize: '13px', fontWeight: '500', color: '#0066cc', marginTop: '20px', borderTop: '1px solid #eee', paddingTop: '15px' }}>{item.extra}</p>
+                                <p className="text-[13px] font-bold text-[#0066cc] mt-6 pt-4 border-t border-slate-100">{item.extra}</p>
                             </div>
                         ))}
                     </div>
@@ -244,30 +212,30 @@ const VernacularSEOServices = () => {
             </section>
 
             {/* Our Approach Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-24 bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#1a1a1a', marginBottom: '30px' }}>Our Approach: Data + Culture + Performance</h2>
-                            <p style={{ fontSize: '18px', color: '#666', lineHeight: '1.8', marginBottom: '30px' }}>
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight">Our Approach: Data + Culture + Performance</h2>
+                            <p className="text-[18px] text-slate-600 leading-relaxed mb-10">
                                 Unlike traditional SEO that focuses only on keywords, we blend search insights with cultural messaging frameworks to build scalable multilingual ecosystems.
                             </p>
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-2 gap-8">
                                 {[
                                     { t: "Data Insights", d: "Deep behavioral and demographic search analytics." },
                                     { t: "Cultural Magic", d: "Linguistic nuance for local resonance." },
                                     { t: "Performance UX", d: "Conversion-focused user experience." },
                                     { t: "Continuous Growth", d: "Ongoing SERP and ROI optimization." }
                                 ].map((item, i) => (
-                                    <div key={i}>
-                                        <h4 style={{ fontWeight: '600', color: '#0066cc', marginBottom: '5px' }}>{item.t}</h4>
-                                        <p style={{ fontSize: '14px', color: '#666' }}>{item.d}</p>
+                                    <div key={i} className="group">
+                                        <h4 className="font-bold text-[#0066cc] mb-2 text-[18px] group-hover:translate-x-1 transition-transform">{item.t}</h4>
+                                        <p className="text-[14px] text-slate-600 leading-relaxed">{item.d}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div style={{ background: '#0f172a', padding: '60px', borderRadius: '40px', color: '#fff' }}>
-                            <h3 style={{ fontSize: '28px', fontWeight: '600', marginBottom: '30px' }}>Why Choose Us?</h3>
+                        <div className="bg-slate-900 p-12 rounded-[40px] text-white transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/20">
+                            <h3 className="text-[28px] font-bold mb-8">Why Choose Us?</h3>
                             <div className="space-y-6">
                                 {[
                                     "Native-language research specialists",
@@ -277,9 +245,11 @@ const VernacularSEOServices = () => {
                                     "ROI-driven strategy with KPIs",
                                     "Continuous algorithm updates"
                                 ].map((item, i) => (
-                                    <div key={i} style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                                        <div className=" text-blue-500 rounded-full p-1"><CheckCircle2 size={16} color="#fff" /></div>
-                                        <span style={{ fontSize: '16px', fontWeight: '500' }}>{item}</span>
+                                    <div key={i} className="flex gap-4 items-center group">
+                                        <div className="bg-blue-600/20 text-blue-400 rounded-full p-1.5 transition-colors group-hover:bg-blue-600 group-hover:text-white">
+                                            <CheckCircle2 size={16} />
+                                        </div>
+                                        <span className="text-[16px] font-medium text-slate-100">{item}</span>
                                     </div>
                                 ))}
                             </div>
@@ -289,16 +259,16 @@ const VernacularSEOServices = () => {
             </section>
 
             {/* Target Industries */}
-            <section style={{ padding: '100px 0', backgroundColor: '#f1f5f9' }}>
+            <section className="py-24 bg-slate-50">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>Industries We Empower</h2>
-                        <p style={{ fontSize: '18px', color: '#666' }}>If your growth plan includes Bharat — vernacular SEO is not optional.</p>
+                    <div className="text-center mb-16">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">Industries We Empower</h2>
+                        <p className="text-[18px] text-slate-600">If your growth plan includes Bharat — vernacular SEO is not optional.</p>
                     </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
+                    <div className="flex flex-wrap justify-center gap-4">
                         {targetingIndustries.map((item, i) => (
-                            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', background: '#fff', padding: '15px 25px', borderRadius: '12px', border: '1px solid #e2e8f0', fontWeight: '500', color: '#1e293b' }}>
-                                <span className="text-blue-500">{item.icon}</span>
+                            <div key={i} className="flex items-center gap-3 bg-white px-8 py-5 rounded-xl border border-slate-200 font-bold text-slate-800 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:border-[#0066cc] hover:text-[#0066cc] group">
+                                <span className="text-blue-500 group-hover:scale-110 transition-transform">{item.icon}</span>
                                 {item.name}
                             </div>
                         ))}
@@ -307,26 +277,18 @@ const VernacularSEOServices = () => {
             </section>
 
             {/* Process Section */}
-            <section style={{ padding: '100px 0', backgroundColor: '#fff' }}>
+            <section className="py-24 bg-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#1a1a1a', marginBottom: '20px' }}>Our Process</h2>
-                        <p style={{ fontSize: '18px', color: '#666' }}>Each step is aligned with measurable performance metrics.</p>
+                    <div className="text-center mb-16">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">Our Process</h2>
+                        <p className="text-[18px] text-slate-600">Each step is aligned with measurable performance metrics.</p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-6">
                         {ourProcess.map((item, i) => (
-                            <div key={i} style={{
-                                flex: '1 1 200px',
-                                maxWidth: '280px',
-                                background: '#f8f9fa',
-                                padding: '30px',
-                                borderRadius: '24px',
-                                textAlign: 'center',
-                                border: '1px solid #eee',
-                            }}>
-                                <div style={{ fontSize: '14px', fontWeight: '700', color: '#0066cc', marginBottom: '10px' }}>{item.step}</div>
-                                <h4 style={{ fontSize: '20px', fontWeight: '600', color: '#1a1a1a', marginBottom: '10px' }}>{item.title}</h4>
-                                <p style={{ fontSize: '13px', color: '#666', lineHeight: '1.6' }}>{item.desc}</p>
+                            <div key={i} className="flex-1 min-w-[240px] max-w-[280px] bg-slate-50 p-10 rounded-3xl text-center border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-blue-900/5 group">
+                                <div className="text-[14px] font-bold text-[#0066cc] mb-3 group-hover:scale-110 transition-transform">{item.step}</div>
+                                <h4 className="text-[20px] font-bold text-slate-900 mb-3">{item.title}</h4>
+                                <p className="text-[14px] text-slate-600 leading-relaxed m-0">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -334,29 +296,29 @@ const VernacularSEOServices = () => {
             </section>
 
             {/* Competitive Advantage */}
-            <section style={{ padding: '100px 0', backgroundColor: '#0f172a', color: '#fff' }}>
+            <section className="py-24 bg-slate-900 text-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div style={{ background: 'rgba(255,255,255,0.05)', padding: '60px', borderRadius: '40px', border: '1px solid rgba(255,255,255,0.1)' }}>
-                            <TrendingUp size={48} className="text-blue-400 mb-6" />
-                            <h3 style={{ fontSize: '32px', fontWeight: '600', marginBottom: '20px' }}>The Competitive Advantage</h3>
-                            <p style={{ fontSize: '18px', color: '#e2e8f0', marginBottom: '30px' }}>Brands that invest in vernacular SEO today will dominate tomorrow’s digital India. Early adoption means:</p>
-                            <div className="grid grid-cols-2 gap-4">
+                        <div className="bg-white/5 p-12 rounded-[40px] border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-blue-500/50">
+                            <TrendingUp size={48} className="text-blue-400 mb-8" />
+                            <h3 className="text-[32px] font-bold mb-6 text-white leading-tight">The Competitive Advantage</h3>
+                            <p className="text-[18px] text-slate-300 mb-10 leading-relaxed">Brands that invest in vernacular SEO today will dominate tomorrow’s digital India. Early adoption means:</p>
+                            <div className="grid grid-cols-2 gap-6">
                                 {["Lower competition", "Higher engagement", "Stronger trust", "Better conversions"].map((item, i) => (
-                                    <div key={i} style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                                        <CheckCircle2 size={16} className="text-blue-400" />
-                                        <span style={{ fontWeight: '500' }}>{item}</span>
+                                    <div key={i} className="flex gap-3 items-center group">
+                                        <CheckCircle2 size={18} className="text-blue-400 group-hover:scale-110 transition-transform" />
+                                        <span className="font-bold text-white">{item}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '600', color: '#fff', marginBottom: '30px' }}>Move Before Your Competitors</h2>
-                            <p style={{ fontSize: '18px', color: '#e2e8f0', lineHeight: '1.8', marginBottom: '32px' }}>
-                                Adkryoss managed by Clink Consultancy Services Private Limited helps you move before your competitors realize the opportunity.
+                            <h2 className="text-[36px] font-bold text-white mb-8 leading-tight">Move Before Your Competitors</h2>
+                            <p className="text-[18px] text-slate-300 leading-relaxed mb-10">
+                                Adkryoss managed by <span className="text-white font-bold">Clink Consultancy Services Private Limited</span> helps you move before your competitors realize the opportunity.
                             </p>
-                            <div style={{ padding: '30px', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '20px', borderLeft: '4px solid #3b82f6' }}>
-                                <p style={{ margin: 0, fontWeight: '500', color: '#fff' }}>"Regional search is not the future. It is happening now."</p>
+                            <div className="p-10 bg-blue-600/10 rounded-2xl border-l-4 border-blue-500 italic">
+                                <p className="m-0 font-bold text-white text-[18px]">"Regional search is not the future. It is happening now."</p>
                             </div>
                         </div>
                     </div>
@@ -364,17 +326,16 @@ const VernacularSEOServices = () => {
             </section>
 
             {/* CTA */}
-            <section style={{ padding: '80px 0', background: 'linear-gradient(135deg, #0066cc 0%, #004999 100%)', color: '#fff', textAlign: 'center' }}>
+            <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004999] text-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>Let’s Build Your Multilingual Growth Engine</h2>
-                    <p style={{ fontSize: '20px', marginBottom: '40px', opacity: 1, color: '#fff', fontWeight: '500' }}>
+                    <h2 className="text-[42px] font-bold mb-6 text-white leading-tight">Let’s Build Your Multilingual Growth Engine</h2>
+                    <p className="text-[20px] mb-12 opacity-90 text-[#eff6ff] max-w-[800px] mx-auto leading-relaxed font-medium">
                         Speak every language your customers speak. Connect with us today and unlock Bharat.
                     </p>
-                    <a href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#fff', color: '#0066cc', padding: '18px 40px', borderRadius: '50px', fontWeight: '600', textDecoration: 'none', transition: 'all 0.3s' }}
-                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
-                        Unlock Your Regional Growth <ArrowRight size={20} />
-                    </a>
+                    <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-[#0066cc] py-5 px-12 rounded-full text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:scale-[1.05] hover:shadow-white/20">
+                        Unlock Your Regional Growth
+                        <ArrowRight size={20} />
+                    </Link>
                 </div>
             </section>
         </div>

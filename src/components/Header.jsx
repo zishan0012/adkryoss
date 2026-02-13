@@ -160,129 +160,47 @@ const Header = () => {
     ];
 
     return (
-        <header className="header" style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            backgroundColor: 'white',
-            boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-            zIndex: 1000,
-            height: 'var(--header-height, 80px)',
-            display: 'flex',
-            alignItems: 'center'
-        }}>
-            <div className="container" style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                width: '100%',
-                height: '100%'
-            }}>
+        <header className="fixed top-0 left-0 w-full bg-white shadow-[0_2_10px_rgba(0,0,0,0.1)] z-[1000] h-20 flex items-center">
+            <div className="container flex justify-between items-center w-full h-full">
                 {/* Logo */}
                 <div className="logo">
-                    <Link to="/" style={{
-                        fontSize: '24px',
-                        fontWeight: '800',
-                        color: 'var(--primary)',
-                        textTransform: 'uppercase',
-                        letterSpacing: '1px'
-                    }}>
+                    <Link to="/" className="text-[24px] font-[800] text-[#0066cc] uppercase tracking-wider">
                         ADKRYOSS
                     </Link>
                 </div>
 
                 {/* Desktop Navigation */}
-                <nav className="desktop-nav" style={{ height: '100%' }}>
-                    <ul style={{ display: 'flex', gap: '35px', alignItems: 'stretch', height: '100%' }}>
+                <nav className="hidden lg:flex h-full">
+                    <ul className="flex gap-9 items-stretch h-full">
                         {navItems.map((item) => (
-                            <li key={item.name} style={{
-                                position: item.name === 'Our Services' ? 'static' : 'relative',
-                                display: 'flex',
-                                height: '100%'
-                            }}
-                                className="nav-item-group"
+                            <li key={item.name}
+                                className={`relative flex h-full group ${item.name === 'Our Services' ? 'static' : ''}`}
                                 onMouseEnter={() => item.subItems && setOpenDropdown(item.name)}
                                 onMouseLeave={() => setOpenDropdown(null)}
                             >
                                 {item.subItems ? (
-                                    <div className="nav-item-has-submenu" style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', height: '100%' }}>
-                                        <Link to={item.path} style={{
-                                            fontWeight: '600',
-                                            fontSize: '15px',
-                                            color: 'var(--secondary)',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            height: '100%'
-                                        }} onClick={handleLinkClick}>
+                                    <div className="flex items-center cursor-pointer h-full">
+                                        <Link to={item.path} className="font-semibold text-[15px] text-[#333] flex items-center h-full group-hover:text-[#0066cc] transition-colors" onClick={handleLinkClick}>
                                             {item.name}
                                         </Link>
-                                        <ChevronDown size={14} style={{ marginLeft: '4px', color: 'var(--secondary)' }} />
+                                        <ChevronDown size={14} className="ml-1 text-[#333] group-hover:text-[#0066cc] transition-colors" />
 
                                         {item.name === 'Our Services' ? (
-                                            <div className="submenu mega-menu-modern" style={{
-                                                position: 'absolute',
-                                                top: '100%',
-                                                left: '50%',
-                                                transform: 'translateX(-50%)',
-                                                backgroundColor: 'white',
-                                                boxShadow: '0 10px 40px rgba(0,0,0,0.15)',
-                                                borderRadius: '12px',
-                                                borderTop: '4px solid var(--primary)',
-                                                display: openDropdown === item.name ? 'flex' : 'none',
-                                                flexDirection: 'column',
-                                                zIndex: 1001,
-                                                minWidth: 'auto',
-                                                width: '96vw',
-                                                maxWidth: '1400px',
-                                                maxHeight: 'calc(100vh - 100px)',
-                                                marginTop: '0',
-                                                overflow: 'hidden'
-                                            }}>
+                                            <div className={`submenu absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.15)] rounded-xl border-t-4 border-[#0066cc] flex-col z-[1001] w-[96vw] max-w-[1400px] max-h-[calc(100vh-100px)] mt-0 overflow-hidden ${openDropdown === item.name ? 'flex' : 'hidden'}`}>
                                                 {/* Category Tabs Row - Fixed Header */}
-                                                <div style={{
-                                                    backgroundColor: '#fff',
-                                                    padding: '20px 40px',
-                                                    borderBottom: '1px solid #f0f0f0',
-                                                    flexShrink: 0
-                                                }}>
+                                                <div className="bg-white px-10 py-5 border-b border-[#f0f0f0] shrink-0">
                                                     {/* Category Tabs Row (Row 1) */}
-                                                    <div style={{
-                                                        display: 'flex',
-                                                        justifyContent: 'flex-start',
-                                                        gap: '10px',
-                                                        flexWrap: 'wrap'
-                                                    }}>
+                                                    <div className="flex justify-start gap-[10px] flex-wrap">
                                                         {item.subItems.map((sub) => (
                                                             <div
                                                                 key={sub.name}
                                                                 onMouseEnter={() => setActiveCategory(sub.name)}
-                                                                style={{
-                                                                    padding: '8px 18px',
-                                                                    borderRadius: '20px',
-                                                                    cursor: 'pointer',
-                                                                    transition: 'all 0.2s ease',
-                                                                    backgroundColor: activeCategory === sub.name ? 'var(--primary)' : '#f5f5f5',
-                                                                    border: '1px solid',
-                                                                    borderColor: activeCategory === sub.name ? 'var(--primary)' : '#eee',
-                                                                    display: 'flex',
-                                                                    alignItems: 'center',
-                                                                    gap: '8px'
-                                                                }}
+                                                                className={`px-[18px] py-2 rounded-[20px] cursor-pointer transition-all duration-200 border flex items-center gap-2 ${activeCategory === sub.name ? 'bg-[#0066cc] border-[#0066cc]' : 'bg-[#f5f5f5] border-[#eee]'}`}
                                                             >
-                                                                <span style={{
-                                                                    display: 'flex',
-                                                                    alignItems: 'center',
-                                                                    color: activeCategory === sub.name ? '#fff' : '#666'
-                                                                }}>
+                                                                <span className={`flex items-center ${activeCategory === sub.name ? 'text-white' : 'text-[#666]'}`}>
                                                                     {getServiceIcon(sub.name)}
                                                                 </span>
-                                                                <span style={{
-                                                                    fontSize: '13px',
-                                                                    fontWeight: '600',
-                                                                    color: activeCategory === sub.name ? '#fff' : '#666',
-                                                                    whiteSpace: 'nowrap'
-                                                                }}>
+                                                                <span className={`text-[13px] font-semibold whitespace-nowrap ${activeCategory === sub.name ? 'text-white' : 'text-[#666]'}`}>
                                                                     {sub.name}
                                                                 </span>
                                                             </div>
@@ -291,44 +209,17 @@ const Header = () => {
                                                 </div>
 
                                                 {/* Sub-items Grid - Scrollable Content */}
-                                                <div style={{
-                                                    flex: 1,
-                                                    overflowY: 'auto',
-                                                    overflowX: 'hidden'
-                                                }}>
+                                                <div className="flex-1 overflow-y-auto overflow-x-hidden">
                                                     {item.subItems.find(sub => sub.name === activeCategory) && (
-                                                        <div style={{
-                                                            padding: '25px 40px',
-                                                            backgroundColor: '#fff',
-                                                            minHeight: '250px'
-                                                        }}>
-                                                            <div style={{
-                                                                display: 'grid',
-                                                                gridTemplateColumns: 'max-content max-content',
-                                                                gap: '12px 80px'
-                                                            }}>
+                                                        <div className="px-10 py-[25px] bg-white min-h-[250px]">
+                                                            <div className="grid grid-cols-[max-content_max-content] gap-x-20 gap-y-3">
                                                                 {item.subItems.find(sub => sub.name === activeCategory).subItems.map(subSub => (
-                                                                    <div key={subSub.name} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                                                        <div style={{
-                                                                            width: '6px',
-                                                                            height: '6px',
-                                                                            backgroundColor: '#0066cc',
-                                                                            borderRadius: '50%',
-                                                                            flexShrink: 0
-                                                                        }}></div>
+                                                                    <div key={subSub.name} className="flex items-center gap-2.5">
+                                                                        <div className="w-1.5 h-1.5 bg-[#0066cc] rounded-full shrink-0"></div>
                                                                         <Link
                                                                             to={subSub.path}
                                                                             onClick={handleLinkClick}
-                                                                            style={{
-                                                                                color: '#444',
-                                                                                fontSize: '14.5px',
-                                                                                fontWeight: '500',
-                                                                                padding: '4px 0',
-                                                                                transition: 'all 0.2s ease',
-                                                                                textDecoration: 'none'
-                                                                            }}
-                                                                            onMouseEnter={(e) => e.target.style.color = '#0066cc'}
-                                                                            onMouseLeave={(e) => e.target.style.color = '#444'}
+                                                                            className="text-[#444] text-[14.5px] font-medium py-1 transition-all duration-200 no-underline hover:text-[#0066cc]"
                                                                         >
                                                                             {subSub.name}
                                                                         </Link>
@@ -340,58 +231,18 @@ const Header = () => {
                                                 </div>
                                             </div>
                                         ) : (
-                                            <div className="submenu" style={{
-                                                position: 'absolute',
-                                                top: '100%',
-                                                left: 0,
-                                                backgroundColor: 'white',
-                                                boxShadow: '0 5px 15px rgba(0,0,0,0.1)',
-                                                width: '220px',
-                                                padding: '10px 0',
-                                                borderRadius: '4px',
-                                                display: openDropdown === item.name ? 'flex' : 'none',
-                                                flexDirection: 'column',
-                                                zIndex: 1001
-                                            }}>
+                                            <div className={`submenu absolute top-full left-0 bg-white shadow-[0_5_15px_rgba(0,0,0,0.1)] w-[220px] p-2.5 rounded flex-col z-[1001] ${openDropdown === item.name ? 'flex' : 'hidden'}`}>
                                                 {item.subItems.map(sub => (
-                                                    <div key={sub.name} style={{ position: 'relative' }} className="submenu-item-group">
-                                                        <Link to={sub.path} onClick={handleLinkClick} style={{
-                                                            display: 'flex',
-                                                            alignItems: 'center',
-                                                            justifyContent: 'space-between',
-                                                            padding: '10px 20px',
-                                                            color: '#333',
-                                                            fontSize: '14px',
-                                                            fontWeight: '500',
-                                                            borderBottom: '1px solid #f5f5f5'
-                                                        }}>
+                                                    <div key={sub.name} className="relative group/sub">
+                                                        <Link to={sub.path} onClick={handleLinkClick} className="flex items-center justify-between px-5 py-2.5 text-[#333] text-sm font-medium border-b border-[#f5f5f5] hover:text-[#0066cc] transition-colors">
                                                             {sub.name}
-                                                            {sub.subItems && <ChevronDown size={12} style={{ transform: 'rotate(-90deg)' }} />}
+                                                            {sub.subItems && <ChevronDown size={12} className="-rotate-90" />}
                                                         </Link>
 
                                                         {sub.subItems && (
-                                                            <div className="sub-submenu" style={{
-                                                                position: 'absolute',
-                                                                top: 0,
-                                                                left: '100%',
-                                                                backgroundColor: 'white',
-                                                                boxShadow: '0 5px 15px rgba(0,0,0,0.1)',
-                                                                width: '220px',
-                                                                padding: '10px 0',
-                                                                borderRadius: '4px',
-                                                                display: 'none',
-                                                                flexDirection: 'column',
-                                                                zIndex: 1002
-                                                            }}>
+                                                            <div className="absolute top-0 left-full bg-white shadow-[0_5_15px_rgba(0,0,0,0.1)] w-[220px] py-2.5 rounded hidden flex-col z-[1002] group-hover/sub:flex">
                                                                 {sub.subItems.map(subSub => (
-                                                                    <Link key={subSub.name} to={subSub.path} onClick={handleLinkClick} style={{
-                                                                        display: 'block',
-                                                                        padding: '10px 20px',
-                                                                        color: '#333',
-                                                                        fontSize: '13px',
-                                                                        fontWeight: '500',
-                                                                        borderBottom: '1px solid #f5f5f5'
-                                                                    }}>
+                                                                    <Link key={subSub.name} to={subSub.path} onClick={handleLinkClick} className="block px-5 py-2.5 text-[#333] text-[13px] font-medium border-b border-[#f5f5f5] hover:text-[#0066cc] transition-colors">
                                                                         {subSub.name}
                                                                     </Link>
                                                                 ))}
@@ -403,14 +254,7 @@ const Header = () => {
                                         )}
                                     </div>
                                 ) : (
-                                    <Link to={item.path} style={{
-                                        fontWeight: '600',
-                                        fontSize: '15px',
-                                        color: 'var(--secondary)',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        height: '100%'
-                                    }}>
+                                    <Link to={item.path} className="font-semibold text-[15px] text-[#333] flex items-center h-full hover:text-[#0066cc] transition-colors">
                                         {item.name}
                                     </Link>
                                 )}
@@ -420,81 +264,49 @@ const Header = () => {
                 </nav>
 
                 {/* Mobile Menu Button */}
-                <button className="mobile-menu-btn" onClick={toggleMenu} style={{ background: 'none' }}>
+                <button className="lg:hidden p-2 text-[#333]" onClick={toggleMenu}>
                     {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
 
                 {/* Action Buttons (Desktop) */}
-                <div className="header-actions">
-                    <Link to="/request-quote" className="btn btn-primary">Request a Quote</Link>
+                <div className="hidden lg:flex">
+                    <Link to="/request-quote" className="bg-[#0066cc] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-[#0052a3] transition-colors">Request a Quote</Link>
                 </div>
             </div>
 
             {/* Mobile Menu Overlay */}
             {isMenuOpen && (
-                <div className="mobile-menu" style={{
-                    position: 'absolute',
-                    top: '80px',
-                    left: 0,
-                    width: '100%',
-                    backgroundColor: 'white',
-                    padding: '20px',
-                    boxShadow: '0 5px 10px rgba(0,0,0,0.1)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '15px',
-                    maxHeight: 'calc(100vh - 80px)',
-                    overflowY: 'auto'
-                }}>
+                <div className="lg:hidden absolute top-20 left-0 w-full bg-white px-5 py-5 shadow-[0_5_10px_rgba(0,0,0,0.1)] flex flex-col gap-[15px] max-h-[calc(100vh-80px)] overflow-y-auto z-[1000]">
                     {navItems.map((item) => (
                         <div key={item.name}>
                             <Link
                                 to={item.path}
                                 onClick={() => setIsMenuOpen(false)}
-                                style={{
-                                    fontSize: '16px',
-                                    fontWeight: '600',
-                                    padding: '10px 0',
-                                    borderBottom: '1px solid #f0f0f0',
-                                    color: 'var(--secondary)',
-                                    display: 'block'
-                                }}
+                                className="text-base font-semibold py-2.5 border-b border-[#f0f0f0] text-[#333] block"
                             >
                                 {item.name}
                             </Link>
                             {/* Mobile Submenu */}
                             {item.subItems && (
-                                <div style={{ paddingLeft: '20px' }}>
+                                <div className="pl-5">
                                     {item.subItems.map(sub => (
                                         <div key={sub.name}>
                                             <Link
                                                 to={sub.path}
                                                 onClick={() => setIsMenuOpen(false)}
-                                                style={{
-                                                    fontSize: '14px',
-                                                    fontWeight: '500',
-                                                    padding: '8px 0',
-                                                    display: 'block',
-                                                    color: '#666'
-                                                }}
+                                                className="text-sm font-medium py-2 block text-[#666]"
                                             >
                                                 {sub.name}
                                             </Link>
                                             {/* Mobile Sub-submenu */}
                                             {sub.subItems && (
-                                                <div style={{ paddingLeft: '15px' }}>
+                                                <div className="pl-[15px]">
                                                     {sub.subItems.map(subSub => (
                                                         <Link
                                                             key={subSub.name}
                                                             to={subSub.path}
                                                             onClick={() => setIsMenuOpen(false)}
-                                                            style={{
-                                                                fontSize: '13px',
-                                                                fontWeight: '400',
-                                                                padding: '6px 0',
-                                                                display: 'block',
-                                                                color: '#888'
-                                                            }}
+                                                            className="text-[13px] font-normal py-1.5 block text-[#888]"
                                                         >
                                                             {subSub.name}
                                                         </Link>
@@ -507,7 +319,7 @@ const Header = () => {
                             )}
                         </div>
                     ))}
-                    <Link to="/request-quote" className="btn btn-primary" style={{ textAlign: 'center' }}>
+                    <Link to="/request-quote" className="bg-[#0066cc] text-white py-3 rounded-full font-semibold text-center mt-2" onClick={() => setIsMenuOpen(false)}>
                         Request a Quote
                     </Link>
                 </div>

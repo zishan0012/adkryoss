@@ -125,39 +125,29 @@ const SEOMigrationServices = () => {
     ];
 
     return (
-        <div style={{ backgroundColor: '#fff' }}>
+        <div className="bg-white">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] flex items-center"
+                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
                 style={{
-                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-                    color: '#fff',
-                    position: 'relative',
-                    overflow: 'hidden'
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
-                <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10">
-                        <h1 style={{ fontSize: '48px', fontWeight: '700', marginBottom: '16px', letterSpacing: '-1px', color: '#000' }}>
+                    <div className="text-left relative z-10 text-white">
+                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
                             SEO Migration Services
                         </h1>
-                        <h3 style={{ fontSize: '24px', fontWeight: '500', marginBottom: '24px', color: '#000' }}>
+                        <h3 className="text-[24px] font-medium mb-6 text-white">
                             Safeguard Rankings. Preserve Traffic. Accelerate Growth.
                         </h3>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '32px' }}>
+                        <p className="text-[18px] leading-[1.8] text-white mb-8">
                             When websites evolve, rankings shouldn't collapse. Redesigns, domain changes, platform shifts, or international expansion — every structural change impacts visibility.
                         </p>
-                        <div style={{
-                            background: 'rgba(255,255,255,0.05)',
-                            padding: '24px',
-                            borderRadius: '20px',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            backdropFilter: 'blur(10px)',
-                            marginBottom: '32px'
-                        }}>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                At Adkryoss managed by <span style={{ fontWeight: '700', color: '#000' }}>Clink Consultancy Services Private Limited</span>, we deliver a zero-drop migration framework to protect your organic authority during transition.
+                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-8">
+                            <p className="text-[18px] leading-[1.8] text-white m-0">
+                                At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we deliver a zero-drop migration framework to protect your organic authority during transition.
                             </p>
                         </div>
                     </div>
@@ -166,29 +156,19 @@ const SEOMigrationServices = () => {
                         <img
                             src="https://www.techmagnate.com/wp-content/uploads/2026/01/Domain-Migration-Services.webp"
                             alt="SEO Migration"
-                            style={{
-                                maxWidth: '450px',
-                                width: '100%',
-                                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))'
-                            }}
+                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
             </section>
 
             {/* Risk Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-20 bg-white">
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '36px', fontWeight: '600', marginBottom: '40px' }}>
+                    <h2 className="text-[36px] font-bold mb-10 text-slate-900">
                         Why SEO Migration Is High-Risk Without Strategy
                     </h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '20px',
-                        marginBottom: '40px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-5 mb-10">
                         {[
                             "Broken redirects & crawl errors",
                             "Loss of backlink equity",
@@ -197,88 +177,35 @@ const SEOMigrationServices = () => {
                             "Drop in domain authority",
                             "Traffic and revenue decline"
                         ].map((risk, i) => (
-                            <div key={i} style={{
-                                padding: '24px',
-                                background: '#FFF5F5',
-                                borderRadius: '12px',
-                                borderLeft: '5px solid #F87171',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '15px',
-                                width: 'calc(33.333% - 14px)',
-                                minWidth: '280px',
-                                flexGrow: 1,
-                                maxWidth: '380px',
-                                transition: 'all 0.3s'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-5px) scale(1.02)';
-                                    e.currentTarget.style.boxShadow = '0 10px 20px rgba(248,113,113,0.1)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}>
-                                <AlertTriangle size={20} style={{ color: '#F87171' }} />
-                                <span style={{ fontWeight: '500', color: '#B91C1C' }}>{risk}</span>
+                            <div key={i} className="p-6 bg-red-50 rounded-xl border-l-[5px] border-l-red-400 flex items-center gap-[15px] w-[calc(33.333%-14px)] min-w-[280px] grow max-w-[380px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:shadow-red-400/10">
+                                <AlertTriangle size={20} className="text-red-400" />
+                                <span className="font-bold text-red-700">{risk}</span>
                             </div>
                         ))}
                     </div>
-                    <p style={{ fontSize: '20px', fontWeight: '600', color: '#0066CC' }}>
+                    <p className="text-[20px] font-bold text-[#0066cc]">
                         We don't just "move" your website. We engineer a seamless search transition.
                     </p>
                 </div>
             </section>
 
             {/* Framework Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8f9fa' }}>
+            <section className="py-20 bg-[#f8fafc]">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '600', textAlign: 'center', marginBottom: '60px' }}>
+                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-slate-900">
                         Our SEO Migration Framework
                     </h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '30px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-[30px]">
                         {migrationSteps.map((step, index) => (
-                            <div key={index} style={{
-                                background: '#fff',
-                                padding: '40px',
-                                borderRadius: '20px',
-                                boxShadow: '0 5px 15px rgba(0,0,0,0.05)',
-                                border: '1px solid #eee',
-                                width: 'calc(33.333% - 20px)',
-                                minWidth: '320px',
-                                flexGrow: 1,
-                                maxWidth: '400px',
-                                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,102,204,0.15)';
-                                    e.currentTarget.style.borderColor = '#0066CC';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                    e.currentTarget.style.boxShadow = '0 5px 15px rgba(0,0,0,0.05)';
-                                    e.currentTarget.style.borderColor = '#eee';
-                                }}>
-                                <div style={{ color: '#0066CC', marginBottom: '20px' }}>{step.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '600', marginBottom: '20px', color: '#1a1a1a' }}>
+                            <div key={index} className="bg-white p-10 rounded-[20px] shadow-sm border border-slate-100 w-[calc(33.333%-20px)] min-w-[320px] grow max-w-[400px] transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
+                                <div className="text-[#0066cc] mb-5">{step.icon}</div>
+                                <h3 className="text-[22px] font-bold mb-5 text-slate-900">
                                     {index + 1}. {step.title}
                                 </h3>
-                                <ul style={{ listStyle: 'none', padding: 0 }}>
+                                <ul className="list-none p-0 space-y-4">
                                     {step.points.map((pt, i) => (
-                                        <li key={i} style={{
-                                            display: 'flex',
-                                            gap: '10px',
-                                            marginBottom: '20px',
-                                            color: '#555',
-                                            fontSize: '15px'
-                                        }}>
-                                            <CheckCircle2 size={18} style={{ color: '#0066CC', flexShrink: 0, marginTop: '3px' }} />
+                                        <li key={i} className="flex gap-2.5 text-[15px] text-slate-600 leading-relaxed">
+                                            <CheckCircle2 size={18} className="text-[#0066cc] shrink-0 mt-1" />
                                             {pt}
                                         </li>
                                     ))}
@@ -290,47 +217,16 @@ const SEOMigrationServices = () => {
             </section>
 
             {/* Migration Types */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-20 bg-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '36px', fontWeight: '600', textAlign: 'center', marginBottom: '50px' }}>
+                    <h2 className="text-[36px] font-bold text-center mb-[50px] text-slate-900">
                         Types of SEO Migration We Handle
                     </h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '20px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-5">
                         {migrationTypes.map((type, i) => (
-                            <div key={i} style={{
-                                padding: '24px',
-                                background: '#f8f9fa',
-                                borderRadius: '12px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '15px',
-                                transition: 'all 0.3s',
-                                width: 'calc(25% - 15px)',
-                                minWidth: '250px',
-                                flexGrow: 1,
-                                maxWidth: '300px',
-                                cursor: 'pointer',
-                                border: '1px solid transparent'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = '#fff';
-                                    e.currentTarget.style.borderColor = '#0066CC';
-                                    e.currentTarget.style.transform = 'scale(1.05)';
-                                    e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,102,204,0.1)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = '#f8f9fa';
-                                    e.currentTarget.style.borderColor = 'transparent';
-                                    e.currentTarget.style.transform = 'scale(1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}>
-                                <div style={{ color: '#0066CC' }}>{type.icon}</div>
-                                <span style={{ fontWeight: '600', color: '#1a1a1a' }}>{type.name}</span>
+                            <div key={i} className="p-6 bg-slate-50 rounded-xl flex items-center gap-4 transition-all duration-300 w-[calc(25%-15px)] min-w-[250px] grow max-w-[300px] border border-transparent hover:bg-white hover:border-[#0066cc] hover:scale-105 hover:shadow-xl hover:shadow-blue-900/5 group">
+                                <div className="text-[#0066cc] group-hover:scale-110 transition-transform">{type.icon}</div>
+                                <span className="font-bold text-slate-900">{type.name}</span>
                             </div>
                         ))}
                     </div>
@@ -338,40 +234,16 @@ const SEOMigrationServices = () => {
             </section>
 
             {/* Different Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#0066CC', color: '#fff' }}>
+            <section className="py-20 bg-[#0066cc] text-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '600', textAlign: 'center', marginBottom: '60px', color: '#fff' }}>
+                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-white">
                         What Makes Us Different?
                     </h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '30px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-8">
                         {differentiators.map((diff, i) => (
-                            <div key={i} style={{
-                                padding: '30px',
-                                background: 'rgba(255,255,255,0.12)',
-                                borderRadius: '15px',
-                                border: '1px solid rgba(255,255,255,0.2)',
-                                backdropFilter: 'blur(10px)',
-                                width: 'calc(25% - 23px)',
-                                minWidth: '260px',
-                                flexGrow: 1,
-                                maxWidth: '350px',
-                                transition: 'all 0.3s'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-10px)';
-                                    e.currentTarget.style.background = 'rgba(255,255,255,0.2)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.background = 'rgba(255,255,255,0.12)';
-                                }}>
-                                <h3 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '15px', color: '#fff' }}>{diff.title}</h3>
-                                <p style={{ color: '#fff', opacity: 1, lineHeight: '1.6', fontSize: '15px' }}>{diff.description}</p>
+                            <div key={i} className="p-8 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-lg w-[calc(25%-23px)] min-w-[260px] grow max-w-[350px] transition-all duration-300 hover:-translate-y-2 hover:bg-white/15">
+                                <h3 className="text-[20px] font-bold mb-4 text-white">{diff.title}</h3>
+                                <p className="text-white/90 leading-relaxed text-[15px]">{diff.description}</p>
                             </div>
                         ))}
                     </div>
@@ -379,35 +251,15 @@ const SEOMigrationServices = () => {
             </section>
 
             {/* CTA */}
-            <section style={{ padding: '100px 0', textAlign: 'center', backgroundColor: '#f8f9fa' }}>
+            <section className="py-24 text-center bg-[#f8fafc]">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '700', marginBottom: '24px', color: '#1a1a1a' }}>
+                    <h2 className="text-[42px] font-bold mb-6 text-slate-900 leading-tight">
                         Let's Migrate Without Losing Momentum
                     </h2>
-                    <p style={{ fontSize: '20px', color: '#666', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px' }}>
+                    <p className="text-[20px] text-slate-600 mb-10 max-w-[800px] mx-auto leading-relaxed">
                         Your website growth shouldn't reset to zero. Partner with Adkryoss and transform your migration into a scalable search growth opportunity.
                     </p>
-                    <Link to="/contact" style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '12px',
-                        background: '#0066CC',
-                        color: '#fff',
-                        padding: '18px 45px',
-                        borderRadius: '10px',
-                        fontSize: '18px',
-                        fontWeight: '600',
-                        textDecoration: 'none',
-                        transition: 'all 0.3s'
-                    }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.transform = 'translateY(-5px) scale(1.02)';
-                            e.currentTarget.style.boxShadow = '0 15px 35px rgba(0,102,204,0.3)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                            e.currentTarget.style.boxShadow = 'none';
-                        }}>
+                    <Link to="/contact" className="inline-flex items-center gap-3 bg-[#0066cc] text-white py-5 px-12 rounded-full text-[18px] font-bold no-underline transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(0,102,204,0.3)] hover:scale-[1.02]">
                         Start Your Migration Safely
                         <ArrowRight size={20} />
                     </Link>
