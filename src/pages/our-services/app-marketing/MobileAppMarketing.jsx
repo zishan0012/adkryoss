@@ -181,7 +181,7 @@ Adkryoss managed by Clink Consultancy Services Private Limited builds data-drive
       </div>
 
       {/* App Analytics & Growth Intelligence */}
-      <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
+      <div className="bg-white w-100 ml-60 rounded-lg shadow-lg p-6 flex flex-col gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
         <h3 className="text-xl font-semibold">App Analytics & Growth Intelligence</h3>
         <p className="text-lg">Growth without analytics is guesswork. We integrate and optimize tracking frameworks to measure real ROI.</p>
         <p className="font-semibold mt-2">Our Data Stack Includes:</p>
@@ -205,7 +205,7 @@ Adkryoss managed by Clink Consultancy Services Private Limited builds data-drive
       </div>
 
       {/* Creative Strategy */}
-      <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
+      <div className="bg-white w-100 ml-60 rounded-lg shadow-lg p-6 flex flex-col gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
         <h3 className="text-xl font-semibold">Creative Strategy for Mobile-First Audiences</h3>
         <p className="text-lg">Creative fatigue kills performance. Our team develops scroll-stopping creatives designed for mobile behavior.</p>
         <p className="font-semibold mt-2">We Focus On:</p>
