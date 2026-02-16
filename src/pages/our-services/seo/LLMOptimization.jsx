@@ -116,20 +116,20 @@ const LLMOptimization = () => {
         <div className="bg-white">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     <div className="text-left relative z-10 text-white">
-                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             LLM Optimization Services
                         </h1>
-                        <h3 className="text-[24px] font-medium mb-6 text-white">
+                        <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Be the Answer. Not Just Another Result.
                         </h3>
-                        <p className="text-[18px] leading-[1.8] text-white mb-8">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             AI platforms are redefining discovery. If your business isn't optimized for Large Language Models (LLMs) like ChatGPT and Gemini, you are invisible in the next generation of search. We ensure your brand becomes a trusted, cited answer.
                         </p>
                         <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px]">
@@ -140,9 +140,9 @@ const LLMOptimization = () => {
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Search-Engine-Optimization-1.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/06/LLM-Services.png"
                             alt="LLM Optimization"
-                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
@@ -156,7 +156,7 @@ const LLMOptimization = () => {
                             <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
                                 What is LLM Optimization?
                             </h2>
-                            <p className="text-[18px] text-[#475569] leading-[1.8] mb-6">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
                                 Unlike traditional SEO that focuses on search engine rankings, LLM Optimization ensures your business becomes a trusted, contextually relevant answer inside AI-generated responses.
                             </p>
                             <div className="grid grid-cols-2 gap-4">
@@ -203,7 +203,9 @@ const LLMOptimization = () => {
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">Our LLM Optimization Approach</h2>
-                        <p className="text-[20px] text-[#64748b] font-medium">Structured. Data-Driven. AI-First.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
+                            Structured. Data-Driven. AI-First.
+                        </p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-10">
                         {approach.map((step, i) => (
@@ -265,7 +267,9 @@ const LLMOptimization = () => {
             <section className="py-20 bg-[#f8fafc] text-center">
                 <div className="container">
                     <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">Benefits of LLM Optimization</h2>
-                    <p className="text-[20px] text-[#64748b] mb-[60px]">Future-proofing your brand's presence in the AI era.</p>
+                    <p className="text-[16px] md:text-[18px] mb-6">
+                        Future-proofing your brand's presence in the AI era.
+                    </p>
                     <div className="flex flex-wrap justify-center gap-[30px]">
                         {benefits.map((item, i) => (
                             <div key={i} className="w-[calc(33.333%-20px)] min-w-[300px] p-10 bg-white rounded-[30px] border border-[#e2e8f0] text-left transition-all duration-300 hover:-translate-y-[5px] hover:border-[#0066cc]">
@@ -284,7 +288,7 @@ const LLMOptimization = () => {
             <section className="py-20 bg-[#0f172a] text-white text-center">
                 <div className="container">
                     <h2 className="text-[42px] font-bold mb-5 text-white">Who Needs LLM Optimization?</h2>
-                    <p className="text-[20px] text-[#cbd5e1] mb-[60px] max-w-[800px] mx-auto">
+                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto">
                         If your audience is asking AI for recommendations, your brand must be optimized for it.
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-[30px]">
@@ -304,7 +308,7 @@ const LLMOptimization = () => {
                     <div className="bg-[#f8fafc] p-[80px_40px] rounded-[40px] border border-[#e2e8f0]">
                         <Bot size={60} className="text-[#0066cc] mx-auto mb-6" />
                         <h2 className="text-[48px] font-bold text-[#0f172a] mb-6">Ready to Become AI-Discoverable?</h2>
-                        <p className="text-[20px] text-[#64748b] mb-10 max-w-[800px] mx-auto">
+                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto">
                             Search engines are evolving into answer engines. Businesses that adapt now will dominate tomorrow. Let's optimize your presence for the next generation of discovery.
                         </p>
                         <Link to="/contact" className="inline-flex items-center gap-3 bg-[#0066cc] text-white p-[20px_60px] rounded-[50px] text-[20px] font-bold no-underline transition-all duration-300 hover:-translate-y-[5px]">

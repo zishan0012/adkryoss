@@ -57,7 +57,7 @@ const HeroSection = () => {
                 lineHeight: "1.2",
               }}
             >
-              We Build Digital Growth Systems That Drive Revenue. 
+              We Build Digital Growth Systems That Drive Revenue.
             </h1>
 
             <p
@@ -68,9 +68,9 @@ const HeroSection = () => {
                 color: "#e0e0e0",
               }}
             >
-              Not just traffic. Not just engagement. 
+              Not just traffic. Not just engagement.
               <br />
-We engineer data-driven marketing strategies that turn clicks into customers and brands into market leaders. 
+              We engineer data-driven marketing strategies that turn clicks into customers and brands into market leaders.
             </p>
 
             <div style={{ marginTop: "35px", display: "flex", gap: "20px" }}>

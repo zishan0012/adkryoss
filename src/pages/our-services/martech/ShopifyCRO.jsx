@@ -177,7 +177,7 @@ const ShopifyCRO = () => {
         <div className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -185,17 +185,17 @@ const ShopifyCRO = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 animate-fade-in-up text-white">
-                        <h1 className="text-[48px] font-extrabold mb-6 tracking-tight leading-[1.1] text-white">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             Shopify CRO Services
                         </h1>
-                        <h2 className="text-[32px] font-semibold mb-6 text-white">
+                        <h2 className="text-[32px] font-medium mb-6 text-white">
                             Turn More Traffic Into Revenue
                         </h2>
                         <div className="space-y-4 mb-8">
-                            <p className="text-[20px] font-semibold text-white leading-relaxed">
+                            <p className="text-[16px] md:text-[18px] mb-6 font-semibold text-white leading-relaxed">
                                 High traffic. Low conversions. That’s where growth gets stuck.
                             </p>
-                            <p className="text-[18px] text-white font-medium opacity-95">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium opacity-95">
                                 We transform your Shopify store into a high-performing sales engine with data-driven CRO strategies, behavioral insights, and continuous experimentation. At Adkryoss managed by <span className="font-semibold underline decoration-blue-400">Clink Consultancy Services Private Limited</span>, we deliver measurable revenue lift.
                             </p>
                         </div>
@@ -209,9 +209,9 @@ const ShopifyCRO = () => {
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Service-CRO.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/05/Shopify-CRO1.webp"
                             alt="Shopify CRO"
-                            className="max-w-[500px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
                         />
                     </div>
                 </div>
@@ -226,13 +226,13 @@ const ShopifyCRO = () => {
                                 Why Shopify CRO Matters
                             </h2>
                             <div className="space-y-6">
-                                <p className="text-[18px] text-slate-700 leading-relaxed font-medium">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
                                     Running ads and driving traffic is only half the battle. If your Shopify store isn’t optimized for conversion, you’re leaking revenue every single day.
                                 </p>
                                 <div className="p-8 bg-white border-l-8 border-blue-600 rounded-r-2xl shadow-sm leading-relaxed text-slate-700 font-medium italic">
                                     "At Adkryoss managed by <span className="font-semibold text-blue-600 underline">Clink Consultancy Services Private Limited</span>, we approach Shopify CRO as a science, not a design tweak."
                                 </div>
-                                <p className="text-[18px] text-slate-700 leading-relaxed font-medium mt-6">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium mt-6">
                                     We combine analytics, psychology, UX intelligence, and A/B experimentation to build conversion-focused digital storefronts.
                                 </p>
                             </div>
@@ -269,7 +269,9 @@ const ShopifyCRO = () => {
                             <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                 {item.icon}
                             </div>
-                            <h3 className="text-[22px] font-semibold mb-4 text-white tracking-tight">{item.title}</h3>
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
+                                {item.title}
+                            </h3>
                             <p className="text-blue-200/80 mb-6 font-medium italic">"{item.desc}"</p>
                             <div className="space-y-3 flex-grow">
                                 {item.points.map((point, idx) => (
@@ -363,7 +365,9 @@ const ShopifyCRO = () => {
                                         <div key={index} className="flex gap-6 items-start group">
                                             <div className="text-blue-400 font-extrabold text-lg py-2 min-w-[100px] uppercase tracking-wider">Step {index + 1}</div>
                                             <div className="flex-1 border-l-2 border-white/10 pl-6 py-2 group-hover:border-blue-500 transition-colors">
-                                                <h3 className="font-bold text-xl text-white opacity-95 group-hover:text-white transition-colors tracking-tight">{step}</h3>
+                                                <h3 className="text-[20px] md:text-[24px] mb-4 font-bold text-xl text-white opacity-95 group-hover:text-white transition-colors tracking-tight">
+                                                    {step}
+                                                </h3>
                                             </div>
                                         </div>
                                     ))}
@@ -397,13 +401,15 @@ const ShopifyCRO = () => {
                     <h2 className="text-[42px] font-extrabold mb-10 leading-tight text-white tracking-tight">Ready to Unlock Hidden Revenue?</h2>
                     <div className="space-y-12">
                         <div className="text-2xl font-semibold opacity-90 max-w-3xl text-white mx-auto leading-relaxed">
-                            <p className="mb-4 text-white">Your Shopify store already has traffic. <br /> Let’s convert it into profit.</p>
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white">
+                                Your Shopify store already has traffic. <br /> Let’s convert it into profit.
+                            </p>
                         </div>
-                        <p className="text-xl text-white font-medium opacity-90 max-w-3xl mx-auto italic">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white font-medium opacity-90 max-w-3xl mx-auto italic">
                             Partner with Adkryoss managed by <span className="font-semibold underline decoration-blue-300">Clink Consultancy Services Private Limited</span> and turn your Shopify store into a scalable, conversion-focused revenue machine.
                         </p>
                         <div className="flex flex-col items-center gap-10">
-                            <p className="text-[32px] font-black text-white italic tracking-tighter leading-tight pb-4">
+                            <p className="text-[16px] md:text-[18px] mb-6 font-black text-white italic tracking-tighter leading-tight pb-4">
                                 Start optimizing today.
                             </p>
                             <Link to="/contact" className="inline-flex items-center gap-4 bg-white text-[#0066CC] py-6 px-16 rounded-[25px] text-[22px] font-black transition-all duration-300 hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.4)] hover:-translate-y-2 hover:scale-105 active:scale-95 group tracking-tight">

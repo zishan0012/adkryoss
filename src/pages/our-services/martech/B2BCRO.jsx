@@ -113,7 +113,7 @@ const B2BCRO = () => {
         <div className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -121,17 +121,17 @@ const B2BCRO = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 animate-fade-in-up text-white">
-                        <h1 className="text-[48px] font-extrabold mb-6 tracking-tight leading-[1.1] text-white">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             B2B CRO Services
                         </h1>
-                        <h2 className="text-[32px] font-semibold mb-6 text-white">
+                        <h2 className="text-[32px] font-medium mb-6 text-white">
                             Turn Clicks Into Qualified B2B Revenue
                         </h2>
                         <div className="space-y-4 mb-8">
-                            <p className="text-[20px] font-semibold text-white leading-relaxed">
+                            <p className="text-[16px] md:text-[18px] mb-6 font-semibold text-white leading-relaxed">
                                 Data-led experimentation. Intent-driven journeys. Measurable growth.
                             </p>
-                            <p className="text-[18px] text-white font-medium opacity-90">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium opacity-90">
                                 We don’t guess. We test, optimize, and scale what drives pipeline.
                             </p>
                         </div>
@@ -145,9 +145,9 @@ const B2BCRO = () => {
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Service-CRO.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/B2B-Conversion-Rate-Optimization-CRO-Services.webp"
                             alt="B2B CRO"
-                            className="max-w-[500px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
                         />
                     </div>
                 </div>
@@ -162,7 +162,7 @@ const B2BCRO = () => {
                                 Why B2B CRO Is Different
                             </h2>
                             <div className="space-y-6">
-                                <p className="text-[18px] text-slate-700 leading-relaxed font-medium">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
                                     B2B conversion is not about impulse—it’s about trust, authority, and decision cycles. Multiple stakeholders. Longer sales funnels. High-ticket values.
                                 </p>
                                 <div className="p-8 bg-white border-l-8 border-blue-600 rounded-r-2xl shadow-sm leading-relaxed text-slate-700 font-medium">
@@ -184,7 +184,7 @@ const B2BCRO = () => {
                                         ))}
                                     </div>
                                 </div>
-                                <p className="text-[20px] text-blue-600 font-bold italic">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-blue-600 font-bold italic">
                                     The result? Higher MQL-to-SQL conversion, improved deal velocity, and scalable ROI.
                                 </p>
                             </div>
@@ -220,7 +220,9 @@ const B2BCRO = () => {
                             <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                 {item.icon}
                             </div>
-                            <h3 className="text-[22px] font-semibold mb-4 text-white tracking-tight">{item.title}</h3>
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
+                                {item.title}
+                            </h3>
                             <p className="text-blue-200/80 mb-6 font-medium italic">"{item.desc}"</p>
                             <div className="space-y-3 flex-grow">
                                 {item.points.map((point, idx) => (
@@ -342,13 +344,15 @@ const B2BCRO = () => {
                     <h2 className="text-[42px] font-black mb-10 leading-tight text-white tracking-tight">Let’s Build a High-Converting B2B Funnel</h2>
                     <div className="space-y-12">
                         <div className="text-2xl font-bold opacity-90 max-w-3xl text-white mx-auto leading-relaxed">
-                            <p className="mb-4 text-white">If your website generates traffic but not revenue, it’s time to optimize intelligently.</p>
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white">
+                                If your website generates traffic but not revenue, it’s time to optimize intelligently.
+                            </p>
                         </div>
-                        <p className="text-xl text-white font-medium opacity-80 max-w-3xl mx-auto italic">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white font-medium opacity-80 max-w-3xl mx-auto italic">
                             Partner with Adkryoss managed by <span className="font-bold">Clink Consultancy Services Private Limited</span> and transform your digital presence into a high-performing B2B conversion engine.
                         </p>
                         <div className="flex flex-col items-center gap-10">
-                            <p className="text-3xl font-black text-white italic tracking-tighter leading-none pb-4">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-3xl font-black text-white italic tracking-tighter leading-none pb-4">
                                 Ready to increase qualified leads and accelerate pipeline growth? Let’s optimize your funnel. 🚀
                             </p>
                             <Link to="/contact" className="inline-flex items-center gap-4 bg-white text-[#0066CC] py-6 px-16 rounded-[25px] text-[22px] font-black transition-all duration-300 hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.4)] hover:-translate-y-2 hover:scale-105 active:scale-95 group tracking-tight">

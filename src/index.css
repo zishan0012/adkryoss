@@ -4,13 +4,19 @@
 @tailwind utilities;
 @import "tailwindcss";
 
+@theme {
+  --spacing-120: 30rem;
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 /* Main Navigation Backdrop Blur */
 .desktop-nav::after {
   content: "";

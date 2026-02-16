@@ -135,7 +135,7 @@ const EcommerceSEO = () => {
         <div>
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -143,13 +143,13 @@ const EcommerceSEO = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 text-white">
-                        <h1 className="text-[48px] font-bold mb-[16px] tracking-[-1px] text-white">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1px] text-white">
                             Ecommerce SEO Services
                         </h1>
-                        <h3 className="text-[24px] font-medium mb-[24px] text-white">
+                        <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Turn Product Pages into Revenue Engines
                         </h3>
-                        <p className="text-[18px] leading-[1.8] text-white mb-[32px]">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Ecommerce is no longer about just listing products. It’s about owning high-intent search moments. When customers search with buying intent, your store must appear first — not just visible, but irresistible.
                         </p>
                         <div className="bg-[rgba(255,255,255,0.05)] p-[24px] rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-[32px]">
@@ -161,9 +161,9 @@ const EcommerceSEO = () => {
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Ecommerce-SEO.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/05/Ecommerce-SEO-Services.webp"
                             alt="Ecommerce SEO"
-                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
@@ -175,7 +175,7 @@ const EcommerceSEO = () => {
                     <h2 className="text-[42px] font-bold mb-[40px] text-[#0f172a]">
                         Why Ecommerce SEO is a Growth Multiplier
                     </h2>
-                    <p className="text-[18px] text-[#475569] max-w-[800px] mx-auto mb-[50px]">
+                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto">
                         Online stores face complex SEO challenges. Without a structured SEO framework, even the best products stay invisible.
                     </p>
                     <div className="flex flex-wrap justify-center gap-[20px] mb-[60px]">
@@ -192,7 +192,7 @@ const EcommerceSEO = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-[20px] font-semibold text-[#0066cc]">
+                    <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
                         Our approach blends technical precision, content depth, search intent mapping, and conversion intelligence to build scalable ecommerce growth.
                     </p>
                 </div>
@@ -270,7 +270,7 @@ const EcommerceSEO = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="mt-[50px] text-[20px] text-[#e2e8f0] max-w-[900px] mx-auto">
+                    <p className="text-[16px] md:text-[18px] mb-6 mt-[50px] max-w-[900px] mx-auto">
                         Adkryoss managed by Clink Consultancy Services Private Limited doesn’t offer isolated SEO services — we build organic revenue ecosystems.
                     </p>
                 </div>
@@ -288,7 +288,9 @@ const EcommerceSEO = () => {
                         ))}
                     </div>
                     <div className="text-center mt-[40px]">
-                        <p className="text-[18px] font-medium text-[#475569]">We operate as your extended growth partner — not just a vendor.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
+                            We operate as your extended growth partner — not just a vendor.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -312,7 +314,7 @@ const EcommerceSEO = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-[20px] text-[#475569] italic">
+                    <p className="text-[16px] md:text-[18px] mb-6 italic">
                         Ecommerce SEO is not a one-time fix. It’s a continuous growth engine.
                     </p>
                 </div>

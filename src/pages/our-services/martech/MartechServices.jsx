@@ -128,7 +128,7 @@ const MartechServices = () => {
         <div className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -136,10 +136,10 @@ const MartechServices = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 animate-fade-in-up text-white">
-                        <h1 className="text-[48px] font-extrabold mb-6 tracking-tight leading-[1.1] text-white">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             Engineer Your Marketing. Accelerate Your Growth.
                         </h1>
-                        <p className="text-[20px] leading-relaxed mb-8 text-white font-medium">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-relaxed text-white font-medium">
                             Transform disconnected tools into a high-performance marketing engine. We design, integrate, and optimize Martech ecosystems that convert data into predictable revenue.
                         </p>
                         <div className="flex flex-wrap gap-4 mb-10">
@@ -152,9 +152,9 @@ const MartechServices = () => {
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10 animate-float">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Service-Marketing-Automation.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/Martech1.webp"
                             alt="Martech Services"
-                            className="max-w-[500px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
                         />
                     </div>
                 </div>
@@ -169,13 +169,13 @@ const MartechServices = () => {
                                 The Future of Marketing is Martech-Led
                             </h2>
                             <div className="space-y-6">
-                                <p className="text-[18px] text-slate-700 leading-relaxed font-medium">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
                                     Modern marketing is no longer campaign-first — it is technology-first. Growth-driven organizations win because their systems talk to each other, data flows seamlessly, and automation works 24/7.
                                 </p>
                                 <div className="p-8 bg-white border-l-8 border-blue-600 rounded-r-2xl shadow-sm italic text-slate-600 font-semibold">
                                     "We don’t just implement tools. We design growth infrastructure."
                                 </div>
-                                <p className="text-[18px] text-slate-700 leading-relaxed font-medium">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
                                     At Adkryoss managed by <span className="text-blue-600 font-semibold">Clink Consultancy Services Private Limited</span>, we architect Martech ecosystems that unify CRM, automation, analytics, personalization, and AI — enabling measurable, scalable, and revenue-focused marketing.
                                 </p>
                             </div>
@@ -211,7 +211,9 @@ const MartechServices = () => {
                             <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                 {item.icon}
                             </div>
-                            <h3 className="text-[22px] font-semibold mb-4 text-white tracking-tight">{item.title}</h3>
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
+                                {item.title}
+                            </h3>
                             <p className="text-blue-200/80 mb-6 font-medium italic">"{item.desc}"</p>
                             <div className="space-y-3">
                                 {item.points.map((point, idx) => (
@@ -234,7 +236,7 @@ const MartechServices = () => {
                         <h2 className="text-[36px] font-extrabold mb-10 leading-tight text-white tracking-tight">Performance & Martech Integration</h2>
                         <div className="grid md:grid-cols-2 gap-16 items-center">
                             <div>
-                                <p className="text-lg opacity-90 leading-relaxed mb-10 text-white font-medium">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-lg opacity-90 leading-relaxed text-white font-medium">
                                     Disconnected platforms reduce efficiency and distort reporting. At Adkryoss managed by <span className="font-semibold">Clink Consultancy Services Private Limited</span>, our integration frameworks ensure centralized reporting, unified customer views, and operational efficiency across CRM, Ad platforms, E-commerce systems, and more.
                                 </p>
                                 <div className="inline-flex items-center gap-4 bg-white/10 px-8 py-4 rounded-full text-white font-semibold text-sm tracking-tighter shadow-inner">
@@ -340,15 +342,21 @@ const MartechServices = () => {
                     <h2 className="text-[42px] font-black mb-10 leading-tight text-white tracking-tight">Ready to Build a Smarter Marketing Engine?</h2>
                     <div className="space-y-12">
                         <div className="text-2xl  font-bold opacity-90 max-w-3xl text-white mx-auto leading-relaxed">
-                            <p className="mb-4 text-white">Technology is only powerful when it is structured.</p>
-                            <p className="mb-4 text-white">Automation is only effective when it is strategic.</p>
-                            <p className="text-white">Data is only valuable when it drives revenue.</p>
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white">
+                                Technology is only powerful when it is structured.
+                            </p>
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white">
+                                Automation is only effective when it is strategic.
+                            </p>
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white">
+                                Data is only valuable when it drives revenue.
+                            </p>
                         </div>
-                        <p className="text-xl text-white font-medium opacity-80 max-w-3xl mx-auto italic">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white font-medium opacity-80 max-w-3xl mx-auto italic">
                             At Adkryoss managed by <span className="font-bold">Clink Consultancy Services Private Limited</span>, we help businesses move from scattered tools to synchronized growth systems.
                         </p>
                         <div className="flex flex-col items-center gap-10">
-                            <p className="text-3xl font-black text-white italic tracking-tighter leading-none  pb-4">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-3xl font-black text-white italic tracking-tighter leading-none pb-4">
                                 Let’s architect your Martech ecosystem for success.
                             </p>
                             <Link to="/contact" className="inline-flex items-center gap-4 bg-white text-[#0066CC] py-6 px-16 rounded-[25px] text-[22px] font-black transition-all duration-300 hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.4)] hover:-translate-y-2 hover:scale-105 active:scale-95 group tracking-tight">
