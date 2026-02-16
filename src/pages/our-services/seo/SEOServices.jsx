@@ -185,7 +185,7 @@ const SEOServices = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 text-white">
-                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
+                        <h1 className="text-[36px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
                             SEO Services
                         </h1>
                         <h3 className="text-[24px] font-medium mb-6 text-white">
