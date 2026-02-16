@@ -68,49 +68,58 @@ const WhiteLabelSEOServices = () => {
     ];
 
     return (
-        <div style={{ backgroundColor: '#fff' }}>
+        <div className="bg-white text-slate-900">
             {/* Hero Section */}
-            <section style={{
-                background: 'linear-gradient(135deg, #004999 0%, #0066CC 100%)',
-                color: '#fff',
-                padding: '100px 0 80px',
-                textAlign: 'center'
-            }}>
-                <div className="container">
-                    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-                        <h1 style={{ fontSize: '56px', fontWeight: '800', marginBottom: '24px', color: '#fff' }}>
+            <section
+                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                style={{
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+                }}
+            >
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    {/* LEFT CONTENT */}
+                    <div className="text-left relative z-10 text-white">
+                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
                             White Label SEO Services
                         </h1>
-                        <p style={{ fontSize: '24px', fontWeight: '600', marginBottom: '24px', color: '#fff' }}>
+                        <h3 className="text-[24px] font-medium mb-6 text-white">
                             Scale Faster. Deliver Better. Grow Without Hiring.
+                        </h3>
+                        <p className="text-[18px] leading-[1.8] text-white mb-8">
+                            Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span> delivers fully managed White Label SEO solutions for agencies and consultants who want to scale revenue without operational complexity.
                         </p>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', marginBottom: '40px' }}>
-                            Adkryoss managed by Clink Consultancy Services pvt.ltd delivers fully managed White Label SEO solutions for agencies and consultants who want to scale revenue without operational complexity.
-                        </p>
-                        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.15)', padding: '10px 20px', borderRadius: '50px' }}>
-                                <CheckCircle2 size={20} /> <span>100% Confidential</span>
+                        <div className="flex gap-5 flex-wrap">
+                            <div className="flex items-center gap-2 bg-white/5 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-sm">
+                                <CheckCircle2 size={20} className="text-black" /> <span className="text-white font-medium">100% Confidential</span>
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.15)', padding: '10px 20px', borderRadius: '50px' }}>
-                                <CheckCircle2 size={20} /> <span>Scalable Models</span>
+                            <div className="flex items-center gap-2 bg-white/5 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-sm">
+                                <CheckCircle2 size={20} className="text-black" /> <span className="text-white font-medium">Scalable Models</span>
                             </div>
                         </div>
+                    </div>
+                    {/* RIGHT IMAGE */}
+                    <div className="flex justify-center md:justify-end relative z-10">
+                        <img
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/11/white-Label-seo-services.webp"
+                            alt="White Label SEO"
+                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                        />
                     </div>
                 </div>
             </section>
 
             {/* Why Choose Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8f9fa' }}>
+            <section className="py-24 bg-slate-50">
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '50px', alignItems: 'center' }}>
+                    <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '700', marginBottom: '24px', color: '#1a1a1a' }}>
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-6 leading-tight">
                                 Why Choose White Label SEO?
                             </h2>
-                            <p style={{ color: '#666', lineHeight: '1.8', marginBottom: '30px', fontSize: '17px' }}>
+                            <p className="text-slate-600 leading-relaxed mb-8 text-[17px]">
                                 Building a skilled in-house SEO team requires senior strategists, technical experts, and content teams. That's expensive and slow.
                             </p>
-                            <ul style={{ listStyle: 'none', padding: 0 }}>
+                            <ul className="list-none p-0 space-y-4">
                                 {[
                                     "Expand service offerings instantly",
                                     "Deliver enterprise-grade SEO under your brand",
@@ -118,33 +127,16 @@ const WhiteLabelSEOServices = () => {
                                     "Reduce operational overhead",
                                     "Focus on client acquisition"
                                 ].map((item, i) => (
-                                    <li key={i} style={{
-                                        display: 'flex',
-                                        gap: '12px',
-                                        marginBottom: '18px',
-                                        fontWeight: '600',
-                                        color: '#333',
-                                        fontSize: '16px',
-                                        transition: 'transform 0.3s'
-                                    }}
-                                        onMouseEnter={(e) => e.currentTarget.style.transform = 'translateX(10px)'}
-                                        onMouseLeave={(e) => e.currentTarget.style.transform = 'translateX(0)'}>
-                                        <Shield size={20} style={{ color: '#0066CC', flexShrink: 0 }} /> {item}
+                                    <li key={i} className="flex gap-3 text-[16px] font-bold text-slate-800 transition-all duration-300 hover:translate-x-2 group">
+                                        <Shield size={20} className="text-[#0066CC] shrink-0 transition-transform group-hover:scale-110" /> {item}
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                        <div style={{
-                            background: '#fff',
-                            padding: '50px',
-                            borderRadius: '24px',
-                            boxShadow: '0 20px 50px rgba(0,0,0,0.06)',
-                            border: '1px solid #eee',
-                            textAlign: 'center'
-                        }}>
-                            <p style={{ fontSize: '24px', fontWeight: '800', color: '#1a1a1a', lineHeight: '1.4' }}>
+                        <div className="bg-white p-12 rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-100 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/5">
+                            <p className="text-[24px] font-bold text-slate-900 leading-tight m-0">
                                 We handle execution.<br />
-                                <span style={{ color: '#0066CC', fontSize: '32px' }}>You own the client.</span>
+                                <span className="text-[#0066CC] text-[32px] block mt-2">You own the client.</span>
                             </p>
                         </div>
                     </div>
@@ -152,46 +144,20 @@ const WhiteLabelSEOServices = () => {
             </section>
 
             {/* Framework Section */}
-            <section style={{ padding: '80px 0' }}>
+            <section className="py-24 bg-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#1a1a1a' }}>
+                    <h2 className="text-[42px] font-bold text-center mb-16 text-slate-900 leading-tight">
                         Our White Label SEO Framework
                     </h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '30px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-8">
                         {framework.map((step, i) => (
-                            <div key={i} style={{
-                                padding: '40px',
-                                border: '1px solid #eee',
-                                borderRadius: '20px',
-                                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                background: '#fff',
-                                width: 'calc(33.333% - 20px)',
-                                minWidth: '320px',
-                                flexGrow: 1,
-                                maxWidth: '400px',
-                                cursor: 'pointer'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,102,204,0.12)';
-                                    e.currentTarget.style.borderColor = '#0066CC';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                    e.currentTarget.style.borderColor = '#eee';
-                                }}>
-                                <div style={{ color: '#0066CC', marginBottom: '20px' }}>{step.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '700', marginBottom: '20px', color: '#1a1a1a' }}>{step.title}</h3>
-                                <ul style={{ listStyle: 'none', padding: 0 }}>
+                            <div key={i} className="bg-white p-10 border border-slate-100 rounded-2xl transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:border-[#0066CC] group w-full md:w-[calc(33.333%-22px)] min-w-[320px] max-w-[400px]">
+                                <div className="text-[#0066CC] mb-6 group-hover:scale-110 transition-transform">{step.icon}</div>
+                                <h3 className="text-[22px] font-bold mb-6 text-slate-900 group-hover:text-[#0066CC] transition-colors">{step.title}</h3>
+                                <ul className="list-none p-0 space-y-4">
                                     {step.points.map((pt, idx) => (
-                                        <li key={idx} style={{ fontSize: '15px', color: '#555', marginBottom: '10px', display: 'flex', gap: '10px', lineHeight: '1.5' }}>
-                                            <div style={{ width: '6px', height: '6px', background: '#0066CC', borderRadius: '50%', marginTop: '8px', flexShrink: 0 }}></div>
+                                        <li key={idx} className="text-[15px] text-slate-600 flex gap-3 leading-relaxed">
+                                            <div className="w-1.5 h-1.5 bg-[#0066CC] rounded-full mt-2 shrink-0 group-hover:scale-125 transition-transform"></div>
                                             {pt}
                                         </li>
                                     ))}
@@ -203,29 +169,12 @@ const WhiteLabelSEOServices = () => {
             </section>
 
             {/* Who We Work With */}
-            <section style={{ padding: '80px 0', backgroundColor: '#111', color: '#fff' }}>
+            <section className="py-24 bg-slate-900 text-white">
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '50px', color: '#fff' }}>Who We Work With</h2>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
+                    <h2 className="text-[36px] font-bold mb-12 text-white leading-tight">Who We Work With</h2>
+                    <div className="flex flex-wrap justify-center gap-5">
                         {audiences.map((aud, i) => (
-                            <div key={i} style={{
-                                padding: '15px 35px',
-                                background: 'rgba(255,255,255,0.1)',
-                                borderRadius: '50px',
-                                border: '1px solid rgba(255,255,255,0.2)',
-                                transition: 'all 0.3s',
-                                fontWeight: '600'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = '#0066CC';
-                                    e.currentTarget.style.borderColor = '#0066CC';
-                                    e.currentTarget.style.transform = 'scale(1.1)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
-                                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
-                                    e.currentTarget.style.transform = 'scale(1)';
-                                }}>
+                            <div key={i} className="px-10 py-4 bg-white/5 rounded-full border border-white/10 font-bold transition-all duration-300 hover:bg-[#0066CC] hover:border-[#0066CC] hover:scale-105 hover:shadow-xl hover:shadow-blue-600/20 cursor-default">
                                 {aud}
                             </div>
                         ))}
@@ -234,46 +183,19 @@ const WhiteLabelSEOServices = () => {
             </section>
 
             {/* Why Partner */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-24 bg-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#1a1a1a' }}>Why Partner with Adkryoss?</h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '30px'
-                    }}>
+                    <h2 className="text-[42px] font-bold text-center mb-16 text-slate-900 leading-tight">Why Partner with Adkryoss?</h2>
+                    <div className="flex flex-wrap justify-center gap-8">
                         {[
                             { title: "Strategic, Not Just Executional", desc: "We think like growth consultants — not task executors." },
                             { title: "Algorithm-Aware & AI-Ready", desc: "Aligning with SGE trends, AI search, and semantic indexing." },
                             { title: "Dedicated Account Managers", desc: "Dedicated strategist to streamline communication." },
                             { title: "100% Confidentiality", desc: "Strict NDA-backed operations. Complete brand invisibility." }
                         ].map((item, i) => (
-                            <div key={i} style={{
-                                padding: '40px',
-                                background: '#f8f9fa',
-                                borderRadius: '20px',
-                                border: '1px solid transparent',
-                                width: 'calc(25% - 23px)',
-                                minWidth: '260px',
-                                flexGrow: 1,
-                                maxWidth: '350px',
-                                transition: 'all 0.3s'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = '#fff';
-                                    e.currentTarget.style.borderColor = '#0066CC';
-                                    e.currentTarget.style.transform = 'translateY(-10px)';
-                                    e.currentTarget.style.boxShadow = '0 15px 30px rgba(0,0,0,0.05)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = '#f8f9fa';
-                                    e.currentTarget.style.borderColor = 'transparent';
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}>
-                                <h3 style={{ fontSize: '20px', fontWeight: '700', marginBottom: '15px', color: '#1a1a1a' }}>{item.title}</h3>
-                                <p style={{ color: '#666', fontSize: '15px', lineHeight: '1.6' }}>{item.desc}</p>
+                            <div key={i} className="flex-1 min-w-[280px] max-w-[350px] p-10 bg-slate-50 rounded-3xl border border-transparent transition-all duration-300 hover:bg-white hover:border-[#0066CC] hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-900/10 group text-center">
+                                <h3 className="text-[20px] font-bold mb-4 text-slate-900 group-hover:text-[#0066CC] transition-colors">{item.title}</h3>
+                                <p className="text-slate-600 text-[15px] leading-relaxed m-0">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -281,40 +203,15 @@ const WhiteLabelSEOServices = () => {
             </section>
 
             {/* CTA Section */}
-            <section style={{
-                padding: '100px 0',
-                background: 'linear-gradient(135deg, #0066CC 0%, #004999 100%)',
-                color: '#fff',
-                textAlign: 'center'
-            }}>
+            <section className="py-24 text-center bg-gradient-to-br from-[#0066CC] to-[#004999] text-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '24px', color: '#fff' }}>
+                    <h2 className="text-[42px] font-bold mb-6 text-white leading-tight">
                         Ready to Scale Without Expanding Your Team?
                     </h2>
-                    <p style={{ fontSize: '20px', marginBottom: '40px', color: '#fff', opacity: 1, fontWeight: '500' }}>
-                        Partner with Adkryoss managed by Clink Consultancy Services pvt.ltd and transform your agency into a scalable digital powerhouse.
+                    <p className="text-[20px] mb-12 text-[#eff6ff] opacity-90 max-w-[800px] mx-auto leading-relaxed font-medium">
+                        Partner with Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span> and transform your agency into a scalable digital powerhouse.
                     </p>
-                    <Link to="/contact" style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '12px',
-                        background: '#fff',
-                        color: '#0066CC',
-                        padding: '20px 50px',
-                        borderRadius: '12px',
-                        fontSize: '18px',
-                        fontWeight: '800',
-                        textDecoration: 'none',
-                        transition: 'all 0.3s'
-                    }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.transform = 'translateY(-5px) scale(1.02)';
-                            e.currentTarget.style.boxShadow = '0 15px 40px rgba(0,0,0,0.3)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                            e.currentTarget.style.boxShadow = 'none';
-                        }}>
+                    <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-[#0066CC] py-5 px-12 rounded-xl text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_15px_40px_rgba(0,0,0,0.3)] hover:-translate-y-1.5 hover:scale-105 hover:shadow-white/20">
                         Become a Partner
                         <ArrowRight size={20} />
                     </Link>

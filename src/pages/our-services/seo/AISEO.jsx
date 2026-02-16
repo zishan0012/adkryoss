@@ -109,85 +109,74 @@ const AISEO = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section style={{
-                background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-                color: '#fff',
-                padding: '120px 0 80px',
-                textAlign: 'center',
-                position: 'relative',
-                overflow: 'hidden'
-            }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.1, pointerEvents: 'none' }}>
-                    <div style={{ position: 'absolute', top: '10%', left: '5%', width: '300px', height: '300px', background: '#0066cc', borderRadius: '50%', filter: 'blur(100px)' }}></div>
-                    <div style={{ position: 'absolute', bottom: '10%', right: '5%', width: '250px', height: '250px', background: '#004e92', borderRadius: '50%', filter: 'blur(100px)' }}></div>
-                </div>
-                <div className="container">
-                    <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-                        <h1 style={{ fontSize: '56px', fontWeight: '800', marginBottom: '24px', letterSpacing: '-1px' }}>
+            <section
+                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                style={{
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+                }}
+            >
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    {/* LEFT CONTENT */}
+                    <div className="text-left relative z-10 text-white">
+                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1px] text-white">
                             AI SEO Services
                         </h1>
-                        <p style={{ fontSize: '24px', fontWeight: '600', marginBottom: '24px', color: '#3b82f6' }}>
+                        <h3 className="text-[24px] font-medium mb-6 text-white">
                             Rank Beyond Keywords. Dominate AI-Driven Search Ecosystems.
-                        </p>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '40px' }}>
+                        </h3>
+                        <p className="text-[18px] leading-[1.8] text-white mb-8">
                             Search is no longer just about Google rankings. It’s about visibility across AI engines, voice assistants, zero-click results, and generative search experiences.
                         </p>
-                        <div style={{
-                            background: 'rgba(255,255,255,0.05)',
-                            padding: '30px',
-                            borderRadius: '20px',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            backdropFilter: 'blur(10px)',
-                            marginBottom: '40px'
-                        }}>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                Adkryoss managed by Clink Consultancy Services pvt.ltd delivers next-generation AI SEO solutions that help businesses become discoverable across modern search landscapes — from traditional SERPs to AI-generated answers.
+                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-8">
+                            <p className="text-[18px] leading-[1.8] text-white m-0">
+                                Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span> delivers next-generation AI SEO solutions that help businesses become discoverable across modern search landscapes.
                             </p>
                         </div>
-                        <p style={{ fontSize: '20px', fontWeight: '600', color: '#fff' }}>
+                        <p className="text-[20px] font-medium text-white">
                             We combine human expertise with machine intelligence to build scalable, future-ready SEO systems.
                         </p>
+                    </div>
+                    {/* RIGHT IMAGE */}
+                    <div className="flex justify-center md:justify-end relative z-10">
+                        <img
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/11/AI-SEO.webp"
+                            alt="AI SEO"
+                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                        />
                     </div>
                 </div>
             </section>
 
             {/* Why AI SEO Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-[80px] bg-white">
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '50px', alignItems: 'center' }}>
+                    <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-[50px] items-center">
                         <div>
-                            <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>
+                            <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
                                 Why AI SEO is the Future of Organic Growth
                             </h2>
-                            <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.8', marginBottom: '24px' }}>
+                            <p className="text-[18px] text-[#475569] leading-[1.8] mb-[24px]">
                                 Search behavior has fundamentally changed. Traditional SEO focuses on ranking pages. AI SEO focuses on becoming the answer.
                             </p>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                            <div className="flex flex-col gap-[20px]">
                                 {[
                                     "AI-powered search engines summarize answers.",
                                     "Users rely on voice queries and conversational search.",
                                     "Google’s Search Generative Experience (SGE) reshapes rankings.",
                                     "Content is evaluated through semantic relevance, not just keywords."
                                 ].map((item, i) => (
-                                    <div key={i} style={{ display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
-                                        <div style={{ width: '24px', height: '24px', background: '#eff6ff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
-                                            <Zap size={14} style={{ color: '#3b82f6' }} />
+                                    <div key={i} className="flex gap-[15px] items-start">
+                                        <div className="w-6 h-6 bg-[#eff6ff] rounded-full flex items-center justify-center flex-shrink-0 mt-[2px]">
+                                            <Zap size={14} className="text-[#3b82f6]" />
                                         </div>
-                                        <p style={{ fontSize: '16px', fontWeight: '600', color: '#334155', margin: 0 }}>{item}</p>
+                                        <p className="text-[16px] font-medium text-[#334155] m-0">{item}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div style={{
-                            background: '#f8fafc',
-                            padding: '40px',
-                            borderRadius: '30px',
-                            border: '1px solid #e2e8f0',
-                            textAlign: 'center',
-                            boxShadow: '0 20px 40px rgba(0,0,0,0.03)'
-                        }}>
-                            <Brain size={64} style={{ color: '#3b82f6', marginBottom: '24px' }} />
-                            <p style={{ fontSize: '18px', color: '#475569', lineHeight: '1.8', margin: 0 }}>
+                        <div className="bg-[#f8fafc] p-[40px] rounded-[30px] border border-[#e2e8f0] text-center shadow-[0_20px_40px_rgba(0,0,0,0.03)]">
+                            <Brain size={64} className="text-[#3b82f6] mb-[24px] mx-auto" />
+                            <p className="text-[18px] text-[#475569] leading-[1.8] m-0">
                                 At Adkryoss managed by Clink Consultancy Services pvt.ltd, we engineer SEO strategies that align with how AI algorithms interpret, rank, and recommend content in real time.
                             </p>
                         </div>
@@ -196,60 +185,33 @@ const AISEO = () => {
             </section>
 
             {/* Framework Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f1f5f9' }}>
+            <section className="py-[80px] bg-[#f1f5f9]">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '20px', color: '#0f172a' }}>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-bold mb-[20px] text-[#0f172a]">
                             Our AI SEO Framework
                         </h2>
-                        <p style={{ fontSize: '20px', color: '#64748b' }}>
+                        <p className="text-[20px] text-[#64748b]">
                             We don’t run campaigns. We build intelligent organic growth systems.
                         </p>
                     </div>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '30px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-[30px]">
                         {aiFramework.map((step, i) => (
-                            <div key={i} style={{
-                                background: '#fff',
-                                padding: '40px',
-                                borderRadius: '24px',
-                                boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)',
-                                border: '1px solid #e2e8f0',
-                                width: 'calc(33.333% - 20px)',
-                                minWidth: '320px',
-                                flexGrow: 1,
-                                maxWidth: '400px',
-                                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                cursor: 'pointer'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(59, 130, 246, 0.12)';
-                                    e.currentTarget.style.borderColor = '#3b82f6';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                    e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0,0,0,0.1)';
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                }}>
-                                <div style={{ color: '#3b82f6', marginBottom: '20px' }}>{step.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '800', marginBottom: '15px', color: '#0f172a' }}>
+                            <div key={i} className="bg-white p-[40px] rounded-[24px] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] border border-[#e2e8f0] w-[calc(33.333%-20px)] min-w-[320px] flex-grow max-w-[400px] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer group hover:-translate-y-[12px] hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(59,130,246,0.12)] hover:border-[#3b82f6]">
+                                <div className="text-[#3b82f6] mb-[20px]">{step.icon}</div>
+                                <h3 className="text-[22px] font-bold mb-[15px] text-[#0f172a]">
                                     {i + 1}. {step.title}
                                 </h3>
-                                <p style={{ fontSize: '15px', color: '#64748b', marginBottom: '20px', lineHeight: '1.6' }}>{step.desc}</p>
-                                <ul style={{ listStyle: 'none', padding: 0, marginBottom: '20px' }}>
+                                <p className="text-[15px] text-[#64748b] mb-[20px] leading-[1.6]">{step.desc}</p>
+                                <ul className="list-none p-0 mb-[20px]">
                                     {step.points.map((pt, idx) => (
-                                        <li key={idx} style={{ display: 'flex', gap: '10px', marginBottom: '12px', fontSize: '14px', color: '#334155' }}>
-                                            <CheckCircle2 size={16} style={{ color: '#3b82f6', flexShrink: 0, marginTop: '2px' }} />
+                                        <li key={idx} className="flex gap-[10px] mb-[20px] text-[14px] text-[#334155]">
+                                            <CheckCircle2 size={16} className="text-[#3b82f6] flex-shrink-0 mt-[2px]" />
                                             {pt}
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ fontSize: '14px', color: '#3b82f6', fontWeight: '600', padding: '15px', background: '#eff6ff', borderRadius: '12px', margin: 0 }}>
+                                <p className="text-[14px] text-[#3b82f6] font-medium p-[15px] bg-[#eff6ff] rounded-[12px] m-0">
                                     {step.extra}
                                 </p>
                             </div>
@@ -259,44 +221,17 @@ const AISEO = () => {
             </section>
 
             {/* AI SEO Services List */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-[80px] bg-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
+                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">
                         AI SEO Services We Offer
                     </h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '20px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-[20px]">
                         {aiServices.map((service, i) => (
-                            <div key={i} style={{
-                                padding: '30px',
-                                background: '#f8fafc',
-                                borderRadius: '20px',
-                                border: '1px solid #e2e8f0',
-                                width: 'calc(33.333% - 14px)',
-                                minWidth: '300px',
-                                flexGrow: 1,
-                                maxWidth: '380px',
-                                transition: 'all 0.3s'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = '#fff';
-                                    e.currentTarget.style.borderColor = '#3b82f6';
-                                    e.currentTarget.style.transform = 'translateY(-10px)';
-                                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = '#f8fafc';
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}>
-                                <div style={{ color: '#3b82f6', marginBottom: '15px' }}>{service.icon}</div>
-                                <h3 style={{ fontSize: '20px', fontWeight: '800', marginBottom: '12px', color: '#0f172a' }}>{service.title}</h3>
-                                <p style={{ color: '#475569', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>{service.desc}</p>
+                            <div key={i} className="p-[30px] bg-[#f8fafc] rounded-[20px] border border-[#e2e8f0] w-[calc(33.333%-14px)] min-w-[300px] flex-grow max-w-[380px] transition-all duration-300 group hover:bg-white hover:border-[#3b82f6] hover:-translate-y-[10px] hover:shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+                                <div className="text-[#3b82f6] mb-[15px]">{service.icon}</div>
+                                <h3 className="text-[20px] font-bold mb-[12px] text-[#0f172a]">{service.title}</h3>
+                                <p className="text-[#475569] text-[15px] leading-[1.6] m-0">{service.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -304,25 +239,19 @@ const AISEO = () => {
             </section>
 
             {/* Working Model */}
-            <section style={{ padding: '80px 0', backgroundColor: '#0f172a', color: '#fff' }}>
+            <section className="py-[80px] bg-[#0f172a] text-white">
                 <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                        <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '20px', color: '#fff' }}>How We Work</h2>
-                        <p style={{ fontSize: '18px', color: '#94a3b8' }}>
+                    <div className="text-center mb-[60px]">
+                        <h2 className="text-[42px] font-bold mb-[20px] text-white">How We Work</h2>
+                        <p className="text-[18px] text-[#94a3b8]">
                             At Adkryoss managed by Clink Consultancy Services Private Limited, our working model is structured, transparent, and performance-led.
                         </p>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px' }}>
+                    <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-[20px]">
                         {workingModel.map((item, i) => (
-                            <div key={i} style={{
-                                padding: '30px',
-                                background: 'rgba(255,255,255,0.05)',
-                                borderRadius: '15px',
-                                border: '1px solid rgba(255,255,255,0.1)',
-                                textAlign: 'center'
-                            }}>
-                                <h3 style={{ fontSize: '18px', fontWeight: '800', marginBottom: '15px', color: '#3b82f6' }}>{item.step}</h3>
-                                <p style={{ color: '#cbd5e1', fontSize: '14px', lineHeight: '1.6', margin: 0 }}>{item.desc}</p>
+                            <div key={i} className="p-[30px] bg-[rgba(255,255,255,0.05)] rounded-[15px] border border-[rgba(255,255,255,0.1)] text-center">
+                                <h3 className="text-[18px] font-bold mb-[15px] text-[#3b82f6]">{item.step}</h3>
+                                <p className="text-[#cbd5e1] text-[14px] leading-[1.6] m-0">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -330,17 +259,12 @@ const AISEO = () => {
             </section>
 
             {/* Why Choose Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-[80px] bg-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
+                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">
                         Why Choose Adkryoss for AI SEO?
                     </h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '20px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-[20px]">
                         {[
                             "AI-first strategy, not traditional SEO repackaged",
                             "Data-backed decision making",
@@ -349,37 +273,14 @@ const AISEO = () => {
                             "Continuous algorithm adaptation",
                             "Scalable growth systems"
                         ].map((item, i) => (
-                            <div key={i} style={{
-                                padding: '20px 30px',
-                                background: '#f8fafc',
-                                borderRadius: '12px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '15px',
-                                width: 'calc(33.333% - 14px)',
-                                minWidth: '280px',
-                                flexGrow: 1,
-                                maxWidth: '380px',
-                                border: '1px solid #e2e8f0',
-                                transition: 'all 0.3s'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.borderColor = '#3b82f6';
-                                    e.currentTarget.style.transform = 'scale(1.03)';
-                                    e.currentTarget.style.background = '#fff';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                    e.currentTarget.style.transform = 'scale(1)';
-                                    e.currentTarget.style.background = '#f8fafc';
-                                }}>
-                                <CheckCircle2 size={20} style={{ color: '#3b82f6' }} />
-                                <span style={{ fontWeight: '700', color: '#0f172a' }}>{item}</span>
+                            <div key={i} className="py-[20px] px-[30px] bg-[#f8fafc] rounded-[12px] flex items-center gap-[15px] w-[calc(33.333%-14px)] min-w-[280px] flex-grow max-w-[380px] border border-[#e2e8f0] transition-all duration-300 group hover:border-[#3b82f6] hover:scale-[1.03] hover:bg-white">
+                                <CheckCircle2 size={20} className="text-[#3b82f6]" />
+                                <span className="font-semibold text-[#0f172a]">{item}</span>
                             </div>
                         ))}
                     </div>
-                    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-                        <p style={{ fontSize: '20px', fontWeight: '800', color: '#0f172a' }}>
+                    <div className="text-center mt-[50px]">
+                        <p className="text-[20px] font-bold text-[#0f172a]">
                             We don’t chase algorithm updates. We build systems that evolve with them.
                         </p>
                     </div>
@@ -387,20 +288,20 @@ const AISEO = () => {
             </section>
 
             {/* Future of SEO */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f1f5f9' }}>
+            <section className="py-[80px] bg-[#f1f5f9]">
                 <div className="container">
-                    <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-                        <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>
+                    <div className="max-w-[900px] mx-auto text-center">
+                        <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
                             The Future of SEO is Intelligent
                         </h2>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', marginBottom: '40px' }}>
+                        <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-[20px] mb-[40px]">
                             {["Context over keywords", "Authority over volume", "Experience over density", "Entities over isolated pages"].map((txt, i) => (
-                                <div key={i} style={{ padding: '20px', background: '#fff', borderRadius: '12px', fontWeight: '700', color: '#0f172a', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
+                                <div key={i} className="p-[20px] bg-white rounded-[12px] font-semibold text-[#0f172a] shadow-[0_4px_6px_rgba(0,0,0,0.05)]">
                                     {txt}
                                 </div>
                             ))}
                         </div>
-                        <p style={{ fontSize: '20px', color: '#475569', lineHeight: '1.8', marginBottom: '24px' }}>
+                        <p className="text-[20px] text-[#475569] leading-[1.8] mb-[24px]">
                             Businesses that adapt early dominate visibility. If your SEO strategy still relies on outdated tactics, your growth will plateau.
                         </p>
                     </div>
@@ -408,30 +309,15 @@ const AISEO = () => {
             </section>
 
             {/* Final CTA */}
-            <section style={{ padding: '100px 0', textAlign: 'center', background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)', color: '#fff' }}>
+            <section className="py-[100px] text-center bg-gradient-to-br from-[#3b82f6] to-[#2563eb] text-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px' }}>
+                    <h2 className="text-[48px] font-bold mb-[24px] text-white">
                         Let’s Build AI-Powered Organic Growth
                     </h2>
-                    <p style={{ fontSize: '22px', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', color: '#eff6ff' }}>
+                    <p className="text-[22px] mb-[40px] max-w-[800px] mx-auto text-[#eff6ff]">
                         Search is evolving. Your strategy should too. Partner with Adkryoss managed by Clink Consultancy Services Private Limited, to future-proof your organic presence.
                     </p>
-                    <Link to="/contact" style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '12px',
-                        background: '#fff',
-                        color: '#2563eb',
-                        padding: '20px 50px',
-                        borderRadius: '50px',
-                        fontSize: '18px',
-                        fontWeight: '800',
-                        textDecoration: 'none',
-                        transition: 'all 0.3s',
-                        boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
-                    }}
-                        onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px) scale(1.05)'}
-                        onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0) scale(1)'}>
+                    <Link to="/contact" className="inline-flex items-center gap-[12px] bg-white text-[#2563eb] py-[20px] px-[50px] rounded-[50px] text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:-translate-y-[5px] hover:scale-[1.05]">
                         Start Your AI SEO Journey
                         <ArrowRight size={20} />
                     </Link>

@@ -4,49 +4,30 @@ import { Facebook, Twitter, Linkedin, Instagram, Youtube, MapPin, Phone, Mail } 
 
 const Footer = () => {
     return (
-        <footer style={{ backgroundColor: '#1A1A1A', color: '#fff', padding: '60px 0 0' }}>
-            <div className="container">
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                    gap: '40px',
-                    marginBottom: '40px'
-                }}>
+        <footer className="bg-[#1A1A1A] text-white pt-[60px]">
+            <div className="container px-4 md:px-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-10">
 
                     {/* Column 1: About */}
                     <div>
-                        <h3 style={{
-                            color: '#fff',
-                            fontSize: '18px',
-                            marginBottom: '20px',
-                            fontWeight: '600'
-                        }}>About Adkryoss</h3>
-                        <p style={{
-                            color: '#999',
-                            fontSize: '14px',
-                            lineHeight: '1.8',
-                            marginBottom: '20px'
-                        }}>
+                        <h3 className="text-white text-lg mb-5 font-semibold">About Adkryoss</h3>
+                        <p className="text-[#999] text-sm leading-[1.8] mb-5">
                             We are India's top Digital Marketing Company, based in New Delhi, India. We provide full-suite Internet Marketing services.
                         </p>
-                        <div style={{ display: 'flex', gap: '15px', marginTop: '20px' }}>
-                            <a href="#" style={{
-                                color: '#999',
-                                transition: 'color 0.3s',
-                                display: 'inline-block'
-                            }}>
+                        <div className="flex gap-[15px] mt-5">
+                            <a href="#" className="text-[#999] transition-colors duration-300 inline-block hover:text-white">
                                 <Facebook size={20} />
                             </a>
-                            <a href="#" style={{ color: '#999', transition: 'color 0.3s' }}>
+                            <a href="#" className="text-[#999] transition-colors duration-300 hover:text-white">
                                 <Twitter size={20} />
                             </a>
-                            <a href="#" style={{ color: '#999', transition: 'color 0.3s' }}>
+                            <a href="#" className="text-[#999] transition-colors duration-300 hover:text-white">
                                 <Linkedin size={20} />
                             </a>
-                            <a href="#" style={{ color: '#999', transition: 'color 0.3s' }}>
+                            <a href="#" className="text-[#999] transition-colors duration-300 hover:text-white">
                                 <Instagram size={20} />
                             </a>
-                            <a href="#" style={{ color: '#999', transition: 'color 0.3s' }}>
+                            <a href="#" className="text-[#999] transition-colors duration-300 hover:text-white">
                                 <Youtube size={20} />
                             </a>
                         </div>
@@ -54,13 +35,8 @@ const Footer = () => {
 
                     {/* Column 2: Our Services */}
                     <div>
-                        <h3 style={{
-                            color: '#fff',
-                            fontSize: '18px',
-                            marginBottom: '20px',
-                            fontWeight: '600'
-                        }}>Our Services</h3>
-                        <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px', listStyle: 'none', padding: 0 }}>
+                        <h3 className="text-white text-lg mb-5 font-semibold">Our Services</h3>
+                        <ul className="flex flex-col gap-3 list-none p-0">
                             {[
                                 { name: 'Search Engine Optimization', path: '/services/seo' },
                                 { name: 'Digital Marketing', path: '/services/digital-marketing' },
@@ -71,12 +47,7 @@ const Footer = () => {
                                 { name: 'Web Designing & Development', path: '/services/web-design' }
                             ].map(service => (
                                 <li key={service.name}>
-                                    <Link to={service.path} style={{
-                                        color: '#ccc',
-                                        fontSize: '14px',
-                                        transition: 'color 0.2s',
-                                        textDecoration: 'none'
-                                    }} onMouseEnter={(e) => e.target.style.color = '#fff'} onMouseLeave={(e) => e.target.style.color = '#ccc'}>
+                                    <Link to={service.path} className="text-[#ccc] text-sm transition-colors duration-200 no-underline hover:text-white">
                                         {service.name}
                                     </Link>
                                 </li>
@@ -84,15 +55,10 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 2: Company */}
+                    {/* Column 3: Company */}
                     <div>
-                        <h3 style={{
-                            color: '#fff',
-                            fontSize: '18px',
-                            marginBottom: '20px',
-                            fontWeight: '600'
-                        }}>Company</h3>
-                        <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px', listStyle: 'none', padding: 0 }}>
+                        <h3 className="text-white text-lg mb-5 font-semibold">Company</h3>
+                        <ul className="flex flex-col gap-3 list-none p-0">
                             {[
                                 { name: 'About us', path: '/company/about-us' },
                                 { name: 'Press Releases', path: '/company/press-releases' },
@@ -101,38 +67,22 @@ const Footer = () => {
                                 { name: 'Awards and Recognition', path: '/company/awards' }
                             ].map(link => (
                                 <li key={link.name}>
-                                    <Link to={link.path} style={{
-                                        color: '#ccc',
-                                        fontSize: '14px',
-                                        transition: 'color 0.2s',
-                                        textDecoration: 'none'
-                                    }} onMouseEnter={(e) => e.target.style.color = '#fff'} onMouseLeave={(e) => e.target.style.color = '#ccc'}>
+                                    <Link to={link.path} className="text-[#ccc] text-sm transition-colors duration-200 no-underline hover:text-white">
                                         {link.name}
                                     </Link>
                                 </li>
                             ))}
                         </ul>
 
-                        <h3 style={{
-                            color: '#fff',
-                            fontSize: '18px',
-                            marginBottom: '20px',
-                            marginTop: '30px',
-                            fontWeight: '600'
-                        }}>Tools</h3>
-                        <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px', listStyle: 'none', padding: 0 }}>
+                        <h3 className="text-white text-lg mb-5 mt-[30px] font-semibold">Tools</h3>
+                        <ul className="flex flex-col gap-3 list-none p-0">
                             {[
                                 { name: 'SEO ROI Calculator', path: '/tools/seo-roi' },
                                 { name: 'PPC ROI Calculator', path: '/tools/ppc-roi' },
                                 { name: 'CRO ROI Calculator', path: '/tools/cro-roi' }
                             ].map(tool => (
                                 <li key={tool.name}>
-                                    <Link to={tool.path} style={{
-                                        color: '#ccc',
-                                        fontSize: '14px',
-                                        transition: 'color 0.2s',
-                                        textDecoration: 'none'
-                                    }} onMouseEnter={(e) => e.target.style.color = '#fff'} onMouseLeave={(e) => e.target.style.color = '#ccc'}>
+                                    <Link to={tool.path} className="text-[#ccc] text-sm transition-colors duration-200 no-underline hover:text-white">
                                         {tool.name}
                                     </Link>
                                 </li>
@@ -140,15 +90,10 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 3: Industries */}
+                    {/* Column 4: Industries */}
                     <div>
-                        <h3 style={{
-                            color: '#fff',
-                            fontSize: '18px',
-                            marginBottom: '20px',
-                            fontWeight: '600'
-                        }}>Industries</h3>
-                        <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px', listStyle: 'none', padding: 0 }}>
+                        <h3 className="text-white text-lg mb-5 font-semibold">Industries</h3>
+                        <ul className="flex flex-col gap-3 list-none p-0">
                             {[
                                 { name: 'BFSI', path: '/industry/bfsi' },
                                 { name: 'B2B', path: '/industry/b2b' },
@@ -156,30 +101,15 @@ const Footer = () => {
                                 { name: 'Healthcare', path: '/industry/healthcare' }
                             ].map(industry => (
                                 <li key={industry.name}>
-                                    <Link to={industry.path} style={{
-                                        color: '#ccc',
-                                        fontSize: '14px',
-                                        transition: 'color 0.2s',
-                                        textDecoration: 'none'
-                                    }} onMouseEnter={(e) => e.target.style.color = '#fff'} onMouseLeave={(e) => e.target.style.color = '#ccc'}>
+                                    <Link to={industry.path} className="text-[#ccc] text-sm transition-colors duration-200 no-underline hover:text-white">
                                         {industry.name}
                                     </Link>
                                 </li>
                             ))}
                         </ul>
 
-                        <h3 style={{
-                            color: '#fff',
-                            fontSize: '18px',
-                            marginBottom: '20px',
-                            marginTop: '50px',
-                            fontWeight: '600'
-                        }}>Quick Links</h3>
-                        <div style={{
-                            display: 'grid',
-                            gridTemplateColumns: '1fr 1fr',
-                            gap: '12px 30px'
-                        }}>
+                        <h3 className="text-white text-lg mb-5 mt-[50px] font-semibold">Quick Links</h3>
+                        <div className="grid grid-cols-2 gap-x-[30px] gap-y-3">
                             {[
                                 { name: 'Blog', path: '/blog' },
                                 { name: 'FAQs', path: '/faqs' },
@@ -192,12 +122,7 @@ const Footer = () => {
                                 { name: 'BlogX', path: '/blogx' },
                                 { name: 'Contact Us', path: '/contact' }
                             ].map(link => (
-                                <Link key={link.name} to={link.path} style={{
-                                    color: '#ccc',
-                                    fontSize: '14px',
-                                    transition: 'color 0.2s',
-                                    textDecoration: 'none'
-                                }} onMouseEnter={(e) => e.target.style.color = '#fff'} onMouseLeave={(e) => e.target.style.color = '#ccc'}>
+                                <Link key={link.name} to={link.path} className="text-[#ccc] text-sm transition-colors duration-200 no-underline hover:text-white">
                                     {link.name}
                                 </Link>
                             ))}
@@ -206,37 +131,24 @@ const Footer = () => {
 
                     {/* Column 5: Contact Info */}
                     <div>
-                        <h3 style={{
-                            color: '#fff',
-                            fontSize: '18px',
-                            marginBottom: '20px',
-                            fontWeight: '600'
-                        }}>Contact Info</h3>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-                            <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                                <MapPin size={18} color="#999" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                <p style={{ color: '#999', fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
+                        <h3 className="text-white text-lg mb-5 font-semibold">Contact Info</h3>
+                        <div className="flex flex-col gap-[15px]">
+                            <div className="flex gap-3 items-start">
+                                <MapPin size={18} className="text-[#999] mt-0.5 shrink-0" />
+                                <p className="text-[#999] text-sm leading-[1.6] m-0">
                                     507, 5th Floor, Vipul Trade Center Sector – 48,
                                     Sohna Road Gurgaon,<br /> Haryana - 122018, Gurugram, India
                                 </p>
                             </div>
-                            <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                                <Phone size={18} color="#999" style={{ flexShrink: 0 }} />
-                                <a href="tel:+919910308266" style={{
-                                    color: '#999',
-                                    fontSize: '14px',
-                                    transition: 'color 0.3s'
-                                }}>
+                            <div className="flex gap-3 items-center">
+                                <Phone size={18} className="text-[#999] shrink-0" />
+                                <a href="tel:+919910308266" className="text-[#999] text-sm transition-colors duration-300 hover:text-white">
                                     0124 429 9985
                                 </a>
                             </div>
-                            <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                                <Mail size={18} color="#999" style={{ flexShrink: 0 }} />
-                                <a href="mailto:enquiry@adkryoss.com" style={{
-                                    color: '#999',
-                                    fontSize: '14px',
-                                    transition: 'color 0.3s'
-                                }}>
+                            <div className="flex gap-3 items-center">
+                                <Mail size={18} className="text-[#999] shrink-0" />
+                                <a href="mailto:enquiry@adkryoss.com" className="text-[#999] text-sm transition-colors duration-300 hover:text-white">
                                     enquiry@adkryoss.com
                                 </a>
                             </div>
@@ -248,43 +160,18 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div style={{
-                    borderTop: '1px solid #333',
-                    paddingTop: '30px',
-                    paddingBottom: '30px',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    flexWrap: 'wrap',
-                    gap: '20px'
-                }}>
-                    <p style={{
-                        fontSize: '14px',
-                        color: '#666',
-                        margin: 0
-                    }}>
+                <div className="border-t border-[#333] py-[30px] flex justify-between items-center flex-wrap gap-5">
+                    <p className="text-sm text-[#666] m-0">
                         © {new Date().getFullYear()} Adkryoss. All Rights Reserved.
                     </p>
-                    <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-                        <Link to="/privacy-policy" style={{
-                            fontSize: '14px',
-                            color: '#666',
-                            transition: 'color 0.3s'
-                        }}>
+                    <div className="flex gap-5 flex-wrap">
+                        <Link to="/privacy-policy" className="text-sm text-[#666] transition-colors duration-300 hover:text-white">
                             Privacy Policy
                         </Link>
-                        <Link to="/terms-conditions" style={{
-                            fontSize: '14px',
-                            color: '#666',
-                            transition: 'color 0.3s'
-                        }}>
+                        <Link to="/terms-conditions" className="text-sm text-[#666] transition-colors duration-300 hover:text-white">
                             Terms & Conditions
                         </Link>
-                        <Link to="/sitemap" style={{
-                            fontSize: '14px',
-                            color: '#666',
-                            transition: 'color 0.3s'
-                        }}>
+                        <Link to="/sitemap" className="text-sm text-[#666] transition-colors duration-300 hover:text-white">
                             Sitemap
                         </Link>
                     </div>

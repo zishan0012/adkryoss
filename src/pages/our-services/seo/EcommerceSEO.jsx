@@ -134,54 +134,51 @@ const EcommerceSEO = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section style={{
-                background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-                color: '#fff',
-                padding: '120px 0 80px',
-                textAlign: 'center'
-            }}>
-                <div className="container">
-                    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-                        <h1 style={{ fontSize: '56px', fontWeight: '800', marginBottom: '24px', letterSpacing: '-1px' }}>
+            <section
+                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                style={{
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+                }}
+            >
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    {/* LEFT CONTENT */}
+                    <div className="text-left relative z-10 text-white">
+                        <h1 className="text-[48px] font-bold mb-[16px] tracking-[-1px] text-white">
                             Ecommerce SEO Services
                         </h1>
-                        <p style={{ fontSize: '28px', fontWeight: '600', marginBottom: '24px', color: '#0066cc' }}>
+                        <h3 className="text-[24px] font-medium mb-[24px] text-white">
                             Turn Product Pages into Revenue Engines
-                        </p>
-                        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#cbd5e1', marginBottom: '40px' }}>
+                        </h3>
+                        <p className="text-[18px] leading-[1.8] text-white mb-[32px]">
                             Ecommerce is no longer about just listing products. It’s about owning high-intent search moments. When customers search with buying intent, your store must appear first — not just visible, but irresistible.
                         </p>
-                        <div style={{
-                            background: 'rgba(255,255,255,0.05)',
-                            padding: '30px',
-                            borderRadius: '20px',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            backdropFilter: 'blur(10px)'
-                        }}>
-                            <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#fff', margin: 0 }}>
-                                At Adkryoss managed by Clink Consultancy Services Private Limited, we build performance-driven Ecommerce SEO strategies designed to increase visibility, improve product discoverability, and maximize conversion value.
+                        <div className="bg-[rgba(255,255,255,0.05)] p-[24px] rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-[32px]">
+                            <p className="text-[18px] leading-[1.8] text-white m-0">
+                                At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we build performance-driven Ecommerce SEO strategies designed to increase visibility, improve product discoverability, and maximize conversion value.
                             </p>
                         </div>
+                    </div>
+                    {/* RIGHT IMAGE */}
+                    <div className="flex justify-center md:justify-end relative z-10">
+                        <img
+                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Ecommerce-SEO.webp"
+                            alt="Ecommerce SEO"
+                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                        />
                     </div>
                 </div>
             </section>
 
             {/* Why Ecommerce SEO */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-[80px] bg-white">
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '40px', color: '#0f172a' }}>
+                    <h2 className="text-[42px] font-bold mb-[40px] text-[#0f172a]">
                         Why Ecommerce SEO is a Growth Multiplier
                     </h2>
-                    <p style={{ fontSize: '18px', color: '#475569', maxWidth: '800px', margin: '0 auto 50px' }}>
+                    <p className="text-[18px] text-[#475569] max-w-[800px] mx-auto mb-[50px]">
                         Online stores face complex SEO challenges. Without a structured SEO framework, even the best products stay invisible.
                     </p>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '20px',
-                        marginBottom: '60px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-[20px] mb-[60px]">
                         {[
                             "Thousands of dynamic URLs",
                             "Duplicate product descriptions",
@@ -189,88 +186,41 @@ const EcommerceSEO = () => {
                             "Category cannibalization",
                             "Seasonal ranking volatility"
                         ].map((challenge, i) => (
-                            <div key={i} style={{
-                                padding: '24px',
-                                background: '#eff6ff',
-                                borderRadius: '15px',
-                                borderLeft: '5px solid #0066cc',
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '15px',
-                                transition: 'all 0.3s',
-                                width: 'calc(33.333% - 14px)',
-                                minWidth: '280px',
-                                flexGrow: 1,
-                                maxWidth: '380px'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-5px) scale(1.02)';
-                                    e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,102,204,0.1)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }}>
-                                <Zap size={20} style={{ color: '#0066cc' }} />
-                                <span style={{ fontWeight: '700', color: '#1e293b' }}>{challenge}</span>
+                            <div key={i} className="p-[24px] bg-[#eff6ff] rounded-[15px] border-l-[5px] border-[#0066cc] flex items-center gap-[15px] transition-all duration-300 w-[calc(33.333%-14px)] min-w-[280px] flex-grow max-w-[380px] hover:-translate-y-[5px] hover:scale-[1.02] hover:shadow-[0_10px_20px_rgba(0,102,204,0.1)]">
+                                <Zap size={20} className="text-[#0066cc]" />
+                                <span className="font-semibold text-[#1e293b]">{challenge}</span>
                             </div>
                         ))}
                     </div>
-                    <p style={{ fontSize: '20px', fontWeight: '700', color: '#0066cc' }}>
+                    <p className="text-[20px] font-semibold text-[#0066cc]">
                         Our approach blends technical precision, content depth, search intent mapping, and conversion intelligence to build scalable ecommerce growth.
                     </p>
                 </div>
             </section>
 
             {/* Framework Section */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
+            <section className="py-[80px] bg-[#f8fafc]">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>
+                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">
                         Our Ecommerce SEO Framework
                     </h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '30px'
-                    }}>
+                    <div className="flex flex-wrap justify-center gap-[30px]">
                         {framework.map((item, i) => (
-                            <div key={i} style={{
-                                background: '#fff',
-                                padding: '40px',
-                                borderRadius: '24px',
-                                border: '1px solid #e2e8f0',
-                                width: 'calc(33.333% - 20px)',
-                                minWidth: '320px',
-                                flexGrow: 1,
-                                maxWidth: '400px',
-                                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                                cursor: 'pointer'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(-12px) scale(1.02)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,102,204,0.1)';
-                                    e.currentTarget.style.borderColor = '#0066cc';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                    e.currentTarget.style.borderColor = '#e2e8f0';
-                                }}>
-                                <div style={{ color: '#0066cc', marginBottom: '20px' }}>{item.icon}</div>
-                                <h3 style={{ fontSize: '22px', fontWeight: '800', marginBottom: '15px', color: '#0f172a' }}>
+                            <div key={i} className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] w-[calc(33.333%-20px)] min-w-[320px] flex-grow max-w-[400px] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer hover:-translate-y-[12px] hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
+                                <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
+                                <h3 className="text-[22px] font-bold mb-[15px] text-[#0f172a]">
                                     {i + 1}. {item.title}
                                 </h3>
-                                <p style={{ fontSize: '15px', color: '#475569', marginBottom: '20px', lineHeight: '1.6' }}>{item.desc}</p>
-                                <ul style={{ listStyle: 'none', padding: 0, marginBottom: '20px' }}>
+                                <p className="text-[15px] text-[#475569] mb-[20px] leading-[1.6]">{item.desc}</p>
+                                <ul className="list-none p-0 mb-[20px]">
                                     {item.points.map((pt, idx) => (
-                                        <li key={idx} style={{ display: 'flex', gap: '10px', marginBottom: '12px', fontSize: '14px', color: '#334155' }}>
-                                            <CheckCircle2 size={16} style={{ color: '#0066cc', flexShrink: 0, marginTop: '2px' }} />
+                                        <li key={idx} className="flex gap-[10px] mb-[20px] text-[14px] text-[#334155]">
+                                            <CheckCircle2 size={16} className="text-[#0066cc] shrink-0 mt-[2px]" />
                                             {pt}
                                         </li>
                                     ))}
                                 </ul>
-                                <p style={{ fontSize: '14px', color: '#0066cc', fontWeight: '600', padding: '15px', background: '#eff6ff', borderRadius: '12px', margin: 0 }}>
+                                <p className="text-[14px] text-[#0066cc] font-medium p-[15px] bg-[#eff6ff] rounded-[12px] m-0">
                                     {item.extra}
                                 </p>
                             </div>
@@ -280,22 +230,22 @@ const EcommerceSEO = () => {
             </section>
 
             {/* Platforms & Industries */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-[80px] bg-white">
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
+                    <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-[40px]">
                         <div>
-                            <h2 style={{ fontSize: '32px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>Platforms We Work With</h2>
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                            <h2 className="text-[32px] font-bold mb-[30px] text-[#0f172a]">Platforms We Work With</h2>
+                            <div className="flex flex-wrap gap-[12px]">
                                 {platforms.map((plat, i) => (
-                                    <div key={i} style={{ padding: '12px 24px', background: '#f8fafc', borderRadius: '50px', fontWeight: '700', color: '#1e293b', border: '1px solid #e2e8f0' }}>{plat}</div>
+                                    <div key={i} className="py-[12px] px-[24px] bg-[#f8fafc] rounded-[50px] font-semibold text-[#1e293b] border border-[#e2e8f0]">{plat}</div>
                                 ))}
                             </div>
                         </div>
                         <div>
-                            <h2 style={{ fontSize: '32px', fontWeight: '800', marginBottom: '30px', color: '#0f172a' }}>Industries We Serve</h2>
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                            <h2 className="text-[32px] font-bold mb-[30px] text-[#0f172a]">Industries We Serve</h2>
+                            <div className="flex flex-wrap gap-[12px]">
                                 {industries.map((ind, i) => (
-                                    <div key={i} style={{ padding: '12px 24px', background: '#0066cc', color: '#fff', borderRadius: '50px', fontWeight: '700' }}>{ind}</div>
+                                    <div key={i} className="py-[12px] px-[24px] bg-[#0066cc] text-white rounded-[50px] font-semibold">{ind}</div>
                                 ))}
                             </div>
                         </div>
@@ -304,10 +254,10 @@ const EcommerceSEO = () => {
             </section>
 
             {/* Why Choose Our Approach */}
-            <section style={{ padding: '80px 0', backgroundColor: '#0f172a', color: '#fff' }}>
+            <section className="py-[80px] bg-[#0f172a] text-white">
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', marginBottom: '50px', color: '#fff' }}>Why Choose Our Ecommerce SEO Approach?</h2>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
+                    <h2 className="text-[42px] font-bold mb-[50px] text-white">Why Choose Our Ecommerce SEO Approach?</h2>
+                    <div className="flex flex-wrap justify-center gap-[20px]">
                         {[
                             "Revenue-first SEO strategy",
                             "Data-driven keyword targeting",
@@ -315,72 +265,39 @@ const EcommerceSEO = () => {
                             "Technical + Content + Authority integration",
                             "Transparent reporting & measurable KPIs"
                         ].map((item, i) => (
-                            <div key={i} style={{
-                                padding: '20px 40px',
-                                background: 'rgba(255,255,255,0.05)',
-                                borderRadius: '15px',
-                                border: '1px solid rgba(255,255,255,0.1)',
-                                fontWeight: '700',
-                                fontSize: '18px',
-                                color: '#fff',
-                                transition: 'all 0.3s'
-                            }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = '#0066cc';
-                                    e.currentTarget.style.transform = 'scale(1.05)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
-                                    e.currentTarget.style.transform = 'scale(1)';
-                                }}>
+                            <div key={i} className="py-[20px] px-[40px] bg-[rgba(255,255,255,0.05)] rounded-[15px] border border-[rgba(255,255,255,0.1)] font-semibold text-[18px] text-white transition-all duration-300 hover:bg-[#0066cc] hover:scale-[1.05]">
                                 ✔ {item}
                             </div>
                         ))}
                     </div>
-                    <p style={{ marginTop: '50px', fontSize: '20px', color: '#cbd5e1', maxWidth: '900px', margin: '50px auto 0' }}>
+                    <p className="mt-[50px] text-[20px] text-[#e2e8f0] max-w-[900px] mx-auto">
                         Adkryoss managed by Clink Consultancy Services Private Limited doesn’t offer isolated SEO services — we build organic revenue ecosystems.
                     </p>
                 </div>
             </section>
 
             {/* Working Model */}
-            <section style={{ padding: '80px 0', backgroundColor: '#fff' }}>
+            <section className="py-[80px] bg-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '42px', fontWeight: '800', textAlign: 'center', marginBottom: '60px', color: '#0f172a' }}>Our Working Model</h2>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
+                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">Our Working Model</h2>
+                    <div className="flex flex-wrap justify-center gap-[20px]">
                         {workingModel.map((model, i) => (
-                            <div key={i} style={{
-                                padding: '20px 30px',
-                                background: '#f8fafc',
-                                borderRadius: '12px',
-                                fontWeight: '700',
-                                color: '#1e293b',
-                                border: '1px solid #e2e8f0',
-                                textAlign: 'center',
-                                flexGrow: 1,
-                                minWidth: '200px'
-                            }}>
+                            <div key={i} className="py-[20px] px-[30px] bg-[#f8fafc] rounded-[12px] font-semibold text-[#1e293b] border border-[#e2e8f0] text-center flex-grow min-w-[200px]">
                                 {model}
                             </div>
                         ))}
                     </div>
-                    <div style={{ textAlign: 'center', marginTop: '40px' }}>
-                        <p style={{ fontSize: '18px', fontWeight: '600', color: '#475569' }}>We operate as your extended growth partner — not just a vendor.</p>
+                    <div className="text-center mt-[40px]">
+                        <p className="text-[18px] font-medium text-[#475569]">We operate as your extended growth partner — not just a vendor.</p>
                     </div>
                 </div>
             </section>
 
             {/* Results You Can Expect */}
-            <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
+            <section className="py-[80px] bg-[#f8fafc]">
                 <div className="container text-center">
-                    <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '50px', color: '#0f172a' }}>Results You Can Expect</h2>
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '20px',
-                        marginBottom: '40px'
-                    }}>
+                    <h2 className="text-[36px] font-bold mb-[50px] text-[#0f172a]">Results You Can Expect</h2>
+                    <div className="flex flex-wrap justify-center gap-[20px] mb-[40px]">
                         {[
                             { title: "Organic Visibility", txt: "Higher organic product visibility" },
                             { title: "Rankings", txt: "Improved category rankings" },
@@ -389,52 +306,28 @@ const EcommerceSEO = () => {
                             { title: "Cost Savings", txt: "Reduced dependency on paid ads" },
                             { title: "Revenue", txt: "Long-term scalable revenue growth" }
                         ].map((item, i) => (
-                            <div key={i} style={{
-                                padding: '30px',
-                                background: '#fff',
-                                borderRadius: '20px',
-                                boxShadow: '0 5px 15px rgba(0,0,0,0.05)',
-                                width: 'calc(33.333% - 14px)',
-                                minWidth: '250px',
-                                flexGrow: 1,
-                                maxWidth: '350px'
-                            }}>
-                                <h3 style={{ fontSize: '18px', fontWeight: '800', marginBottom: '10px', color: '#0066cc' }}>{item.title}</h3>
-                                <p style={{ color: '#334155', fontWeight: '600', margin: 0 }}>{item.txt}</p>
+                            <div key={i} className="p-[30px] bg-white rounded-[20px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] w-[calc(33.333%-14px)] min-w-[250px] flex-grow max-w-[350px]">
+                                <h3 className="text-[18px] font-bold mb-[10px] text-[#0066cc]">{item.title}</h3>
+                                <p className="text-[#334155] font-medium m-0">{item.txt}</p>
                             </div>
                         ))}
                     </div>
-                    <p style={{ fontSize: '20px', color: '#475569', fontStyle: 'italic' }}>
+                    <p className="text-[20px] text-[#475569] italic">
                         Ecommerce SEO is not a one-time fix. It’s a continuous growth engine.
                     </p>
                 </div>
             </section>
 
             {/* Final CTA */}
-            <section style={{ padding: '100px 0', textAlign: 'center', background: 'linear-gradient(135deg, #0066cc 0%, #004e92 100%)', color: '#fff' }}>
+            <section className="py-[100px] text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white">
                 <div className="container">
-                    <h2 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '24px' }}>
+                    <h2 className="text-[48px] font-bold mb-[24px] text-white">
                         Ready to Scale Your Ecommerce Revenue?
                     </h2>
-                    <p style={{ fontSize: '22px', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', color: '#eff6ff' }}>
+                    <p className="text-[22px] mb-[40px] max-w-[800px] mx-auto text-[#eff6ff]">
                         If you want to dominate high-intent search and build sustainable organic revenue, it’s time to implement a strategic ecommerce SEO framework. Partner with Adkryoss and turn your store into a revenue powerhouse.
                     </p>
-                    <Link to="/contact" style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '12px',
-                        background: '#fff',
-                        color: '#0066cc',
-                        padding: '20px 50px',
-                        borderRadius: '50px',
-                        fontSize: '18px',
-                        fontWeight: '800',
-                        textDecoration: 'none',
-                        transition: 'all 0.3s',
-                        boxShadow: '0 10px 30px rgba(0,0,0,0.2)'
-                    }}
-                        onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px) scale(1.05)'}
-                        onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0) scale(1)'}>
+                    <Link to="/contact" className="inline-flex items-center gap-[12px] bg-white text-[#0066cc] py-[20px] px-[50px] rounded-[50px] text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:-translate-y-[5px] hover:scale-[1.05]">
                         Start Your Growth Now
                         <ArrowRight size={20} />
                     </Link>
