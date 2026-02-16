@@ -86,7 +86,7 @@ const GuestPosting = () => {
         <div className="bg-white text-slate-900">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -94,13 +94,13 @@ const GuestPosting = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 text-white">
-                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Guest Posting Services
                         </h1>
-                        <h3 className="text-[24px] font-medium mb-6 text-white">
+                        <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Authority That Ranks. Visibility That Converts.
                         </h3>
-                        <p className="text-[18px] leading-[1.8] text-gray-200 mb-8 font-medium">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-gray-200 font-medium">
                             Guest posting is no longer about backlinks — it’s about building digital authority, trust, and sustainable organic growth. <br />
                             We craft strategic, niche-relevant, high-authority guest posting campaigns that improve rankings, drive referral traffic, and strengthen your brand credibility in competitive markets.
                         </p>
@@ -109,9 +109,9 @@ const GuestPosting = () => {
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Service-Guest-Posting.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/guest-posting-services.webp"
                             alt="Guest Posting"
-                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] animate-float"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] animate-float"
                         />
                     </div>
                 </div>
@@ -124,14 +124,14 @@ const GuestPosting = () => {
                         <h2 className="text-[42px] font-semibold text-slate-900 mb-5 leading-tight">
                             Why Guest Posting Still Dominates SEO
                         </h2>
-                        <p className="text-[18px] text-[#0066CC] font-semibold mb-8">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
                             Search engines prioritize trust signals, relevance, and authority. Guest posting helps you build all three.
                         </p>
                     </div>
 
                     <div className="max-w-4xl mx-auto">
                         <div className="bg-white p-10 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-slate-100 mb-12 transition-all duration-300 hover:shadow-xl">
-                            <p className="text-[18px] text-slate-700 leading-[1.8] mb-8 font-medium">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8] font-medium">
                                 A well-executed guest posting strategy can:
                             </p>
                             <div className="grid md:grid-cols-2 gap-4 mb-8">
@@ -148,7 +148,7 @@ const GuestPosting = () => {
                                     </div>
                                 ))}
                             </div>
-                            <p className="text-[18px] text-slate-700 leading-[1.8] mb-8">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8]">
                                 At Adkryoss managed by <span className="font-semibold text-[#0066CC]">Clink Consultancy Services Private Limited</span>, guest posting is not treated as a link-buying activity — it is positioned as a strategic authority-building framework aligned with your SEO roadmap.
                             </p>
 
@@ -162,7 +162,9 @@ const GuestPosting = () => {
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[42px] font-semibold text-slate-900 mb-5 leading-tight">Our Guest Posting Strategy Framework</h2>
-                        <p className="text-[20px] text-[#0066CC] font-semibold mb-4">We follow a research-driven, compliance-focused, and ROI-oriented process.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                            We follow a research-driven, compliance-focused, and ROI-oriented process.
+                        </p>
                     </div>
 
                     <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -189,7 +191,9 @@ const GuestPosting = () => {
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[42px] font-semibold mb-5 leading-tight text-white">Types of Guest Posting We Offer</h2>
-                        <p className="text-[18px] text-blue-400 font-medium italic mb-4">We design campaigns based on your growth stage and industry competition.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 text-blue-400 font-medium italic">
+                            We design campaigns based on your growth stage and industry competition.
+                        </p>
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-8">
@@ -198,13 +202,13 @@ const GuestPosting = () => {
                                 <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors">
                                     {React.cloneElement(item.icon, { size: 28, className: "group-hover:text-white" })}
                                 </div>
-                                <h3 className="text-[18px] font-semibold text-white group-hover:text-blue-400 transition-colors">
+                                <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white group-hover:text-blue-400 transition-colors">
                                     {item.title}
                                 </h3>
                             </div>
                         ))}
                     </div>
-                    <p className="mt-12 text-center text-white max-w-2xl mx-auto italic">
+                    <p className="text-[16px] md:text-[18px] mb-6 mt-12 text-center text-white max-w-2xl mx-auto italic">
                         Each campaign is structured to align with your keyword strategy and long-term ranking goals.
                     </p>
 
@@ -216,7 +220,9 @@ const GuestPosting = () => {
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[42px] font-semibold text-slate-900 mb-5 leading-tight">What Makes Our Guest Posting Different?</h2>
-                        <p className="text-[18px] text-[#0066CC] font-semibold mb-4">The difference is in execution.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                            The difference is in execution.
+                        </p>
                         <p className="text-slate-600 font-medium italic mb-8">
                             Unlike bulk link sellers, Adkryoss managed by <span className="text-[#0066CC]">Clink Consultancy Services Private Limited</span> focuses on:
                         </p>
@@ -233,7 +239,7 @@ const GuestPosting = () => {
 
                     <div className="max-w-4xl mx-auto p-10 bg-blue-500 rounded-[30px] text-white text-center shadow-2xl relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
-                        <p className="text-2xl font-extrabold mb-0 text-white italic">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-2xl font-extrabold text-white italic">
                             "We build links that search engines reward — not penalize."
                         </p>
 
@@ -246,7 +252,9 @@ const GuestPosting = () => {
                 <div className="container px-6">
                     <div className="max-w-5xl mx-auto text-center">
                         <h2 className="text-[42px] font-semibold text-slate-900 mb-8 leading-tight">Industries We Serve</h2>
-                        <p className="text-[18px] text-slate-600 font-semibold mb-12">We create guest posting campaigns across multiple domains:</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 font-semibold">
+                            We create guest posting campaigns across multiple domains:
+                        </p>
                         <div className="flex flex-wrap justify-center gap-4 mb-16">
                             {industries.map((industry, index) => (
                                 <div key={index} className="px-8 py-4 bg-slate-50 border-2 border-slate-100 rounded-xl font-extrabold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm">
@@ -264,10 +272,10 @@ const GuestPosting = () => {
                 <div className="container px-6">
                     <div className="max-w-4xl mx-auto text-center mb-16">
                         <h2 className="text-[42px] font-semibold mb-8 text-white">Our Approach is Built for Long-Term SEO Growth</h2>
-                        <p className="text-[18px] text-blue-400 font-medium italic mb-12">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-blue-400 font-medium italic">
                             Guest posting works best when integrated into a larger SEO ecosystem.
                         </p>
-                        <p className="text-white mb-12">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-white">
                             At Adkryoss managed by <span className="font-bold text-blue-400">Clink Consultancy Services Private Limited</span>, guest posting is strategically aligned with:
                         </p>
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -278,7 +286,7 @@ const GuestPosting = () => {
                                 </div>
                             ))}
                         </div>
-                        <p className="mt-16 text-white font-medium leading-relaxed italic border-t border-white/10 pt-12">
+                        <p className="text-[16px] md:text-[18px] mb-6 mt-16 text-white font-medium leading-relaxed italic border-t border-white/10 pt-12">
                             This integrated model ensures your backlinks contribute to measurable growth — not vanity metrics.
                         </p>
                     </div>
@@ -308,7 +316,9 @@ const GuestPosting = () => {
                         </div>
 
                         <div className="bg-slate-900 text-white p-10 rounded-[30px] shadow-2xl">
-                            <p className="text-xl font-medium mb-4 text-white">We don’t promise “1000 links in 30 days.”</p>
+                            <p className="text-[16px] md:text-[18px] mb-6 text-xl font-medium text-white">
+                                We don’t promise “1000 links in 30 days.”
+                            </p>
                             <p className="text-2xl font-black text-blue-400 italic">We deliver strategic authority that compounds over time.</p>
                         </div>
 
@@ -321,9 +331,11 @@ const GuestPosting = () => {
                 <div className="container px-6">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-[42px] font-bold text-slate-900 mb-8 leading-tight">Why Choose Adkryoss for Guest Posting?</h2>
-                        <p className="text-[20px] text-[#0066CC] font-black mb-12">Because authority is earned — not bought.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-black">
+                            Because authority is earned — not bought.
+                        </p>
 
-                        <p className="text-[18px] text-slate-600 leading-relaxed mb-12">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 leading-relaxed">
                             Adkryoss managed by <span className="font-bold text-slate-900">Clink Consultancy Services Private Limited</span> operates with a performance-first mindset. Every campaign is designed with measurable KPIs, traffic potential, and business impact in focus.
                         </p>
 
@@ -356,7 +368,7 @@ const GuestPosting = () => {
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
                 <div className="container max-w-4xl mx-auto">
                     <h2 className="text-[42px] font-black mb-8 leading-tight">Ready to Build Authority That Ranks?</h2>
-                    <p className="text-xl mb-12 text-white max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white max-w-3xl mx-auto leading-relaxed">
                         Let’s create a guest posting strategy that positions your brand as an industry leader. <br />
                         Connect with our SEO strategists today and scale your organic visibility with confidence.
                     </p>

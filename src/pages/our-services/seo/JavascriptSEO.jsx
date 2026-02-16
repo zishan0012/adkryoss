@@ -127,20 +127,20 @@ const JavascriptSEO = () => {
         <div className="bg-white">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     <div className="text-left relative z-10 text-white">
-                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             JavaScript SEO Services
                         </h1>
-                        <h3 className="text-[24px] font-medium mb-6 text-white">
+                        <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Make Your Dynamic Website Search-Ready
                         </h3>
-                        <p className="text-[18px] leading-[1.8] text-white mb-8">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Modern websites run on JavaScript. Google doesn't always. If your content loads after rendering, search engines might never see it. We ensure your JS-driven website is fully crawlable, indexable, and optimized for maximum visibility.
                         </p>
                         <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px]">
@@ -151,9 +151,9 @@ const JavascriptSEO = () => {
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/11/javascript-seo-img.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/05/Javascript-SEO-Services.webp"
                             alt="JavaScript SEO"
-                            className="max-w-[500px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
@@ -167,7 +167,7 @@ const JavascriptSEO = () => {
                             <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
                                 Why JavaScript SEO Matters
                             </h2>
-                            <p className="text-[18px] text-[#475569] leading-[1.8] mb-6">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
                                 Today's websites rely heavily on frameworks like React, Angular, and Vue. While they deliver speed and user experience, they often create invisible barriers for search engines.
                             </p>
                             <div className="space-y-4">
@@ -198,7 +198,9 @@ const JavascriptSEO = () => {
                         <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">
                             Our JavaScript SEO Approach
                         </h2>
-                        <p className="text-[20px] text-[#64748b] font-medium">Technical Precision. Strategic SEO Engineering.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
+                            Technical Precision. Strategic SEO Engineering.
+                        </p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-10">
                         {framework.map((phase, i) => (
@@ -224,7 +226,7 @@ const JavascriptSEO = () => {
             <section className="py-20 bg-[#0f172a] text-white">
                 <div className="container text-center">
                     <h2 className="text-[42px] font-bold mb-5 text-white">Framework-Specific Expertise</h2>
-                    <p className="text-[20px] text-[#cbd5e1] mb-[60px] max-w-[800px] mx-auto">
+                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto">
                         Whether you're running eCommerce, SaaS, or an Enterprise app, we align SEO with your development stack.
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
@@ -242,7 +244,7 @@ const JavascriptSEO = () => {
             <section className="py-20 bg-white">
                 <div className="container text-center">
                     <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">Industries We Support</h2>
-                    <p className="text-[20px] text-[#64748b] mb-[60px]">
+                    <p className="text-[16px] md:text-[18px] mb-6">
                         Each industry demands a custom rendering and crawl strategy, which we design with long-term scalability in mind.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">

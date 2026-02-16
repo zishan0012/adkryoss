@@ -170,7 +170,7 @@ const ContentWritingServices = () => {
         <div className="bg-white text-slate-900">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -178,16 +178,16 @@ const ContentWritingServices = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 text-white">
-                        <h1 className="text-[48px] font-semibold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Content Writing Services
                         </h1>
-                        <h3 className="text-[24px] font-medium mb-6 text-white">
+                        <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Words That Don’t Just Rank. They Convert.
                         </h3>
-                        <p className="text-[18px] leading-[1.8] text-white text-[#555] mb-8 font-medium">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white font-medium">
                             Strategic, search-optimized and conversion-driven content crafted to build authority, attract the right audience, and turn attention into measurable growth.
                         </p>
-                        <p className="text-[18px] leading-[1.8] text-white text-[#555] mb-8">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             At Adkryoss managed by <span className="font-semibold text-black">Clink Consultancy Services Private Limited</span>, we create high-performance content ecosystems that fuel SEO, paid campaigns, social media, and brand positioning—under one unified strategy.
                         </p>
 
@@ -195,9 +195,9 @@ const ContentWritingServices = () => {
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Service-Content-Writing.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/03/Content-Writing-Services.png"
                             alt="Content Writing"
-                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] animate-float"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] animate-float"
                         />
                     </div>
                 </div>
@@ -210,17 +210,17 @@ const ContentWritingServices = () => {
                         <h2 className="text-[42px] font-semibold text-slate-900 mb-5 leading-tight">
                             Why Content is the Growth Engine of Modern Brands
                         </h2>
-                        <p className="text-[18px] text-[#0066CC] font-semibold mb-8">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
                             In today’s digital economy, content is not just communication—it’s infrastructure.
                         </p>
                     </div>
 
                     <div className="max-w-4xl mx-auto">
                         <div className="bg-white p-10 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-slate-100 mb-12 transition-all duration-300 hover:shadow-xl">
-                            <p className="text-[18px] text-slate-700 leading-[1.8] mb-8 font-medium">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8] font-medium">
                                 It influences search visibility, buyer trust, conversion rates, retention, and even investor perception. Businesses that treat content as a strategic asset dominate search results and customer conversations.
                             </p>
-                            <p className="text-[18px] text-slate-700 leading-[1.8] mb-8">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8]">
                                 At Adkryoss managed by <span className="font-semibold text-[#0066CC]">Clink Consultancy Services Private Limited</span>, we design content frameworks aligned with search intent, audience psychology, and funnel stages—so every piece has a purpose.
                             </p>
 
@@ -234,7 +234,9 @@ const ContentWritingServices = () => {
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[42px] font-semibold text-slate-900 mb-5 leading-tight">Our Content Writing Expertise</h2>
-                        <p className="text-[20px] text-[#0066CC] font-semibold mb-4">We don’t write for word count. We write for performance.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                            We don’t write for word count. We write for performance.
+                        </p>
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-10">
@@ -271,8 +273,10 @@ const ContentWritingServices = () => {
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[42px] font-semibold mb-5 leading-tight text-white">Our Approach: Strategy First. Words Next.</h2>
-                        <p className="text-[18px] text-blue-400 font-medium italic mb-4">Unlike traditional content agencies, we operate on a performance marketing framework.</p>
-                        <p className="text-[16px] text-white max-w-3xl mx-auto">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-blue-400 font-medium italic">
+                            Unlike traditional content agencies, we operate on a performance marketing framework.
+                        </p>
+                        <p className="text-[16px] md:text-[18px] mb-6 text-white max-w-3xl mx-auto">
                             At Adkryoss managed by <span className="font-semibold text-blue-400">Clink Consultancy Services Private Limited</span>, every content project follows a structured methodology:
                         </p>
                     </div>
@@ -281,7 +285,7 @@ const ContentWritingServices = () => {
                         {steps.map((item, index) => (
                             <div key={index} className="relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
                                 <div className="text-blue-500 font-extrabold text-xl mb-4 group-hover:scale-110 transition-transform">{item.step}</div>
-                                <h3 className="text-[20px] font-semibold mb-6 text-white group-hover:text-blue-400 transition-colors leading-tight">
+                                <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white group-hover:text-blue-400 transition-colors leading-tight">
                                     {item.title}
                                 </h3>
                                 <div className="space-y-3">
@@ -306,7 +310,9 @@ const ContentWritingServices = () => {
                 <div className="container px-6">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-[42px] font-bold text-slate-900 mb-8 leading-tight">Industries We Serve</h2>
-                        <p className="text-[18px] text-slate-600 font-bold mb-12">We deliver domain-specific content expertise across:</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 font-bold">
+                            We deliver domain-specific content expertise across:
+                        </p>
                         <div className="flex flex-wrap justify-center gap-4 mb-12">
                             {industries.map((industry, index) => (
                                 <div key={index} className="px-6 py-4 bg-slate-50 border-2 border-slate-100 rounded-xl font-bold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1">
@@ -314,7 +320,7 @@ const ContentWritingServices = () => {
                                 </div>
                             ))}
                         </div>
-                        <p className="text-[18px] text-slate-600 italic font-medium leading-[1.8]">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 italic font-medium leading-[1.8]">
                             Our writers understand industry nuances, compliance sensitivity, and audience behavior across sectors.
                         </p>
                     </div>
@@ -361,8 +367,10 @@ const ContentWritingServices = () => {
                         <h2 className="text-[36px] font-black mb-10 leading-tight">Content That Builds Authority, Not Just Traffic</h2>
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
-                                <p className="text-xl font-bold mb-6 text-white italic">"Ranking is important. But authority sustains growth."</p>
-                                <p className="text-lg opacity-90 leading-relaxed mb-6 text-white">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-xl font-bold text-white italic">
+                                    "Ranking is important. But authority sustains growth."
+                                </p>
+                                <p className="text-[16px] md:text-[18px] mb-6 text-lg opacity-90 leading-relaxed text-white">
                                     We build topical authority through structured content clusters, semantic keyword integration, and value-first writing aligned with Google’s EEAT principles.
                                 </p>
                                 <div className="p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20">
@@ -392,17 +400,19 @@ const ContentWritingServices = () => {
             <section className="py-24 bg-slate-900 text-white text-center relative px-6">
                 <div className="max-w-4xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 p-16 rounded-[40px] shadow-2xl group hover:border-blue-500/50 transition-all">
                     <h2 className="text-[42px] font-black text-white mb-8 leading-tight">Let’s Build Your Content Engine</h2>
-                    <p className="text-xl text-white mb-8 max-w-2xl mx-auto leading-[1.8]">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white max-w-2xl mx-auto leading-[1.8]">
                         If your website is not converting traffic into revenue, the problem isn’t traffic. <br />
                         <span className="text-white font-bold italic">It’s messaging, structure, and strategic alignment.</span>
                     </p>
-                    <p className="text-lg text-white mb-12 italic">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-lg text-white italic">
                         Partner with <span className="font-black text-blue-400">Adkryoss managed by Clink Consultancy Services Private Limited</span> and transform your content into a scalable growth asset.
                     </p>
                     <div className="flex flex-col md:flex-row justify-center items-center gap-8 pt-12 border-t border-white/10">
                         <div className="text-left md:text-right">
                             <p className="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">Next Step</p>
-                            <h3 className="text-2xl font-black text-white leading-tight">Ready to dominate search and influence decisions?</h3>
+                            <h3 className="text-[20px] md:text-[24px] mb-4 text-2xl font-black text-white leading-tight">
+                                Ready to dominate search and influence decisions?
+                            </h3>
                         </div>
                         <Link to="/contact" className="inline-flex items-center gap-3 bg-blue-600 text-white py-6 px-12 rounded-2xl text-[20px] font-black transition-all duration-300 hover:bg-blue-700 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(37,99,235,0.4)]">
                             Create Content That Works

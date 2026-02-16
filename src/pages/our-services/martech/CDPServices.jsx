@@ -149,7 +149,7 @@ const CDPServices = () => {
         <div className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -157,17 +157,17 @@ const CDPServices = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 animate-fade-in-up text-white">
-                        <h1 className="text-[48px] font-extrabold mb-6 tracking-tight leading-[1.1] text-white">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             Customer Data Platform (CDP) Services
                         </h1>
-                        <h2 className="text-[32px] font-semibold mb-6 text-white">
+                        <h2 className="text-[32px] font-medium mb-6 text-white">
                             Unify. Understand. Activate.
                         </h2>
                         <div className="space-y-4 mb-8">
-                            <p className="text-[20px] font-bold text-white leading-relaxed">
+                            <p className="text-[16px] md:text-[18px] mb-6 font-bold text-white leading-relaxed">
                                 Turn fragmented customer data into revenue-driving intelligence.
                             </p>
-                            <p className="text-[18px] text-white font-medium opacity-95 text-justify">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium opacity-95 text-justify">
                                 Build a 360° customer view, personalize every interaction, and activate real-time journeys with advanced CDP solutions. At Adkryoss managed by <span className="font-bold underline decoration-blue-400">Clink Consultancy Services Private Limited</span>, we help you master your first-party data.
                             </p>
                         </div>
@@ -181,9 +181,9 @@ const CDPServices = () => {
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Service-CRO.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/03/customer-data-platform-services.webp"
                             alt="CDP Services"
-                            className="max-w-[500px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
                         />
                     </div>
                 </div>
@@ -198,13 +198,13 @@ const CDPServices = () => {
                                 Why Your Business Needs a CDP Now
                             </h2>
                             <div className="space-y-6">
-                                <p className="text-[18px] text-slate-700 leading-relaxed font-medium">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
                                     Data is everywhere — website analytics, CRM, mobile apps, ad platforms, email tools, offline stores. But without integration, it's just noise.
                                 </p>
                                 <div className="p-8 bg-white border-l-8 border-blue-600 rounded-r-2xl shadow-sm leading-relaxed text-slate-700 font-medium italic">
                                     "A modern Customer Data Platform connects and unifies first-party data, enabling businesses to lead with intelligence."
                                 </div>
-                                <p className="text-[18px] text-slate-700 leading-relaxed font-medium mt-6">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium mt-6">
                                     At Adkryoss managed by <span className="font-bold text-blue-600 underline">Clink Consultancy Services Private Limited</span>, we architect CDP ecosystems that transform raw data into measurable business growth.
                                 </p>
                             </div>
@@ -230,7 +230,7 @@ const CDPServices = () => {
                         <div className="order-2 md:order-1">
                             <div className="bg-slate-900 p-12 rounded-[50px] text-white relative shadow-2xl">
                                 <h3 className="text-2xl font-semibold mb-6 text-blue-400 tracking-tighter uppercase">Beyond CRM & DMP</h3>
-                                <p className="text-xl text-white font-medium leading-relaxed italic mb-8 border-l-4 border-blue-600 pl-6">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white font-medium leading-relaxed italic border-l-4 border-blue-600 pl-6">
                                     "A CDP becomes the backbone of your personalization and performance marketing strategy."
                                 </p>
                                 <div className="space-y-4">
@@ -252,10 +252,10 @@ const CDPServices = () => {
                             <h2 className="text-[42px] font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">
                                 What Is a Customer Data Platform?
                             </h2>
-                            <p className="text-[18px] text-slate-700 leading-relaxed font-medium">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
                                 A Customer Data Platform (CDP) is a centralized system that collects, organizes, and activates customer data across all touchpoints.
                             </p>
-                            <p className="text-[18px] text-slate-700 leading-relaxed font-medium mt-6">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium mt-6">
                                 Unlike traditional CRMs or DMPs, a CDP unifies data from all sources to create a complete, real-time profile of every individual customer.
                             </p>
                         </div>
@@ -276,7 +276,9 @@ const CDPServices = () => {
                             <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                 {item.icon}
                             </div>
-                            <h3 className="text-[22px] font-semibold mb-4 text-white tracking-tight">{item.title}</h3>
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
+                                {item.title}
+                            </h3>
                             <p className="text-blue-200/80 mb-6 font-medium italic">"{item.desc}"</p>
                             <div className="space-y-3 flex-grow">
                                 {item.points.map((point, idx) => (
@@ -359,7 +361,9 @@ const CDPServices = () => {
                             </div>
                             <div className="p-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-[40px] text-white text-center">
                                 <h2 className="text-[28px] font-extrabold mb-6 leading-tight">Ready to build your customer intelligence engine?</h2>
-                                <p className="text-white/80 font-medium mb-8">Move from fragmented campaigns to predictive personalization.</p>
+                                <p className="text-[16px] md:text-[18px] mb-6 text-white/80 font-medium">
+                                    Move from fragmented campaigns to predictive personalization.
+                                </p>
                                 <Link to="/contact" className="inline-block bg-white text-blue-600 px-10 py-4 rounded-full font-black hover:scale-105 transition-all shadow-lg uppercase text-sm tracking-widest">
                                     Get Started
                                 </Link>

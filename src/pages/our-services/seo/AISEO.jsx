@@ -110,7 +110,7 @@ const AISEO = () => {
         <div>
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -118,30 +118,30 @@ const AISEO = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 text-white">
-                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1px] text-white">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1px] text-white">
                             AI SEO Services
                         </h1>
-                        <h3 className="text-[24px] font-medium mb-6 text-white">
+                        <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Rank Beyond Keywords. Dominate AI-Driven Search Ecosystems.
                         </h3>
-                        <p className="text-[18px] leading-[1.8] text-white mb-8">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Search is no longer just about Google rankings. It’s about visibility across AI engines, voice assistants, zero-click results, and generative search experiences.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-8">
+                        <div className="p-0  mb-4">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span> delivers next-generation AI SEO solutions that help businesses become discoverable across modern search landscapes.
                             </p>
                         </div>
-                        <p className="text-[20px] font-medium text-white">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium text-white">
                             We combine human expertise with machine intelligence to build scalable, future-ready SEO systems.
                         </p>
                     </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/11/AI-SEO.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/AI-SEO-Services.webp"
                             alt="AI SEO"
-                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
@@ -155,7 +155,7 @@ const AISEO = () => {
                             <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
                                 Why AI SEO is the Future of Organic Growth
                             </h2>
-                            <p className="text-[18px] text-[#475569] leading-[1.8] mb-[24px]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
                                 Search behavior has fundamentally changed. Traditional SEO focuses on ranking pages. AI SEO focuses on becoming the answer.
                             </p>
                             <div className="flex flex-col gap-[20px]">
@@ -191,7 +191,7 @@ const AISEO = () => {
                         <h2 className="text-[42px] font-bold mb-[20px] text-[#0f172a]">
                             Our AI SEO Framework
                         </h2>
-                        <p className="text-[20px] text-[#64748b]">
+                        <p className="text-[16px] md:text-[18px] mb-6">
                             We don’t run campaigns. We build intelligent organic growth systems.
                         </p>
                     </div>
@@ -243,7 +243,7 @@ const AISEO = () => {
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[42px] font-bold mb-[20px] text-white">How We Work</h2>
-                        <p className="text-[18px] text-[#94a3b8]">
+                        <p className="text-[16px] md:text-[18px] mb-6">
                             At Adkryoss managed by Clink Consultancy Services Private Limited, our working model is structured, transparent, and performance-led.
                         </p>
                     </div>
@@ -280,7 +280,7 @@ const AISEO = () => {
                         ))}
                     </div>
                     <div className="text-center mt-[50px]">
-                        <p className="text-[20px] font-bold text-[#0f172a]">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-bold">
                             We don’t chase algorithm updates. We build systems that evolve with them.
                         </p>
                     </div>
@@ -301,7 +301,7 @@ const AISEO = () => {
                                 </div>
                             ))}
                         </div>
-                        <p className="text-[20px] text-[#475569] leading-[1.8] mb-[24px]">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
                             Businesses that adapt early dominate visibility. If your SEO strategy still relies on outdated tactics, your growth will plateau.
                         </p>
                     </div>

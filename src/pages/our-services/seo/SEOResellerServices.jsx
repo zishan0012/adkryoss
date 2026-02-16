@@ -151,10 +151,10 @@ const SEOResellerServices = () => {
     <div>
       {/* Hero Section */}
       <div
+        className="flex items-center min-h-[500px] md:h-120 bg-cover bg-center bg-no-repeat relative"
         style={{
           background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
           color: "#ffffff",
-          padding: "120px 0 90px",
           position: "relative",
         }}
       >
@@ -170,37 +170,15 @@ const SEOResellerServices = () => {
             }}
           >
             <div>
-              <h1
-                style={{
-                  fontSize: "56px",
-                  fontWeight: "800",
-                  marginBottom: "22px",
-                  letterSpacing: "-1px",
-                }}
-              >
+              <h1 className="text-[28px] md:text-[36px] font-bold mb-3 tracking-tight">
                 SEO Reseller Services
               </h1>
 
-              <p
-                style={{
-                  fontSize: "28px",
-                  fontWeight: "600",
-                  marginBottom: "24px",
-                  color: "#22c55e",
-                }}
-              >
+              <p className="text-[20px] md:text-[24px] font-medium mb-4 text-[#22c55e]">
                 Scale Your Agency. Deliver Results. Stay Invisible.
               </p>
 
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "#cbd5e1",
-                  marginBottom: "40px",
-                  maxWidth: "540px",
-                }}
-              >
+              <p className="text-[16px] md:text-[18px] leading-[1.8] text-slate-300 mb-6 max-w-[540px]">
                 White-label SEO solutions designed to help agencies expand
                 revenue, retain clients, and dominate search — without hiring an
                 in-house team.
