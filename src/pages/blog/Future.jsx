@@ -206,7 +206,7 @@ const Future = () => {
       <section className="py-28 bg-blue-900 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
 
-          <h2 className="text-3xl font-bold mb-6">
+          <h2 className="text-white font-bold mb-6">
             The Future is Intelligent, Integrated & ROI-Driven
           </h2>
 
