@@ -1,50 +1,93 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import Skills from "../assets/skill.jpg"
 
 const blogContent = [
   {
     id: 1,
-    image: Skill,
+    image: Skills,
     title: "The Future of Digital Marketing in 2026",
     description:
       "AI, automation and performance systems redefining scalable business growth.",
-    link: "/blog/future-digital-marketing-2026",
+    link: "/blog/future",
   },
   {
     id: 2,
-    image: Skill,
+    image: Skills,
     title: "Performance Marketing Agency",
     description:
       "Data-driven frameworks that create predictable revenue growth.",
-    link: "/blog/performance-marketing-agency",
+    link: "/blog/performance",
   },
   {
     id: 3,
-    image: Skill,
+    image: Skills,
     title: "AI in Digital Marketing 2026",
     description:
       "How artificial intelligence is transforming targeting and ROI.",
-    link: "/blog/ai-digital-marketing-2026",
+    link: "/blog/ai",
   },
   {
     id: 4,
-    image: Skill,
+    image: Skills,
     title: "Content Marketing in 2026",
     description:
       "Building authority, organic traffic and long-term revenue.",
-    link: "/blog/content-marketing-2026",
+    link: "/blog/content",
   },
   {
     id: 5,
-    image: Skill,
+    image: Skills,
     title: "Social Media Marketing in 2026",
     description:
       "Performance-led strategies that drive measurable business growth.",
-    link: "/blog/social-media-marketing-2026",
+    link: "/blog/social",
   },
+  {
+    id: 6,
+    image: Skills,
+    title: "Conversion Rate Optimization (CRO): The Complete Guide to Turning Website Traffic into Revenue in 2026 ",
+    description:
+      "Performance-led strategies that drive measurable business growth.",
+    link: "/blog/conversion",
+  },
+  {
+    id: 7,
+    image: Skills,
+    title: "Marketing Automation & CRM Integration: The Scalable Growth Engine for Modern Businesses ",
+    description:
+      "Performance-led strategies that drive measurable business growth.",
+    link: "/blog/marketing",
+  },
+  {
+    id: 8,
+    image: Skills,
+    title: "E-Commerce Digital Marketing Trends in 2026: The Complete Growth Blueprint ",
+    description:
+      "Performance-led strategies that drive measurable business growth.",
+    link: "/blog/Ecommerce",
+  },
+  {
+    id: 9,
+    image: Skills,
+    title: "Local SEO & Hyperlocal Marketing in 2026: The Complete Growth Blueprint ",
+    description:
+      "Performance-led strategies that drive measurable business growth.",
+    link: "/blog/local",
+  },
+  {
+    id: 10,
+    image: Skills,
+    title: "Local SEO & Hyperlocal Marketing in 2026: The Complete Growth Blueprint ",
+    description:
+      "Performance-led strategies that drive measurable business growth.",
+    link: "/blog/data",
+  },
+
 ];
 
 const Blog = () => {
-  
+  const navigate = useNavigate();
 
   return (
     <>
@@ -86,7 +129,6 @@ const Blog = () => {
           </div>
         </div>
       </section>
-
       <section className="bg-gray-50 py-24">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
