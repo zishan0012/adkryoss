@@ -157,10 +157,10 @@ const DigitalPR = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-semibold text-slate-900 mb-5 leading-tight">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">
                             Why Digital PR is Non-Negotiable in 2026
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 font-semibold italic">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium italic">
                             Search engines reward credibility. Audiences trust authority. Media coverage drives both.
                         </p>
                     </div>
@@ -170,7 +170,7 @@ const DigitalPR = () => {
                             <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8] font-medium">
                                 Digital PR bridges SEO, content marketing, and reputation management into one strategic growth engine. It improves search rankings, strengthens brand perception, and generates referral traffic from trusted publications.
                             </p>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-900 font-semibold">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-900 font-medium">
                                 When executed strategically, Digital PR:
                             </p>
                             <div className="grid md:grid-cols-2 gap-4 mb-10">
@@ -187,7 +187,7 @@ const DigitalPR = () => {
                                     </div>
                                 ))}
                             </div>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8] font-medium">
                                 At Adkryoss managed by <span className="font-semibold text-[#0066CC]">Clink Consultancy Services Private Limited</span>, we don’t chase random coverage. We build digital authority ecosystems designed to compound over time.
                             </p>
 
@@ -200,7 +200,7 @@ const DigitalPR = () => {
             <section className="py-24 bg-white">
                 <div className="container px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-semibold text-slate-900 mb-5 leading-tight">Our Digital PR Approach</h2>
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">Our Digital PR Approach</h2>
                     </div>
 
                     <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -226,7 +226,7 @@ const DigitalPR = () => {
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-semibold mb-5 leading-tight text-white">Our Digital PR Services</h2>
+                        <h2 className="text-[36px] font-bold mb-5 leading-tight text-white">Our Digital PR Services</h2>
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-8">
@@ -254,11 +254,11 @@ const DigitalPR = () => {
                     <div className="max-w-5xl mx-auto rounded-[40px] bg-white p-12 shadow-xl border border-slate-100">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
-                                <h2 className="text-[36px] font-extrabold text-slate-900 mb-6 leading-tight">What Makes Our Digital PR Different</h2>
+                                <h2 className="text-[36px] font-bold text-slate-900 mb-6 leading-tight">What Makes Our Digital PR Different</h2>
                                 <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 font-medium">
                                     Unlike traditional PR, our strategy is deeply integrated with SEO and performance marketing.
                                 </p>
-                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-900 font-semibold">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-900 font-medium">
                                     At Adkryoss managed by <span className="text-[#0066CC]">Clink Consultancy Services Private Limited</span>, we combine:
                                 </p>
                                 <div className="space-y-4">
@@ -277,14 +277,14 @@ const DigitalPR = () => {
                             <div className="grid gap-6">
                                 <div className="bg-gradient-to-br from-[#0066CC] to-[#004999] p-8 rounded-3xl text-white shadow-lg">
                                     <PieChart size={48} className="mb-6 text-blue-100" />
-                                    <h3 className="text-xl font-extrabold mb-4 uppercase">Advanced Analytics</h3>
+                                    <h3 className="text-xl font-semibold mb-4 uppercase">Advanced Analytics</h3>
                                     <p className="text-blue-50/80 leading-relaxed font-medium italic">
                                         Monitor mentions, sentiment, and media performance to optimise continuously.
                                     </p>
                                 </div>
                                 <div className="bg-slate-900 p-8 rounded-3xl text-white shadow-lg">
                                     <Zap size={48} className="mb-6 text-blue-400" />
-                                    <h3 className="text-xl font-extrabold mb-4 uppercase">Strategic Impact</h3>
+                                    <h3 className="text-xl font-semibold mb-4 uppercase">Strategic Impact</h3>
                                     <p className="text-[16px] md:text-[18px] mb-6 text-white leading-relaxed font-medium italic">
                                         PR that bridges SEO, content marketing, and reputation management.
                                     </p>
@@ -300,7 +300,7 @@ const DigitalPR = () => {
             <section className="py-24 bg-white">
                 <div className="container px-6">
                     <div className="max-w-5xl mx-auto text-center">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-12 leading-tight">Industries We Serve</h2>
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-12 leading-tight">Industries We Serve</h2>
                         <div className="flex flex-wrap justify-center gap-4 mb-16">
                             {industries.map((industry, index) => (
                                 <div key={index} className="px-8 py-4 bg-slate-50 border-2 border-slate-100 rounded-xl font-black text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm">
@@ -318,8 +318,8 @@ const DigitalPR = () => {
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] -mr-48 -mt-48"></div>
                 <div className="container px-6 relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold mb-6 text-white">The Impact You Can Expect</h2>
-                        <p className="text-xl text-blue-400 font-bold italic max-w-2xl mx-auto">
+                        <h2 className="text-[36px] font-bold mb-6 text-white">The Impact You Can Expect</h2>
+                        <p className="text-xl text-blue-400 font-medium italic max-w-2xl mx-auto">
                             Digital PR is not about short-term buzz. It’s about building a reputation that search engines and customers trust for years.
                         </p>
                     </div>
@@ -340,8 +340,8 @@ const DigitalPR = () => {
                 <div className="container px-6">
                     <div className="max-w-4xl mx-auto">
                         <div className="text-center mb-16">
-                            <h2 className="text-[42px] font-bold text-slate-900 mb-6">Our Process</h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 font-bold italic">
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-6">Our Process</h2>
+                            <p className="text-[16px] md:text-[18px] mb-6 font-medium italic">
                                 This structured execution ensures consistent and scalable growth.
                             </p>
                         </div>
@@ -363,13 +363,13 @@ const DigitalPR = () => {
             {/* Final CTA Section */}
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
                 <div className="container max-w-4xl mx-auto">
-                    <h2 className="text-[42px] font-black mb-8 leading-tight">Let’s Build Digital Authority That Converts</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white max-w-3xl mx-auto leading-relaxed">
+                    <h2 className="text-[36px] font-bold mb-8 leading-tight">Let’s Build Digital Authority That Converts</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white max-w-3xl mx-auto leading-relaxed font-medium">
                         Visibility without credibility fades. Authority compounds. <br />
                         If you're ready to dominate search results and industry conversations, it’s time to invest in strategic Digital PR.
                     </p>
                     <div className="flex flex-col items-center gap-10">
-                        <p className="text-[16px] md:text-[18px] mb-6 text-2xl font-black italic text-white">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-2xl font-medium italic text-white">
                             Partner with Adkryoss managed by Clink Consultancy Services Private Limited and transform your brand into a trusted digital leader.
                         </p>
                         <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-[#0066CC] py-6 px-16 rounded-[20px] text-[22px] font-black transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:-translate-y-2 hover:scale-105 active:scale-95">

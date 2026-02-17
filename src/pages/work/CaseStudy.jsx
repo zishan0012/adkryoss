@@ -78,7 +78,7 @@ const CaseStudy = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-blue-600">
+            <section className="py-20 bg-gradient-to-br from-[#0066cc] to-[#00458a]">
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Want to see similar growth for your brand?</h2>
                     <p className="text-white/80 text-lg mb-10">Let's discuss how our data-driven strategies can scale your business.</p>

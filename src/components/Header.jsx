@@ -6,9 +6,22 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeCategory, setActiveCategory] = useState("Search Engine Optimization");
     const [openDropdown, setOpenDropdown] = useState(null);
+    const [expandedItems, setExpandedItems] = useState({});
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+        if (!isMenuOpen) {
+            setExpandedItems({}); // Reset expanded items when closing/opening? Or maybe keep them? User usually expects them to reset or stay. Let's stay for now or reset. User said "when user open mobile view only main menu appear first", so reset is good.
+        }
+    };
+
+    const toggleMobileAccordion = (e, key) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setExpandedItems(prev => ({
+            ...prev,
+            [key]: !prev[key]
+        }));
     };
 
     const handleLinkClick = () => {
@@ -276,37 +289,59 @@ const Header = () => {
 
             {/* Mobile Menu Overlay */}
             {isMenuOpen && (
-                <div className="lg:hidden absolute top-20 left-0 w-full bg-white px-5 py-5 shadow-[0_5_10px_rgba(0,0,0,0.1)] flex flex-col gap-[15px] max-h-[calc(100vh-80px)] overflow-y-auto z-[1000]">
+                <div className="lg:hidden absolute top-20 left-0 w-full bg-white px-5 py-5 shadow-[0_5_10px_rgba(0,0,0,0.1)] flex flex-col gap-[5px] h-[calc(100vh-80px)] overflow-y-auto z-[1000]">
                     {navItems.map((item) => (
-                        <div key={item.name}>
-                            <Link
-                                to={item.path}
-                                onClick={() => setIsMenuOpen(false)}
-                                className="text-base font-semibold py-2.5 border-b border-[#f0f0f0] text-[#333] block"
-                            >
-                                {item.name}
-                            </Link>
-                            {/* Mobile Submenu */}
-                            {item.subItems && (
-                                <div className="pl-5">
+                        <div key={item.name} className="border-b border-[#f0f0f0] last:border-0">
+                            <div className="flex justify-between items-center py-3">
+                                <Link
+                                    to={item.path}
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="text-[17px] font-bold text-[#333]"
+                                >
+                                    {item.name}
+                                </Link>
+                                {item.subItems && (
+                                    <button
+                                        onClick={(e) => toggleMobileAccordion(e, item.name)}
+                                        className={`p-2 transition-transform duration-200 ${expandedItems[item.name] ? 'rotate-180 bg-[#f0f7ff] rounded-lg' : ''}`}
+                                    >
+                                        <ChevronDown size={20} className={expandedItems[item.name] ? 'text-[#0066cc]' : 'text-[#666]'} />
+                                    </button>
+                                )}
+                            </div>
+
+                            {/* Mobile Submenu (Accordion) */}
+                            {item.subItems && expandedItems[item.name] && (
+                                <div className="pl-4 pb-3 flex flex-col gap-1">
                                     {item.subItems.map(sub => (
                                         <div key={sub.name}>
-                                            <Link
-                                                to={sub.path}
-                                                onClick={() => setIsMenuOpen(false)}
-                                                className="text-sm font-medium py-2 block text-[#666]"
-                                            >
-                                                {sub.name}
-                                            </Link>
-                                            {/* Mobile Sub-submenu */}
-                                            {sub.subItems && (
-                                                <div className="pl-[15px]">
+                                            <div className="flex justify-between items-center py-2">
+                                                <Link
+                                                    to={sub.path}
+                                                    onClick={() => setIsMenuOpen(false)}
+                                                    className="text-[15px] font-semibold text-[#555]"
+                                                >
+                                                    {sub.name}
+                                                </Link>
+                                                {sub.subItems && (
+                                                    <button
+                                                        onClick={(e) => toggleMobileAccordion(e, `${item.name}-${sub.name}`)}
+                                                        className={`p-1.5 transition-transform duration-200 ${expandedItems[`${item.name}-${sub.name}`] ? 'rotate-180 text-[#0066cc]' : 'text-[#888]'}`}
+                                                    >
+                                                        <ChevronDown size={18} />
+                                                    </button>
+                                                )}
+                                            </div>
+
+                                            {/* Mobile Sub-submenu (Accordion) */}
+                                            {sub.subItems && expandedItems[`${item.name}-${sub.name}`] && (
+                                                <div className="pl-4 border-l-2 border-[#f0f0f0] ml-1 mb-2 flex flex-col gap-1">
                                                     {sub.subItems.map(subSub => (
                                                         <Link
                                                             key={subSub.name}
                                                             to={subSub.path}
                                                             onClick={() => setIsMenuOpen(false)}
-                                                            className="text-[13px] font-normal py-1.5 block text-[#888]"
+                                                            className="text-[14px] font-medium py-2 block text-[#777] hover:text-[#0066cc]"
                                                         >
                                                             {subSub.name}
                                                         </Link>
@@ -319,7 +354,7 @@ const Header = () => {
                             )}
                         </div>
                     ))}
-                    <Link to="/request-quote" className="bg-[#0066cc] text-white py-3 rounded-full font-semibold text-center mt-2" onClick={() => setIsMenuOpen(false)}>
+                    <Link to="/request-quote" className="bg-[#0066cc] text-white py-3.5 rounded-full font-bold text-center mt-4 shadow-lg shadow-[#0066cc]/20" onClick={() => setIsMenuOpen(false)}>
                         Request a Quote
                     </Link>
                 </div>

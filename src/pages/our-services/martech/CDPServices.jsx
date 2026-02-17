@@ -194,7 +194,7 @@ const CDPServices = () => {
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-[42px] font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight tracking-tight">
                                 Why Your Business Needs a CDP Now
                             </h2>
                             <div className="space-y-6">
@@ -215,7 +215,7 @@ const CDPServices = () => {
                                     <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
                                         {item.icon}
                                     </div>
-                                    <h3 className="font-bold text-slate-900 leading-tight">{item.title}</h3>
+                                    <h3 className="font-semibold text-slate-900 leading-tight">{item.title}</h3>
                                 </div>
                             ))}
                         </div>
@@ -249,7 +249,7 @@ const CDPServices = () => {
                             </div>
                         </div>
                         <div className="order-1 md:order-2">
-                            <h2 className="text-[42px] font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight tracking-tight">
                                 What Is a Customer Data Platform?
                             </h2>
                             <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
@@ -266,7 +266,7 @@ const CDPServices = () => {
             {/* Our CDP Services */}
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto text-center mb-16">
-                    <h2 className="text-[42px] font-extrabold mb-6 tracking-tight text-white">Our CDP Services</h2>
+                    <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our CDP Services</h2>
                     <p className="text-blue-200/80 max-w-2xl mx-auto font-medium mb-10">We deliver end-to-end CDP consulting, implementation, and optimization solutions tailored to your business objectives.</p>
                     <div className="w-24 h-2 bg-blue-500 mx-auto rounded-full"></div>
                 </div>
@@ -296,7 +296,7 @@ const CDPServices = () => {
             {/* Why Choose Us */}
             <section className="py-24 bg-white">
                 <div className="container px-6 mx-auto">
-                    <h2 className="text-[42px] font-extrabold text-slate-900 mb-16 text-center leading-tight tracking-tight">
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight">
                         Why Choose Us for CDP Services?
                     </h2>
                     <div className="flex flex-wrap justify-center gap-8">
@@ -305,7 +305,7 @@ const CDPServices = () => {
                                 <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white group-hover:bg-slate-900 transition-all">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-[20px] font-extrabold text-slate-900 leading-tight">{item.title}</h3>
+                                <h3 className="text-[20px] font-semibold text-slate-900 leading-tight">{item.title}</h3>
                                 <p className="text-slate-600 font-medium leading-relaxed text-sm">{item.desc}</p>
                             </div>
                         ))}
@@ -319,34 +319,34 @@ const CDPServices = () => {
                     <div className="grid md:grid-cols-2 gap-20">
                         {/* Industries */}
                         <div>
-                            <h2 className="text-[32px] font-extrabold mb-10 text-slate-900 tracking-tight">Industries We Empower</h2>
+                            <h2 className="text-[36px] font-bold mb-10 text-slate-900 tracking-tight">Industries We Empower</h2>
                             <p className="text-slate-600 mb-10 font-medium">We customize CDP implementations for high-growth sectors:</p>
                             <div className="flex flex-wrap gap-4">
                                 {industries.map((item, index) => (
-                                    <div key={index} className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-black border-2 border-slate-100 transition-all hover:bg-blue-600 hover:text-white hover:border-blue-600 hover:-translate-y-1 shadow-sm">
+                                    <div key={index} className="px-8 py-5 bg-white text-slate-800 rounded-2xl font-black border-2 border-slate-100 transition-all hover:bg-blue-600 hover:text-white hover:border-blue-600 hover:-translate-y-1 shadow-sm">
                                         {item}
                                     </div>
                                 ))}
                             </div>
                             <div className="mt-16 bg-slate-900 p-10 rounded-[40px] text-white shadow-2xl">
-                                <h2 className="text-[32px] font-extrabold mb-10 text-white tracking-tight text-center">Key Benefits</h2>
+                                <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight text-center">Key Benefits</h2>
                                 <div className="grid sm:grid-cols-2 gap-6">
                                     {benefits.map((item, index) => (
                                         <div key={index} className="flex items-center gap-4 group">
                                             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-black group-hover:scale-110 transition-transform text-xs">
                                                 ✔
                                             </div>
-                                            <span className="font-bold text-white/90 group-hover:text-white transition-colors">{item}</span>
+                                            <span className="font-semibold text-white/90 group-hover:text-white transition-colors">{item}</span>
                                         </div>
                                     ))}
                                 </div>
-                                <p className="mt-10 text-center text-blue-400 font-bold italic text-sm">Adkryoss focuses on building long-term scalable data ecosystems.</p>
+                                <p className="mt-10 text-center text-blue-400 font-medium italic text-sm">Adkryoss focuses on building long-term scalable data ecosystems.</p>
                             </div>
                         </div>
                         {/* Framework */}
                         <div className="flex flex-col gap-12">
                             <div className="bg-white p-10 rounded-[40px] border border-slate-200 shadow-xl">
-                                <h2 className="text-[32px] font-extrabold mb-10 text-slate-900 tracking-tight">Implementation Framework</h2>
+                                <h2 className="text-[36px] font-bold mb-10 text-slate-900 tracking-tight">Implementation Framework</h2>
                                 <div className="space-y-8">
                                     {framework.map((item, index) => (
                                         <div key={index} className="flex gap-6 items-start group">
@@ -360,7 +360,7 @@ const CDPServices = () => {
                                 </div>
                             </div>
                             <div className="p-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-[40px] text-white text-center">
-                                <h2 className="text-[28px] font-extrabold mb-6 leading-tight">Ready to build your customer intelligence engine?</h2>
+                                <h2 className="text-[36px] font-bold mb-6 leading-tight">Ready to build your customer intelligence engine?</h2>
                                 <p className="text-[16px] md:text-[18px] mb-6 text-white/80 font-medium">
                                     Move from fragmented campaigns to predictive personalization.
                                 </p>
@@ -375,17 +375,17 @@ const CDPServices = () => {
 
             {/* Final CTA Section */}
             <section className="py-24 bg-white text-center px-6">
-                <div className="container max-w-4xl mx-auto border-t border-slate-100 pt-24">
-                    <h2 className="text-[42px] font-extrabold mb-8 leading-tight text-slate-900 tracking-tight">Transform Data into Competitive Advantage</h2>
+                <div className="container max-w-4xl mx-auto  pt-24">
+                    <h2 className="text-[36px] font-bold mb-8 leading-tight text-slate-900 tracking-tight">Transform Data into Competitive Advantage</h2>
                     <div className="space-y-8">
                         <p className="text-xl text-slate-600 font-medium max-w-3xl mx-auto leading-relaxed">
                             The future of marketing belongs to businesses that own, understand, and activate their first-party data intelligently.
                         </p>
-                        <p className="text-2xl font-extrabold text-blue-600 italic tracking-tighter leading-tight">
+                        <p className="text-2xl font-medium text-blue-600 italic tracking-tighter leading-tight">
                             Partner with Adkryoss managed by Clink Consultancy Services Private Limited.
                         </p>
                         <div className="flex flex-col items-center gap-10">
-                            <Link to="/contact" className="inline-flex items-center gap-4 bg-slate-900 text-white py-6 px-16 rounded-[25px] text-[22px] font-extrabold transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-105 active:scale-95 group tracking-tight">
+                            <Link to="/contact" className="inline-flex items-center gap-4 bg-slate-900 text-white py-6 px-16 rounded-[25px] text-[22px] font-bold transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-105 active:scale-95 group tracking-tight">
                                 Build My Intelligence Engine
                                 <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform" />
                             </Link>

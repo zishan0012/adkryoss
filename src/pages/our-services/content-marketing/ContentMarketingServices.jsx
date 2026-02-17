@@ -186,10 +186,10 @@ const ContentMarketingServices = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-semibold text-slate-900 mb-5 leading-tight">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">
                             Why Content Marketing Matters Today
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Search engines reward expertise. Audiences demand authenticity. Algorithms prioritize relevance.
                         </p>
                     </div>
@@ -199,11 +199,11 @@ const ContentMarketingServices = () => {
                             <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8] font-medium">
                                 In this dynamic digital ecosystem, content marketing is no longer optional — it’s your competitive advantage.
                             </p>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8] font-medium">
                                 At Adkryoss managed by <span className="font-semibold text-[#0066CC]">Clink Consultancy Services Private Limited</span>, we design content strategies that position businesses as industry authorities while driving qualified leads through every stage of the buyer journey.
                             </p>
                             <div className="p-8 bg-blue-500 rounded-xl text-white shadow-lg">
-                                <p className="text-[16px] md:text-[18px] mb-6 font-semibold text-white leading-relaxed italic">
+                                <p className="text-[16px] md:text-[18px] mb-6 font-medium text-white leading-relaxed italic">
                                     "We blend creativity with search intelligence, audience psychology, and performance analytics to turn content into a scalable growth engine."
                                 </p>
                             </div>
@@ -217,7 +217,7 @@ const ContentMarketingServices = () => {
             <section className="py-24 bg-white">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-semibold text-slate-900 mb-5 leading-tight">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">
                             Our Content Marketing Approach
                         </h2>
                         <p className="text-[16px] text-slate-600 mt-3 max-w-[800px] mx-auto font-medium">
@@ -238,7 +238,7 @@ const ContentMarketingServices = () => {
                                     {item.title}
                                 </h3>
                                 {item.subtitle && (
-                                    <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                                    <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                                         {item.subtitle}
                                     </p>
                                 )}
@@ -255,7 +255,7 @@ const ContentMarketingServices = () => {
                                 </div>
                                 {item.optimizations && (
                                     <div className="mt-8 pt-8 border-t border-slate-100">
-                                        <p className="text-sm font-semibold text-slate-900 mb-4">{item.extraDesc}</p>
+                                        <p className="text-sm font-medium text-slate-900 mb-4">{item.extraDesc}</p>
                                         <div className="flex flex-wrap gap-2">
                                             {item.optimizations.map((opt, idx) => (
                                                 <div key={idx} className="bg-slate-50 text-[#0066CC] border border-blue-100 px-3 py-1 rounded-lg text-xs font-semibold flex items-center gap-1.5 hover:bg-[#0066CC] hover:text-white transition-colors">
@@ -276,7 +276,7 @@ const ContentMarketingServices = () => {
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-semibold mb-5 leading-tight text-white">Types of Content We Specialize In</h2>
+                        <h2 className="text-[36px] font-bold mb-5 leading-tight text-white">Types of Content We Specialize In</h2>
                         <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium italic">
                             Bespoke content ecosystems for every industry.
                         </p>
@@ -303,8 +303,8 @@ const ContentMarketingServices = () => {
             {/* Content Philosophy Section */}
             <section className="py-24 bg-white">
                 <div className="container text-center">
-                    <h2 className="text-[42px] font-bold text-slate-900 mb-8">Our Content Philosophy</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 font-bold">
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-8">Our Content Philosophy</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                         Content should:
                     </p>
                     <div className="flex flex-wrap justify-center gap-8 mb-16">
@@ -329,7 +329,7 @@ const ContentMarketingServices = () => {
                     <div className="grid md:grid-cols-2 gap-20">
                         {/* What Makes Us Different */}
                         <div>
-                            <h2 className="text-[42px] font-bold text-slate-900 mb-10 leading-tight">What Makes Us Different</h2>
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-10 leading-tight">What Makes Us Different</h2>
                             <div className="grid gap-6">
                                 {differentiators.map((item, index) => (
                                     <div key={index} className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 hover:shadow-lg hover:translate-x-2 border border-transparent hover:border-blue-100 group">
@@ -340,25 +340,25 @@ const ContentMarketingServices = () => {
                                     </div>
                                 ))}
                             </div>
-                            <p className="text-[16px] md:text-[18px] mb-6 mt-10 font-bold italic leading-tight">
+                            <p className="text-[16px] md:text-[18px] mb-6 mt-10 font-medium italic leading-tight">
                                 "We operate at the intersection of SEO, psychology, data science, and creative communication."
                             </p>
                         </div>
 
                         {/* Industries */}
                         <div>
-                            <h2 className="text-[42px] font-bold text-slate-900 mb-10 leading-tight">Industries We Serve</h2>
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-10 leading-tight">Industries We Serve</h2>
                             <div className="grid grid-cols-2 gap-6">
                                 {industries.map((item, index) => (
                                     <div key={index} className="p-8 bg-white rounded-xl border-2 border-transparent transition-all duration-300 cursor-pointer hover:border-[#0066CC] hover:-translate-y-1.5 hover:shadow-lg group text-center">
                                         <div className="text-[#0066CC] text-center flex justify-center mb-4 group-hover:scale-110 transition-transform">
                                             {item.icon}
                                         </div>
-                                        <p className="text-[16px] font-bold text-slate-900 m-0 group-hover:text-[#0066CC] transition-colors">{item.name}</p>
+                                        <p className="text-[16px] font-medium text-slate-900 m-0 group-hover:text-[#0066CC] transition-colors">{item.name}</p>
                                     </div>
                                 ))}
                             </div>
-                            <p className="text-[16px] md:text-[18px] mb-6 mt-10 text-slate-600 font-bold italic text-right leading-tight">
+                            <p className="text-[16px] md:text-[18px] mb-6 mt-10 text-slate-600 font-medium italic text-right leading-tight">
                                 "Our adaptive content models ensure niche-specific relevance and industry authority."
                             </p>
                         </div>
@@ -371,7 +371,7 @@ const ContentMarketingServices = () => {
             <section className="py-24 bg-white overflow-hidden">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-6">The Impact You Can Expect</h2>
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-6">The Impact You Can Expect</h2>
                     </div>
                     <div className="flex flex-wrap justify-center gap-6">
                         {impactPoints.map((point, index) => (
@@ -380,17 +380,17 @@ const ContentMarketingServices = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-center text-xl text-[#0066CC] font-bold mt-12 italic">
+                    <p className="text-center text-xl text-[#0066CC] font-medium mt-12 italic">
                         "Content is not an expense. It is a long-term business asset."
                     </p>
 
                     <div className="mt-20 p-10 bg-slate-900 rounded-[40px] text-center text-white relative">
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-2 bg-blue-600 rounded-full"></div>
-                        <h2 className="text-3xl font-black text-white mb-8">Let’s Build Your Content Engine</h2>
+                        <h2 className="text-[36px] font-bold text-white mb-8">Let’s Build Your Content Engine</h2>
                         <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white max-w-3xl mx-auto leading-relaxed font-medium">
                             If your business is ready to move beyond random posting and start building structured authority, it’s time to implement a scalable content system.
                         </p>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-lg font-bold text-white max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-lg font-medium text-white max-w-2xl mx-auto leading-relaxed">
                             Adkryoss managed by <span className="text-blue-500">Clink Consultancy Services Private Limited</span> partners with ambitious brands that want measurable digital growth powered by strategic content marketing.
                         </p>
 
@@ -401,7 +401,7 @@ const ContentMarketingServices = () => {
             {/* CTA Section */}
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold mb-6 text-white leading-tight">
+                    <h2 className="text-[36px] font-bold mb-6 text-white leading-tight">
                         Ready to Turn Content into Conversions?
                     </h2>
                     <p className="text-[16px] md:text-[18px] mb-6 text-white max-w-3xl mx-auto font-medium">

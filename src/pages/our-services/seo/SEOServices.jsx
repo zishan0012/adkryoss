@@ -191,7 +191,7 @@ const SEOServices = () => {
                         <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Drive Organic Growth. Build Authority. Dominate Search.
                         </h3>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
+                        <p className="text-[16px] md:text-[18px] mb-2 leading-[1.8] text-white">
                             In today's search-first world, visibility is not optional — it's survival. Customers don't scroll endlessly; they click what ranks, what builds trust, and what delivers value instantly.
                         </p>
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
@@ -217,10 +217,10 @@ const SEOServices = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5">
                             Why SEO is a Growth Multiplier
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 max-w-[800px] mx-auto leading-relaxed">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 max-w-[800px] mx-auto leading-relaxed font-medium">
                             Search engines are evolving. AI-driven search, zero-click results, voice search, semantic intent mapping — the game has changed.
                         </p>
                     </div>
@@ -236,7 +236,7 @@ const SEOServices = () => {
                                 <div className="text-[#0066CC] mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]">
                                     {item.icon}
                                 </div>
-                                <p className="text-[16px] font-bold text-slate-900 leading-relaxed m-0">
+                                <p className="text-[16px] font-medium text-slate-900 leading-relaxed m-0">
                                     {item.text}
                                 </p>
                             </div>
@@ -253,13 +253,13 @@ const SEOServices = () => {
             <section className="py-24 bg-white">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5">
                             Our SEO Approach
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 font-bold">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Strategic. Technical. Performance-Oriented.
                         </p>
-                        <p className="text-[16px] text-slate-600 mt-3 max-w-[700px] mx-auto">
+                        <p className="text-[16px] text-slate-600 mt-3 max-w-[700px] mx-auto font-medium">
                             We follow a structured, insight-led methodology aligned with modern search algorithms and business goals.
                         </p>
                     </div>
@@ -270,7 +270,7 @@ const SEOServices = () => {
                                 <div className="w-16 h-16 bg-gradient-to-br from-[#0066CC] to-[#004999] rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
                                     {approach.icon}
                                 </div>
-                                <h3 className="text-[20px] font-bold text-slate-900 mb-5 group-hover:text-[#0066CC] transition-colors leading-tight">
+                                <h3 className="text-[20px] font-semibold text-slate-900 mb-5 group-hover:text-[#0066CC] transition-colors leading-tight">
                                     {index + 1}. {approach.title}
                                 </h3>
                                 <ul className="list-none p-0 m-0 space-y-3">
@@ -286,7 +286,7 @@ const SEOServices = () => {
                     </div>
 
                     <div className="mt-12 p-8 bg-slate-50 rounded-2xl text-center border border-slate-100">
-                        <p className="text-[18px] font-bold text-slate-900 m-0">
+                        <p className="text-[18px] font-medium text-slate-900 m-0">
                             Every keyword is aligned to business outcomes.
                         </p>
                     </div>
@@ -297,10 +297,10 @@ const SEOServices = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5">
                             Industries We Serve
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 max-w-[700px] mx-auto">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 max-w-[700px] mx-auto font-medium">
                             We adapt SEO frameworks to industry-specific buying behavior and search patterns.
                         </p>
                     </div>
@@ -311,7 +311,7 @@ const SEOServices = () => {
                                 <div className="text-[#0066CC] mb-3 flex justify-center group-hover:scale-110 transition-transform">
                                     {industry.icon}
                                 </div>
-                                <p className="text-[16px] font-bold text-slate-900 m-0 group-hover:text-[#0066CC] transition-colors">
+                                <p className="text-[16px] font-medium text-slate-900 m-0 group-hover:text-[#0066CC] transition-colors">
                                     {industry.name}
                                 </p>
                             </div>
@@ -324,13 +324,13 @@ const SEOServices = () => {
             <section className="py-24 bg-white">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5">
                             Our Process Framework
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 font-bold">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Discover → Strategize → Optimize → Scale → Measure
                         </p>
-                        <p className="text-[16px] text-slate-600">
+                        <p className="text-[16px] text-slate-600 font-medium">
                             Transparent dashboards. Clear KPIs. Measurable growth.
                         </p>
                     </div>
@@ -341,7 +341,7 @@ const SEOServices = () => {
                                 <div className="absolute top-4 right-4 text-[48px] font-bold opacity-[0.15] group-hover:scale-125 transition-transform duration-500">
                                     {index + 1}
                                 </div>
-                                <p className="text-[18px] font-bold relative z-[2] text-white leading-tight m-0">
+                                <p className="text-[18px] font-medium relative z-[2] text-white leading-tight m-0">
                                     {step}
                                 </p>
                             </div>
@@ -354,7 +354,7 @@ const SEOServices = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 leading-tight">
+                        <h2 className="text-[36px] font-bold text-slate-900 leading-tight">
                             What Makes Us Different?
                         </h2>
                     </div>
@@ -365,10 +365,10 @@ const SEOServices = () => {
                                 <div className="text-[#0066CC] mb-6 group-hover:scale-110 transition-transform">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-[20px] font-bold text-slate-900 mb-4 group-hover:text-[#0066CC] transition-colors leading-tight">
+                                <h3 className="text-[20px] font-semibold text-slate-900 mb-4 group-hover:text-[#0066CC] transition-colors leading-tight">
                                     {item.title}
                                 </h3>
-                                <p className="text-[15px] text-slate-600 leading-relaxed m-0">
+                                <p className="text-[15px] text-slate-600 leading-relaxed m-0 font-medium">
                                     {item.description}
                                 </p>
                             </div>
@@ -381,10 +381,10 @@ const SEOServices = () => {
             <section className="py-24 bg-white">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-5 leading-tight">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">
                             SEO Metrics We Track
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 font-bold">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Growth is measurable. And we prove it.
                         </p>
                     </div>
@@ -406,7 +406,7 @@ const SEOServices = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-5 leading-tight">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">
                             Frequently Asked Questions
                         </h2>
                     </div>
@@ -414,10 +414,10 @@ const SEOServices = () => {
                     <div className="max-w-[900px] mx-auto">
                         {faqs.map((faq, index) => (
                             <div key={index} className="bg-white p-8 rounded-2xl mb-5 shadow-[0_2px_10px_rgba(0,0,0,0.05)] transition-all duration-300 group hover:shadow-xl hover:translate-x-2 border border-transparent hover:border-blue-100">
-                                <h3 className="text-[18px] font-bold text-slate-900 mb-3 group-hover:text-[#0066CC] transition-colors leading-tight">
+                                <h3 className="text-[18px] font-semibold text-slate-900 mb-3 group-hover:text-[#0066CC] transition-colors leading-tight">
                                     {faq.question}
                                 </h3>
-                                <p className="text-[15px] text-slate-600 leading-relaxed m-0">
+                                <p className="text-[15px] text-slate-600 leading-relaxed m-0 font-medium">
                                     {faq.answer}
                                 </p>
                             </div>
@@ -429,19 +429,19 @@ const SEOServices = () => {
             {/* CTA Section */}
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold mb-6 text-white leading-tight">
+                    <h2 className="text-[36px] font-bold mb-6 text-white leading-tight">
                         Ready to Dominate Search?
                     </h2>
                     <p className="text-[16px] md:text-[18px] mb-6 opacity-90 font-medium text-white">
                         Organic traffic is the most powerful digital asset you can build.
                     </p>
-                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 text-white">
+                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 text-white font-medium">
                         If you're ready to move beyond temporary boosts and build long-term digital authority,
                     </p>
-                    <p className="text-[16px] md:text-[18px] mb-6 font-bold text-white">
+                    <p className="text-[16px] md:text-[18px] mb-6 font-medium text-white">
                         Partner with Adkryoss managed by <span className="text-white font-black">Clink Consultancy Services Private Limited</span>
                     </p>
-                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 text-white">
+                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 text-white font-medium">
                         Let's transform search visibility into consistent business growth.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-[#0066CC] py-5 px-12 rounded-xl text-[18px] font-bold transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_40px_rgba(0,0,0,0.3)] hover:scale-105">

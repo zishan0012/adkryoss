@@ -165,7 +165,7 @@ const MartechServices = () => {
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-[42px] font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight tracking-tight">
                                 The Future of Marketing is Martech-Led
                             </h2>
                             <div className="space-y-6">
@@ -202,7 +202,7 @@ const MartechServices = () => {
             {/* Our Martech Capabilities */}
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto text-center mb-16">
-                    <h2 className="text-[42px] font-extrabold mb-6 tracking-tight text-white">Our Martech Capabilities</h2>
+                    <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our Martech Capabilities</h2>
                     <div className="w-24 h-2 bg-blue-500 mx-auto rounded-full"></div>
                 </div>
                 <div className="container px-6 mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -233,7 +233,7 @@ const MartechServices = () => {
                 <div className="container px-6 mx-auto">
                     <div className="max-w-6xl mx-auto rounded-[50px] bg-gradient-to-br from-[#0066CC] to-[#004999] p-16 text-white relative shadow-[0_30px_60px_-12px_rgba(0,102,204,0.4)] overflow-hidden">
                         <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -mr-40 -mt-40 blur-3xl"></div>
-                        <h2 className="text-[36px] font-extrabold mb-10 leading-tight text-white tracking-tight">Performance & Martech Integration</h2>
+                        <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">Performance & Martech Integration</h2>
                         <div className="grid md:grid-cols-2 gap-16 items-center">
                             <div>
                                 <p className="text-[16px] md:text-[18px] mb-6 text-lg opacity-90 leading-relaxed text-white font-medium">
@@ -258,7 +258,7 @@ const MartechServices = () => {
             {/* Why Businesses Choose Us */}
             <section className="py-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
-                    <h2 className="text-[42px] font-extrabold text-slate-900 mb-16 text-center leading-tight tracking-tight">
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight">
                         Why Businesses Choose Our Martech Expertise
                     </h2>
                     <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -281,7 +281,7 @@ const MartechServices = () => {
             <section className="py-24 bg-white">
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">Our Martech Implementation Process</h2>
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-4 leading-tight tracking-tight">Our Martech Implementation Process</h2>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
                         {process.map((item, index) => (
@@ -303,7 +303,7 @@ const MartechServices = () => {
                     <div className="grid md:grid-cols-2 gap-20">
                         {/* Industries */}
                         <div>
-                            <h2 className="text-[32px] font-black mb-10 text-white tracking-tight">Industries We Empower</h2>
+                            <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">Industries We Empower</h2>
                             <div className="flex flex-wrap gap-4">
                                 {industries.map((item, index) => (
                                     <div key={index} className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-black transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1">
@@ -317,7 +317,7 @@ const MartechServices = () => {
                         </div>
                         {/* Advantages */}
                         <div className="bg-white/5 p-12 rounded-[50px] border border-white/10 shadow-2xl">
-                            <h2 className="text-[32px] font-black mb-10 text-white tracking-tight">The Martech Advantage</h2>
+                            <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">The Martech Advantage</h2>
                             <div className="space-y-6">
                                 {advantages.map((item, index) => (
                                     <div key={index} className="flex items-center gap-5 group">
@@ -328,7 +328,7 @@ const MartechServices = () => {
                                     </div>
                                 ))}
                             </div>
-                            <p className="mt-12 text-blue-400 font-black italic text-xl">
+                            <p className="mt-12 text-blue-400 font-medium italic text-xl">
                                 This is digital growth engineering.
                             </p>
                         </div>
@@ -339,16 +339,16 @@ const MartechServices = () => {
             {/* Final CTA Section */}
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
                 <div className="container max-w-4xl mx-auto animate-fade-in text-left md:text-center">
-                    <h2 className="text-[42px] font-black mb-10 leading-tight text-white tracking-tight">Ready to Build a Smarter Marketing Engine?</h2>
+                    <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">Ready to Build a Smarter Marketing Engine?</h2>
                     <div className="space-y-12">
                         <div className="text-2xl  font-bold opacity-90 max-w-3xl text-white mx-auto leading-relaxed">
-                            <p className="text-[16px] md:text-[18px] mb-6 text-white">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium">
                                 Technology is only powerful when it is structured.
                             </p>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-white">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium">
                                 Automation is only effective when it is strategic.
                             </p>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-white">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium">
                                 Data is only valuable when it drives revenue.
                             </p>
                         </div>
@@ -356,7 +356,7 @@ const MartechServices = () => {
                             At Adkryoss managed by <span className="font-bold">Clink Consultancy Services Private Limited</span>, we help businesses move from scattered tools to synchronized growth systems.
                         </p>
                         <div className="flex flex-col items-center gap-10">
-                            <p className="text-[16px] md:text-[18px] mb-6 text-3xl font-black text-white italic tracking-tighter leading-none pb-4">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-3xl font-medium text-white italic tracking-tighter leading-none pb-4">
                                 Let’s architect your Martech ecosystem for success.
                             </p>
                             <Link to="/contact" className="inline-flex items-center gap-4 bg-white text-[#0066CC] py-6 px-16 rounded-[25px] text-[22px] font-black transition-all duration-300 hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.4)] hover:-translate-y-2 hover:scale-105 active:scale-95 group tracking-tight">

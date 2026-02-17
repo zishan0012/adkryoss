@@ -160,7 +160,7 @@ const SEOCopywriting = () => {
                             We craft SEO copy that speaks to both — strategically optimized, conversion-focused, and built for long-term organic growth.
                         </p>
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
-                            Adkryoss managed by <span className="font-semibold text-black">Clink Consultancy Services Private Limited</span> delivers data-backed SEO copywriting that drives rankings, authority, and revenue — not just traffic.
+                            Adkryoss managed by <span className="font-semibold text-white">Clink Consultancy Services Private Limited</span> delivers data-backed SEO copywriting that drives rankings, authority, and revenue — not just traffic.
                         </p>
 
                     </div>
@@ -178,10 +178,10 @@ const SEOCopywriting = () => {
             {/* Why SEO Copywriting Is a Growth Engine Section */}
             <section className="py-24 bg-slate-50">
                 <div className="container px-6 text-center mb-16">
-                    <h2 className="text-[42px] font-semibold text-slate-900 mb-8 leading-tight">
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight">
                         Why SEO Copywriting Is a Growth Engine
                     </h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed max-w-4xl mx-auto">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed max-w-4xl mx-auto font-medium">
                         Today’s search ecosystem is smarter than ever. With AI-powered search models, semantic indexing, and intent-based ranking signals, content must go beyond keywords.
                     </p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
@@ -211,7 +211,7 @@ const SEOCopywriting = () => {
             <section className="py-24 bg-white">
                 <div className="container px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-semibold text-slate-900 mb-5 leading-tight">Our SEO Copywriting Services</h2>
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">Our SEO Copywriting Services</h2>
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-10">
@@ -220,7 +220,7 @@ const SEOCopywriting = () => {
                                 <div className="w-16 h-16 bg-gradient-to-br from-[#0066CC] to-[#004999] rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform mb-8">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-[22px] font-extrabold text-slate-900 mb-4 group-hover:text-[#0066CC] transition-colors leading-tight uppercase tracking-tight">
+                                <h3 className="text-[22px] font-semibold text-slate-900 mb-4 group-hover:text-[#0066CC] transition-colors leading-tight uppercase tracking-tight">
                                     {item.title}
                                 </h3>
                                 <p className="text-slate-500 leading-relaxed font-medium m-0">
@@ -237,7 +237,7 @@ const SEOCopywriting = () => {
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-semibold mb-6 leading-tight text-white">Our Strategic Approach</h2>
+                        <h2 className="text-[36px] font-bold mb-6 leading-tight text-white">Our Strategic Approach</h2>
                     </div>
                     <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {strategySteps.map((item, index) => (
@@ -263,7 +263,7 @@ const SEOCopywriting = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-semibold text-slate-900 mb-6">What Makes Our SEO Copy Different</h2>
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-6">What Makes Our SEO Copy Different</h2>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {differentiators.map((item, index) => (
@@ -271,7 +271,7 @@ const SEOCopywriting = () => {
                                 <div className="w-14 h-14 bg-blue-50 text-[#0066CC] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0066CC] group-hover:text-white transition-all shadow-sm">
                                     <ShieldCheck size={28} />
                                 </div>
-                                <h3 className="text-xl font-extrabold text-slate-900 mb-4 leading-tight">{item.title}</h3>
+                                <h3 className="text-xl font-semibold text-slate-900 mb-4 leading-tight">{item.title}</h3>
                                 <p className="text-slate-600 text-[15px] leading-relaxed m-0 font-medium">
                                     {item.desc}
                                 </p>
@@ -284,7 +284,7 @@ const SEOCopywriting = () => {
             {/* Industries Section */}
             <section className="py-24 bg-white">
                 <div className="container px-6 max-w-5xl mx-auto">
-                    <h2 className="text-[42px] font-semibold text-slate-900 mb-10 text-center leading-tight">Industries We Serve</h2>
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-10 text-center leading-tight">Industries We Serve</h2>
                     <div className="flex flex-wrap justify-center gap-4 mb-12">
                         {industries.map((industry, index) => (
                             <div key={index} className="px-8 py-5 bg-slate-50 border-2 border-slate-100 rounded-xl font-semibold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm">
@@ -303,8 +303,8 @@ const SEOCopywriting = () => {
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] -mr-48 -mt-48"></div>
                 <div className="container px-6 relative z-10">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold mb-6 text-white">Results You Can Expect</h2>
-                        <p className="text-xl text-blue-400 font-bold italic  ">"We don’t chase traffic. We build organic revenue channels."</p>
+                        <h2 className="text-[36px] font-bold mb-6 text-white">Results You Can Expect</h2>
+                        <p className="text-xl text-blue-400 font-medium italic  ">"We don’t chase traffic. We build organic revenue channels."</p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-6">
                         {results.map((point, index) => (
@@ -319,7 +319,7 @@ const SEOCopywriting = () => {
             {/* FAQ Section */}
             <section className="py-24 bg-white">
                 <div className="container px-6 max-w-4xl mx-auto">
-                    <h2 className="text-[42px] font-bold text-slate-900 mb-12 text-center">Frequently Asked Questions</h2>
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-12 text-center">Frequently Asked Questions</h2>
                     <div className="space-y-4">
                         {faqs.map((faq, index) => (
                             <div key={index} className="border-2 border-slate-100 rounded-2xl overflow-hidden hover:border-blue-100 transition-colors">
@@ -327,7 +327,7 @@ const SEOCopywriting = () => {
                                     onClick={() => toggleFaq(index)}
                                     className="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-slate-50 transition-colors"
                                 >
-                                    <span className="text-[20px] font-black text-slate-900">{faq.q}</span>
+                                    <span className="text-[20px] font-black text-slate-700">{faq.q}</span>
                                     {openFaq === index ? <ChevronUp className="text-[#0066CC]" /> : <ChevronDown className="text-slate-400" />}
                                 </button>
                                 {openFaq === index && (
@@ -345,8 +345,8 @@ const SEOCopywriting = () => {
             {/* Final CTA Section */}
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
                 <div className="container max-w-4xl mx-auto">
-                    <h2 className="text-[42px] font-black mb-8 leading-tight">Let’s Build Content That Compounds</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white max-w-3xl mx-auto leading-relaxed">
+                    <h2 className="text-[36px] font-bold mb-8 leading-tight">Let’s Build Content That Compounds</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white max-w-3xl mx-auto leading-relaxed font-medium">
                         Search visibility is not accidental — it’s engineered. <br />
                         Let <span className="font-black">Adkryoss managed by Clink Consultancy Services Private Limited</span> craft content assets that rank, resonate, and convert.
                     </p>

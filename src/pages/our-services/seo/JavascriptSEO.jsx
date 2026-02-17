@@ -143,7 +143,7 @@ const JavascriptSEO = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Modern websites run on JavaScript. Google doesn't always. If your content loads after rendering, search engines might never see it. We ensure your JS-driven website is fully crawlable, indexable, and optimized for maximum visibility.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px]">
+                        <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we bridge the gap between advanced development and search engine accessibility.
                             </p>
@@ -164,10 +164,10 @@ const JavascriptSEO = () => {
                 <div className="container">
                     <div className="grid md:grid-cols-[minmax(300px,1fr)_1.2fr] gap-[60px] items-center">
                         <div>
-                            <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
+                            <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
                                 Why JavaScript SEO Matters
                             </h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 Today's websites rely heavily on frameworks like React, Angular, and Vue. While they deliver speed and user experience, they often create invisible barriers for search engines.
                             </p>
                             <div className="space-y-4">
@@ -176,7 +176,7 @@ const JavascriptSEO = () => {
                                         <div className="text-[#0066cc] mt-1">{item.icon}</div>
                                         <div>
                                             <h4 className="text-[18px] font-semibold text-[#0f172a] mb-1">{item.title}</h4>
-                                            <p className="text-[15px] text-[#64748b]">{item.desc}</p>
+                                            <p className="text-[15px] text-[#64748b] font-medium">{item.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -195,7 +195,7 @@ const JavascriptSEO = () => {
             <section className="py-20 bg-[#f8fafc]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">
+                        <h2 className="text-[36px] font-bold mb-5 text-[#0f172a]">
                             Our JavaScript SEO Approach
                         </h2>
                         <p className="text-[16px] md:text-[18px] mb-6 font-medium">
@@ -206,8 +206,8 @@ const JavascriptSEO = () => {
                         {framework.map((phase, i) => (
                             <div key={i} className="w-[calc(33.333%-27px)] min-w-[350px] bg-white p-[50px_40px] rounded-[24px] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] relative overflow-hidden border border-[#e2e8f0] flex-grow max-w-[450px] hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-6">{phase.icon}</div>
-                                <h3 className="text-[24px] font-bold mb-5 text-[#0f172a]">{phase.title}</h3>
-                                <p className="text-[16px] text-[#475569] mb-[30px] leading-[1.7]">{phase.desc}</p>
+                                <h3 className="text-[24px] font-semibold mb-5 text-[#0f172a]">{phase.title}</h3>
+                                <p className="text-[16px] text-[#475569] mb-[30px] leading-[1.7] font-medium">{phase.desc}</p>
                                 <ul className="space-y-6">
                                     {phase.points.map((pt, idx) => (
                                         <li key={idx} className="flex gap-3 text-[15px] text-[#334155] leading-[1.5]">
@@ -225,8 +225,8 @@ const JavascriptSEO = () => {
             {/* Framework Expertise */}
             <section className="py-20 bg-[#0f172a] text-white">
                 <div className="container text-center">
-                    <h2 className="text-[42px] font-bold mb-5 text-white">Framework-Specific Expertise</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto">
+                    <h2 className="text-[36px] font-bold mb-5 text-white">Framework-Specific Expertise</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto text-white font-medium">
                         Whether you're running eCommerce, SaaS, or an Enterprise app, we align SEO with your development stack.
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
@@ -243,8 +243,8 @@ const JavascriptSEO = () => {
             {/* Industries we support */}
             <section className="py-20 bg-white">
                 <div className="container text-center">
-                    <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">Industries We Support</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6">
+                    <h2 className="text-[36px] font-bold mb-5 text-[#0f172a]">Industries We Support</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                         Each industry demands a custom rendering and crawl strategy, which we design with long-term scalability in mind.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -252,7 +252,7 @@ const JavascriptSEO = () => {
                             <div key={i} className="p-10 bg-[#f8fafc] rounded-[30px] border border-[#e2e8f0] text-left transition-all duration-300 hover:border-[#0066cc] hover:-translate-y-1.5 ">
                                 <div className="text-[#0066cc] mb-5">{ind.icon}</div>
                                 <h4 className="text-[20px] font-bold text-[#0f172a] mb-2.5">{ind.name}</h4>
-                                <p className="text-[15px] text-[#475569] leading-[1.6]">{ind.desc}</p>
+                                <p className="text-[15px] text-[#475569] leading-[1.6] font-medium">{ind.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -267,9 +267,9 @@ const JavascriptSEO = () => {
                         <div className="bg-white p-[50px] rounded-[40px] border border-[#e2e8f0]">
                             <div className="flex items-center gap-[15px] mb-[30px]">
                                 <BarChart3 size={32} className="text-[#0066cc]" />
-                                <h3 className="text-[28px] font-bold text-[#0f172a]">Our Working Model</h3>
+                                <h3 className="text-[28px] font-semibold text-[#0f172a]">Our Working Model</h3>
                             </div>
-                            <p className="text-base text-[#64748b] mb-6 leading-[1.6]">
+                            <p className="text-base text-[#64748b] mb-6 leading-[1.6] font-medium">
                                 We don’t treat JavaScript SEO as a one-time fix. It’s an ongoing technical alignment process.
                             </p>
                             <div className="flex flex-wrap gap-2.5 mb-[30px]">
@@ -282,7 +282,7 @@ const JavascriptSEO = () => {
                                     </React.Fragment>
                                 ))}
                             </div>
-                            <p className="text-[15px] text-[#475569] leading-[1.6]">
+                            <p className="text-[15px] text-[#475569] leading-[1.6] font-medium">
                                 At Adkryoss managed by <span className="font-semibold text-[#0f172a]">Clink Consultancy Services Private Limited</span>, we collaborate with your developers, track rendering performance after deployment, and continuously optimize based on real search data.
                             </p>
                         </div>
@@ -291,7 +291,7 @@ const JavascriptSEO = () => {
                         <div className="bg-white p-[50px] rounded-[40px] border border-[#e2e8f0]">
                             <div className="flex items-center gap-[15px] mb-[30px]">
                                 <Lightbulb size={32} className="text-[#0066cc]" />
-                                <h3 className="text-[28px] font-bold text-[#0f172a]">Why Choose Us</h3>
+                                <h3 className="text-[28px] font-semibold text-[#0f172a]">Why Choose Us</h3>
                             </div>
                             <div className="space-y-6">
                                 {whyChooseUs.map((item, i) => (
@@ -301,7 +301,7 @@ const JavascriptSEO = () => {
                                     </div>
                                 ))}
                             </div>
-                            <p className="mt-[30px] text-base text-[#64748b] italic border-t border-[#f1f5f9] pt-5">
+                            <p className="mt-[30px] text-base text-[#64748b] italic border-t border-[#f1f5f9] pt-5 font-medium">
                                 "We combine strategy, engineering precision, and performance marketing to deliver measurable ranking improvements."
                             </p>
                         </div>
@@ -314,7 +314,7 @@ const JavascriptSEO = () => {
                 <div className="container">
                     <div className="grid md:grid-cols-[1.2fr_1fr] gap-[60px] items-center">
                         <div>
-                            <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
+                            <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
                                 What Results You Can Expect
                             </h2>
                             <div className="space-y-6">
@@ -328,7 +328,7 @@ const JavascriptSEO = () => {
                                         <CheckCircle2 size={24} className="text-[#0066cc] shrink-0 mt-1" />
                                         <div>
                                             <h4 className="text-[18px] font-bold text-[#0f172a] mb-1">{item.t}</h4>
-                                            <p className="text-[15px] text-[#475569]">{item.desc}</p>
+                                            <p className="text-[15px] text-[#475569] font-medium">{item.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -336,8 +336,8 @@ const JavascriptSEO = () => {
                         </div>
                         <div className="bg-[#f8fafc] p-[50px] rounded-[30px] border border-[#e2e8f0] text-center">
                             <Activity size={60} className="text-[#0066cc] mx-auto mb-6" />
-                            <h3 className="text-[24px] font-bold text-[#0f172a] mb-4">Ready to Scale?</h3>
-                            <p className="text-[#64748b] text-[17px] mb-8">
+                            <h3 className="text-[24px] font-semibold text-[#0f172a] mb-4">Ready to Scale?</h3>
+                            <p className="text-[#64748b] text-[17px] mb-8 font-medium">
                                 JavaScript should power your growth — not block it. Let's make your dynamic website search-ready.
                             </p>
                             <Link to="/contact" className="inline-flex items-center gap-2.5 bg-[#0066cc] text-white p-[15px_40px] rounded-[50px] font-semibold no-underline transition-all duration-300 hover:scale-105">

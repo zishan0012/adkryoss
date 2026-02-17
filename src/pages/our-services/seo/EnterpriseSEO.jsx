@@ -148,9 +148,9 @@ const EnterpriseSEO = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Enterprise SEO turns complex websites into scalable growth engines. We build data-driven strategies that help enterprises win visibility across thousands of keywords, markets, and product categories.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-[24px] rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-[32px]">
+                        <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
-                                At Adkryoss managed by <span className="font-bold text-black">Clink Consultancy Services Private Limited</span>, we blend technical expertise, automation, and AI-led insights to drive measurable revenue growth.
+                                At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we blend technical expertise, automation, and AI-led insights to drive measurable revenue growth.
                             </p>
                         </div>
                     </div>
@@ -168,10 +168,10 @@ const EnterpriseSEO = () => {
             <section className="py-[100px] bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
                             Why Enterprise SEO Demands a Different Approach
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[850px] mx-auto">
+                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[850px] mx-auto font-medium">
                             Large organizations face challenges that traditional SEO agencies simply cannot handle. We approach enterprise SEO as a business transformation initiative.
                         </p>
                     </div>
@@ -198,7 +198,7 @@ const EnterpriseSEO = () => {
                             <div className="relative z-10">
                                 <TrendingUp size={48} className="text-blue-500 mb-6" />
                                 <h3 className="text-[28px] font-semibold mb-[24px]">Strategic Integration</h3>
-                                <p className="text-[16px] md:text-[18px] mb-6 opacity-80 leading-[1.8] text-white">
+                                <p className="text-[16px] md:text-[18px] mb-6 opacity-80 leading-[1.8] text-white font-medium">
                                     We don't just optimize for bots. We integrate SEO with your technology, content, analytics, and CRO teams to build a sustainable visibility engine that drives business value.
                                 </p>
                             </div>
@@ -214,10 +214,10 @@ const EnterpriseSEO = () => {
             <section className="py-[100px] bg-[#f1f5f9]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
                             Our Enterprise SEO Framework
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Structured for performance, built for scale.
                         </p>
                     </div>
@@ -227,7 +227,7 @@ const EnterpriseSEO = () => {
                             <div key={i} className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
-                                <p className="text-[#666] mb-[20px] leading-[1.6]">{item.desc}</p>
+                                <p className="text-[#666] mb-[20px] leading-[1.6] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0 mt-[20px]">
                                     {item.points.map((p, j) => (
                                         <li key={j} className="flex gap-[8px] mb-[10px] text-[#444] text-[15px]">
@@ -246,7 +246,7 @@ const EnterpriseSEO = () => {
                             <div key={i} className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
-                                <p className="text-[#666] mb-[20px] leading-[1.6]">{item.desc}</p>
+                                <p className="text-[#666] mb-[20px] leading-[1.6] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0">
                                     {item.points.map((p, j) => (
                                         <li key={j} className="flex gap-[8px] mb-[10px] text-[#444] text-[15px]">
@@ -265,8 +265,8 @@ const EnterpriseSEO = () => {
             <section className="py-[100px] bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">Enterprise SEO Solutions We Offer</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">Enterprise SEO Solutions We Offer</h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Tailored strategies for your industry dynamics and growth stage.
                         </p>
                     </div>
@@ -284,7 +284,7 @@ const EnterpriseSEO = () => {
             <section className="py-[100px] bg-[#0f172a] text-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-semibold mb-[20px] text-white">What Makes Our Enterprise SEO Different?</h2>
+                        <h2 className="text-[36px] font-bold mb-[20px] text-white">What Makes Our Enterprise SEO Different?</h2>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
@@ -300,7 +300,7 @@ const EnterpriseSEO = () => {
                                 <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white">
                                     {item.t}
                                 </h3>
-                                <p className="text-[#e2e8f0] leading-[1.7]">{item.d}</p>
+                                <p className="text-[#e2e8f0] leading-[1.7] font-medium">{item.d}</p>
                             </div>
                         ))}
                     </div>
@@ -311,8 +311,8 @@ const EnterpriseSEO = () => {
             <section className="py-[100px] bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold text-[#1a1a1a] mb-[20px]">Our Working Model</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">Our Working Model</h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Operating as an extended enterprise growth partner.
                         </p>
                     </div>
@@ -321,7 +321,7 @@ const EnterpriseSEO = () => {
                             <div key={i} className="bg-[#f8f9fa] p-[30px] rounded-[24px] text-center border border-[#eee]">
                                 <div className="text-[32px] font-bold text-[rgba(0,102,204,0.1)] mb-[10px]">{item.step}</div>
                                 <h4 className="text-[20px] font-semibold text-[#1a1a1a] mb-[10px]">{item.title}</h4>
-                                <p className="text-[14px] text-[#666] leading-[1.6]">{item.desc}</p>
+                                <p className="text-[14px] text-[#666] leading-[1.6] font-medium">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -332,7 +332,7 @@ const EnterpriseSEO = () => {
             <section className="py-[100px] bg-[#f1f5f9]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold text-[#1a1a1a] mb-[20px]">Industries We Empower</h2>
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">Industries We Empower</h2>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-[24px]">
                         {[
@@ -359,7 +359,7 @@ const EnterpriseSEO = () => {
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-[42px] font-bold text-[#1a1a1a] mb-[30px]">Results You Can Expect</h2>
+                            <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[30px]">Results You Can Expect</h2>
                             <div className="space-y-6">
                                 {[
                                     "Increased organic visibility across thousands of high-value keywords",
@@ -383,7 +383,7 @@ const EnterpriseSEO = () => {
                             <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white">
                                 Dominance at Scale
                             </h3>
-                            <p className="text-[16px] md:text-[18px] mb-6 opacity-80 leading-[1.8] text-white">
+                            <p className="text-[16px] md:text-[18px] mb-6 opacity-80 leading-[1.8] text-white font-medium">
                                 Enterprise SEO is not a campaign — it’s a competitive advantage that builds a wide moat around your digital presence.
                             </p>
                         </div>
@@ -394,8 +394,8 @@ const EnterpriseSEO = () => {
             {/* CTA */}
             <section className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
                 <div className="container">
-                    <h2 className="text-[42px] font-semibold mb-[20px] text-white">Ready to Lead Your Industry in Search?</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 text-white">
+                    <h2 className="text-[36px] font-bold mb-[20px] text-white">Ready to Lead Your Industry in Search?</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 text-white font-medium">
                         Partner with Adkryoss managed by Clink Consultancy Services Private Limited to build a scalable search growth engine.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-[10px] bg-white text-[#0066cc] py-[18px] px-[40px] rounded-[50px] font-semibold no-underline transition-all duration-300 hover:scale-[1.05]">

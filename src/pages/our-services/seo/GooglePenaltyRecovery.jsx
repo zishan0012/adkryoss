@@ -109,7 +109,7 @@ const GooglePenaltyRecovery = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             When organic traffic drops overnight, revenue follows. A Google penalty can severely damage your visibility, but it's not the end. We diagnose, repair, and engineer long-term search resilience.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px]">
+                        <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="text-white font-bold">Clink Consultancy Services Private Limited</span>, we rebuild your SEO foundation stronger than before.
                             </p>
@@ -131,22 +131,22 @@ const GooglePenaltyRecovery = () => {
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] items-center">
                         <div>
-                            <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
+                            <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
                                 We Don't Just Remove Penalties. We Rebuild Your DNA.
                             </h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 Google's ecosystem evolves constantly. Updates like SpamCore, Helpful Content, and Core Algorithm changes are designed to reward quality. If you've been hit, it's a signal that your SEO foundation needs more than just a quick fix.
                             </p>
                         </div>
                         <div className="bg-[#f8fafc] p-10 rounded-[30px] border border-[#e2e8f0]">
-                            <h3 className="text-[24px] font-bold mb-[30px] text-[#0f172a]">Why Penalties Happen:</h3>
+                            <h3 className="text-[24px] font-semibold mb-[30px] text-[#0f172a]">Why Penalties Happen:</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 {commonReasons.map((reason, i) => (
                                     <div key={i} className="flex gap-[15px]">
                                         <div className="text-[#0066cc] p-0.5">{reason.icon}</div>
                                         <div>
                                             <h4 className="text-[16px] font-bold text-[#0f172a] mb-1">{reason.title}</h4>
-                                            <p className="text-[13px] text-[#64748b] leading-[1.4]">{reason.desc}</p>
+                                            <p className="text-[13px] text-[#64748b] leading-[1.4] font-medium">{reason.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -159,15 +159,15 @@ const GooglePenaltyRecovery = () => {
             {/* Penalty Types Section */}
             <section className="py-20 bg-[#f8fafc]">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">
+                    <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">
                         Types of Google Penalties We Handle
                     </h2>
                     <div className="flex flex-wrap justify-center gap-[30px]">
                         {penaltyTypes.map((type, i) => (
                             <div key={i} className="w-[calc(50%-15px)] min-w-[320px] bg-white p-10 rounded-[24px] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc] border border-transparent">
                                 <div className="text-[#0066cc] mb-6">{type.icon}</div>
-                                <h3 className="text-[22px] font-bold mb-4 text-[#0f172a]">{type.title}</h3>
-                                <p className="text-base text-[#64748b] leading-[1.7]">{type.desc}</p>
+                                <h3 className="text-[22px] font-semibold mb-4 text-[#0f172a]">{type.title}</h3>
+                                <p className="text-base text-[#64748b] leading-[1.7] font-medium">{type.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -178,7 +178,7 @@ const GooglePenaltyRecovery = () => {
             <section id="audit" className="py-20 bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">
+                        <h2 className="text-[36px] font-bold mb-5 text-[#0f172a]">
                             Our Google Penalty Recovery Framework
                         </h2>
                         <p className="text-[16px] md:text-[18px] mb-6 font-medium">
@@ -189,8 +189,8 @@ const GooglePenaltyRecovery = () => {
                         {phases.map((phase, i) => (
                             <div key={i} className="w-[calc(25%-23px)] min-w-[280px] bg-[#f8fafc] p-[30px] rounded-[20px] border border-[#e2e8f0] grow transition-all duration-300 hover:border-[#0066cc] hover:bg-white hover:shadow-lg">
                                 <span className="text-sm font-bold text-[#0066cc] mb-4 block uppercase tracking-wider">Phase 0{i + 1}</span>
-                                <h3 className="text-[20px] font-bold mb-4 text-[#0f172a]">{phase.title}</h3>
-                                <p className="text-[15px] text-[#475569] mb-5 leading-[1.6]">{phase.desc}</p>
+                                <h3 className="text-[20px] font-semibold mb-4 text-[#0f172a]">{phase.title}</h3>
+                                <p className="text-[15px] text-[#475569] mb-5 leading-[1.6] font-medium">{phase.desc}</p>
                                 <ul className="list-none p-0 space-y-4">
                                     {phase.points.map((pt, idx) => (
                                         <li key={idx} className="text-[14px] text-[#666] flex gap-2.5 leading-[1.5]">
@@ -210,10 +210,10 @@ const GooglePenaltyRecovery = () => {
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-[60px] items-center">
                         <div>
-                            <h2 className="text-[42px] font-bold text-white mb-[30px]">
+                            <h2 className="text-[36px] font-bold text-white mb-[30px]">
                                 Signs You Need Immediate Penalty Recovery
                             </h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 If your organic traffic vanishes or keywords disappear from the SERP, every day you wait is a day of lost revenue.
                             </p>
                             <Link to="/contact" className="inline-flex items-center gap-2.5 text-[#60a5fa] font-bold no-underline text-[18px] transition-all hover:gap-4">
@@ -224,7 +224,7 @@ const GooglePenaltyRecovery = () => {
                             {signs.map((sign, i) => (
                                 <div key={i} className="p-6 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-[20px] transition-all duration-300 hover:bg-[rgba(255,255,255,0.1)]">
                                     <AlertTriangle size={24} className="text-[#f59e0b] mb-4" />
-                                    <p className="text-base font-bold text-white m-0 leading-[1.4]">{sign}</p>
+                                    <p className="text-base font-medium text-white m-0 leading-[1.4]">{sign}</p>
                                 </div>
                             ))}
                         </div>
@@ -235,7 +235,7 @@ const GooglePenaltyRecovery = () => {
             {/* Working Approach Comparison */}
             <section className="py-20 bg-white">
                 <div className="container text-center">
-                    <h2 className="text-[42px] font-bold mb-[60px] text-[#0f172a]">
+                    <h2 className="text-[36px] font-bold mb-[60px] text-[#0f172a]">
                         What Makes Our Recovery Approach Different?
                     </h2>
                     <div className="flex flex-wrap justify-center gap-5">
@@ -252,7 +252,7 @@ const GooglePenaltyRecovery = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-[16px] md:text-[18px] mb-6 mt-[50px] max-w-[900px] mx-auto leading-relaxed">
+                    <p className="text-[16px] md:text-[18px] mb-6 mt-[50px] max-w-[900px] mx-auto leading-relaxed font-medium">
                         Adkryoss managed by Clink Consultancy Services Private Limited doesn't just fix penalties temporarily. We build <strong className="text-[#0f172a]">algorithm-proof digital ecosystems</strong>.
                     </p>
                 </div>
@@ -261,23 +261,23 @@ const GooglePenaltyRecovery = () => {
             {/* Expected Timeline */}
             <section className="py-20 bg-[#f8fafc]">
                 <div className="container text-center">
-                    <h2 className="text-[42px] font-bold mb-[50px] text-[#0f172a]">Recovery Timeline</h2>
+                    <h2 className="text-[36px] font-bold mb-[50px] text-[#0f172a]">Recovery Timeline</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
                         <div className="p-10 bg-white rounded-[24px] shadow-[0_4px_6px_rgba(0,0,0,0.05)] border border-transparent transition-all hover:border-[#0066cc]/20">
-                            <h3 className="text-[20px] font-bold text-[#0066cc] mb-4">Minor Algorithmic Issue</h3>
-                            <p className="text-[32px] font-bold text-[#0f172a] mb-2.5">4–8 Weeks</p>
-                            <p className="text-[#64748b] leading-relaxed">Focused cleanup and quality improvement.</p>
+                            <h3 className="text-[20px] font-semibold text-[#0066cc] mb-4">Minor Algorithmic Issue</h3>
+                            <p className="text-[32px] font-medium text-[#0f172a] mb-2.5">4–8 Weeks</p>
+                            <p className="text-[#64748b] leading-relaxed font-medium">Focused cleanup and quality improvement.</p>
                         </div>
                         <div className="p-10 bg-white rounded-[24px] border-2 border-[#0066cc] shadow-xl shadow-blue-900/5 relative overflow-hidden">
                             <div className="absolute top-0 right-0 bg-[#0066cc] text-white text-[10px] px-3 py-1 font-bold uppercase tracking-widest">Crucial</div>
-                            <h3 className="text-[20px] font-bold text-[#0066cc] mb-4">Manual Action</h3>
-                            <p className="text-[32px] font-bold text-[#0f172a] mb-2.5">2–4 Months</p>
-                            <p className="text-[#64748b] leading-relaxed">Outreach, cleanup, and reconsideration process.</p>
+                            <h3 className="text-[20px] font-semibold text-[#0066cc] mb-4">Manual Action</h3>
+                            <p className="text-[32px] font-medium text-[#0f172a] mb-2.5">2–4 Months</p>
+                            <p className="text-[#64748b] leading-relaxed font-medium">Outreach, cleanup, and reconsideration process.</p>
                         </div>
                         <div className="p-10 bg-white rounded-[24px] shadow-[0_4px_6px_rgba(0,0,0,0.05)] border border-transparent transition-all hover:border-[#0066cc]/20">
-                            <h3 className="text-[20px] font-bold text-[#0066cc] mb-4">Severe Link Penalty</h3>
-                            <p className="text-[32px] font-bold text-[#0f172a] mb-2.5">3–6 Months</p>
-                            <p className="text-[#64748b] leading-relaxed">Extensive forensic link audit and authority rebuilding.</p>
+                            <h3 className="text-[20px] font-semibold text-[#0066cc] mb-4">Severe Link Penalty</h3>
+                            <p className="text-[32px] font-medium text-[#0f172a] mb-2.5">3–6 Months</p>
+                            <p className="text-[#64748b] leading-relaxed font-medium">Extensive forensic link audit and authority rebuilding.</p>
                         </div>
                     </div>
                 </div>
@@ -286,7 +286,7 @@ const GooglePenaltyRecovery = () => {
             {/* FAQ Section */}
             <section className="py-20 bg-white">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">Recovery Intelligence (FAQs)</h2>
+                    <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">Recovery Intelligence (FAQs)</h2>
                     <div className="max-w-[900px] mx-auto space-y-6">
                         {[
                             { q: "How do I know if I've been penalized?", a: "Check Google Search Console for 'Manual Actions' and analyze traffic drop patterns aligned with known algorithm updates." },
@@ -295,10 +295,10 @@ const GooglePenaltyRecovery = () => {
                             { q: "Should I disavow all backlinks?", a: "No. Only toxic, manipulative, or paid links should be disavowed after a careful forensic link audit." }
                         ].map((faq, i) => (
                             <div key={i} className="p-[30px] bg-[#f8fafc] rounded-[24px] border border-[#e2e8f0] transition-all hover:border-[#0066cc]/30 shadow-sm">
-                                <h3 className="text-[18px] font-bold text-[#0f172a] mb-3 flex gap-3">
+                                <h3 className="text-[18px] font-semibold text-[#0f172a] mb-3 flex gap-3">
                                     <HelpCircle size={22} className="text-[#0066cc] shrink-0" /> {faq.q}
                                 </h3>
-                                <p className="text-base text-[#475569] leading-[1.7] m-0 pl-[34px]">{faq.a}</p>
+                                <p className="text-base text-[#475569] leading-[1.7] m-0 pl-[34px] font-medium">{faq.a}</p>
                             </div>
                         ))}
                     </div>
@@ -308,10 +308,10 @@ const GooglePenaltyRecovery = () => {
             {/* Final CTA */}
             <section className="py-24 text-center bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white">
                 <div className="container">
-                    <h2 className="text-[56px] font-bold text-white mb-6 leading-tight">
+                    <h2 className="text-[36px] font-bold text-white mb-6 leading-tight">
                         Ready to Take Control of Your Rankings?
                     </h2>
-                    <p className="text-[22px] mb-12 max-w-[800px] mx-auto text-[#eff6ff] opacity-90 leading-relaxed">
+                    <p className="text-[22px] mb-12 max-w-[800px] mx-auto text-[#eff6ff] opacity-90 leading-relaxed font-medium">
                         A penalty is a setback — not a failure. The faster you respond, the stronger your recovery. Request a comprehensive penalty audit today.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-3.5 bg-[#0066cc] text-white py-5 px-[60px] rounded-full text-[20px] font-bold no-underline transition-all duration-300 shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:-translate-y-1.5 hover:scale-[1.05] hover:shadow-[#0066cc]/40">

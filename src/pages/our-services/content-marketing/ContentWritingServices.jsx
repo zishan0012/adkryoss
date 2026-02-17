@@ -188,7 +188,7 @@ const ContentWritingServices = () => {
                             Strategic, search-optimized and conversion-driven content crafted to build authority, attract the right audience, and turn attention into measurable growth.
                         </p>
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
-                            At Adkryoss managed by <span className="font-semibold text-black">Clink Consultancy Services Private Limited</span>, we create high-performance content ecosystems that fuel SEO, paid campaigns, social media, and brand positioning—under one unified strategy.
+                            At Adkryoss managed by <span className="font-semibold text-white">Clink Consultancy Services Private Limited</span>, we create high-performance content ecosystems that fuel SEO, paid campaigns, social media, and brand positioning—under one unified strategy.
                         </p>
 
                     </div>
@@ -207,10 +207,10 @@ const ContentWritingServices = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-semibold text-slate-900 mb-5 leading-tight">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">
                             Why Content is the Growth Engine of Modern Brands
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             In today’s digital economy, content is not just communication—it’s infrastructure.
                         </p>
                     </div>
@@ -220,7 +220,7 @@ const ContentWritingServices = () => {
                             <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8] font-medium">
                                 It influences search visibility, buyer trust, conversion rates, retention, and even investor perception. Businesses that treat content as a strategic asset dominate search results and customer conversations.
                             </p>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8] font-medium">
                                 At Adkryoss managed by <span className="font-semibold text-[#0066CC]">Clink Consultancy Services Private Limited</span>, we design content frameworks aligned with search intent, audience psychology, and funnel stages—so every piece has a purpose.
                             </p>
 
@@ -233,8 +233,8 @@ const ContentWritingServices = () => {
             <section className="py-24 bg-white">
                 <div className="container px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-semibold text-slate-900 mb-5 leading-tight">Our Content Writing Expertise</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">Our Content Writing Expertise</h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             We don’t write for word count. We write for performance.
                         </p>
                     </div>
@@ -272,11 +272,11 @@ const ContentWritingServices = () => {
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-semibold mb-5 leading-tight text-white">Our Approach: Strategy First. Words Next.</h2>
+                        <h2 className="text-[36px] font-bold mb-5 leading-tight text-white">Our Approach: Strategy First. Words Next.</h2>
                         <p className="text-[16px] md:text-[18px] mb-6 text-blue-400 font-medium italic">
                             Unlike traditional content agencies, we operate on a performance marketing framework.
                         </p>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-white max-w-3xl mx-auto">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-white max-w-3xl mx-auto font-medium">
                             At Adkryoss managed by <span className="font-semibold text-blue-400">Clink Consultancy Services Private Limited</span>, every content project follows a structured methodology:
                         </p>
                     </div>
@@ -309,8 +309,8 @@ const ContentWritingServices = () => {
             <section className="py-24 bg-white">
                 <div className="container px-6">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-8 leading-tight">Industries We Serve</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 font-bold">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight">Industries We Serve</h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 font-medium">
                             We deliver domain-specific content expertise across:
                         </p>
                         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -331,7 +331,7 @@ const ContentWritingServices = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-6">What Makes Us Different</h2>
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-6">What Makes Us Different</h2>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {differentiators.map((item, index) => (
@@ -339,13 +339,13 @@ const ContentWritingServices = () => {
                                 <div className="w-14 h-14 bg-blue-50 text-[#0066CC] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0066CC] group-hover:text-white transition-all">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{item.title}</h3>
-                                <p className="text-slate-600 text-[15px] leading-relaxed mb-4">
+                                <h3 className="text-xl font-semibold text-slate-900 mb-4 leading-tight">{item.title}</h3>
+                                <p className="text-slate-600 text-[15px] leading-relaxed mb-4 font-medium">
                                     {item.desc}
                                 </p>
                                 {item.subtitle && (
                                     <div className="mt-4 pt-4 border-t border-slate-100">
-                                        <p className="text-xs font-bold text-slate-400 uppercase mb-3">{item.subtitle}</p>
+                                        <p className="text-xs font-medium text-slate-400 uppercase mb-3">{item.subtitle}</p>
                                         <div className="flex flex-wrap justify-center gap-2">
                                             {item.items.map((it, idx) => (
                                                 <span key={idx} className="bg-slate-50 text-[11px] font-bold px-2 py-1 rounded text-[#0066CC] border border-blue-100">✔ {it}</span>
@@ -364,17 +364,17 @@ const ContentWritingServices = () => {
                 <div className="container px-6">
                     <div className="max-w-5xl mx-auto rounded-[40px] bg-gradient-to-br from-[#0066CC] to-[#004999] p-12 text-white relative shadow-2xl">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
-                        <h2 className="text-[36px] font-black mb-10 leading-tight">Content That Builds Authority, Not Just Traffic</h2>
+                        <h2 className="text-[36px] font-bold mb-10 leading-tight">Content That Builds Authority, Not Just Traffic</h2>
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
-                                <p className="text-[16px] md:text-[18px] mb-6 text-xl font-bold text-white italic">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-xl font-medium text-white italic">
                                     "Ranking is important. But authority sustains growth."
                                 </p>
-                                <p className="text-[16px] md:text-[18px] mb-6 text-lg opacity-90 leading-relaxed text-white">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-lg opacity-90 leading-relaxed text-white font-medium">
                                     We build topical authority through structured content clusters, semantic keyword integration, and value-first writing aligned with Google’s EEAT principles.
                                 </p>
                                 <div className="p-6 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20">
-                                    <p className="text-[22px] font-black italic m-0 text-white">When your content educates, solves, and persuades—growth becomes predictable.</p>
+                                    <p className="text-[22px] font-medium italic m-0 text-white">When your content educates, solves, and persuades—growth becomes predictable.</p>
                                 </div>
                             </div>
                             <div className="flex flex-col gap-4">
@@ -399,18 +399,18 @@ const ContentWritingServices = () => {
             {/* CTA Section */}
             <section className="py-24 bg-slate-900 text-white text-center relative px-6">
                 <div className="max-w-4xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 p-16 rounded-[40px] shadow-2xl group hover:border-blue-500/50 transition-all">
-                    <h2 className="text-[42px] font-black text-white mb-8 leading-tight">Let’s Build Your Content Engine</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white max-w-2xl mx-auto leading-[1.8]">
+                    <h2 className="text-[36px] font-bold text-white mb-8 leading-tight">Let’s Build Your Content Engine</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white max-w-2xl mx-auto leading-[1.8] font-medium">
                         If your website is not converting traffic into revenue, the problem isn’t traffic. <br />
                         <span className="text-white font-bold italic">It’s messaging, structure, and strategic alignment.</span>
                     </p>
-                    <p className="text-[16px] md:text-[18px] mb-6 text-lg text-white italic">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-lg text-white italic font-medium">
                         Partner with <span className="font-black text-blue-400">Adkryoss managed by Clink Consultancy Services Private Limited</span> and transform your content into a scalable growth asset.
                     </p>
                     <div className="flex flex-col md:flex-row justify-center items-center gap-8 pt-12 border-t border-white/10">
                         <div className="text-left md:text-right">
-                            <p className="text-sm font-bold text-blue-500 uppercase tracking-widest mb-2">Next Step</p>
-                            <h3 className="text-[20px] md:text-[24px] mb-4 text-2xl font-black text-white leading-tight">
+                            <p className="text-sm font-medium text-blue-500 uppercase tracking-widest mb-2">Next Step</p>
+                            <h3 className="text-[20px] md:text-[24px] mb-4 text-2xl font-semibold text-white leading-tight">
                                 Ready to dominate search and influence decisions?
                             </h3>
                         </div>

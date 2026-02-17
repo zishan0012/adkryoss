@@ -152,7 +152,7 @@ const EcommerceSEO = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Ecommerce is no longer about just listing products. It’s about owning high-intent search moments. When customers search with buying intent, your store must appear first — not just visible, but irresistible.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-[24px] rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-[32px]">
+                        <div className=" p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we build performance-driven Ecommerce SEO strategies designed to increase visibility, improve product discoverability, and maximize conversion value.
                             </p>
@@ -172,10 +172,10 @@ const EcommerceSEO = () => {
             {/* Why Ecommerce SEO */}
             <section className="py-[80px] bg-white">
                 <div className="container text-center">
-                    <h2 className="text-[42px] font-bold mb-[40px] text-[#0f172a]">
+                    <h2 className="text-[36px] font-bold mb-[40px] text-[#0f172a]">
                         Why Ecommerce SEO is a Growth Multiplier
                     </h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto">
+                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto font-medium">
                         Online stores face complex SEO challenges. Without a structured SEO framework, even the best products stay invisible.
                     </p>
                     <div className="flex flex-wrap justify-center gap-[20px] mb-[60px]">
@@ -192,7 +192,7 @@ const EcommerceSEO = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                    <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                         Our approach blends technical precision, content depth, search intent mapping, and conversion intelligence to build scalable ecommerce growth.
                     </p>
                 </div>
@@ -201,17 +201,17 @@ const EcommerceSEO = () => {
             {/* Framework Section */}
             <section className="py-[80px] bg-[#f8fafc]">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">
+                    <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">
                         Our Ecommerce SEO Framework
                     </h2>
                     <div className="flex flex-wrap justify-center gap-[30px]">
                         {framework.map((item, i) => (
                             <div key={i} className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] w-[calc(33.333%-20px)] min-w-[320px] flex-grow max-w-[400px] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer hover:-translate-y-[12px] hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
-                                <h3 className="text-[22px] font-bold mb-[15px] text-[#0f172a]">
+                                <h3 className="text-[22px] font-semibold mb-[15px] text-[#0f172a]">
                                     {i + 1}. {item.title}
                                 </h3>
-                                <p className="text-[15px] text-[#475569] mb-[20px] leading-[1.6]">{item.desc}</p>
+                                <p className="text-[15px] text-[#475569] mb-[20px] leading-[1.6] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0 mb-[20px]">
                                     {item.points.map((pt, idx) => (
                                         <li key={idx} className="flex gap-[10px] mb-[20px] text-[14px] text-[#334155]">
@@ -234,7 +234,7 @@ const EcommerceSEO = () => {
                 <div className="container">
                     <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-[40px]">
                         <div>
-                            <h2 className="text-[32px] font-bold mb-[30px] text-[#0f172a]">Platforms We Work With</h2>
+                            <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">Platforms We Work With</h2>
                             <div className="flex flex-wrap gap-[12px]">
                                 {platforms.map((plat, i) => (
                                     <div key={i} className="py-[12px] px-[24px] bg-[#f8fafc] rounded-[50px] font-semibold text-[#1e293b] border border-[#e2e8f0]">{plat}</div>
@@ -242,7 +242,7 @@ const EcommerceSEO = () => {
                             </div>
                         </div>
                         <div>
-                            <h2 className="text-[32px] font-bold mb-[30px] text-[#0f172a]">Industries We Serve</h2>
+                            <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">Industries We Serve</h2>
                             <div className="flex flex-wrap gap-[12px]">
                                 {industries.map((ind, i) => (
                                     <div key={i} className="py-[12px] px-[24px] bg-[#0066cc] text-white rounded-[50px] font-semibold">{ind}</div>
@@ -256,7 +256,7 @@ const EcommerceSEO = () => {
             {/* Why Choose Our Approach */}
             <section className="py-[80px] bg-[#0f172a] text-white">
                 <div className="container text-center">
-                    <h2 className="text-[42px] font-bold mb-[50px] text-white">Why Choose Our Ecommerce SEO Approach?</h2>
+                    <h2 className="text-[36px] font-bold mb-[50px] text-white">Why Choose Our Ecommerce SEO Approach?</h2>
                     <div className="flex flex-wrap justify-center gap-[20px]">
                         {[
                             "Revenue-first SEO strategy",
@@ -270,7 +270,7 @@ const EcommerceSEO = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-[16px] md:text-[18px] mb-6 mt-[50px] max-w-[900px] mx-auto">
+                    <p className="text-[16px] md:text-[18px] mb-6 mt-[50px] max-w-[900px] text-white mx-auto font-medium">
                         Adkryoss managed by Clink Consultancy Services Private Limited doesn’t offer isolated SEO services — we build organic revenue ecosystems.
                     </p>
                 </div>
@@ -279,7 +279,7 @@ const EcommerceSEO = () => {
             {/* Working Model */}
             <section className="py-[80px] bg-white">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">Our Working Model</h2>
+                    <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">Our Working Model</h2>
                     <div className="flex flex-wrap justify-center gap-[20px]">
                         {workingModel.map((model, i) => (
                             <div key={i} className="py-[20px] px-[30px] bg-[#f8fafc] rounded-[12px] font-semibold text-[#1e293b] border border-[#e2e8f0] text-center flex-grow min-w-[200px]">
@@ -309,12 +309,12 @@ const EcommerceSEO = () => {
                             { title: "Revenue", txt: "Long-term scalable revenue growth" }
                         ].map((item, i) => (
                             <div key={i} className="p-[30px] bg-white rounded-[20px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] w-[calc(33.333%-14px)] min-w-[250px] flex-grow max-w-[350px]">
-                                <h3 className="text-[18px] font-bold mb-[10px] text-[#0066cc]">{item.title}</h3>
+                                <h3 className="text-[18px] font-semibold mb-[10px] text-[#0066cc]">{item.title}</h3>
                                 <p className="text-[#334155] font-medium m-0">{item.txt}</p>
                             </div>
                         ))}
                     </div>
-                    <p className="text-[16px] md:text-[18px] mb-6 italic">
+                    <p className="text-[16px] md:text-[18px] mb-6 italic font-medium">
                         Ecommerce SEO is not a one-time fix. It’s a continuous growth engine.
                     </p>
                 </div>
@@ -323,10 +323,10 @@ const EcommerceSEO = () => {
             {/* Final CTA */}
             <section className="py-[100px] text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white">
                 <div className="container">
-                    <h2 className="text-[48px] font-bold mb-[24px] text-white">
+                    <h2 className="text-[36px] font-bold mb-[24px] text-white">
                         Ready to Scale Your Ecommerce Revenue?
                     </h2>
-                    <p className="text-[22px] mb-[40px] max-w-[800px] mx-auto text-[#eff6ff]">
+                    <p className="text-[22px] mb-[40px] max-w-[800px] mx-auto text-[#eff6ff] font-medium">
                         If you want to dominate high-intent search and build sustainable organic revenue, it’s time to implement a strategic ecommerce SEO framework. Partner with Adkryoss and turn your store into a revenue powerhouse.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-[12px] bg-white text-[#0066cc] py-[20px] px-[50px] rounded-[50px] text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:-translate-y-[5px] hover:scale-[1.05]">

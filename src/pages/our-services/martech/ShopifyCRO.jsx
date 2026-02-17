@@ -222,7 +222,7 @@ const ShopifyCRO = () => {
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-[42px] font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight tracking-tight">
                                 Why Shopify CRO Matters
                             </h2>
                             <div className="space-y-6">
@@ -259,7 +259,7 @@ const ShopifyCRO = () => {
             {/* Our Shopify CRO Approach */}
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto text-center mb-16">
-                    <h2 className="text-[42px] font-extrabold mb-6 tracking-tight text-white">Our Shopify CRO Approach</h2>
+                    <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our Shopify CRO Approach</h2>
                     <p className="text-blue-200/80 max-w-2xl mx-auto font-medium mb-10">We don’t believe in random “best practices.” We build structured, insight-driven frameworks that maximize performance.</p>
                     <div className="w-24 h-2 bg-blue-500 mx-auto rounded-full"></div>
                 </div>
@@ -289,7 +289,7 @@ const ShopifyCRO = () => {
             {/* What Makes Us Different */}
             <section className="py-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
-                    <h2 className="text-[42px] font-extrabold text-slate-900 mb-16 text-center leading-tight tracking-tight">
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight">
                         What Makes Our Shopify CRO Different?
                     </h2>
                     <div className="flex flex-wrap justify-center gap-8">
@@ -298,19 +298,19 @@ const ShopifyCRO = () => {
                                 <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-[22px] font-extrabold text-slate-900 leading-tight">{item.title}</h3>
+                                <h3 className="text-[22px] font-semibold text-slate-900 leading-tight">{item.title}</h3>
                                 <p className="text-slate-600 font-medium leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
                     </div>
-                    <p className="mt-16 text-center text-xl font-semibold text-blue-600">We don’t optimize for clicks. We optimize for profit.</p>
+                    <p className="mt-16 text-center text-xl font-medium text-blue-600">We don’t optimize for clicks. We optimize for profit.</p>
                 </div>
             </section>
 
             {/* Shopify CRO Services We Offer */}
             <section className="py-24 bg-white">
                 <div className="container px-6 mx-auto">
-                    <h2 className="text-[42px] font-extrabold text-slate-900 mb-16 text-center leading-tight tracking-tight">
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight">
                         Shopify CRO Services We Offer
                     </h2>
                     <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
@@ -332,63 +332,63 @@ const ShopifyCRO = () => {
                     <div className="grid md:grid-cols-2 gap-20">
                         {/* Industries */}
                         <div>
-                            <h2 className="text-[32px] font-extrabold mb-10 text-white tracking-tight">Industries We Serve</h2>
+                            <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">Industries We Serve</h2>
                             <p className="text-blue-200/80 mb-10 font-medium">We optimize Shopify stores across high-growth categories:</p>
                             <div className="flex flex-wrap gap-4">
                                 {industries.map((item, index) => (
-                                    <div key={index} className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-black transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1">
+                                    <div key={index} className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-black font-semibold transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1">
                                         {item}
                                     </div>
                                 ))}
                             </div>
                             <div className="mt-16 bg-white/5 p-10 rounded-[40px] border border-white/10 shadow-2xl">
-                                <h2 className="text-[32px] font-extrabold mb-10 text-white tracking-tight text-center">Impact You Can Expect</h2>
+                                <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight text-center">Impact You Can Expect</h2>
                                 <div className="space-y-6">
                                     {impact.map((item, index) => (
                                         <div key={index} className="flex items-center gap-5 group">
-                                            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-extrabold group-hover:scale-110 transition-transform">
+                                            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold group-hover:scale-110 transition-transform">
                                                 ✔
                                             </div>
-                                            <span className="font-bold text-lg text-white opacity-90 group-hover:opacity-100 transition-opacity tracking-tight">{item}</span>
+                                            <span className="font-semibold text-lg text-white opacity-90 group-hover:opacity-100 transition-opacity tracking-tight">{item}</span>
                                         </div>
                                     ))}
                                 </div>
-                                <p className="mt-10 text-center text-blue-400 font-bold italic">When optimization meets strategy, growth becomes predictable.</p>
+                                <p className="mt-10 text-center text-blue-400 font-medium italic">When optimization meets strategy, growth becomes predictable.</p>
                             </div>
                         </div>
                         {/* Execution Framework */}
                         <div className="flex flex-col gap-12">
                             <div className="bg-white/5 p-10 rounded-[40px] border border-white/10 shadow-2xl">
-                                <h2 className="text-[32px] font-extrabold mb-10 text-white tracking-tight">Our CRO Execution Framework</h2>
+                                <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">Our CRO Execution Framework</h2>
                                 <div className="space-y-8">
                                     {steps.map((step, index) => (
                                         <div key={index} className="flex gap-6 items-start group">
-                                            <div className="text-blue-400 font-extrabold text-lg py-2 min-w-[100px] uppercase tracking-wider">Step {index + 1}</div>
+                                            <div className="text-blue-400 font-semibold text-lg py-2 min-w-[100px] uppercase tracking-wider">Step {index + 1}</div>
                                             <div className="flex-1 border-l-2 border-white/10 pl-6 py-2 group-hover:border-blue-500 transition-colors">
-                                                <h3 className="text-[20px] md:text-[24px] mb-4 font-bold text-xl text-white opacity-95 group-hover:text-white transition-colors tracking-tight">
+                                                <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-xl text-white opacity-95 group-hover:text-white transition-colors tracking-tight">
                                                     {step}
                                                 </h3>
                                             </div>
                                         </div>
                                     ))}
                                 </div>
-                                <p className="mt-10 text-blue-300 font-bold italic text-center">CRO is not a one-time fix. It’s a growth system.</p>
+                                <p className="mt-10 text-blue-300 font-medium italic text-center">CRO is not a one-time fix. It’s a growth system.</p>
                             </div>
 
                             {/* Tools section */}
                             <div className="bg-white/5 p-10 rounded-[42px] border border-white/10 shadow-2xl">
-                                <h2 className="text-[32px] font-extrabold mb-10 text-white tracking-tight">Tools & Technologies We Use</h2>
+                                <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">Tools & Technologies We Use</h2>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {tools.map((tool, index) => (
                                         <div key={index} className="flex items-center gap-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/10 group hover:bg-blue-600 transition-all">
                                             <div className="text-blue-400 group-hover:text-white">
                                                 {tool.icon}
                                             </div>
-                                            <span className="text-sm font-bold text-white tracking-tight">{tool.title}</span>
+                                            <span className="text-sm font-semibold text-white tracking-tight">{tool.title}</span>
                                         </div>
                                     ))}
                                 </div>
-                                <p className="mt-8 text-blue-400 font-bold italic text-sm opacity-80 text-center">We integrate the right tech stack to ensure peak performance.</p>
+                                <p className="mt-8 text-blue-400 font-medium italic text-sm opacity-80 text-center">We integrate the right tech stack to ensure peak performance.</p>
                             </div>
                         </div>
                     </div>
@@ -398,10 +398,10 @@ const ShopifyCRO = () => {
             {/* Final CTA Section */}
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
                 <div className="container max-w-4xl mx-auto animate-fade-in text-left md:text-center">
-                    <h2 className="text-[42px] font-extrabold mb-10 leading-tight text-white tracking-tight">Ready to Unlock Hidden Revenue?</h2>
+                    <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">Ready to Unlock Hidden Revenue?</h2>
                     <div className="space-y-12">
                         <div className="text-2xl font-semibold opacity-90 max-w-3xl text-white mx-auto leading-relaxed">
-                            <p className="text-[16px] md:text-[18px] mb-6 text-white">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium">
                                 Your Shopify store already has traffic. <br /> Let’s convert it into profit.
                             </p>
                         </div>
@@ -409,7 +409,7 @@ const ShopifyCRO = () => {
                             Partner with Adkryoss managed by <span className="font-semibold underline decoration-blue-300">Clink Consultancy Services Private Limited</span> and turn your Shopify store into a scalable, conversion-focused revenue machine.
                         </p>
                         <div className="flex flex-col items-center gap-10">
-                            <p className="text-[16px] md:text-[18px] mb-6 font-black text-white italic tracking-tighter leading-tight pb-4">
+                            <p className="text-[16px] md:text-[18px] mb-6 font-medium text-white italic  leading-tight pb-4">
                                 Start optimizing today.
                             </p>
                             <Link to="/contact" className="inline-flex items-center gap-4 bg-white text-[#0066CC] py-6 px-16 rounded-[25px] text-[22px] font-black transition-all duration-300 hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.4)] hover:-translate-y-2 hover:scale-105 active:scale-95 group tracking-tight">
