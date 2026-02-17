@@ -125,300 +125,404 @@ const AmazonAdvertising = () => {
   };
   return (
     <>
-      <section className="bg-linear-to-r from-blue-700 to-blue-900 py-20">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
-          <div className="space-y-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              Amazon Advertising Services
-            </h1>
+      <section
+  className="relative py-16 md:py-20 lg:py-24 text-white bg-cover bg-center"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-blue-900/80"></div>
 
-            <p className="text-xl font-semibold text-blue-100">
-              Scale Faster. Sell Smarter. Dominate Amazon.
-            </p>
+  <div className="relative w-full px-6 lg:px-20 xl:px-28">
 
-            <p className="text-blue-100 text-lg max-w-xl">
-              Turn product visibility into predictable revenue with
-              performance-driven Amazon Advertising strategies. We combine data
-              science, creative optimization, and marketplace intelligence to
-              help you win the Buy Box, outrank competitors, and maximize ROAS.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <button
-                className="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold
-              hover:bg-blue-100 hover:shadow-lg transition"
-              >
-                Speak to an Amazon Expert →
-              </button>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-              <button
-                className="border border-white/70 px-6 py-3 rounded-full font-semibold
-              hover:bg-white hover:text-blue-700 transition"
-              >
-                Our Amazon Services →
-              </button>
-            </div>
-          </div>
-          <div className="flex justify-center lg:justify-end">
-            <div className="bg-white/10 rounded-3xl p-4">
-              <img
-                src="/amazon-ads-hero.png"
-                alt="Amazon Advertising Services"
-                className="w-64 md:w-72 lg:w-80"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-blue-50 rounded-2xl p-10 max-w-5xl space-y-5">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Why Amazon Advertising Is a Growth Engine
-          </h2>
-          <p className="text-gray-700 text-lg">
-            Amazon is no longer just a marketplace — it’s a{" "}
-            <span className="font-semibold text-gray-900">
-              search engine for buyers with intent.
-            </span>{" "}
-            Every click carries commercial value.
-          </p>
-          <p className="text-gray-700">
-            But without structured campaigns, optimized listings, and smart
-            bidding strategies, ad spend quickly turns into wasted budget.
-          </p>
-          <p className="text-gray-800 font-medium text-lg">
-            That’s where{" "}
-            <span className="text-blue-700">
-              strategy meets performance.
-            </span>
-          </p>
-          <p className="text-gray-700">
-            <span className="font-semibold text-gray-900">
-              Adkryoss managed by Clink Consultancy Services Private Limited
-            </span>{" "}
-            helps brands unlock scalable Amazon growth by aligning advertising
-            with conversion optimization, pricing intelligence, and advanced
-            analytics.
-          </p>
+      {/* LEFT CONTENT */}
+      <div className="space-y-6 text-left">
 
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+          Amazon Advertising Services
+        </h1>
+
+        <p className="text-lg md:text-xl font-semibold text-blue-100">
+          Scale Faster. Sell Smarter. Dominate Amazon.
+        </p>
+
+        <p className="text-blue-100 text-base md:text-lg max-w-xl">
+          Turn product visibility into predictable revenue with
+          performance-driven Amazon Advertising strategies. We combine data
+          science, creative optimization, and marketplace intelligence to
+          help you win the Buy Box, outrank competitors, and maximize ROAS.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 pt-2">
+          <button
+            className="w-full sm:w-auto bg-white text-blue-700 px-6 py-3 rounded-full font-semibold
+            hover:bg-blue-100 hover:shadow-lg transition"
+          >
+            Speak to an Amazon Expert →
+          </button>
+
+          <button
+            className="w-full sm:w-auto border border-white/70 px-6 py-3 rounded-full font-semibold
+            hover:bg-white hover:text-blue-700 transition"
+          >
+            Our Amazon Services →
+          </button>
         </div>
 
       </div>
-    </section>
-    <section className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6">
 
-        {/* Heading */}
-        <div className="max-w-3xl mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Amazon Advertising Solutions
-          </h2>
-          <p className="text-gray-600 text-lg">
-            Performance-driven Amazon advertising solutions designed to scale
-            visibility, conversions, and long-term profitability.
-          </p>
-        </div>
-
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {amazonServices.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={index}
-                className="group flex flex-col justify-between min-h-105
-                bg-white border border-blue-100 rounded-2xl p-8
-                transition-all duration-500
-                hover:bg-teal-700 hover:shadow-xl hover:-translate-y-1"
-              >
-                <div>
-                  <div
-                    className="w-12 h-12 rounded-full bg-gray-100
-                    flex items-center justify-center mb-6
-                    group-hover:bg-white/20 transition"
-                  >
-                    <Icon className="w-6 h-6 text-teal-700 group-hover:text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3
-                    group-hover:text-white">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4
-                    group-hover:text-white/90">
-                    {service.desc}
-                  </p>
-                  <ul className="space-y-2 text-sm text-gray-600
-                    group-hover:text-white/90">
-                    {service.points.map((point, i) => (
-                      <li key={i}>• {point}</li>
-                    ))}
-                  </ul>
-                </div>
-
-              </div>
-            );
-          })}
-        </div>
-
+      {/* RIGHT IMAGE */}
+      <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
+        <img
+          src="https://www.techmagnate.com/wp-content/uploads/2025/04/digital-marketing-for-healthcare-industry.webp"
+          alt="Amazon Advertising Services"
+          className="w-52 sm:w-64 md:w-72 lg:w-80 object-contain"
+        />
       </div>
-    </section>
-    <section className="bg-blue-50 py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-3xl mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Strategic Approach
-          </h2>
-          <p className="text-gray-600 text-lg">
-            A structured, data-driven framework designed to scale Amazon
-            advertising efficiently and profitably.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {strategicApproach.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={index}
-                className="
-                  bg-white border border-blue-100 rounded-2xl p-8
-                  transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-lg
-                "
-              >
-                <div className="w-12 h-12 rounded-full bg-blue-50
-                  flex items-center justify-center mb-6">
-                  <Icon className="w-6 h-6 text-blue-700" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            );
-          })}
-        </div>
 
-      </div>
-    </section>
-    <section className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-6">
+    </div>
+  </div>
+</section>
 
-        {/* Heading */}
-        <div className="max-w-3xl mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why Choose Us for Amazon Advertising?
-          </h2>
-          <p className="text-gray-600 text-lg">
-            A strategic, performance-led approach designed to scale your Amazon
-            revenue efficiently.
-          </p>
-        </div>
+      <section className="bg-gray-50 py-12 sm:py-16 md:py-20">
+  <div className="w-full px-4 sm:px-6 lg:px-20 xl:px-28">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          {whyChooseAmazon.map((item, index) => (
-            <div
-              key={index}
-              className="
-                flex items-start gap-4
-                bg-white rounded-xl p-5
-                border border-gray-200
-                transition-all duration-300
-                hover:-translate-y-1 hover:shadow-md
-              "
-            >
-              <CheckCircle className="w-6 h-6 text-green-500 mt-1 shrink-0" />
-              <p className="text-gray-800 font-medium">
-                {item}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div className="border-l-4 border-gray-900 rounded-xl p-6 max-w-4xl">
-          <p className="text-gray-700 text-lg leading-relaxed">
-            <span className="font-semibold text-gray-900">
-              Adkryoss managed by Clink Consultancy Services Private Limited
-            </span>{" "}
-            does not treat Amazon as just an ad channel — we treat it as a{" "}
-            <span className="font-semibold">
-              full-scale revenue ecosystem.
-            </span>
-          </p>
-        </div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-16">
 
-      </div>
-    </section>
-    <section className="bg-white py-20">
-      <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          What Makes Our Framework Different?
+      {/* LEFT CONTENT */}
+      <div className="text-left space-y-5">
+
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+          Why Amazon Advertising Is a Growth Engine
         </h2>
-        <div className="mb-8">
-          <p className="text-gray-700 text-lg">
-            Most agencies optimize ads.
-          </p>
-          <p className="text-xl font-semibold text-gray-900">
-            We optimize revenue systems.
-          </p>
-        </div>
-        <ul className="space-y-4 mb-8 text-gray-700 text-lg">
-          <li>• Advertising performance</li>
-          <li>• Listing conversion strategy</li>
-          <li>• Pricing intelligence</li>
-          <li>• Inventory planning alignment</li>
-          <li>• Funnel-based audience segmentation</li>
-        </ul>
-        <p className="text-gray-700 text-lg">
-          This ensures long-term brand equity and sustained profitability.
+
+        <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
+          Amazon is no longer just a marketplace — it’s a{" "}
+          <span className="font-semibold text-gray-900">
+            search engine for buyers with intent.
+          </span>{" "}
+          Every click carries commercial value.
+        </p>
+
+        <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
+          But without structured campaigns, optimized listings, and smart
+          bidding strategies, ad spend quickly turns into wasted budget.
+        </p>
+
+        <p className="text-gray-800 font-medium text-base sm:text-lg">
+          That’s where{" "}
+          <span className="text-blue-700">
+            strategy meets performance.
+          </span>
+        </p>
+
+        <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
+          <span className="font-semibold text-gray-900">
+            Adkryoss managed by Clink Consultancy Services Private Limited
+          </span>{" "}
+          helps brands unlock scalable Amazon growth by aligning advertising
+          with conversion optimization, pricing intelligence, and advanced
+          analytics.
         </p>
 
       </div>
-    </section>
-    <section className="bg-blue-50 py-20">
-      <div className="max-w-4xl mx-auto px-6">
 
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
-          Frequently Asked Questions
-        </h2>
-
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl border border-blue-100"
-            >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center
-                px-6 py-5 text-left"
-              >
-                <span className="font-semibold text-gray-900">
-                  {faq.question}
-                </span>
-
-                <span className="ml-4">
-                  {openIndex === index ? (
-                    <X className="w-5 h-5 text-blue-700" />
-                  ) : (
-                    <Plus className="w-5 h-5 text-blue-700" />
-                  )}
-                </span>
-              </button>
-              {openIndex === index && (
-                <div className="px-6 pb-5 text-gray-700 leading-relaxed">
-                  {faq.answer}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
+      {/* RIGHT IMAGE */}
+      <div className="flex justify-center lg:justify-end mt-6 lg:mt-0">
+        <img
+          src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546"
+          alt="Amazon Advertising Growth"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-2xl shadow-xl object-cover"
+        />
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
+
+   <section className="bg-white py-12 sm:py-16 md:py-20">
+  <div className="w-full px-4 sm:px-6 lg:px-20 xl:px-28">
+
+    {/* Heading */}
+    <div className="mb-12 max-w-4xl">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+        Our Amazon Advertising Solutions
+      </h2>
+      <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+        Performance-driven Amazon advertising solutions designed to scale
+        visibility, conversions, and long-term profitability.
+      </p>
+    </div>
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {amazonServices.map((service, index) => {
+        const Icon = service.icon;
+        return (
+          <div
+            key={index}
+            className="group flex flex-col justify-between
+            bg-white border border-blue-100 rounded-2xl p-6 md:p-8
+            transition-all duration-500
+            hover:bg-teal-700 hover:shadow-xl hover:-translate-y-1"
+          >
+            <div>
+              <div
+                className="w-12 h-12 rounded-full bg-gray-100
+                flex items-center justify-center mb-5
+                group-hover:bg-white/20 transition"
+              >
+                <Icon className="w-6 h-6 text-teal-700 group-hover:text-white" />
+              </div>
+
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 group-hover:text-white">
+                {service.title}
+              </h3>
+
+              <p className="text-sm text-gray-600 leading-relaxed mb-4 group-hover:text-white/90">
+                {service.desc}
+              </p>
+
+              <ul className="space-y-2 text-sm text-gray-600 group-hover:text-white/90">
+                {service.points.map((point, i) => (
+                  <li key={i}>• {point}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
+
+    <section className="bg-blue-50 py-12 sm:py-16 md:py-20">
+  <div className="w-full px-4 sm:px-6 lg:px-20 xl:px-28">
+
+    {/* Heading */}
+    <div className="mb-12 max-w-4xl">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+        Our Strategic Approach
+      </h2>
+      <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+        A structured, data-driven framework designed to scale Amazon
+        advertising efficiently and profitably.
+      </p>
+    </div>
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {strategicApproach.map((item, index) => {
+        const Icon = item.icon;
+        return (
+          <div
+            key={index}
+            className="
+              bg-white border border-blue-100 rounded-2xl
+              p-6 md:p-8
+              transition-all duration-300
+              hover:-translate-y-1 hover:shadow-lg
+            "
+          >
+            <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-5">
+              <Icon className="w-6 h-6 text-blue-700" />
+            </div>
+
+            <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">
+              {item.title}
+            </h3>
+
+            <p className="text-sm text-gray-600 leading-relaxed">
+              {item.desc}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
+
+    <section className="bg-white py-16 md:py-20">
+  <div className="w-full px-4 sm:px-6 lg:px-20 xl:px-28">
+
+    {/* Heading */}
+    <div className="mb-12 max-w-4xl">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Why Choose Us for Amazon Advertising?
+      </h2>
+      <p className="text-gray-600 text-base md:text-lg">
+        A strategic, performance-led approach designed to scale your Amazon
+        revenue efficiently.
+      </p>
+    </div>
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+      {whyChooseAmazon.map((item, index) => (
+        <div
+          key={index}
+          className="
+            group flex items-start gap-4
+            bg-white rounded-2xl p-6
+            border border-gray-200
+            transition-all duration-300
+            hover:-translate-y-1 hover:shadow-lg hover:border-blue-200
+          "
+        >
+          <CheckCircle className="w-6 h-6 text-green-500 mt-1 shrink-0 group-hover:text-blue-600" />
+          <p className="text-gray-800 font-medium leading-relaxed">
+            {item}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    {/* Closing Statement */}
+    <div className="border-l-4 border-blue-700 pl-6 max-w-4xl">
+      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+        <span className="font-semibold text-gray-900">
+          Adkryoss managed by Clink Consultancy Services Private Limited
+        </span>{" "}
+        does not treat Amazon as just an ad channel — we treat it as a{" "}
+        <span className="font-semibold text-blue-700">
+          full-scale revenue ecosystem.
+        </span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+    <section className="bg-white py-16 md:py-20">
+  <div className="w-full px-4 sm:px-6 lg:px-20 xl:px-28">
+
+    {/* Heading */}
+    <div className="max-w-4xl mb-12">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        What Makes Our Framework Different?
+      </h2>
+
+      <p className="text-lg text-gray-700">
+        Most agencies optimize ads.
+      </p>
+
+      <p className="text-xl font-semibold text-gray-900">
+        We optimize revenue systems.
+      </p>
+    </div>
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+
+      {[
+        {
+          title: "Advertising Performance",
+          desc: "Campaign-level profitability tracking and ROAS scaling.",
+          img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+        },
+        {
+          title: "Listing Conversion Strategy",
+          desc: "Optimized product listings built for maximum conversion.",
+          img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d"
+        },
+        {
+          title: "Pricing Intelligence",
+          desc: "Dynamic pricing insights aligned with competition.",
+          img: "https://images.unsplash.com/photo-1589758438368-0ad531db3366"
+        },
+        {
+          title: "Inventory Planning Alignment",
+          desc: "Advertising aligned with stock forecasting systems.",
+          img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d"
+        },
+        {
+          title: "Funnel-Based Segmentation",
+          desc: "Audience targeting structured by buying stage.",
+          img: "https://images.unsplash.com/photo-1552664730-d307ca884978"
+        }
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="group bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          <img
+            src={item.img}
+            alt={item.title}
+            className="w-full h-40 object-cover"
+          />
+
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              {item.title}
+            </h3>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {item.desc}
+            </p>
+          </div>
+        </div>
+      ))}
+
+    </div>
+
+    <p className="text-gray-700 text-lg max-w-4xl">
+      This ensures long-term brand equity and sustained profitability.
+    </p>
+
+  </div>
+</section>
+
+    <section className="bg-blue-50 py-16 md:py-20">
+  <div className="w-full px-4 sm:px-6 lg:px-20 xl:px-28 text-left">
+
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+      Frequently Asked Questions
+    </h2>
+
+    <div className="space-y-0">
+
+      {faqs.map((faq, index) => (
+        <div key={index} className="border-b border-black">
+
+          <button
+            onClick={() => toggleFAQ(index)}
+            className="w-full flex justify-between items-center py-6 text-left"
+          >
+            <span className="text-base sm:text-lg font-semibold text-gray-900 pr-6">
+              {faq.question}
+            </span>
+
+            <span className="shrink-0">
+              {openIndex === index ? (
+                <X className="w-5 h-5 text-black" />
+              ) : (
+                <Plus className="w-5 h-5 text-black" />
+              )}
+            </span>
+          </button>
+
+          {openIndex === index && (
+            <div className="pb-6 text-gray-700 text-sm sm:text-base leading-relaxed max-w-4xl">
+              {faq.answer}
+            </div>
+          )}
+
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+
     <section className="bg-linear-to-r from-blue-700 to-blue-900 py-20">
       <div className="max-w-5xl mx-auto px-6 text-center text-white">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <h2 className="text-white md:text-4xl font-bold mb-6">
           Ready to Dominate Amazon?
         </h2>
         <p className="text-lg text-blue-100 mb-8 max-w-3xl mx-auto">
