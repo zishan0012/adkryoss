@@ -208,7 +208,7 @@ const SEOResellerServices = () => {
       <img
         src="https://www.techmagnate.com/wp-content/uploads/2025/04/digital-marketing-for-healthcare-industry.webp"
         alt="SEO Reseller Services"
-        className="w-64 sm:w-72 md:w-80 lg:w-[380px] object-contain"
+        className="w-64 sm:w-72 md:w-80 lg:w-95 object-contain"
       />
     </div>
 
@@ -487,6 +487,7 @@ const SEOResellerServices = () => {
   </div>
 </section>
 <section className="bg-linear-to-r from-blue-700 to-blue-900 py-24 text-white">
+
   <div className="max-w-5xl mx-auto px-6 text-center">
 
     <h2 className="text-white md:text-4xl font-bold mb-6">

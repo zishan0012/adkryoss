@@ -234,7 +234,7 @@ const resellerCTAPoints = [
 const PPCReseller = () => {
   return (
     <>
-     <section
+    <section
   className="relative py-16 md:py-20 lg:py-24 text-white bg-cover bg-center"
   style={{
     backgroundImage:
@@ -290,7 +290,6 @@ const PPCReseller = () => {
             className="w-52 sm:w-64 md:w-72 lg:w-80 object-contain"
           />
       </div>
-
     </div>
   </div>
 </section>
