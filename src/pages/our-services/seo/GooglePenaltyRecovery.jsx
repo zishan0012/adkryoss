@@ -92,7 +92,7 @@ const GooglePenaltyRecovery = () => {
         <div className="bg-white">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -100,13 +100,13 @@ const GooglePenaltyRecovery = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 text-white">
-                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] leading-[1.1] text-white">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] leading-[1.1] text-white">
                             Google Penalty Recovery Services
                         </h1>
-                        <h3 className="text-[24px] font-medium mb-6 text-white">
+                        <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Recover Rankings. Restore Authority. Rebuild Growth.
                         </h3>
-                        <p className="text-[18px] leading-[1.8] text-white mb-5">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             When organic traffic drops overnight, revenue follows. A Google penalty can severely damage your visibility, but it's not the end. We diagnose, repair, and engineer long-term search resilience.
                         </p>
                         <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px]">
@@ -118,9 +118,9 @@ const GooglePenaltyRecovery = () => {
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Penalty-Recovery.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/05/Google-Penalty-Recovery-Services.webp"
                             alt="Google Penalty Recovery"
-                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
@@ -134,7 +134,7 @@ const GooglePenaltyRecovery = () => {
                             <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
                                 We Don't Just Remove Penalties. We Rebuild Your DNA.
                             </h2>
-                            <p className="text-[18px] text-[#475569] leading-[1.8] mb-6">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
                                 Google's ecosystem evolves constantly. Updates like SpamCore, Helpful Content, and Core Algorithm changes are designed to reward quality. If you've been hit, it's a signal that your SEO foundation needs more than just a quick fix.
                             </p>
                         </div>
@@ -181,7 +181,9 @@ const GooglePenaltyRecovery = () => {
                         <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">
                             Our Google Penalty Recovery Framework
                         </h2>
-                        <p className="text-[20px] text-[#64748b] font-medium">Strategic. Data-Led. Transparent. Sustainable.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
+                            Strategic. Data-Led. Transparent. Sustainable.
+                        </p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-[30px]">
                         {phases.map((phase, i) => (
@@ -211,7 +213,7 @@ const GooglePenaltyRecovery = () => {
                             <h2 className="text-[42px] font-bold text-white mb-[30px]">
                                 Signs You Need Immediate Penalty Recovery
                             </h2>
-                            <p className="text-[18px] text-[#cbd5e1] leading-[1.8] mb-[30px]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
                                 If your organic traffic vanishes or keywords disappear from the SERP, every day you wait is a day of lost revenue.
                             </p>
                             <Link to="/contact" className="inline-flex items-center gap-2.5 text-[#60a5fa] font-bold no-underline text-[18px] transition-all hover:gap-4">
@@ -250,7 +252,7 @@ const GooglePenaltyRecovery = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="mt-[50px] text-[20px] text-[#64748b] max-w-[900px] mx-auto leading-relaxed">
+                    <p className="text-[16px] md:text-[18px] mb-6 mt-[50px] max-w-[900px] mx-auto leading-relaxed">
                         Adkryoss managed by Clink Consultancy Services Private Limited doesn't just fix penalties temporarily. We build <strong className="text-[#0f172a]">algorithm-proof digital ecosystems</strong>.
                     </p>
                 </div>

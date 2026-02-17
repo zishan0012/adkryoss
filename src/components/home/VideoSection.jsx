@@ -125,7 +125,7 @@ const VideoSection = () => {
             margin: "0 auto 32px",
           }}
         >
-          Techmagnate is India’s premier digital marketing and SEO powerhouse.
+          Adkryoss is India’s premier digital marketing and SEO powerhouse.
           With over 18 years of proven success, our vision is to fuel
           transformational growth for 300+ clients by 2030.
           Ready to unlock your brand’s complete digital potential?

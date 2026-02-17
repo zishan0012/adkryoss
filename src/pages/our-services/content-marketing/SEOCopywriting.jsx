@@ -141,7 +141,7 @@ const SEOCopywriting = () => {
         <div className="bg-white text-slate-900">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -149,17 +149,17 @@ const SEOCopywriting = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 text-white">
-                        <h1 className="text-[48px] font-semibold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             SEO Copywriting Services
                         </h1>
-                        <h3 className="text-[24px] font-medium mb-6 text-white">
+                        <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Write to Rank. Write to Convert.
                         </h3>
-                        <p className="text-[18px] leading-[1.8] text-[#555] mb-8 font-medium text-white italic">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium text-white italic">
                             Search engines read structure. Humans read stories. <br />
                             We craft SEO copy that speaks to both — strategically optimized, conversion-focused, and built for long-term organic growth.
                         </p>
-                        <p className="text-[18px] leading-[1.8] text-[#555] mb-8 text-white">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Adkryoss managed by <span className="font-semibold text-black">Clink Consultancy Services Private Limited</span> delivers data-backed SEO copywriting that drives rankings, authority, and revenue — not just traffic.
                         </p>
 
@@ -167,9 +167,9 @@ const SEOCopywriting = () => {
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Service-SEO-Copywriting.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/SEO-Copywriting-Services.webp"
                             alt="SEO Copywriting"
-                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] animate-float"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] animate-float"
                         />
                     </div>
                 </div>
@@ -181,7 +181,7 @@ const SEOCopywriting = () => {
                     <h2 className="text-[42px] font-semibold text-slate-900 mb-8 leading-tight">
                         Why SEO Copywriting Is a Growth Engine
                     </h2>
-                    <p className="text-[18px] text-slate-700 leading-relaxed max-w-4xl mx-auto mb-10">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed max-w-4xl mx-auto">
                         Today’s search ecosystem is smarter than ever. With AI-powered search models, semantic indexing, and intent-based ranking signals, content must go beyond keywords.
                     </p>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
@@ -243,7 +243,7 @@ const SEOCopywriting = () => {
                         {strategySteps.map((item, index) => (
                             <div key={index} className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
                                 <div className="text-blue-500 font-extrabold text-4xl mb-6 group-hover:scale-110 transition-transform opacity-50">{item.step}</div>
-                                <h3 className="text-[18px] font-semibold mb-4 text-white group-hover:text-blue-400 transition-colors leading-tight">
+                                <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white group-hover:text-blue-400 transition-colors leading-tight">
                                     {item.title}
                                 </h3>
                                 <p className="text-white text-sm leading-relaxed m-0 font-medium">
@@ -292,7 +292,7 @@ const SEOCopywriting = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-center text-[18px] text-slate-600 italic font-medium max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-center text-slate-600 italic font-medium max-w-3xl mx-auto leading-relaxed">
                         Adkryoss managed by <span className="font-semibold text-[#0066CC]">Clink Consultancy Services Private Limited</span> adapts SEO copy frameworks according to industry search behavior and buyer journey complexity.
                     </p>
                 </div>
@@ -346,7 +346,7 @@ const SEOCopywriting = () => {
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
                 <div className="container max-w-4xl mx-auto">
                     <h2 className="text-[42px] font-black mb-8 leading-tight">Let’s Build Content That Compounds</h2>
-                    <p className="text-xl mb-12 text-white max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white max-w-3xl mx-auto leading-relaxed">
                         Search visibility is not accidental — it’s engineered. <br />
                         Let <span className="font-black">Adkryoss managed by Clink Consultancy Services Private Limited</span> craft content assets that rank, resonate, and convert.
                     </p>

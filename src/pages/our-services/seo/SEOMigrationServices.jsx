@@ -128,7 +128,7 @@ const SEOMigrationServices = () => {
         <div className="bg-white">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -136,13 +136,13 @@ const SEOMigrationServices = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 text-white">
-                        <h1 className="text-[48px] font-bold mb-4 tracking-[-1.5px] text-white leading-[1.1]">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             SEO Migration Services
                         </h1>
-                        <h3 className="text-[24px] font-medium mb-6 text-white">
+                        <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Safeguard Rankings. Preserve Traffic. Accelerate Growth.
                         </h3>
-                        <p className="text-[18px] leading-[1.8] text-white mb-8">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             When websites evolve, rankings shouldn't collapse. Redesigns, domain changes, platform shifts, or international expansion — every structural change impacts visibility.
                         </p>
                         <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-8">
@@ -154,9 +154,9 @@ const SEOMigrationServices = () => {
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Domain-Migration-Services.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/03/SEO-Migration-Services.png"
                             alt="SEO Migration"
-                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
@@ -183,7 +183,7 @@ const SEOMigrationServices = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-[20px] font-bold text-[#0066cc]">
+                    <p className="text-[16px] md:text-[18px] mb-6 font-bold">
                         We don't just "move" your website. We engineer a seamless search transition.
                     </p>
                 </div>
@@ -242,8 +242,12 @@ const SEOMigrationServices = () => {
                     <div className="flex flex-wrap justify-center gap-8">
                         {differentiators.map((diff, i) => (
                             <div key={i} className="p-8 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-lg w-[calc(25%-23px)] min-w-[260px] grow max-w-[350px] transition-all duration-300 hover:-translate-y-2 hover:bg-white/15">
-                                <h3 className="text-[20px] font-bold mb-4 text-white">{diff.title}</h3>
-                                <p className="text-white/90 leading-relaxed text-[15px]">{diff.description}</p>
+                                <h3 className="text-[20px] md:text-[24px] mb-4 font-bold text-white">
+                                    {diff.title}
+                                </h3>
+                                <p className="text-[16px] md:text-[18px] mb-6 text-white/90 leading-relaxed">
+                                    {diff.description}
+                                </p>
                             </div>
                         ))}
                     </div>
@@ -256,7 +260,7 @@ const SEOMigrationServices = () => {
                     <h2 className="text-[42px] font-bold mb-6 text-slate-900 leading-tight">
                         Let's Migrate Without Losing Momentum
                     </h2>
-                    <p className="text-[20px] text-slate-600 mb-10 max-w-[800px] mx-auto leading-relaxed">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 max-w-[800px] mx-auto leading-relaxed">
                         Your website growth shouldn't reset to zero. Partner with Adkryoss and transform your migration into a scalable search growth opportunity.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-3 bg-[#0066cc] text-white py-5 px-12 rounded-full text-[18px] font-bold no-underline transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(0,102,204,0.3)] hover:scale-[1.02]">

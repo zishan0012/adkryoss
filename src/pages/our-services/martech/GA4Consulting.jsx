@@ -139,7 +139,7 @@ const GA4Consulting = () => {
         <div className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -147,13 +147,13 @@ const GA4Consulting = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
                     <div className="text-left relative z-10 animate-fade-in-up text-white">
-                        <h1 className="text-[48px] font-extrabold mb-6 tracking-tight leading-[1.1] text-white">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             GA4 Consulting Services
                         </h1>
-                        <h2 className="text-[24px] font-semibold mb-8 text-white">
+                        <h2 className="text-[24px] font-medium mb-8 text-white">
                             Unlock Accurate, Actionable Insights with Advanced GA4 Consulting
                         </h2>
-                        <p className="text-[18px] leading-relaxed mb-10 text-white font-medium">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-relaxed text-white font-medium">
                             Data is powerful—only when it’s accurate, structured, and aligned with business goals. Our GA4 Consulting Services help you transform raw analytics into measurable growth strategies. From seamless migration to advanced event tracking and cross-channel attribution, we ensure your analytics ecosystem drives real ROI.
                         </p>
                         <div className="flex flex-wrap gap-4">
@@ -166,9 +166,9 @@ const GA4Consulting = () => {
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Service-Google-Analytics.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/06/Google-Analytics-4-GA4-Consulting-Services.webp"
                             alt="GA4 Consulting"
-                            className="max-w-[500px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
                         />
                     </div>
                 </div>
@@ -183,13 +183,13 @@ const GA4Consulting = () => {
                                 Why Your Business Needs GA4 Expertise
                             </h2>
                             <div className="space-y-6">
-                                <p className="text-[18px] text-slate-700 leading-relaxed font-medium">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
                                     Google Analytics 4 is not just an upgrade—it’s a completely new measurement framework built on event-based tracking, predictive insights, and cross-device analytics.
                                 </p>
                                 <div className="p-8 bg-white border-l-8 border-blue-600 rounded-r-2xl shadow-sm italic text-slate-600 font-semibold">
                                     "Without the right configuration, businesses risk inaccurate data, broken funnels, and lost insights."
                                 </div>
-                                <p className="text-[18px] text-slate-700 leading-relaxed">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed">
                                     Adkryoss managed by <span className="font-semibold text-blue-600">Clink Consultancy Services Private Limited</span> helps organizations implement, optimize, and leverage GA4 to unlock powerful customer intelligence across websites, apps, and digital campaigns.
                                 </p>
                             </div>
@@ -226,7 +226,9 @@ const GA4Consulting = () => {
                             <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                 <Zap size={32} />
                             </div>
-                            <h3 className="text-[22px] font-semibold mb-4 text-white tracking-tight">GA4 Setup & Configuration</h3>
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
+                                GA4 Setup & Configuration
+                            </h3>
                             <p className="text-blue-200/80 mb-6 font-medium italic">We design a customized GA4 architecture aligned with your KPIs.</p>
                             <div className="space-y-3">
                                 {setupServices.map((point, idx) => (
@@ -243,7 +245,9 @@ const GA4Consulting = () => {
                             <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                 <Rocket size={32} />
                             </div>
-                            <h3 className="text-[22px] font-semibold mb-4 text-white tracking-tight">GA4 Migration from UA</h3>
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
+                                GA4 Migration from UA
+                            </h3>
                             <p className="text-blue-200/80 mb-6 font-medium italic">Ensuring a smooth transition from Universal Analytics.</p>
                             <div className="space-y-3">
                                 {migrationSteps.map((point, idx) => (
@@ -260,7 +264,9 @@ const GA4Consulting = () => {
                             <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                 <Monitor size={32} />
                             </div>
-                            <h3 className="text-[22px] font-semibold mb-4 text-white tracking-tight">Advanced Event Tracking</h3>
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
+                                Advanced Event Tracking
+                            </h3>
                             <p className="text-blue-200/80 mb-6 font-medium italic">Precision tracking for modern marketing demands.</p>
                             <div className="space-y-3">
                                 {trackingTools.map((point, idx) => (
@@ -277,7 +283,9 @@ const GA4Consulting = () => {
                             <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                 <ShoppingCart size={32} />
                             </div>
-                            <h3 className="text-[22px] font-semibold mb-4 text-white tracking-tight">Ecommerce & Conversion Optimization</h3>
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
+                                Ecommerce & Conversion Optimization
+                            </h3>
                             <p className="text-blue-200/80 mb-6 font-medium italic">Because every micro-conversion matters.</p>
                             <div className="space-y-3">
                                 {ecommerceOptimization.map((point, idx) => (
@@ -294,7 +302,9 @@ const GA4Consulting = () => {
                             <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                 <LineChart size={32} />
                             </div>
-                            <h3 className="text-[22px] font-semibold mb-4 text-white tracking-tight">GA4 Data Analysis & Reporting</h3>
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
+                                GA4 Data Analysis & Reporting
+                            </h3>
                             <p className="text-blue-200/80 mb-6 font-medium italic">Transforming noise into actionable interpretation.</p>
                             <div className="space-y-3">
                                 {reportingTools.map((point, idx) => (
@@ -311,7 +321,9 @@ const GA4Consulting = () => {
                             <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                 <Search size={32} />
                             </div>
-                            <h3 className="text-[22px] font-bold mb-4 text-white tracking-tight">CRO Insights</h3>
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-bold text-white tracking-tight">
+                                CRO Insights
+                            </h3>
                             <p className="text-blue-200/80 mb-6 font-medium italic">Identifying friction points and growth opportunities.</p>
                             <div className="space-y-3">
                                 {croInsights.map((point, idx) => (
@@ -331,7 +343,9 @@ const GA4Consulting = () => {
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-[42px] font-black text-slate-900 mb-4 leading-tight">Our GA4 Consulting Approach</h2>
-                        <p className="text-[20px] text-slate-600 font-medium max-w-2xl mx-auto">A structured engineering process to ensure data integrity and growth.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 font-medium max-w-2xl mx-auto">
+                            A structured engineering process to ensure data integrity and growth.
+                        </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -433,14 +447,14 @@ const GA4Consulting = () => {
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
                 <div className="container max-w-4xl mx-auto animate-fade-in text-left md:text-center">
                     <h2 className="text-[42px] font-black mb-10 leading-tight text-white tracking-tight">Ready to Turn Data into Revenue?</h2>
-                    <p className="text-2xl mb-12 text-white font-bold opacity-90 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-2xl text-white font-bold opacity-90 max-w-3xl mx-auto leading-relaxed">
                         Analytics should empower decisions—not confuse them.
                     </p>
-                    <p className="text-xl mb-16 text-white font-medium opacity-80 max-w-3xl mx-auto italic">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white font-medium opacity-80 max-w-3xl mx-auto italic">
                         Partner with Adkryoss managed by <span className="font-bold">Clink Consultancy Services Private Limited</span> to build a robust, scalable, and future-ready GA4 framework that fuels measurable digital growth.
                     </p>
                     <div className="flex flex-col items-center gap-10">
-                        <p className="text-3xl font-black text-white italic tracking-tighter  leading-none  pb-4">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-3xl font-black text-white italic tracking-tighter leading-none pb-4">
                             Let’s build smarter analytics today.
                         </p>
                         <Link to="/contact" className="inline-flex items-center gap-4 bg-white text-[#0066CC] py-6 px-16 rounded-[25px] text-[22px] font-black transition-all duration-300 hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.4)] hover:-translate-y-2 hover:scale-105 active:scale-95 group tracking-tight">

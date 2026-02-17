@@ -81,6 +81,7 @@ import BestPlaceToWork from './pages/company/BestPlaceToWork';
 import Work from './pages/work';
 import Portfolio from './pages/work/Portfolio';
 import CaseStudy from './pages/work/CaseStudy';
+import CaseStudyDetail from './pages/work/CaseStudyDetail';
 import Testimonial from './pages/work/Testimonial';
 
 // Industry Pages
@@ -202,6 +203,7 @@ function App() {
         <Route path="/work" element={<Work />} />
         <Route path="/work/portfolio" element={<Portfolio />} />
         <Route path="/work/case-study" element={<CaseStudy />} />
+        <Route path="/work/case-study/:slug" element={<CaseStudyDetail />} />
         <Route path="/work/testimonial" element={<Testimonial />} />
 
         {/* ==================== INDUSTRY ROUTES ==================== */}

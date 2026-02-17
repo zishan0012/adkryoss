@@ -130,20 +130,20 @@ const LinkBuildingServices = () => {
         <div style={{ backgroundColor: '#fff' }}>
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     <div className="text-left relative z-10 text-white">
-                        <h1 className="text-[48px] font-bold mb-[16px] tracking-[-1px] text-white">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1px] text-white">
                             Link Building Services
                         </h1>
-                        <h3 className="text-[24px] font-medium mb-[24px] text-white">
+                        <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Authority That Ranks. Links That Convert.
                         </h3>
-                        <p className="text-[18px] leading-[1.8] text-white mb-[32px]">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Build powerful, high-authority backlinks that strengthen search visibility, improve domain credibility, and drive consistent organic growth. We create link ecosystems that search engines trust—and competitors struggle to match.
                         </p>
                         <div className="bg-[rgba(255,255,255,0.05)] p-[24px] rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-[32px]">
@@ -154,9 +154,9 @@ const LinkBuildingServices = () => {
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Link-Building.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/03/Link-Building-SEO-Services.webp"
                             alt="Link Building Services"
-                            className="max-w-[500px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
@@ -169,7 +169,7 @@ const LinkBuildingServices = () => {
                         <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">
                             Why Link Building Still Defines SEO Success
                         </h2>
-                        <p className="text-[20px] text-[#666] max-w-[850px] mx-auto">
+                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[850px] mx-auto">
                             Search engines evaluate trust through signals. Authoritative backlinks remain one of the strongest indicators of credibility and relevance in 2026.
                         </p>
                     </div>
@@ -177,7 +177,7 @@ const LinkBuildingServices = () => {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="bg-[#0066cc] text-white p-[50px] rounded-[40px] shadow-[0_20px_40px_rgba(0,102,204,0.15)]">
                             <h3 className="text-[28px] font-semibold mb-[30px]">Modern Link Building Strategy</h3>
-                            <p className="text-[18px] opacity-90 leading-[1.8] mb-[30px] text-white">
+                            <p className="text-[16px] md:text-[18px] mb-6 opacity-90 leading-[1.8] text-white">
                                 It’s no longer about volume—it’s about context, quality, and strategic placement. Adkryoss designs link acquisition frameworks that focus on:
                             </p>
                             <div className="space-y-6">
@@ -199,15 +199,21 @@ const LinkBuildingServices = () => {
                         </div>
                         <div className="space-y-8">
                             <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa]">
-                                <p className="text-[20px] text-[#1a1a1a] font-semibold mb-[10px]">Contextual Relevance</p>
+                                <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                                    Contextual Relevance
+                                </p>
                                 <p className="text-[#666] leading-[1.6]">We ensure links come from pages related to your business to maximize ranking power.</p>
                             </div>
                             <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa]">
-                                <p className="text-[20px] text-[#1a1a1a] font-semibold mb-[10px]">Authority Growth</p>
+                                <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                                    Authority Growth
+                                </p>
                                 <p className="text-[#666] leading-[1.6]">Every link we build aims to increase your overall domain rating and trust score.</p>
                             </div>
                             <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa]">
-                                <p className="text-[20px] text-[#1a1a1a] font-semibold mb-[10px]">Risk Management</p>
+                                <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                                    Risk Management
+                                </p>
                                 <p className="text-[#666] leading-[1.6]">We strictly follow white-hat practices to ensure long-term visibility without penalties.</p>
                             </div>
                         </div>
@@ -222,7 +228,7 @@ const LinkBuildingServices = () => {
                         <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">
                             Our Strategic Link Building Framework
                         </h2>
-                        <p className="text-[20px] text-[#666]">
+                        <p className="text-[16px] md:text-[18px] mb-6">
                             A high-authority approach to earning digital trust.
                         </p>
                     </div>
@@ -278,7 +284,9 @@ const LinkBuildingServices = () => {
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">What Makes Our Link Building Different?</h2>
-                        <p className="text-[20px] text-[#666]">We focus on domain authority growth and measurable ranking movement.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6">
+                            We focus on domain authority growth and measurable ranking movement.
+                        </p>
                     </div>
                     <div className="grid md:grid-cols-4 gap-8">
                         {differentiators.map((item, i) => (
@@ -320,7 +328,7 @@ const LinkBuildingServices = () => {
                         </div>
                         <div>
                             <h2 className="text-[36px] font-semibold mb-[40px] text-white">SEO + Link Building = Scalable Growth</h2>
-                            <p className="text-[#e2e8f0] text-[18px] leading-[1.8] mb-[30px]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
                                 Link building works best when integrated with complete SEO architecture. At Adkryoss, we align link acquisition with:
                             </p>
                             <div className="flex flex-wrap gap-3">
@@ -346,7 +354,9 @@ const LinkBuildingServices = () => {
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">Results You Can Expect</h2>
-                        <p className="text-[20px] text-[#666]">High-authority links that compound your digital equity over time.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6">
+                            High-authority links that compound your digital equity over time.
+                        </p>
                     </div>
                     <div className="grid md:grid-cols-5 gap-6">
                         {[
@@ -384,7 +394,7 @@ const LinkBuildingServices = () => {
             <section className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
                 <div className="container">
                     <h2 className="text-[42px] font-semibold mb-[20px] text-white">Let’s Build Authority That Compounds</h2>
-                    <p className="text-[20px] mb-[40px] opacity-90 text-white">
+                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 text-white">
                         Partner with Adkryoss managed by Clink Consultancy Services Private Limited to build a powerful link ecosystem that drives sustainable SEO growth.
                     </p>
                     <Link

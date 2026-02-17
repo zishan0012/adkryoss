@@ -140,20 +140,20 @@ const LocalSEO = () => {
         <div style={{ backgroundColor: '#fff' }}>
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20 flex items-center relative overflow-hidden text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     <div className="text-left relative z-10 text-white">
-                        <h1 className="text-[48px] font-bold mb-[16px] tracking-[-1.5px] text-white leading-[1.1]">
+                        <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Local SEO Optimization
                         </h1>
-                        <h3 className="text-[24px] font-medium mb-[24px] text-white">
+                        <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Turning Local Searches into Real Customers
                         </h3>
-                        <p className="text-[18px] leading-[1.8] text-white mb-[32px]">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Today’s customers don’t browse directories—they search on Google. 70%+ of local searches result in a visit or inquiry within 24 hours. If you're not in the Top 3 Map Pack, you're invisible. We help you dominate your geography.
                         </p>
                         <div className="bg-[rgba(255,255,255,0.05)] p-[24px] rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px]">
@@ -164,9 +164,9 @@ const LocalSEO = () => {
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2026/01/Local-SEO.webp"
+                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/local-seo-services.webp"
                             alt="Local SEO"
-                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
                         />
                     </div>
                 </div>
@@ -180,7 +180,7 @@ const LocalSEO = () => {
                             <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
                                 Why Local SEO Matters
                             </h2>
-                            <p className="text-[18px] text-[#475569] leading-[1.8] mb-[24px]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
                                 Customers are searching for your services right now. If your business is not ranking in the Google Local Pack or Maps, you are losing ready-to-buy customers to your competitors.
                             </p>
                             <div className="space-y-6">
@@ -222,7 +222,9 @@ const LocalSEO = () => {
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[42px] font-bold mb-[20px] text-[#0f172a]">Our Local SEO Approach</h2>
-                        <p className="text-[20px] text-[#64748b] font-medium">We don't just optimize listings. We build local authority.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
+                            We don't just optimize listings. We build local authority.
+                        </p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-[40px]">
                         {approach.map((pillar, i) => (
@@ -249,7 +251,9 @@ const LocalSEO = () => {
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[42px] font-bold mb-[20px] text-[#0f172a]">Our Local SEO Process</h2>
-                        <p className="text-[20px] text-[#64748b]">We don’t just list you. We lead you to the top.</p>
+                        <p className="text-[16px] md:text-[18px] mb-6">
+                            We don’t just list you. We lead you to the top.
+                        </p>
                     </div>
                     <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-[30px]">
                         {localSEOProcess.map((step, i) => (
@@ -311,7 +315,7 @@ const LocalSEO = () => {
             <section className="py-[100px] text-center bg-gradient-to-br from-[#0066cc] to-[#00458a] text-white">
                 <div className="container">
                     <h2 className="text-[56px] font-bold mb-[24px]">Ready to Dominate Local Search?</h2>
-                    <p className="text-[22px] mb-[40px] max-w-[800px] mx-auto text-white">
+                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto text-white">
                         Your competitors are investing in local visibility. It's time you outrank them. Partner with Adkryoss and turn local searches into real customers.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-[12px] bg-white text-[#0066cc] p-[20px_60px] rounded-[50px] text-[20px] font-bold transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)]">

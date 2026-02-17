@@ -148,44 +148,133 @@ const SEOResellerServices = () => {
   ];
 
   return (
-    <>
-    {/* Hero Section */}
-<section
-  className="relative bg-cover bg-center text-white py-20 md:py-24"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-  }}
->
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-slate-900/80"></div>
+    <div>
+      {/* Hero Section */}
+      <div
+        className="flex items-center min-h-[500px] md:h-120 bg-cover bg-center bg-no-repeat relative"
+        style={{
+          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+          color: "#ffffff",
+          position: "relative",
+        }}
+      >
+        <div className="container">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1.1fr 0.9fr",
+              gap: "60px",
+              alignItems: "center",
+              position: "relative",
+              zIndex: 1,
+            }}
+          >
+            <div>
+              <h1 className="text-[28px] md:text-[36px] font-bold mb-3 tracking-tight">
+                SEO Reseller Services
+              </h1>
 
-  <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+              <p className="text-[20px] md:text-[24px] font-medium mb-4 text-[#22c55e]">
+                Scale Your Agency. Deliver Results. Stay Invisible.
+              </p>
 
-    {/* LEFT CONTENT */}
-    <div className="text-left">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-        SEO Reseller Services
-      </h1>
+              <p className="text-[16px] md:text-[18px] leading-[1.8] text-slate-300 mb-6 max-w-[540px]">
+                White-label SEO solutions designed to help agencies expand
+                revenue, retain clients, and dominate search — without hiring an
+                in-house team.
+              </p>
 
-      <p className="text-xl md:text-2xl font-semibold text-green-400 mb-6">
-        Scale Your Agency. Deliver Results. Stay Invisible.
-      </p>
+              <div style={{ display: "flex", gap: "18px", flexWrap: "wrap" }}>
+                <a
+                  href="/contact"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    background: "#3b82f6",
+                    color: "#ffffff",
+                    padding: "16px 42px",
+                    borderRadius: "50px",
+                    fontSize: "17px",
+                    fontWeight: "800",
+                    textDecoration: "none",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "#22c55e";
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                    e.currentTarget.style.boxShadow =
+                      "0 14px 32px rgba(34,197,94,0.4)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "#3b82f6";
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
+                  Speak to an Expert →
+                </a>
 
-      <p className="text-base md:text-lg text-slate-300 leading-relaxed mb-10 max-w-xl">
-        White-label SEO solutions designed to help agencies expand
-        revenue, retain clients, and dominate search — without hiring an
-        in-house team.
-      </p>
+                <a
+                  href="#solutions"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    background: "transparent",
+                    color: "#3b82f6",
+                    padding: "16px 42px",
+                    borderRadius: "50px",
+                    border: "2px solid #3b82f6",
+                    fontSize: "17px",
+                    fontWeight: "800",
+                    textDecoration: "none",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "#22c55e";
+                    e.currentTarget.style.color = "#ffffff";
+                    e.currentTarget.style.borderColor = "#22c55e";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.color = "#3b82f6";
+                    e.currentTarget.style.borderColor = "#3b82f6";
+                  }}
+                >
+                  Our Solutions →
+                </a>
+              </div>
+            </div>
+            {/* <div
+        style={{
+          width: "100%",
+          height: "360px",
+          borderRadius: "24px",
+          background: "rgba(255,255,255,0.08)",
+          border: "1px solid rgba(255,255,255,0.15)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#cbd5e1",
+          fontWeight: "700",
+          fontSize: "16px",
+        }}
+      >
+        Image Placeholder
+      </div> */}
+          </div>
+        </div>
+      </div>
 
-      <div className="flex flex-col sm:flex-row gap-4">
-        <a
-          href="/contact"
-          className="bg-blue-600 hover:bg-green-500
-          text-white font-bold
-          px-8 py-4 rounded-full
-          transition-all duration-300
-          hover:-translate-y-1 hover:shadow-xl text-center"
+      {/* WHY */}
+      <section style={{ padding: "80px 0", background: "#fff" }}>
+        {/* Why SEO Reseller Services */}
+        <div
+          style={{
+            padding: "90px 0",
+            backgroundColor: "#ffffff",
+          }}
         >
           Speak to an Expert →
         </a>
