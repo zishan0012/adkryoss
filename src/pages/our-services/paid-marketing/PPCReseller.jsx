@@ -234,90 +234,120 @@ const resellerCTAPoints = [
 const PPCReseller = () => {
   return (
     <>
-      <section className="bg-linear-to-r from-blue-700 to-blue-900 py-20">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
-          <div className="space-y-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              PPC Reseller Services
-            </h1>
+     <section
+  className="relative py-16 md:py-20 lg:py-24 text-white bg-cover bg-center"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-blue-900/80"></div>
 
-            <p className="text-xl font-semibold text-blue-100">
-              Scale Faster. Deliver Smarter. Earn More.
-            </p>
+  <div className="relative w-full px-6 sm:px-10 lg:px-24 xl:px-32">
 
-            <p className="text-blue-100 text-lg max-w-xl">
-              White-label PPC solutions designed for agencies that want to grow
-              without hiring in-house teams. Performance-focused, data-driven,
-              and built to maximize ROI for your clients.
-            </p>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <button
-                className="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold
-              hover:bg-blue-100 hover:shadow-lg transition"
-              >
-                Partner With Us →
-              </button>
+      {/* LEFT CONTENT */}
+      <div className="space-y-6 text-left">
 
-              <button
-                className="border border-white/70 px-6 py-3 rounded-full font-semibold
-              hover:bg-white hover:text-blue-700 transition"
-              >
-                Explore Reseller Model →
-              </button>
-            </div>
-          </div>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+          PPC Reseller Services
+        </h1>
 
-          <div className="flex justify-center lg:justify-end">
-            <div className="bg-white/10 rounded-3xl p-4">
-              <img
-                src="/ppc-reseller-hero.png"
-                alt="PPC Reseller Services"
-                className="w-64 md:w-72 lg:w-80"
-              />
-            </div>
-          </div>
+        <p className="text-lg md:text-xl font-semibold text-blue-100">
+          Scale Faster. Deliver Smarter. Earn More.
+        </p>
+
+        <p className="text-blue-100 text-base md:text-lg max-w-xl">
+          White-label PPC solutions designed for agencies that want to grow
+          without hiring in-house teams. Performance-focused, data-driven,
+          and built to maximize ROI for your clients.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 pt-2">
+          <button
+            className="w-full sm:w-auto bg-white text-blue-700 px-6 py-3 rounded-full font-semibold
+            hover:bg-blue-100 hover:shadow-lg transition"
+          >
+            Partner With Us →
+          </button>
+
+          <button
+            className="w-full sm:w-auto border border-white/70 px-6 py-3 rounded-full font-semibold
+            hover:bg-white hover:text-blue-700 transition"
+          >
+            Explore Reseller Model →
+          </button>
         </div>
-      </section>
+      </div>
 
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-blue-50 border border-blue-200 rounded-3xl p-10 max-w-5xl space-y-5">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Why PPC Reselling Is the Smartest Growth Move
-            </h2>
+      {/* RIGHT IMAGE */}
+      <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
+          <img
+            src="https://www.techmagnate.com/wp-content/uploads/2025/04/digital-marketing-for-healthcare-industry.webp"
+            alt="PPC Reseller Services"
+            className="w-52 sm:w-64 md:w-72 lg:w-80 object-contain"
+          />
+      </div>
 
-            <p className="text-gray-700 text-lg">
-              Today’s agencies are expected to deliver measurable results across{" "}
-              <span className="font-semibold text-gray-900">
-                Google Ads, Meta Ads, LinkedIn Ads, and emerging paid channels.
-              </span>{" "}
-              But building an expert in-house PPC team demands time, capital,
-              and constant upskilling.
-            </p>
+    </div>
+  </div>
+</section>
 
-            <p className="text-gray-700 text-lg">
-              With{" "}
-              <span className="font-semibold text-gray-900">
-                Adkryoss managed by Clink Consultancy Services Private Limited
-              </span>
-              , you unlock a fully managed PPC engine operating behind your
-              brand — allowing you to expand services, improve client retention,
-              and boost margins without operational stress.
-            </p>
 
-            <p className="text-gray-800 font-semibold text-lg">
-              We don’t just run ads.
-            </p>
+      <section className="bg-white py-16 md:py-20 lg:py-24">
+  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-left">
+    
+    {/* LEFT CONTENT */}
+    <div>
+      <div className="bg-blue-50 border border-blue-200 rounded-3xl p-10 space-y-5">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          Why PPC Reselling Is the Smartest Growth Move
+        </h2>
 
-            <p className="text-blue-700 font-semibold text-xl">
-              We engineer revenue pipelines.
-            </p>
-          </div>
-        </div>
-      </section>
+        <p className="text-gray-700 text-lg">
+          Today’s agencies are expected to deliver measurable results across{" "}
+          <span className="font-semibold text-gray-900">
+            Google Ads, Meta Ads, LinkedIn Ads, and emerging paid channels.
+          </span>{" "}
+          But building an expert in-house PPC team demands time, capital,
+          and constant upskilling.
+        </p>
 
-      <section className="bg-white py-20">
+        <p className="text-gray-700 text-lg">
+          With{" "}
+          <span className="font-semibold text-gray-900">
+            Adkryoss managed by Clink Consultancy Services Private Limited
+          </span>
+          , you unlock a fully managed PPC engine operating behind your
+          brand — allowing you to expand services, improve client retention,
+          and boost margins without operational stress.
+        </p>
+
+        <p className="text-gray-800 font-semibold text-lg">
+          We don’t just run ads.
+        </p>
+
+        <p className="text-blue-700 font-semibold text-xl">
+          We engineer revenue pipelines.
+        </p>
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center lg:justify-end">
+      <img
+        src="https://images.unsplash.com/photo-1551434678-e076c223a692"
+        alt="PPC Reseller Growth"
+        className="w-full max-w-md rounded-3xl shadow-xl object-cover"
+      />
+    </div>
+
+  </div>
+</section>
+
+      <section className="bg-white py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-14">
             What You Get With Our PPC Reseller Program
@@ -357,7 +387,7 @@ const PPCReseller = () => {
           </div>
         </div>
       </section>
-      <section className="bg-gray-400 py-20">
+      <section className="bg-gray-400 py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -416,7 +446,7 @@ const PPCReseller = () => {
           </div>
         </div>
       </section>
-      <section className="bg-white py-20">
+      <section className="bg-white py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -457,7 +487,7 @@ const PPCReseller = () => {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-24">
+      <section className="bg-slate-50 py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -514,7 +544,7 @@ const PPCReseller = () => {
           </div>
         </div>
       </section>
-      <section className="bg-white py-20">
+      <section className="bg-white py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-blue-50 border border-blue-200 rounded-3xl p-10">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
@@ -567,7 +597,7 @@ const PPCReseller = () => {
           </div>
         </div>
       </section>
-      <section className="bg-blue-50 py-24">
+      <section className="bg-blue-50 py-16 md:py-20 lg:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
             Our Performance Philosophy
@@ -604,7 +634,7 @@ const PPCReseller = () => {
           </p>
         </div>
       </section>
-      <section className="bg-white py-24">
+      <section className="bg-white py-16 md:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -647,7 +677,7 @@ const PPCReseller = () => {
           </p>
         </div>
       </section>
-      <section className="bg-blue-50 py-24">
+      <section className="bg-blue-50 py-16 md:py-20 lg:py-24">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
             Seamless Communication Model
@@ -695,48 +725,66 @@ const PPCReseller = () => {
           </div>
         </div>
       </section>
-      <section className="bg-blue-50 py-24">
-        <div className="max-w-6xl mx-auto px-6 text-white">
-          <h2 className="text-black md:text-4xl font-bold mb-8">
-            Let’s Help You Scale Profitably
-          </h2>
+      
+      <section className="bg-blue-100 py-16 md:py-20 lg:py-24">
+  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-          <p className="text-lg text-blue-700 mb-8">If you’re looking to:</p>
+    {/* LEFT CONTENT */}
+    <div className="text-left">
+      <h2 className="text-black text-3xl md:text-4xl font-bold mb-6">
+        Let’s Help You Scale Profitably
+      </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 max-w-4xl">
-            {resellerCTAPoints.map((point, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 shrink-0" />
-                <p className="text-lg">{point}</p>
-              </div>
-            ))}
+      <p className="text-lg text-blue-700 mb-8">
+        If you’re looking to:
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+        {resellerCTAPoints.map((point, index) => (
+          <div key={index} className="flex items-start gap-3">
+            <CheckCircle className="w-6 h-6 text-green-500 mt-1 shrink-0" />
+            <p className="text-lg text-gray-800">{point}</p>
           </div>
+        ))}
+      </div>
 
-          <p className="text-xl font-semibold mb-10 max-w-4xl">
-            Then this partnership is your next strategic move.
-          </p>
+      <p className="text-xl font-semibold mb-6 text-gray-900">
+        Then this partnership is your next strategic move.
+      </p>
 
-          <p className="text-black text-lg max-w-5xl mb-12">
-            <span className="font-semibold text-shadow-black">
-              Adkryoss managed by Clink Consultancy Services Private Limited
-            </span>{" "}
-            is built to power agencies that want predictable growth in a
-            competitive digital landscape.
-          </p>
+      <p className="text-gray-800 text-lg mb-8">
+        <span className="font-semibold">
+          Adkryoss managed by Clink Consultancy Services Private Limited
+        </span>{" "}
+        is built to power agencies that want predictable growth in a
+        competitive digital landscape.
+      </p>
 
-          <button
-            className="
-            bg-white text-blue-700 font-semibold
-            px-8 py-4 rounded-full
-            transition-all duration-300
-            hover:bg-blue-100 hover:shadow-xl
-          "
-          >
-            Become a PPC Reseller Partner →
-          </button>
-        </div>
-      </section>
-      <section className="bg-slate-50 py-24">
+      <button
+        className="
+        bg-blue-700 text-white font-semibold
+        px-8 py-4 rounded-full
+        transition-all duration-300
+        hover:bg-blue-800 hover:shadow-lg
+      "
+      >
+        Become a PPC Reseller Partner →
+      </button>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center lg:justify-end">
+      <img
+        src="https://images.unsplash.com/photo-1551434678-e076c223a692"
+        alt="PPC Growth Partnership"
+        className="w-full max-w-md lg:max-w-lg rounded-3xl shadow-2xl object-cover"
+      />
+    </div>
+
+  </div>
+</section>
+
+      <section className="bg-slate-50 py-16 md:py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Ready to Build Your PPC Revenue Engine?

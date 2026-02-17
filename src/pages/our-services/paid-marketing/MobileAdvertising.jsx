@@ -78,22 +78,61 @@ const mobileServices = [
   },
 ];
 const industries = [
-  "E-commerce & D2C Brands",
-  "Real Estate & Infrastructure",
-  "Healthcare & Wellness",
-  "Education & EdTech",
-  "Financial Services",
-  "B2B Enterprises",
-  "Startups & Scaleups",
+  {
+    title: "E-commerce",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
+  },
+  {
+    title: "Real Estate",
+    image:
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
+  },
+  {
+    title: "Education",
+    image:
+      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
+  },
+  {
+    title: "Healthcare",
+    image:
+      "https://images.unsplash.com/photo-1580281657527-47a0e63efb6c",
+  },
+  {
+    title: "SaaS & Tech",
+    image:
+      "https://images.unsplash.com/photo-1518779578993-ec3579fee39f",
+  },
+  {
+    title: "Finance",
+    image:
+      "https://images.unsplash.com/photo-1565372915193-04b0f46c1d4b",
+  },
 ];
+
 const differentiators = [
-  "ROI-first strategy",
-  "AI-powered campaign optimization",
-  "Mobile-first creative thinking",
-  "Data-backed targeting",
-  "Scalable performance architecture",
-  "Transparent reporting system",
+  {
+    title: "Revenue-Focused Strategy",
+    description:
+      "Every campaign is aligned with real business KPIs — revenue, qualified leads, and ROI, not impressions.",
+  },
+  {
+    title: "AI + Human Optimization",
+    description:
+      "We combine automation intelligence with strategic oversight for smarter scaling decisions.",
+  },
+  {
+    title: "Conversion Architecture",
+    description:
+      "From ad to landing page to funnel — we engineer full performance ecosystems.",
+  },
+  {
+    title: "Transparent Reporting",
+    description:
+      "Clear dashboards, real metrics, and performance clarity without inflated numbers.",
+  },
 ];
+
 const platforms = [
   {
     icon: Smartphone,
@@ -153,89 +192,118 @@ const MobileAdvertising = () => {
   const [openIndex, setOpenIndex] = useState(null);
   return (
     <>
-      <section className="bg-linear-to-r from-blue-700 to-blue-900 py-20">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
-          <div className="space-y-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              Mobile Advertising Services
-            </h1>
+    <section
+  className="relative py-16 md:py-20 lg:py-24 text-white bg-cover bg-center"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-blue-900/80"></div>
 
-            <p className="text-xl font-semibold text-blue-100">
-              Reach. Engage. Convert — On Every Screen.
-            </p>
+  <div className="relative w-full px-6 sm:px-10 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-            <p className="text-blue-100 text-lg max-w-xl">
-              Your audience lives on mobile. Your growth should too. Drive real
-              business impact with performance-focused mobile advertising
-              strategies designed to convert micro-moments into measurable
-              revenue.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <button
-                className="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold
-              hover:bg-blue-100 hover:shadow-lg transition"
-              >
-                Speak to a Mobile Ads Expert →
-              </button>
+    {/* LEFT CONTENT */}
+    <div className="space-y-6 text-left">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+        Mobile Advertising Services
+      </h1>
 
-              <button
-                className="border border-white/70 px-6 py-3 rounded-full font-semibold
-              hover:bg-white hover:text-blue-700 transition"
-              >
-                Our Mobile Advertising Services →
-              </button>
-            </div>
-          </div>
-          <div className="flex justify-center lg:justify-end">
-            <div className="bg-white/10 rounded-3xl p-4">
-              <img
-                src="/mobile-advertising-hero.png"
-                alt="Mobile Advertising Services"
-                className="w-64 md:w-72 lg:w-80"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-blue-50 rounded-2xl p-10 max-w-5xl space-y-5">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Why Mobile Advertising is Non-Negotiable in 2026
-            </h2>
-            <p className="text-gray-700 text-lg">
-              Smartphones are no longer a secondary device — they are the{" "}
-              <span className="font-semibold text-gray-900">
-                primary gateway to search, social, shopping, entertainment, and
-                payments.
-              </span>{" "}
-              From app browsing to impulse buying, every interaction creates a
-              conversion opportunity.
-            </p>
+      <p className="text-lg md:text-xl font-semibold text-blue-100">
+        Reach. Engage. Convert — On Every Screen.
+      </p>
 
-            <p className="text-gray-700">
-              Mobile advertising today is powered by:
-            </p>
-            <ul className="space-y-2 text-gray-700 list-disc list-inside">
-              <li>AI-driven audience segmentation</li>
-              <li>Predictive analytics & behavioral targeting</li>
-              <li>First-party data strategies</li>
-              <li>Performance-driven bidding models</li>
-              <li>Privacy-compliant tracking ecosystems</li>
-            </ul>
-            <p className="text-gray-700">
-              <span className="font-semibold text-gray-900">
-                Adkryoss managed by Clink Consultancy Services Private Limited
-              </span>{" "}
-              builds mobile campaigns engineered for{" "}
-              <span className="text-blue-700 font-semibold">
-                ROI — not just impressions.
-              </span>
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="bg-white py-20">
+      <p className="text-blue-100 text-base md:text-lg max-w-xl">
+        Your audience lives on mobile. Your growth should too. Drive real
+        business impact with performance-focused mobile advertising
+        strategies designed to convert micro-moments into measurable
+        revenue.
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-4 pt-2">
+        <button
+          className="w-full sm:w-auto bg-white text-blue-700 px-6 py-3 rounded-full font-semibold
+          hover:bg-blue-100 hover:shadow-lg transition-all duration-300"
+        >
+          Speak to a Mobile Ads Expert →
+        </button>
+
+        <button
+          className="w-full sm:w-auto border border-white/70 px-6 py-3 rounded-full font-semibold
+          hover:bg-white hover:text-blue-700 transition-all duration-300"
+        >
+          Our Mobile Advertising Services →
+        </button>
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
+      <img
+        src="https://www.techmagnate.com/wp-content/uploads/2025/04/digital-marketing-for-healthcare-industry.webp"
+        alt="Mobile Advertising Services"
+        className="w-52 sm:w-64 md:w-72 lg:w-80 object-contain drop-shadow-2xl"
+      />
+    </div>
+
+  </div>
+</section>
+
+      <section className="bg-white py-16 md:py-20">
+  <div className="w-full px-6 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+    {/* LEFT CONTENT */}
+    <div className="space-y-6 text-left">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
+        Why Mobile Advertising is Non-Negotiable in 2026
+      </h2>
+
+      <p className="text-gray-700 text-base md:text-lg">
+        Smartphones are no longer a secondary device — they are the{" "}
+        <span className="font-semibold text-gray-900">
+          primary gateway to search, social, shopping, entertainment, and payments.
+        </span>{" "}
+        From app browsing to impulse buying, every interaction creates a
+        conversion opportunity.
+      </p>
+
+      <p className="text-gray-700">
+        Mobile advertising today is powered by:
+      </p>
+
+      <ul className="space-y-2 text-gray-700 list-disc list-inside">
+        <li>AI-driven audience segmentation</li>
+        <li>Predictive analytics & behavioral targeting</li>
+        <li>First-party data strategies</li>
+        <li>Performance-driven bidding models</li>
+        <li>Privacy-compliant tracking ecosystems</li>
+      </ul>
+
+      <p className="text-gray-700">
+        <span className="font-semibold text-gray-900">
+          Adkryoss managed by Clink Consultancy Services Private Limited
+        </span>{" "}
+        builds mobile campaigns engineered for{" "}
+        <span className="text-blue-700 font-semibold">
+          ROI — not just impressions.
+        </span>
+      </p>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
+      <img
+        src="https://images.unsplash.com/photo-1512499617640-c2f999098c01"
+        alt="Mobile Advertising Growth"
+        className="w-full max-w-md rounded-2xl shadow-xl object-cover"
+      />
+    </div>
+
+  </div>
+</section>
+
+      <section className="bg-gray-50 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-6">
           {/* Heading */}
           <div className="max-w-3xl mb-14">
@@ -325,169 +393,211 @@ const MobileAdvertising = () => {
           </div>
         </div>
       </section>
-      <section className="bg-white py-20">
-        <div className="max-w-5xl mx-auto px-6">
-          {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Approach: Strategy → Execution → Scale
-          </h2>
+      <section className="bg-gray-70 py-16 md:py-20">
+  <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          {/* Philosophy Line */}
-          <p className="text-xl font-semibold text-gray-800 mb-10">
-            We don’t run campaigns. We build performance ecosystems.
-          </p>
+    {/* LEFT CONTENT */}
+    <div className="px-6 lg:pl-20 xl:pl-28 text-left">
 
-          {/* Steps */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-lg font-semibold text-blue-700 mb-1">
-                1. Market & Audience Intelligence
-              </h3>
-              <p className="text-gray-700">
-                Data research, competitor benchmarking, user intent mapping.
-              </p>
-            </div>
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Our Approach: Strategy → Execution → Scale
+      </h2>
 
-            <div>
-              <h3 className="text-lg font-semibold text-blue-700 mb-1">
-                2. Conversion-Focused Media Planning
-              </h3>
-              <p className="text-gray-700">
-                Budget allocation across platforms based on predicted ROI.
-              </p>
-            </div>
+      <p className="text-lg md:text-xl font-semibold text-gray-800 mb-8">
+        We don’t run campaigns. We build performance ecosystems.
+      </p>
 
-            <div>
-              <h3 className="text-lg font-semibold text-blue-700 mb-1">
-                3. Creative Built for Mobile Psychology
-              </h3>
-              <p className="text-gray-700">
-                Thumb-stopping visuals, vertical-first design, fast-loading
-                formats.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-blue-700 mb-1">
-                4. Smart Bidding & AI Optimization
-              </h3>
-              <p className="text-gray-700">
-                Automated bidding models that continuously improve campaign
-                performance.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-blue-700 mb-1">
-                5. Transparent Reporting & Analytics
-              </h3>
-              <p className="text-gray-700">
-                Real-time dashboards, ROI tracking, conversion attribution
-                modeling.
-              </p>
-            </div>
-          </div>
-
-          {/* Closing Line */}
-          <p className="text-gray-700 text-lg mt-12 max-w-4xl">
-            <span className="font-semibold text-gray-900">
-              Adkryoss managed by Clink Consultancy Services Private Limited
-            </span>{" "}
-            ensures every campaign decision is backed by data —{" "}
-            <span className="font-semibold">not assumptions.</span>
+      <div className="space-y-6">
+        <div>
+          <h3 className="text-blue-700 font-semibold">
+            1. Market & Audience Intelligence
+          </h3>
+          <p className="text-gray-700">
+            Data research, competitor benchmarking, user intent mapping.
           </p>
         </div>
-      </section>
-      <section className="bg-white py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-            Industries We Serve
-          </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
-              <div
-                key={index}
-                className="
-                bg-green-50 border border-green-200 rounded-2xl
-                p-8 text-center
-                font-semibold text-green-900
-                transition-all duration-300
-                hover:bg-green-100 hover:-translate-y-1 hover:shadow-lg
-              "
-              >
-                {industry}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="bg-white py-20">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-            What Makes Us Different
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            {differentiators.map((item, index) => (
-              <div
-                key={index}
-                className="
-                flex items-start gap-4
-                border border-gray-200 rounded-xl
-                p-5 transition-all duration-300
-                hover:-translate-y-1 hover:shadow-md
-              "
-              >
-                <CheckCircle className="w-6 h-6 text-green-500 mt-1 shrink-0" />
-                <p className="text-gray-800 font-medium">{item}</p>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-lg text-gray-700 max-w-3xl">
-            We don’t focus on vanity metrics.{" "}
-            <span className="font-semibold text-gray-900">
-              We focus on growth metrics.
-            </span>
+        <div>
+          <h3 className="text-blue-700 font-semibold">
+            2. Conversion-Focused Media Planning
+          </h3>
+          <p className="text-gray-700">
+            Budget allocation across platforms based on predicted ROI.
           </p>
         </div>
-      </section>
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-            Technologies & Platforms We Leverage
-          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {platforms.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={index}
-                  className="
-                  bg-white border border-blue-200 rounded-2xl
-                  p-8 transition-all duration-300
-                  hover:-translate-y-1 hover:shadow-lg
-                "
-                >
-                  <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-6">
-                    <Icon className="w-6 h-6 text-green-600" />
-                  </div>
+        <div>
+          <h3 className="text-blue-700 font-semibold">
+            3. Creative Built for Mobile Psychology
+          </h3>
+          <p className="text-gray-700">
+            Thumb-stopping visuals, vertical-first design, fast-loading formats.
+          </p>
+        </div>
 
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {item.title}
-                  </h3>
+        <div>
+          <h3 className="text-blue-700 font-semibold">
+            4. Smart Bidding & AI Optimization
+          </h3>
+          <p className="text-gray-700">
+            Automated bidding models that continuously improve campaign performance.
+          </p>
+        </div>
 
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
+        <div>
+          <h3 className="text-blue-700 font-semibold">
+            5. Transparent Reporting & Analytics
+          </h3>
+          <p className="text-gray-700">
+            Real-time dashboards, ROI tracking, conversion attribution modeling.
+          </p>
+        </div>
+      </div>
+
+      <p className="text-gray-700 text-lg mt-10 max-w-3xl">
+        <span className="font-semibold text-gray-900">
+          Adkryoss managed by Clink Consultancy Services Private Limited
+        </span>{" "}
+        ensures every campaign decision is backed by data —
+        <span className="font-semibold"> not assumptions.</span>
+      </p>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center lg:justify-end px-6 lg:px-0 mt-10 lg:mt-0">
+      <img
+        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+        alt="Marketing Strategy Analytics"
+        className="w-full max-w-md lg:max-w-lg rounded-3xl shadow-xl object-cover"
+      />
+    </div>
+
+  </div>
+</section>
+
+      <section className="bg-gray-100 py-16 md:py-20">
+  <div className="w-full px-6 lg:px-20 xl:px-28 text-left">
+
+    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-12">
+      Industries We Serve
+    </h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+      {industries.map((industry, index) => (
+        <div
+          key={index}
+          className="group bg-white border border-gray-200 rounded-2xl overflow-hidden
+          transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          {/* Image */}
+          <div className="overflow-hidden">
+            <img
+              src={industry.image}
+              alt={industry.title}
+              className="w-full h-48 object-cover group-hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          {/* Title */}
+          <div className="p-6">
+            <h3 className="text-lg font-semibold text-gray-900">
+              {industry.title}
+            </h3>
           </div>
         </div>
-      </section>
+      ))}
+
+    </div>
+  </div>
+</section>
+
+     <section className="bg-white py-16 md:py-20">
+  <div className="w-full px-6 lg:px-20 xl:px-28 text-left">
+
+    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-14">
+      What Makes Us Different
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      {differentiators.map((item, index) => (
+        <div
+          key={index}
+          className="
+          group bg-white border border-gray-200 rounded-2xl p-8
+          transition-all duration-300
+          hover:-translate-y-1 hover:shadow-xl
+        "
+        >
+          {/* Top Accent Line */}
+          <div className="h-1 w-12 bg-blue-700 mb-6 rounded-full"></div>
+
+          {/* Content */}
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            {item.title}
+          </h3>
+
+          <p className="text-gray-600 leading-relaxed">
+            {item.description}
+          </p>
+        </div>
+      ))}
+
+    </div>
+
+    <p className="text-lg text-gray-700 mt-16 max-w-4xl">
+      We don’t focus on vanity metrics.{" "}
+      <span className="font-semibold text-gray-900">
+        We focus on measurable growth metrics.
+      </span>
+    </p>
+
+  </div>
+</section>
+
+    <section className="bg-gray-200 py-16 md:py-20">
+  <div className="w-full px-6 lg:px-20 xl:px-28 text-left">
+
+    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-14">
+      Technologies & Platforms We Leverage
+    </h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {platforms.map((item, index) => {
+        const Icon = item.icon;
+
+        return (
+          <div
+            key={index}
+            className="
+            group bg-white border border-blue-200 rounded-2xl
+            p-8 h-full
+            transition-all duration-300
+            hover:-translate-y-1 hover:shadow-xl
+          "
+          >
+            <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+              <Icon className="w-6 h-6 text-green-600 group-hover:text-blue-700 transition" />
+            </div>
+
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              {item.title}
+            </h3>
+
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        );
+      })}
+
+    </div>
+
+  </div>
+</section>
+
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="bg-blue-50 border border-blue-200 rounded-3xl p-10">
@@ -532,7 +642,7 @@ const MobileAdvertising = () => {
       </section>
       <section className="bg-linear-to-r from-blue-700 to-blue-900 py-20">
         <div className="max-w-5xl mx-auto px-6 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-white md:text-4xl font-bold mb-6">
             Ready to Dominate the Mobile Ecosystem?
           </h2>
 

@@ -148,1160 +148,363 @@ const SEOResellerServices = () => {
   ];
 
   return (
-    <div>
-      {/* Hero Section */}
-      <div
-        style={{
-          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
-          color: "#ffffff",
-          padding: "120px 0 90px",
-          position: "relative",
-        }}
-      >
-        <div className="container">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1.1fr 0.9fr",
-              gap: "60px",
-              alignItems: "center",
-              position: "relative",
-              zIndex: 1,
-            }}
-          >
-            <div>
-              <h1
-                style={{
-                  fontSize: "56px",
-                  fontWeight: "800",
-                  marginBottom: "22px",
-                  letterSpacing: "-1px",
-                }}
-              >
-                SEO Reseller Services
-              </h1>
+    <>
+    {/* Hero Section */}
+<section
+  className="relative bg-cover bg-center text-white py-20 md:py-24"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-slate-900/80"></div>
 
-              <p
-                style={{
-                  fontSize: "28px",
-                  fontWeight: "600",
-                  marginBottom: "24px",
-                  color: "#22c55e",
-                }}
-              >
-                Scale Your Agency. Deliver Results. Stay Invisible.
-              </p>
+  <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
 
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "#cbd5e1",
-                  marginBottom: "40px",
-                  maxWidth: "540px",
-                }}
-              >
-                White-label SEO solutions designed to help agencies expand
-                revenue, retain clients, and dominate search — without hiring an
-                in-house team.
-              </p>
+    {/* LEFT CONTENT */}
+    <div className="text-left">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+        SEO Reseller Services
+      </h1>
 
-              <div style={{ display: "flex", gap: "18px", flexWrap: "wrap" }}>
-                <a
-                  href="/contact"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    background: "#3b82f6",
-                    color: "#ffffff",
-                    padding: "16px 42px",
-                    borderRadius: "50px",
-                    fontSize: "17px",
-                    fontWeight: "800",
-                    textDecoration: "none",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "#22c55e";
-                    e.currentTarget.style.transform = "translateY(-4px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 14px 32px rgba(34,197,94,0.4)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "#3b82f6";
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
-                >
-                  Speak to an Expert →
-                </a>
+      <p className="text-xl md:text-2xl font-semibold text-green-400 mb-6">
+        Scale Your Agency. Deliver Results. Stay Invisible.
+      </p>
 
-                <a
-                  href="#solutions"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    background: "transparent",
-                    color: "#3b82f6",
-                    padding: "16px 42px",
-                    borderRadius: "50px",
-                    border: "2px solid #3b82f6",
-                    fontSize: "17px",
-                    fontWeight: "800",
-                    textDecoration: "none",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "#22c55e";
-                    e.currentTarget.style.color = "#ffffff";
-                    e.currentTarget.style.borderColor = "#22c55e";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "transparent";
-                    e.currentTarget.style.color = "#3b82f6";
-                    e.currentTarget.style.borderColor = "#3b82f6";
-                  }}
-                >
-                  Our Solutions →
-                </a>
-              </div>
-            </div>
-            {/* <div
-        style={{
-          width: "100%",
-          height: "360px",
-          borderRadius: "24px",
-          background: "rgba(255,255,255,0.08)",
-          border: "1px solid rgba(255,255,255,0.15)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "#cbd5e1",
-          fontWeight: "700",
-          fontSize: "16px",
-        }}
-      >
-        Image Placeholder
-      </div> */}
-          </div>
-        </div>
-      </div>
+      <p className="text-base md:text-lg text-slate-300 leading-relaxed mb-10 max-w-xl">
+        White-label SEO solutions designed to help agencies expand
+        revenue, retain clients, and dominate search — without hiring an
+        in-house team.
+      </p>
 
-      {/* WHY */}
-      <section style={{ padding: "80px 0", background: "#fff" }}>
-        {/* Why SEO Reseller Services */}
-        <div
-          style={{
-            padding: "90px 0",
-            backgroundColor: "#ffffff",
-          }}
+      <div className="flex flex-col sm:flex-row gap-4">
+        <a
+          href="/contact"
+          className="bg-blue-600 hover:bg-green-500
+          text-white font-bold
+          px-8 py-4 rounded-full
+          transition-all duration-300
+          hover:-translate-y-1 hover:shadow-xl text-center"
         >
-          <div className="container">
-            {/* Heading */}
-            <div
-              style={{
-                maxWidth: "900px",
-                margin: "0 auto 50px",
-                textAlign: "center",
-              }}
-            >
-              <h2
-                style={{
-                  fontSize: "42px",
-                  fontWeight: "800",
-                  marginBottom: "24px",
-                  color: "#0f172a",
-                }}
-              >
-                Why SEO Reseller Services?
-              </h2>
+          Speak to an Expert →
+        </a>
 
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "#475569",
-                }}
-              >
-                The demand for SEO is exploding — but building an expert team,
-                investing in tools, and managing execution can slow down your
-                growth.
-              </p>
-            </div>
-
-            {/* Main Content */}
-            <div
-              style={{
-                maxWidth: "1000px",
-                margin: "0 auto",
-                background: "#f8fafc",
-                padding: "50px",
-                borderRadius: "24px",
-                border: "1px solid #e2e8f0",
-              }}
-            >
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "#334155",
-                  marginBottom: "28px",
-                }}
-              >
-                That’s where{" "}
-                <strong>
-                  Adkryoss managed by Clink Consultancy Services Private Limited
-                </strong>{" "}
-                steps in as your strategic backend SEO partner. We work silently
-                in the background while you take full credit in front of your
-                clients.
-              </p>
-
-              {/* Focus Split */}
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                  gap: "30px",
-                  marginTop: "40px",
-                }}
-              >
-                {/* You */}
-                <div
-                  style={{
-                    background: "#ffffff",
-                    padding: "35px",
-                    borderRadius: "20px",
-                    border: "1px solid #e2e8f0",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "#ffffff";
-                    e.currentTarget.style.transform = "translateY(-8px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 20px 40px rgba(59, 130, 246, 0.18);";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "#ffffff";
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
-                >
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      fontWeight: "800",
-                      marginBottom: "14px",
-                      color: "#2563eb",
-                    }}
-                  >
-                    You Focus On
-                  </h3>
-
-                  <p
-                    style={{
-                      fontSize: "17px",
-                      lineHeight: "1.7",
-                      color: "#0f172a",
-                      margin: 0,
-                    }}
-                  >
-                    Acquiring and managing clients.
-                  </p>
-                </div>
-
-                {/* Us */}
-                <div
-                  style={{
-                    height: "40vh",
-                    background: "#ffffff",
-                    padding: "35px",
-                    borderRadius: "20px",
-                    border: "1px solid #e2e8f0",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-8px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 14px 34px rgba(30, 64, 175, 0.25);";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
-                >
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      fontWeight: "800",
-                      marginBottom: "14px",
-                      color: "#16a34a",
-                    }}
-                  >
-                    We Focus On
-                  </h3>
-
-                  <p
-                    style={{
-                      fontSize: "17px",
-                      lineHeight: "1.7",
-                      color: "#0f172a",
-                      margin: 0,
-                    }}
-                  >
-                    Rankings, traffic, and measurable ROI.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT WE OFFER */}
-      <section style={{ padding: "80px 0", background: "#f8fafc" }}>
-        <div className="container">
-          <h2
-            style={{
-              fontSize: "42px",
-              fontWeight: "800",
-              textAlign: "center",
-              marginBottom: "60px",
-            }}
-          >
-            What We Offer
-          </h2>
-
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "30px",
-              justifyContent: "center",
-            }}
-          >
-            {offerings.map((item, i) => (
-              <div
-                key={i}
-                style={{
-                  background: "#fff",
-                  padding: "40px",
-                  borderRadius: "24px",
-                  width: "320px",
-                  border: "1px solid #e2e8f0",
-                  transition: "all 0.3s",
-                  cursor: "pointer",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.background = "#007f7a";
-                  e.currentTarget.style.transform = "translateY(-10px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 20px 40px rgba(59,130,246,0.15)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.background = "fff";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                }}
-              >
-                <div style={{ color: "#3b82f6", marginBottom: "20px" }}>
-                  {item.icon}
-                </div>
-                <h3 style={{ fontSize: "22px", fontWeight: "800" }}>
-                  {item.title}
-                </h3>
-                <p style={{ fontSize: "16px", color: "#475569" }}>
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section
-        style={{
-          padding: "110px 0",
-          background: "#eff6ff",
-        }}
-      >
-        <div className="container">
-          {/* Heading */}
-          <div
-            style={{
-              maxWidth: "900px",
-              margin: "0 auto 70px",
-              textAlign: "center",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "42px",
-                fontWeight: "800",
-                marginBottom: "18px",
-                color: "#0f172a",
-              }}
-            >
-              Our SEO Reseller Solutions
-            </h2>
-
-            <p
-              style={{
-                fontSize: "18px",
-                lineHeight: "1.8",
-                color: "#334155",
-              }}
-            >
-              We don’t just offer SEO services. We offer structured growth
-              systems.
-            </p>
-          </div>
-
-          {/* Solution Cards */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-              gap: "35px",
-              maxWidth: "1200px",
-              margin: "0 auto",
-            }}
-          >
-            {resellerSolutions.map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  height: "50vh",
-                  background: "#ffffff",
-                  padding: "42px",
-                  borderRadius: "22px",
-                  border: "1px solid #dbeafe",
-                  boxShadow: "0 12px 30px rgba(59,130,246,0.12)",
-                  transition: "all 0.3s ease",
-                  cursor: "default",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "translateY(-8px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 22px 45px rgba(59,130,246,0.18)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow =
-                    "0 12px 30px rgba(59,130,246,0.12)";
-                }}
-              >
-                <div
-                  style={{
-                    width: "38px",
-                    height: "38px",
-                    borderRadius: "50%",
-                    background: "#2563eb",
-                    color: "#fff",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontWeight: "800",
-                    marginBottom: "20px",
-                  }}
-                >
-                  {index + 1}
-                </div>
-
-                <h3
-                  style={{
-                    fontSize: "22px",
-                    fontWeight: "800",
-                    marginBottom: "18px",
-                    color: "#0f172a",
-                  }}
-                >
-                  {item.title}
-                </h3>
-
-                <ul style={{ paddingLeft: "18px", margin: 0 }}>
-                  {item.points.map((pt, i) => (
-                    <li
-                      key={i}
-                      style={{
-                        fontSize: "16px",
-                        lineHeight: "1.7",
-                        color: "#475569",
-                        marginBottom: "10px",
-                      }}
-                    >
-                      {pt}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section
-        style={{
-          padding: "110px 0",
-          background: "#f9fafb",
-        }}
-      >
-        <div className="container">
-          {/* Heading */}
-          <div
-            style={{
-              maxWidth: "900px",
-              margin: "0 auto 80px",
-              textAlign: "center",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "42px",
-                fontWeight: "800",
-                marginBottom: "18px",
-                color: "#0f172a",
-              }}
-            >
-              How Our Reseller Model Works
-            </h2>
-
-            <p
-              style={{
-                fontSize: "18px",
-                lineHeight: "1.8",
-                color: "#475569",
-              }}
-            >
-              A structured, system-driven SEO workflow designed for scale and
-              consistency.
-            </p>
-          </div>
-
-          {/* Steps */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: "40px",
-              maxWidth: "1200px",
-              margin: "0 auto",
-              position: "relative",
-            }}
-          >
-            {resellerWorkflow.map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  textAlign: "center",
-                  padding: "30px 20px",
-                }}
-              >
-                {/* Step Circle */}
-                <div
-                  style={{
-                    width: "64px",
-                    height: "64px",
-                    borderRadius: "50%",
-                    background: "#2563eb",
-                    color: "#ffffff",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontWeight: "800",
-                    fontSize: "18px",
-                    margin: "0 auto 20px",
-                    boxShadow: "0 10px 25px rgba(37,99,235,0.35)",
-                  }}
-                >
-                  {index + 1}
-                </div>
-
-                <h3
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: "800",
-                    marginBottom: "12px",
-                    color: "#0f172a",
-                  }}
-                >
-                  {item.step}
-                </h3>
-
-                <p
-                  style={{
-                    fontSize: "16px",
-                    lineHeight: "1.7",
-                    color: "#475569",
-                  }}
-                >
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Closing Statement */}
-          <div
-            style={{
-              maxWidth: "1000px",
-              margin: "70px auto 0",
-              padding: "40px",
-              background: "#ffffff",
-              borderRadius: "24px",
-              border: "1px solid #e5e7eb",
-              textAlign: "center",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-8px)";
-              e.currentTarget.style.boxShadow =
-                "0 12px 30px rgba(34,197,94,0.4)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "none";
-            }}
-          >
-            <p
-              style={{
-                fontSize: "18px",
-                lineHeight: "1.8",
-                color: "#334155",
-                margin: 0,
-              }}
-            >
-              Through{" "}
-              <strong>
-                Adkryoss managed by Clink Consultancy Services Private Limited
-              </strong>
-              , agencies get a structured, system-driven SEO workflow that
-              ensures consistency and predictable outcomes.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* WHO ITS FOR */}
-      <section style={{ padding: "80px 0", background: "#fff" }}>
-        <div className="container">
-          <h2
-            style={{
-              fontSize: "42px",
-              fontWeight: "800",
-              textAlign: "center",
-              marginBottom: "50px",
-            }}
-          >
-            Who Is This For?
-          </h2>
-
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "15px",
-              justifyContent: "center",
-            }}
-          >
-            {whoItsFor.map((item, i) => (
-              <div
-                key={i}
-                style={{
-                  padding: "14px 35px",
-                  background: "#eff6ff",
-                  borderRadius: "50px",
-                  fontWeight: "700",
-                  border: "1px solid #e2e8f0",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "#3b82f6";
-                  e.currentTarget.style.transform = "translateY(-8px);";
-                  e.currentTarget.style.boxShadow =
-                    "0 12px 30px rgba(34,197,94,0.4)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "#eff6ff";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                }}
-              >
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        style={{
-          padding: "110px 0",
-          background: "#C0C0C0",
-        }}
-      >
-        <div className="container">
-          {/* Heading */}
-          <div
-            style={{
-              maxWidth: "900px",
-              margin: "0 auto 70px",
-              textAlign: "center",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "42px",
-                fontWeight: "800",
-                marginBottom: "18px",
-                color: "#0f172a",
-              }}
-            >
-              What Makes Us Different
-            </h2>
-
-            <p
-              style={{
-                fontSize: "18px",
-                lineHeight: "1.8",
-                color: "#475569",
-              }}
-            >
-              Built for agencies that value performance, transparency, and
-              long-term growth.
-            </p>
-          </div>
-
-          {/* Differentiator Cards */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "30px",
-              maxWidth: "1200px",
-              margin: "0 auto",
-            }}
-          >
-            {differentiators.map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  background: "#ffffff",
-                  padding: "40px",
-                  borderRadius: "22px",
-                  border: "1px solid #e5e7eb",
-                  boxShadow: "0 8px 24px rgba(15,23,42,0.06)",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "translateY(-6px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 18px 40px rgba(15,23,42,0.12)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 24px rgba(15,23,42,0.06)";
-                }}
-              >
-                {/* Accent bar */}
-                <div
-                  style={{
-                    width: "42px",
-                    height: "4px",
-                    background: "#22c55e",
-                    borderRadius: "4px",
-                    marginBottom: "18px",
-                  }}
-                ></div>
-
-                <h3
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: "800",
-                    marginBottom: "12px",
-                    color: "#0f172a",
-                  }}
-                >
-                  {item.title}
-                </h3>
-
-                <p
-                  style={{
-                    fontSize: "16px",
-                    lineHeight: "1.7",
-                    color: "#475569",
-                    margin: 0,
-                  }}
-                >
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Industries We Serve */}
-      <div
-        style={{
-          padding: "110px 0",
-          background: "linear-gradient(180deg, #e5e7eb 0%, #ffffff 65%)",
-        }}
-      >
-        <div className="container">
-          {/* Heading */}
-          <div
-            style={{
-              maxWidth: "880px",
-              margin: "0 auto 70px",
-              textAlign: "center",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "40px",
-                fontWeight: "800",
-                marginBottom: "16px",
-                color: "#0f172a",
-              }}
-            >
-              Industries We Serve
-            </h2>
-
-            <p
-              style={{
-                fontSize: "17px",
-                lineHeight: "1.8",
-                color: "#475569",
-              }}
-            >
-              Every industry has unique search behavior. Our strategies adapt
-              accordingly.
-            </p>
-          </div>
-
-          {/* Industries Grid */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-              gap: "22px",
-              maxWidth: "1000px",
-              margin: "0 auto",
-            }}
-          >
-            {[
-              "E-commerce",
-              "SaaS & Tech",
-              "Healthcare",
-              "Real Estate",
-              "Education",
-              "Finance",
-              "B2B Services",
-            ].map((industry, index) => (
-              <div
-                key={index}
-                style={{
-                  background: "#ffffff",
-                  padding: "22px 20px",
-                  borderRadius: "14px",
-                  border: "1px solid #e5e7eb",
-                  textAlign: "center",
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  color: "#0f172a",
-                  transition: "all 0.25s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "#22c55e";
-                  e.currentTarget.style.color = "#22c55e";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "#e5e7eb";
-                  e.currentTarget.style.color = "#0f172a";
-                }}
-              >
-                {industry}
-              </div>
-            ))}
-          </div>
-        </div>
+        <a
+          href="#solutions"
+          className="border-2 border-blue-500
+          text-blue-400
+          px-8 py-4 rounded-full font-bold
+          transition-all duration-300
+          hover:bg-green-500 hover:text-white hover:border-green-500 text-center"
+        >
+          Our Solutions →
+        </a>
       </div>
-      {/* Tools & Technologies We Leverage */}
-      <div
-        style={{
-          padding: "110px 0",
-          background: "#f9fafb",
-        }}
-      >
-        <div className="container">
-          {/* Heading */}
-          <div
-            style={{
-              maxWidth: "900px",
-              margin: "0 auto 60px",
-              textAlign: "center",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "40px",
-                fontWeight: "800",
-                marginBottom: "16px",
-                color: "#0f172a",
-              }}
-            >
-              Tools & Technologies We Leverage
-            </h2>
-
-            <p
-              style={{
-                fontSize: "17px",
-                lineHeight: "1.8",
-                color: "#475569",
-              }}
-            >
-              We use industry-leading tools combined with proven SEO processes
-              to deliver measurable results at scale.
-            </p>
-          </div>
-
-          {/* Tools Grid */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "22px",
-              maxWidth: "1000px",
-              margin: "0 auto",
-            }}
-          >
-            {seoTools.map((tool, index) => (
-              <div
-                key={index}
-                style={{
-                  background: "#ffffff",
-                  padding: "22px 24px",
-                  borderRadius: "14px",
-                  border: "1px solid #e5e7eb",
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  color: "#0f172a",
-                  transition: "all 0.25s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "#22c55e";
-                  e.currentTarget.style.color = "#22c55e";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = "#e5e7eb";
-                  e.currentTarget.style.color = "#0f172a";
-                }}
-              >
-                {tool}
-              </div>
-            ))}
-          </div>
-
-          {/* Closing Statement */}
-          <div
-            style={{
-              maxWidth: "1000px",
-              margin: "70px auto 0",
-              padding: "40px",
-              background: "#ffffff",
-              borderRadius: "20px",
-              border: "1px solid #e5e7eb",
-              textAlign: "center",
-            }}
-          >
-            <p
-              style={{
-                fontSize: "18px",
-                lineHeight: "1.8",
-                color: "#334155",
-                margin: 0,
-              }}
-            >
-              <strong>
-                Adkryoss managed by Clink Consultancy Services Private Limited
-              </strong>{" "}
-              blends human strategy with automation to create sustainable
-              organic growth systems.
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* Benefits of Partnering With Us */}
-      <div
-        style={{
-          padding: "120px 0",
-          background: "linear-gradient(135deg, #0b1220 0%, #111827 100%)",
-          color: "#ffffff",
-        }}
-      >
-        <div className="container">
-          {/* Heading */}
-          <div
-            style={{
-              maxWidth: "1000px",
-              margin: "0 auto 70px",
-              textAlign: "center",
-            }}
-          >
-            <h2
-              style={{
-                color: "#ffffff",
-                fontSize: "44px",
-                fontWeight: "800",
-                marginBottom: "18px",
-              }}
-            >
-              Benefits of Partnering With Us
-            </h2>
-          </div>
-
-          {/* Benefits Grid */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "24px",
-              maxWidth: "1100px",
-              margin: "0 auto",
-            }}
-          >
-            {[
-              "Increase recurring revenue",
-              "Reduce operational costs",
-              "Deliver faster results",
-              "Improve client retention",
-              "Expand service offerings",
-              "Scale without overhead",
-            ].map((benefit, index) => (
-              <div
-                key={index}
-                style={{
-                  background: "rgba(255,255,255,0.06)",
-                  border: "1px solid rgba(255,255,255,0.12)",
-                  borderRadius: "16px",
-                  padding: "22px 26px",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "14px",
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "rgba(34,197,94,0.15)";
-                  e.currentTarget.style.borderColor = "#22c55e";
-                  e.currentTarget.style.transform = "translateY(-4px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "rgba(255,255,255,0.06)";
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)";
-                  e.currentTarget.style.transform = "translateY(0)";
-                }}
-              >
-                {/* Check Icon */}
-                <div
-                  style={{
-                    width: "26px",
-                    height: "26px",
-                    borderRadius: "50%",
-                    background: "#22c55e",
-                    color: "#0b1220",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontWeight: "900",
-                    fontSize: "14px",
-                    flexShrink: 0,
-                  }}
-                >
-                  ✓
-                </div>
-
-                {benefit}
-              </div>
-            ))}
-          </div>
-
-          {/* Closing Statement */}
-          <div
-            style={{
-              maxWidth: "1000px",
-              margin: "70px auto 0",
-              textAlign: "center",
-            }}
-          >
-            <p
-              style={{
-                fontSize: "18px",
-                lineHeight: "1.8",
-                color: "#cbd5e1",
-              }}
-            >
-              SEO isn’t a one-time campaign. It’s a long-term growth engine.
-              With the right backend partner, it becomes your most profitable
-              service.
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* FINAL CTA */}
-      <section
-        style={{
-          padding: "100px 0",
-          textAlign: "center",
-          background: "linear-gradient(135deg, #3b82f6, #1e40af)",
-          color: "#fff",
-        }}
-      >
-        <div className="container">
-          <h2 style={{ fontSize: "48px", fontWeight: "800" }}>
-            Ready to Scale Your Agency?
-          </h2>
-
-          <p
-            style={{
-              fontSize: "22px",
-              margin: "30px auto",
-              maxWidth: "800px",
-              color: "#ffffff",
-            }}
-          >
-            Turn SEO into your most profitable service — without hiring or
-            overhead.
-          </p>
-
-          <Link
-            to="/contact"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "12px",
-              background: "#fff",
-              color: "#3b82f6",
-              padding: "20px 50px",
-              borderRadius: "50px",
-              fontWeight: "800",
-              textDecoration: "none",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#22c55e";
-              e.currentTarget.style.transform = "translateY(-4px)";
-              e.currentTarget.style.boxShadow =
-                "0 14px 32px rgba(34,197,94,0.4)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#ffffff";
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "none";
-            }}
-          >
-            Partner With Us <ArrowRight />
-          </Link>
-        </div>
-      </section>
     </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center lg:justify-end">
+      <img
+        src="https://www.techmagnate.com/wp-content/uploads/2025/04/digital-marketing-for-healthcare-industry.webp"
+        alt="SEO Reseller Services"
+        className="w-64 sm:w-72 md:w-80 lg:w-[380px] object-contain"
+      />
+    </div>
+
+  </div>
+</section>
+<section className="bg-white py-16 md:py-20">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center">
+
+    {/* LEFT CONTENT */}
+    <div className="pr-0 lg:pr-10">
+
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
+        Why SEO Reseller Services?
+      </h2>
+
+      <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-5">
+        The demand for SEO is exploding — but building an expert team,
+        investing in tools, and managing execution can slow down your growth.
+      </p>
+
+      <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-5">
+        That’s where{" "}
+        <span className="font-semibold text-gray-900">
+          Adkryoss managed by Clink Consultancy Services Private Limited
+        </span>{" "}
+        steps in as your strategic backend SEO partner.
+      </p>
+
+      <p className="text-base md:text-lg font-medium text-gray-900">
+        You focus on acquiring and managing clients. <br />
+        <span className="text-blue-700 font-semibold">
+          We focus on rankings, traffic, and measurable ROI.
+        </span>
+      </p>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="mt-10 lg:mt-0 flex justify-start lg:justify-end">
+      <img
+        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+        alt="SEO Analytics Dashboard"
+        className="w-72 md:w-80 lg:w-96 object-contain"
+      />
+    </div>
+
+  </div>
+</section>
+<section className="bg-white py-20">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+      What We Offer
+    </h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      {[
+        {
+          title: "White-Label SEO Execution",
+          desc: "End-to-end SEO delivered under your agency’s brand — from strategy to reporting."
+        },
+        {
+          title: "Dedicated SEO Team",
+          desc: "Access strategists, technical experts, content specialists, and link-building professionals."
+        },
+        {
+          title: "Transparent Reporting",
+          desc: "Custom-branded reports with rankings, traffic growth, leads & insights."
+        },
+        {
+          title: "Scalable Delivery Model",
+          desc: "From 1 client to 100+ — our systems scale as your agency grows."
+        }
+      ].map((item, i) => (
+        <div key={i}
+          className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition"
+        >
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            {item.title}
+          </h3>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            {item.desc}
+          </p>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
+<section className="bg-blue-50 py-24">
+  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+    {/* Left Content */}
+    <div>
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        Our SEO Reseller Solutions
+      </h2>
+
+      <p className="text-lg text-gray-700 mb-6">
+        We don’t just offer SEO services. We offer structured growth systems.
+      </p>
+
+      <ul className="space-y-3 text-gray-700">
+        <li>• SEO Strategy & Roadmap</li>
+        <li>• On-Page SEO</li>
+        <li>• Technical SEO</li>
+        <li>• Content Marketing</li>
+        <li>• Authority Building</li>
+        <li>• Local & Enterprise SEO</li>
+      </ul>
+    </div>
+
+    {/* Right Image */}
+    <div className="flex justify-center lg:justify-end">
+      <img
+        src="https://images.unsplash.com/photo-1551434678-e076c223a692"
+        alt="SEO Growth Strategy"
+        className="w-80 md:w-96 object-contain"
+      />
+    </div>
+
+  </div>
+</section>
+<section className="bg-white py-20">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-14">
+      Complete SEO Execution Framework
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {[
+        "Competitor benchmarking & keyword gap analysis",
+        "Technical optimization & schema implementation",
+        "Core Web Vitals & site architecture improvements",
+        "SEO blog creation & topic cluster strategy",
+        "High-quality backlinks & digital PR outreach",
+        "Google Business Profile & enterprise SEO"
+      ].map((item, i) => (
+        <div key={i}
+          className="bg-white border border-blue-100 rounded-2xl p-8 hover:bg-teal-700 hover:text-white transition"
+        >
+          {item}
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+<section className="bg-slate-50 py-24">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+      How Our Reseller Model Works
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      {[
+        "Onboarding & Discovery",
+        "Strategy Development",
+        "Execution",
+        "Reporting & Scaling"
+      ].map((step, i) => (
+        <div key={i}
+          className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition"
+        >
+          <span className="text-sm font-bold text-blue-700">
+            Step {i + 1}
+          </span>
+          <h3 className="text-lg font-semibold mt-2">
+            {step}
+          </h3>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
+<section className="bg-white py-20">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+      Who Is This For?
+    </h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {[
+        "Digital Marketing Agencies",
+        "Web Development Companies",
+        "Freelancers",
+        "Branding Agencies",
+        "International Agencies"
+      ].map((item, i) => (
+        <div key={i}
+          className="rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72"
+            alt={item}
+            className="h-40 w-full object-cover"
+          />
+          <div className="p-6 font-semibold text-gray-900">
+            {item}
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
+<section className="bg-blue-50 py-24">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-14">
+      What Makes Us Different
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      {[
+        "Performance-First Approach",
+        "Process-Driven Execution",
+        "Ethical White-Hat SEO",
+        "Modern SEO Stack",
+        "Complete Confidentiality"
+      ].map((item, i) => (
+        <div key={i}
+          className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition"
+        >
+          {item}
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+<section className="bg-white py-20">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+      Industries We Serve
+    </h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {[
+        "E-commerce",
+        "SaaS & Tech",
+        "Healthcare",
+        "Real Estate",
+        "Education",
+        "Finance",
+        "B2B Services"
+      ].map((industry, i) => (
+        <div key={i}
+          className="rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
+            alt={industry}
+            className="h-40 w-full object-cover"
+          />
+          <div className="p-6 font-semibold text-gray-900">
+            {industry}
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
+<section className="bg-linear-to-r from-blue-700 to-blue-900 py-24 text-white">
+  <div className="max-w-5xl mx-auto px-6 text-center">
+
+    <h2 className="text-white md:text-4xl font-bold mb-6">
+      Ready to Scale?
+    </h2>
+
+    <p className="text-white mb-10">
+      Turn SEO into your agency’s strongest recurring revenue stream.
+    </p>
+
+    <button className="bg-white text-blue-700 px-8 py-4 rounded-full font-semibold hover:bg-blue-100 transition">
+      Partner With Us →
+    </button>
+
+  </div>
+</section>
+
+    </>
   );
 };
 

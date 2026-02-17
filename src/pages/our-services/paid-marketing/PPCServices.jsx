@@ -140,7 +140,7 @@ const PPCServices = () => {
     return (
         <>
         {/* Hero section */}
-        <section className="bg-linear-to-r from-blue-700 to-blue-900 py-24">
+        <section className="bg-linear-to-r from-blue-700 to-blue-900 py-16 md:py-24">
   <div className="w-full px-6 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-white">
 
       
@@ -182,37 +182,8 @@ const PPCServices = () => {
 
       </div>
     </section>
-    {/*Breadcump*/}
-        <section className="bg-white">
-  <div className="w-full px-6 lg:px-20 xl:px-28 pt-6 pb-2">
-
-        <nav className="text-sm text-gray-500">
-          <span className="hover:text-blue-700 cursor-pointer">
-            Home
-          </span>
-
-          <span className="mx-2">›</span>
-
-          <span className="hover:text-blue-700 cursor-pointer">
-            Our Services
-          </span>
-
-          <span className="mx-2">›</span>
-
-          <span className="hover:text-blue-700 cursor-pointer">
-            PPC
-          </span>
-
-          <span className="mx-2">›</span>
-
-          <span className="text-gray-900 font-medium">
-            PPC Services
-          </span>
-        </nav>
-      </div>
-    </section>
     {/*why ppc*/ }
-    <section className="py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white">
   <div className="w-full px-6 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
     <div>
@@ -263,7 +234,7 @@ const PPCServices = () => {
   </div>
 </section>
 {/*Approach */}
-        <section className="bg-blue-50 py-24">
+        <section className="bg-blue-50 py-16 md:py-24">
   <div className="w-full px-6 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
 
@@ -317,7 +288,7 @@ const PPCServices = () => {
       </div>
     </section>
     {/*Services*/}
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 md:py-24">
   <div className="w-full px-6 lg:px-20 xl:px-28">
         <div className="max-w-3xl mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -369,7 +340,7 @@ const PPCServices = () => {
       </div>
     </section>
     {/* Platform */}
-    <section className="bg-blue-50 py-24">
+    <section className="bg-blue-50 py-16 md:py-24">
   <div className="w-full px-6 lg:px-20 xl:px-28">
         <div className="max-w-3xl mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -406,7 +377,7 @@ const PPCServices = () => {
       </div>
     </section>
     {/* Difference */}
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 md:py-24">
   <div className="w-full px-6 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
 
@@ -440,7 +411,7 @@ const PPCServices = () => {
     </div>
 
     {/* RIGHT SIDE CARDS */}
-    <div className="space-y-4">
+    <div className="space-y-4 py-16 md:py-24">
       {[
         {
           title: "Data-Led Decisions",
@@ -489,7 +460,7 @@ const PPCServices = () => {
   </div>
 </section>
 {/*Process */}
-   <section className="bg-gray-50 py-20">
+   <section className="bg-gray-50 py-16 md:py-24">
   <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
     {/* LEFT IMAGE */}
@@ -561,7 +532,7 @@ const PPCServices = () => {
   </div>
 </section>
     {/*Results */}
-   <section className="bg-gray-150 py-24">
+   <section className="bg-gray-150 py-16 md:py-24">
   <div className="max-w-6xl mx-auto px-6 text-center">
 
     {/* Heading */}
@@ -619,7 +590,7 @@ const PPCServices = () => {
     </div>
 
     {/* Closing Statement */}
-    <div className="mt-16 max-w-3xl mx-auto">
+    <div className="mt-16 max-w-3xl mx-auto py-16 md:py-24">
       <p className="text-gray-800 text-lg">
         Through strategic planning and continuous optimization,{" "}
         <span className="font-semibold text-gray-900">
@@ -636,7 +607,7 @@ const PPCServices = () => {
 </section>
 
     {/*Final */}
-    <section className="bg-linear-to-r from-blue-700 to-blue-900 py-20">
+    <section className="bg-linear-to-r from-blue-700 to-blue-900 py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-6 text-center text-white">
 
         {/* Heading */}
