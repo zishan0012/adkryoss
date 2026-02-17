@@ -30,7 +30,7 @@ B2B Digital Marketing Services
       <p className="text-white md:text-md leading-relaxed">
  In B2B, decisions are not emotional — they are strategic, data-driven, and value-focused. Your buyers are decision-makers, procurement heads, CXOs, and business influencers who demand proof before partnership. 
 <br />
-<span className='font-bold text-black'>Adkryoss managed by Clink Consultancy Services Private Limited</span> builds intelligent B2B marketing ecosystems that generate qualified leads, shorten sales cycles, and drive measurable revenue growth. 
+<span className='font-bold text-white'>Adkryoss managed by Clink Consultancy Services Private Limited</span> builds intelligent B2B marketing ecosystems that generate qualified leads, shorten sales cycles, and drive measurable revenue growth. 
   </p>
 
     </div>

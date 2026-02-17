@@ -28,7 +28,7 @@ BFSI Digital Marketing Services
 
       {/* Paragraph */}
       <p className="text-white md:text-md leading-relaxed">
- The BFSI sector is evolving faster than ever. Customers expect seamless digital journeys, instant responses, data security, and personalized financial experiences. At <span className='text-black font-bold'> Adkryoss managed by Clink Consultancy Services Private Limited, </span> we help banks, NBFCs, fintech brands, insurance providers, and investment firms scale with performance-driven, compliance-ready digital marketing strategies. 
+ The BFSI sector is evolving faster than ever. Customers expect seamless digital journeys, instant responses, data security, and personalized financial experiences. At <span className='text-white font-bold'> Adkryoss managed by Clink Consultancy Services Private Limited, </span> we help banks, NBFCs, fintech brands, insurance providers, and investment firms scale with performance-driven, compliance-ready digital marketing strategies. 
 <br />
 We don’t just generate traffic — we build credibility, qualified leads, and long-term customer value.  </p>
 
