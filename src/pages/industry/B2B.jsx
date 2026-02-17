@@ -36,7 +36,7 @@ B2B Digital Marketing Services
     </div>
 
     {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end">
+    <div className="flex justify-center md:justify-end hide-below-790">
       <img
         src="https://www.techmagnate.com/wp-content/uploads/2025/08/Best-Place-to-Work-in-India.webp"
         alt="About Adkryoss"
@@ -132,20 +132,20 @@ B2B Digital Marketing Services
 
 
 
-<section className="bg-white py-16 sm:py-20 px-4 sm:px-6">
+{/* <section className="bg-white py-16 sm:py-20 px-4 sm:px-6">
   <div className="max-w-6xl mx-auto">
 
-    {/* HEADER */}
+    
     <div className="text-center mb-14">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
         Our B2B Digital Marketing Framework
       </h2>
     </div>
 
-    {/* FRAMEWORK GRID */}
+    
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      {/* 1 */}
+    
       <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
         <svg className="w-10 h-10 text-blue-700 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="9" />
@@ -159,7 +159,6 @@ B2B Digital Marketing Services
         </p>
       </div>
 
-      {/* 2 */}
       <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
         <svg className="w-10 h-10 text-blue-700 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path d="M4 20V10M10 20V4M16 20v-6M22 20V14" />
@@ -172,7 +171,7 @@ B2B Digital Marketing Services
         </p>
       </div>
 
-      {/* 3 */}
+    
       <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
         <svg className="w-10 h-10 text-blue-700 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path d="M12 20h9" />
@@ -188,7 +187,7 @@ B2B Digital Marketing Services
         </p>
       </div>
 
-      {/* 4 */}
+     
       <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 ml-60 w-80">
         <svg className="w-10 h-10 text-blue-700 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path d="M5 12l5 5L20 7" />
@@ -201,7 +200,7 @@ B2B Digital Marketing Services
         </p>
       </div>
 
-      {/* 5 */}
+     
       <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 ml-60 w-80 ">
         <svg className="w-10 h-10 text-blue-700 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path d="M3 3h18v18H3z" />
@@ -218,8 +217,95 @@ B2B Digital Marketing Services
     </div>
 
   </div>
-</section>
+</section> */}
 
+
+<section className="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
+  <div className="max-w-6xl mx-auto">
+
+    {/* HEADER */}
+    <div className="text-center mb-10 sm:mb-14">
+      <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900">
+        Our B2B Digital Marketing Framework
+      </h2>
+    </div>
+
+    {/* FRAMEWORK GRID */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+      {/* CARD */}
+      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 8v4l3 3" />
+        </svg>
+        <h3 className="font-semibold text-gray-900 mb-2 sm:mb-3 text-base sm:text-lg">
+          Deep Market & Buyer Intelligence
+        </h3>
+        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+          We identify high-value accounts, analyze industry gaps, map buyer personas, and understand decision-making journeys across complex sales funnels.
+        </p>
+      </div>
+
+      {/* CARD */}
+      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path d="M4 20V10M10 20V4M16 20v-6M22 20V14" />
+        </svg>
+        <h3 className="font-semibold text-gray-900 mb-2 sm:mb-3 text-base sm:text-lg">
+          Precision Targeting & Channel Strategy
+        </h3>
+        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+          From LinkedIn ads to search intent campaigns, we choose platforms based on where your decision-makers research and engage.
+        </p>
+      </div>
+
+      {/* CARD */}
+      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path d="M12 20h9" />
+          <path d="M12 4h9" />
+          <path d="M4 9h16" />
+          <path d="M4 15h16" />
+        </svg>
+        <h3 className="font-semibold text-gray-900 mb-2 sm:mb-3 text-base sm:text-lg">
+          High-Authority Content & Thought Leadership
+        </h3>
+        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+          Whitepapers, case studies, landing pages, solution pages, blogs, and LinkedIn authority content — designed to build credibility and trust.
+        </p>
+      </div>
+
+      {/* CARD */}
+      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path d="M5 12l5 5L20 7" />
+        </svg>
+        <h3 className="font-semibold text-gray-900 mb-2 sm:mb-3 text-base sm:text-lg">
+          Multi-Touch Lead Nurturing
+        </h3>
+        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+          Email automation, retargeting campaigns, CRM workflows, and performance analytics ensure prospects move from awareness to conversion.
+        </p>
+      </div>
+
+      {/* CARD */}
+      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path d="M3 3h18v18H3z" />
+          <path d="M7 13l3 3 7-7" />
+        </svg>
+        <h3 className="font-semibold text-gray-900 mb-2 sm:mb-3 text-base sm:text-lg">
+          Revenue-Driven Optimization
+        </h3>
+        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+          We continuously optimize based on CPL, CAC, pipeline value, and ROI — not vanity metrics.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <section className="bg-gray-50 py-16 sm:py-20 px-4 sm:px-6">
@@ -502,10 +588,10 @@ B2B Digital Marketing Services
 
 
 
-<section className="bg-white py-16 sm:py-20 px-4 sm:px-6">
+{/* <section className="bg-white py-16 sm:py-20 px-4 sm:px-6">
   <div className="max-w-6xl mx-auto">
 
-    {/* HEADER */}
+    
     <div className="text-center mb-14">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
         Our Technology-Driven Advantage
@@ -515,10 +601,9 @@ B2B Digital Marketing Services
       </p>
     </div>
 
-    {/* TECHNOLOGY GRID */}
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      {/* AI Intelligence */}
+      
       <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
         <svg className="w-10 h-10 text-blue-700 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path d="M12 2v4M12 18v4M4 12H2M22 12h-2M5 5l-1.5-1.5M20.5 20.5L19 19M5 19l-1.5 1.5M20.5 3.5L19 5" />
@@ -529,7 +614,6 @@ B2B Digital Marketing Services
         </h3>
       </div>
 
-      {/* Intent Data */}
       <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
         <svg className="w-10 h-10 text-blue-700 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="9" />
@@ -540,7 +624,7 @@ B2B Digital Marketing Services
         </h3>
       </div>
 
-      {/* CRM Tracking */}
+      
       <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
         <svg className="w-10 h-10 text-blue-700 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <rect x="3" y="4" width="18" height="16" rx="2" />
@@ -551,7 +635,7 @@ B2B Digital Marketing Services
         </h3>
       </div>
 
-      {/* Automation */}
+     
       <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 ml-50 w-80">
         <svg className="w-10 h-10 text-blue-700 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path d="M12 6v6l4 2" />
@@ -562,7 +646,6 @@ B2B Digital Marketing Services
         </h3>
       </div>
 
-      {/* Dashboards */}
       <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 ml-50 w-80">
         <svg className="w-10 h-10 text-blue-700 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path d="M4 20V10M10 20V4M16 20v-6M22 20V14" />
@@ -574,7 +657,7 @@ B2B Digital Marketing Services
 
     </div>
 
-    {/* CLOSING PARAGRAPH */}
+   
     <div className="mt-16 text-center max-w-4xl mx-auto">
       <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
         Modern B2B marketing requires precision, speed, and adaptability. Our approach ensures your brand stays ahead of evolving industry trends and digital transformation shifts.
@@ -582,8 +665,91 @@ B2B Digital Marketing Services
     </div>
 
   </div>
-</section>
+</section> */}
 
+
+
+<section className="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
+  <div className="max-w-6xl mx-auto">
+
+    {/* HEADER */}
+    <div className="text-center mb-10 sm:mb-14">
+      <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900">
+        Our Technology-Driven Advantage
+      </h2>
+      <p className="text-gray-600 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg">
+        We leverage:
+      </p>
+    </div>
+
+    {/* TECHNOLOGY GRID */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+      {/* CARD */}
+      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path d="M12 2v4M12 18v4M4 12H2M22 12h-2M5 5l-1.5-1.5M20.5 20.5L19 19M5 19l-1.5 1.5M20.5 3.5L19 5" />
+          <circle cx="12" cy="12" r="4" />
+        </svg>
+        <h3 className="font-semibold text-gray-900 text-base sm:text-lg">
+          AI-Powered Keyword & Competitor Intelligence
+        </h3>
+      </div>
+
+      {/* CARD */}
+      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 7v5l3 3" />
+        </svg>
+        <h3 className="font-semibold text-gray-900 text-base sm:text-lg">
+          Intent Data Platforms
+        </h3>
+      </div>
+
+      {/* CARD */}
+      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <rect x="3" y="4" width="18" height="16" rx="2" />
+          <path d="M7 8h10M7 12h6" />
+        </svg>
+        <h3 className="font-semibold text-gray-900 text-base sm:text-lg">
+          CRM-Based Performance Tracking
+        </h3>
+      </div>
+
+      {/* CARD */}
+      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path d="M12 6v6l4 2" />
+          <circle cx="12" cy="12" r="10" />
+        </svg>
+        <h3 className="font-semibold text-gray-900 text-base sm:text-lg">
+          Automation-Driven Nurturing Systems
+        </h3>
+      </div>
+
+      {/* CARD */}
+      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path d="M4 20V10M10 20V4M16 20v-6M22 20V14" />
+        </svg>
+        <h3 className="font-semibold text-gray-900 text-base sm:text-lg">
+          Real-Time Campaign Dashboards
+        </h3>
+      </div>
+
+    </div>
+
+    {/* CLOSING PARAGRAPH */}
+    <div className="mt-12 sm:mt-16 text-center max-w-3xl mx-auto">
+      <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
+        Modern B2B marketing requires precision, speed, and adaptability. Our approach ensures your brand stays ahead of evolving industry trends and digital transformation shifts.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 
 <section className="bg-gradient-to-r from-blue-900 to-blue-700 py-20 px-4 sm:px-6 text-white">

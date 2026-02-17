@@ -64,7 +64,7 @@ We build self-learning, goal-oriented marketing ecosystems that plan, execute, o
     </div>
 
     {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end">
+    <div className="flex justify-center md:justify-end hide-below-790">
       <img
         src="https://www.techmagnate.com/wp-content/uploads/2025/11/Agentic-ai-digital-marketing.webp"
         alt="About Adkryoss"

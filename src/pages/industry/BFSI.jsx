@@ -35,7 +35,7 @@ We don’t just generate traffic — we build credibility, qualified leads, and 
     </div>
 
     {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end">
+    <div className="flex justify-center md:justify-end hide-below-790">
       <img
         src="https://www.techmagnate.com/wp-content/uploads/2025/03/digital-marketing-for-bfsi-industry.webp"
         alt="About Adkryoss"

@@ -26,42 +26,44 @@ const MobileAppMarketing = () => {
               Turn Installs Into Active Users. Turn Users Into Revenue.
             </h3>
 
+            <p className='text-white'>Mobile apps don’t fail because of poor ideas. They fail because they are invisible. 
+Adkryoss managed by Clink Consultancy Services Private Limited builds data-driven mobile app marketing strategies that increase installs, improve retention, and maximize lifetime value — not just vanity downloads. </p>
 
-            {/* Paragraph */}
-            <p className="text-white md:text-md leading-relaxed">
-              Mobile apps don’t fail because of poor ideas. They fail because they are invisible. <br />
-              Adkryoss managed by Clink Consultancy Services Private Limited builds data-driven mobile app marketing strategies that increase installs, improve retention, and maximize lifetime value — not just vanity downloads.    </p>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end hide-below-790">
+      <img
+        src="https://www.techmagnate.com/wp-content/uploads/2025/04/mobile-app-marketing-services.webp"
+        alt="About Adkryoss"
+        className="w-56 md:w-80 rounded-xl shadow-lg mr-[-700px] mt-[-300px]"
+      />
+    </div>
 
           </div>
-
-          {/* RIGHT IMAGE */}
-          <div className="flex justify-center md:justify-end">
-            <img
-              src="https://www.techmagnate.com/wp-content/uploads/2025/04/mobile-app-marketing-services.webp"
-              alt="About Adkryoss"
-              className="w-56 md:w-80 rounded-xl shadow-lg mr-10"
-            />
-          </div>
+                                                                                
 
         </div>
       </section>
 
 
 
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
 
-          {/* Left: Text & Points */}
-          <div className="lg:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-left">
-              Why Mobile App Marketing Needs a Strategic Edge
-            </h2>
-            <p className="mb-6 text-lg text-left">
-              Over 90% of apps struggle to cross 1,000 daily active users. The real challenge isn’t launching an app — it’s scaling it profitably.
-            </p>
-            <p className="mb-6 text-lg text-left">
-              Adkryoss managed by Clink Consultancy Services Private Limited combines performance marketing, app store optimization, user behavior analytics, and AI-powered targeting to help apps grow sustainably across Android and iOS ecosystems.
-            </p>
+<section className="py-20 px-6 bg-gray-50">
+  <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+    
+    {/* Left: Text & Points */}
+    <div className="lg:w-1/2">
+      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-left">
+        Why Mobile App Marketing Needs a Strategic Edge
+      </h2>
+      <p className="mb-6 text-lg text-left">
+        Over 90% of apps struggle to cross 1,000 daily active users. The real challenge isn’t launching an app — it’s scaling it profitably.
+      </p>
+      <p className="mb-6 text-lg text-left">
+        Adkryoss managed by Clink Consultancy Services Private Limited combines performance marketing, app store optimization, user behavior analytics, and AI-powered targeting to help apps grow sustainably across Android and iOS ecosystems.
+      </p>
+
+       
 
             <p className="mb-4 text-lg font-semibold text-left">
               We focus on:
@@ -92,7 +94,7 @@ const MobileAppMarketing = () => {
               className="w-full max-w-md"
             />
           </div>
-
+{/* </div> */}
         </div>
       </section>
 
@@ -232,67 +234,16 @@ const MobileAppMarketing = () => {
       </section>
 
 
-      <section className="py-20 px-6 bg-blue-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left text-gray-900">
-            Our Process: From Launch to Scale
-          </h2>
-
-          <div className="flex flex-col lg:flex-row gap-6 justify-center">
-            {/* Step 1 */}
-            <div className="bg-white rounded-lg shadow-lg p-6 flex-1 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7H3v12a2 2 0 002 2z" />
-              </svg>
-              <h3 className="text-xl font-semibold">Research & Market Intelligence</h3>
-              <p className="text-lg">Competitor mapping, audience segmentation, and keyword intelligence.</p>
-            </div>
-
-            {/* Step 2 */}
-            <div className="bg-white rounded-lg shadow-lg p-6 flex-1 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M3 6h18M3 14h18M3 18h18" />
-              </svg>
-              <h3 className="text-xl font-semibold">Acquisition Strategy Blueprint</h3>
-              <p className="text-lg">Channel planning, budget allocation, creative strategy, KPI mapping.</p>
-            </div>
-
-            {/* Step 3 */}
-            <div className="bg-white rounded-lg shadow-lg p-6 flex-1 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M3 14h18M12 3v18" />
-              </svg>
-              <h3 className="text-xl font-semibold">Campaign Execution & Optimization</h3>
-              <p className="text-lg">Real-time monitoring, CPI reduction strategies, event optimization.</p>
-            </div>
-
-            {/* Step 4 */}
-            <div className="bg-white rounded-lg shadow-lg p-6 flex-1 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-3 0-5 2-5 5s2 5 5 5 5-2 5-5-2-5-5-5zM12 3v2M12 19v2M3 12h2M19 12h2" />
-              </svg>
-              <h3 className="text-xl font-semibold">Retention & Monetization Scaling</h3>
-              <p className="text-lg">Engagement loops, remarketing, and conversion maximization.</p>
-            </div>
-
-            {/* Step 5 */}
-            <div className="bg-white rounded-lg shadow-lg p-6 flex-1 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-3 0-5 2-5 5h10c0-3-2-5-5-5zM12 3v5M12 16v5M3 12h5M16 12h5" />
-              </svg>
-              <h3 className="text-xl font-semibold">Continuous Growth Optimization</h3>
-              <p className="text-lg">Data modeling, predictive analysis, and AI-driven automation.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-7xl mx-auto text-gray-900">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            Industries We Empower
-          </h2>
+
+
+
+<section className="py-20 px-6 bg-blue-50">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left text-gray-900">
+      Our Process: From Launch to Scale
+    </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* E-commerce & D2C Apps */}

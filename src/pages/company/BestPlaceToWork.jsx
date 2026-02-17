@@ -37,7 +37,7 @@ We believe a workplace should inspire ambition, reward ownership, and encourage 
     </div>
 
     {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end">
+    <div className="flex justify-center md:justify-end hide-below-790">
       <img
         src="https://www.techmagnate.com/wp-content/uploads/2025/08/Best-Place-to-Work-in-India.webp"
         alt="About Adkryoss"
