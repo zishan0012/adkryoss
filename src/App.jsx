@@ -98,6 +98,16 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import RequestQuote from './pages/RequestQuote';
 
+import Future from "./pages/blog/Future";
+import Perfomance from './pages/blog/Perfomance';
+import AI from './pages/blog/AI';
+import Content from './pages/blog/Content'
+import Social from './pages/blog/Social';
+import Conversion from './pages/blog/Conversion';
+import Marketing from './pages/blog/Marketing';
+import ECOmmerce from './pages/blog/Ecommerce';
+import Local from './pages/blog/Local';
+import Data from './pages/blog/Data';
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -209,6 +219,19 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/request-quote" element={<RequestQuote />} />
+        {/* ==================== BLOG PAGES ==================== */}
+        <Route path="/blog/future" element={<Future />} />
+        <Route path="/blog/performance" element={<Perfomance/>} />
+        <Route path="/blog/ai" element={<AI/>} />
+        <Route path="/blog/content" element={<Content/>} />
+        <Route path="/blog/social" element={<Social/>} />
+        <Route path="/blog/conversion" element={<Conversion/>} />
+        <Route path="/blog/marketing" element={<Marketing/>} />
+        <Route path="/blog/Ecommerce" element={<ECOmmerce/>} />
+        <Route path="/blog/local" element={<Local/>} />
+        <Route path="/blog/data" element={<Data/>} />
+        
+
       </Routes>
     </Layout>
   );
