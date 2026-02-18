@@ -93,7 +93,9 @@ import Education from './pages/industry/Education';
 import Ecommerce from './pages/industry/Ecommerce';
 
 // Standalone Pages
-import Partners from './pages/Partners';
+import Partners from './pages/partners/Partners';
+import IPP from './pages/partners/IPP';
+import IBP from './pages/partners/IBP';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import RequestQuote from './pages/RequestQuote';
@@ -216,21 +218,23 @@ function App() {
 
         {/* ==================== STANDALONE ROUTES ==================== */}
         <Route path="/partners" element={<Partners />} />
+        <Route path="/partners/ipp" element={<IPP />} />
+        <Route path="/partners/ibp" element={<IBP />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/request-quote" element={<RequestQuote />} />
         {/* ==================== BLOG PAGES ==================== */}
         <Route path="/blog/future" element={<Future />} />
-        <Route path="/blog/performance" element={<Perfomance/>} />
-        <Route path="/blog/ai" element={<AI/>} />
-        <Route path="/blog/content" element={<Content/>} />
-        <Route path="/blog/social" element={<Social/>} />
-        <Route path="/blog/conversion" element={<Conversion/>} />
-        <Route path="/blog/marketing" element={<Marketing/>} />
-        <Route path="/blog/Ecommerce" element={<ECOmmerce/>} />
-        <Route path="/blog/local" element={<Local/>} />
-        <Route path="/blog/data" element={<Data/>} />
-        
+        <Route path="/blog/performance" element={<Perfomance />} />
+        <Route path="/blog/ai" element={<AI />} />
+        <Route path="/blog/content" element={<Content />} />
+        <Route path="/blog/social" element={<Social />} />
+        <Route path="/blog/conversion" element={<Conversion />} />
+        <Route path="/blog/marketing" element={<Marketing />} />
+        <Route path="/blog/Ecommerce" element={<ECOmmerce />} />
+        <Route path="/blog/local" element={<Local />} />
+        <Route path="/blog/data" element={<Data />} />
+
 
       </Routes>
     </Layout>

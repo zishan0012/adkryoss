@@ -18,7 +18,7 @@ import {
     TrendingUp,
     LineChart
 } from 'lucide-react';
-
+import aiseo from '../../../assets/SEO/aiseohero.jpeg';
 const AISEO = () => {
     const aiFramework = [
         {
@@ -138,11 +138,13 @@ const AISEO = () => {
                     </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/AI-SEO-Services.webp"
-                            alt="AI SEO"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={aiseo}
+                                alt="AI SEO Services"
+                                className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

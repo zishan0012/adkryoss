@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Phone, Search, Monitor, Smartphone, FileText, MousePointerClick, Database } from 'lucide-react';
+import mainlogo from '../assets/mainlogo.png';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -167,7 +168,13 @@ const Header = () => {
                 { name: 'Ecommerce', path: '/industry/ecommerce' },
             ]
         },
-        { name: 'Partners', path: '/partners' },
+        {
+            name: 'Partners', path: '/partners', 
+            subItems: [
+                { name: 'Become Our IPP', path: '/partners/ipp' },
+                { name: 'Become Our IBP', path: '/partners/ibp' },
+            ]
+         },
         { name: 'Blog', path: '/blog' },
         { name: 'Contact', path: '/contact' },
     ];
@@ -177,9 +184,14 @@ const Header = () => {
             <div className="container flex justify-between items-center w-full h-full">
                 {/* Logo */}
                 <div className="logo">
-                    <Link to="/" className="text-[24px] font-[800] text-[#0066cc] uppercase tracking-wider">
-                        ADKRYOSS
+                    <Link to="/" className="flex items-center h-full">
+                        <img
+                            src={mainlogo}
+                            alt="Adkryoss"
+                            className="h-10 md:h-12 w-auto object-contain"
+                        />
                     </Link>
+
                 </div>
 
                 {/* Desktop Navigation */}

@@ -21,7 +21,7 @@ import {
     Activity,
     Users
 } from 'lucide-react';
-
+import seomigrationservices from '../../../assets/SEO/seomigrationhero.jpeg';
 const SEOMigrationServices = () => {
     const migrationSteps = [
         {
@@ -153,11 +153,13 @@ const SEOMigrationServices = () => {
                     </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/03/SEO-Migration-Services.png"
-                            alt="SEO Migration"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={seomigrationservices}
+                                alt="SEO Migration Services"
+                                className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

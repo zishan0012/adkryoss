@@ -25,7 +25,7 @@ import {
     FileText,
     Rocket
 } from 'lucide-react';
-
+import technicalseo from '../../../assets/SEO/technicalseohero.png';
 const TechnicalSEO = () => {
     const technicalFramework = [
         {
@@ -177,11 +177,13 @@ const TechnicalSEO = () => {
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/Technical-SEO-Services.webp"
-                            alt="Technical SEO"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={technicalseo}
+                                alt="Technical SEO Services"
+                                className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

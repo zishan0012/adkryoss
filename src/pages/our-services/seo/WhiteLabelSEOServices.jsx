@@ -18,7 +18,7 @@ import {
     TrendingUp,
     Briefcase
 } from 'lucide-react';
-
+import whitelevelseoservices from '../../../assets/SEO/whitelevelseohero.jpeg';
 const WhiteLabelSEOServices = () => {
     const framework = [
         {
@@ -99,11 +99,13 @@ const WhiteLabelSEOServices = () => {
                     </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/11/white-Label-seo-services.webp"
-                            alt="White Label SEO"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={whitelevelseoservices}
+                                alt="White Label SEO Services"
+                                className="max-w-[450px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

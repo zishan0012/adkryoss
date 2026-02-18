@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Youtube, MapPin, Phone, Mail } from 'lucide-react';
+import mainlogo from '../assets/mainlogo.png';
 
 const Footer = () => {
     return (
@@ -10,7 +11,13 @@ const Footer = () => {
 
                     {/* Column 1: About */}
                     <div>
-                        <h3 className="text-white text-lg mb-5 font-semibold">About Adkryoss</h3>
+                        <Link to="/" className="mb-2 block -mt-2">
+                            <img
+                                src={mainlogo}
+                                alt="Adkryoss"
+                                className="h-10 md:h-12 w-auto  object-contain object-left"
+                            />
+                        </Link>
                         <p className="text-[#999] text-sm leading-[1.8] mb-5">
                             We are India's top Digital Marketing Company, based in New Delhi, India. We provide full-suite Internet Marketing services.
                         </p>

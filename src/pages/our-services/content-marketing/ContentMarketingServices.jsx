@@ -26,7 +26,7 @@ import {
     Briefcase,
     Rocket
 } from 'lucide-react';
-
+import contentmarketing from "../../../assets/content-marketing/contentmarketinghero.png";
 const ContentMarketingServices = () => {
     const approaches = [
         {
@@ -172,11 +172,13 @@ const ContentMarketingServices = () => {
                     </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/content-marketing-services.webp"
-                            alt="Content Marketing"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] animate-float"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={contentmarketing}
+                                alt="Content Marketing Services"
+                                className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
