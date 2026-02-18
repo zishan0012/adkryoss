@@ -156,7 +156,7 @@ const LocalSEO = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Today’s customers don’t browse directories—they search on Google. 70%+ of local searches result in a visit or inquiry within 24 hours. If you're not in the Top 3 Map Pack, you're invisible. We help you dominate your geography.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-[24px] rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px]">
+                        <div className="p-0 mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we help businesses dominate local search ecosystems and drive consistent foot traffic.
                             </p>
@@ -173,14 +173,14 @@ const LocalSEO = () => {
             </section>
 
             {/* Why Matters */}
-            <section className="py-[80px] bg-white">
-                <div className="container">
-                    <div className="grid grid-cols-[minmax(300px,1fr)_1.2fr] gap-[60px] items-center">
+            <section className="py-16 md:py-[80px] bg-white">
+                <div className="container px-6 mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-[60px] items-center">
                         <div>
-                            <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
+                            <h2 className="text-[28px] md:text-[36px] font-bold mb-[20px] md:mb-[30px] text-[#0f172a]">
                                 Why Local SEO Matters
                             </h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 Customers are searching for your services right now. If your business is not ranking in the Google Local Pack or Maps, you are losing ready-to-buy customers to your competitors.
                             </p>
                             <div className="space-y-6">
@@ -193,19 +193,19 @@ const LocalSEO = () => {
                                         <div className="text-[#0066cc] mt-[4px]"><MapPin size={24} /></div>
                                         <div>
                                             <h4 className="text-[18px] font-bold text-[#0f172a] mb-[4px]">{item.t}</h4>
-                                            <p className="text-[15px] text-[#64748b]">{item.d}</p>
+                                            <p className="text-[15px] text-[#64748b] font-medium">{item.d}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="bg-[#f8fafc] p-[40px] rounded-[30px] border border-[#e2e8f0]">
-                            <h3 className="text-[24px] font-bold mb-[30px] text-[#0f172a]">Industries We Dominate:</h3>
-                            <div className="grid grid-cols-2 gap-4">
+                        <div className="bg-[#f8fafc] p-6 md:p-[40px] rounded-[30px] border border-[#e2e8f0]">
+                            <h3 className="text-[22px] md:text-[24px] font-semibold mb-6 md:mb-[30px] text-[#0f172a]">Industries We Dominate:</h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {industries.map((ind, i) => (
-                                    <div key={i} className="p-[20px] bg-white rounded-[15px] flex gap-[12px] items-center border border-[#e2e8f0]">
-                                        <div className="text-[#0066cc]">{ind.icon}</div>
-                                        <span className="font-semibold text-[15px] text-[#0f172a]">{ind.name}</span>
+                                    <div key={i} className="p-4 md:p-[20px] bg-white rounded-[15px] flex gap-[12px] items-center border border-[#e2e8f0]">
+                                        <div className="text-[#0066cc] shrink-0">{ind.icon}</div>
+                                        <span className="font-semibold text-[14px] md:text-[15px] text-[#0f172a]">{ind.name}</span>
                                     </div>
                                 ))}
                             </div>
@@ -218,20 +218,20 @@ const LocalSEO = () => {
             </section>
 
             {/* Approach Section */}
-            <section className="py-[80px] bg-[#f8fafc]">
-                <div className="container">
-                    <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold mb-[20px] text-[#0f172a]">Our Local SEO Approach</h2>
+            <section className="py-16 md:py-[80px] bg-[#f8fafc]">
+                <div className="container px-6 mx-auto">
+                    <div className="text-center mb-10 md:mb-[60px]">
+                        <h2 className="text-[36px] font-bold mb-[20px] text-[#0f172a]">Our Local SEO Approach</h2>
                         <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             We don't just optimize listings. We build local authority.
                         </p>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-[40px]">
+                    <div className="flex flex-wrap justify-center gap-6 md:gap-[40px]">
                         {approach.map((pillar, i) => (
-                            <div key={i} className="w-[calc(33.333%-27px)] min-w-[350px] bg-white p-[50px_40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 grow max-w-[380px] hover:-translate-y-[10px] hover:border-[#0066cc] hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)]">
+                            <div key={i} className="w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)] bg-white p-8 md:p-[50px_40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 grow max-w-[380px] hover:-translate-y-[10px] hover:border-[#0066cc] hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)]">
                                 <div className="text-[#0066cc] mb-[24px]">{pillar.icon}</div>
-                                <h3 className="text-[24px] font-bold mb-[20px] text-[#0f172a]">{pillar.title}</h3>
-                                <p className="text-[16px] text-[#475569] mb-[30px] leading-[1.6]">{pillar.desc}</p>
+                                <h3 className="text-[24px] font-semibold mb-[20px] text-[#0f172a]">{pillar.title}</h3>
+                                <p className="text-[16px] text-[#475569] mb-[30px] leading-[1.6] font-medium">{pillar.desc}</p>
                                 <ul className="space-y-6">
                                     {pillar.points.map((pt, idx) => (
                                         <li key={idx} className="flex gap-[12px] text-[15px] text-[#334155] leading-[1.5]">
@@ -247,11 +247,11 @@ const LocalSEO = () => {
             </section>
 
             {/* Our Process Section */}
-            <section className="py-[80px] bg-white">
-                <div className="container">
-                    <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold mb-[20px] text-[#0f172a]">Our Local SEO Process</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+            <section className="py-16 md:py-[80px] bg-white">
+                <div className="container px-6 mx-auto">
+                    <div className="text-center mb-10 md:mb-[60px]">
+                        <h2 className="text-[36px] font-bold mb-[20px] text-[#0f172a]">Our Local SEO Process</h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             We don’t just list you. We lead you to the top.
                         </p>
                     </div>
@@ -259,7 +259,7 @@ const LocalSEO = () => {
                         {localSEOProcess.map((step, i) => (
                             <div key={i} className="p-[40px] bg-[#f8fafc] rounded-[30px] border border-[#e2e8f0] transition-all duration-300 hover:border-[#0066cc]">
                                 <h4 className="text-[18px] font-bold text-[#0066cc] mb-[15px]">{step.t}</h4>
-                                <p className="text-[15px] text-[#475569] leading-[1.6]">{step.d}</p>
+                                <p className="text-[15px] text-[#475569] leading-[1.6] font-medium">{step.d}</p>
                             </div>
                         ))}
                     </div>
@@ -267,9 +267,9 @@ const LocalSEO = () => {
             </section>
 
             {/* Differentiators */}
-            <section className="py-[80px] bg-[#0f172a] text-white">
-                <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-white">What Makes Our Local SEO Different?</h2>
+            <section className="py-16 md:py-[80px] bg-[#0f172a] text-white">
+                <div className="container px-6 mx-auto">
+                    <h2 className="text-[36px] font-bold text-center mb-[60px] text-white">What Makes Our Local SEO Different?</h2>
                     <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-[30px]">
                         {[
                             { t: "Data-Driven Geo Targeting", d: "Precision mapping of profitable neighborhoods." },
@@ -279,7 +279,7 @@ const LocalSEO = () => {
                         ].map((item, i) => (
                             <div key={i} className="p-[30px] bg-[rgba(255,255,255,0.05)] rounded-[20px] border border-[rgba(255,255,255,0.1)]">
                                 <h4 className="text-[20px] font-bold text-[#60a5fa] mb-[12px]">{item.t}</h4>
-                                <p className="text-[15px] text-[#cbd5e1]">{item.d}</p>
+                                <p className="text-[15px] text-[#cbd5e1] font-medium">{item.d}</p>
                             </div>
                         ))}
                     </div>
@@ -287,9 +287,9 @@ const LocalSEO = () => {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-[80px] bg-white">
-                <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">Local SEO Intelligence (FAQs)</h2>
+            <section className="py-16 md:py-[80px] bg-white">
+                <div className="container px-6 mx-auto">
+                    <h2 className="text-[28px] md:text-[36px] font-bold text-center mb-10 md:mb-[60px] text-[#0f172a]">Local SEO Intelligence (FAQs)</h2>
                     <div className="max-w-[800px] mx-auto">
                         {faqs.map((faq, i) => (
                             <div key={i} className="mb-[15px] border border-[#e2e8f0] rounded-[15px] overflow-hidden">
@@ -302,7 +302,7 @@ const LocalSEO = () => {
                                 </button>
                                 {openFaq === i && (
                                     <div className="p-[20px_30px] bg-white border-t border-[#e2e8f0]">
-                                        <p className="m-0 text-[#475569] leading-[1.7] text-[16px]">{faq.a}</p>
+                                        <p className="m-0 text-[#475569] leading-[1.7] text-[16px] font-medium">{faq.a}</p>
                                     </div>
                                 )}
                             </div>
@@ -312,13 +312,13 @@ const LocalSEO = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-[100px] text-center bg-gradient-to-br from-[#0066cc] to-[#00458a] text-white">
-                <div className="container">
-                    <h2 className="text-[56px] font-bold mb-[24px]">Ready to Dominate Local Search?</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto text-white">
+            <section className="py-20 md:py-[100px] text-center bg-gradient-to-br from-[#0066cc] to-[#00458a] text-white">
+                <div className="container px-6 mx-auto">
+                    <h2 className="text-[28px] md:text-[36px] font-bold mb-[24px]">Ready to Dominate Local Search?</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto text-white font-medium">
                         Your competitors are investing in local visibility. It's time you outrank them. Partner with Adkryoss and turn local searches into real customers.
                     </p>
-                    <Link to="/contact" className="inline-flex items-center gap-[12px] bg-white text-[#0066cc] p-[20px_60px] rounded-[50px] text-[20px] font-bold transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)]">
+                    <Link to="/contact" className="inline-flex items-center gap-[12px] bg-white text-[#0066cc] py-4 md:py-5 px-8 md:px-12 rounded-[50px] text-[18px] md:text-[20px] font-bold transition-all duration-300 hover:-translate-y-[5px] hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)]">
                         Start Your Local Strategy Today <ArrowRight size={24} />
                     </Link>
                 </div>

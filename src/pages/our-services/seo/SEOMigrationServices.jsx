@@ -145,7 +145,7 @@ const SEOMigrationServices = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             When websites evolve, rankings shouldn't collapse. Redesigns, domain changes, platform shifts, or international expansion — every structural change impacts visibility.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-8">
+                        <div className="p-0 mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we deliver a zero-drop migration framework to protect your organic authority during transition.
                             </p>
@@ -183,7 +183,7 @@ const SEOMigrationServices = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-[16px] md:text-[18px] mb-6 font-bold">
+                    <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                         We don't just "move" your website. We engineer a seamless search transition.
                     </p>
                 </div>
@@ -192,14 +192,14 @@ const SEOMigrationServices = () => {
             {/* Framework Section */}
             <section className="py-20 bg-[#f8fafc]">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-slate-900">
+                    <h2 className="text-[36px] font-bold text-center mb-[60px] text-slate-900">
                         Our SEO Migration Framework
                     </h2>
                     <div className="flex flex-wrap justify-center gap-[30px]">
                         {migrationSteps.map((step, index) => (
                             <div key={index} className="bg-white p-10 rounded-[20px] shadow-sm border border-slate-100 w-[calc(33.333%-20px)] min-w-[320px] grow max-w-[400px] transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-5">{step.icon}</div>
-                                <h3 className="text-[22px] font-bold mb-5 text-slate-900">
+                                <h3 className="text-[22px] font-semibold mb-5 text-slate-900">
                                     {index + 1}. {step.title}
                                 </h3>
                                 <ul className="list-none p-0 space-y-4">
@@ -236,16 +236,16 @@ const SEOMigrationServices = () => {
             {/* Different Section */}
             <section className="py-20 bg-[#0066cc] text-white">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-white">
+                    <h2 className="text-[36px] font-bold text-center mb-[60px] text-white">
                         What Makes Us Different?
                     </h2>
                     <div className="flex flex-wrap justify-center gap-8">
                         {differentiators.map((diff, i) => (
                             <div key={i} className="p-8 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-lg w-[calc(25%-23px)] min-w-[260px] grow max-w-[350px] transition-all duration-300 hover:-translate-y-2 hover:bg-white/15">
-                                <h3 className="text-[20px] md:text-[24px] mb-4 font-bold text-white">
+                                <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white">
                                     {diff.title}
                                 </h3>
-                                <p className="text-[16px] md:text-[18px] mb-6 text-white/90 leading-relaxed">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-white/90 leading-relaxed font-medium">
                                     {diff.description}
                                 </p>
                             </div>
@@ -257,10 +257,10 @@ const SEOMigrationServices = () => {
             {/* CTA */}
             <section className="py-24 text-center bg-[#f8fafc]">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold mb-6 text-slate-900 leading-tight">
+                    <h2 className="text-[36px] font-bold mb-6 text-slate-900 leading-tight">
                         Let's Migrate Without Losing Momentum
                     </h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 max-w-[800px] mx-auto leading-relaxed">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 max-w-[800px] mx-auto leading-relaxed font-medium">
                         Your website growth shouldn't reset to zero. Partner with Adkryoss and transform your migration into a scalable search growth opportunity.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-3 bg-[#0066cc] text-white py-5 px-12 rounded-full text-[18px] font-bold no-underline transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(0,102,204,0.3)] hover:scale-[1.02]">

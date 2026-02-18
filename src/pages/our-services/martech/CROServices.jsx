@@ -184,7 +184,7 @@ const CROServices = () => {
             {/* Quick Intro Section */}
             {/* <section className="py-20 bg-white border-b border-slate-100">
                 <div className="container px-6 mx-auto text-center">
-                    <h2 className="text-[32px] font-black text-slate-900 mb-6">
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-6">
                         We transform traffic into revenue without increasing ad spend.
                     </h2>
                 </div>
@@ -194,7 +194,7 @@ const CROServices = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-extrabold text-slate-900 mb-6 leading-tight">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-6 leading-tight">
                             Why Your Business Needs CRO Now
                         </h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto font-medium">
@@ -218,8 +218,8 @@ const CROServices = () => {
 
                     <div className="max-w-4xl mx-auto p-12 bg-white rounded-[40px] shadow-2xl border border-blue-50 relative overflow-hidden text-center">
                         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-blue-600"></div>
-                        <h3 className="text-2xl font-extrabold text-slate-900 mb-6">Turn Clicks Into Customers. Predictably.</h3>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 leading-relaxed">
+                        <h3 className="text-2xl font-semibold text-slate-900 mb-6">Turn Clicks Into Customers. Predictably.</h3>
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 leading-relaxed font-medium">
                             Your traffic is growing. But are your conversions? <br />
                             We don’t just optimize pages — we engineer profitable user journeys.
                         </p>
@@ -235,7 +235,7 @@ const CROServices = () => {
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-20 items-center">
                         <div>
-                            <h2 className="text-[42px] font-extrabold text-slate-900 mb-8 leading-tight">
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight">
                                 What Is Conversion Rate Optimization
                             </h2>
                             <p className="text-xl text-slate-600 leading-relaxed font-medium italic mb-8 border-l-8 border-blue-500 pl-8">
@@ -247,14 +247,14 @@ const CROServices = () => {
                         </div>
                         <div className="bg-slate-900 p-12 rounded-[50px] text-white relative shadow-2xl">
                             <div className="absolute -top-10 -right-10 w-32 h-32 bg-blue-600/20 rounded-full blur-[50px]"></div>
-                            <h3 className="text-[20px] md:text-[24px] mb-4 text-2xl font-bold text-white tracking-tighter">
+                            <h3 className="text-[20px] md:text-[24px] mb-4 text-2xl font-semibold text-white tracking-tighter">
                                 Our CRO Philosophy:
                             </h3>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white font-extrabold italic leading-tight">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white font-medium italic leading-tight">
                                 Data First. Decisions Later.
                             </p>
                             <div className="mt-8 pt-8 border-t border-white/10">
-                                <p className="text-[16px] md:text-[18px] mb-6 text-white text-lg leading-relaxed opacity-90 italic">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-white text-lg leading-relaxed opacity-90 italic font-medium">
                                     At Adkryoss managed by <span className="text-blue-400 font-semibold">Clink Consultancy Services Private Limited</span>, we follow a structured, performance-led approach inspired by global growth frameworks and enhanced with AI-driven insights.
                                 </p>
                             </div>
@@ -272,10 +272,10 @@ const CROServices = () => {
                                 <div className="text-blue-500 font-extrabold text-5xl mb-8 group-hover:scale-110 transition-transform opacity-30 tracking-tighter leading-none">
                                     Step 0{index + 1}
                                 </div>
-                                <h3 className="text-[24px] font-extrabold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors leading-tight">
+                                <h3 className="text-[24px] font-semibold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors leading-tight">
                                     {item.title}
                                 </h3>
-                                <p className="text-slate-500 mb-8 font-bold italic leading-relaxed text-xs tracking-widest">
+                                <p className="text-slate-500 mb-8 font-medium italic leading-relaxed text-xs tracking-widest">
                                     "{item.desc}"
                                 </p>
                                 <div className="space-y-4">
@@ -296,7 +296,7 @@ const CROServices = () => {
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-20">
-                        <h2 className="text-[42px] font-extrabold mb-6 leading-tight text-white tracking-tight">
+                        <h2 className="text-[36px] font-bold mb-6 leading-tight text-white tracking-tight">
                             Our CRO Services
                         </h2>
                         <div className="w-24 h-2 bg-blue-600 mx-auto rounded-full"></div>
@@ -308,7 +308,7 @@ const CROServices = () => {
                                 <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                     {service.icon}
                                 </div>
-                                <h3 className="text-[20px] md:text-[24px] mb-4 font-bold text-white tracking-tight group-hover:text-blue-300 transition-colors leading-tight">
+                                <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight group-hover:text-blue-300 transition-colors leading-tight">
                                     {service.title}
                                 </h3>
                                 <p className="text-white opacity-80 leading-relaxed font-medium m-0">
@@ -325,14 +325,14 @@ const CROServices = () => {
                 <div className="container px-6 mx-auto">
                     <div className="max-w-5xl mx-auto rounded-[50px] bg-gradient-to-br from-[#0066CC] to-[#004999] p-16 text-white relative shadow-[0_30px_60px_-12px_rgba(0,102,204,0.4)] overflow-hidden">
                         <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -mr-40 -mt-40 blur-3xl"></div>
-                        <h2 className="text-[36px] font-black mb-10 leading-tight text-white tracking-tight">CRO + Performance Marketing = Maximum ROI</h2>
+                        <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">CRO + Performance Marketing = Maximum ROI</h2>
                         <div className="grid md:grid-cols-2 gap-16 items-center">
                             <div>
-                                <p className="text-[16px] md:text-[18px] mb-6 text-xl font-bold italic text-white leading-relaxed">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-xl font-medium italic text-white leading-relaxed">
                                     Traffic without optimization burns budget. <br />
                                     Optimization without traffic limits growth.
                                 </p>
-                                <p className="text-[16px] md:text-[18px] mb-6 text-lg opacity-90 leading-relaxed text-white">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-lg opacity-90 leading-relaxed text-white font-medium">
                                     At Adkryoss managed by <span className="font-bold">Clink Consultancy Services Private Limited</span>, we align CRO with your entire marketing ecosystem to ensure that your acquisition strategy and conversion strategy work together — not in isolation.
                                 </p>
                             </div>
@@ -357,8 +357,8 @@ const CROServices = () => {
                     <div className="grid md:grid-cols-2 gap-20">
                         {/* Industries */}
                         <div>
-                            <h2 className="text-[42px] font-black text-slate-900 mb-10 leading-tight tracking-tight">Industries We Optimize For</h2>
-                            <p className="text-lg text-slate-600 font-bold mb-10 italic">
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-10 leading-tight tracking-tight">Industries We Optimize For</h2>
+                            <p className="text-lg text-slate-600 font-medium mb-10 italic">
                                 "Every industry has different user psychology. We adapt strategies accordingly."
                             </p>
                             <div className="flex flex-wrap gap-4">
@@ -371,7 +371,7 @@ const CROServices = () => {
                         </div>
                         {/* Metrics */}
                         <div className="bg-slate-900 p-12 rounded-[50px] text-white shadow-2xl">
-                            <h2 className="text-[32px] font-black mb-8 text-white tracking-tight">Key Metrics We Improve</h2>
+                            <h2 className="text-[36px] font-bold mb-8 text-white tracking-tight">Key Metrics We Improve</h2>
                             <div className="space-y-4">
                                 {metrics.map((point, index) => (
                                     <div key={index} className="flex items-center gap-4 group">
@@ -380,7 +380,7 @@ const CROServices = () => {
                                     </div>
                                 ))}
                             </div>
-                            <p className="mt-12 text-blue-400 font-black italic text-xl">
+                            <p className="mt-12 text-blue-400 font-medium italic text-xl">
                                 We focus on metrics that directly impact profitability.
                             </p>
                         </div>
@@ -392,8 +392,8 @@ const CROServices = () => {
             <section className="py-24 bg-white">
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-black text-slate-900 mb-6">Why Choose Us for CRO?</h2>
-                        <p className="text-xl text-slate-600 font-bold italic inline-block pb-2">"Because we don’t treat CRO as a design upgrade — we treat it as a revenue multiplier."</p>
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-6">Why Choose Us for CRO?</h2>
+                        <p className="text-xl text-slate-600 font-medium italic inline-block pb-2">"Because we don’t treat CRO as a design upgrade — we treat it as a revenue multiplier."</p>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {chooseUs.map((item, index) => (
@@ -412,7 +412,7 @@ const CROServices = () => {
             <section className="py-24 bg-slate-50 overflow-hidden">
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-20 text-slate-900">
-                        <h2 className="text-[42px] font-black mb-6 tracking-tight">Our CRO Workflow</h2>
+                        <h2 className="text-[36px] font-bold mb-6 tracking-tight">Our CRO Workflow</h2>
                         <div className="inline-flex items-center gap-4 bg-slate-900 text-white px-10 py-5 rounded-full font-black text-xl tracking-tighter shadow-2xl">
                             Discovery <ArrowRight size={24} className="text-blue-500" /> Audit <ArrowRight size={24} className="text-blue-500" /> Strategy <ArrowRight size={24} className="text-blue-500" /> Experimentation <ArrowRight size={24} className="text-blue-500" /> Validation <ArrowRight size={24} className="text-blue-500" /> Scale
                         </div>
@@ -428,8 +428,8 @@ const CROServices = () => {
             {/* Final CTA Section */}
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
                 <div className="container max-w-4xl mx-auto animate-fade-in">
-                    <h2 className="text-[42px] font-black mb-10 leading-tight text-white tracking-tight">Ready to Unlock Hidden Revenue?</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 text-2xl text-white font-bold opacity-90 max-w-3xl mx-auto leading-relaxed">
+                    <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">Ready to Unlock Hidden Revenue?</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 text-2xl text-white font-medium opacity-90 max-w-3xl mx-auto leading-relaxed">
                         You don’t need more traffic. <br />
                         <span className="text-white">You need better conversions.</span>
                     </p>

@@ -150,7 +150,7 @@ const SEOAudit = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Your traffic drop isn’t random. Your competitors aren’t lucky. Growth starts with clarity — and clarity starts with a powerful SEO Audit.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-[24px] rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px]">
+                        <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we go beyond surface-level checks. We uncover hidden technical issues, content gaps, structural weaknesses, and authority leaks that silently block your rankings.
                             </p>
@@ -171,16 +171,16 @@ const SEOAudit = () => {
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
+                            <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
                                 Why Your Website Needs an Advanced SEO Audit
                             </h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 Search engines evolve constantly. Algorithms shift. User behavior changes. Competitors optimize daily.
                             </p>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 If your website isn’t technically sound, strategically structured, and content-optimized, you are leaving revenue on the table.
                             </p>
-                            <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                            <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                                 An in-depth SEO audit helps you:
                             </p>
                             <div className="space-y-4">
@@ -223,8 +223,8 @@ const SEOAudit = () => {
             <section className="py-[80px] bg-[#f8fafc]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold mb-[20px] text-[#0f172a]">Our Strategic SEO Audit Framework</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto">
+                        <h2 className="text-[36px] font-bold mb-[20px] text-[#0f172a]">Our Strategic SEO Audit Framework</h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto font-medium">
                             We follow a data-first, performance-driven methodology inspired by enterprise-grade digital agencies — but tailored for scalable growth.
                         </p>
                     </div>
@@ -256,8 +256,8 @@ const SEOAudit = () => {
             <section className="py-[80px] bg-[#0f172a] text-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold mb-[20px] text-white">What Makes Our SEO Audit Different</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+                        <h2 className="text-[36px] font-bold mb-[20px] text-white">What Makes Our SEO Audit Different</h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium">
                             Most agencies generate automated reports. We deliver strategic intelligence.
                         </p>
                     </div>
@@ -265,14 +265,14 @@ const SEOAudit = () => {
                         {differentiators.map((diff, i) => (
                             <div
                                 key={i}
-                                className="px-[32px] py-[24px] bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-[15px] text-[18px] font-medium text-[#60a5fa]"
+                                className="px-[32px] py-[24px] bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-[15px] text-[18px] font-medium text-[#60a5fa] transition-all duration-300 hover:border-[#fff] hover:-translate-y-[5px]"
                             >
                                 {diff}
                             </div>
                         ))}
                     </div>
                     <div className="text-center">
-                        <p className="text-[16px] md:text-[18px] mb-6 text-white italic">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-white italic font-medium">
                             Adkryoss managed by Clink Consultancy Services Private Limited approaches SEO as a growth system — not a one-time activity.
                         </p>
                     </div>
@@ -282,7 +282,7 @@ const SEOAudit = () => {
             {/* Industries We Audit */}
             <section className="py-[80px] bg-white">
                 <div className="container text-center">
-                    <h2 className="text-[42px] font-bold mb-[20px] text-[#0f172a]">Industries We Audit</h2>
+                    <h2 className="text-[36px] font-bold mb-[20px] text-[#0f172a]">Industries We Audit</h2>
                     <div className="flex flex-wrap justify-center gap-[30px] mb-[40px]">
                         {industries.map((ind, i) => (
                             <div
@@ -304,13 +304,13 @@ const SEOAudit = () => {
             <section className="py-[80px] bg-[#f1f5f9]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold mb-[20px] text-[#0f172a]">When Should You Get an SEO Audit?</h2>
+                        <h2 className="text-[36px] font-bold mb-[20px] text-[#0f172a]">When Should You Get an SEO Audit?</h2>
                     </div>
                     <div className="flex flex-wrap justify-center gap-[30px] mb-[40px]">
                         {whenToAudit.map((item, i) => (
                             <div
                                 key={i}
-                                className="px-[30px] py-[20px] bg-white rounded-[12px] border border-[#cbd5e1] text-[16px] font-medium text-[#334155] flex items-center gap-[10px]"
+                                className="px-[30px] py-[20px] bg-white rounded-[12px] border border-[#cbd5e1] text-[16px] font-medium text-[#334155] flex items-center gap-[10px] transition-all duration-300 hover:border-[#0066cc] hover:-translate-y-[5px]"
                             >
                                 <Zap size={20} className="text-[#ef4444]" />
                                 {item}
@@ -318,7 +318,7 @@ const SEOAudit = () => {
                         ))}
                     </div>
                     <div className="text-center">
-                        <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             If any of these sound familiar, your website needs immediate evaluation.
                         </p>
                     </div>
@@ -329,20 +329,20 @@ const SEOAudit = () => {
             <section className="py-[80px] bg-white">
                 <div className="container text-center">
                     <h2 className="text-[36px] font-bold mb-[40px] text-[#0f172a]">Tools We Use</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6">
+                    <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                         We combine industry-leading platforms with manual expertise:
                     </p>
                     <div className="flex flex-wrap justify-center gap-[30px] mb-[40px]">
                         {tools.map((tool, i) => (
                             <span
                                 key={i}
-                                className="text-[18px] font-medium text-[#0f172a] px-[30px] py-[15px] bg-[#f8fafc] rounded-[50px] border border-[#e2e8f0]"
+                                className="text-[18px] font-medium text-[#0f172a] px-[30px] py-[15px] bg-[#f8fafc] rounded-[50px] border border-[#e2e8f0] transition-all duration-300 hover:border-[#0066cc] hover:-translate-y-[5px]"
                             >
                                 {tool}
                             </span>
                         ))}
                     </div>
-                    <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                    <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                         Data is powerful — but interpretation drives results.
                     </p>
                 </div>
@@ -352,7 +352,7 @@ const SEOAudit = () => {
             <section className="py-[80px] bg-[#f8fafc]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold mb-[20px] text-[#0f172a]">Our Process</h2>
+                        <h2 className="text-[36px] font-bold mb-[20px] text-[#0f172a]">Our Process</h2>
                     </div>
                     <div className="flex flex-wrap justify-center gap-[30px] mb-[40px]">
                         {auditProcess.map((step, i) => (
@@ -368,7 +368,7 @@ const SEOAudit = () => {
                         ))}
                     </div>
                     <div className="text-center">
-                        <p className="text-[16px] md:text-[18px] mb-6 italic">
+                        <p className="text-[16px] md:text-[18px] mb-6 italic text-black font-medium">
                             At Adkryoss managed by Clink Consultancy Services Private Limited, we collaborate, explain, and guide — not just report.
                         </p>
                     </div>
@@ -378,14 +378,14 @@ const SEOAudit = () => {
             {/* CTA */}
             <section className="py-[100px] text-center bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white">
                 <div className="container">
-                    <h2 className="text-[56px] font-bold mb-[24px] text-white">Let’s Diagnose Before You Invest More</h2>
-                    <p className="text-[22px] mb-[20px] text-[#cbd5e1] max-w-[800px] mx-auto">
+                    <h2 className="text-[36px] font-bold mb-[24px] text-white">Let’s Diagnose Before You Invest More</h2>
+                    <p className="text-[22px] mb-[20px] text-[#cbd5e1] max-w-[800px] mx-auto font-medium">
                         Stop spending on ads while your foundation leaks traffic.
                     </p>
-                    <p className="text-[22px] mb-[20px] text-[#cbd5e1] max-w-[800px] mx-auto">
+                    <p className="text-[22px] mb-[20px] text-[#cbd5e1] max-w-[800px] mx-auto font-medium">
                         Stop publishing content without structural clarity.
                     </p>
-                    <p className="text-[16px] md:text-[18px] mb-6 text-white font-semibold max-w-[800px] mx-auto">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium max-w-[800px] mx-auto">
                         Stop guessing. Get a data-backed SEO audit that reveals what's holding your growth back.
                     </p>
                     <Link
@@ -394,7 +394,7 @@ const SEOAudit = () => {
                     >
                         Book Your SEO Audit Consultation Today <ArrowRight size={24} />
                     </Link>
-                    <p className="text-[16px] md:text-[18px] mb-6 mt-[40px]">
+                    <p className="text-[16px] md:text-[18px] mb-6 mt-[40px] text-white font-medium">
                         Your competitors are optimizing daily. The question is — are you?
                     </p>
                 </div>

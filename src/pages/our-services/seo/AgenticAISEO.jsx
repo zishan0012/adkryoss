@@ -119,7 +119,7 @@ const AgenticAISEO = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Search is evolving from keywords to intelligence. We build AI-driven SEO systems that don’t just optimize pages — they think, learn, and adapt in real time to dominate modern search ecosystems.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-8">
+                        <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we deploy autonomous search agents that continuously monitor, analyze, and optimize your website for maximum organic output.
                             </p>
@@ -139,17 +139,17 @@ const AgenticAISEO = () => {
             <section className="py-[100px] bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
                             What is Agentic AI SEO?
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[850px] mx-auto">
+                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[850px] mx-auto font-medium">
                             Agentic AI SEO is the next evolution of search optimization — powered by autonomous AI agents that continuously analyze data and execute improvements without constant manual intervention.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="bg-[#f8f9fa] p-[50px] rounded-[40px] border border-[#eee]">
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 Unlike traditional SEO that reacts to algorithm updates, Agentic AI anticipates shifts and adapts strategies instantly to scale performance intelligently.
                             </p>
                             <p className="text-[16px] md:text-[18px] mb-6 font-medium leading-[1.8]">
@@ -185,20 +185,20 @@ const AgenticAISEO = () => {
             <section className="py-[100px] bg-[#f1f5f9]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[36px] font-semibold text-[#1a1a1a] mb-[20px]">
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
                             Our Agentic AI SEO Framework
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             A structured yet adaptive methodology designed for performance and long-term authority.
                         </p>
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-8">
                         {agenticFramework.map((item, i) => (
-                            <div key={i} className="flex-1 min-w-[350px] max-w-[380px] bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]">
+                            <div key={i} className="flex-1 min-w-[350px] max-w-[380px] bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] relative overflow-hidden border border-[#e2e8f0] flex-grow max-w-[450px] hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
                                 <h3 className="text-[22px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
-                                <p className="text-[#666] mb-[20px] leading-[1.6] text-[15px]">{item.desc}</p>
+                                <p className="text-[#666] mb-[20px] leading-[1.6] text-[15px] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0">
                                     {item.points.map((p, j) => (
                                         <li key={j} className="flex gap-[8px] mb-[10px] text-[#444] text-[14px]">
@@ -218,8 +218,8 @@ const AgenticAISEO = () => {
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-[36px] font-semibold text-[#1a1a1a] mb-[30px]">Our Agentic AI SEO Services</h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[30px]">Our Agentic AI SEO Services</h2>
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 We don't just use AI tools; we build intelligent SEO ecosystems that evolve with search engine expectations.
                             </p>
                             <div className="grid grid-cols-2 gap-y-4">
@@ -242,7 +242,7 @@ const AgenticAISEO = () => {
                                 ].map((item, i) => (
                                     <div key={i}>
                                         <h4 className="font-semibold text-[#3b82f6] mb-[4px]">{item.t}</h4>
-                                        <p className="text-[#e2e8f0] text-[15px]">{item.d}</p>
+                                        <p className="text-[#e2e8f0] text-[15px] font-medium">{item.d}</p>
                                     </div>
                                 ))}
                             </div>
@@ -255,14 +255,14 @@ const AgenticAISEO = () => {
             <section className="py-[100px] bg-[#f1f5f9]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[36px] font-semibold text-[#1a1a1a] mb-[20px]">Industries We Empower</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">Industries We Empower</h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Every industry requires intelligent visibility — and we build it strategically.
                         </p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-[16px]">
                         {industriesEmpowered.map((item, i) => (
-                            <div key={i} className="flex items-center gap-[10px] bg-white px-[25px] py-[15px] rounded-[12px] border border-[#e2e8f0] font-medium text-[#1e293b]">
+                            <div key={i} className="flex items-center gap-[10px] bg-white px-[25px] py-[15px] rounded-[12px] border border-[#e2e8f0] font-medium text-[#1e293b] transition-all duration-300 hover:border-[#0066cc] hover:-translate-y-[5px]">
                                 <span className="text-blue-500">{item.icon}</span>
                                 {item.name}
                             </div>
@@ -280,13 +280,13 @@ const AgenticAISEO = () => {
                             <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white">
                                 The Future is Autonomous
                             </h3>
-                            <p className="text-[16px] md:text-[18px] text-white mb-6 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] text-white mb-6 leading-[1.8] font-medium">
                                 Search engines are integrating AI at their core. Brands that rely on manual SEO will struggle to scale. Adkryoss managed by Clink Consultancy Services Private Limited helps you transition to a system that learns faster, executes smarter, and delivers ROI predictably.
                             </p>
                         </div>
                         <div>
-                            <h2 className="text-[36px] font-semibold text-[#1a1a1a] mb-[30px]">Lead the AI Search Revolution</h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[30px]">Lead the AI Search Revolution</h2>
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 The next era of SEO isn’t about ranking pages. It’s about building intelligent digital authority.
                             </p>
                             <div className="p-[30px] bg-[rgba(59,130,246,0.1)] rounded-[20px] border-l-4 border-[#3b82f6]">
@@ -300,7 +300,7 @@ const AgenticAISEO = () => {
             {/* CTA */}
             <section className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
                 <div className="container">
-                    <h2 className="text-[42px] font-semibold mb-[20px] text-white">Ready to Build Your AI-Driven Advantage?</h2>
+                    <h2 className="text-[36px] font-bold mb-[20px] text-white">Ready to Build Your AI-Driven Advantage?</h2>
                     <p className="text-[16px] md:text-[18px] mb-6 opacity-100 text-white font-medium">
                         The future of search is now. Let's build your intelligent growth engine.
                     </p>

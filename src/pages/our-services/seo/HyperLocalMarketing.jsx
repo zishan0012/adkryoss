@@ -134,7 +134,7 @@ const HyperLocalMarketing = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Turn proximity into profit with data-driven hyperlocal marketing strategies that put your business exactly where buying decisions happen — on local searches, maps, feeds, and mobile screens.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-8">
+                        <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we help businesses capture local intent and drive footfall, calls, and real-time conversions.
                             </p>
@@ -154,17 +154,17 @@ const HyperLocalMarketing = () => {
             <section className="py-[100px] bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold text-[#1a1a1a] mb-5">
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-5">
                             What is Hyperlocal Marketing?
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[850px] mx-auto">
+                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[850px] mx-auto font-medium">
                             Hyperlocal marketing focuses on targeting customers within a highly specific geographic area — a locality, pin code, or neighborhood.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="bg-[#f8f9fa] p-[50px] rounded-[40px] border border-[#eee]">
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 In today’s mobile-first world, search queries like “best café near me” or “plumber nearby” are high-intent and conversion-ready.
                             </p>
                             <p className="text-[16px] md:text-[18px] mb-6 font-medium leading-[1.8]">
@@ -172,7 +172,7 @@ const HyperLocalMarketing = () => {
                             </p>
                         </div>
                         <div className="bg-[#0f172a] p-[50px] rounded-[40px] text-white">
-                            <h3 className="text-[20px] md:text-[24px] mb-4 font-bold text-white">
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white">
                                 Why It Matters Now
                             </h3>
                             <div className="space-y-6">
@@ -200,17 +200,17 @@ const HyperLocalMarketing = () => {
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-5">
                             Our Hyperlocal Marketing Solutions
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Precision strategies designed to put your business exactly where buying decisions happen.
                         </p>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {hyperlocalSolutions.map((item, i) => (
                             <div key={i} className="flex-auto max-w-[400px] bg-white p-10 rounded-[24px] transition-all duration-300 border border-[#e2e8f0] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-5">{item.icon}</div>
-                                <h3 className="text-[22px] font-bold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
-                                <p className="text-[#666] mb-5 leading-[1.6] text-[15px]">{item.desc}</p>
+                                <h3 className="text-[22px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
+                                <p className="text-[#666] mb-5 leading-[1.6] text-[15px] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0">
                                     {item.points.map((p, j) => (
                                         <li key={j} className="flex gap-2 mb-2.5 text-[#444] text-[14px]">
@@ -231,7 +231,7 @@ const HyperLocalMarketing = () => {
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
                             <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-8">What Makes Our Strategy Different?</h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 We focus on driving actions — calls, direction requests, walk-ins, and bookings — not just simple impressions.
                             </p>
                             <div className="grid grid-cols-2 gap-6">
@@ -243,13 +243,13 @@ const HyperLocalMarketing = () => {
                                 ].map((item, i) => (
                                     <div key={i}>
                                         <h4 className="font-bold text-[#0066cc] mb-1">{item.t}</h4>
-                                        <p className="text-[14px] text-[#666]">{item.d}</p>
+                                        <p className="text-[14px] text-[#666] font-medium">{item.d}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div className="bg-[#0f172a] p-10 md:p-[60px] rounded-[40px] text-white">
-                            <h3 className="text-[20px] md:text-[24px] mb-4 font-bold text-white">
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white">
                                 Benefits You'll See
                             </h3>
                             <div className="space-y-6">
@@ -277,7 +277,7 @@ const HyperLocalMarketing = () => {
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-5">Industries We Serve</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Hyperlocal marketing bridges the gap between online discovery and offline conversion.
                         </p>
                     </div>
@@ -297,7 +297,7 @@ const HyperLocalMarketing = () => {
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-5">Our Working Approach</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Adkryoss managed by Clink Consultancy Services Private Limited ensures you lead locally.
                         </p>
                     </div>
@@ -306,7 +306,7 @@ const HyperLocalMarketing = () => {
                             <div key={i} className="flex-auto max-w-[280px] bg-[#f8f9fa] p-[30px] rounded-[24px] text-center border border-[#eee]">
                                 <div className="text-sm font-bold text-[#0066cc] mb-2.5">{item.step}</div>
                                 <h4 className="text-[20px] font-bold text-[#1a1a1a] mb-2.5">{item.title}</h4>
-                                <p className="text-[13px] text-[#666] leading-[1.6]">{item.desc}</p>
+                                <p className="text-[13px] text-[#666] leading-[1.6] font-medium">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -319,8 +319,8 @@ const HyperLocalMarketing = () => {
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div className="bg-[rgba(255,255,255,0.05)] p-10 md:p-[60px] rounded-[40px] border border-[rgba(255,255,255,0.1)]">
                             <TrendingUp size={48} className="text-blue-400 mb-6" />
-                            <h3 className="text-[32px] font-bold mb-5">Dominating Near-Me Search</h3>
-                            <p className="text-[16px] md:text-[18px] mb-6">
+                            <h3 className="text-[32px] font-semibold mb-5">Dominating Near-Me Search</h3>
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium">
                                 If your customers are searching nearby, your business should be visible instantly. Early adoption means:
                             </p>
                             <div className="grid grid-cols-2 gap-4">
@@ -334,7 +334,7 @@ const HyperLocalMarketing = () => {
                         </div>
                         <div>
                             <h2 className="text-[36px] font-bold text-white mb-8">Ready to Own Your Local Market?</h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white font-medium">
                                 Adkryoss managed by Clink Consultancy Services Private Limited helps you build a hyperlocal growth engine that drives results in your immediate market.
                             </p>
                             <div className="p-[30px] bg-[rgba(59,130,246,0.1)] rounded-[20px] border-l-[4px] border-[#3b82f6]">
@@ -348,7 +348,7 @@ const HyperLocalMarketing = () => {
             {/* CTA */}
             <section className="py-20 bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold mb-5 text-white">Dominance Within Miles. Start Now.</h2>
+                    <h2 className="text-[36px] font-bold mb-5 text-white">Dominance Within Miles. Start Now.</h2>
                     <p className="text-[16px] md:text-[18px] mb-6 opacity-100 text-white font-medium">
                         Turn proximity into profit. Partner with us and lead your local market.
                     </p>

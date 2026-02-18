@@ -134,7 +134,7 @@ const VernacularSEOServices = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             India’s digital growth is happening beyond English. From Hindi and Tamil to Bengali, Marathi, Telugu and more — regional language searches are exploding across Google, YouTube, and voice platforms.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-8">
+                        <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we help brands unlock massive untapped regional search demand with precision-driven Vernacular SEO strategies that drive traffic, trust, and transactions.
                             </p>
@@ -154,20 +154,20 @@ const VernacularSEOServices = () => {
             <section className="py-24 bg-white">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5">
                             Why Vernacular SEO is the Next Growth Engine
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 max-w-[850px] mx-auto leading-relaxed">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 max-w-[850px] mx-auto leading-relaxed font-medium">
                             Over 75% of new internet users in India prefer consuming content in their native language. Regional searches are increasing year after year.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="bg-slate-50 p-12 rounded-[40px] border border-slate-100 italic transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/5">
-                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8] font-medium">
                                 If your brand communicates only in English, you are invisible to millions of ready-to-buy customers in Tier 2 and Tier 3 cities where buying intent is high but competition is still low.
                             </p>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-900 font-bold leading-[1.8] not-italic">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-900 font-medium leading-[1.8] not-italic">
                                 Vernacular SEO bridges this gap by optimizing your digital presence for multiple regional languages — ensuring discoverability, cultural relevance, and conversion power.
                             </p>
                         </div>
@@ -185,7 +185,7 @@ const VernacularSEOServices = () => {
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5">
                             Our Vernacular SEO Framework
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 font-medium">
                             We combine linguistic intelligence, search data science, and cultural nuance.
                         </p>
                     </div>
@@ -194,8 +194,8 @@ const VernacularSEOServices = () => {
                         {vernacularFramework.map((item, i) => (
                             <div key={i} className="flex-1 min-w-[320px] max-w-[400px] bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc] group">
                                 <div className="text-[#0066cc] mb-5">{item.icon}</div>
-                                <h3 className="text-[22px] font-bold mb-4 text-slate-900">{item.title}</h3>
-                                <p className="text-slate-600 mb-5 leading-relaxed text-[15px]">{item.desc}</p>
+                                <h3 className="text-[22px] font-semibold mb-4 text-slate-900">{item.title}</h3>
+                                <p className="text-slate-600 mb-5 leading-relaxed text-[15px] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0 space-y-3">
                                     {item.points.map((p, j) => (
                                         <li key={j} className="flex gap-2 text-[14px] text-slate-700">
@@ -204,7 +204,7 @@ const VernacularSEOServices = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <p className="text-[13px] font-bold text-[#0066cc] mt-6 pt-4 border-t border-slate-100">{item.extra}</p>
+                                <p className="text-[13px] font-medium text-[#0066cc] mt-6 pt-4 border-t border-slate-100">{item.extra}</p>
                             </div>
                         ))}
                     </div>
@@ -217,7 +217,7 @@ const VernacularSEOServices = () => {
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
                             <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight">Our Approach: Data + Culture + Performance</h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 leading-relaxed">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 leading-relaxed font-medium">
                                 Unlike traditional SEO that focuses only on keywords, we blend search insights with cultural messaging frameworks to build scalable multilingual ecosystems.
                             </p>
                             <div className="grid grid-cols-2 gap-8">
@@ -229,13 +229,13 @@ const VernacularSEOServices = () => {
                                 ].map((item, i) => (
                                     <div key={i} className="group">
                                         <h4 className="font-bold text-[#0066cc] mb-2 text-[18px] group-hover:translate-x-1 transition-transform">{item.t}</h4>
-                                        <p className="text-[14px] text-slate-600 leading-relaxed">{item.d}</p>
+                                        <p className="text-[14px] text-slate-600 leading-relaxed font-medium">{item.d}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div className="bg-slate-900 p-12 rounded-[40px] text-white transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/20">
-                            <h3 className="text-[28px] font-bold mb-8">Why Choose Us?</h3>
+                            <h3 className="text-[28px] font-semibold mb-8">Why Choose Us?</h3>
                             <div className="space-y-6">
                                 {[
                                     "Native-language research specialists",
@@ -263,7 +263,7 @@ const VernacularSEOServices = () => {
                 <div className="container">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">Industries We Empower</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 font-medium">
                             If your growth plan includes Bharat — vernacular SEO is not optional.
                         </p>
                     </div>
@@ -283,7 +283,7 @@ const VernacularSEOServices = () => {
                 <div className="container">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">Our Process</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 font-medium">
                             Each step is aligned with measurable performance metrics.
                         </p>
                     </div>
@@ -292,7 +292,7 @@ const VernacularSEOServices = () => {
                             <div key={i} className="flex-1 min-w-[240px] max-w-[280px] bg-slate-50 p-10 rounded-3xl text-center border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-blue-900/5 group">
                                 <div className="text-[14px] font-bold text-[#0066cc] mb-3 group-hover:scale-110 transition-transform">{item.step}</div>
                                 <h4 className="text-[20px] font-bold text-slate-900 mb-3">{item.title}</h4>
-                                <p className="text-[14px] text-slate-600 leading-relaxed m-0">{item.desc}</p>
+                                <p className="text-[14px] text-slate-600 leading-relaxed m-0 font-medium">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -305,10 +305,10 @@ const VernacularSEOServices = () => {
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div className="bg-white/5 p-12 rounded-[40px] border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-blue-500/50">
                             <TrendingUp size={48} className="text-blue-400 mb-8" />
-                            <h3 className="text-[20px] md:text-[24px] mb-4 font-bold text-white leading-tight">
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white leading-tight">
                                 The Competitive Advantage
                             </h3>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-300 leading-relaxed">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-300 leading-relaxed font-medium">
                                 Brands that invest in vernacular SEO today will dominate tomorrow’s digital India. Early adoption means:
                             </p>
                             <div className="grid grid-cols-2 gap-6">
@@ -322,11 +322,11 @@ const VernacularSEOServices = () => {
                         </div>
                         <div>
                             <h2 className="text-[36px] font-bold text-white mb-8 leading-tight">Move Before Your Competitors</h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-300 leading-relaxed">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-300 leading-relaxed font-medium">
                                 Adkryoss managed by <span className="text-white font-bold">Clink Consultancy Services Private Limited</span> helps you move before your competitors realize the opportunity.
                             </p>
                             <div className="p-10 bg-blue-600/10 rounded-2xl border-l-4 border-blue-500 italic">
-                                <p className="m-0 font-bold text-white text-[18px]">"Regional search is not the future. It is happening now."</p>
+                                <p className="m-0 font-medium text-white text-[18px]">"Regional search is not the future. It is happening now."</p>
                             </div>
                         </div>
                     </div>
@@ -336,8 +336,8 @@ const VernacularSEOServices = () => {
             {/* CTA */}
             <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004999] text-white">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold mb-6 text-white leading-tight">Let’s Build Your Multilingual Growth Engine</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 max-w-[800px] mx-auto leading-relaxed font-medium">
+                    <h2 className="text-[36px] font-bold mb-6 text-white leading-tight">Let’s Build Your Multilingual Growth Engine</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 text-white opacity-90 max-w-[800px] mx-auto leading-relaxed font-medium">
                         Speak every language your customers speak. Connect with us today and unlock Bharat.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-[#0066cc] py-5 px-12 rounded-full text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:scale-[1.05] hover:shadow-white/20">

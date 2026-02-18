@@ -146,7 +146,7 @@ const LinkBuildingServices = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Build powerful, high-authority backlinks that strengthen search visibility, improve domain credibility, and drive consistent organic growth. We create link ecosystems that search engines trust—and competitors struggle to match.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-[24px] rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-[32px]">
+                        <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we don’t chase links. We build digital authority.
                             </p>
@@ -166,10 +166,10 @@ const LinkBuildingServices = () => {
             <section className="py-[100px] bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
                             Why Link Building Still Defines SEO Success
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[850px] mx-auto">
+                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[850px] mx-auto font-medium">
                             Search engines evaluate trust through signals. Authoritative backlinks remain one of the strongest indicators of credibility and relevance in 2026.
                         </p>
                     </div>
@@ -177,7 +177,7 @@ const LinkBuildingServices = () => {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="bg-[#0066cc] text-white p-[50px] rounded-[40px] shadow-[0_20px_40px_rgba(0,102,204,0.15)]">
                             <h3 className="text-[28px] font-semibold mb-[30px]">Modern Link Building Strategy</h3>
-                            <p className="text-[16px] md:text-[18px] mb-6 opacity-90 leading-[1.8] text-white">
+                            <p className="text-[16px] md:text-[18px] mb-6 opacity-90 leading-[1.8] text-white font-medium">
                                 It’s no longer about volume—it’s about context, quality, and strategic placement. Adkryoss designs link acquisition frameworks that focus on:
                             </p>
                             <div className="space-y-6">
@@ -199,22 +199,22 @@ const LinkBuildingServices = () => {
                         </div>
                         <div className="space-y-8">
                             <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa]">
-                                <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                                <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                                     Contextual Relevance
                                 </p>
-                                <p className="text-[#666] leading-[1.6]">We ensure links come from pages related to your business to maximize ranking power.</p>
+                                <p className="text-[#666] leading-[1.6] font-medium">We ensure links come from pages related to your business to maximize ranking power.</p>
                             </div>
                             <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa]">
-                                <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                                <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                                     Authority Growth
                                 </p>
-                                <p className="text-[#666] leading-[1.6]">Every link we build aims to increase your overall domain rating and trust score.</p>
+                                <p className="text-[#666] leading-[1.6] font-medium">Every link we build aims to increase your overall domain rating and trust score.</p>
                             </div>
                             <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa]">
-                                <p className="text-[16px] md:text-[18px] mb-6 font-semibold">
+                                <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                                     Risk Management
                                 </p>
-                                <p className="text-[#666] leading-[1.6]">We strictly follow white-hat practices to ensure long-term visibility without penalties.</p>
+                                <p className="text-[#666] leading-[1.6] font-medium">We strictly follow white-hat practices to ensure long-term visibility without penalties.</p>
                             </div>
                         </div>
                     </div>
@@ -225,10 +225,10 @@ const LinkBuildingServices = () => {
             <section className="py-[100px] bg-[#f1f5f9]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
                             Our Strategic Link Building Framework
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             A high-authority approach to earning digital trust.
                         </p>
                     </div>
@@ -241,7 +241,7 @@ const LinkBuildingServices = () => {
                             >
                                 <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
-                                <p className="text-[#666] mb-[20px] leading-[1.6]">{item.desc}</p>
+                                <p className="text-[#666] mb-[20px] leading-[1.6] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0 mt-[20px]">
                                     {item.points.map((p, j) => (
                                         <li key={j} className="flex gap-[8px] mb-[10px] text-[#444] text-[15px]">
@@ -263,7 +263,7 @@ const LinkBuildingServices = () => {
                             >
                                 <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
-                                <p className="text-[#666] mb-[20px] leading-[1.6]">{item.desc}</p>
+                                <p className="text-[#666] mb-[20px] leading-[1.6] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0">
                                     {item.points.map((p, j) => (
                                         <li key={j} className="flex gap-[8px] mb-[10px] text-[#444] text-[15px]">
@@ -283,8 +283,8 @@ const LinkBuildingServices = () => {
             <section className="py-[100px] bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">What Makes Our Link Building Different?</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">What Makes Our Link Building Different?</h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             We focus on domain authority growth and measurable ranking movement.
                         </p>
                     </div>
@@ -293,7 +293,7 @@ const LinkBuildingServices = () => {
                             <div key={i} className="text-center p-[30px] bg-[#f8f9fa] rounded-[20px] border border-[#eee]">
                                 <div className="text-[#0066cc] mb-[15px] flex justify-center">{item.icon}</div>
                                 <h4 className="text-[20px] font-semibold text-[#1a1a1a] mb-[10px]">{item.title}</h4>
-                                <p className="text-[15px] text-[#666] leading-[1.6]">{item.desc}</p>
+                                <p className="text-[15px] text-[#666] leading-[1.6] font-medium">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -305,7 +305,7 @@ const LinkBuildingServices = () => {
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16">
                         <div>
-                            <h2 className="text-[36px] font-semibold mb-[40px] text-white">Industries We Build Authority For</h2>
+                            <h2 className="text-[36px] font-bold mb-[40px] text-white">Industries We Build Authority For</h2>
                             <div className="flex flex-wrap gap-4">
                                 {[
                                     { name: "E-commerce & D2C", icon: <ShoppingCart size={18} /> },
@@ -327,8 +327,8 @@ const LinkBuildingServices = () => {
                             </div>
                         </div>
                         <div>
-                            <h2 className="text-[36px] font-semibold mb-[40px] text-white">SEO + Link Building = Scalable Growth</h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <h2 className="text-[36px] font-bold mb-[40px] text-white">SEO + Link Building = Scalable Growth</h2>
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 Link building works best when integrated with complete SEO architecture. At Adkryoss, we align link acquisition with:
                             </p>
                             <div className="flex flex-wrap gap-3">
@@ -353,8 +353,8 @@ const LinkBuildingServices = () => {
             <section className="py-[100px] bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-semibold text-[#1a1a1a] mb-[20px]">Results You Can Expect</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6">
+                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">Results You Can Expect</h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             High-authority links that compound your digital equity over time.
                         </p>
                     </div>
@@ -378,12 +378,12 @@ const LinkBuildingServices = () => {
             {/* FAQs */}
             <section className="py-[100px] bg-[#f8f9fa]">
                 <div className="container">
-                    <h2 className="text-[36px] font-semibold text-center mb-[50px]">Frequently Asked Questions</h2>
+                    <h2 className="text-[36px] font-bold text-center mb-[50px]">Frequently Asked Questions</h2>
                     <div className="max-w-[800px] mx-auto">
                         {faqs.map((faq, i) => (
                             <div key={i} className="mb-[20px] bg-white p-[24px] rounded-[16px] border border-[#eee]">
                                 <h4 className="text-[18px] font-semibold mb-[10px] text-[#1a1a1a]">{faq.question}</h4>
-                                <p className="text-[#666] leading-[1.6] m-0">{faq.answer}</p>
+                                <p className="text-[#666] leading-[1.6] m-0 font-medium">{faq.answer}</p>
                             </div>
                         ))}
                     </div>
@@ -393,8 +393,8 @@ const LinkBuildingServices = () => {
             {/* CTA */}
             <section className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
                 <div className="container">
-                    <h2 className="text-[42px] font-semibold mb-[20px] text-white">Let’s Build Authority That Compounds</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 text-white">
+                    <h2 className="text-[36px] font-bold mb-[20px] text-white">Let’s Build Authority That Compounds</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 text-white font-medium">
                         Partner with Adkryoss managed by Clink Consultancy Services Private Limited to build a powerful link ecosystem that drives sustainable SEO growth.
                     </p>
                     <Link

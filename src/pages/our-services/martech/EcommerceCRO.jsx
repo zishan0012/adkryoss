@@ -245,7 +245,7 @@ const EcommerceCRO = () => {
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-[42px] font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight tracking-tight">
                                 Why Ecommerce CRO Is No Longer Optional
                             </h2>
                             <div className="space-y-6">
@@ -284,7 +284,7 @@ const EcommerceCRO = () => {
                                     <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
                                         {item.icon}
                                     </div>
-                                    <h3 className="font-bold text-slate-900 leading-tight">{item.title}</h3>
+                                    <h3 className="font-semibold text-slate-900 leading-tight">{item.title}</h3>
                                 </div>
                             ))}
                         </div>
@@ -295,7 +295,7 @@ const EcommerceCRO = () => {
             {/* Our Ecommerce CRO Framework */}
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto text-center mb-16">
-                    <h2 className="text-[42px] font-extrabold mb-6 tracking-tight text-white">Our Ecommerce CRO Framework</h2>
+                    <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our Ecommerce CRO Framework</h2>
                     <p className="text-blue-200/80 max-w-2xl mx-auto font-medium mb-10">We follow a performance-first, experimentation-led methodology inspired by global best practices.</p>
                     <div className="w-24 h-2 bg-blue-500 mx-auto rounded-full"></div>
                 </div>
@@ -325,7 +325,7 @@ const EcommerceCRO = () => {
             {/* Ecommerce CRO Services We Offer */}
             <section className="py-24 bg-white">
                 <div className="container px-6 mx-auto">
-                    <h2 className="text-[42px] font-black text-slate-900 mb-16 text-center leading-tight tracking-tight">
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight">
                         Ecommerce CRO Services We Offer
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -334,7 +334,7 @@ const EcommerceCRO = () => {
                                 <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 leading-tight">{item.title}</h3>
+                                <h3 className="text-xl font-semibold text-slate-900 leading-tight">{item.title}</h3>
                                 <p className="text-slate-600 font-medium leading-relaxed">{item.desc}</p>
                             </div>
                         ))}
@@ -345,7 +345,7 @@ const EcommerceCRO = () => {
             {/* What Makes Us Different */}
             <section className="py-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
-                    <h2 className="text-[42px] font-extrabold text-slate-900 mb-16 text-center leading-tight tracking-tight">
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight">
                         What Makes Our CRO Approach Different?
                     </h2>
                     <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
@@ -355,7 +355,7 @@ const EcommerceCRO = () => {
                                     {item.icon}
                                 </div>
                                 <div>
-                                    <h3 className="text-[22px] font-black mb-4 text-slate-900">{item.title}</h3>
+                                    <h3 className="text-[22px] font-semibold mb-4 text-slate-900">{item.title}</h3>
                                     <p className="text-slate-600 font-medium leading-relaxed text-lg">{item.desc}</p>
                                 </div>
                             </div>
@@ -370,7 +370,7 @@ const EcommerceCRO = () => {
                     <div className="grid md:grid-cols-2 gap-20">
                         {/* Industries */}
                         <div>
-                            <h2 className="text-[32px] font-black mb-10 text-white tracking-tight">Industries We Serve</h2>
+                            <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">Industries We Serve</h2>
                             <div className="flex flex-wrap gap-4">
                                 {industries.map((item, index) => (
                                     <div key={index} className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-black transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1">
@@ -379,7 +379,7 @@ const EcommerceCRO = () => {
                                 ))}
                             </div>
                             <div className="mt-16 bg-white/5 p-10 rounded-[40px] border border-white/10 shadow-2xl">
-                                <h2 className="text-[32px] font-black mb-10 text-white tracking-tight text-center">ROI of Ecommerce CRO</h2>
+                                <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight text-center">ROI of Ecommerce CRO</h2>
                                 <div className="space-y-6">
                                     {roiPoints.map((item, index) => (
                                         <div key={index} className="flex items-center gap-5 group">
@@ -395,13 +395,13 @@ const EcommerceCRO = () => {
                         {/* Process & Tools */}
                         <div className="flex flex-col gap-12">
                             <div className="bg-white/5 p-10 rounded-[40px] border border-white/10 shadow-2xl">
-                                <h2 className="text-[32px] font-black mb-10 text-white tracking-tight">Our Process Timeline</h2>
+                                <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">Our Process Timeline</h2>
                                 <div className="space-y-8">
                                     {timeline.map((item, index) => (
                                         <div key={index} className="flex gap-6 items-start group">
                                             <div className="text-blue-400 font-black text-lg py-2 min-w-[120px] uppercase tracking-wider">{item.period}</div>
                                             <div className="flex-1 border-l-2 border-white/10 pl-6 py-2 group-hover:border-blue-500 transition-colors">
-                                                <h3 className="text-[20px] md:text-[24px] mb-4 font-bold text-xl text-white opacity-95 group-hover:text-white transition-colors tracking-tight">
+                                                <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-xl text-white opacity-95 group-hover:text-white transition-colors tracking-tight">
                                                     {item.task}
                                                 </h3>
                                             </div>
@@ -410,7 +410,7 @@ const EcommerceCRO = () => {
                                 </div>
                             </div>
                             <div className="bg-white/5 p-10 rounded-[42px] border border-white/10 shadow-2xl">
-                                <h2 className="text-[32px] font-black mb-10 text-white tracking-tight">Tools & Technologies We Leverage</h2>
+                                <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">Tools & Technologies We Leverage</h2>
                                 <div className="flex flex-wrap gap-3">
                                     {tools.map((tool, index) => (
                                         <span key={index} className="px-5 py-3 bg-white/10 backdrop-blur-md border border-white/10 rounded-xl text-sm font-bold text-blue-200 group hover:bg-blue-600 hover:text-white transition-all">
@@ -418,7 +418,7 @@ const EcommerceCRO = () => {
                                         </span>
                                     ))}
                                 </div>
-                                <p className="mt-8 text-blue-400 font-bold italic text-sm opacity-80">Our tech-agnostic approach ensures compatibility with your ecommerce stack.</p>
+                                <p className="mt-8 text-blue-400 font-medium italic text-sm opacity-80">Our tech-agnostic approach ensures compatibility with your ecommerce stack.</p>
                             </div>
                         </div>
                     </div>
@@ -429,7 +429,7 @@ const EcommerceCRO = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">Frequently Asked Questions</h2>
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-4 leading-tight tracking-tight">Frequently Asked Questions</h2>
                         <div className="w-24 h-2 bg-blue-600 mx-auto rounded-full"></div>
                     </div>
                     <div className="max-w-[800px] mx-auto space-y-4">
@@ -457,10 +457,10 @@ const EcommerceCRO = () => {
             {/* Final CTA Section */}
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
                 <div className="container max-w-4xl mx-auto animate-fade-in text-left md:text-center">
-                    <h2 className="text-[42px] font-black mb-10 leading-tight text-white tracking-tight">Ready to Turn Clicks Into Customers?</h2>
+                    <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">Ready to Turn Clicks Into Customers?</h2>
                     <div className="space-y-12">
                         <div className="text-2xl font-bold opacity-90 max-w-3xl text-white mx-auto leading-relaxed">
-                            <p className="text-[16px] md:text-[18px] mb-6 text-white">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium">
                                 Stop leaking revenue. Start optimizing every interaction.
                             </p>
                         </div>
@@ -468,7 +468,7 @@ const EcommerceCRO = () => {
                             Adkryoss managed by <span className="font-bold underline decoration-blue-300">Clink Consultancy Services Private Limited</span> helps ecommerce brands build conversion-driven ecosystems that scale sustainably.
                         </p>
                         <div className="flex flex-col items-center gap-10">
-                            <p className="text-[16px] md:text-[18px] mb-6 font-black text-white italic tracking-tighter leading-tight pb-4">
+                            <p className="text-[16px] md:text-[18px] mb-6 font-medium text-white italic tracking-tighter leading-tight pb-4">
                                 Let’s transform your store into a high-converting revenue engine.
                             </p>
                             <Link to="/contact" className="inline-flex items-center gap-4 bg-white text-[#0066CC] py-6 px-16 rounded-[25px] text-[22px] font-black transition-all duration-300 hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.4)] hover:-translate-y-2 hover:scale-105 active:scale-95 group tracking-tight">

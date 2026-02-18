@@ -132,7 +132,7 @@ const LLMOptimization = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             AI platforms are redefining discovery. If your business isn't optimized for Large Language Models (LLMs) like ChatGPT and Gemini, you are invisible in the next generation of search. We ensure your brand becomes a trusted, cited answer.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px]">
+                        <div className="p-0 mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we future-proof your digital presence for AI-driven discovery.
                             </p>
@@ -153,10 +153,10 @@ const LLMOptimization = () => {
                 <div className="container">
                     <div className="grid md:grid-cols-[1fr_1.2fr] gap-[60px] items-center">
                         <div>
-                            <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
+                            <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
                                 What is LLM Optimization?
                             </h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8]">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
                                 Unlike traditional SEO that focuses on search engine rankings, LLM Optimization ensures your business becomes a trusted, contextually relevant answer inside AI-generated responses.
                             </p>
                             <div className="grid grid-cols-2 gap-4">
@@ -188,7 +188,7 @@ const LLMOptimization = () => {
                                         </div>
                                         <div>
                                             <h4 className="text-[18px] font-medium text-[#0f172a] mb-1">{item.t}</h4>
-                                            <p className="text-[15px] text-[#64748b]">{item.d}</p>
+                                            <p className="text-[15px] text-[#64748b] font-medium">{item.d}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -202,7 +202,7 @@ const LLMOptimization = () => {
             <section className="py-20 bg-[#f8fafc]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">Our LLM Optimization Approach</h2>
+                        <h2 className="text-[36px] font-bold mb-5 text-[#0f172a]">Our LLM Optimization Approach</h2>
                         <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Structured. Data-Driven. AI-First.
                         </p>
@@ -211,8 +211,8 @@ const LLMOptimization = () => {
                         {approach.map((step, i) => (
                             <div key={i} className="w-[calc(33.333%-27px)] min-w-[350px] bg-white p-[50px_40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 flex-grow max-w-[380px] hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-6">{step.icon}</div>
-                                <h3 className="text-[24px] font-bold mb-5 text-[#0f172a]">{step.title}</h3>
-                                <p className="text-[16px] text-[#475569] mb-[30px] leading-[1.6]">{step.desc}</p>
+                                <h3 className="text-[24px] font-semibold mb-5 text-[#0f172a]">{step.title}</h3>
+                                <p className="text-[16px] text-[#475569] mb-[30px] leading-[1.6] font-medium">{step.desc}</p>
                                 <ul className="space-y-6">
                                     {step.points.map((pt, idx) => (
                                         <li key={idx} className="flex gap-3 text-[15px] text-[#334155] leading-[1.5]">
@@ -234,13 +234,13 @@ const LLMOptimization = () => {
                         <div className="bg-[#f8fafc] p-[50px] rounded-[40px] border border-[#e2e8f0]">
                             <div className="flex items-center gap-[15px] mb-[30px]">
                                 <Microscope size={32} className="text-[#0066cc]" />
-                                <h3 className="text-[28px] font-bold text-[#0f172a]">What Makes Our Strategy Different</h3>
+                                <h3 className="text-[28px] font-semibold text-[#0f172a]">What Makes Our Strategy Different</h3>
                             </div>
                             <div className="space-y-8">
                                 {strategyDifferent.map((item, i) => (
                                     <div key={i}>
                                         <h4 className="text-[18px] font-bold text-[#0f172a] mb-2">{item.t}</h4>
-                                        <p className="text-[15px] text-[#475569] leading-[1.6]">{item.d}</p>
+                                        <p className="text-[15px] text-[#475569] leading-[1.6] font-medium">{item.d}</p>
                                     </div>
                                 ))}
                             </div>
@@ -248,7 +248,7 @@ const LLMOptimization = () => {
                         <div className="bg-[#f8fafc] p-[50px] rounded-[40px] border border-[#e2e8f0]">
                             <div className="flex items-center gap-[15px] mb-[30px]">
                                 <Cpu size={32} className="text-[#0066cc]" />
-                                <h3 className="text-[28px] font-bold text-[#0f172a]">Technology & Research Stack</h3>
+                                <h3 className="text-[28px] font-semibold text-[#0f172a]">Technology & Research Stack</h3>
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 {techStack.map((item, i) => (
@@ -266,8 +266,8 @@ const LLMOptimization = () => {
             {/* Benefits of LLM Optimization */}
             <section className="py-20 bg-[#f8fafc] text-center">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold mb-5 text-[#0f172a]">Benefits of LLM Optimization</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6">
+                    <h2 className="text-[36px] font-bold mb-5 text-[#0f172a]">Benefits of LLM Optimization</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                         Future-proofing your brand's presence in the AI era.
                     </p>
                     <div className="flex flex-wrap justify-center gap-[30px]">
@@ -277,7 +277,7 @@ const LLMOptimization = () => {
                                     <CheckCircle2 size={24} className="text-[#0066cc]" />
                                 </div>
                                 <h4 className="text-[20px] font-bold text-[#0f172a] mb-3">{item.t}</h4>
-                                <p className="text-[15px] text-[#475569] leading-[1.6]">{item.d}</p>
+                                <p className="text-[15px] text-[#475569] leading-[1.6] font-medium">{item.d}</p>
                             </div>
                         ))}
                     </div>
@@ -287,8 +287,8 @@ const LLMOptimization = () => {
             {/* Who Needs LLM Optimization */}
             <section className="py-20 bg-[#0f172a] text-white text-center">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold mb-5 text-white">Who Needs LLM Optimization?</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto">
+                    <h2 className="text-[36px] font-bold mb-5 text-white">Who Needs LLM Optimization?</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto text-white font-medium">
                         If your audience is asking AI for recommendations, your brand must be optimized for it.
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-[30px]">
@@ -307,8 +307,8 @@ const LLMOptimization = () => {
                 <div className="container">
                     <div className="bg-[#f8fafc] p-[80px_40px] rounded-[40px] border border-[#e2e8f0]">
                         <Bot size={60} className="text-[#0066cc] mx-auto mb-6" />
-                        <h2 className="text-[48px] font-bold text-[#0f172a] mb-6">Ready to Become AI-Discoverable?</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto">
+                        <h2 className="text-[36px] font-bold text-[#0f172a] mb-6">Ready to Become AI-Discoverable?</h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto font-medium">
                             Search engines are evolving into answer engines. Businesses that adapt now will dominate tomorrow. Let's optimize your presence for the next generation of discovery.
                         </p>
                         <Link to="/contact" className="inline-flex items-center gap-3 bg-[#0066cc] text-white p-[20px_60px] rounded-[50px] text-[20px] font-bold no-underline transition-all duration-300 hover:-translate-y-[5px]">

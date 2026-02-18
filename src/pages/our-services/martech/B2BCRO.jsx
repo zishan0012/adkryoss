@@ -158,7 +158,7 @@ const B2BCRO = () => {
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-[42px] font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight tracking-tight">
                                 Why B2B CRO Is Different
                             </h2>
                             <div className="space-y-6">
@@ -184,7 +184,7 @@ const B2BCRO = () => {
                                         ))}
                                     </div>
                                 </div>
-                                <p className="text-[16px] md:text-[18px] mb-6 text-blue-600 font-bold italic">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-blue-600 font-medium italic">
                                     The result? Higher MQL-to-SQL conversion, improved deal velocity, and scalable ROI.
                                 </p>
                             </div>
@@ -211,7 +211,7 @@ const B2BCRO = () => {
             {/* Our B2B CRO Framework */}
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto text-center mb-16">
-                    <h2 className="text-[42px] font-extrabold mb-6 tracking-tight text-white">Our B2B CRO Framework</h2>
+                    <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our B2B CRO Framework</h2>
                     <div className="w-24 h-2 bg-blue-500 mx-auto rounded-full"></div>
                 </div>
                 <div className="container px-6 mx-auto flex flex-wrap justify-center gap-10">
@@ -240,7 +240,7 @@ const B2BCRO = () => {
             {/* What Makes Us Different */}
             <section className="py-24 bg-white">
                 <div className="container px-6 mx-auto">
-                    <h2 className="text-[42px] font-extrabold text-slate-900 mb-16 text-center leading-tight tracking-tight">
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight">
                         What Makes Our B2B CRO Different
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -263,7 +263,7 @@ const B2BCRO = () => {
                     <div className="grid md:grid-cols-2 gap-20">
                         {/* Industries */}
                         <div>
-                            <h2 className="text-[32px] font-extrabold mb-10 text-white tracking-tight">Industries We Drive B2B Growth For</h2>
+                            <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">Industries We Drive B2B Growth For</h2>
                             <div className="flex flex-wrap gap-4">
                                 {industries.map((item, index) => (
                                     <div key={index} className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-extrabold transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1">
@@ -274,7 +274,7 @@ const B2BCRO = () => {
                         </div>
                         {/* Our B2B CRO Process */}
                         <div className="bg-white/5 p-12 rounded-[50px] border border-white/10 shadow-2xl">
-                            <h2 className="text-[32px] font-extrabold mb-10 text-white tracking-tight text-center">Our B2B CRO Process</h2>
+                            <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight text-center">Our B2B CRO Process</h2>
                             <div className="text-center mb-10">
                                 <span className="text-xl font-extrabold text-blue-400 italic">Discover → Diagnose → Design → Deploy → Double Down</span>
                             </div>
@@ -291,7 +291,7 @@ const B2BCRO = () => {
                                     </div>
                                 ))}
                             </div>
-                            <p className="mt-12 text-blue-400 font-extrabold italic text-center">
+                            <p className="mt-12 text-blue-400 font-medium italic text-center">
                                 This structured growth loop ensures consistent improvement.
                             </p>
                         </div>
@@ -302,7 +302,7 @@ const B2BCRO = () => {
             {/* Tools We Work With */}
             <section className="py-24 bg-white">
                 <div className="container px-6 mx-auto text-center">
-                    <h2 className="text-[42px] font-black text-slate-900 mb-12 leading-tight">Tools & Technology Stack</h2>
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-12 leading-tight">Tools & Technology Stack</h2>
                     <p className="text-xl text-slate-500 font-medium mb-12 max-w-3xl mx-auto">We leverage enterprise-grade tools for data accuracy and performance insights.</p>
                     <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
                         {tools.map((tool, index) => (
@@ -319,11 +319,11 @@ const B2BCRO = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-[42px] font-black text-slate-900 mb-12 leading-tight tracking-tight">Why Choose Us for B2B CRO?</h2>
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-12 leading-tight tracking-tight">Why Choose Us for B2B CRO?</h2>
                         <div className="grid md:grid-cols-2 gap-10 mb-12">
                             <div className="bg-white p-10 rounded-[40px] shadow-sm border border-slate-100 flex flex-col justify-center items-center gap-4 group hover:shadow-xl transition-all">
-                                <p className="text-2xl font-black text-slate-400 group-hover:text-blue-600 transition-colors uppercase tracking-[4px]">Because traffic is easy</p>
-                                <p className="text-[48px] font-black text-blue-500">Pipeline is hard.</p>
+                                <p className="text-2xl font-medium text-slate-400 group-hover:text-blue-600 transition-colors uppercase tracking-[4px]">Because traffic is easy</p>
+                                <p className="text-[48px] font-medium text-blue-500">Pipeline is hard.</p>
                             </div>
                             <div className="flex flex-col gap-6 text-left">
                                 <p className="text-xl text-slate-700 leading-relaxed font-medium italic">
@@ -341,10 +341,10 @@ const B2BCRO = () => {
             {/* Final CTA Section */}
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
                 <div className="container max-w-4xl mx-auto animate-fade-in text-left md:text-center">
-                    <h2 className="text-[42px] font-black mb-10 leading-tight text-white tracking-tight">Let’s Build a High-Converting B2B Funnel</h2>
+                    <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">Let’s Build a High-Converting B2B Funnel</h2>
                     <div className="space-y-12">
                         <div className="text-2xl font-bold opacity-90 max-w-3xl text-white mx-auto leading-relaxed">
-                            <p className="text-[16px] md:text-[18px] mb-6 text-white">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium">
                                 If your website generates traffic but not revenue, it’s time to optimize intelligently.
                             </p>
                         </div>
@@ -352,7 +352,7 @@ const B2BCRO = () => {
                             Partner with Adkryoss managed by <span className="font-bold">Clink Consultancy Services Private Limited</span> and transform your digital presence into a high-performing B2B conversion engine.
                         </p>
                         <div className="flex flex-col items-center gap-10">
-                            <p className="text-[16px] md:text-[18px] mb-6 text-3xl font-black text-white italic tracking-tighter leading-none pb-4">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-3xl font-medium text-white italic tracking-tighter leading-none pb-4">
                                 Ready to increase qualified leads and accelerate pipeline growth? Let’s optimize your funnel. 🚀
                             </p>
                             <Link to="/contact" className="inline-flex items-center gap-4 bg-white text-[#0066CC] py-6 px-16 rounded-[25px] text-[22px] font-black transition-all duration-300 hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.4)] hover:-translate-y-2 hover:scale-105 active:scale-95 group tracking-tight">

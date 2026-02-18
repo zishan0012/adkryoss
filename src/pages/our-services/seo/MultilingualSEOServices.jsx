@@ -130,7 +130,7 @@ const MultilingualSEOServices = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Your audience is no longer limited by geography. They search in their native language, expect localized experiences, and trust brands that speak to them naturally.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-6 rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-8">
+                        <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we deliver powerful multilingual SEO frameworks that help businesses rank across countries, languages, and search engines.
                             </p>
@@ -151,10 +151,10 @@ const MultilingualSEOServices = () => {
             <section className="py-20 bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
-                        <h2 className="text-[42px] font-bold mb-[30px] text-[#0f172a]">
+                        <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
                             Why Multilingual SEO is a Growth Multiplier
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] max-w-[900px] mx-auto">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] max-w-[900px] mx-auto font-medium">
                             Global users don’t just translate keywords — they search differently. Search intent varies by culture, phrasing differs by region, and even buying behavior shifts across markets.
                         </p>
                     </div>
@@ -173,7 +173,7 @@ const MultilingualSEOServices = () => {
                         ))}
                     </div>
                     <div className="text-center">
-                        <p className="text-[16px] md:text-[18px] mb-6 font-bold">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             This isn’t translation. This is strategic localization powered by data.
                         </p>
                     </div>
@@ -183,17 +183,17 @@ const MultilingualSEOServices = () => {
             {/* Approach Section */}
             <section className="py-20 bg-[#f8fafc]">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">
+                    <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">
                         Our Multilingual SEO Approach
                     </h2>
                     <div className="flex flex-wrap justify-center gap-[30px]">
                         {approach.map((item, i) => (
                             <div key={i} className="bg-white p-10 rounded-[24px] border border-[#e2e8f0] w-[calc(33.333%-20px)] min-w-[320px] grow max-w-[400px] transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-5">{item.icon}</div>
-                                <h3 className="text-[22px] font-bold mb-[15px] text-[#0f172a]">
+                                <h3 className="text-[22px] font-semibold mb-[15px] text-[#0f172a]">
                                     {i + 1}. {item.title}
                                 </h3>
-                                <p className="text-[15px] text-[#475569] mb-5 leading-[1.6]">{item.desc}</p>
+                                <p className="text-[15px] text-[#475569] mb-5 leading-[1.6] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0 mb-5 space-y-4">
                                     {item.points.map((pt, idx) => (
                                         <li key={idx} className="flex gap-2.5 text-[14px] text-[#334155] leading-[1.6]">
@@ -214,7 +214,7 @@ const MultilingualSEOServices = () => {
             {/* Who Needs Section */}
             <section className="py-20 bg-white">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-[#0f172a]">Who Needs Multilingual SEO?</h2>
+                    <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">Who Needs Multilingual SEO?</h2>
                     <div className="flex flex-wrap justify-center gap-[15px]">
                         {needsMultilingual.map((need, i) => (
                             <div key={i} className="py-4 px-10 bg-[#eff6ff] text-[#0f172a] rounded-full font-bold border border-[#e2e8f0] transition-all duration-300 hover:bg-[#0066cc] hover:text-white hover:scale-105 cursor-default">
@@ -222,7 +222,7 @@ const MultilingualSEOServices = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-[16px] md:text-[18px] mb-6 text-center mt-10 font-bold italic">
+                    <p className="text-[16px] md:text-[18px] mb-6 text-center mt-10 font-medium italic">
                         If your audience speaks more than one language, your SEO strategy should too.
                     </p>
                 </div>
@@ -231,7 +231,7 @@ const MultilingualSEOServices = () => {
             {/* Why Choose Section */}
             <section className="py-20 bg-[#0f172a] text-white">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-[60px] text-white">Why Choose Our Multilingual SEO Services?</h2>
+                    <h2 className="text-[36px] font-bold text-center mb-[60px] text-white">Why Choose Our Multilingual SEO Services?</h2>
                     <div className="flex flex-wrap justify-center gap-5">
                         {[
                             "Data-driven international strategy",
@@ -253,7 +253,7 @@ const MultilingualSEOServices = () => {
             {/* Working Model */}
             <section className="py-20 bg-white">
                 <div className="container text-center">
-                    <h2 className="text-[42px] font-bold mb-[60px] text-[#0f172a]">Our Working Model</h2>
+                    <h2 className="text-[36px] font-bold mb-[60px] text-[#0f172a]">Our Working Model</h2>
                     <div className="flex justify-center items-center flex-wrap gap-5">
                         {["Discover", "Strategize", "Localize", "Optimize", "Scale"].map((step, i) => (
                             <React.Fragment key={i}>
@@ -264,7 +264,7 @@ const MultilingualSEOServices = () => {
                             </React.Fragment>
                         ))}
                     </div>
-                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[900px] mx-auto mt-[50px] leading-[1.8]">
+                    <p className="text-[16px] md:text-[18px] mb-6 max-w-[900px] mx-auto mt-[50px] leading-[1.8] font-medium">
                         We begin with market understanding, implement structured multilingual SEO systems, optimize continuously, and scale performance based on real-time data. This ensures your brand ranks globally — without losing local relevance.
                     </p>
                 </div>
@@ -273,10 +273,10 @@ const MultilingualSEOServices = () => {
             {/* Final CTA */}
             <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white">
                 <div className="container">
-                    <h2 className="text-[48px] font-bold mb-6 text-white leading-tight">
+                    <h2 className="text-[36px] font-bold mb-6 text-white leading-tight">
                         Ready to Go Global?
                     </h2>
-                    <p className="text-[22px] mb-10 max-w-[800px] mx-auto text-[#eff6ff] opacity-90 leading-relaxed">
+                    <p className="text-[22px] mb-10 max-w-[800px] mx-auto text-[#eff6ff] opacity-90 leading-relaxed font-medium">
                         Your next customer may not speak your language — but your website should speak theirs. Let’s build a multilingual SEO strategy that expands your reach and increases international traffic.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-3.5 bg-white text-[#0066cc] py-5 px-12 rounded-full text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1.5 hover:scale-[1.05] hover:shadow-white/20">

@@ -170,7 +170,7 @@ const TechnicalSEO = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Technical SEO is not just about fixing errors. It’s about engineering <br />a website that search engines trust, crawl efficiently, and rank confidently.
                         </p>
-                        <div className="bg-[rgba(255,255,255,0.05)] p-[24px] rounded-[20px] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] mb-[32px]">
+                        <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we build technical frameworks that ensure search engines crawl, index, and rank your website with maximum efficiency.
                             </p>
@@ -190,17 +190,17 @@ const TechnicalSEO = () => {
             <section className="py-24 bg-white relative">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5">
                             Why Technical SEO Is Non-Negotiable in 2026
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 max-w-[800px] mx-auto">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 max-w-[800px] mx-auto font-medium">
                             Search engines have evolved. Core Web Vitals, crawl efficiency, structured data, and mobile-first indexing are no longer optional.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
-                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
                                 If your technical infrastructure is weak, your entire SEO strategy suffers:
                             </p>
                             {[
@@ -219,7 +219,7 @@ const TechnicalSEO = () => {
                         </div>
                         <div className="bg-slate-50 p-10 rounded-[30px] border border-slate-100 italic transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/5">
                             <Lock size={48} className="text-[#0066cc] mb-5" />
-                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
                                 "Technical SEO ensures your website performs flawlessly — for both users and search engines. "
                             </p>
                         </div>
@@ -231,10 +231,10 @@ const TechnicalSEO = () => {
             <section className="py-24 bg-slate-50">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5">
                             Our Technical SEO Framework
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600">
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 font-medium">
                             We follow a strategic, data-backed and scalable methodology.
                         </p>
                     </div>
@@ -243,8 +243,8 @@ const TechnicalSEO = () => {
                         {technicalFramework.map((item, i) => (
                             <div key={i} className="bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc] group">
                                 <div className="text-[#0066cc] mb-5">{item.icon}</div>
-                                <h3 className="text-[24px] font-bold mb-4 text-slate-900">{item.title}</h3>
-                                <p className="text-slate-600 mb-5 leading-relaxed">{item.desc}</p>
+                                <h3 className="text-[24px] font-semibold mb-4 text-slate-900">{item.title}</h3>
+                                <p className="text-slate-600 mb-5 leading-relaxed font-medium">{item.desc}</p>
                                 <ul className="list-none p-0 space-y-3">
                                     {item.points.map((p, j) => (
                                         <li key={j} className="flex gap-2 text-[15px] text-slate-700">
@@ -253,7 +253,7 @@ const TechnicalSEO = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <p className="text-[14px] font-bold text-[#0066cc] mt-6">{item.extra}</p>
+                                <p className="text-[14px] font-medium text-[#0066cc] mt-6">{item.extra}</p>
                             </div>
                         ))}
                     </div>
@@ -262,8 +262,8 @@ const TechnicalSEO = () => {
                         {additionalServices.map((item, i) => (
                             <div key={i} className="w-full md:w-[calc(33.333%-22px)] min-w-[300px] bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-5">{item.icon}</div>
-                                <h3 className="text-[24px] font-bold mb-4 text-slate-900">{item.title}</h3>
-                                <p className="text-slate-600 mb-5 leading-relaxed">{item.desc}</p>
+                                <h3 className="text-[24px] font-semibold mb-4 text-slate-900">{item.title}</h3>
+                                <p className="text-slate-600 mb-5 leading-relaxed font-medium">{item.desc}</p>
                                 <ul className="list-none p-0 space-y-3">
                                     {item.points.map((p, j) => (
                                         <li key={j} className="flex gap-2 text-[15px] text-slate-700">
@@ -272,7 +272,7 @@ const TechnicalSEO = () => {
                                         </li>
                                     ))}
                                 </ul>
-                                <p className="text-[14px] font-bold text-[#0066cc] mt-6">{item.extra}</p>
+                                <p className="text-[14px] font-medium text-[#0066cc] mt-6">{item.extra}</p>
                             </div>
                         ))}
                     </div>
@@ -283,8 +283,8 @@ const TechnicalSEO = () => {
             <section className="py-24 bg-white">
                 <div className="container">
                     <div className="text-center mb-16">
-                        <h2 className="text-[42px] font-bold text-slate-900 mb-5">Our Working Approach</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-5">Our Working Approach</h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 font-medium">
                             We combine strategic planning with technical execution.
                         </p>
                     </div>
@@ -293,7 +293,7 @@ const TechnicalSEO = () => {
                             <div key={i} className="flex-1 min-w-[240px] max-w-[300px] bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-blue-900/5 group">
                                 <div className="text-[14px] font-bold text-[#0066cc] mb-3 uppercase tracking-wider">{item.step}</div>
                                 <h4 className="text-[18px] font-bold text-slate-900 mb-3">{item.title}</h4>
-                                <p className="text-[14px] text-slate-600 leading-relaxed">{item.desc}</p>
+                                <p className="text-[14px] text-slate-600 leading-relaxed font-medium">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -321,7 +321,7 @@ const TechnicalSEO = () => {
                                     </div>
                                 ))}
                             </div>
-                            <p className="text-[16px] md:text-[18px] mb-6 mt-8 text-slate-300 italic">
+                            <p className="text-[16px] md:text-[18px] mb-6 mt-8 text-slate-300 italic font-medium">
                                 If your site has more than 50 pages, technical SEO is critical.
                             </p>
                         </div>
@@ -338,7 +338,7 @@ const TechnicalSEO = () => {
                                         <div className="mt-1 shrink-0"><ArrowRight size={24} className="text-blue-400 group-hover:translate-x-1 transition-transform" /></div>
                                         <div>
                                             <h4 className="text-[20px] font-bold text-white mb-2">{item.t}</h4>
-                                            <p className="text-slate-300 leading-relaxed text-[16px]">{item.d}</p>
+                                            <p className="text-slate-300 leading-relaxed text-[16px] font-medium">{item.d}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -353,7 +353,7 @@ const TechnicalSEO = () => {
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16">
                         <div className="md:border-r border-slate-100 md:pr-16">
-                            <h2 className="text-[42px] font-bold mb-8 text-slate-900 leading-tight">What Makes Our Technical SEO Different?</h2>
+                            <h2 className="text-[36px] font-bold mb-8 text-slate-900 leading-tight">What Makes Our Technical SEO Different?</h2>
                             <div className="flex flex-wrap gap-3">
                                 {[
                                     "GSC", "GA4", "Screaming Frog", "Ahrefs", "SEMrush", "PageSpeed Insights", "GTmetrix", "Schema Generators", "CDN Tools"
@@ -363,10 +363,10 @@ const TechnicalSEO = () => {
                                     </span>
                                 ))}
                             </div>
-                            <p className="mt-8 text-slate-600 leading-relaxed text-[16px]">We combine automation with expert analysis for precision results.</p>
+                            <p className="mt-8 text-slate-600 leading-relaxed text-[16px] font-medium">We combine automation with expert analysis for precision results.</p>
                         </div>
                         <div>
-                            <h3 className="text-[28px] font-bold mb-10 text-slate-900">Results You Can Expect</h3>
+                            <h3 className="text-[28px] font-semibold mb-10 text-slate-900">Results You Can Expect</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
                                 {[
                                     "Improved crawl efficiency",
@@ -397,7 +397,7 @@ const TechnicalSEO = () => {
                         {faqs.map((faq, i) => (
                             <div key={i} className="bg-white p-8 rounded-[20px] border border-slate-100 shadow-sm transition-all duration-300 hover:shadow-md">
                                 <h4 className="text-[20px] font-bold mb-3 text-slate-900">{faq.question}</h4>
-                                <p className="text-slate-600 leading-relaxed text-[16px] m-0">{faq.answer}</p>
+                                <p className="text-slate-600 leading-relaxed text-[16px] m-0 font-medium">{faq.answer}</p>
                             </div>
                         ))}
                     </div>
@@ -407,8 +407,8 @@ const TechnicalSEO = () => {
             {/* CTA */}
             <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004999] text-white">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold mb-6 text-white leading-tight">Let’s Strengthen Your Digital Foundation</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 max-w-[800px] mx-auto leading-relaxed">
+                    <h2 className="text-[36px] font-bold mb-6 text-white leading-tight">Let’s Strengthen Your Digital Foundation</h2>
+                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 max-w-[800px] mx-auto leading-relaxed font-medium">
                         Partner with Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span> and build a website that search engines trust — and customers love.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-[#0066cc] py-5 px-12 rounded-full text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:scale-[1.05] hover:shadow-white/20">

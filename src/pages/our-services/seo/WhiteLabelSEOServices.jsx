@@ -116,7 +116,7 @@ const WhiteLabelSEOServices = () => {
                             <h2 className="text-[36px] font-bold text-slate-900 mb-6 leading-tight">
                                 Why Choose White Label SEO?
                             </h2>
-                            <p className="text-slate-600 leading-relaxed mb-8 text-[17px]">
+                            <p className="text-slate-600 leading-relaxed mb-8 text-[17px] font-medium">
                                 Building a skilled in-house SEO team requires senior strategists, technical experts, and content teams. That's expensive and slow.
                             </p>
                             <ul className="list-none p-0 space-y-4">
@@ -134,7 +134,7 @@ const WhiteLabelSEOServices = () => {
                             </ul>
                         </div>
                         <div className="bg-white p-12 rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-100 text-center transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/5">
-                            <p className="text-[24px] font-bold text-slate-900 leading-tight m-0">
+                            <p className="text-[24px] font-medium text-slate-900 leading-tight m-0">
                                 We handle execution.<br />
                                 <span className="text-[#0066CC] text-[32px] block mt-2">You own the client.</span>
                             </p>
@@ -146,14 +146,14 @@ const WhiteLabelSEOServices = () => {
             {/* Framework Section */}
             <section className="py-24 bg-white">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-16 text-slate-900 leading-tight">
+                    <h2 className="text-[36px] font-bold text-center mb-16 text-slate-900 leading-tight">
                         Our White Label SEO Framework
                     </h2>
                     <div className="flex flex-wrap justify-center gap-8">
                         {framework.map((step, i) => (
                             <div key={i} className="bg-white p-10 border border-slate-100 rounded-2xl transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:border-[#0066CC] group w-full md:w-[calc(33.333%-22px)] min-w-[320px] max-w-[400px]">
                                 <div className="text-[#0066CC] mb-6 group-hover:scale-110 transition-transform">{step.icon}</div>
-                                <h3 className="text-[22px] font-bold mb-6 text-slate-900 group-hover:text-[#0066CC] transition-colors">{step.title}</h3>
+                                <h3 className="text-[22px] font-semibold mb-6 text-slate-900 group-hover:text-[#0066CC] transition-colors">{step.title}</h3>
                                 <ul className="list-none p-0 space-y-4">
                                     {step.points.map((pt, idx) => (
                                         <li key={idx} className="text-[15px] text-slate-600 flex gap-3 leading-relaxed">
@@ -185,7 +185,7 @@ const WhiteLabelSEOServices = () => {
             {/* Why Partner */}
             <section className="py-24 bg-white">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold text-center mb-16 text-slate-900 leading-tight">Why Partner with Adkryoss?</h2>
+                    <h2 className="text-[36px] font-bold text-center mb-16 text-slate-900 leading-tight">Why Partner with Adkryoss?</h2>
                     <div className="flex flex-wrap justify-center gap-8">
                         {[
                             { title: "Strategic, Not Just Executional", desc: "We think like growth consultants — not task executors." },
@@ -194,8 +194,8 @@ const WhiteLabelSEOServices = () => {
                             { title: "100% Confidentiality", desc: "Strict NDA-backed operations. Complete brand invisibility." }
                         ].map((item, i) => (
                             <div key={i} className="flex-1 min-w-[280px] max-w-[350px] p-10 bg-slate-50 rounded-3xl border border-transparent transition-all duration-300 hover:bg-white hover:border-[#0066CC] hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-900/10 group text-center">
-                                <h3 className="text-[20px] font-bold mb-4 text-slate-900 group-hover:text-[#0066CC] transition-colors">{item.title}</h3>
-                                <p className="text-slate-600 text-[15px] leading-relaxed m-0">{item.desc}</p>
+                                <h3 className="text-[20px] font-semibold mb-4 text-slate-900 group-hover:text-[#0066CC] transition-colors">{item.title}</h3>
+                                <p className="text-slate-600 text-[15px] leading-relaxed m-0 font-medium">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -205,7 +205,7 @@ const WhiteLabelSEOServices = () => {
             {/* CTA Section */}
             <section className="py-24 text-center bg-gradient-to-br from-[#0066CC] to-[#004999] text-white">
                 <div className="container">
-                    <h2 className="text-[42px] font-bold mb-6 text-white leading-tight">
+                    <h2 className="text-[36px] font-bold mb-6 text-white leading-tight">
                         Ready to Scale Without Expanding Your Team?
                     </h2>
                     <p className="text-[16px] md:text-[18px] mb-6 opacity-90 max-w-[800px] mx-auto leading-relaxed font-medium text-white">
