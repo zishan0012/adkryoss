@@ -1,4 +1,5 @@
 import React from "react";
+import amazon from "../../../assets/Amazon.jpg"
 import { useState } from "react";
 import {
   Megaphone,
@@ -178,9 +179,9 @@ const AmazonAdvertising = () => {
       {/* RIGHT IMAGE */}
       <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
         <img
-          src="https://www.techmagnate.com/wp-content/uploads/2025/04/digital-marketing-for-healthcare-industry.webp"
+          src={amazon}
           alt="Amazon Advertising Services"
-          className="w-52 sm:w-64 md:w-72 lg:w-80 object-contain"
+           className="w-150 h-100 object-contain"
         />
       </div>
 
@@ -454,7 +455,7 @@ const AmazonAdvertising = () => {
           <img
             src={item.img}
             alt={item.title}
-            className="w-full h-40 object-cover"
+            className="w-full h-40 object-fit"
           />
 
           <div className="p-6">

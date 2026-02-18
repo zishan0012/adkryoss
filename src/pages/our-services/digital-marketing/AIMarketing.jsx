@@ -1,4 +1,5 @@
 import React from "react";
+import digi from "../../../assets/digimark.png"
 import {
   Check,
   Database,
@@ -151,38 +152,64 @@ const techStack = [
 const AIMarketing = () => {
   return (
     <>
-      {/* HERO SECTION */}
-      <section className="bg-linear-to-r from-blue-700 to-blue-900 text-white py-12 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left Content */}
-          <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              AI-Powered Digital Marketing Agency for Smarter, Faster Growth
-            </h1>
+     {/* HERO SECTION */}
+<section
+  className="relative py-24 text-white bg-cover bg-center"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-blue-900/80"></div>
 
-            <p className="text-blue-100 mb-6 max-w-xl">
-              Grow your business with our AI Digital Marketing Services that
-              deliver faster results, smarter campaigns, and more qualified
-              leads for lasting success.
-            </p>
+  <div className="relative max-w-7xl mx-auto px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
 
-            <div className="flex gap-4">
-              <button className="bg-white text-blue-700 px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-100 hover:shadow-xl transition">
-                Speak to an Expert →
-              </button>
-              <button className="border border-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-blue-700 transition">
-                Our Services →
-              </button>
-            </div>
-          </div>
-          <div className="relative flex justify-center">
-            <div className="bg-green-500 rounded-full w-56 h-56 absolute -z-10 right-6"></div>
-            <div className="w-64 h-40 bg-white/10 rounded-xl flex items-center justify-center text-sm">
-              AI Marketing
-            </div>
-          </div>
+      {/* LEFT CONTENT */}
+      <div>
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+          AI-Powered Digital Marketing Agency <br />
+          <span className="text-blue-300">
+            for Smarter, Faster Growth
+          </span>
+        </h1>
+
+        <p className="text-blue-100 text-lg leading-relaxed mb-8 max-w-xl">
+          Grow your business with AI-driven marketing strategies that deliver
+          faster results, smarter campaigns, and high-intent leads built for
+          sustainable growth.
+        </p>
+
+        <div className="flex flex-wrap gap-4">
+          <button className="bg-white text-blue-800 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 transition-all duration-300 hover:shadow-xl">
+            Speak to an Expert →
+          </button>
+
+          <button className="border border-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-blue-800 transition-all duration-300">
+            Our Services →
+          </button>
         </div>
-      </section>
+      </div>
+
+      {/* RIGHT IMAGE */}
+      <div className="flex justify-center lg:justify-end">
+  <img
+    src={digi}
+    alt="Digital Marketing"
+    className="
+      w-full 
+      max-w-[520px] 
+      h-[380px] 
+      object-cover 
+      rounded-xl
+    "
+  />
+</div>
+    </div>
+  </div>
+</section>
+
       <div className="max-w-7xl mx-auto px-6 pt-6 text-sm text-gray-500">
         <span className="hover:text-blue-600 cursor-pointer">Home</span>
         <span className="mx-2">›</span>
