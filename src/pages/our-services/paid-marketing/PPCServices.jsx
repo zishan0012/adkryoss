@@ -1,8 +1,10 @@
 import React from 'react';
-import heroImage from "../../../assets/ppcservice.png";
+import { Link } from "react-router-dom";
+import heroImage from "../../../assets/ppcservice.jpg";
 import whyPPC from "../../../assets/output.jpg"
 import Output from "../../../assets/approach.jpg"
 import Process from "../../../assets/process.png"
+// import ppc from "../../../assets/Ppc1.jpg"
 import {
   Search,
   Monitor,
@@ -377,14 +379,14 @@ const PPCServices = () => {
       </div>
     </section>
     {/* Difference */}
-    <section className="bg-white py-16 md:py-24">
-  <div className="w-full px-6 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+    <section className="bg-white py-12 lg:py-16">
+  <div className="w-full pl-6 pr-6 lg:pr-16">
 
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-    {/* LEFT CONTENT */}
-    <div className="space-y-8">
-      
+      {/* LEFT SIDE */}
       <div className="space-y-6">
+
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           What Makes Our PPC Different?
         </h2>
@@ -399,131 +401,124 @@ const PPCServices = () => {
           execution to ensure every campaign contributes to long-term,
           sustainable growth.
         </p>
+
+        <div className="space-y-4 pt-4">
+          {[
+            {
+              title: "Data-Led Decisions",
+              desc: "We rely on analytics, attribution modeling, and conversion tracking to guide every optimization decision.",
+            },
+            {
+              title: "AI & Automation Integration",
+              desc: "From smart bidding strategies to predictive audience segmentation.",
+            },
+            {
+              title: "Creative + Performance Synergy",
+              desc: "High-performing campaigns require compelling creatives.",
+            },
+            {
+              title: "Transparent Reporting",
+              desc: "Real-time dashboards ensure clarity on ROI.",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-blue-50 rounded-xl p-5 border border-blue-100"
+            >
+              <h3 className="font-semibold text-gray-900 mb-1">
+                {item.title}
+              </h3>
+              <p className="text-gray-700 text-sm">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
       </div>
-      {/* <div>
+
+      {/* RIGHT SIDE IMAGE */}
+      <div className="flex justify-end">
         <img
           src={Output}
           alt="PPC Strategy"
-          className="rounded-2xl shadow-xl w-80 md:w-96 lg:w-[420px] object-contain"
+          className="w-full max-w-lg rounded-2xl shadow-xl object-cover"
         />
-      </div> */}
+      </div>
 
     </div>
 
-    {/* RIGHT SIDE CARDS */}
-    <div className="space-y-4 py-16 md:py-24">
-      {[
-        {
-          title: "Data-Led Decisions",
-          desc: "We rely on analytics, attribution modeling, and conversion tracking to guide every optimization decision.",
-        },
-        {
-          title: "AI & Automation Integration",
-          desc: "From smart bidding strategies to predictive audience segmentation, we leverage automation without losing human oversight.",
-        },
-        {
-          title: "Creative + Performance Synergy",
-          desc: "High-performing campaigns require compelling creatives. Our ad copy and visual assets are built to convert.",
-        },
-        {
-          title: "Transparent Reporting",
-          desc: "Real-time dashboards, weekly reports, and performance reviews ensure full clarity on spend and ROI.",
-        },
-      ].map((item, index) => (
-        <div
-          key={index}
-          className="bg-blue-50 rounded-xl p-6 border border-blue-100 hover:shadow-md transition"
-        >
-          <h3 className="font-semibold text-gray-900 mb-1">
-            {item.title}
-          </h3>
-          <p className="text-gray-700 text-sm leading-relaxed">
-            {item.desc}
-          </p>
-        </div>
-      ))}
-    </div>
-
-  </div>
-
-  <div className="w-full px-6 lg:px-20 xl:px-28 mt-16 text-left">
-    <p className="text-gray-800 text-lg font-medium">
-      At{" "}
-      <span className="font-semibold text-gray-900">
-        Adkryoss managed by Clink Consultancy Services Private Limited
-      </span>
-      , performance marketing is not about traffic spikes — it’s about{" "}
-      <span className="text-blue-700">
-        sustainable revenue growth.
-      </span>
-    </p>
   </div>
 </section>
-{/*Process */}
-   <section className="bg-gray-50 py-16 md:py-24">
-  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-    {/* LEFT IMAGE */}
-    <div className="flex justify-center">
+{/*Process */}
+  <section className="bg-gray-50">
+  <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[650px]">
+
+    {/* LEFT SIDE - FULL IMAGE */}
+    <div className="relative h-[400px] lg:h-auto">
       <img
         src={Process}
         alt="Our PPC Process"
-        className="w-72 md:w-80 lg:w-96 drop-shadow-xl object-contain"
-
+        className="absolute inset-0 w-full h-full object-cover"
       />
     </div>
 
-    {/* RIGHT CONTENT */}
-    <div>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
-        Our PPC Process
-      </h2>
+    {/* RIGHT SIDE - CONTENT (NO PADDING ON RIGHT EDGE) */}
+    <div className="flex items-center">
+      <div className="pl-10 pr-0 py-16 lg:py-20 w-full">
 
-      <div className="space-y-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
+          Our PPC Process
+        </h2>
 
-        <div>
-          <h3 className="text-lg font-semibold text-blue-700 mb-1">
-            1. Discovery & Goal Mapping
-          </h3>
-          <p className="text-gray-700">
-            Understanding your business objectives and defining KPIs.
-          </p>
-        </div>
+        <div className="space-y-8">
 
-        <div>
-          <h3 className="text-lg font-semibold text-blue-700 mb-1">
-            2. Research & Planning
-          </h3>
-          <p className="text-gray-700">
-            Keyword research, competitor analysis, and campaign architecture.
-          </p>
-        </div>
+          <div>
+            <h3 className="text-lg font-semibold text-blue-700 mb-1">
+              1. Discovery & Goal Mapping
+            </h3>
+            <p className="text-gray-700">
+              Understanding your business objectives and defining KPIs.
+            </p>
+          </div>
 
-        <div>
-          <h3 className="text-lg font-semibold text-blue-700 mb-1">
-            3. Campaign Setup
-          </h3>
-          <p className="text-gray-700">
-            Ad creation, tracking implementation, and smart bidding configuration.
-          </p>
-        </div>
+          <div>
+            <h3 className="text-lg font-semibold text-blue-700 mb-1">
+              2. Research & Planning
+            </h3>
+            <p className="text-gray-700">
+              Keyword research, competitor analysis, and campaign architecture.
+            </p>
+          </div>
 
-        <div>
-          <h3 className="text-lg font-semibold text-blue-700 mb-1">
-            4. Optimization & Scaling
-          </h3>
-          <p className="text-gray-700">
-            Continuous testing, budget reallocation, and conversion optimization.
-          </p>
-        </div>
+          <div>
+            <h3 className="text-lg font-semibold text-blue-700 mb-1">
+              3. Campaign Setup
+            </h3>
+            <p className="text-gray-700">
+              Ad creation, tracking implementation, and smart bidding configuration.
+            </p>
+          </div>
 
-        <div>
-          <h3 className="text-lg font-semibold text-blue-700 mb-1">
-            5. Reporting & Insights
-          </h3>
-          <p className="text-gray-700">
-            Data-backed insights with actionable recommendations.
-          </p>
+          <div>
+            <h3 className="text-lg font-semibold text-blue-700 mb-1">
+              4. Optimization & Scaling
+            </h3>
+            <p className="text-gray-700">
+              Continuous testing, budget reallocation, and conversion optimization.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-blue-700 mb-1">
+              5. Reporting & Insights
+            </h3>
+            <p className="text-gray-700">
+              Data-backed insights with actionable recommendations.
+            </p>
+          </div>
+
         </div>
 
       </div>
@@ -531,23 +526,29 @@ const PPCServices = () => {
 
   </div>
 </section>
+
     {/*Results */}
-   <section className="bg-gray-150 py-16 md:py-24">
-  <div className="max-w-6xl mx-auto px-6 text-center">
+   <section className="bg-gradient-to-b from-slate-50 to-white py-20">
 
-    {/* Heading */}
-    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-      Results That Drive Real Business Growth
-    </h2>
+  <div className="w-full">
 
-    <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-14">
-      Our PPC campaigns are engineered to deliver measurable outcomes — 
-      not vanity metrics. Every strategy is optimized for profitability, 
-      scalability, and long-term revenue impact.
-    </p>
+    {/* HEADING */}
+    <div className="pl-12 pr-8 lg:pr-24 mb-16">
+      <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        Results That Drive Real Business Growth
+      </h2>
 
-    {/* Result Cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+      <p className="text-gray-600 text-lg max-w-3xl">
+        Our PPC campaigns are engineered to deliver measurable outcomes —
+        not vanity metrics. Every strategy is optimized for profitability,
+        scalability, and long-term revenue impact.
+      </p>
+    </div>
+
+
+    {/* CARDS */}
+    <div className="pl-12 pr-8 lg:pr-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
       {[
         {
           title: "Lower Cost Per Acquisition",
@@ -576,28 +577,54 @@ const PPCServices = () => {
       ].map((item, index) => (
         <div
           key={index}
-          className="bg-white rounded-2xl p-8 border border-gray-200
-          hover:shadow-lg transition duration-300"
+          className="
+          group relative bg-white rounded-2xl p-8
+          border border-gray-200
+          shadow-sm
+          hover:shadow-xl hover:-translate-y-1
+          transition-all duration-300
+        "
         >
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">
-            {item.title}
-          </h3>
-          <p className="text-gray-600 text-sm leading-relaxed">
+
+          {/* Fancy Top Border Accent */}
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-teal-500 rounded-t-2xl"></div>
+
+          {/* Tick + Title */}
+          <div className="flex items-start gap-4 mb-4">
+
+            <div className="
+              w-10 h-10 rounded-full
+              bg-green-100
+              flex items-center justify-center
+              shrink-0
+              group-hover:bg-green-200 transition
+            ">
+              <CheckCircle className="w-5 h-5 text-green-600" />
+            </div>
+
+            <h3 className="text-lg font-semibold text-gray-900">
+              {item.title}
+            </h3>
+          </div>
+
+          <p className="text-gray-600 text-sm leading-relaxed pl-14">
             {item.desc}
           </p>
+
         </div>
       ))}
     </div>
 
-    {/* Closing Statement */}
-    <div className="mt-16 max-w-3xl mx-auto py-16 md:py-24">
-      <p className="text-gray-800 text-lg">
-        Through strategic planning and continuous optimization,{" "}
+
+    {/* CLOSING STATEMENT */}
+    <div className="pl-12 pr-8 lg:pr-24 mt-20">
+      <p className="text-gray-800 text-xl max-w-4xl">
+        Through strategic planning and continuous optimization,
         <span className="font-semibold text-gray-900">
-          Adkryoss managed by Clink Consultancy Services Private Limited
-        </span>{" "}
+          {" "}Adkryoss managed by Clink Consultancy Services Private Limited{" "}
+        </span>
         transforms paid media into a{" "}
-        <span className="text-blue-700 font-medium">
+        <span className="text-blue-700 font-semibold">
           predictable revenue engine.
         </span>
       </p>
@@ -605,6 +632,7 @@ const PPCServices = () => {
 
   </div>
 </section>
+
 
     {/*Final */}
     <section className="bg-linear-to-r from-blue-700 to-blue-900 py-16 md:py-24">
@@ -622,18 +650,21 @@ const PPCServices = () => {
           Drive visibility. Capture intent. Convert consistently.
         </p>
         <div>
-          <button
-            className="
-              bg-white text-blue-700 font-semibold
-              px-8 py-4 rounded-full
-              hover:bg-blue-100
-              transition-all duration-300
-              hover:shadow-xl
-            "
-          >
-            Start Your PPC Growth Journey Today →
-          </button>
-        </div>
+  <Link to="/contact">
+    <button
+      className="
+        bg-white text-blue-700 font-semibold
+        px-8 py-4 rounded-full
+        hover:bg-blue-100
+        transition-all duration-300
+        hover:shadow-xl
+      "
+    >
+      Start Your PPC Growth Journey Today →
+    </button>
+  </Link>
+</div>
+
 
       </div>
     </section>

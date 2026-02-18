@@ -152,14 +152,25 @@ const Blog = () => {
                   {blog.description}
                 </p>
 
-                <div className="flex justify-end mt-6">
-                  <button
-                    onClick={() => navigate(blog.link)}
-                    className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 hover:scale-110 transition-all duration-300"
-                  >
-                    →
-                  </button>
-                </div>
+                <div className="mt-6 flex justify-center">
+  <button
+    onClick={() => navigate(blog.link)}
+    className="
+      px-6 py-2.5
+      text-sm font-semibold
+      text-gray-900
+      border border-gray-800
+      rounded-full
+      bg-white
+      hover:bg-gray-900
+      hover:text-white
+      transition-all duration-300
+    "
+  >
+    View Details
+  </button>
+</div>
+
               </div>
             </div>
           ))}

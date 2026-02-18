@@ -1,4 +1,5 @@
 import React from "react";
+import mail from "../../../assets/mail.png"
 import {
   Route,
   Users,
@@ -191,54 +192,64 @@ const EmailMarketing = () => {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="bg-linear-to-r from-blue-800 to-blue-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          
-          {/* Left Content */}
-          <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-3">
-              Email Marketing Services
-            </h1>
+<section
+  className="relative py-20 text-white bg-cover bg-center"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-blue-900/80"></div>
 
-            <h2 className="text-lg md:text-xl font-semibold mb-4 text-blue-100">
-              Turn Subscribers Into Revenue Machines
-            </h2>
+  <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-            <p className="text-sm md:text-base text-blue-100 mb-6 max-w-lg">
-              Smart inbox strategies. Hyper-personalized journeys. Measurable
-              growth.
-            </p>
+    {/* LEFT CONTENT */}
+    <div>
+      <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        Email Marketing Services
+      </h1>
 
-            <p className="text-sm text-blue-100 mb-6 max-w-xl">
-              At{" "}
-              <span className="font-semibold text-white">
-                Adkryoss managed by Clink Consultancy Services Private Limited
-              </span>
-              , we design high-converting email ecosystems that nurture leads,
-              re-engage audiences, and drive predictable ROI. From automation to
-              advanced segmentation, we transform email from a basic
-              communication tool into a powerful revenue channel.
-            </p>
+      <h2 className="text-xl md:text-2xl font-semibold text-blue-200 mb-6">
+        Turn Subscribers Into Revenue Machines
+      </h2>
 
-            <div className="flex gap-4">
-              <button className="bg-white text-blue-800 px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-100 hover:shadow-xl transition">
-                Book a Strategy Call →
-              </button>
-              <button className="border border-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-blue-800 transition">
-                View Capabilities →
-              </button>
-            </div>
-          </div>
+      <p className="text-blue-100 mb-4 max-w-xl leading-relaxed">
+        Smart inbox strategies. Hyper-personalized journeys. Measurable growth.
+      </p>
 
-          <div className="relative flex justify-center">
-            <div className="bg-green-500 rounded-full w-56 h-56 absolute -z-10 right-4"></div>
-            <div className="w-64 h-40 bg-white/10 rounded-xl flex items-center justify-center text-sm">
-              Email Automation
-            </div>
-          </div>
+      <p className="text-blue-100 mb-8 max-w-xl leading-relaxed">
+        At{" "}
+        <span className="font-semibold text-white">
+          Adkryoss managed by Clink Consultancy Services Private Limited
+        </span>
+        , we build high-converting email ecosystems that nurture leads,
+        re-engage audiences, and generate predictable ROI.
+      </p>
 
-        </div>
-      </section>
+      <div className="flex gap-4 flex-wrap">
+        <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
+          Book a Strategy Call →
+        </button>
+
+        <button className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
+          View Capabilities →
+        </button>
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center lg:justify-end">
+      <img
+        src={mail}
+        alt="Email Marketing"
+        className="w-full max-w-[520px] h-[400px] object-cover rounded-xl shadow-2xl"
+      />
+    </div>
+
+  </div>
+</section>
+
       <div className="max-w-7xl mx-auto px-6 pt-6 text-sm text-gray-500">
   <span className="hover:text-blue-600 cursor-pointer">
     Home

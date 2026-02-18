@@ -1,4 +1,5 @@
 import React from 'react';
+import socialmedia from "../../../assets/socialmedia.jpg"
 import {
   Facebook,
   Linkedin,
@@ -224,9 +225,9 @@ const SocialMediaAdvertising = () => {
       {/* RIGHT IMAGE */}
       <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
         <img
-          src="https://www.techmagnate.com/wp-content/uploads/2025/04/digital-marketing-for-healthcare-industry.webp"
+          src={socialmedia}
           alt="Social Media Advertising"
-          className="w-52 sm:w-64 md:w-72 lg:w-80 object-contain"
+          className="w-200 h-100 object-contain"
         />
       </div>
 
