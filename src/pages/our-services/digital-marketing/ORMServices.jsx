@@ -1,9 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
+import ORMImage from "../../../assets/ORM.png";
 import { Search, TrendingUp, Activity, Rocket, PenTool, Eye, CheckCircle,  } from 'lucide-react';
 
 const ORMServices = () => {
+  const navigate = useNavigate();
      const [openIndex, setOpenIndex] = useState(null);
 
      const toggleFAQ = (index) => {
@@ -217,9 +219,9 @@ Online Reputation & ORM Services
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end hide-below-790">
       <img
-        src="https://www.techmagnate.com/wp-content/uploads/2025/03/online-reputation-management.webp"
+        src={ORMImage}
         alt="About Adkryoss"
-        className="w-56 md:w-80 rounded-xl shadow-lg mr-10"
+        className="w-56 md:w-100 h-70 rounded-xl shadow-lg mr-10"
       />
     </div>
 
@@ -649,7 +651,9 @@ Online Reputation & ORM Services
         <p className="text-base md:text-lg mb-8 text-white">
           Partner with Adkryoss managed by Clink Consultancy Services Private Limited to build, protect, and scale a powerful online presence that inspires trust and drives growth.
         </p>
-        <button className="bg-white text-purple-700 font-semibold px-6 py-3 rounded-md hover:bg-gray-200 transition">
+        <button 
+        onClick={()=>navigate("/contact?service=orm")}
+        className="bg-white text-purple-700 font-semibold px-6 py-3 rounded-md hover:bg-gray-200 transition">
           Start Building a Reputation That Converts
         </button>
       </div>

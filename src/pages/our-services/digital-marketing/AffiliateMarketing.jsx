@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import AffiliateImage from "../../../assets/Affiliate.png";
 
 const AffiliateMarketing = () => {
+  const navigate = useNavigate();
 
 const data = [
     {
@@ -349,7 +352,7 @@ We build, launch, and scale high-performing affiliate programs that drive measur
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end hide-below-790">
       <img
-        src="https://www.techmagnate.com/wp-content/uploads/2025/05/Affiliate-Marketing1.webp"
+        src={AffiliateImage}
         alt="About Adkryoss"
         className="w-56 md:w-80 rounded-xl shadow-lg mr-10"
       />
@@ -783,7 +786,9 @@ We build, launch, and scale high-performing affiliate programs that drive measur
       </p>
 
       {/* CTA Button */}
-      <button className="bg-white text-emerald-700 font-semibold px-10 py-4 rounded-full text-lg hover:bg-gray-100 transition duration-300 shadow-md">
+      <button 
+      onClick={()=> navigate("/contact?service=affiliate")}
+      className="bg-white text-emerald-700 font-semibold px-10 py-4 rounded-full text-lg hover:bg-gray-100 transition duration-300 shadow-md">
         Start Scaling with Performance Partnerships Today
       </button>
 

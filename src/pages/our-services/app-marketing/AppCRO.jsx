@@ -1,6 +1,9 @@
 import React from 'react';
+import CROImage from "../../../assets/CRO.png";
+import { useNavigate } from 'react-router-dom';
 
 const AppCRO = () => {
+  const navigate = useNavigate();
   return (
     <>
       <section
@@ -33,34 +36,38 @@ const AppCRO = () => {
               AP CRO (Advanced Performance Conversion Rate Optimization) helps you unlock hidden revenue from your existing visitors through data, psychology, and AI-driven experimentation.
             </p>
 
-          
-                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
-                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
-                            >
-                                Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
-                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
-                            >
-                                Our Services →
-                            </a>
-                        </div>
-</div>
+
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <a
+                href="/contact"
+                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Speak to Our Expert →
+              </a>
+              <a
+                href="#services"
+                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Our Services →
+              </a>
+            </div>
+          </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex justify-center md:justify-end">
+          <div className="flex justify-center md:justify-end hide-below-790">
             <img
-              src="https://www.techmagnate.com/wp-content/uploads/2025/04/app-store-optimization-services.webp"
+              src={CROImage}
               alt="About Adkryoss"
-              className="w-56 md:w-80 rounded-xl shadow-lg mr-10"
+              className="w-56 md:w-100 h-70 rounded-xl shadow-lg mr-10"
             />
           </div>
 
+
         </div>
-      </section>
+
+
+      </section >
 
 
       <section className="py-20 px-6 bg-gray-50">
@@ -252,13 +259,7 @@ const AppCRO = () => {
               <h3 className="text-xl font-semibold">SaaS & Tech Platforms</h3>
             </div>
 
-            {/* EdTech & Online Courses */}
-            <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center gap-4 text-center transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zM12 14v7M12 3v5" />
-              </svg>
-              <h3 className="text-xl font-semibold">EdTech & Online Courses</h3>
-            </div>
+
 
             {/* Real Estate & High-Value Lead Gen */}
             <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center gap-4 text-center transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
@@ -424,7 +425,6 @@ const AppCRO = () => {
               <p className="text-gray-700 text-lg">Leverage machine learning to personalize, segment, and optimize performance automatically.</p>
             </div>
           </div>
-
           <p className="mt-10 text-left text-lg text-gray-700">
             Technology supports strategy — it doesn’t replace it.
           </p>
@@ -531,14 +531,15 @@ const AppCRO = () => {
             Let’s engineer your growth.
           </p>
 
-          <a
-            href="#contact"
+          <button
+            onClick={() => navigate("/contact?service=cro")}
             className="mt-6 inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300"
           >
             Start Optimizing Today
-          </a>
+          </button>
         </div>
       </section>
+
 
     </>
   );

@@ -174,9 +174,7 @@ const HeroSection = () => {
 
           {/* LEFT SIDE */}
           <div className="text-white">
-            <p className="text-[#22c55e] font-semibold text-[18px]">
-              We make sure you get found.
-            </p>
+            
 
             <h1 className="text-[36px] font-extrabold mt-5 leading-[1.2]">
               We Build Digital Growth Systems That Drive Revenue.

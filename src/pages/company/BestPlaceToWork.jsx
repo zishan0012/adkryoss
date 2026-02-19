@@ -1,5 +1,5 @@
 import React from 'react';
-
+import BestPlaceToWorkImage from "../../assets/BestPlaceToWork.jpeg";
 const BestPlaceToWork = () => {
     return (
         <>
@@ -39,9 +39,10 @@ We believe a workplace should inspire ambition, reward ownership, and encourage 
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end hide-below-790">
       <img
-        src="https://www.techmagnate.com/wp-content/uploads/2025/08/Best-Place-to-Work-in-India.webp"
+        // src="https://www.techmagnate.com/wp-content/uploads/2025/08/Best-Place-to-Work-in-India.webp"
+        src={BestPlaceToWorkImage}
         alt="About Adkryoss"
-        className="w-56 md:w-80 rounded-xl shadow-lg mr-10"
+        className="w-56 md:w-100 h-70 rounded-xl shadow-lg mr-30"
       />
     </div>
 

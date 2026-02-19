@@ -1,6 +1,9 @@
 import React from 'react';
+import ASOImage from "../../../assets/ASO.png";
+import { useNavigate } from "react-router-dom";
 
 const ASOServices = () => {
+  const navigate = useNavigate();
     return (
         <>
         <section
@@ -51,9 +54,9 @@ ASO Services – Drive More Downloads.
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end hide-below-790">
       <img
-        src="https://www.techmagnate.com/wp-content/uploads/2025/04/app-store-optimization-services.webp"
+        src={ASOImage}
         alt="About Adkryoss"
-        className="w-56 md:w-80 rounded-xl shadow-lg mr-10"
+        className="w-56 md:w-100 h-70 rounded-xl shadow-lg mr-10"
       />
     </div>
 
@@ -528,12 +531,12 @@ ASO Services – Drive More Downloads.
     </p>
 
     {/* CTA Button */}
-    <a 
-      href="#contact" 
+    <button
+      onClick={() => navigate("/contact?service=aso")} 
       className="inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition"
     >
       Get Started
-    </a>
+    </button>
   </div>
 </section>
 

@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
+import AgenticImage from "../../../assets/Agentic.png";
 import {
   Cpu,
   Database,
@@ -25,6 +26,7 @@ import {
 
 
 const AgenticAI = () => {
+  const navigate = useNavigate();
     return (
         <>
        
@@ -81,7 +83,7 @@ We build self-learning, goal-oriented marketing ecosystems that plan, execute, o
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end hide-below-790">
       <img
-        src="https://www.techmagnate.com/wp-content/uploads/2025/11/Agentic-ai-digital-marketing.webp"
+        src={AgenticImage}
         alt="About Adkryoss"
         className="w-56 md:w-80 rounded-xl shadow-lg mr-10"
       />
@@ -632,7 +634,9 @@ style={{backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/tec
 
       {/* CTA Button */}
       <div className="mt-10">
-        <button className="bg-[#198754] hover:bg-green-600 text-white font-semibold px-10 py-4 rounded-lg transition duration-300 shadow-lg">
+        <button 
+        onClick={()=> navigate("/contact?service=ai")}
+        className="bg-[#198754] hover:bg-green-600 text-white font-semibold px-10 py-4 rounded-lg transition duration-300 shadow-lg">
           Activate Agentic AI
         </button>
       </div>
