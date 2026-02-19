@@ -26,21 +26,36 @@ const MobileAppMarketing = () => {
               Turn Installs Into Active Users. Turn Users Into Revenue.
             </h3>
 
-            <p className='text-white'>Mobile apps don’t fail because of poor ideas. They fail because they are invisible. 
-Adkryoss managed by Clink Consultancy Services Private Limited builds data-driven mobile app marketing strategies that increase installs, improve retention, and maximize lifetime value — not just vanity downloads. </p>
+            <p className='text-white'>Mobile apps don’t fail because of poor ideas. They fail because they are invisible.
+              Adkryoss managed by Clink Consultancy Services Private Limited builds data-driven mobile app marketing strategies that increase installs, improve retention, and maximize lifetime value — not just vanity downloads. </p>
+            {/* 
+                        { CTA Buttons — uncomment when ready to use} */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <a
+                href="/contact"
+                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Speak to Our Expert →
+              </a>
+              <a
+                href="#services"
+                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Our Services →
+              </a>
+            </div>
 
-
-    {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end hide-below-790">
-      <img
-        src="https://www.techmagnate.com/wp-content/uploads/2025/04/mobile-app-marketing-services.webp"
-        alt="About Adkryoss"
-        className="w-56 md:w-80 rounded-xl shadow-lg mr-[-700px] mt-[-300px]"
-      />
-    </div>
+            {/* RIGHT IMAGE */}
+            <div className="flex justify-center md:justify-end hide-below-790">
+              <img
+                src="https://www.techmagnate.com/wp-content/uploads/2025/04/mobile-app-marketing-services.webp"
+                alt="About Adkryoss"
+                className="w-56 md:w-80 rounded-xl shadow-lg mr-[-700px] mt-[-300px]"
+              />
+            </div>
 
           </div>
-                                                                                
+
 
         </div>
       </section>
@@ -48,22 +63,22 @@ Adkryoss managed by Clink Consultancy Services Private Limited builds data-drive
 
 
 
-<section className="py-20 px-6 bg-gray-50">
-  <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-    
-    {/* Left: Text & Points */}
-    <div className="lg:w-1/2">
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-left">
-        Why Mobile App Marketing Needs a Strategic Edge
-      </h2>
-      <p className="mb-6 text-lg text-left">
-        Over 90% of apps struggle to cross 1,000 daily active users. The real challenge isn’t launching an app — it’s scaling it profitably.
-      </p>
-      <p className="mb-6 text-lg text-left">
-        Adkryoss managed by Clink Consultancy Services Private Limited combines performance marketing, app store optimization, user behavior analytics, and AI-powered targeting to help apps grow sustainably across Android and iOS ecosystems.
-      </p>
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
 
-       
+          {/* Left: Text & Points */}
+          <div className="lg:w-1/2">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-left">
+              Why Mobile App Marketing Needs a Strategic Edge
+            </h2>
+            <p className="mb-6 text-lg text-left">
+              Over 90% of apps struggle to cross 1,000 daily active users. The real challenge isn’t launching an app — it’s scaling it profitably.
+            </p>
+            <p className="mb-6 text-lg text-left">
+              Adkryoss managed by Clink Consultancy Services Private Limited combines performance marketing, app store optimization, user behavior analytics, and AI-powered targeting to help apps grow sustainably across Android and iOS ecosystems.
+            </p>
+
+
 
             <p className="mb-4 text-lg font-semibold text-left">
               We focus on:
@@ -94,7 +109,7 @@ Adkryoss managed by Clink Consultancy Services Private Limited builds data-drive
               className="w-full max-w-md"
             />
           </div>
-{/* </div> */}
+          {/* </div> */}
         </div>
       </section>
 
@@ -239,11 +254,11 @@ Adkryoss managed by Clink Consultancy Services Private Limited builds data-drive
 
 
 
-<section className="py-20 px-6 bg-blue-50">
-  <div className="max-w-7xl mx-auto">
-    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left text-gray-900">
-      Our Process: From Launch to Scale
-    </h2>
+      <section className="py-20 px-6 bg-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left text-gray-900">
+            Our Process: From Launch to Scale
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* E-commerce & D2C Apps */}

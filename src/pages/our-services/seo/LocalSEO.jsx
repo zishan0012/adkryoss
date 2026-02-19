@@ -153,13 +153,29 @@ const LocalSEO = () => {
                         <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Turning Local Searches into Real Customers
                         </h3>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
+                        <p className="text-[16px] md:text-[18px] mb-2 leading-[1.8] text-white">
                             Today’s customers don’t browse directories—they search on Google. 70%+ of local searches result in a visit or inquiry within 24 hours. If you're not in the Top 3 Map Pack, you're invisible. We help you dominate your geography.
                         </p>
                         <div className="p-0 mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we help businesses dominate local search ecosystems and drive consistent foot traffic.
                             </p>
+                        </div>
+                        {/* 
+                        { CTA Buttons — uncomment when ready to use} */}
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">

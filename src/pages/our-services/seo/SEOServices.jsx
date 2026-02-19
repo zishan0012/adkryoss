@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Target, Zap, BarChart3, Users, Globe, Shield, Award, CheckCircle2, ArrowRight, Search, Code, FileText, Link2, MapPin, Building2, Heart, GraduationCap, ShoppingCart, Briefcase, ChevronRight } from 'lucide-react';
+import { TrendingUp, Target, Zap, BarChart3, Users, Globe, Shield, Award, CheckCircle2, ArrowRight, Search, Code, FileText, Link2, MapPin, Building2, Heart, GraduationCap, ShoppingCart, Briefcase, ChevronRight, PieChart, ChevronDown, ChevronUp } from 'lucide-react';
 import seoservices from '../../../assets/SEO/seoserviceshero.jpeg';
 const SEOServices = () => {
+    const [openFaq, setOpenFaq] = useState(null);
+
+    const toggleFaq = (i) => {
+        setOpenFaq(openFaq === i ? null : i);
+    };
+
     const approaches = [
         {
             icon: <Search size={32} />,
@@ -197,9 +203,20 @@ const SEOServices = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span> delivers data-driven, performance-focused SEO services designed to increase traffic, improve rankings, and convert search intent into measurable revenue.
                         </p>
-                        <div className="text-[20px] font-bold mt-8 p-2 bg-white/5 rounded-[20px] border border-white/10 backdrop-blur-[10px] text-white italic">
-                            We don't chase rankings.<br />
-                            We build long-term organic growth engines.
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
@@ -208,11 +225,10 @@ const SEOServices = () => {
                             <img
                                 src={seoservices}
                                 alt="SEO Services"
-                                className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                                className="max-w-[450px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
                             />
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -407,22 +423,23 @@ const SEOServices = () => {
 
             {/* FAQ Section */}
             <section className="py-24 bg-slate-50">
-                <div className="container">
-                    <div className="text-center mb-16">
-                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">
-                            Frequently Asked Questions
-                        </h2>
-                    </div>
-
-                    <div className="max-w-[900px] mx-auto">
-                        {faqs.map((faq, index) => (
-                            <div key={index} className="bg-white p-8 rounded-2xl mb-5 shadow-[0_2px_10px_rgba(0,0,0,0.05)] transition-all duration-300 group hover:shadow-xl hover:translate-x-2 border border-transparent hover:border-blue-100">
-                                <h3 className="text-[18px] font-semibold text-slate-900 mb-3 group-hover:text-[#0066CC] transition-colors leading-tight">
-                                    {faq.question}
-                                </h3>
-                                <p className="text-[15px] text-slate-600 leading-relaxed m-0 font-medium">
-                                    {faq.answer}
-                                </p>
+                <div className="container px-6 mx-auto">
+                    <h2 className="text-[28px] md:text-[36px] font-bold text-center mb-10 md:mb-[60px] text-slate-900 leading-tight">Frequently Asked Questions</h2>
+                    <div className="max-w-[800px] mx-auto">
+                        {faqs.map((faq, i) => (
+                            <div key={i} className="mb-[15px] border border-slate-200 rounded-[15px] overflow-hidden bg-white shadow-sm transition-all duration-300 hover:shadow-md">
+                                <button
+                                    onClick={() => toggleFaq(i)}
+                                    className={`w-full p-[20px_30px] flex justify-between items-center transition-all duration-300 border-none cursor-pointer ${openFaq === i ? 'bg-[#f8fafc]' : 'bg-white'}`}
+                                >
+                                    <span className="text-[18px] font-bold text-slate-900 text-left">{faq.question}</span>
+                                    {openFaq === i ? <ChevronUp size={20} className="text-[#0066cc]" /> : <ChevronDown size={20} className="text-slate-400" />}
+                                </button>
+                                {openFaq === i && (
+                                    <div className="p-[20px_30px] bg-white border-t border-slate-100">
+                                        <p className="m-0 text-slate-600 leading-[1.7] text-[16px] font-medium">{faq.answer}</p>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>
