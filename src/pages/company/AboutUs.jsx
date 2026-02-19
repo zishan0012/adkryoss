@@ -7,30 +7,88 @@ const AboutUs = () => {
         <>
 
 
-        <section
-  className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20"
+       
+
+
+
+{/* <section
+  className="relative flex items-center min-h-[70vh] bg-cover bg-center"
   style={{
     backgroundImage:
       "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
   }}
 >
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
+  <div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4">
 
-    {/* LEFT CONTENT */}
-    <div className="text-left text-white space-y-6 mt-[-15px]">
+  
+   
+     <div className="text-left lg:text-left text-white space-y-6 mx-auto lg:mx-0">
 
-      {/* H2 Heading */}
       <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white">
         About Us
       </h2>
 
-      {/* H3 Subheading */}
       <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
         Performance. Precision. Possibility.
       </h3>
 
-      {/* Paragraph */}
-      <p className="text-white md:text-md leading-relaxed">
+      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+        Adkryoss managed by Clink Consultancy Services pvt. ltd is a 
+        next-generation digital marketing powerhouse built for brands 
+        that refuse to settle for average growth.
+        <br />
+        We don’t just execute campaigns. We engineer scalable digital 
+        ecosystems that drive measurable revenue, stronger brand authority, 
+        and long-term competitive advantage.
+        <br />
+        In a world where algorithms evolve daily and consumer behavior 
+        shifts overnight, we combine strategy, creativity, and data 
+        intelligence to help businesses stay ahead — not just relevant.
+      </p>
+
+    </div>
+
+
+
+
+ 
+
+
+
+ <div className="flex justify-center lg:justify-end mt-10 lg:mt-0">
+    <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+    <img
+      src={AboutImage}
+      alt="Section Image"
+      className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+    />
+  </div>
+</div>
+
+  </div>
+</section> */}
+
+<section
+  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+>
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+    
+    {/* LEFT CONTENT */}
+    <div className="text-left text-white max-w-[600px]">
+      
+      <h2 className="text-[32px] md:text-[48px] font-bold mb-4 leading-tight text-white">
+        About Us
+      </h2>
+
+      <h3 className="text-[20px] md:text-[24px] font-semibold mb-4">
+        Performance. Precision. Possibility.
+      </h3>
+
+      <p className="text-[16px] md:text-[18px] text-white/90 leading-relaxed">
         Adkryoss managed by Clink Consultancy Services pvt. ltd is a 
         next-generation digital marketing powerhouse built for brands 
         that refuse to settle for average growth.
@@ -47,17 +105,20 @@ const AboutUs = () => {
     </div>
 
     {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end hide-below-790">
-      <img
-        // src="/assets/About.jpeg"
-       src={AboutImage} 
-        alt="About Adkryoss"
-        className="w-56 md:w-130 rounded-xl shadow-lg"
-      />
+    <div className="flex justify-center md:justify-end">
+      <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+        <img
+          src={AboutImage}
+          alt="About Section"
+          className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+        />
+      </div>
     </div>
 
   </div>
 </section>
+
+
 
 
 <section className="py-20 bg-white">
