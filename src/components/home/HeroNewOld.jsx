@@ -155,8 +155,10 @@
 
 
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <>
       <section
@@ -173,8 +175,8 @@ const HeroSection = () => {
         <div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4">
 
           {/* LEFT SIDE */}
-          <div className="text-white">
-            
+          {/* <div className="text-white"> */}
+                  <div className="text-left lg:text-left text-white space-y-6 mx-auto lg:mx-0">
 
             <h1 className="text-[36px] font-extrabold mt-5 leading-[1.2]">
               We Build Digital Growth Systems That Drive Revenue.
@@ -189,23 +191,36 @@ const HeroSection = () => {
 
             {/* Buttons */}
             <div className="mt-[35px] flex flex-col sm:flex-row gap-5">
-              <button className="bg-[#ff7a00] text-white px-[28px] py-[14px] rounded-[40px] font-semibold text-[15px]">
+              <button 
+              onClick={()=> navigate("/contact")}
+              className="bg-[#ff7a00] text-white px-[28px] py-[14px] rounded-[40px] font-semibold text-[15px]">
                 Get a Free Growth Audit →
               </button>
 
-              <button className="border-2 border-white text-white px-[28px] py-[14px] rounded-[40px] font-semibold text-[15px] bg-transparent">
+              <button 
+              onClick={()=> navigate("/contact")}
+              className="border-2 border-white text-white px-[28px] py-[14px] rounded-[40px] font-semibold text-[15px] bg-transparent">
                 Talk to a Growth Strategist →
               </button>
             </div>
           </div>
 
           {/* RIGHT SIDE IMAGE */}
-          <div className="hidden lg:flex justify-end">
+          {/* <div className="hidden lg:flex justify-end">
             <img
               src="https://www.techmagnate.com/wp-content/uploads/2025/10/Home.webp"
               alt="Hero"
               className="max-w-[520px] w-full h-auto"
             />
+          </div> */}
+           <div className="flex justify-center lg:justify-end mt-10 lg:mt-0">
+              <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+              <img
+                src="https://www.techmagnate.com/wp-content/uploads/2025/10/Home.webp"
+                alt="Section Image"
+                className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+              />
+            </div>
           </div>
 
         </div>

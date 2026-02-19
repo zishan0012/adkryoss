@@ -32,36 +32,36 @@ const AgenticAI = () => {
        
 
 
-<section
-  className="bg-cover bg-center bg-no-repeat py-16 h-120 md:py-20"
+
+{/* <section
+  className="relative flex items-center min-h-[70vh] bg-cover bg-center"
   style={{
     backgroundImage:
       "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
   }}
 >
-  <div className="max-w-8xl mx-auto px-6  grid md:grid-cols-2 items-center gap-12">
+  <div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4">
 
-    {/* LEFT CONTENT */}
-    <div className="text-left text-white space-y-6 mt-[-15px] ml-20">
+   
+  <div className="text-left lg:text-left text-white space-y-6 mx-auto lg:mx-0">
 
-      {/* H2 Heading */}
-      <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white w-200">
-  Agentic AI Digital Marketing Services  
+      <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white">
+        Agentic AI Digital Marketing Services
       </h2>
 
-      {/* H3 Subheading */}
       <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
-       Autonomous Growth Systems. Intelligent Decisions. Real Business Impact. 
+        Autonomous Growth Systems. Intelligent Decisions. Real Business Impact.
       </h3>
 
-      {/* Paragraph */}
-      <p className="text-white md:text-md leading-relaxed">
-    AI is no longer a support tool — it’s the strategist, the optimizer, and the growth driver <br />
-We build self-learning, goal-oriented marketing ecosystems that plan, execute, optimize, and scale campaigns in real time. <br /><br />
-
-
-<h6 className='text-white md:text-md leading-relaxed text-bold'>Welcome to the era of Agentic AI Marketing. </h6>
-    </p>
+      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+        AI is no longer a support tool — it’s the strategist, the optimizer, and the growth driver.
+        <br />
+        We build self-learning, goal-oriented marketing ecosystems that plan, execute, optimize, and scale campaigns in real time.
+        <br /><br />
+        <span className="font-bold">
+          Welcome to the era of Agentic AI Marketing.
+        </span>
+      </p>
 
     
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
@@ -80,18 +80,67 @@ We build self-learning, goal-oriented marketing ecosystems that plan, execute, o
                         </div>
 </div>
 
-    {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end hide-below-790">
-      <img
-        src={AgenticImage}
-        alt="About Adkryoss"
-        className="w-56 md:w-80 rounded-xl shadow-lg mr-10"
-      />
+   
+
+
+    <div className="flex justify-center lg:justify-end mt-10 lg:mt-0">
+    <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+    <img
+      src={AgenticImage}
+      alt="Section Image"
+      className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+    />
+  </div>
+</div>
+
+  </div>
+</section> */}
+
+
+
+<section
+  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    <div className="text-left text-white space-y-6">
+
+      <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white">
+        Agentic AI Digital Marketing Services
+      </h2>
+
+      <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
+        Autonomous Growth Systems. Intelligent Decisions. Real Business Impact.
+      </h3>
+
+      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+        AI is no longer a support tool — it’s the strategist, the optimizer, and the growth driver.
+        <br />
+        We build self-learning, goal-oriented marketing ecosystems that plan, execute, optimize, and scale campaigns in real time.
+        <br /><br />
+        <span className="font-bold">
+          Welcome to the era of Agentic AI Marketing.
+        </span>
+      </p>
+
+    </div>
+
+    <div className="flex justify-center md:justify-end">
+      <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+        <img
+          src={AgenticImage}
+          alt="Section Image"
+          className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+        />
+      </div>
     </div>
 
   </div>
 </section>
-
 
 
 <section className="bg-white py-10 px-6 md:px-16 lg:px-4 mx-4 md:mx-10 lg:mx-20 rounded-xl my-16">
