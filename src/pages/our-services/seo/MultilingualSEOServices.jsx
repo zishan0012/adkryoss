@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import multilingualseoservices from '../../../assets/SEO/multilingualhero.png';
 const MultilingualSEOServices = () => {
+
     const approach = [
         {
             title: "International SEO Strategy & Market Research",
@@ -127,13 +128,28 @@ const MultilingualSEOServices = () => {
                         <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Global Reach. Local Trust. Multilingual Search Dominance.
                         </h3>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
+                        <p className="text-[16px] md:text-[18px] mb-2 leading-[1.8] text-white">
                             Your audience is no longer limited by geography. They search in their native language, expect localized experiences, and trust brands that speak to them naturally.
                         </p>
                         <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we deliver powerful multilingual SEO frameworks that help businesses rank across countries, languages, and search engines.
                             </p>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
@@ -271,6 +287,42 @@ const MultilingualSEOServices = () => {
                     </p>
                 </div>
             </section>
+
+            {/* Future-Ready Global SEO */}
+            <section className="py-20 bg-[#0f172a] text-white">
+                <div className="container">
+                    <div className="grid md:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <h2 className="text-[36px] font-bold mb-6 text-white leading-tight">
+                                Future-Ready Global SEO
+                            </h2>
+                            <p className="text-[17px] text-white/80 font-medium mb-8 leading-relaxed">
+                                Search engines are evolving with AI, voice search, and regional algorithm variations. Our multilingual SEO strategies integrate:
+                            </p>
+                            <div className="space-y-4">
+                                {[
+                                    { label: "AI-powered keyword mapping", icon: <Zap size={18} /> },
+                                    { label: "Entity-based optimization", icon: <Globe size={18} /> },
+                                    { label: "Voice search localization", icon: <MessageSquare size={18} /> },
+                                    { label: "Structured data implementation", icon: <Settings size={18} /> },
+                                    { label: "E-E-A-T enhancement for international credibility", icon: <Shield size={18} /> }
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-4 p-5 bg-white/5 rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-[#0066cc]">
+                                        <div className="text-[#0066cc] shrink-0">{item.icon}</div>
+                                        <span className="font-medium text-white/90">{item.label}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="bg-white/5 p-10 rounded-2xl border border-white/10 backdrop-blur-sm">
+                            <p className="text-[18px] leading-[1.8] text-white/90 font-medium m-0 italic">
+                                Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span> helps brands build sustainable international visibility in an increasingly competitive digital ecosystem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             {/* Final CTA */}
             <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white">

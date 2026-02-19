@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 
 const AgenticAISEO = () => {
+
     const agenticFramework = [
         {
             title: "1. AI-Driven Discovery",
@@ -119,10 +120,25 @@ const AgenticAISEO = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Search is evolving from keywords to intelligence. We build AI-driven SEO systems that don’t just optimize pages — they think, learn, and adapt in real time to dominate modern search ecosystems.
                         </p>
-                        <div className="p-0  mb-6">
+                        {/* <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we deploy autonomous search agents that continuously monitor, analyze, and optimize your website for maximum organic output.
                             </p>
+                        </div> */}
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
@@ -296,6 +312,8 @@ const AgenticAISEO = () => {
                     </div>
                 </div>
             </section>
+
+
 
             {/* CTA */}
             <section className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">

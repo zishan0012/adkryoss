@@ -28,6 +28,7 @@ import {
 } from 'lucide-react';
 
 const HyperLocalMarketing = () => {
+
     const hyperlocalSolutions = [
         {
             title: "Local SEO Optimization",
@@ -134,10 +135,25 @@ const HyperLocalMarketing = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Turn proximity into profit with data-driven hyperlocal marketing strategies that put your business exactly where buying decisions happen — on local searches, maps, feeds, and mobile screens.
                         </p>
-                        <div className="p-0  mb-6">
+                        {/* <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we help businesses capture local intent and drive footfall, calls, and real-time conversions.
                             </p>
+                        </div> */}
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
@@ -344,6 +360,8 @@ const HyperLocalMarketing = () => {
                     </div>
                 </div>
             </section>
+
+
 
             {/* CTA */}
             <section className="py-20 bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">

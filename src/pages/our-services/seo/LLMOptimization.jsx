@@ -26,7 +26,8 @@ import {
 } from 'lucide-react';
 
 const LLMOptimization = () => {
-    const approach = [
+
+    const offerings = [
         {
             title: "1. AI Visibility Audit",
             icon: <Search size={32} />,
@@ -85,9 +86,10 @@ const LLMOptimization = () => {
     ];
 
     const strategyDifferent = [
-        { t: "Predictive AI Modeling", d: "We don't just optimize for current models; we anticipate future LLM training patterns." },
-        { t: "Entity-First Optimization", d: "Moving beyond keywords to build a robust brand entity in the AI knowledge graph." },
-        { t: "Sentiment Scaling", d: "Ensuring AI responses carry positive brand sentiment and authoritative tone." }
+        { t: "SEO + AI Optimization " },
+        { t: "Technical Precision + Content Strategy " },
+        { t: "Data Intelligence + Brand Positioning " },
+        { t: "Search Intent + Conversational Modeling " }
     ];
 
     const techStack = [
@@ -129,13 +131,28 @@ const LLMOptimization = () => {
                         <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Be the Answer. Not Just Another Result.
                         </h3>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
+                        <p className="text-[16px] md:text-[18px] mb-2 leading-[1.8] text-white">
                             AI platforms are redefining discovery. If your business isn't optimized for Large Language Models (LLMs) like ChatGPT and Gemini, you are invisible in the next generation of search. We ensure your brand becomes a trusted, cited answer.
                         </p>
                         <div className="p-0 mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we future-proof your digital presence for AI-driven discovery.
                             </p>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
@@ -239,10 +256,12 @@ const LLMOptimization = () => {
                             <div className="space-y-8">
                                 {strategyDifferent.map((item, i) => (
                                     <div key={i}>
-                                        <h4 className="text-[18px] font-bold text-[#0f172a] mb-2">{item.t}</h4>
-                                        <p className="text-[15px] text-[#475569] leading-[1.6] font-medium">{item.d}</p>
+                                        <h4 className="text-[18px] font-semibold text-[#0f172a] mb-6">{item.t}</h4>
+
                                     </div>
                                 ))}
+                                <p className="text-[15px] text-[#475569] leading-[1.6] font-bold">We don’t just optimize for clicks.
+                                    We optimize for AI trust. </p>
                             </div>
                         </div>
                         <div className="bg-[#f8fafc] p-[50px] rounded-[40px] border border-[#e2e8f0]">

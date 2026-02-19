@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 
 const SEOAudit = () => {
+
     const auditFramework = [
         {
             title: "1. Technical SEO Audit",
@@ -147,13 +148,28 @@ const SEOAudit = () => {
                         <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Uncover. Fix. Outrank.
                         </h3>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
+                        <p className="text-[16px] md:text-[18px] mb-2 leading-[1.8] text-white">
                             Your traffic drop isn’t random. Your competitors aren’t lucky. Growth starts with clarity — and clarity starts with a powerful SEO Audit.
                         </p>
                         <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we go beyond surface-level checks. We uncover hidden technical issues, content gaps, structural weaknesses, and authority leaks that silently block your rankings.
                             </p>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
@@ -374,6 +390,8 @@ const SEOAudit = () => {
                     </div>
                 </div>
             </section>
+
+
 
             {/* CTA */}
             <section className="py-[100px] text-center bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white">

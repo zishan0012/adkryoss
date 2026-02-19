@@ -29,7 +29,8 @@ import {
 } from 'lucide-react';
 
 const JavascriptSEO = () => {
-    const reasons = [
+
+    const jsOfferings = [
         { title: "Delayed Rendering", desc: "Search engines struggle with content hidden in the second wave of indexing.", icon: <Activity size={24} /> },
         { title: "Missing Content", desc: "Dynamically injected elements are often missed by traditional crawlers.", icon: <FileText size={24} /> },
         { title: "Crawl Budget Waste", desc: "Heavy script execution burns through crawl efficiency.", icon: <Zap size={24} /> },
@@ -143,10 +144,25 @@ const JavascriptSEO = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Modern websites run on JavaScript. Google doesn't always. If your content loads after rendering, search engines might never see it. We ensure your JS-driven website is fully crawlable, indexable, and optimized for maximum visibility.
                         </p>
-                        <div className="p-0  mb-6">
+                        {/* <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we bridge the gap between advanced development and search engine accessibility.
                             </p>
+                        </div> */}
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
@@ -171,7 +187,7 @@ const JavascriptSEO = () => {
                                 Today's websites rely heavily on frameworks like React, Angular, and Vue. While they deliver speed and user experience, they often create invisible barriers for search engines.
                             </p>
                             <div className="space-y-4">
-                                {reasons.map((item, i) => (
+                                {jsOfferings.map((item, i) => (
                                     <div key={i} className="flex gap-[15px] items-start">
                                         <div className="text-[#0066cc] mt-1">{item.icon}</div>
                                         <div>

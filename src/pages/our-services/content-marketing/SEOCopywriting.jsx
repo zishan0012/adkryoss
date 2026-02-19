@@ -163,7 +163,22 @@ const SEOCopywriting = () => {
                             Adkryoss managed by <span className="font-semibold text-white">Clink Consultancy Services Private Limited</span> delivers data-backed SEO copywriting that drives rankings, authority, and revenue — not just traffic.
                         </p>
 
-                    </div>
+                    
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
+                        </div>
+</div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <img

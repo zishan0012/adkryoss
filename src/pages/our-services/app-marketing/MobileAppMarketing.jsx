@@ -139,7 +139,7 @@ const MobileAppMarketing = () => {
               className="w-full max-w-md"
             />
           </div>
-{/* </div> */}
+          {/* </div> */}
         </div>
       </section>
 
@@ -284,11 +284,11 @@ const MobileAppMarketing = () => {
 
 
 
-<section className="py-20 px-6 bg-blue-50">
-  <div className="max-w-7xl mx-auto">
-    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left text-gray-900">
-      Our Process: From Launch to Scale
-    </h2>
+      <section className="py-20 px-6 bg-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left text-gray-900">
+            Our Process: From Launch to Scale
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* E-commerce & D2C Apps */}
@@ -408,7 +408,7 @@ const MobileAppMarketing = () => {
             Partner with Adkryoss managed by Clink Consultancy Services Private Limited to build a mobile app marketing engine that delivers measurable impact.
           </p>
           <button
-          onClick={()=> navigate("/contact?service=mobile-app-marketing")}
+            onClick={() => navigate("/contact?service=mobile-app-marketing")}
             className="mt-4 inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300"
           >
             Start your growth journey today

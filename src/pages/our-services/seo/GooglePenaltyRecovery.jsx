@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
     AlertTriangle,
@@ -20,10 +20,18 @@ import {
     LineChart,
     PieChart,
     Cpu,
-    HelpCircle
+    HelpCircle,
+    ChevronDown,
+    ChevronUp
 } from 'lucide-react';
 import googlepenaltyrecovery from '../../../assets/SEO/googlepenaltyhero.png';
 const GooglePenaltyRecovery = () => {
+    const [openFaq, setOpenFaq] = useState(null);
+
+    const toggleFaq = (i) => {
+        setOpenFaq(openFaq === i ? null : i);
+    };
+
     const commonReasons = [
         { title: "Toxic Backlinks", desc: "Spammy or low-quality inbound links.", icon: <AlertTriangle size={24} /> },
         { title: "Unnatural Anchor Text", desc: "Over-optimized keyword patterns.", icon: <Target size={24} /> },
@@ -114,6 +122,21 @@ const GooglePenaltyRecovery = () => {
                                 At Adkryoss managed by <span className="text-white font-bold">Clink Consultancy Services Private Limited</span>, we rebuild your SEO foundation stronger than before.
                             </p>
                         </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
+                        </div>
                     </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
@@ -121,7 +144,7 @@ const GooglePenaltyRecovery = () => {
                             <img
                                 src={googlepenaltyrecovery}
                                 alt=" Google Penalty Recovery Services"
-                                className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                                className="max-w-[450px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
                             />
                         </div>
                     </div>
@@ -234,7 +257,7 @@ const GooglePenaltyRecovery = () => {
                 </div>
             </section>
 
-            {/* Working Approach Comparison */}
+            {/* Why Choose Our Approach */}
             <section className="py-20 bg-white">
                 <div className="container text-center">
                     <h2 className="text-[36px] font-bold mb-[60px] text-[#0f172a]">
@@ -257,6 +280,62 @@ const GooglePenaltyRecovery = () => {
                     <p className="text-[16px] md:text-[18px] mb-6 mt-[50px] max-w-[900px] mx-auto leading-relaxed font-medium">
                         Adkryoss managed by Clink Consultancy Services Private Limited doesn't just fix penalties temporarily. We build <strong className="text-[#0f172a]">algorithm-proof digital ecosystems</strong>.
                     </p>
+                </div>
+            </section>
+
+            {/* Our Tools & Intelligence Stack */}
+            <section className="py-20 bg-[#f8fafc]">
+                <div className="container">
+                    <div className="grid md:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <h2 className="text-[36px] font-bold mb-8 text-[#0f172a] leading-tight">
+                                Our Tools & Intelligence Stack
+                            </h2>
+                            <div className="space-y-4">
+                                {[
+                                    { name: "Google Search Console", icon: <Search size={20} /> },
+                                    { name: "Ahrefs / SEMrush forensic analysis", icon: <BarChart3 size={20} /> },
+                                    { name: "Screaming Frog crawl diagnostics", icon: <Activity size={20} /> },
+                                    { name: "Toxic score & link velocity mapping", icon: <Database size={20} /> },
+                                    { name: "AI-based content evaluation", icon: <Cpu size={20} /> },
+                                    { name: "Core Web Vitals performance tracking", icon: <LineChart size={20} /> }
+                                ].map((tool, i) => (
+                                    <div key={i} className="flex items-center gap-4 p-4 bg-white rounded-xl border border-transparent shadow-sm transition-all hover:border-[#0066cc] hover:shadow-md">
+                                        <div className="text-[#0066cc]">{tool.icon}</div>
+                                        <span className="font-bold text-[#334155]">{tool.name}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <p className="mt-8 text-[18px] font-bold text-[#0066cc] italic">
+                                Every decision is backed by data.
+                            </p>
+                        </div>
+                        <div className="bg-white p-10 rounded-[30px] border border-[#e2e8f0] shadow-xl shadow-blue-900/5">
+                            <h2 className="text-[32px] font-bold mb-8 text-[#0f172a] leading-tight">
+                                Industries We've Supported in Recovery
+                            </h2>
+                            <div className="grid grid-cols-2 gap-4">
+                                {[
+                                    "E-commerce",
+                                    "SaaS Platforms",
+                                    "Healthcare",
+                                    "Education",
+                                    "Real Estate",
+                                    "Fintech",
+                                    "Enterprise Brands",
+                                    "B2B Service Companies"
+                                ].map((industry, i) => (
+                                    <div key={i} className="flex items-center gap-3 p-4 bg-[#f8fafc] rounded-xl border border-transparent transition-all hover:border-[#0066cc] group">
+                                        <CheckCircle2 size={18} className="text-[#0066cc] shrink-0" />
+                                        <span className="font-bold text-[#334155] group-hover:text-[#0066cc] transition-colors">{industry}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <p className="mt-8 text-[16px] font-semibold text-[#0f172a] border-l-4 border-[#0066cc] pl-4 italic">
+                                Search penalties don’t discriminate — but recovery requires expertise.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -287,20 +366,23 @@ const GooglePenaltyRecovery = () => {
 
             {/* FAQ Section */}
             <section className="py-20 bg-white">
-                <div className="container">
+                <div className="container px-6 mx-auto">
                     <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">Recovery Intelligence (FAQs)</h2>
-                    <div className="max-w-[900px] mx-auto space-y-6">
-                        {[
-                            { q: "How do I know if I've been penalized?", a: "Check Google Search Console for 'Manual Actions' and analyze traffic drop patterns aligned with known algorithm updates." },
-                            { q: "Can you guarantee recovery?", a: "Ethical SEO cannot promise instant restoration, but a structured forensic cleanup significantly improves recovery probability and search trust." },
-                            { q: "Will rankings return to previous levels?", a: "With correct authority rebuilding and compliance, many sites regain and eventually exceed their past performance." },
-                            { q: "Should I disavow all backlinks?", a: "No. Only toxic, manipulative, or paid links should be disavowed after a careful forensic link audit." }
-                        ].map((faq, i) => (
-                            <div key={i} className="p-[30px] bg-[#f8fafc] rounded-[24px] border border-[#e2e8f0] transition-all hover:border-[#0066cc]/30 shadow-sm">
-                                <h3 className="text-[18px] font-semibold text-[#0f172a] mb-3 flex gap-3">
-                                    <HelpCircle size={22} className="text-[#0066cc] shrink-0" /> {faq.q}
-                                </h3>
-                                <p className="text-base text-[#475569] leading-[1.7] m-0 pl-[34px] font-medium">{faq.a}</p>
+                    <div className="max-w-[800px] mx-auto">
+                        {faqs.map((faq, i) => (
+                            <div key={i} className="mb-[15px] border border-[#e2e8f0] rounded-[15px] overflow-hidden bg-white shadow-sm transition-all duration-300 hover:shadow-md">
+                                <button
+                                    onClick={() => toggleFaq(i)}
+                                    className={`w-full p-[20px_30px] flex justify-between items-center transition-all duration-300 border-none cursor-pointer ${openFaq === i ? 'bg-[#f8fafc]' : 'bg-white'}`}
+                                >
+                                    <span className="text-[18px] font-bold text-[#0f172a] text-left">{faq.q}</span>
+                                    {openFaq === i ? <ChevronUp size={20} className="text-[#0066cc]" /> : <ChevronDown size={20} className="text-slate-400" />}
+                                </button>
+                                {openFaq === i && (
+                                    <div className="p-[20px_30px] bg-white border-t border-[#e2e8f0]">
+                                        <p className="m-0 text-[#475569] leading-[1.7] text-[16px] font-medium">{faq.a}</p>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>

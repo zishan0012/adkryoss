@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Youtube, MapPin, Phone, Mail } from 'lucide-react';
-import mainlogo from '../assets/mainlogo.png';
+import footerlogo from '../assets/footerlogo.png';
 
 const Footer = () => {
     return (
@@ -13,7 +13,7 @@ const Footer = () => {
                     <div>
                         <Link to="/" className="mb-2 block -mt-2">
                             <img
-                                src={mainlogo}
+                                src={footerlogo}
                                 alt="Adkryoss"
                                 className="h-10 md:h-12 w-auto  object-contain object-left"
                             />

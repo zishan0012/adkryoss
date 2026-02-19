@@ -152,36 +152,36 @@ const techStack = [
 const AIMarketing = () => {
   return (
     <>
-     {/* HERO SECTION */}
-<section
-  className="relative py-24 text-white bg-cover bg-center"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-  }}
->
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-blue-900/80"></div>
+      {/* HERO SECTION */}
+      <section
+        className="relative py-24 text-white bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-blue-900/80"></div>
 
-  <div className="relative max-w-7xl mx-auto px-6">
-    <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+        <div className="relative max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
 
-      {/* LEFT CONTENT */}
-      <div>
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-          AI-Powered Digital Marketing Agency <br />
-          <span className="text-blue-300">
-            for Smarter, Faster Growth
-          </span>
-        </h1>
+            {/* LEFT CONTENT */}
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                AI-Powered Digital Marketing Agency <br />
+                <span className="text-blue-300">
+                  for Smarter, Faster Growth
+                </span>
+              </h1>
 
-        <p className="text-blue-100 text-lg leading-relaxed mb-8 max-w-xl">
-          Grow your business with AI-driven marketing strategies that deliver
-          faster results, smarter campaigns, and high-intent leads built for
-          sustainable growth.
-        </p>
+              <p className="text-blue-100 text-lg leading-relaxed mb-8 max-w-xl">
+                Grow your business with AI-driven marketing strategies that deliver
+                faster results, smarter campaigns, and high-intent leads built for
+                sustainable growth.
+              </p>
 
-        <div className="flex flex-wrap gap-4">
+              {/* <div className="flex flex-wrap gap-4">
           <button className="bg-white text-blue-800 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 transition-all duration-300 hover:shadow-xl">
             Speak to an Expert →
           </button>
@@ -189,26 +189,41 @@ const AIMarketing = () => {
           <button className="border border-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-blue-800 transition-all duration-300">
             Our Services →
           </button>
-        </div>
-      </div>
+        </div> */}
 
-      {/* RIGHT IMAGE */}
-      <div className="flex justify-center lg:justify-end">
-  <img
-    src={digi}
-    alt="Digital Marketing"
-    className="
+              <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                <a
+                  href="/contact"
+                  className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                >
+                  Speak to Our Expert →
+                </a>
+                <a
+                  href="#services"
+                  className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                >
+                  Our Services →
+                </a>
+              </div>
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div className="flex justify-center lg:justify-end">
+              <img
+                src={digi}
+                alt="Digital Marketing"
+                className="
       w-full 
       max-w-[520px] 
       h-[380px] 
       object-cover 
       rounded-xl
     "
-  />
-</div>
-    </div>
-  </div>
-</section>
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div className="max-w-7xl mx-auto px-6 pt-6 text-sm text-gray-500">
         <span className="hover:text-blue-600 cursor-pointer">Home</span>
