@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PressReleaseImage from "../../assets/PressRelease.jpeg";
 
 const PressReleases = () => {
     return (
@@ -36,9 +36,10 @@ Press Release
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end hide-below-790">
       <img
-        src="https://www.techmagnate.com/wp-content/uploads/2025/10/Press-Releases.webp"
+        // src="https://www.techmagnate.com/wp-content/uploads/2025/10/Press-Releases.webp"
+        src={PressReleaseImage}
         alt="About Adkryoss"
-        className="w-56 md:w-80 rounded-xl shadow-lg mr-10"
+        className="w-56 md:w-100 h-70 rounded-xl shadow-lg mr-40"
       />
     </div>
 

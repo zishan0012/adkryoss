@@ -1,6 +1,8 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
+import AboutImage from "../../assets/About.jpeg";
 const AboutUs = () => {
+  const navigate = useNavigate();
     return (
         <>
 
@@ -47,9 +49,10 @@ const AboutUs = () => {
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end hide-below-790">
       <img
-        src="https://www.techmagnate.com/wp-content/uploads/2025/10/About-Us.webp"
+        // src="/assets/About.jpeg"
+       src={AboutImage} 
         alt="About Adkryoss"
-        className="w-56 md:w-80 rounded-xl shadow-lg"
+        className="w-56 md:w-130 rounded-xl shadow-lg"
       />
     </div>
 
@@ -709,7 +712,9 @@ const AboutUs = () => {
 
     {/* Optional CTA Button */}
     <div className="mt-12">
-      <button className="bg-white text-blue-700 font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition duration-300">
+      <button 
+      onClick={()=>navigate("/contact")}
+      className="bg-white text-blue-700 font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition duration-300">
         Get Started Today
       </button>
     </div>

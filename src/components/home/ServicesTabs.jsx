@@ -16,63 +16,42 @@ const tabContent = {
   "Search Engine Optimization": {
     title: "Search Engine Optimization",
     desc: "Dominate search rankings with technical SEO, content strategy, high-authority link building, and AI-optimized search frameworks. We focus on traffic that converts — not vanity metrics. .",
-    button: "Discover SEO Services",
-    services: [
-      "AI SEO Services",
-      "Enterprise SEO Services",
-      "Ecommerce SEO Services",
-    ],
+    
     image:
       "https://www.techmagnate.com/wp-content/uploads/2025/01/seo-services.webp",
   },
   "Performance Marketing (PPC & Paid Media)": {
     title: "Performance Marketing (PPC & Paid Media)",
     desc: "Google Ads, Meta Ads, LinkedIn Ads & programmatic campaigns engineered for maximum ROI. Smart bidding, advanced targeting, and CRO-backed landing strategies. ",
-    button: "Discover Paid Marketing Services",
-    services: ["PPC Services", "PPC Reseller Services", "Mobile Advertising"],
+    
     image:
       "https://www.techmagnate.com/wp-content/uploads/2025/04/ppc-services-company.webp",
   },
   "Social Media Marketing": {
     title: "Social Media Marketing",
     desc: "From brand storytelling to paid social scaling — we build community, engagement, and measurable conversions across Instagram, LinkedIn, Facebook, and emerging platforms. ",
-    button: "Discover Content Marketing Services",
-    services: ["Content Writing Services", "Guest Posting"],
+   
     image:
       "https://www.techmagnate.com/wp-content/uploads/2025/04/content-marketing-services.webp",
   },
   "E-Commerce Marketing ": {
     title: "E-Commerce Marketing ",
     desc: "Marketplace optimization, product feed management, dynamic ads, and performance scaling strategies for Shopify, WooCommerce & Amazon brands.",
-    button: "Discover App Marketing Services",
-    services: [
-      "App Store Optimization Services",
-      "Mobile App Marketing Services",
-    ],
+    
     image:
       "https://www.techmagnate.com/wp-content/uploads/2025/04/mobile-app-marketing-services.webp",
   },
   "Content & Inbound Marketing ": {
     title: "Content & Inbound Marketing ",
     desc: "SEO blogs, thought leadership, video marketing, and funnel-driven content that attracts, nurtures, and converts your audience. ",
-    button: "Discover Martech Services",
-    services: [
-      "Martech Consulting Services",
-      "Conversion Rate Optimization",
-      "Customer Data Platform Services",
-    ],
+    
     image:
       "https://www.techmagnate.com/wp-content/uploads/2025/04/Martech1.webp",
   },
   "Conversion Rate Optimization (CRO)": {
     title: "Conversion Rate Optimization (CRO) ",
     desc: "We turn traffic into revenue using heatmaps, A/B testing, UX audits, and behavioral analytics. ",
-    button: "Discover Martech Services",
-    services: [
-      "Martech Consulting Services",
-      "Conversion Rate Optimization",
-      "Customer Data Platform Services",
-    ],
+    
     image:
       "https://www.techmagnate.com/wp-content/uploads/2025/04/Martech1.webp",
   },
@@ -326,9 +305,7 @@ const ServicesTabs = () => {
           {content.desc}
         </p>
 
-        <button className="mt-6 bg-orange-500 text-white px-6 py-3 rounded-full font-semibold">
-          {content.button} →
-        </button>
+        
       </div>
 
       {/* Right Content */}
@@ -341,7 +318,7 @@ const ServicesTabs = () => {
         />
 
         {/* Services List */}
-        <div className="mt-6 lg:mt-0 lg:absolute lg:right-[-40px] lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-[280px] flex flex-col gap-3">
+        {/* <div className="mt-6 lg:mt-0 lg:absolute lg:right-[-40px] lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-[280px] flex flex-col gap-3">
           {content.services.map((service) => (
             <a
               key={service}
@@ -356,7 +333,7 @@ const ServicesTabs = () => {
               {service}
             </a>
           ))}
-        </div>
+        </div> */}
 
       </div>
     </div>

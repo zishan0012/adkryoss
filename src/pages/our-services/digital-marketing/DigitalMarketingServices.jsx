@@ -1,4 +1,5 @@
 import React from "react";
+import DigitalMarketingImage from "../../../assets/DigitalMarketing.png";
 import {
   Search,
   Bot,
@@ -186,7 +187,7 @@ const DigitalMarketingServices = () => {
           <div className="relative flex justify-center">
             <div className="bg-green-500 rounded-full w-56 h-56 absolute -z-10 right-4"></div>
             <div className="w-64 h-40 bg-white/10 rounded-xl flex items-center justify-center">
-              Digital Marketing
+           <img className="" src={DigitalMarketingImage}  />
             </div>
           </div>
         </div>

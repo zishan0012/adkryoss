@@ -1,6 +1,7 @@
 
 import React from "react";
-
+import CareerImage from "../../assets/Career.jpeg";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const jobs = [
@@ -62,6 +63,7 @@ const jobs = [
 ];
 
 const Careers = () => {
+  const navigate = useNavigate();
    const [expandedIndex, setExpandedIndex] = useState(null);
 
 
@@ -107,9 +109,10 @@ const Careers = () => {
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end hide-below-790">
       <img
-        src="https://www.techmagnate.com/wp-content/uploads/2026/01/Careers.webp"
+        // src="https://www.techmagnate.com/wp-content/uploads/2026/01/Careers.webp"
+        src={CareerImage}
         alt="Careers"
-        className="w-56 md:w-80 rounded-xl shadow-lg"
+        className="w-56 md:w-100 rounded-xl shadow-lg"
       />
     </div>
 
@@ -760,7 +763,7 @@ const Careers = () => {
         </div>
 
         <a
-          href="mailto:careers@adkryoss.com"
+    href="mailto:careers@adkryoss.com"
           className="inline-block bg-orange-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-600 transition"
         >
           📩 Apply Now →
