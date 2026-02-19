@@ -7,6 +7,7 @@ import Coaching from "../../assets/coaching.jpg";
 import Skills from "../../assets/skill.jpg";
 import Abroad from "../../assets/abroad.jpg";
 import Future from "../../assets/future.png";
+import education from "../../assets/education.png"
 import {
   Search,
   Target,
@@ -193,9 +194,9 @@ const Education = () => {
             {/* RIGHT IMAGE */}
             <div className="flex justify-end">
               <img
-                src="https://www.techmagnate.com/wp-content/uploads/2025/04/digital-marketing-for-education-industry.webp"
+                src={education}
                 alt="Digital Marketing for Educational Institutions"
-                className="w-80 lg:w-96 object-contain drop-shadow-2xl"
+                 className="w-full h-[450px] object-fit rounded-xl"
               />
             </div>
           </div>

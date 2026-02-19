@@ -6,6 +6,7 @@ import Phara from "../../assets/phara.jpg"
 import Healthtech from "../../assets/healthtech.jpg"
 import Multi from "../../assets/multi.jpg"
 import Diag from "../../assets/diagnisttic.jpg"
+import healthindus from "../../assets/industryhealth.png"
 import Cosmetic from "../../assets/cosmetic.jpg"
 import {
   Search,
@@ -232,14 +233,20 @@ const Healthcare = () => {
       </div>
 
       {/* RIGHT IMAGE */}
-      <div className="flex justify-end">
-        <img
-          src="https://www.techmagnate.com/wp-content/uploads/2025/04/digital-marketing-for-healthcare-industry.webp"
-          alt="Healthcare Digital Marketing Agency"
-          className="w-105 lg:w-130 object-contain drop-shadow-2xl"
-        />
-      </div>
-
+      <div className="flex justify-center lg:justify-end">
+  <img
+    src={healthindus}
+    alt="Healthcare Digital Marketing Agency"
+    className="
+      w-full 
+      max-w-md 
+      lg:max-w-lg 
+      h-auto 
+      object-contain 
+      drop-shadow-2xl
+    "
+  />
+</div>
     </div>
   </div>
 </section>
