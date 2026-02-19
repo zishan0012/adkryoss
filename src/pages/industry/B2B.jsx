@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
+import B2BImage from "../../assets/B2B.jpeg";
 
 const B2B = () => {
+  const navigate = useNavigate();
     return (
         <>
          <section
@@ -30,7 +33,7 @@ B2B Digital Marketing Services
       <p className="text-white md:text-md leading-relaxed">
  In B2B, decisions are not emotional — they are strategic, data-driven, and value-focused. Your buyers are decision-makers, procurement heads, CXOs, and business influencers who demand proof before partnership. 
 <br />
-<span className='font-bold text-black'>Adkryoss managed by Clink Consultancy Services Private Limited</span> builds intelligent B2B marketing ecosystems that generate qualified leads, shorten sales cycles, and drive measurable revenue growth. 
+<span className='font-bold text-white'>Adkryoss managed by Clink Consultancy Services Private Limited</span> builds intelligent B2B marketing ecosystems that generate qualified leads, shorten sales cycles, and drive measurable revenue growth. 
   </p>
 
     </div>
@@ -38,9 +41,9 @@ B2B Digital Marketing Services
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end hide-below-790">
       <img
-        src="https://www.techmagnate.com/wp-content/uploads/2025/08/Best-Place-to-Work-in-India.webp"
+        src={B2BImage}
         alt="About Adkryoss"
-        className="w-56 md:w-80 rounded-xl shadow-lg mr-10"
+        className="w-56 md:w-100 h-70 rounded-xl shadow-lg mr-10 md:mb-20"
       />
     </div>
 
@@ -776,7 +779,9 @@ B2B Digital Marketing Services
 
     {/* CTA BUTTON */}
     <div>
-      <button className="bg-white text-blue-800 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-blue-100 transition duration-300">
+      <button
+      onClick={() => navigate("/contact?service=b2b")}
+      className="bg-white text-blue-800 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-blue-100 transition duration-300">
         Let’s Build Your Growth Strategy
       </button>
     </div>

@@ -1,6 +1,10 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
+import EcommerceImage from "../../assets/Ecommerce.png";
+
 
 const Ecommerce = () => {
+  const navigate = useNavigate();
     return (
         <>
          <section
@@ -37,9 +41,9 @@ Ecommerce Digital Marketing Services
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end hide-below-790">
       <img
-        src="https://www.techmagnate.com/wp-content/uploads/2025/05/Ecommerce-Solutions.webp"
+        src={EcommerceImage}
         alt="About Adkryoss"
-        className="w-56 md:w-80 rounded-xl shadow-lg mr-10"
+        className="w-56 md:w-100 h-70 rounded-xl shadow-lg mr-10 "
       />
     </div>
 
@@ -587,9 +591,13 @@ Ecommerce Digital Marketing Services
     </p>
     
     {/* CTA Button */}
-    <a href="/careers" className="inline-block bg-white text-blue-700 font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition">
+    <button
+  //  onClick={() => navigate("/contact")} 
+   onClick={()=> navigate("/contact?service=ecommerce")}
+    
+    className="inline-block bg-white text-blue-700 font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition">
       Explore Opportunities
-    </a>
+    </button>
     
   </div>
 </section>

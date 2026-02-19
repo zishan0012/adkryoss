@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
+import BFSIImage from "../../assets/BFSI.jpeg";
 
 const BFSI = () => {
+  const navigate = useNavigate();
     return (
         <>
         <section
@@ -12,39 +15,43 @@ const BFSI = () => {
 >
   <div className="max-w-8xl mx-auto px-6  grid md:grid-cols-2 items-center gap-12">
 
-    {/* LEFT CONTENT */}
+    
     <div className="text-left text-white space-y-6 mt-[-15px] ml-20">
 
-      {/* H2 Heading */}
+     
       <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white w-200">
 BFSI Digital Marketing Services 
       </h2>
 
-      {/* H3 Subheading */}
+      
       <h3 className="text-2xl md:text-xl font-semibold leading-snug">
    Accelerate Growth. Strengthen Trust. Lead the Digital-First Financial Era. 
       </h3>
 
 
-      {/* Paragraph */}
       <p className="text-white md:text-md leading-relaxed">
- The BFSI sector is evolving faster than ever. Customers expect seamless digital journeys, instant responses, data security, and personalized financial experiences. At <span className='text-black font-bold'> Adkryoss managed by Clink Consultancy Services Private Limited, </span> we help banks, NBFCs, fintech brands, insurance providers, and investment firms scale with performance-driven, compliance-ready digital marketing strategies. 
+ The BFSI sector is evolving faster than ever. Customers expect seamless digital journeys, instant responses, data security, and personalized financial experiences. At <span className='text-white font-bold'> Adkryoss managed by Clink Consultancy Services Private Limited, </span> we help banks, NBFCs, fintech brands, insurance providers, and investment firms scale with performance-driven, compliance-ready digital marketing strategies. 
 <br />
 We don’t just generate traffic — we build credibility, qualified leads, and long-term customer value.  </p>
 
     </div>
 
-    {/* RIGHT IMAGE */}
+   
     <div className="flex justify-center md:justify-end hide-below-790">
       <img
-        src="https://www.techmagnate.com/wp-content/uploads/2025/03/digital-marketing-for-bfsi-industry.webp"
+        src={BFSIImage}
         alt="About Adkryoss"
-        className="w-56 md:w-80 rounded-xl shadow-lg mr-10"
+        className="w-56 md:w-100 h-70 rounded-xl shadow-lg mr-10 md:mb-20"
       />
     </div>
 
   </div>
 </section>
+
+
+
+
+
         
 
 <section className="bg-gradient-to-r from-gray-50 to-blue-50 py-20 px-6">
@@ -738,11 +745,21 @@ We don’t just generate traffic — we build credibility, qualified leads, and 
     </p>
 
     {/* CTA BUTTON */}
-    <div>
+    {/* <div>
       <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition duration-300 shadow-lg">
         Book a Strategy Consultation
       </button>
-    </div>
+    </div> */}
+
+
+    <div>
+  <button
+    onClick={() => navigate("/contact")}
+    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition duration-300 shadow-lg"
+  >
+    Book a Strategy Consultation
+  </button>
+</div>
 
   </div>
 </section>
@@ -772,11 +789,15 @@ We don’t just generate traffic — we build credibility, qualified leads, and 
 
     {/* CTA BUTTONS */}
     <div className="flex flex-col sm:flex-row justify-center gap-4">
-      <button className="bg-white text-blue-800 px-8 py-3 rounded-full font-semibold hover:scale-105 transition duration-300">
+      <button 
+      onClick={() => navigate("/contact?service=bfsi")}
+      className="bg-white text-blue-800 px-8 py-3 rounded-full font-semibold hover:scale-105 transition duration-300">
         Schedule a Strategy Call
       </button>
 
-      <button className="border border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition duration-300">
+      <button 
+      onClick={() => navigate("/contact?service=bfsi")}
+      className="border border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition duration-300">
         Request a Proposal
       </button>
     </div>

@@ -196,18 +196,7 @@ const TrafficGrowthSection = () => {
              We follow a structured, research-driven, and performance-focused process: 
             </p>
 
-            <button
-              style={{
-                backgroundColor: "#000",
-                color: "#fff",
-                padding: "12px 32px",
-                borderRadius: "999px",
-                border: "none",
-                cursor: "pointer",
-              }}
-            >
-              Get Started
-            </button>
+          
           </div>
 
           {/* RIGHT SIDE */}
