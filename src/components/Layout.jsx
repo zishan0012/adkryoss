@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
+import FixedCTA from "../components/FixedCTA";
 
 const Layout = ({ children }) => {
     return (
@@ -9,9 +10,11 @@ const Layout = ({ children }) => {
             <Header />
             <main className="flex-1 pt-20 min-h-[calc(100vh-400px)]">
                 {children}
+                
             </main>
             <Footer />
             <ScrollToTop />
+            <FixedCTA />
         </div>
     );
 };

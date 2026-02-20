@@ -15,6 +15,7 @@ const CaseStudy = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
                     {/* LEFT CONTENT */}
                     <div className="text-left text-white">
+                        
                         <h1 className="text-[32px] md:text-[48px] font-bold mb-4 leading-tight">
                             Our Case Studies
                         </h1>

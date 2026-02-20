@@ -3,47 +3,87 @@ import BestPlaceToWorkImage from "../../assets/BestPlaceToWork.jpeg";
 const BestPlaceToWork = () => {
     return (
         <>
-         <section
-  className="bg-cover bg-center bg-no-repeat py-16 h-100 md:py-20"
+        
+{/* <section
+  className="relative flex items-center min-h-[70vh] bg-cover bg-center"
   style={{
     backgroundImage:
       "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
   }}
 >
-  <div className="max-w-8xl mx-auto px-6  grid md:grid-cols-2 items-center gap-12">
+  <div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4">
 
-    {/* LEFT CONTENT */}
-    <div className="text-left text-white space-y-6 mt-[-15px] ml-20">
+ 
+      <div className="text-left lg:text-left text-white space-y-6 mx-auto lg:mx-0">
 
-      {/* H2 Heading */}
-      <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white w-200">
-Best Place to Work 
+      <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white w-200">
+        Best Place to Work
       </h2>
 
-      {/* H3 Subheading */}
       <h3 className="text-2xl md:text-xl font-semibold leading-snug">
-   Where Talent Grows. Ideas Scale. Leaders Are Built. 
+        Where Talent Grows. Ideas Scale. Leaders Are Built.
       </h3>
 
-
-      {/* Paragraph */}
-      <p className="text-white md:text-md leading-relaxed">
- At Adkryoss managed by Clink Consultancy Services Private Limited, we don’t just build high-performing digital brands — we build high-performing people. 
-<br />
-We believe a workplace should inspire ambition, reward ownership, and encourage bold thinking. That’s why we’ve created a culture where innovation thrives, collaboration is natural, and growth is continuous. 
-
-  </p>
+      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+        At Adkryoss managed by Clink Consultancy Services Private Limited, we don’t just build high-performing digital brands — we build high-performing people.
+        <br />
+        We believe a workplace should inspire ambition, reward ownership, and encourage bold thinking. That’s why we’ve created a culture where innovation thrives, collaboration is natural, and growth is continuous.
+      </p>
 
     </div>
 
-    {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end hide-below-790">
-      <img
-        // src="https://www.techmagnate.com/wp-content/uploads/2025/08/Best-Place-to-Work-in-India.webp"
-        src={BestPlaceToWorkImage}
-        alt="About Adkryoss"
-        className="w-56 md:w-100 h-70 rounded-xl shadow-lg mr-30"
-      />
+  
+
+
+
+ <div className="flex justify-center lg:justify-end mt-10 lg:mt-0">
+    <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+    <img
+      src={BestPlaceToWorkImage}
+      alt="Section Image"
+      className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+    />
+  </div>
+</div>
+
+  </div>
+</section> */}
+
+
+
+<section
+  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    <div className="text-left text-white max-w-[600px] space-y-6">
+      <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white">
+        Best Place to Work
+      </h2>
+
+      <h3 className="text-2xl md:text-xl font-semibold leading-snug">
+        Where Talent Grows. Ideas Scale. Leaders Are Built.
+      </h3>
+
+      <p className="text-white leading-relaxed">
+        At Adkryoss managed by Clink Consultancy Services Private Limited, we don’t just build high-performing digital brands — we build high-performing people.
+        <br /><br />
+        We believe a workplace should inspire ambition, reward ownership, and encourage bold thinking.
+      </p>
+    </div>
+
+    <div className="flex justify-center md:justify-end">
+      <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+        <img
+          src={BestPlaceToWorkImage}
+          alt="Best Place To Work"
+          className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+        />
+      </div>
     </div>
 
   </div>

@@ -6,33 +6,35 @@ const ASOServices = () => {
   const navigate = useNavigate();
     return (
         <>
-        <section
-  className="bg-cover bg-center bg-no-repeat py-16 h-100 md:py-20"
+      
+
+{/* <section
+  className="relative flex items-center min-h-[70vh] bg-cover bg-center"
   style={{
     backgroundImage:
       "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
   }}
 >
-  <div className="max-w-8xl mx-auto px-6  grid md:grid-cols-2 items-center gap-12">
+  <div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4">
 
-    {/* LEFT CONTENT */}
-    <div className="text-left text-white space-y-6 mt-[-15px] ml-20">
+   
+      <div className="text-left lg:text-left text-white space-y-6 mx-auto lg:mx-0">
 
-      {/* H2 Heading */}
-      <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white w-200">
-ASO Services – Drive More Downloads.
+      <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
+        ASO Services – Drive More Downloads.
       </h2>
 
-      {/* H3 Subheading */}
       <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
-   Maximize App Revenue.
+        Maximize App Revenue.
       </h3>
 
-      <h4 className="text-2xl md:text-2xl font-semibold leading-snug">Unlock unstoppable app growth with data-driven App Store Optimization.</h4>
+      <h4 className="text-2xl md:text-2xl font-semibold leading-snug">
+        Unlock unstoppable app growth with data-driven App Store Optimization.
+      </h4>
 
-      {/* Paragraph */}
-      <p className="text-white md:text-md leading-relaxed">
-  Your app deserves visibility, downloads, and loyal users — not invisibility in crowded app stores.   </p>
+      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+        Your app deserves visibility, downloads, and loyal users — not invisibility in crowded app stores.
+      </p>
 
     
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
@@ -51,18 +53,61 @@ ASO Services – Drive More Downloads.
                         </div>
 </div>
 
-    {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end hide-below-790">
-      <img
-        src={ASOImage}
-        alt="About Adkryoss"
-        className="w-56 md:w-100 h-70 rounded-xl shadow-lg mr-10"
-      />
+    
+
+     <div className="flex justify-center lg:justify-end mt-10 lg:mt-0">
+        <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+        <img
+          src={ASOImage}
+          alt="Section Image"
+          className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+        />
+      </div>
+    </div>
+
+  </div>
+</section> */}
+<section
+  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    <div className="text-left text-white space-y-6">
+
+      <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
+        ASO Services – Drive More Downloads.
+      </h2>
+
+      <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
+        Maximize App Revenue.
+      </h3>
+
+      <h4 className="text-2xl md:text-2xl font-semibold leading-snug">
+        Unlock unstoppable app growth with data-driven App Store Optimization.
+      </h4>
+
+      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+        Your app deserves visibility, downloads, and loyal users — not invisibility in crowded app stores.
+      </p>
+
+    </div>
+
+    <div className="flex justify-center md:justify-end">
+      <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+        <img
+          src={ASOImage}
+          alt="Section Image"
+          className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+        />
+      </div>
     </div>
 
   </div>
 </section>
-
 
 
 
