@@ -180,7 +180,7 @@ const EcommerceSEO = () => {
                             <img
                                 src={ecommerceseo}
                                 alt="Ecommerce SEO Services"
-                                className="max-w-[200px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                                className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
                             />
                         </div>
                     </div>

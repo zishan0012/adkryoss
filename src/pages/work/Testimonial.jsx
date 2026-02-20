@@ -11,7 +11,7 @@ import {
     MessageSquare,
     Quote
 } from 'lucide-react';
-
+import testimonialhero from '../../assets/work/testimonialhero.png';
 const Testimonial = () => {
     const testimonials = [
         {
@@ -83,11 +83,12 @@ const Testimonial = () => {
                         </p>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/12/Testimonial-1.png"
-                            alt="Client Success"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={testimonialhero}
+                                alt="Client Success"
+                                className="max-w-[300px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)] rounded-2xl"
+                            /></div>
                     </div>
                 </div>
             </section>

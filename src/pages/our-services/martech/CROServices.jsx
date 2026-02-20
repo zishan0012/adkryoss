@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import croservicehero from "../../../assets/martech/croservicehero.png";
 import {
     Target,
     Zap,
@@ -164,12 +165,12 @@ const CROServices = () => {
                             At Adkryoss managed by <span className="font-semibold">Clink Consultancy Services Private Limited</span>, CRO is not about guesswork or random A/B tests. It’s about combining analytics, behavioral insights, UX strategy, and performance marketing intelligence to build a measurable growth engine.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
+                            {/* <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
                                 <Zap className="text-yellow-400" size={24} />
                                 <span className="font-semibold text-white text-sm tracking-widest">Transform Traffic to Revenue</span>
-                            </div>
+                            </div> */}
                         </div>
-                    
+
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <a
                                 href="/contact"
@@ -184,14 +185,16 @@ const CROServices = () => {
                                 Our Services →
                             </a>
                         </div>
-</div>
+                    </div>
                     {/* RIGHT IMAGE */}
-                    <div className="flex justify-center md:justify-end relative z-10 animate-float">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/05/Conversion-Rate-Optimization.webp"
-                            alt="CRO Services"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
-                        />
+                    <div className="flex justify-center md:justify-end relative z-10">
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={croservicehero}
+                                alt="CRO Services"
+                                className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.25)] rounded-2xl"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

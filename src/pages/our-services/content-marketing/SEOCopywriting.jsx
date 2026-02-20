@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import seocopywritinghero from "../../../assets/content-marketing/seocopywritinghero.png";
 import {
     PenTool,
     Target,
@@ -155,7 +156,7 @@ const SEOCopywriting = () => {
                         <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Write to Rank. Write to Convert.
                         </h3>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium text-white italic">
+                        <p className="text-[16px] md:text-[18px] mb-2 leading-[1.8] font-medium text-white">
                             Search engines read structure. Humans read stories. <br />
                             We craft SEO copy that speaks to both — strategically optimized, conversion-focused, and built for long-term organic growth.
                         </p>
@@ -163,7 +164,6 @@ const SEOCopywriting = () => {
                             Adkryoss managed by <span className="font-semibold text-white">Clink Consultancy Services Private Limited</span> delivers data-backed SEO copywriting that drives rankings, authority, and revenue — not just traffic.
                         </p>
 
-                    
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <a
                                 href="/contact"
@@ -178,27 +178,31 @@ const SEOCopywriting = () => {
                                 Our Services →
                             </a>
                         </div>
-</div>
+                    </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/SEO-Copywriting-Services.webp"
-                            alt="SEO Copywriting"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] animate-float"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={seocopywritinghero}
+                                alt="SEO Copywriting"
+                                className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)] rounded-2xl"
+                            /></div>
                     </div>
                 </div>
             </section>
 
-            {/* Why SEO Copywriting Is a Growth Engine Section */}
-            <section className="py-24 bg-slate-50">
-                <div className="container px-6 text-center mb-16">
-                    <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight">
-                        Why SEO Copywriting Is a Growth Engine
-                    </h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed max-w-4xl mx-auto font-medium">
-                        Today’s search ecosystem is smarter than ever. With AI-powered search models, semantic indexing, and intent-based ranking signals, content must go beyond keywords.
-                    </p>
+            {/* Why SEO Copywriting Section */}
+            <section className="py-24 bg-white">
+                <div className="container px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight">
+                            Why SEO Copywriting Is a Growth Engine
+                        </h2>
+                        <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed max-w-4xl mx-auto font-medium">
+                            Today’s search ecosystem is smarter than ever. With AI-powered search models, semantic indexing, and intent-based ranking signals, content must go beyond keywords.
+                        </p>
+                    </div>
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
                         {[
                             "Match search intent precisely",
@@ -212,18 +216,18 @@ const SEOCopywriting = () => {
                             </div>
                         ))}
                     </div>
+
                     <div className="max-w-4xl mx-auto p-10 bg-white rounded-2xl border border-slate-200 shadow-xl relative overflow-hidden group">
                         <div className="absolute top-0 left-0 w-2 h-full bg-[#0066CC]"></div>
                         <p className="text-xl italic font-medium leading-relaxed m-0 text-slate-800">
                             Adkryoss managed by <span className="font-semibold text-[#0066CC]">Clink Consultancy Services Private Limited</span> blends search intelligence with persuasive storytelling to create content that ranks sustainably and converts consistently.
                         </p>
-
                     </div>
                 </div>
             </section>
 
             {/* Services Section */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-slate-50">
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">Our SEO Copywriting Services</h2>
@@ -231,8 +235,8 @@ const SEOCopywriting = () => {
 
                     <div className="flex flex-wrap justify-center gap-10">
                         {services.map((item, index) => (
-                            <div key={index} className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 w-full md:w-[calc(33.333%-27px)] min-w-[300px] max-w-[400px] grow cursor-pointer group hover:border-[#0066CC] hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)] flex flex-col">
-                                <div className="w-16 h-16 bg-gradient-to-br from-[#0066CC] to-[#004999] rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform mb-8">
+                            <div key={index} className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 w-full md:w-[calc(33.333%-27px)] min-w-[300px] max-w-[400px] grow cursor-pointer group hover:border-[#0066CC] hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)] flex flex-col shadow-sm">
+                                <div className="w-16 h-16 bg-gradient-to-br from-[#0066CC] to-[#004999] rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform mb-8 shadow-md">
                                     {item.icon}
                                 </div>
                                 <h3 className="text-[22px] font-semibold text-slate-900 mb-4 group-hover:text-[#0066CC] transition-colors leading-tight uppercase tracking-tight">
@@ -244,7 +248,6 @@ const SEOCopywriting = () => {
                             </div>
                         ))}
                     </div>
-
                 </div>
             </section>
 
@@ -267,15 +270,14 @@ const SEOCopywriting = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="mt-16 text-center text-white/10 font-extrabold text-white relative italic">
+                    <div className="mt-16 text-center text-blue-400 font-extrabold relative italic">
                         "Adkryoss managed by Clink Consultancy Services Private Limited ensures that content is not published and forgotten — it is monitored, optimized, and scaled."
-
                     </div>
                 </div>
             </section>
 
             {/* Differentiators Section */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-24 bg-white">
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-6">What Makes Our SEO Copy Different</h2>
@@ -297,12 +299,12 @@ const SEOCopywriting = () => {
             </section>
 
             {/* Industries Section */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-slate-50">
                 <div className="container px-6 max-w-5xl mx-auto">
                     <h2 className="text-[36px] font-bold text-slate-900 mb-10 text-center leading-tight">Industries We Serve</h2>
                     <div className="flex flex-wrap justify-center gap-4 mb-12">
                         {industries.map((industry, index) => (
-                            <div key={index} className="px-8 py-5 bg-slate-50 border-2 border-slate-100 rounded-xl font-semibold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm">
+                            <div key={index} className="px-8 py-5 bg-white border-2 border-slate-100 rounded-xl font-semibold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm">
                                 {industry}
                             </div>
                         ))}
@@ -319,7 +321,7 @@ const SEOCopywriting = () => {
                 <div className="container px-6 relative z-10">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold mb-6 text-white">Results You Can Expect</h2>
-                        <p className="text-xl text-blue-400 font-medium italic  ">"We don’t chase traffic. We build organic revenue channels."</p>
+                        <p className="text-xl text-blue-400 font-medium italic">"We don’t chase traffic. We build organic revenue channels."</p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-6">
                         {results.map((point, index) => (

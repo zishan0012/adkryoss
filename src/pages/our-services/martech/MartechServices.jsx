@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import martechhero from "../../../assets/martech/martechhero.png";
 import {
     BarChart3,
     CheckCircle2,
@@ -139,16 +140,16 @@ const MartechServices = () => {
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             Engineer Your Marketing. Accelerate Your Growth.
                         </h1>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-relaxed text-white font-medium">
+                        <p className="text-[16px] md:text-[18px] mb-2 leading-relaxed text-white font-medium">
                             Transform disconnected tools into a high-performance marketing engine. We design, integrate, and optimize Martech ecosystems that convert data into predictable revenue.
                         </p>
                         <div className="flex flex-wrap gap-4 mb-10">
-                            <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
+                            {/* <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
                                 <Zap className="text-blue-400" size={24} />
                                 <span className="font-semibold text-white text-sm tracking-widest">Build Smarter Funnels. Automate Intelligently. Scale Confidently.</span>
-                            </div>
+                            </div> */}
                         </div>
-                    
+
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <a
                                 href="/contact"
@@ -163,14 +164,15 @@ const MartechServices = () => {
                                 Our Services →
                             </a>
                         </div>
-</div>
+                    </div>
                     {/* RIGHT IMAGE */}
-                    <div className="flex justify-center md:justify-end relative z-10 animate-float">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/Martech1.webp"
-                            alt="Martech Services"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
-                        />
+                    <div className="flex justify-center md:justify-end relative z-10">
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={martechhero}
+                                alt="Martech Services"
+                                className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.25)] rounded-2xl"
+                            /></div>
                     </div>
                 </div>
             </section>

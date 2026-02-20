@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import b2bservicehero from "../../../assets/martech/b2bservicehero.png";
 import {
     CheckCircle2,
     ArrowRight,
@@ -136,12 +137,12 @@ const B2BCRO = () => {
                             </p>
                         </div>
                         <div className="flex flex-wrap gap-4">
-                            <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
+                            {/* <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
                                 <Zap className="text-blue-400" size={24} />
                                 <span className="font-semibold text-white text-sm tracking-widest">Growth Architecture</span>
-                            </div>
+                            </div> */}
                         </div>
-                    
+
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <a
                                 href="/contact"
@@ -156,14 +157,16 @@ const B2BCRO = () => {
                                 Our Services →
                             </a>
                         </div>
-</div>
+                    </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/B2B-Conversion-Rate-Optimization-CRO-Services.webp"
-                            alt="B2B CRO"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={b2bservicehero}
+                                alt="B2B CRO Services"
+                                className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.25)] rounded-2xl"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

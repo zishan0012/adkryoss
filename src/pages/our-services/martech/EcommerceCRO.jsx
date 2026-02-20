@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ecommercecrohero from "../../../assets/martech/ecommercecrohero.png";
 import {
     ShoppingCart,
     CheckCircle2,
@@ -223,12 +224,12 @@ const EcommerceCRO = () => {
                             </p>
                         </div>
                         <div className="flex flex-wrap gap-4">
-                            <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
+                            {/* <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
                                 <Zap className="text-blue-400" size={24} />
                                 <span className="font-semibold text-white text-sm tracking-widest uppercase">Maximize Your ROI</span>
-                            </div>
+                            </div> */}
                         </div>
-                    
+
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <a
                                 href="/contact"
@@ -243,14 +244,15 @@ const EcommerceCRO = () => {
                                 Our Services →
                             </a>
                         </div>
-</div>
+                    </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/10/Ecommerce-Conversion-Rate-Optimization-CRO-Services.webp"
-                            alt="Ecommerce CRO"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={ecommercecrohero}
+                                alt="Ecommerce CRO"
+                                className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.25)] rounded-2xl"
+                            /></div>
                     </div>
                 </div>
             </section>

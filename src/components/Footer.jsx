@@ -15,7 +15,7 @@ const Footer = () => {
                             <img
                                 src={footerlogo}
                                 alt="Adkryoss"
-                                className="h-10 md:h-12 w-auto  object-contain object-left"
+                                className="h-10 md:h-12 w-auto grayscale hover:grayscale-0 transition-colors duration-300 object-contain object-left"
                             />
                         </Link>
                         <p className="text-[#999] text-sm leading-[1.8] mb-5">

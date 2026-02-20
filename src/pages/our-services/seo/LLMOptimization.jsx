@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import llmoptimizationhero from "../../../assets/SEO/llmoptimizationhero.png";
 import {
     Brain,
     Search,
@@ -156,11 +157,13 @@ const LLMOptimization = () => {
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/06/LLM-Services.png"
-                            alt="LLM Optimization"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={llmoptimizationhero}
+                                alt="LLM Optimization"
+                                className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -225,7 +228,7 @@ const LLMOptimization = () => {
                         </p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-10">
-                        {approach.map((step, i) => (
+                        {offerings.map((step, i) => (
                             <div key={i} className="w-[calc(33.333%-27px)] min-w-[350px] bg-white p-[50px_40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 flex-grow max-w-[380px] hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-6">{step.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-5 text-[#0f172a]">{step.title}</h3>

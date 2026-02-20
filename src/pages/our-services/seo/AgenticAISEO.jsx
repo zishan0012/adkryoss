@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import agenticaihero from "../../../assets/SEO/agenticaihero.jpeg";
 import {
     Search,
     Zap,
@@ -142,11 +143,13 @@ const AgenticAISEO = () => {
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/11/agentic-ai-seo-services.webp"
-                            alt="Agentic AI SEO Services"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={agenticaihero}
+                                alt="Agentic AI SEO Services"
+                                className="max-w-[450px] w-full rounded-2xl drop-shadow-[0_20px_50px_rgba(0,0,0,0.25)] "
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

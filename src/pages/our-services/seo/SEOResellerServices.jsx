@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import seoresellerhero from "../../../assets/SEO/seoresellerhero.png";
 import {
   CheckCircle2,
   ArrowRight,
@@ -219,12 +220,14 @@ const SEOResellerServices = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex justify-center lg:justify-end">
-            <img
-              src="https://www.techmagnate.com/wp-content/uploads/2025/04/digital-marketing-for-healthcare-industry.webp"
-              alt="SEO Reseller Services"
-              className="w-64 sm:w-72 md:w-80 lg:w-95 object-contain"
-            />
+          <div className="flex justify-center md:justify-end relative z-10">
+            <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+              <img
+                src={seoresellerhero}
+                alt="SEO Reseller Services"
+                className="max-w-[450px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+              />
+            </div>
           </div>
 
         </div>
