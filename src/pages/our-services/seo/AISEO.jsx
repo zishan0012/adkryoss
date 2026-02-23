@@ -138,12 +138,14 @@ const AISEO = () => {
                         </p> */}
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
+                            </Link>
+
+
                             <a
                                 href="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
@@ -163,10 +165,10 @@ const AISEO = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Why AI SEO Section */}
-            <section className="pt-32 pb-24 bg-white">
+            < section className="pt-32 pb-24 bg-white" >
                 <div className="container">
                     <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-[50px] items-center">
                         <div>
@@ -200,10 +202,10 @@ const AISEO = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Framework Section */}
-            <section className="py-[80px] bg-[#f1f5f9]">
+            < section className="py-[80px] bg-[#f1f5f9]" >
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-[20px] text-[#0f172a]">
@@ -236,10 +238,10 @@ const AISEO = () => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* AI SEO Services List */}
-            <section className="py-[80px] bg-white">
+            < section className="py-[80px] bg-white" >
                 <div className="container">
                     <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">
                         AI SEO Services We Offer
@@ -254,10 +256,10 @@ const AISEO = () => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Working Model */}
-            <section className="py-[80px] bg-[#0f172a] text-white">
+            < section className="py-[80px] bg-[#0f172a] text-white" >
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-[20px] text-white">How We Work</h2>
@@ -274,10 +276,10 @@ const AISEO = () => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Why Choose Section */}
-            <section className="py-[80px] bg-white">
+            < section className="py-[80px] bg-white" >
                 <div className="container">
                     <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">
                         Why Choose Adkryoss for AI SEO?
@@ -303,10 +305,10 @@ const AISEO = () => {
                         </p>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Future of SEO */}
-            <section className="py-[80px] bg-[#f1f5f9]">
+            < section className="py-[80px] bg-[#f1f5f9]" >
                 <div className="container">
                     <div className="max-w-[900px] mx-auto text-center">
                         <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
@@ -324,10 +326,10 @@ const AISEO = () => {
                         </p>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Final CTA */}
-            <section className="py-[100px] text-center bg-gradient-to-br from-[#3b82f6] to-[#2563eb] text-white">
+            < section className="py-[100px] text-center bg-gradient-to-br from-[#3b82f6] to-[#2563eb] text-white" >
                 <div className="container">
                     <h2 className="text-[36px] font-bold mb-[24px] text-white">
                         Let’s Build AI-Powered Organic Growth
@@ -340,8 +342,8 @@ const AISEO = () => {
                         <ArrowRight size={20} />
                     </Link>
                 </div>
-            </section>
-        </div>
+            </section >
+        </div >
     );
 };
 
