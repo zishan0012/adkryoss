@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import AboutImage from "../../assets/About.jpeg";
+import WhoWeAreImage from "../../assets/WhoWeAre.png";
+import WhyPartnerImage from "../../assets/WhyPartner.png";
 const AboutUs = () => {
   const navigate = useNavigate();
     return (
@@ -132,7 +134,8 @@ const AboutUs = () => {
       </h2>
 
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_6ePIzJwyvdiGSKLu7yz2ZKmfnkavNZ7vCA&s"
+        // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_6ePIzJwyvdiGSKLu7yz2ZKmfnkavNZ7vCA&s"
+        src={WhoWeAreImage}
         alt="Who We Are"
         className="w-full rounded-2xl shadow-lg object-cover"
       />
@@ -719,9 +722,10 @@ const AboutUs = () => {
       {/* Right Side Image */}
       <div className="flex justify-center">
         <img
-          src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+          // src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+          src={WhyPartnerImage}
           alt="Partnership"
-          className="rounded-2xl shadow-lg w-full max-w-md object-cover"
+          className="rounded-2xl shadow-lg w-full h-100 max-w-md object-cover"
         />
       </div>
 

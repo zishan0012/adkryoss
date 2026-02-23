@@ -112,7 +112,7 @@ const YoutubeMarketing = () => {
 
     <div className="text-left text-white space-y-6">
 
-      <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white">
+      <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
         YouTube Video Marketing Services
       </h2>
 
@@ -127,6 +127,23 @@ const YoutubeMarketing = () => {
         <br />
         At Adkryoss managed by Clink Consultancy Services Private Limited, we build performance-driven YouTube marketing strategies that go beyond views. We engineer discoverability, engagement, and conversions through data-backed video SEO, intelligent advertising, and creative storytelling.
       </p>
+
+
+
+       <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
+                        </div>
 
     </div>
 
@@ -187,6 +204,11 @@ const YoutubeMarketing = () => {
         The brands that win here don’t just upload videos. They optimize, scale, 
         and retarget strategically.
       </p>
+
+
+
+
+
     </div>
 
     {/* RIGHT IMAGE */}
