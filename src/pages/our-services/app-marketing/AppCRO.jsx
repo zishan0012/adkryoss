@@ -291,7 +291,7 @@ const AppCRO = () => {
               <h3 className="text-xl font-semibold">SaaS & Tech Platforms</h3>
             </div>
 
-    
+
 
             {/* Real Estate & High-Value Lead Gen */}
             <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center gap-4 text-center transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
@@ -385,7 +385,7 @@ const AppCRO = () => {
       </section>
 
 
-       <section className="py-20 px-6 bg-[#197BB4]"
+      <section className="py-20 px-6 bg-[#197BB4]"
       >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-left text-gray-900">
@@ -405,73 +405,73 @@ const AppCRO = () => {
 
 
 
-       <section className="py-20 px-6 bg-gray-50">
-         <div className="max-w-7xl mx-auto">
-           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left text-gray-900">
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left text-gray-900">
             Tools & Technology Stack
           </h2>
 
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-       {/* GA4 & Event Tracking */}
-         <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
-               <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12h18M3 6h18M3 18h18" />
-               </svg>
-               <h3 className="text-xl font-semibold">GA4 & Advanced Event Tracking</h3>
-               <p className="text-gray-700 text-lg">Measure user behavior, funnel events, and track conversions accurately.</p>
-             </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* GA4 & Event Tracking */}
+            <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12h18M3 6h18M3 18h18" />
+              </svg>
+              <h3 className="text-xl font-semibold">GA4 & Advanced Event Tracking</h3>
+              <p className="text-gray-700 text-lg">Measure user behavior, funnel events, and track conversions accurately.</p>
+            </div>
 
             {/* Heatmapping & Behavior Analytics */}
-           <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
-         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16M4 12h16" />
-               </svg>
-               <h3 className="text-xl font-semibold">Heatmapping & Behavior Analytics Tools</h3>
-               <p className="text-gray-700 text-lg">Understand attention, scroll depth, clicks, and friction points.</p>
-             </div>
+            <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16M4 12h16" />
+              </svg>
+              <h3 className="text-xl font-semibold">Heatmapping & Behavior Analytics Tools</h3>
+              <p className="text-gray-700 text-lg">Understand attention, scroll depth, clicks, and friction points.</p>
+            </div>
 
-             {/* A/B Testing Platforms */}
-             <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
-               <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-3 0-5 2-5 5s2 5 5 5 5-2 5-5-2-5-5-5z" />
-               </svg>
-               <h3 className="text-xl font-semibold">A/B Testing Platforms</h3>
-               <p className="text-gray-700 text-lg">Run hypothesis-driven experiments with statistically validated results.</p>
-             </div>
+            {/* A/B Testing Platforms */}
+            <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-3 0-5 2-5 5s2 5 5 5 5-2 5-5-2-5-5-5z" />
+              </svg>
+              <h3 className="text-xl font-semibold">A/B Testing Platforms</h3>
+              <p className="text-gray-700 text-lg">Run hypothesis-driven experiments with statistically validated results.</p>
+            </div>
 
-             {/* CRM & Marketing Automation */}
-             <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
-               <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7h18M3 12h18M3 17h18" />
-               </svg>
-               <h3 className="text-xl font-semibold">CRM & Marketing Automation Systems</h3>
-               <p className="text-gray-700 text-lg">Align campaigns, leads, and customer journeys seamlessly across platforms.</p>
-             </div>
+            {/* CRM & Marketing Automation */}
+            <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7h18M3 12h18M3 17h18" />
+              </svg>
+              <h3 className="text-xl font-semibold">CRM & Marketing Automation Systems</h3>
+              <p className="text-gray-700 text-lg">Align campaigns, leads, and customer journeys seamlessly across platforms.</p>
+            </div>
 
-             {/* AI-Based Optimization Engines */}
-             <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
-               <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-               </svg>
-               <h3 className="text-xl font-semibold">AI-Based Optimization Engines</h3>
-               <p className="text-gray-700 text-lg">Leverage machine learning to personalize, segment, and optimize performance automatically.</p>
-             </div>
+            {/* AI-Based Optimization Engines */}
+            <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-start gap-4 transform transition duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+              </svg>
+              <h3 className="text-xl font-semibold">AI-Based Optimization Engines</h3>
+              <p className="text-gray-700 text-lg">Leverage machine learning to personalize, segment, and optimize performance automatically.</p>
+            </div>
           </div>
           <p className="mt-10 text-left text-lg text-gray-700">
-             Technology supports strategy — it doesn’t replace it.
-           </p>
-         </div>
-       </section>
+            Technology supports strategy — it doesn’t replace it.
+          </p>
+        </div>
+      </section>
 
 
 
-       <section className="py-20 px-6 bg-gray-50">
-         <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left text-gray-900">
             Why Choose Us?
           </h2>
 
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               "Performance-First Thinking",
               "Data-Led Decisions",
@@ -497,21 +497,21 @@ const AppCRO = () => {
 
 
 
-     <section className="py-20 px-6 bg-gray-50">
-         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-           {/* Left: Points */}
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+          {/* Left: Points */}
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-left text-gray-900">
-             When Should You Invest in AP CRO?
-           </h2>
+              When Should You Invest in AP CRO?
+            </h2>
 
             <p className="mb-6 text-lg text-gray-700">
-               You should prioritize AP CRO if:
-             </p>
+              You should prioritize AP CRO if:
+            </p>
 
-             <ul className="space-y-4">
-               {[
-                 "Your traffic is increasing but sales are not",
+            <ul className="space-y-4">
+              {[
+                "Your traffic is increasing but sales are not",
                 "Your paid ads are expensive but underperforming",
                 "Your bounce rate is high",
                 "Your checkout abandonment is above industry average",
@@ -543,35 +543,35 @@ const AppCRO = () => {
       </section>
 
 
-       <section className="py-20 px-6 bg-blue-600 text-white">
-         <div className="max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
+      <section className="py-20 px-6 bg-blue-600 text-white">
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
           <h2 className="text-3xl md:text-4xl font-bold">
             Let’s Turn Traffic Into Revenue
           </h2>
 
           <p className="text-lg md:text-xl text-white">
-           Growth doesn’t come from more clicks. <br />
-           It comes from smarter conversions.
-         </p>
+            Growth doesn’t come from more clicks. <br />
+            It comes from smarter conversions.
+          </p>
 
           <p className="text-lg md:text-xl text-white">
-           Partner with <strong>Adkryoss managed by Clink Consultancy Services Private Limited</strong> to build a conversion system that compounds your revenue every month.
-           </p>
+            Partner with <strong>Adkryoss managed by Clink Consultancy Services Private Limited</strong> to build a conversion system that compounds your revenue every month.
+          </p>
 
-         <p className="text-lg md:text-xl text-white">
+          <p className="text-lg md:text-xl text-white">
             Ready to optimize what you already have? <br />
             Let’s engineer your growth.
           </p>
 
-        <button
-        onClick={() => navigate("/contact?service=cro")}
-      className="mt-6 inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300"
-    >
-      Start Optimizing Today
-    </button>
-  </div>
-</section>
-       
+          <button
+            onClick={() => navigate("/contact?service=cro")}
+            className="mt-6 inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300"
+          >
+            Start Optimizing Today
+          </button>
+        </div>
+      </section>
+
 
     </>
   );

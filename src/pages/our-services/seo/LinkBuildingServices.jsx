@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
     Link2,
@@ -23,10 +23,18 @@ import {
     GraduationCap,
     Heart,
     Home,
-    DollarSign
+    DollarSign,
+    ChevronDown,
+    ChevronUp
 } from 'lucide-react';
 import linkbuildingseo from '../../../assets/SEO/linkbuildinghero.png';
 const LinkBuildingServices = () => {
+    const [openFaq, setOpenFaq] = useState(null);
+
+    const toggleFaq = (i) => {
+        setOpenFaq(openFaq === i ? null : i);
+    };
+
     const linkFramework = [
         {
             title: "1. Authority & Competitor Gap Analysis",
@@ -143,13 +151,28 @@ const LinkBuildingServices = () => {
                         <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Authority That Ranks. Links That Convert.
                         </h3>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
+                        <p className="text-[16px] md:text-[18px] mb-2 leading-[1.8] text-white">
                             Build powerful, high-authority backlinks that strengthen search visibility, improve domain credibility, and drive consistent organic growth. We create link ecosystems that search engines trust—and competitors struggle to match.
                         </p>
                         <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we don’t chase links. We build digital authority.
                             </p>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
@@ -165,7 +188,7 @@ const LinkBuildingServices = () => {
             </section>
 
             {/* Why Link Building Section */}
-            <section className="py-[100px] bg-white">
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
@@ -330,7 +353,7 @@ const LinkBuildingServices = () => {
                         </div>
                         <div>
                             <h2 className="text-[36px] font-bold mb-[40px] text-white">SEO + Link Building = Scalable Growth</h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
+                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white font-medium">
                                 Link building works best when integrated with complete SEO architecture. At Adkryoss, we align link acquisition with:
                             </p>
                             <div className="flex flex-wrap gap-3">
@@ -379,13 +402,23 @@ const LinkBuildingServices = () => {
 
             {/* FAQs */}
             <section className="py-[100px] bg-[#f8f9fa]">
-                <div className="container">
+                <div className="container px-6 mx-auto">
                     <h2 className="text-[36px] font-bold text-center mb-[50px]">Frequently Asked Questions</h2>
                     <div className="max-w-[800px] mx-auto">
                         {faqs.map((faq, i) => (
-                            <div key={i} className="mb-[20px] bg-white p-[24px] rounded-[16px] border border-[#eee]">
-                                <h4 className="text-[18px] font-semibold mb-[10px] text-[#1a1a1a]">{faq.question}</h4>
-                                <p className="text-[#666] leading-[1.6] m-0 font-medium">{faq.answer}</p>
+                            <div key={i} className="mb-[15px] border border-[#eee] rounded-[15px] overflow-hidden bg-white shadow-sm transition-all duration-300 hover:shadow-md">
+                                <button
+                                    onClick={() => toggleFaq(i)}
+                                    className={`w-full p-[20px_30px] flex justify-between items-center transition-all duration-300 border-none cursor-pointer ${openFaq === i ? 'bg-[#f8fafc]' : 'bg-white'}`}
+                                >
+                                    <span className="text-[18px] font-bold text-[#1a1a1a] text-left">{faq.question}</span>
+                                    {openFaq === i ? <ChevronUp size={20} className="text-[#0066cc]" /> : <ChevronDown size={20} className="text-[#94a3b8]" />}
+                                </button>
+                                {openFaq === i && (
+                                    <div className="p-[20px_30px] bg-white border-t border-[#eee]">
+                                        <p className="m-0 text-[#666] leading-[1.6] text-[16px] font-medium">{faq.answer}</p>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>

@@ -1,8 +1,24 @@
 /* @import "tailwindcss"; */
-@tailwind base;
-@tailwind components;
+/* @tailwind base; */
+@tailwind utilities;
 @tailwind utilities;
 @import "tailwindcss";
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.4s ease-out;
+}
 
 @theme {
   --spacing-120: 30rem;
@@ -41,6 +57,21 @@
 .nav-item-group:hover~.desktop-nav::after {
   opacity: 1;
 }
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.4s ease-out;
+}
+
 
 
 :root {

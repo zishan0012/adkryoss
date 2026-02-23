@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ga4hero from "../../../assets/martech/ga4hero.png";
 import {
     CheckCircle2,
     ArrowRight,
@@ -157,25 +158,41 @@ const GA4Consulting = () => {
                             Data is powerful—only when it’s accurate, structured, and aligned with business goals. Our GA4 Consulting Services help you transform raw analytics into measurable growth strategies. From seamless migration to advanced event tracking and cross-channel attribution, we ensure your analytics ecosystem drives real ROI.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
+                            {/* <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
                                 <Activity className="text-blue-400" size={24} />
                                 <span className="font-semibold text-white text-sm tracking-widest">Actionable Data ROI</span>
-                            </div>
+                            </div> */}
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/06/Google-Analytics-4-GA4-Consulting-Services.webp"
-                            alt="GA4 Consulting"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={ga4hero}
+                                alt="GA4 Consulting"
+                                className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.25)] rounded-2xl"
+                            /></div>
                     </div>
                 </div>
             </section>
 
             {/* Why Your Business Needs GA4 Expertise */}
-            <section className="py-24 bg-slate-50">
+            <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>

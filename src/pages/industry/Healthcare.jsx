@@ -6,6 +6,7 @@ import Phara from "../../assets/phara.jpg"
 import Healthtech from "../../assets/healthtech.jpg"
 import Multi from "../../assets/multi.jpg"
 import Diag from "../../assets/diagnisttic.jpg"
+import healthindus from "../../assets/industryhealth.png"
 import Cosmetic from "../../assets/cosmetic.jpg"
 import industryhealth from "../../assets/industryhealth.png"
 import {

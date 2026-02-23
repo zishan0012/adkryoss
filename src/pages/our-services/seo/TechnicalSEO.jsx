@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
     Settings,
@@ -23,10 +23,18 @@ import {
     Building2,
     ShoppingCart,
     FileText,
-    Rocket
+    Rocket,
+    ChevronDown,
+    ChevronUp
 } from 'lucide-react';
 import technicalseo from '../../../assets/SEO/technicalseohero.png';
 const TechnicalSEO = () => {
+    const [openFaq, setOpenFaq] = useState(null);
+
+    const toggleFaq = (i) => {
+        setOpenFaq(openFaq === i ? null : i);
+    };
+
     const technicalFramework = [
         {
             title: "1. Comprehensive Technical Audit",
@@ -93,7 +101,7 @@ const TechnicalSEO = () => {
             points: [
                 "Organization & Service Schema",
                 "FAQ Schema",
-                "Artical & Blog Schema",
+
                 "Breadcrumb Schema",
                 "Product & Review Schema"
             ],
@@ -175,13 +183,28 @@ const TechnicalSEO = () => {
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we build technical frameworks that ensure search engines crawl, index, and rank your website with maximum efficiency.
                             </p>
                         </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
+                        </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={technicalseo}
                                 alt="Technical SEO Services"
-                                className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                                className="max-w-[450px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
                             />
                         </div>
                     </div>
@@ -189,7 +212,7 @@ const TechnicalSEO = () => {
             </section>
 
             {/* Why Technical SEO Section */}
-            <section className="py-24 bg-white relative">
+            <section className="pt-32 pb-24 bg-white relative">
                 <div className="container">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5">
@@ -393,13 +416,23 @@ const TechnicalSEO = () => {
 
             {/* FAQs */}
             <section className="py-24 bg-slate-50">
-                <div className="container">
+                <div className="container px-6 mx-auto">
                     <h2 className="text-[36px] font-bold text-center mb-16 text-slate-900">Frequently Asked Questions</h2>
-                    <div className="max-w-[800px] mx-auto space-y-6">
+                    <div className="max-w-[800px] mx-auto">
                         {faqs.map((faq, i) => (
-                            <div key={i} className="bg-white p-8 rounded-[20px] border border-slate-100 shadow-sm transition-all duration-300 hover:shadow-md">
-                                <h4 className="text-[20px] font-bold mb-3 text-slate-900">{faq.question}</h4>
-                                <p className="text-slate-600 leading-relaxed text-[16px] m-0 font-medium">{faq.answer}</p>
+                            <div key={i} className="mb-[15px] border border-slate-200 rounded-[15px] overflow-hidden bg-white shadow-sm transition-all duration-300 hover:shadow-md">
+                                <button
+                                    onClick={() => toggleFaq(i)}
+                                    className={`w-full p-[20px_30px] flex justify-between items-center transition-all duration-300 border-none cursor-pointer ${openFaq === i ? 'bg-[#f8fafc]' : 'bg-white'}`}
+                                >
+                                    <span className="text-[18px] font-bold text-slate-900 text-left">{faq.question}</span>
+                                    {openFaq === i ? <ChevronUp size={20} className="text-[#0066cc]" /> : <ChevronDown size={20} className="text-slate-400" />}
+                                </button>
+                                {openFaq === i && (
+                                    <div className="p-[20px_30px] bg-white border-t border-slate-100">
+                                        <p className="m-0 text-slate-600 leading-[1.7] text-[16px] font-medium">{faq.answer}</p>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>

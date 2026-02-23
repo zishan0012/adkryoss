@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import hyperlocalhero from "../../../assets/SEO/hyperlocalhero.jpeg";
 import {
     MapPin,
     Search,
@@ -28,6 +29,7 @@ import {
 } from 'lucide-react';
 
 const HyperLocalMarketing = () => {
+
     const hyperlocalSolutions = [
         {
             title: "Local SEO Optimization",
@@ -118,7 +120,7 @@ const HyperLocalMarketing = () => {
         <div className="bg-white">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -134,24 +136,41 @@ const HyperLocalMarketing = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             Turn proximity into profit with data-driven hyperlocal marketing strategies that put your business exactly where buying decisions happen — on local searches, maps, feeds, and mobile screens.
                         </p>
-                        <div className="p-0  mb-6">
+                        {/* <div className="p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we help businesses capture local intent and drive footfall, calls, and real-time conversions.
                             </p>
+                        </div> */}
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/hyperlocal-marketing-agency.webp"
-                            alt="Hyperlocal Marketing Services"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={hyperlocalhero}
+                                alt="Hyperlocal Marketing Services"
+                                className="max-w-[350px] w-full rounded-2xl drop-shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* What is Hyperlocal Section */}
-            <section className="py-[100px] bg-white">
+            <section className="pt-28 pb-20 bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-5">
@@ -344,6 +363,8 @@ const HyperLocalMarketing = () => {
                     </div>
                 </div>
             </section>
+
+
 
             {/* CTA */}
             <section className="py-20 bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import cdpservicehero from "../../../assets/martech/cdpservicehero.png";
 import {
     Database,
     Users,
@@ -160,37 +161,54 @@ const CDPServices = () => {
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             Customer Data Platform (CDP) Services
                         </h1>
-                        <h2 className="text-[32px] font-medium mb-6 text-white">
+                        <h2 className="text-[32px] font-medium mb-2 text-white">
                             Unify. Understand. Activate.
                         </h2>
                         <div className="space-y-4 mb-8">
-                            <p className="text-[16px] md:text-[18px] mb-6 font-bold text-white leading-relaxed">
+                            <p className="text-[16px] md:text-[18px] mb-2 font-bold text-white leading-relaxed">
                                 Turn fragmented customer data into revenue-driving intelligence.
                             </p>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium opacity-95 text-justify">
-                                Build a 360° customer view, personalize every interaction, and activate real-time journeys with advanced CDP solutions. At Adkryoss managed by <span className="font-bold underline decoration-blue-400">Clink Consultancy Services Private Limited</span>, we help you master your first-party data.
+                            <p className="text-[16px] md:text-[18px] mb-2 text-white font-medium opacity-95 text-justify">
+                                Build a 360° customer view, personalize every interaction, and activate real-time journeys with advanced CDP solutions. At Adkryoss managed by <span className="font-bold ">Clink Consultancy Services Private Limited</span>, we help you master your first-party data.
                             </p>
                         </div>
                         <div className="flex flex-wrap gap-4">
-                            <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
+                            {/* <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
                                 <Rocket className="text-blue-400" size={24} />
                                 <span className="font-bold text-white text-sm tracking-widest uppercase">Drive Predictive Personalization</span>
-                            </div>
+                            </div> */}
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/03/customer-data-platform-services.webp"
-                            alt="CDP Services"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-3xl"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={cdpservicehero}
+                                alt="CDP Services"
+                                className="max-w-[350px] w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.25)] rounded-2xl"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Why Your Business Needs a CDP Now */}
-            <section className="py-24 bg-slate-50">
+            <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>

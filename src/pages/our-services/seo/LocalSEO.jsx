@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import localseohero from "../../../assets/SEO/localseohero.png";
 import {
     MapPin,
     Search,
@@ -153,7 +154,7 @@ const LocalSEO = () => {
                         <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Turning Local Searches into Real Customers
                         </h3>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
+                        <p className="text-[16px] md:text-[18px] mb-2 leading-[1.8] text-white">
                             Today’s customers don’t browse directories—they search on Google. 70%+ of local searches result in a visit or inquiry within 24 hours. If you're not in the Top 3 Map Pack, you're invisible. We help you dominate your geography.
                         </p>
                         <div className="p-0 mb-6">
@@ -161,19 +162,37 @@ const LocalSEO = () => {
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we help businesses dominate local search ecosystems and drive consistent foot traffic.
                             </p>
                         </div>
+                        {/* 
+                        { CTA Buttons — uncomment when ready to use} */}
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
+                        </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/04/local-seo-services.webp"
-                            alt="Local SEO"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={localseohero}
+                                alt="Local SEO"
+                                className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Why Matters */}
-            <section className="py-16 md:py-[80px] bg-white">
+            <section className="pt-32 pb-24 md:py-[80px] bg-white">
                 <div className="container px-6 mx-auto">
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-[60px] items-center">
                         <div>

@@ -15,7 +15,17 @@ import {
     Settings,
     ShieldCheck,
     Megaphone,
-    Palette
+    Palette,
+    Rocket,
+    Award,
+    HandshakeIcon,
+    Cpu,
+    GraduationCap,
+    Building2,
+    UserCheck,
+    Lightbulb,
+    Network,
+    LineChart
 } from 'lucide-react';
 import approach from "../../assets/approach.jpg";
 
@@ -132,8 +142,12 @@ const IPP = () => {
     return (
         <div className="bg-white text-slate-900">
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-[#0066cc] to-[#00458a] text-white py-20 min-h-[600px] flex items-center relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-[50%] h-full bg-white/5 skew-x-12 translate-x-20"></div>
+            <section c className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+                style={{
+                    backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+                }}
+            >
+
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="grid md:grid-cols-2 items-center gap-12">
                         {/* LEFT CONTENT */}
@@ -159,17 +173,13 @@ const IPP = () => {
                         </div>
 
                         {/* RIGHT IMAGE */}
-                        <div className="flex justify-center md:justify-end animate-fadeInRight">
-                            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+                        <div className="flex justify-center md:justify-end relative z-10">
+                            <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                                 <img
                                     src={approach}
-                                    alt="Adkryoss Partner Program"
-                                    className="max-w-[450px] w-full object-cover transform hover:scale-105 transition-transform duration-700"
+                                    alt="Become our IPP"
+                                    className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                <div className="absolute bottom-6 left-6 text-white font-bold text-xl">
-                                    You bring the vision. <br /> We power the engine.
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -204,18 +214,18 @@ const IPP = () => {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            "A fully operational digital marketing backend",
-                            "Access to certified strategists and specialists",
-                            "Proven execution frameworks",
-                            "Scalable service models",
-                            "Structured growth support",
-                            "White-label delivery capabilities"
+                            { text: "A fully operational digital marketing backend", icon: <Cpu size={24} /> },
+                            { text: "Access to certified strategists and specialists", icon: <Award size={24} /> },
+                            { text: "Proven execution frameworks", icon: <Layers size={24} /> },
+                            { text: "Scalable service models", icon: <TrendingUp size={24} /> },
+                            { text: "Structured growth support", icon: <Rocket size={24} /> },
+                            { text: "White-label delivery capabilities", icon: <ShieldCheck size={24} /> }
                         ].map((item, index) => (
                             <div key={index} className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-blue-200 transition-all group">
                                 <div className="w-12 h-12 bg-blue-50 text-[#0066cc] rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#0066cc] group-hover:text-white transition-colors">
-                                    <CheckCircle size={24} />
+                                    {item.icon}
                                 </div>
-                                <h3 className="text-lg font-semibold text-slate-800">{item}</h3>
+                                <h3 className="text-lg font-semibold text-slate-800">{item.text}</h3>
                             </div>
                         ))}
                     </div>
@@ -262,10 +272,17 @@ const IPP = () => {
                             <h2 className="text-[36px] font-bold mb-6 leading-tight text-white">Who Can Become an IPP?</h2>
                             <p className="text-[18px] text-blue-200 mb-8">The program is built for growth-oriented individuals and organizations such as:</p>
                             <ul className="space-y-4">
-                                {audiences.map((aud, index) => (
+                                {[
+                                    { text: "Marketing consultants", icon: <Megaphone size={20} className="text-[#00bfff] shrink-0" /> },
+                                    { text: "Freelancers", icon: <UserCheck size={20} className="text-[#00bfff] shrink-0" /> },
+                                    { text: "Startup founders", icon: <Rocket size={20} className="text-[#00bfff] shrink-0" /> },
+                                    { text: "Corporate professionals transitioning to entrepreneurship", icon: <Building2 size={20} className="text-[#00bfff] shrink-0" /> },
+                                    { text: "Existing agencies seeking backend strength", icon: <Network size={20} className="text-[#00bfff] shrink-0" /> },
+                                    { text: "Sales-driven professionals wanting a scalable digital model", icon: <LineChart size={20} className="text-[#00bfff] shrink-0" /> }
+                                ].map((aud, index) => (
                                     <li key={index} className="flex items-center gap-3 text-lg font-medium text-white/90">
-                                        <Briefcase size={20} className="text-[#00bfff]" />
-                                        {aud}
+                                        {aud.icon}
+                                        {aud.text}
                                     </li>
                                 ))}
                             </ul>

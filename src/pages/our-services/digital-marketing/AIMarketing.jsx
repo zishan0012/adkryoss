@@ -152,63 +152,6 @@ const techStack = [
 const AIMarketing = () => {
   return (
     <>
-    
-{/* <section
-  className="relative py-24 text-white bg-cover bg-center"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-  }}
->
-  
-  <div className="absolute inset-0 bg-blue-900/80"></div>
-
-  <div className="relative max-w-7xl mx-auto px-6">
-    <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
-
-      <div>
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-          AI-Powered Digital Marketing Agency <br />
-          <span className="text-blue-300">
-            for Smarter, Faster Growth
-          </span>
-        </h1>
-
-        <p className="text-blue-100 text-lg leading-relaxed mb-8 max-w-xl">
-          Grow your business with AI-driven marketing strategies that deliver
-          faster results, smarter campaigns, and high-intent leads built for
-          sustainable growth.
-        </p>
-
-        <div className="flex flex-wrap gap-4">
-          <button className="bg-white text-blue-800 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 transition-all duration-300 hover:shadow-xl">
-            Speak to an Expert →
-          </button>
-
-          <button className="border border-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-blue-800 transition-all duration-300">
-            Our Services →
-          </button>
-        </div>
-      </div>
-
-      <div className="flex justify-center lg:justify-end">
-  <img
-    src={digi}
-    alt="Digital Marketing"
-    className="
-      w-full 
-      max-w-[520px] 
-      h-[380px] 
-      object-cover 
-      rounded-xl
-    "
-  />
-</div>
-    </div>
-  </div>
-</section> */}
-
-
 <section
   className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
   style={{
@@ -249,6 +192,10 @@ const AIMarketing = () => {
     </div>
   </div>
 </section>
+
+
+
+
 
 
 

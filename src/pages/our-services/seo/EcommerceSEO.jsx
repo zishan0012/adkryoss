@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import ecommerceseo from '../../../assets/SEO/ecommercehero.png';
 const EcommerceSEO = () => {
+
     const framework = [
         {
             title: "Ecommerce SEO Audit & Growth Blueprint",
@@ -149,13 +150,28 @@ const EcommerceSEO = () => {
                         <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Turn Product Pages into Revenue Engines
                         </h3>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
+                        <p className="text-[16px] md:text-[18px] mb-2 leading-[1.8] text-white">
                             Ecommerce is no longer about just listing products. It’s about owning high-intent search moments. When customers search with buying intent, your store must appear first — not just visible, but irresistible.
                         </p>
                         <div className=" p-0  mb-6">
                             <p className="text-[18px] leading-[1.8] text-white m-0">
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we build performance-driven Ecommerce SEO strategies designed to increase visibility, improve product discoverability, and maximize conversion value.
                             </p>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
@@ -164,7 +180,7 @@ const EcommerceSEO = () => {
                             <img
                                 src={ecommerceseo}
                                 alt="Ecommerce SEO Services"
-                                className="max-w-[200px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                                className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
                             />
                         </div>
                     </div>
@@ -172,7 +188,7 @@ const EcommerceSEO = () => {
             </section>
 
             {/* Why Ecommerce SEO */}
-            <section className="py-[80px] bg-white">
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container text-center">
                     <h2 className="text-[36px] font-bold mb-[40px] text-[#0f172a]">
                         Why Ecommerce SEO is a Growth Multiplier
@@ -278,22 +294,32 @@ const EcommerceSEO = () => {
                 </div>
             </section>
 
-            {/* Working Model */}
-            <section className="py-[80px] bg-white">
-                <div className="container">
-                    <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">Our Working Model</h2>
-                    <div className="flex flex-wrap justify-center gap-[20px]">
+            {/* Our Working Model */}
+            <section className="py-24 bg-slate-50">
+                <div className="container overflow-x-auto lg:overflow-x-visible">
+                    <h2 className="text-[36px] font-bold text-center mb-16 text-slate-900 leading-tight">
+                        Our Working Model
+                    </h2>
+                    <div className="flex flex-nowrap lg:justify-center items-start gap-0 min-w-max lg:min-w-0 pb-6 lg:pb-0">
                         {workingModel.map((model, i) => (
-                            <div key={i} className="py-[20px] px-[30px] bg-[#f8fafc] rounded-[12px] font-semibold text-[#1e293b] border border-[#e2e8f0] text-center flex-grow min-w-[200px]">
-                                {model}
+                            <div key={i} className="flex items-start">
+                                <div className="flex flex-col items-center text-center p-4 w-[145px] md:w-[160px]">
+                                    <div className="flex items-center justify-center gap-3 mb-4 w-full">
+                                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#0066CC] text-white flex items-center justify-center font-bold text-lg md:text-xl shrink-0 shadow-lg shadow-blue-600/20">
+                                            {i + 1}
+                                        </div>
+                                        {i < workingModel.length - 1 && (
+                                            <ArrowRight size={20} className="text-[#0066CC]/30 hidden lg:block" />
+                                        )}
+                                    </div>
+                                    <span className="font-bold text-slate-900 text-[13px] md:text-[14px] leading-tight text-center">{model}</span>
+                                </div>
                             </div>
                         ))}
                     </div>
-                    <div className="text-center mt-[40px]">
-                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
-                            We operate as your extended growth partner — not just a vendor.
-                        </p>
-                    </div>
+                    <p className="text-center text-[20px] font-bold text-[#0066CC] mt-16 italic">
+                        We operate as your extended growth partner — not just a vendor
+                    </p>
                 </div>
             </section>
 
@@ -321,6 +347,7 @@ const EcommerceSEO = () => {
                     </p>
                 </div>
             </section>
+
 
             {/* Final CTA */}
             <section className="py-[100px] text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white">

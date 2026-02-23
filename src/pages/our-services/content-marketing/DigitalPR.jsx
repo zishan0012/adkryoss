@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import digitalprhero from "../../../assets/content-marketing/digitalprhero.png";
 import {
     Globe,
     Target,
@@ -20,8 +21,6 @@ import {
 } from 'lucide-react';
 
 const DigitalPR = () => {
-
-
     const approachSteps = [
         {
             step: "01",
@@ -141,20 +140,35 @@ const DigitalPR = () => {
                             Our Digital PR strategies help you earn credible media coverage, high-quality backlinks, and powerful online authority that fuels long-term SEO growth and brand trust.
                         </p>
 
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
+                        </div>
                     </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
-                        <img
-                            src="https://www.techmagnate.com/wp-content/uploads/2025/05/digital-pr-services.webp"
-                            alt="Digital PR"
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] animate-float"
-                        />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                            <img
+                                src={digitalprhero}
+                                alt="Digital PR"
+                                className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)] rounded-2xl"
+                            /></div>
                     </div>
                 </div>
             </section>
 
-            {/* Why Digital PR is Non-Negotiable in 2026 Section */}
-            <section className="py-24 bg-slate-50">
+            {/* Why Digital PR Section */}
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">
@@ -190,14 +204,13 @@ const DigitalPR = () => {
                             <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8] font-medium">
                                 At Adkryoss managed by <span className="font-semibold text-[#0066CC]">Clink Consultancy Services Private Limited</span>, we don’t chase random coverage. We build digital authority ecosystems designed to compound over time.
                             </p>
-
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Our Digital PR Approach Section */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-slate-50">
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">Our Digital PR Approach</h2>
@@ -218,7 +231,6 @@ const DigitalPR = () => {
                             </div>
                         ))}
                     </div>
-
                 </div>
             </section>
 
@@ -244,12 +256,11 @@ const DigitalPR = () => {
                             </div>
                         ))}
                     </div>
-
                 </div>
             </section>
 
             {/* What Makes Us Different Section */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-24 bg-white">
                 <div className="container px-6">
                     <div className="max-w-5xl mx-auto rounded-[40px] bg-white p-12 shadow-xl border border-slate-100">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -292,23 +303,21 @@ const DigitalPR = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
 
             {/* Industries Section */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-slate-50">
                 <div className="container px-6">
                     <div className="max-w-5xl mx-auto text-center">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-12 leading-tight">Industries We Serve</h2>
                         <div className="flex flex-wrap justify-center gap-4 mb-16">
                             {industries.map((industry, index) => (
-                                <div key={index} className="px-8 py-4 bg-slate-50 border-2 border-slate-100 rounded-xl font-black text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm">
+                                <div key={index} className="px-8 py-4 bg-white border-2 border-slate-100 rounded-xl font-black text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm">
                                     {industry}
                                 </div>
                             ))}
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -331,7 +340,6 @@ const DigitalPR = () => {
                             </div>
                         ))}
                     </div>
-
                 </div>
             </section>
 
@@ -356,7 +364,6 @@ const DigitalPR = () => {
                             ))}
                         </div>
                     </div>
-
                 </div>
             </section>
 

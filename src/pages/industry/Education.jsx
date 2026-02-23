@@ -8,6 +8,7 @@ import Coaching from "../../assets/coaching.jpg";
 import Skills from "../../assets/skill.jpg";
 import Abroad from "../../assets/abroad.jpg";
 import Future from "../../assets/future.png";
+import education from "../../assets/education.png"
 import {
   Search,
   Target,
