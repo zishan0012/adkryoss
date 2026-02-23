@@ -152,14 +152,14 @@ const SEOResellerServices = () => {
     <>
       {/* Hero Section */}
       <section
-        className="relative bg-cover bg-center text-white py-20 md:py-24"
+        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
         style={{
           backgroundImage:
             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-slate-900/80"></div>
+        {/* <div className="absolute inset-0 bg-slate-900/80"></div> */}
 
         <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
 
@@ -169,7 +169,7 @@ const SEOResellerServices = () => {
               SEO Reseller Services
             </h1>
 
-            <p className="text-xl md:text-2xl font-semibold text-green-400 mb-6">
+            <p className="text-xl md:text-2xl font-semibold text-white mb-6">
               Scale Your Agency. Deliver Results. Stay Invisible.
             </p>
 
@@ -225,14 +225,14 @@ const SEOResellerServices = () => {
               <img
                 src={seoresellerhero}
                 alt="SEO Reseller Services"
-                className="max-w-[450px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
               />
             </div>
           </div>
 
         </div>
       </section>
-      <section className="bg-white py-16 md:py-20">
+      <section className="bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center">
 
           {/* LEFT CONTENT */}

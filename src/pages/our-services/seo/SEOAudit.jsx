@@ -186,7 +186,7 @@ const SEOAudit = () => {
             </section>
 
             {/* Why Audit Section */}
-            <section className="py-[80px] bg-white">
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>

@@ -258,7 +258,7 @@ const EcommerceCRO = () => {
             </section>
 
             {/* Why Ecommerce CRO Is No Longer Optional */}
-            <section className="py-24 bg-slate-50">
+            <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>

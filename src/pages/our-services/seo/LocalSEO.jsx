@@ -192,7 +192,7 @@ const LocalSEO = () => {
             </section>
 
             {/* Why Matters */}
-            <section className="py-16 md:py-[80px] bg-white">
+            <section className="pt-32 pb-24 md:py-[80px] bg-white">
                 <div className="container px-6 mx-auto">
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-[60px] items-center">
                         <div>

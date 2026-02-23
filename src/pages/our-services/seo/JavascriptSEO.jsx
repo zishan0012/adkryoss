@@ -179,7 +179,7 @@ const JavascriptSEO = () => {
             </section>
 
             {/* Why Matters Section */}
-            <section className="py-20 bg-white">
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-[minmax(300px,1fr)_1.2fr] gap-[60px] items-center">
                         <div>

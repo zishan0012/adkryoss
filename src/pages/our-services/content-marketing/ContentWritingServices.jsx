@@ -191,7 +191,7 @@ const ContentWritingServices = () => {
                             At Adkryoss managed by <span className="font-semibold text-white">Clink Consultancy Services Private Limited</span>, we create high-performance content ecosystems that fuel SEO, paid campaigns, social media, and brand positioning—under one unified strategy.
                         </p>
 
-                    
+
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <a
                                 href="/contact"
@@ -206,7 +206,7 @@ const ContentWritingServices = () => {
                                 Our Services →
                             </a>
                         </div>
-</div>
+                    </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
@@ -221,7 +221,7 @@ const ContentWritingServices = () => {
             </section>
 
             {/* Why Content is Growth Section */}
-            <section className="py-24 bg-slate-50">
+            <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">

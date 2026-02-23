@@ -188,7 +188,7 @@ const EcommerceSEO = () => {
             </section>
 
             {/* Why Ecommerce SEO */}
-            <section className="py-[80px] bg-white">
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container text-center">
                     <h2 className="text-[36px] font-bold mb-[40px] text-[#0f172a]">
                         Why Ecommerce SEO is a Growth Multiplier

@@ -183,7 +183,7 @@ const EnterpriseSEO = () => {
             </section>
 
             {/* Why Enterprise Section */}
-            <section className="py-[100px] bg-white">
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">

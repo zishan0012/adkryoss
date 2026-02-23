@@ -129,7 +129,7 @@ const WhiteLabelSEOServices = () => {
             </section>
 
             {/* Why Choose Section */}
-            <section className="py-24 bg-slate-50">
+            <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>

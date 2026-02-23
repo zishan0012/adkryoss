@@ -180,7 +180,7 @@ const SEOMigrationServices = () => {
             </section>
 
             {/* Risk Section */}
-            <section className="py-20 bg-white">
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container text-center">
                     <h2 className="text-[36px] font-bold mb-10 text-slate-900">
                         Why SEO Migration Is High-Risk Without Strategy

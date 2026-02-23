@@ -120,7 +120,7 @@ const HyperLocalMarketing = () => {
         <div className="bg-white">
             {/* Hero Section */}
             <section
-                className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+                className="bg-cover bg-center bg-no-repeat py-20 min-h-[650px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -170,7 +170,7 @@ const HyperLocalMarketing = () => {
             </section>
 
             {/* What is Hyperlocal Section */}
-            <section className="py-[100px] bg-white">
+            <section className="pt-28 pb-20 bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-5">

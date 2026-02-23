@@ -152,7 +152,7 @@ const GooglePenaltyRecovery = () => {
             </section>
 
             {/* Core Message */}
-            <section className="py-20 bg-white">
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] items-center">
                         <div>

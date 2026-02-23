@@ -166,7 +166,7 @@ const MultilingualSEOServices = () => {
             </section>
 
             {/* Why Multilingual SEO */}
-            <section className="py-20 bg-white">
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">

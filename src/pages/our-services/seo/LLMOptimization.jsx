@@ -169,7 +169,7 @@ const LLMOptimization = () => {
             </section>
 
             {/* What is LLM Optimization */}
-            <section className="py-20 bg-white">
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-[1fr_1.2fr] gap-[60px] items-center">
                         <div>

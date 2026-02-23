@@ -211,7 +211,7 @@ const ContentMarketingServices = () => {
 
 
             {/* Why content matters Section */}
-            <section className="py-24 bg-slate-50">
+            <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">

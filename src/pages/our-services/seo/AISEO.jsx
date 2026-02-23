@@ -166,7 +166,7 @@ const AISEO = () => {
             </section>
 
             {/* Why AI SEO Section */}
-            <section className="py-[80px] bg-white">
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-[50px] items-center">
                         <div>

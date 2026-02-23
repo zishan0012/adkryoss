@@ -168,7 +168,7 @@ const VernacularSEOServices = () => {
             </section>
 
             {/* Why Vernacular SEO Section */}
-            <section className="py-24 bg-white">
+            <section className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5">

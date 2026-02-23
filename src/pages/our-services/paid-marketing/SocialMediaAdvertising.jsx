@@ -604,51 +604,53 @@ const SocialMediaAdvertising = () => {
 
         </div>
       </section>
-      <section className="py-20 bg-white w-full">
-        <div className="w-full">
-
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-14">
-            Performance Metrics We Optimize For
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {metrics.map((metric, index) => {
-              const Icon = metric.icon;
-
-              return (
-                <div
-                  key={index}
-                  className="
-              group border border-gray-200 rounded-xl p-6
+      <section className="py-24 md:py-28 bg-white">
+<div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 xl:px-28">
+ 
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-16">
+      Performance Metrics We Optimize For
+</h2>
+ 
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      {metrics.map((metric, index) => {
+        const Icon = metric.icon;
+ 
+        return (
+<div
+            key={index}
+            className="
+              group border border-gray-200 rounded-2xl p-8
               transition-all duration-300
-              hover:-translate-y-1 hover:shadow-lg hover:bg-teal-700
+              hover:-translate-y-1 hover:shadow-xl hover:bg-teal-700
             "
-                >
-                  <div className="
-              w-11 h-11 rounded-full bg-gray-100
-              flex items-center justify-center mb-5
-              transition group-hover:bg-white/20
-            ">
-                    <Icon className="w-5 h-5 text-teal-700 group-hover:text-white" />
-                  </div>
-
-                  <h3 className="text-base font-semibold text-gray-900 group-hover:text-white">
-                    {metric.title}
-                  </h3>
-                </div>
-              );
-            })}
-          </div>
-
-          <p className="text-lg text-gray-700 leading-relaxed max-w-4xl">
-            Our reporting goes beyond vanity metrics — we focus on{" "}
-            <span className="font-semibold text-gray-900">
-              numbers that directly impact your bottom line.
-            </span>
-          </p>
-
-        </div>
-      </section>
+>
+<div
+              className="
+                w-12 h-12 rounded-full bg-gray-100
+                flex items-center justify-center mb-6
+                transition group-hover:bg-white/20
+              "
+>
+<Icon className="w-6 h-6 text-teal-700 group-hover:text-white transition" />
+</div>
+ 
+            <h3 className="text-lg font-semibold text-gray-900 group-hover:text-white transition">
+              {metric.title}
+</h3>
+</div>
+        );
+      })}
+</div>
+ 
+    <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
+      Our reporting goes beyond vanity metrics — we focus on{" "}
+<span className="font-semibold text-gray-900">
+        numbers that directly impact your bottom line.
+</span>
+</p>
+ 
+  </div>
+</section>
 
       <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
