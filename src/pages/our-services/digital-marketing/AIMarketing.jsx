@@ -152,21 +152,20 @@ const techStack = [
 const AIMarketing = () => {
   return (
     <>
-     {/* HERO SECTION */}
-<section
+    
+{/* <section
   className="relative py-24 text-white bg-cover bg-center"
   style={{
     backgroundImage:
       "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
   }}
 >
-  {/* Dark Overlay */}
+  
   <div className="absolute inset-0 bg-blue-900/80"></div>
 
   <div className="relative max-w-7xl mx-auto px-6">
     <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
 
-      {/* LEFT CONTENT */}
       <div>
         <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
           AI-Powered Digital Marketing Agency <br />
@@ -192,7 +191,6 @@ const AIMarketing = () => {
         </div>
       </div>
 
-      {/* RIGHT IMAGE */}
       <div className="flex justify-center lg:justify-end">
   <img
     src={digi}
@@ -208,7 +206,51 @@ const AIMarketing = () => {
 </div>
     </div>
   </div>
+</section> */}
+
+
+<section
+  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div className="text-left space-y-6">
+      <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+        AI-Powered Digital Marketing Agency <br />
+        <span className="text-blue-300">for Smarter, Faster Growth</span>
+      </h1>
+
+      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+        Grow your business with AI-driven marketing strategies that deliver faster results, smarter campaigns, and high-intent leads built for sustainable growth.
+      </p>
+
+      <div className="flex flex-wrap gap-4">
+        <button className="bg-white text-blue-800 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 transition-all duration-300 hover:shadow-xl">
+          Speak to an Expert →
+        </button>
+        <button className="border border-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-blue-800 transition-all duration-300">
+          Our Services →
+        </button>
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end">
+      <img
+        src={digi}
+        alt="Digital Marketing"
+        className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] object-cover rounded-xl shadow-lg"
+      />
+    </div>
+  </div>
 </section>
+
+
 
       <div className="max-w-7xl mx-auto px-6 pt-6 text-sm text-gray-500">
         <span className="hover:text-blue-600 cursor-pointer">Home</span>

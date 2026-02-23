@@ -164,15 +164,15 @@ const point = [
 const SocialMediaAdvertising = () => {
     return (
         <>
-        <section
-  className="relative py-16 md:py-20 lg:py-24 text-white bg-cover bg-center"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-  }}
->
+ <section
+        className="relative flex items-center min-h-[70vh] bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+        }}
+      >
   {/* Overlay */}
-  <div className="absolute inset-0 bg-blue-900/85"></div>
+  {/* <div className="absolute inset-0 bg-blue-900/85"></div> */}
 
   <div className="relative w-full px-4 sm:px-6 lg:px-20 xl:px-28">
 
@@ -181,7 +181,7 @@ const SocialMediaAdvertising = () => {
       {/* LEFT CONTENT */}
       <div className="space-y-6 text-left">
 
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
           Social Media Advertising Services
         </h1>
 

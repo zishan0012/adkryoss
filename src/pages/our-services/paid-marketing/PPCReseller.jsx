@@ -235,13 +235,13 @@ const resellerCTAPoints = [
 const PPCReseller = () => {
   return (
     <>
-    <section
-  className="relative py-16 md:py-20 lg:py-24 text-white bg-cover bg-center"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-  }}
->
+ <section
+        className="relative flex items-center min-h-[70vh] bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+        }}
+      >
   {/* Overlay */}
   <div className="relative w-full px-6 sm:px-10 lg:px-24 xl:px-32">
 

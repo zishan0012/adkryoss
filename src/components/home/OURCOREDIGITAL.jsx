@@ -2,7 +2,12 @@
 
 
 import React, { useState } from "react";
-
+import SEOImage from "../../assets/SEO.png";
+import PPCImage from "../../assets/PPC.png";
+import SocialMediaImage from "../../assets/socialMedia.png";
+import ecomarceImage from "../../assets/ecomarce.png";
+import contentImage from "../../assets/inboundmarketing.png";
+import CROImage from "../../assets/HomeCRO.png";
 const tabs = [
   "Search Engine Optimization",
   "Performance Marketing (PPC & Paid Media)",
@@ -16,44 +21,39 @@ const tabContent = {
   "Search Engine Optimization": {
     title: "Search Engine Optimization",
     desc: "Dominate search rankings with technical SEO, content strategy, high-authority link building, and AI-optimized search frameworks. We focus on traffic that converts — not vanity metrics. .",
-    
-    image:
-      "https://www.techmagnate.com/wp-content/uploads/2025/01/seo-services.webp",
+   
+    image: SEOImage
   },
   "Performance Marketing (PPC & Paid Media)": {
     title: "Performance Marketing (PPC & Paid Media)",
     desc: "Google Ads, Meta Ads, LinkedIn Ads & programmatic campaigns engineered for maximum ROI. Smart bidding, advanced targeting, and CRO-backed landing strategies. ",
     
-    image:
-      "https://www.techmagnate.com/wp-content/uploads/2025/04/ppc-services-company.webp",
+    image: PPCImage
+     
   },
   "Social Media Marketing": {
     title: "Social Media Marketing",
     desc: "From brand storytelling to paid social scaling — we build community, engagement, and measurable conversions across Instagram, LinkedIn, Facebook, and emerging platforms. ",
    
-    image:
-      "https://www.techmagnate.com/wp-content/uploads/2025/04/content-marketing-services.webp",
+    image: SocialMediaImage
   },
   "E-Commerce Marketing ": {
     title: "E-Commerce Marketing ",
     desc: "Marketplace optimization, product feed management, dynamic ads, and performance scaling strategies for Shopify, WooCommerce & Amazon brands.",
     
-    image:
-      "https://www.techmagnate.com/wp-content/uploads/2025/04/mobile-app-marketing-services.webp",
+    image: ecomarceImage
   },
   "Content & Inbound Marketing ": {
     title: "Content & Inbound Marketing ",
     desc: "SEO blogs, thought leadership, video marketing, and funnel-driven content that attracts, nurtures, and converts your audience. ",
     
-    image:
-      "https://www.techmagnate.com/wp-content/uploads/2025/04/Martech1.webp",
+    image: contentImage
   },
   "Conversion Rate Optimization (CRO)": {
     title: "Conversion Rate Optimization (CRO) ",
     desc: "We turn traffic into revenue using heatmaps, A/B testing, UX audits, and behavioral analytics. ",
     
-    image:
-      "https://www.techmagnate.com/wp-content/uploads/2025/04/Martech1.webp",
+    image: CROImage
   },
 };
 
@@ -314,7 +314,7 @@ const ServicesTabs = () => {
         <img
           src={content.image}
           alt={content.title}
-          className="max-w-[240px] sm:max-w-[280px] md:max-w-[320px] w-full lg:mr-[240px]"
+          className="max-w-[240px] sm:max-w-[280px] ml-30 md:max-w-[320px] w-full lg:mr-[240px]"
         />
 
         {/* Services List */}

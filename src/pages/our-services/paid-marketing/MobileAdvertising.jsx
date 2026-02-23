@@ -197,19 +197,19 @@ const MobileAdvertising = () => {
   return (
     <>
       <section
-        className="relative py-16 md:py-20 lg:py-24 text-white bg-cover bg-center"
+        className="relative flex items-center min-h-[70vh] bg-cover bg-center"
         style={{
           backgroundImage:
             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-blue-900/80"></div>
+        {/* <div className="absolute inset-0 bg-blue-900/80"></div> */}
 
         <div className="relative w-full px-6 sm:px-10 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* LEFT CONTENT */}
           <div className="max-w-2xl space-y-8 text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold leading-tight text-white">
               Mobile Advertising
               <span className="block text-blue-300">Services That Convert</span>
             </h1>
@@ -227,7 +227,7 @@ const MobileAdvertising = () => {
 
             <div className="flex flex-col sm:flex-row gap-5 pt-4">
               <button
-                className="w-full sm:w-auto bg-white text-blue-700 px-7 py-3 rounded-full font-semibold
+                className="w-full sm:w-auto bg-white text-blue-700 px-5 py-3 rounded-full font-semibold
       hover:bg-blue-100 hover:shadow-xl transition-all duration-300"
               >
                 Speak to a Mobile Ads Expert →

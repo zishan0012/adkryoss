@@ -5,15 +5,15 @@ import React from 'react';
 // import CaseStudies from '../components/home/CaseStudies';
 // import Testimonials from '../components/home/Testimonials';
 // import ContactCTA from '../components/home/ContactCTA';
-import HeroNewOld from '../components/home/HeroNewOld';
-import Clients from '../components/home/Clients';
-import ServicesTabs from '../components/home/ServicesTabs';
+import HeroNewOld from '../components/home/HeroSection';
+import Clients from '../components/home/About';
+import ServicesTabs from '../components/home/OURCOREDIGITAL';
 import VideoSection from '../components/home/VideoSection';
-import TrafficGrowthSection from '../components/home/TrafficGrowthSection';
-import AwardsSection from '../components/home/AwardsSection';
-import CaseStudySection from '../components/home/CaseStudySection';
-import ClientTestimonials from '../components/home/ClientTestinomials';
-import SearchTrendsReports from './SearchTrendsReports';
+import TrafficGrowthSection from '../components/home/GrowthFramework';
+import MeasurableImpactThatSpeaks from '../components/home/MeasurableImpactThatSpeaks';
+import CaseStudySection from '../components/home/Future-ReadyMarketing';
+import ClientTestimonials from '../components/home/ReadytoAccelerate';
+import SearchTrendsReports from './Industry-Focused';
 import GrowthPartner from '../components/home/GrowthPartner';
 const Home = () => {
     return (
@@ -29,7 +29,7 @@ const Home = () => {
             <ServicesTabs/>
             <VideoSection/>
             <TrafficGrowthSection/>
-            <AwardsSection/>
+            <MeasurableImpactThatSpeaks/>
             <CaseStudySection/>
             <SearchTrendsReports/>
             <GrowthPartner/>

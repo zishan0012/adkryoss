@@ -1,5 +1,6 @@
 import React from "react";
-import Edu from "../../assets/Education.jpg";
+import industryeducation from "../../assets/industryeducation.png";
+import Edu from "../../assets/Education.png";
 import school from "../../assets/school.jpg";
 import College from "../../assets/college.jpg";
 import Edtech from "../../assets/edtech.jpg";
@@ -144,33 +145,33 @@ const Education = () => {
   return (
     <>
       <section
-        className="relative py-24 text-white bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-        }}
-      >
+  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+>
         {/* Overlay */}
-        <div className="absolute inset-0 bg-blue-900/80"></div>
+        {/* <div className="absolute inset-0 bg-blue-900/80"></div> */}
 
-        <div className="relative w-full px-8 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* LEFT CONTENT */}
-            <div className="space-y-6 max-w-2xl">
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div className="text-left text-white">
+        <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
                 Education Industry Digital Marketing Services
-              </h1>
+              </h2>
 
-              <h2 className="text-xl font-semibold text-blue-200">
+              <h2 className="text-2xl md:text-xl font-semibold leading-snug text-white">
                 Empowering Educational Institutions to Lead in the Digital Era
               </h2>
 
-              <p className="text-gray-200">
+              <p className="text-white md:text-md leading-relaxed max-w-[600px]">
                 Smarter strategies. Measurable growth. Future-ready enrollments.
-              </p>
+              {/* </p>
 
-              <p className="text-gray-300 leading-relaxed">
-                <span className="font-semibold text-white">
+              <p className="text-gray-300 leading-relaxed"> */}
+                <span className="font-bold text-white">
                   Adkryoss managed by Clink Consultancy Services Private Limited
                 </span>{" "}
                 helps schools, colleges, universities, edtech platforms, and
@@ -191,15 +192,17 @@ const Education = () => {
             </div>
 
             {/* RIGHT IMAGE */}
-            <div className="flex justify-end">
-              <img
-                src="https://www.techmagnate.com/wp-content/uploads/2025/04/digital-marketing-for-education-industry.webp"
-                alt="Digital Marketing for Educational Institutions"
-                className="w-80 lg:w-96 object-contain drop-shadow-2xl"
-              />
-            </div>
+            <div className="flex justify-center md:justify-end">
+                <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+                   <img
+                     src={industryeducation}
+                     alt="Section Image"
+                     className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+                   />
+                 </div>
+               </div>
           </div>
-        </div>
+        
       </section>
       {/* Why */}
       <section className="bg-gray-100 py-28">

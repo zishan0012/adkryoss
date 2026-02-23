@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import FixedCTA from "../components/FixedCTA";
+import WhatsappFloat from "./WhatsappFloat";
 
 const Layout = ({ children }) => {
     return (
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
             <Footer />
             <ScrollToTop />
             <FixedCTA />
+            <WhatsappFloat />
         </div>
     );
 };

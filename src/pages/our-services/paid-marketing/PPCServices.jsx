@@ -142,7 +142,16 @@ const PPCServices = () => {
     return (
         <>
         {/* Hero section */}
-        <section className="bg-linear-to-r from-blue-700 to-blue-900 py-16 md:py-24">
+        {/* <section className="bg-linear-to-r from-blue-700 to-blue-900 py-16 md:py-24"> */}
+ <section
+        className="relative flex items-center min-h-[70vh] bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+        }}
+      >
+
+
   <div className="w-full px-6 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-white">
 
       
@@ -456,17 +465,17 @@ const PPCServices = () => {
   <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[650px]">
 
     {/* LEFT SIDE - FULL IMAGE */}
-    <div className="relative h-[400px] lg:h-auto">
+    <div className="relative h-[400px] w-[900px] lg:h-auto">
       <img
         src={Process}
         alt="Our PPC Process"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain"
       />
     </div>
 
     {/* RIGHT SIDE - CONTENT (NO PADDING ON RIGHT EDGE) */}
     <div className="flex items-center">
-      <div className="pl-10 pr-0 py-16 lg:py-20 w-full">
+      <div className="pl-40 pr-0 py-16 lg:py-20 w-full">
 
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
           Our PPC Process
