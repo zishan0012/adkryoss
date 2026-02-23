@@ -4,7 +4,7 @@ import CareerImage from "../../assets/Career.jpeg";
 import WhatMakesUsDifferentImage from "../../assets/WhatMakesUsDifferent.png";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import WhoWeArelookingImage from "../../assets/WhoWeArelooking.png";
+import WhoWeArelookingImage from "../../assets/WhoWeAreLooking.png";
 import OurHiringPhilosophyImage from "../../assets/OurHiringPhilosophy.png";
 import GrowthImage from "../../assets/Growth.png";
 import InternshipImage from "../../assets/Internship.png";
