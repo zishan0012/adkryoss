@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import EcommerceD2Image from "../assets/EcommerceD2.png"
-import Education1Image from "../assets/Education1.png"
+import Education1Image from "../assets/education1.png"
 import healthImage from "../assets/health.jpeg"
 import RealEstateImage from "../assets/RealEstate.jpeg"
 // import EcommerceD2Image from "../assets/EcommerceD2.png"
