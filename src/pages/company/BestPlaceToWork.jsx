@@ -223,6 +223,135 @@ const BestPlaceToWork = () => {
 </section>
 
 
+
+<section className="bg-white py-16 sm:py-20 px-4 sm:px-6">
+  <div className="max-w-6xl mx-auto">
+
+    {/* HEADER */}
+    <div className="text-center mb-12">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        A Culture Built for Modern Marketers
+      </h2>
+      <p className="text-gray-600 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
+        The digital ecosystem evolves every second. So do we.
+      </p>
+    </div>
+
+    {/* DESCRIPTION */}
+    <div className="text-center max-w-4xl mx-auto mb-14">
+      <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+        At <span className="font-semibold text-blue-700">
+          Adkryoss managed by Clink Consultancy Services Private Limited
+        </span>, our work culture is driven by agility, data intelligence, and creative freedom.
+        We operate with a growth-first mindset — combining performance marketing,
+        technology, analytics, and creative storytelling into measurable results.
+      </p>
+    </div>
+
+    {/* CARDS GRID */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+
+      {/* CARD 1 - Gray */}
+      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+        <div className="mb-4">
+          <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M3 17l6-6 4 4 8-8" />
+            <path d="M14 7h7v7" />
+          </svg>
+        </div>
+        <h3 className="font-semibold text-gray-900 mb-2">Performance Marketing & Paid Media</h3>
+        <p className="text-gray-600 text-sm">
+          Scalable campaigns engineered for ROI and measurable growth.
+        </p>
+      </div>
+
+      {/* CARD 2 - Light Blue */}
+      <div className="bg-blue-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+        <div className="mb-4">
+          <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.3-4.3" />
+          </svg>
+        </div>
+        <h3 className="font-semibold text-gray-900 mb-2">SEO & Organic Growth Strategy</h3>
+        <p className="text-gray-600 text-sm">
+          Sustainable visibility built on data-backed search intelligence.
+        </p>
+      </div>
+
+      {/* CARD 3 - Gray */}
+      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+        <div className="mb-4">
+          <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M4 20V10" />
+            <path d="M10 20V4" />
+            <path d="M16 20v-6" />
+            <path d="M22 20V14" />
+          </svg>
+        </div>
+        <h3 className="font-semibold text-gray-900 mb-2">Data Analytics & Consumer Insights</h3>
+        <p className="text-gray-600 text-sm">
+          Turning raw data into strategic business intelligence.
+        </p>
+      </div>
+
+      {/* CARD 4 - Light Blue */}
+      <div className="bg-blue-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+        <div className="mb-4">
+          <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M12 2a7 7 0 017 7c0 3-2 5-4 6l-3 7-3-7c-2-1-4-3-4-6a7 7 0 017-7z" />
+          </svg>
+        </div>
+        <h3 className="font-semibold text-gray-900 mb-2">Creative & Content Innovation</h3>
+        <p className="text-gray-600 text-sm">
+          Storytelling that connects brands with modern audiences.
+        </p>
+      </div>
+
+      {/* CARD 5 - Gray */}
+      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+        <div className="mb-4">
+          <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+          </svg>
+        </div>
+        <h3 className="font-semibold text-gray-900 mb-2">Marketing Automation & AI Tools</h3>
+        <p className="text-gray-600 text-sm">
+          Smart systems that optimize journeys and scale efficiency.
+        </p>
+      </div>
+
+      {/* CARD 6 - Light Blue */}
+      <div className="bg-blue-100 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+        <div className="mb-4">
+          <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path d="M12 20V10" />
+            <path d="M18 16l-6-6-6 6" />
+          </svg>
+        </div>
+        <h3 className="font-semibold text-gray-900 mb-2">Conversion Rate Optimization</h3>
+        <p className="text-gray-600 text-sm">
+          Engineering seamless user journeys that drive higher conversions.
+        </p>
+      </div>
+
+    </div>
+
+    {/* CULTURE STATEMENT */}
+    <div className="text-center mt-14">
+      <p className="text-blue-700 font-semibold text-lg">
+        We don’t believe in rigid hierarchies. We believe in ownership, accountability, and experimentation.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
 <section className="bg-gray-50 py-16 sm:py-20 px-4 sm:px-6">
   <div className="max-w-6xl mx-auto">
 

@@ -119,6 +119,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Card from "./Card";
 import cardsData from "../../data/cardsData";
+import { motion } from "framer-motion";
 
 const TrafficGrowthSection = () => {
   const scrollRef = useRef(null);
@@ -152,11 +153,17 @@ const TrafficGrowthSection = () => {
   }, []);
 
   return (
-    <section
+    <motion.section
       style={{
         padding: "96px 0",
         background: "linear-gradient(to right, #eff6ff, #ffffff)",
       }}
+
+      
+ initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
     >
       <div
         style={{
@@ -267,7 +274,7 @@ const TrafficGrowthSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

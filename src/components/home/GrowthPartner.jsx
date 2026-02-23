@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 // Array of cards with text and related SVG
 const cards = [
@@ -92,7 +93,14 @@ const cards = [
 
 const GrowthPartner = () => {
   return (
-    <section className="py-16 bg-white">
+    <motion.section className="py-16 bg-white"
+    
+ initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    
+    >
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         {/* Heading */}
@@ -118,7 +126,7 @@ const GrowthPartner = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -8,6 +8,7 @@ import SocialMediaImage from "../../assets/socialMedia.png";
 import ecomarceImage from "../../assets/ecomarce.png";
 import contentImage from "../../assets/inboundmarketing.png";
 import CROImage from "../../assets/HomeCRO.png";
+import { motion } from "framer-motion";
 const tabs = [
   "Search Engine Optimization",
   "Performance Marketing (PPC & Paid Media)",
@@ -256,7 +257,13 @@ const ServicesTabs = () => {
     //   </div>
     // </section>
 
-<section className="bg-white py-6 sm:py-8">
+<motion.section className="bg-white py-6 sm:py-8"
+ initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+
+>
   <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
 
     {/* Heading */}
@@ -338,7 +345,7 @@ const ServicesTabs = () => {
       </div>
     </div>
   </div>
-</section>
+</motion.section>
 
 
   );
