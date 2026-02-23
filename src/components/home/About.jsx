@@ -1,7 +1,7 @@
 
 
 import React from "react";
-
+import { motion } from "framer-motion";
 const Clients = () => {
   const logos = [
     // Column 1
@@ -123,7 +123,13 @@ const Clients = () => {
 // </section>
 
 
-<section className="py-14 sm:py-20 lg:py-28 px-4 sm:px-6 bg-white overflow-hidden">
+<motion.section className="py-14 sm:py-20 lg:py-28 px-4 sm:px-6 bg-white overflow-hidden"
+
+ initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+>
   <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
     {/* LEFT CONTENT */}
@@ -208,7 +214,7 @@ const Clients = () => {
       To create marketing systems that generate consistent growth.
     </p>
   </div>
-</section>
+</motion.section>
 
   );
 };

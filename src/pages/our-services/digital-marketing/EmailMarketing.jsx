@@ -278,7 +278,7 @@ const EmailMarketing = () => {
       </p>
 
 
-{/* <div className="flex flex-col sm:flex-row gap-4 mt-2">
+<div className="flex flex-col sm:flex-row gap-4 mt-2">
               <a
                 href="/contact"
                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
@@ -291,9 +291,9 @@ const EmailMarketing = () => {
               >
                 Our Services →
               </a>
-            </div> */}
+            </div>
 
-
+{/* 
       <div className="flex flex-wrap gap-4">
         <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
           Book a Strategy Call →
@@ -301,7 +301,7 @@ const EmailMarketing = () => {
         <button className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
           View Capabilities →
         </button>
-      </div>
+      </div> */}
     </div>
 
     <div className="flex justify-center md:justify-end">

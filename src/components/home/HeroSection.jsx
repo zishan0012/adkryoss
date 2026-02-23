@@ -3,16 +3,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import HerobgImage from "../../assets/Herobg.png";
+import { motion } from "framer-motion";
 const HeroSection = () => {
   const navigate = useNavigate();
   return (
     <>
-      <section
+      <motion.section
         className="relative flex items-center min-h-[90vh] bg-cover bg-left bg-no-repeat "
         style={{
           backgroundImage: `url(${HerobgImage})`
             // "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/banner_desk_bg.webp')",
-        }}
+          }}
+
+           initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
       >
         {/* Gradient Overlay */}
         {/* <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(13,59,102,0.95)_0%,rgba(11,95,76,0.85)_100%)]"></div> */}
@@ -63,7 +69,7 @@ const HeroSection = () => {
           </div> */}
 
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };

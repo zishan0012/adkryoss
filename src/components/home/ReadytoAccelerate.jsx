@@ -1,15 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import ReadyToAccelerateImage from "../../assets/ReadyToaccelerate.jpeg";
 const ClientTestimonials = () => {
   const navigate = useNavigate();
   return (
-    <section
+    <motion.section
       className="py-14 bg-white bg-cover mb-5"
       style={{
         backgroundImage:
           "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/client_bg.webp')",
       }}
+
+      
+ initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
     >
       <div className="max-w-[1400px] mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
@@ -47,7 +54,7 @@ const ClientTestimonials = () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

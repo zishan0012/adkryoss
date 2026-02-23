@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 // Services Pages
@@ -121,7 +121,23 @@ const ScrollToTop = () => {
   return null;
 };
 
+
+const PageWrapper = ({ children }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.4 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+
 function App() {
+  
     
   return (
     <Layout>
@@ -134,19 +150,19 @@ function App() {
         <Route path="/" element={<Home />} />
 
         {/* ==================== COMPANY ROUTES ==================== */}
-        <Route path="/company" element={<Company />} />
-        <Route path="/company/about-us" element={<AboutUs />} />
-        <Route path="/company/careers" element={<Careers />} />
+        <Route path="/company" element={<PageWrapper><Company /></PageWrapper> } />
+        <Route path="/company/about-us" element={<PageWrapper><AboutUs /></PageWrapper>} />
+        <Route path="/company/careers" element={<PageWrapper><Careers /></PageWrapper>} />
         <Route path="/company/awards" element={<Awards />} />
-        <Route path="/company/press-releases" element={<PressReleases />} />
-        <Route path="/company/best-place-to-work" element={<BestPlaceToWork />} />
+        <Route path="/company/press-releases" element={<PageWrapper><PressReleases /></PageWrapper>} />
+        <Route path="/company/best-place-to-work" element={<PageWrapper><BestPlaceToWork /></PageWrapper>} />
 
         {/* ==================== SERVICES ROUTES ==================== */}
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
 
         {/* SEO Services (18 pages) */}
-        <Route path="/services/seo" element={<SEO />} />
-        <Route path="/services/seo/seo-services" element={<SEOServices />} />
+        <Route path="/services/seo" element={<PageWrapper><SEO /></PageWrapper>} />
+        <Route path="/services/seo/seo-services" element={<PageWrapper><SEOServices /></PageWrapper>} />
         <Route path="/services/seo/enterprise-seo" element={<EnterpriseSEO />} />
         <Route path="/services/seo/seo-migration-services" element={<SEOMigrationServices />} />
         <Route path="/services/seo/vernacular-seo-services" element={<VernacularSEOServices />} />
