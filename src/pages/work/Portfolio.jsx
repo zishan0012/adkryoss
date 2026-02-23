@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import portfoliohero from '../../assets/work/portfoliohero.png';
+import { motion } from "framer-motion";
+import { useState } from 'react';
 import {
     CheckCircle2,
     ArrowRight,
@@ -99,7 +101,7 @@ const Portfolio = () => {
         { step: "04", title: "Analyze & Optimize", desc: "Continuous monitoring and A/B testing to refine performance and reduce costs." },
         { step: "05", title: "Scale & Dominate", desc: "Ramping up successful funnels to maximize reach and market share." }
     ];
-
+const [activeIndex, setActiveIndex] = useState(null);
     return (
         <div className="bg-white">
             <section
@@ -148,10 +150,42 @@ const Portfolio = () => {
                             { title: "Conversion-Focused Design", icon: <MousePointer2 className="text-blue-600" /> },
                             { title: "Marketing Automation Intelligence", icon: <Cpu className="text-blue-600" /> }
                         ].map((item, i) => (
-                            <div key={i} className="p-6 bg-[#f8fafc] rounded-24 border border-[#e2e8f0] text-center hover:shadow-lg transition-all duration-300">
-                                <div className="mb-4 flex justify-center">{item.icon}</div>
-                                <h4 className="text-[16px] font-bold text-[#0f172a]">{item.title}</h4>
-                            </div>
+                            // <div key={i} className="p-6 bg-[#f8fafc] rounded-24 border border-[#e2e8f0] text-center hover:shadow-lg transition-all duration-300">
+                            //     <div className="mb-4 flex justify-center">{item.icon}</div>
+                            //     <h4 className="text-[16px] font-bold text-[#0f172a]">{item.title}</h4>
+                            // </div>
+
+
+<div
+  key={i}
+  className="group relative overflow-hidden p-6 rounded-24 
+             border border-[#e2e8f0] text-center cursor-pointer"
+>
+
+  {/* Sliding Background */}
+  <span className="absolute inset-0 bg-blue-600 
+                   -translate-x-full 
+                   group-hover:translate-x-0 
+                   transition-transform duration-500 ease-out" />
+
+  {/* Content */}
+  <div className="relative z-10 transition-colors duration-300 
+                  text-[#0f172a] group-hover:text-white">
+
+    <div className="mb-4 flex justify-center 
+                    transition-colors duration-300">
+      {React.cloneElement(item.icon, { 
+        className: "text-blue-600 group-hover:text-white" 
+      })}
+    </div>
+
+    <h4 className="text-[16px] font-bold">
+      {item.title}
+    </h4>
+  </div>
+</div>
+
+
                         ))}
                     </div>
                     <div className="mt-16 bg-[#0f172a] p-10 rounded-40 text-center text-white">
@@ -193,7 +227,7 @@ const Portfolio = () => {
                         <p className="text-[#64748b]">Real impact across diverse business objectives</p>
                     </div>
                     <div className="grid lg:grid-cols-2 gap-12">
-                        {caseStudies.map((caseStudy, i) => (
+                        {/* {caseStudies.map((caseStudy, i) => (
                             <div key={i} className="bg-white rounded-32 border border-[#e2e8f0] overflow-hidden hover:shadow-2xl transition-all duration-500 group">
                                 <div className="p-8 md:p-12">
                                     <div className="flex items-center gap-4 mb-6">
@@ -228,7 +262,71 @@ const Portfolio = () => {
                                     </p>
                                 </div>
                             </div>
-                        ))}
+                        ))} */}
+
+
+
+
+{caseStudies.map((caseStudy, i) => {
+  const isActive = activeIndex === i;
+  const isInactive = activeIndex !== null && activeIndex !== i;
+
+  return (
+    <motion.div
+      key={i}
+      onMouseEnter={() => setActiveIndex(i)}
+      onMouseLeave={() => setActiveIndex(null)}
+      animate={{
+        scale: isActive ? 1.08 : 1,
+        opacity: isInactive ? 0.5 : 1,
+        y: isActive ? -10 : 0,
+      }}
+      transition={{ duration: 0.4 }}
+      className="relative bg-white rounded-32 border border-[#e2e8f0] 
+                 overflow-hidden hover:shadow-2xl 
+                 transition-all duration-500"
+      style={{ zIndex: isActive ? 20 : 1 }}
+    >
+     <div className="p-8 md:p-12">
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-xl">
+                                            {i + 1}
+                                        </div>
+                                        <h3 className="text-2xl font-bold text-[#0f172a] group-hover:text-[#0066cc] transition-colors">{caseStudy.title}</h3>
+                                    </div>
+                                    <div className="space-y-6 mb-8">
+                                        <div>
+                                            <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600">Objective</span>
+                                            <p className="text-[#0f172a] font-medium mt-1">{caseStudy.objective}</p>
+                                        </div>
+                                        <div>
+                                            <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600">Strategy</span>
+                                            <p className="text-[#0f172a] font-medium mt-1">{caseStudy.strategy}</p>
+                                        </div>
+                                    </div>
+                                    <div className="bg-blue-50 p-6 rounded-24 mb-6">
+                                        <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600 mb-4 block">Impact</span>
+                                        <ul className="space-y-3">
+                                            {caseStudy.impact.map((point, idx) => (
+                                                <li key={idx} className="flex gap-3 text-[15px] font-bold text-[#0f172a]">
+                                                    <CheckCircle2 size={18} className="text-green-500 shrink-0 mt-0.5" />
+                                                    {point}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <p className="text-[#64748b] leading-relaxed text-[15px]">
+                                        {caseStudy.desc}
+                                    </p>
+                                </div>
+    </motion.div>
+  );
+})}
+
+
+
+
+
                     </div>
                 </div>
             </section >
