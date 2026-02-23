@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import ReadyToAccelerateImage from "../../assets/ReadyToAccelerate.jpeg";
+import ReadyToAccelerateImage from "../../assets/ReadyToaccelerate.jpeg";
 const ClientTestimonials = () => {
   const navigate = useNavigate();
   return (
