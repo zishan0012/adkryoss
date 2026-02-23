@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import {
     FileSearch,
@@ -29,6 +29,30 @@ const RequestQuote = () => {
     const [otpSent, setOtpSent] = useState(false);
     const [otpVerified, setOtpVerified] = useState(false);
     const [otpLoading, setOtpLoading] = useState(false);
+
+    const location = useLocation();
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        const serviceParam = params.get("service");
+        if (serviceParam) {
+            // Map common param values to service list display names if needed
+            const serviceMap = {
+                "seo": "SEO",
+                "ads": "Paid Ads",
+                "content": "Content Marketing",
+                "ai": "AI Automation",
+                "cro": "CRO",
+                "orm": "ORM",
+                "aso": "ASO",
+                "app": "App Marketing"
+            };
+            const mappedService = serviceMap[serviceParam.toLowerCase()] || serviceParam;
+            if (servicesList.includes(mappedService)) {
+                setFormData(prev => ({ ...prev, service: mappedService }));
+            }
+        }
+    }, [location]);
 
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
@@ -76,7 +100,7 @@ const RequestQuote = () => {
 
         emailjs
             .send(
-                "service_lb93y5t",
+                "service_q8qm5ah",
                 "template_34mfvgd",
                 {
                     email: formData.email,
@@ -182,16 +206,15 @@ const RequestQuote = () => {
         setLoading(true);
 
         const submitData = {
-            ...formData,
-            service: formData.service,
+            ...formData
         };
 
         emailjs
             .send(
-                "service_lb93y5t",
-                "template_cdooj2p",
+                "service_o9asiig",
+                "template_y39nc0i",
                 submitData,
-                "wzMZB3gXbCN1HTitr"
+                "2X4j1gjI4qCBNp-1j"
             )
             .then(() => {
                 setSuccess("Your quote request has been sent successfully!");
