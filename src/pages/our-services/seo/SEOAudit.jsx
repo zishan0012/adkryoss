@@ -159,18 +159,18 @@ const SEOAudit = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
@@ -239,7 +239,7 @@ const SEOAudit = () => {
             </section>
 
             {/* Framework Section */}
-            <section className="py-[80px] bg-[#f8fafc]">
+            <section id="services" className="py-[80px] bg-[#f8fafc]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-[20px] text-[#0f172a]">Our Strategic SEO Audit Framework</h2>

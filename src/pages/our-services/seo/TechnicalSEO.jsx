@@ -185,18 +185,18 @@ const TechnicalSEO = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
@@ -253,7 +253,7 @@ const TechnicalSEO = () => {
             </section>
 
             {/* Framework Section */}
-            <section className="py-24 bg-slate-50">
+            <section id="services" className="py-24 bg-slate-50">
                 <div className="container">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5">
@@ -443,7 +443,7 @@ const TechnicalSEO = () => {
             <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004999] text-white">
                 <div className="container">
                     <h2 className="text-[36px] font-bold mb-6 text-white leading-tight">Let’s Strengthen Your Digital Foundation</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 max-w-[800px] mx-auto leading-relaxed font-medium">
+                    <p className="text-[16px] md:text-[18px] text-white mb-6 opacity-90 max-w-[800px] mx-auto leading-relaxed font-medium">
                         Partner with Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span> and build a website that search engines trust — and customers love.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-[#0066cc] py-5 px-12 rounded-full text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:scale-[1.05] hover:shadow-white/20">

@@ -52,18 +52,18 @@ const Header = () => {
     const navItems = [
         {
             name: 'Company',
-            path: '/company',
+            path: null,
             subItems: [
                 { name: 'About Us', path: '/company/about-us' },
                 { name: 'Careers', path: '/company/careers' },
-                { name: 'Awards', path: '/company/awards' },
+                // { name: 'Awards', path: '/company/awards' },
                 { name: 'Press Releases', path: '/company/press-releases' },
                 { name: 'Best Place to Work', path: '/company/best-place-to-work' },
             ]
         },
         {
             name: 'Our Services',
-            path: '/services',
+            path: null,
             subItems: [
                 {
                     name: 'Search Engine Optimization',
@@ -150,7 +150,7 @@ const Header = () => {
         },
         {
             name: 'Work',
-            path: '/work',
+            path: null,
             subItems: [
                 { name: 'Portfolio', path: '/work/portfolio' },
                 { name: 'Case Study', path: '/work/case-study' },
@@ -159,7 +159,7 @@ const Header = () => {
         },
         {
             name: 'Industry',
-            path: '/industry',
+            path: null,
             subItems: [
                 { name: 'BFSI', path: '/industry/bfsi' },
                 { name: 'B2B', path: '/industry/b2b' },
@@ -169,12 +169,12 @@ const Header = () => {
             ]
         },
         {
-            name: 'Partners', path: '/partners', 
+            name: 'Partners', path: null,
             subItems: [
                 { name: 'Become Our IPP', path: '/partners/ipp' },
                 { name: 'Become Our IBP', path: '/partners/ibp' },
             ]
-         },
+        },
         { name: 'Blog', path: '/blog' },
         { name: 'Contact', path: '/contact' },
     ];
@@ -205,9 +205,15 @@ const Header = () => {
                             >
                                 {item.subItems ? (
                                     <div className="flex items-center cursor-pointer h-full">
-                                        <Link to={item.path} className="font-semibold text-[15px] text-[#333] flex items-center h-full group-hover:text-[#0066cc] transition-colors" onClick={handleLinkClick}>
-                                            {item.name}
-                                        </Link>
+                                        {item.path ? (
+                                            <Link to={item.path} className="font-semibold text-[15px] text-[#333] flex items-center h-full group-hover:text-[#0066cc] transition-colors" onClick={handleLinkClick}>
+                                                {item.name}
+                                            </Link>
+                                        ) : (
+                                            <span className="font-semibold text-[15px] text-[#333] flex items-center h-full group-hover:text-[#0066cc] transition-colors">
+                                                {item.name}
+                                            </span>
+                                        )}
                                         <ChevronDown size={14} className="ml-1 text-[#333] group-hover:text-[#0066cc] transition-colors" />
 
                                         {item.name === 'Our Services' ? (
@@ -305,13 +311,19 @@ const Header = () => {
                     {navItems.map((item) => (
                         <div key={item.name} className="border-b border-[#f0f0f0] last:border-0">
                             <div className="flex justify-between items-center py-3">
-                                <Link
-                                    to={item.path}
-                                    onClick={() => setIsMenuOpen(false)}
-                                    className="text-[17px] font-bold text-[#333]"
-                                >
-                                    {item.name}
-                                </Link>
+                                {item.path ? (
+                                    <Link
+                                        to={item.path}
+                                        onClick={() => setIsMenuOpen(false)}
+                                        className="text-[17px] font-bold text-[#333]"
+                                    >
+                                        {item.name}
+                                    </Link>
+                                ) : (
+                                    <span className="text-[17px] font-bold text-[#333]">
+                                        {item.name}
+                                    </span>
+                                )}
                                 {item.subItems && (
                                     <button
                                         onClick={(e) => toggleMobileAccordion(e, item.name)}

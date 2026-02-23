@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import mail from "../../../assets/mail.png"
 import {
   Route,
@@ -194,7 +195,7 @@ const EmailMarketing = () => {
 
 
 
-       {/* <section
+      {/* <section
         className="relative py-20 text-white bg-cover bg-center"
         style={{
            backgroundImage:
@@ -254,31 +255,31 @@ const EmailMarketing = () => {
 
 
 
-<section
-  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-  }}
->
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+      <section
+        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-    <div className="space-y-6">
-      <h1 className="text-4xl md:text-5xl font-bold leading-tight">Email Marketing Services</h1>
-      <h2 className="text-2xl md:text-3xl font-semibold text-blue-200">
-        Turn Subscribers Into Revenue Machines
-      </h2>
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">Email Marketing Services</h1>
+            <h2 className="text-2xl md:text-3xl font-semibold text-blue-200">
+              Turn Subscribers Into Revenue Machines
+            </h2>
 
-      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
-        Smart inbox strategies. Hyper-personalized journeys. Measurable growth.
-      </p>
+            <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+              Smart inbox strategies. Hyper-personalized journeys. Measurable growth.
+            </p>
 
-      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
-        At <span className="font-semibold">Adkryoss managed by Clink Consultancy Services Private Limited</span>, we build high-converting email ecosystems that nurture leads, re-engage audiences, and generate predictable ROI.
-      </p>
+            <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+              At <span className="font-semibold">Adkryoss managed by Clink Consultancy Services Private Limited</span>, we build high-converting email ecosystems that nurture leads, re-engage audiences, and generate predictable ROI.
+            </p>
 
 
-{/* <div className="flex flex-col sm:flex-row gap-4 mt-2">
+            {/* <div className="flex flex-col sm:flex-row gap-4 mt-2">
               <a
                 href="/contact"
                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
@@ -294,31 +295,34 @@ const EmailMarketing = () => {
             </div> */}
 
 
-      <div className="flex flex-wrap gap-4">
-        <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
-          Book a Strategy Call →
-        </button>
-        <button className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
-          View Capabilities →
-        </button>
-      </div>
-    </div>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/contact" className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
+                Speak to Our Expert →
+              </Link>
+              <Link
+                to="#services"
+                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Our Services →
+              </Link>
+            </div>
+          </div>
 
-    <div className="flex justify-center md:justify-end">
-      <img
-        src={mail}
-        alt="Email Marketing"
-        className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] object-cover rounded-xl shadow-lg"
-      />
-    </div>
-  </div>
-</section> 
+          <div className="flex justify-center md:justify-end">
+            <img
+              src={mail}
+              alt="Email Marketing"
+              className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] object-cover rounded-xl shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
 
-            
-         
 
-          
-           {/* <div className="flex justify-center lg:justify-end">
+
+
+
+      {/* <div className="flex justify-center lg:justify-end">
             <img
                src={mail}
               alt="Email Marketing"
@@ -326,7 +330,7 @@ const EmailMarketing = () => {
             />
           </div> */}
 
-      
+
 
 
 
@@ -344,7 +348,7 @@ const EmailMarketing = () => {
           Email Marketing
         </span>
       </div>
-      <section className="bg-white py-20">
+      <section id="services" className="bg-white py-20">
 
         <div className="max-w-5xl mx-auto px-6">
 
@@ -725,15 +729,15 @@ const EmailMarketing = () => {
             and unlock the full potential of intelligent email marketing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#020617] px-8 py-3 rounded-full font-semibold
+            <Link to="/contact" className="bg-white text-[#020617] px-8 py-3 rounded-full font-semibold
             hover:bg-blue-100 hover:shadow-xl transition">
-              Book a Strategy Consultation →
-            </button>
+              Speak to Our Expert →
+            </Link>
 
-            <button className="border border-white/30 px-8 py-3 rounded-full font-semibold
+            <Link to="/contact" className="border border-white/30 px-8 py-3 rounded-full font-semibold
             hover:bg-white/10 transition">
               Talk to an Email Expert
-            </button>
+            </Link>
           </div>
 
         </div>

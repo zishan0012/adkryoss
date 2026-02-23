@@ -7,10 +7,10 @@ const Footer = () => {
     return (
         <footer className="bg-[#1A1A1A] text-white pt-[60px]">
             <div className="container px-4 md:px-6 mx-auto">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-10 mb-12">
 
                     {/* Column 1: About */}
-                    <div className="lg:col-span-3">
+                    <div className="lg:col-span-2">
                         <Link to="/" className="mb-6 block -mt-2">
                             <img
                                 src={footerlogo}
@@ -41,10 +41,9 @@ const Footer = () => {
                     </div>
 
                     {/* Column 2: Our Services */}
-                    <div className="lg:col-span-2">
+                    <div>
                         <h3 className="text-white text-lg mb-6 font-semibold relative inline-block">
                             Our Services
-                            {/* <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-blue-600"></span> */}
                         </h3>
                         <ul className="flex flex-col gap-4 list-none p-0">
                             {[
@@ -54,7 +53,6 @@ const Footer = () => {
                                 { name: 'Content Marketing', path: '/services/content-marketing' },
                                 { name: 'PPC/Paid Marketing', path: '/services/paid-marketing' },
                                 { name: 'Marketing Technology', path: '/services/martech' },
-                                // { name: 'Web Designing & Development', path: '/services/web-design' }
                             ].map(service => (
                                 <li key={service.name}>
                                     <Link to={service.path} className="text-[#ccc] text-sm transition-colors duration-200 no-underline hover:text-white flex items-center group">
@@ -67,10 +65,9 @@ const Footer = () => {
                     </div>
 
                     {/* Column 3: Company */}
-                    <div className="lg:col-span-2">
+                    <div>
                         <h3 className="text-white text-lg mb-6 font-semibold relative inline-block">
                             Company
-                            {/* <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-blue-600"></span> */}
                         </h3>
                         <ul className="flex flex-col gap-4 list-none p-0">
                             {[
@@ -78,7 +75,6 @@ const Footer = () => {
                                 { name: 'Press Releases', path: '/company/press-releases' },
                                 { name: 'Careers', path: '/company/careers' },
                                 { name: 'Best Place to Work in India', path: '/company/best-place-to-work' },
-                                { name: 'Awards and Recognition', path: '/company/awards' }
                             ].map(link => (
                                 <li key={link.name}>
                                     <Link to={link.path} className="text-[#ccc] text-sm transition-colors duration-200 no-underline hover:text-white flex items-center group">
@@ -90,11 +86,10 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 4: Tools & Industries */}
-                    <div className="lg:col-span-2">
+                    {/* Column 4: Tools */}
+                    <div>
                         <h3 className="text-white text-lg mb-6 font-semibold relative inline-block">
                             Tools
-                            {/* <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-blue-600"></span> */}
                         </h3>
                         <ul className="flex flex-col gap-4 list-none p-0 mb-10">
                             {[
@@ -110,12 +105,34 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
+                    </div>
 
+                    {/* Column 5: Quick Links */}
+                    <div>
+                        <h3 className="text-white text-lg mb-6 font-semibold relative inline-block">
+                            Quick Links
+                        </h3>
+                        <div className="flex flex-col gap-4">
+                            {[
+                                { name: 'Blog', path: '/blog' },
+                                { name: 'Case Studies', path: '/work/case-study' },
+                                { name: 'Testimonial', path: '/work/testimonial' },
+                                { name: 'Portfolio', path: '/work/portfolio' }
+                            ].map(link => (
+                                <Link key={link.name} to={link.path} className="text-[#ccc] text-sm transition-colors duration-200 no-underline hover:text-white flex items-center group whitespace-nowrap">
+                                    <span className="w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-3 group-hover:mr-2"></span>
+                                    {link.name}
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Column 6: Industries */}
+                    <div>
                         <h3 className="text-white text-lg mb-6 font-semibold relative inline-block">
                             Industries
-                            {/* <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-blue-600"></span> */}
                         </h3>
-                        <ul className="grid grid-cols-2 gap-x-4 gap-y-4 list-none p-0">
+                        <ul className="flex flex-col gap-4 list-none p-0">
                             {[
                                 { name: 'BFSI', path: '/industry/bfsi' },
                                 { name: 'B2B', path: '/industry/b2b' },
@@ -131,60 +148,38 @@ const Footer = () => {
                             ))}
                         </ul>
                     </div>
-
-                    {/* Column 5: Quick Links */}
-                    <div className="lg:col-span-3">
-                        <h3 className="text-white text-lg mb-6 font-semibold relative inline-block">
-                            Quick Links
-                            {/* <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-blue-600"></span> */}
-                        </h3>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
-                            {[
-                                { name: 'Blog', path: '/blog' },
-                                { name: 'FAQs', path: '/faqs' },
-                                { name: 'Web Stories', path: '/web-stories' },
-                                { name: 'Case Studies', path: '/work/case-study' },
-                                { name: 'Testimonial', path: '/work/testimonial' },
-                                { name: 'Portfolio', path: '/work/portfolio' },
-                                { name: 'Search Trends Report', path: '/search-trends' },
-                                { name: 'Digital Report Card', path: '/digital-report-card' },
-                                { name: 'BlogX', path: '/blogx' },
-                                { name: 'Contact Us', path: '/contact' }
-                            ].map(link => (
-                                <Link key={link.name} to={link.path} className="text-[#ccc] text-sm transition-colors duration-200 no-underline hover:text-white flex items-center group whitespace-nowrap">
-                                    <span className="w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-3 group-hover:mr-2"></span>
-                                    {link.name}
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
                 </div>
 
                 {/* Reach Us Ribbon - Horizontal Row */}
-                <div className=" py-10 mb-2">
+                <div className="py-10 mb-2">
                     <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-4">
                         <div className="flex gap-4 items-center group">
                             <Building size={20} className="text-[#999] transition-all duration-300 group-hover:text-blue-600 shrink-0" />
                             <p className="text-[#999] text-sm m-0 transition-colors duration-300 group-hover:text-white font-medium">
-                                Kryoss Softech Private Limited
+                                Clink Consultancy Service Private Limited
                             </p>
                         </div>
                         <div className="flex gap-4 items-center group max-w-md">
                             <MapPin size={20} className="text-[#999] transition-all duration-300 group-hover:text-blue-600 shrink-0" />
-                            <p className="text-[#999] text-sm m-0 transition-colors duration-300 group-hover:text-white">
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Vipul+Trade+Center+Sector+48+Sohna+Road+Gurgaon+Haryana+122018"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#999] text-sm m-0 transition-colors duration-300 group-hover:text-white no-underline"
+                            >
                                 507, 5th Floor, Vipul Trade Center Sector – 48, Sohna Road Gurgaon, Haryana - 122018
-                            </p>
+                            </a>
                         </div>
                         <div className="flex gap-4 items-center group">
                             <Phone size={20} className="text-[#999] transition-all duration-300 group-hover:text-blue-600 shrink-0" />
                             <a href="tel:+919910308266" className="text-[#999] text-sm transition-colors duration-300 group-hover:text-white no-underline">
-                                0124 429 9985
+                                01169269633
                             </a>
                         </div>
                         <div className="flex gap-4 items-center group">
                             <Mail size={20} className="text-[#999] transition-all duration-300 group-hover:text-blue-600 shrink-0" />
-                            <a href="mailto:enquiry@adkryoss.com" className="text-[#999] text-sm transition-colors duration-300 group-hover:text-white no-underline">
-                                enquiry@adkryoss.com
+                            <a href="mailto:info@adkryoss.com" className="text-[#999] text-sm transition-colors duration-300 group-hover:text-white no-underline">
+                                info@adkryoss.com
                             </a>
                         </div>
                     </div>
@@ -201,6 +196,9 @@ const Footer = () => {
                         </Link>
                         <Link to="/terms-conditions" className="text-sm text-[#666] transition-colors duration-300 hover:text-white border-0 no-underline">
                             Terms & Conditions
+                        </Link>
+                        <Link to="/refund-cancellation" className="text-sm text-[#666] transition-colors duration-300 hover:text-white border-0 no-underline">
+                            Refund & Cancellation
                         </Link>
                         <Link to="/sitemap" className="text-sm text-[#666] transition-colors duration-300 hover:text-white border-0 no-underline">
                             Sitemap

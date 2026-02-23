@@ -264,7 +264,7 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_lb93y5t",
+        "service_q8qm5ah",
         "template_34mfvgd",
         {
           email: formData.email,
@@ -361,10 +361,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_lb93y5t",
-        "template_cdooj2p",
+        "service_o2hqsiu",
+        "template_2hvikhe",
         formData,
-        "wzMZB3gXbCN1HTitr",
+        "2X4j1gjI4qCBNp-1j",
       )
       .then(() => {
         setSuccess("Your message has been sent successfully!");

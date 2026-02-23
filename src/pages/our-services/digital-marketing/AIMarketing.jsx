@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import digi from "../../../assets/digimark.png"
 import {
   Check,
@@ -152,46 +153,49 @@ const techStack = [
 const AIMarketing = () => {
   return (
     <>
-<section
-  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-  }}
->
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+      <section
+        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-    {/* LEFT CONTENT */}
-    <div className="text-left space-y-6">
-      <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-        AI-Powered Digital Marketing Agency <br />
-        <span className="text-blue-300">for Smarter, Faster Growth</span>
-      </h1>
+          {/* LEFT CONTENT */}
+          <div className="text-left space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              AI-Powered Digital Marketing Agency <br />
+              <span className="text-blue-300">for Smarter, Faster Growth</span>
+            </h1>
 
-      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
-        Grow your business with AI-driven marketing strategies that deliver faster results, smarter campaigns, and high-intent leads built for sustainable growth.
-      </p>
+            <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+              Grow your business with AI-driven marketing strategies that deliver faster results, smarter campaigns, and high-intent leads built for sustainable growth.
+            </p>
 
-      <div className="flex flex-wrap gap-4">
-        <button className="bg-white text-blue-800 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 transition-all duration-300 hover:shadow-xl">
-          Speak to an Expert →
-        </button>
-        <button className="border border-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-blue-800 transition-all duration-300">
-          Our Services →
-        </button>
-      </div>
-    </div>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/contact" className="bg-white text-blue-800 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 transition-all duration-300 hover:shadow-xl">
+                Speak to Our Expert →
+              </Link>
+              <Link
+                to="#services"
+                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Our Services →
+              </Link>
+            </div>
+          </div>
 
-    {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end">
-      <img
-        src={digi}
-        alt="Digital Marketing"
-        className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] object-cover rounded-xl shadow-lg"
-      />
-    </div>
-  </div>
-</section>
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center md:justify-end">
+            <img
+              src={digi}
+              alt="Digital Marketing"
+              className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] object-cover rounded-xl shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
 
 
 
@@ -411,7 +415,7 @@ const AIMarketing = () => {
           </div>
         </div>
       </section>
-      <section className="bg-white py-20">
+      <section id="services" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">

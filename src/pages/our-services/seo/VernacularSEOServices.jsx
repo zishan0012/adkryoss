@@ -141,18 +141,18 @@ const VernacularSEOServices = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
@@ -196,7 +196,7 @@ const VernacularSEOServices = () => {
             </section>
 
             {/* Framework Section */}
-            <section className="py-24 bg-slate-50">
+            <section id="services" className="py-24 bg-slate-50">
                 <div className="container">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5">

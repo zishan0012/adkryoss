@@ -101,18 +101,18 @@ const WhiteLabelSEOServices = () => {
                         </div> */}
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
@@ -164,7 +164,7 @@ const WhiteLabelSEOServices = () => {
             </section>
 
             {/* Framework Section */}
-            <section className="py-24 bg-white">
+            <section id="services" className="py-24 bg-white">
                 <div className="container">
                     <h2 className="text-[36px] font-bold text-center mb-16 text-slate-900 leading-tight">
                         Our White Label SEO Framework

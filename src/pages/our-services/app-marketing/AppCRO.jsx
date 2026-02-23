@@ -1,15 +1,15 @@
 import React from 'react';
 import CROImage from "../../../assets/CRO.png";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AppCRO = () => {
   const navigate = useNavigate();
-    return (
-        <>
-      
+  return (
+    <>
 
 
-{/* <section
+
+      {/* <section
   className="relative flex items-center min-h-[70vh] bg-cover bg-center"
   style={{
     backgroundImage:
@@ -57,71 +57,71 @@ const AppCRO = () => {
 </section> */}
 
 
-<section
-  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-  }}
->
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+      <section
+        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-    <div className="text-left text-white space-y-6">
+          <div className="text-left text-white space-y-6">
 
-      <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
-        AP CRO Services
-      </h2>
+            <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
+              AP CRO Services
+            </h2>
 
-      <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
-        Turn Clicks Into Predictable Revenue
-      </h3>
+            <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
+              Turn Clicks Into Predictable Revenue
+            </h3>
 
-      <h3 className="text-2xl md:text-xl font-semibold leading-snug">
-        Stop paying for traffic that doesn’t convert. Start building funnels that sell.
-      </h3>
+            <h3 className="text-2xl md:text-xl font-semibold leading-snug">
+              Stop paying for traffic that doesn’t convert. Start building funnels that sell.
+            </h3>
 
-      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
-        AP CRO (Advanced Performance Conversion Rate Optimization) helps you unlock hidden revenue from your existing visitors through data, psychology, and AI-driven experimentation.
-      </p>
-
-
-
- <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
-                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
-                            >
-                                Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
-                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
-                            >
-                                Our Services →
-                            </a>
-                        </div>
+            <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+              AP CRO (Advanced Performance Conversion Rate Optimization) helps you unlock hidden revenue from your existing visitors through data, psychology, and AI-driven experimentation.
+            </p>
 
 
 
-    </div>
-
-    <div className="flex justify-center md:justify-end">
-      <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
-        <img
-          src={CROImage}
-          alt="Section Image"
-          className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
-        />
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <Link
+                to="/contact"
+                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Speak to Our Expert →
+              </Link>
+              <Link
+                to="#services"
+                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Our Services →
+              </Link>
+            </div>
 
 
-      <section className="py-20 px-6 bg-gray-50">
+
+          </div>
+
+          <div className="flex justify-center md:justify-end">
+            <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+              <img
+                src={CROImage}
+                alt="Section Image"
+                className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+      <section id="services" className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
 
           {/* Left: Text */}
@@ -582,12 +582,12 @@ const AppCRO = () => {
             Let’s engineer your growth.
           </p>
 
-          <button
-            onClick={() => navigate("/contact?service=cro")}
+          <Link
+            to="/contact?service=cro"
             className="mt-6 inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300"
           >
-            Start Optimizing Today
-          </button>
+            Speak to Our Expert →
+          </Link>
         </div>
       </section>
 

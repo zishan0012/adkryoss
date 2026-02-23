@@ -204,18 +204,18 @@ const SEOResellerServices = () => {
       </div> */}
 
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
               >
                 Speak to Our Expert →
-              </a>
-              <a
-                href="#services"
+              </Link>
+              <Link
+                to="#services"
                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
               >
                 Our Services →
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -275,7 +275,7 @@ const SEOResellerServices = () => {
 
         </div>
       </section>
-      <section className="bg-white py-20">
+      <section id="services" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
