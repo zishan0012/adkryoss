@@ -1,5 +1,6 @@
 import React from "react";
 import ChooseAdkryossImage from "../../assets/ChooseAdkryoss.png";
+import { motion } from "framer-motion";
 const awardsData = [
   {
     id: 1,
@@ -30,7 +31,14 @@ const awardsData = [
 const AwardsSection = () => {
   return (
     <>
-    <section className="py-16 bg-white">
+    <motion.section className="py-16 bg-white"
+    
+    
+ initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    >
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}
@@ -75,14 +83,20 @@ const AwardsSection = () => {
       
 
       </div>
-    </section>
+    </motion.section>
 
-     <section
+     <motion.section
   className="py-24 bg-no-repeat bg-cover bg-center mb-16"
   style={{
     backgroundImage:
       "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/report_bg.svg')",
   }}
+
+  
+ initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
 >
   <div className="max-w-5xl mx-auto px-6"> {/* reduced width */}
 
@@ -188,7 +202,7 @@ const AwardsSection = () => {
     </div>
 
   </div>
-</section>
+</motion.section>
     </>
   );
 };

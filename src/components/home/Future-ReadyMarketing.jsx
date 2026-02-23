@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import aiImage from "../../assets/ai.png"
+import { motion } from "framer-motion";
 const CaseStudySection = () => {
   const scrollRef = useRef(null);
 
@@ -14,7 +15,13 @@ const CaseStudySection = () => {
   };
 
   return (
-   <section className="py-16 bg-[#f4f7fb]">
+   <motion.section className="py-16 bg-[#f4f7fb]"
+   
+ initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+   >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Top Heading */}
@@ -58,7 +65,7 @@ const CaseStudySection = () => {
           We blend creativity with technology to stay ahead of algorithms and competitors.
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

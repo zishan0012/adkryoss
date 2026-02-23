@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 // Services Pages
-// import Services from './pages/our-services';
+import Services from './pages/our-services';
 
 // SEO Services (18 pages)
 import SEO from './pages/our-services/seo';
@@ -72,22 +72,22 @@ import CDPServices from './pages/our-services/martech/CDPServices';
 import B2BCRO from './pages/our-services/martech/B2BCRO';
 
 // Company Pages
-// import Company from './pages/company';
+import Company from './pages/company';
 import AboutUs from './pages/company/AboutUs';
 import Careers from './pages/company/Careers';
-// import Awards from './pages/company/Awards';
+import Awards from './pages/company/Awards';
 import PressReleases from './pages/company/PressReleases';
 import BestPlaceToWork from './pages/company/BestPlaceToWork';
 
 // Work Pages
-// import Work from './pages/work';
+import Work from './pages/work';
 import Portfolio from './pages/work/Portfolio';
 import CaseStudy from './pages/work/CaseStudy';
 import CaseStudyDetail from './pages/work/CaseStudyDetail';
 import Testimonial from './pages/work/Testimonial';
 
 // Industry Pages
-// import Industry from './pages/industry';
+import Industry from './pages/industry';
 import BFSI from './pages/industry/BFSI';
 import B2B from './pages/industry/B2B';
 import Healthcare from './pages/industry/Healthcare';
@@ -95,7 +95,7 @@ import Education from './pages/industry/Education';
 import Ecommerce from './pages/industry/Ecommerce';
 
 // Standalone Pages
-// import Partners from './pages/partners/Partners';
+import Partners from './pages/partners/Partners';
 import IPP from './pages/partners/IPP';
 import IBP from './pages/partners/IBP';
 import Blog from './pages/Blog';
@@ -132,6 +132,21 @@ const ScrollToTop = () => {
   return null;
 };
 
+
+const PageWrapper = ({ children }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.4 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+
 function App() {
 
   return (
@@ -145,19 +160,20 @@ function App() {
         <Route path="/" element={<Home />} />
 
         {/* ==================== COMPANY ROUTES ==================== */}
-        {/* <Route path="/company" element={<Company />} /> */}
-        <Route path="/company/about-us" element={<AboutUs />} />
-        <Route path="/company/careers" element={<Careers />} />
-        {/* <Route path="/company/awards" element={<Awards />} /> */}
-        <Route path="/company/press-releases" element={<PressReleases />} />
-        <Route path="/company/best-place-to-work" element={<BestPlaceToWork />} />
+        <Route path="/company" element={<PageWrapper><Company /></PageWrapper>} />
+        <Route path="/company/about-us" element={<PageWrapper><AboutUs /></PageWrapper>} />
+        <Route path="/company/careers" element={<PageWrapper><Careers /></PageWrapper>} />
+        <Route path="/company/awards" element={<Awards />} />
+        <Route path="/company/press-releases" element={<PageWrapper><PressReleases /></PageWrapper>} />
+        <Route path="/company/best-place-to-work" element={<PageWrapper><BestPlaceToWork /></PageWrapper>} />
 
         {/* ==================== SERVICES ROUTES ==================== */}
-        {/* <Route path="/services" element={<Services />} /> */}
+        <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
+
 
         {/* SEO Services (18 pages) */}
-        <Route path="/services/seo" element={<SEO />} />
-        <Route path="/services/seo/seo-services" element={<SEOServices />} />
+        <Route path="/services/seo" element={<PageWrapper><SEO /></PageWrapper>} />
+        <Route path="/services/seo/seo-services" element={<PageWrapper><SEOServices /></PageWrapper>} />
         <Route path="/services/seo/enterprise-seo" element={<EnterpriseSEO />} />
         <Route path="/services/seo/seo-migration-services" element={<SEOMigrationServices />} />
         <Route path="/services/seo/vernacular-seo-services" element={<VernacularSEOServices />} />
@@ -219,14 +235,14 @@ function App() {
         <Route path="/services/martech/b2b-cro" element={<B2BCRO />} />
 
         {/* ==================== WORK ROUTES ==================== */}
-        {/* <Route path="/work" element={<Work />} /> */}
+        <Route path="/work" element={<Work />} />
         <Route path="/work/portfolio" element={<Portfolio />} />
         <Route path="/work/case-study" element={<CaseStudy />} />
         <Route path="/work/case-study/:slug" element={<CaseStudyDetail />} />
         <Route path="/work/testimonial" element={<Testimonial />} />
 
         {/* ==================== INDUSTRY ROUTES ==================== */}
-        {/* <Route path="/industry" element={<Industry />} /> */}
+        <Route path="/industry" element={<Industry />} />
         <Route path="/industry/bfsi" element={<BFSI />} />
         <Route path="/industry/b2b" element={<B2B />} />
         <Route path="/industry/healthcare" element={<Healthcare />} />
@@ -234,7 +250,7 @@ function App() {
         <Route path="/industry/ecommerce" element={<Ecommerce />} />
 
         {/* ==================== STANDALONE ROUTES ==================== */}
-        {/* <Route path="/partners" element={<Partners />} /> */}
+        <Route path="/partners" element={<Partners />} />
         <Route path="/partners/ipp" element={<IPP />} />
         <Route path="/partners/ibp" element={<IBP />} />
         <Route path="/blog" element={<Blog />} />

@@ -223,20 +223,59 @@ const Header = () => {
                                                     {/* Category Tabs Row (Row 1) */}
                                                     <div className="flex justify-start gap-[10px] flex-wrap">
                                                         {item.subItems.map((sub) => (
-                                                            <div
-                                                                key={sub.name}
-                                                                onMouseEnter={() => setActiveCategory(sub.name)}
-                                                                className={`px-[18px] py-2 rounded-[20px] cursor-pointer transition-all duration-200 border flex items-center gap-2 ${activeCategory === sub.name ? 'bg-[#0066cc] border-[#0066cc]' : 'bg-[#f5f5f5] border-[#eee]'}`}
-                                                            >
-                                                                <span className={`flex items-center ${activeCategory === sub.name ? 'text-white' : 'text-[#666]'}`}>
-                                                                    {getServiceIcon(sub.name)}
-                                                                </span>
-                                                                <span className={`text-[13px] font-semibold whitespace-nowrap ${activeCategory === sub.name ? 'text-white' : 'text-[#666]'}`}>
-                                                                    {sub.name}
-                                                                </span>
-                                                            </div>
+                                                            // <div
+                                                            //     key={sub.name}
+                                                            //     onMouseEnter={() => setActiveCategory(sub.name)}
+                                                            //     className={`px-[18px] py-2 rounded-[20px] cursor-pointer transition-all duration-200 border flex items-center gap-2 ${activeCategory === sub.name ? 'bg-[#0066cc] border-[#0066cc]' : 'bg-[#f5f5f5] border-[#eee]'}`}
+                                                            // >
+                                                            //     <span className={`flex items-center ${activeCategory === sub.name ? 'text-white' : 'text-[#666]'}`}>
+                                                            //         {getServiceIcon(sub.name)}
+                                                            //     </span>
+                                                            //     <span className={`text-[13px] font-semibold whitespace-nowrap ${activeCategory === sub.name ? 'text-white' : 'text-[#666]'}`}>
+                                                            //         {sub.name}
+                                                            //     </span>
+                                                            // </div>
+
+
+<div
+  key={sub.name}
+  onMouseEnter={() => setActiveCategory(sub.name)}
+  className="relative overflow-hidden px-[18px] py-2 rounded-[20px] cursor-pointer border flex items-center gap-2 group"
+>
+
+  {/* Sliding Background */}
+  <span
+    className={`absolute inset-0 bg-[#0066cc] transition-transform duration-300 ease-out ${
+      activeCategory === sub.name
+        ? "translate-x-0"
+        : "-translate-x-full"
+    }`}
+  />
+
+  {/* Content */}
+  <span
+    className={`relative flex items-center gap-2 z-10 transition-colors duration-300 ${
+      activeCategory === sub.name
+        ? "text-white"
+        : "text-[#666] group-hover:text-[#0066cc]"
+    }`}
+  >
+    {getServiceIcon(sub.name)}
+    <span className="text-[13px] font-semibold whitespace-nowrap">
+      {sub.name}
+    </span>
+  </span>
+</div>
+
+
                                                         ))}
                                                     </div>
+
+
+
+
+
+
                                                 </div>
 
                                                 {/* Sub-items Grid - Scrollable Content */}

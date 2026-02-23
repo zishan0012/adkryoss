@@ -1,10 +1,69 @@
 import React from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AboutImage from "../../assets/About.jpeg";
 import WhoWeAreImage from "../../assets/WhoWeAre.png";
 import WhyPartnerImage from "../../assets/WhyPartner.png";
+import { motion } from 'framer-motion';
+
+
+const steps = [
+  {
+    title: "Discover",
+    desc: "We understand your business goals, competitors, audience behavior, and digital maturity level.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+      </svg>
+    ),
+    color: "blue",
+  },
+  {
+    title: "Strategize",
+    desc: "We design a customized growth blueprint aligned with your KPIs, industry dynamics, and scalability objectives.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-6h6v6m2 4H7a2 2 0 01-2-2V7a2 2 0 012-2h5l5 5v9a2 2 0 01-2 2z" />
+      </svg>
+    ),
+    color: "indigo",
+  },
+  {
+    title: "Execute",
+    desc: "Our cross-functional teams deploy campaigns across SEO, paid media, content, and social with precision.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7h16M4 12h10M4 17h16" />
+      </svg>
+    ),
+    color: "green",
+  },
+  {
+    title: "Optimize",
+    desc: "Through real-time analytics, A/B testing, and data monitoring, we continuously improve performance metrics.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3v18h18M9 17V9m4 8v-4m4 4v-7" />
+      </svg>
+    ),
+    color: "purple",
+  },
+  {
+    title: "Scale",
+    desc: "Once validated, we scale winning strategies to maximize ROI and long-term brand equity.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 17l6-6 4 4 8-8M14 7h7v7" />
+      </svg>
+    ),
+    color: "red",
+  },
+];
+
+
 const AboutUs = () => {
   const navigate = useNavigate();
+   const [activeStep, setActiveStep] = useState(null);
     return (
         <>
 
@@ -70,12 +129,18 @@ const AboutUs = () => {
   </div>
 </section> */}
 
-<section
+<motion.section
   className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
   style={{
     backgroundImage:
       "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
   }}
+
+initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+
 >
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
     
@@ -118,12 +183,17 @@ const AboutUs = () => {
     </div>
 
   </div>
-</section>
+</motion.section>
 
 
 
 
-<section className="py-20 bg-white">
+<motion.section className="py-20 bg-white"
+initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+>
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
 
     {/* LEFT SIDE */}
@@ -177,10 +247,15 @@ const AboutUs = () => {
     </div>
 
   </div>
-</section>
+</motion.section>
 
 
-<section className="py-18 bg-gray-50">
+<motion.section className="py-18 bg-gray-50"
+initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+>
   <div className="max-w-7xl mx-auto px-6">
 
     {/* SECTION HEADER */}
@@ -211,8 +286,10 @@ const AboutUs = () => {
     <div className="grid md:grid-cols-2 gap-12">
 
       {/* CARD 01 */}
-      <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+      {/* <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition"> */}
+        <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300">
+        {/* <h3 className="text-2xl font-bold text-gray-900 mb-4"> */}
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-500">
           01. Growth Anchored in Revenue
         </h3>
         <p className="text-gray-600 mb-4 font-medium">
@@ -231,8 +308,10 @@ const AboutUs = () => {
       </div>
 
       {/* CARD 02 */}
-      <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+      {/* <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition"> */}
+      <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300">
+        {/* <h3 className="text-2xl font-bold text-gray-900 mb-4"> */}
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-500">
           02. Intelligence-Driven Strategy
         </h3>
         <p className="text-gray-600 mb-4">
@@ -251,8 +330,10 @@ const AboutUs = () => {
       </div>
 
       {/* CARD 03 */}
-      <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+      {/* <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition"> */}
+      <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300">
+        {/* <h3 className="text-2xl font-bold text-gray-900 mb-4"> */}
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-500">
           03. Connected Digital Infrastructure
         </h3>
         <p className="text-gray-600 mb-4">
@@ -270,8 +351,10 @@ const AboutUs = () => {
       </div>
 
       {/* CARD 04 */}
-      <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+      {/* <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition"> */}
+      <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300">
+        {/* <h3 className="text-2xl font-bold text-gray-900 mb-4"> */}
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-500">
           04. Built for Constant Change
         </h3>
         <p className="text-gray-600 mb-4">
@@ -332,10 +415,95 @@ const AboutUs = () => {
 </div>
 
   </div>
-</section>
+</motion.section>
 
 
-<section className="py-8 bg-gray-100">
+{/* <section className="py-8 bg-gray-100">
+  <div className="max-w-7xl mx-auto px-6">
+
+    
+    <div className="text-center mb-20">
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+        Our Core Expertise
+      </h2>
+      <p className="text-lg text-gray-600 mt-4">
+        We offer full-spectrum digital growth solutions designed for modern brands.
+      </p>
+    </div>
+
+    
+    <div className="grid md:grid-cols-3 gap-8">
+
+      <div className="bg-blue-500 text-white p-8 rounded-2xl shadow-md">
+        <h3 className="text-2xl font-bold mb-4">Search Engine Optimization (SEO)</h3>
+        <ul className="space-y-2 text-sm md:text-base">
+          <li>Enterprise & Local SEO</li>
+          <li>Technical SEO Audits</li>
+          <li>E-commerce SEO</li>
+          <li>Content-Led Organic Growth</li>
+          <li>AI Search Optimization</li>
+        </ul>
+      </div>
+
+      
+      <div className="bg-green-500 text-white p-8 rounded-2xl shadow-md">
+        <h3 className="text-2xl font-bold mb-4">Performance Marketing</h3>
+        <ul className="space-y-2 text-sm md:text-base">
+          <li>Google Ads & PPC Campaigns</li>
+          <li>Meta & Social Advertising</li>
+          <li>Conversion Rate Optimization (CRO)</li>
+          <li>Retargeting & Funnel Optimization</li>
+          <li>ROI-Driven Media Planning</li>
+        </ul>
+      </div>
+
+      <div className="bg-blue-500 text-white p-8 rounded-2xl shadow-md">
+        <h3 className="text-2xl font-bold mb-4">Social Media Marketing</h3>
+        <ul className="space-y-2 text-sm md:text-base">
+          <li>Brand Strategy & Positioning</li>
+          <li>Paid Social Campaigns</li>
+          <li>Community Growth</li>
+          <li>Influencer Collaborations</li>
+          <li>Content Production & Creative Direction</li>
+        </ul>
+      </div>
+
+      
+      <div className="bg-green-500 text-white p-8 rounded-2xl shadow-md">
+        <h3 className="text-2xl font-bold mb-4">Content & Inbound Marketing</h3>
+        <ul className="space-y-2 text-sm md:text-base">
+          <li>SEO-Optimized Blog Strategy</li>
+          <li>Thought Leadership Content</li>
+          <li>Landing Page Optimization</li>
+          <li>Marketing Automation</li>
+          <li>Email & Funnel Sequences</li>
+        </ul>
+      </div>
+
+      
+      <div className="bg-blue-500 text-white p-8 rounded-2xl shadow-md">
+        <h3 className="text-2xl font-bold mb-4">Web & Experience Optimization</h3>
+        <ul className="space-y-2 text-sm md:text-base">
+          <li>Conversion-Focused Website Design</li>
+          <li>UX & UI Strategy</li>
+          <li>Speed & Performance Optimization</li>
+          <li>Analytics & Heatmap Tracking</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section> */}
+
+
+
+<motion.section className="py-8 bg-gray-100"
+initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+>
   <div className="max-w-7xl mx-auto px-6">
 
     {/* SECTION HEADING */}
@@ -352,7 +520,7 @@ const AboutUs = () => {
     <div className="grid md:grid-cols-3 gap-8">
 
       {/* CARD 1 */}
-      <div className="bg-blue-500 text-white p-8 rounded-2xl shadow-md">
+      <div className="bg-blue-100 text-blue-900 p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
         <h3 className="text-2xl font-bold mb-4">Search Engine Optimization (SEO)</h3>
         <ul className="space-y-2 text-sm md:text-base">
           <li>Enterprise & Local SEO</li>
@@ -364,7 +532,7 @@ const AboutUs = () => {
       </div>
 
       {/* CARD 2 */}
-      <div className="bg-green-500 text-white p-8 rounded-2xl shadow-md">
+      <div className="bg-green-100 text-green-900 p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
         <h3 className="text-2xl font-bold mb-4">Performance Marketing</h3>
         <ul className="space-y-2 text-sm md:text-base">
           <li>Google Ads & PPC Campaigns</li>
@@ -376,7 +544,7 @@ const AboutUs = () => {
       </div>
 
       {/* CARD 3 */}
-      <div className="bg-blue-500 text-white p-8 rounded-2xl shadow-md">
+      <div className="bg-purple-100 text-purple-900 p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
         <h3 className="text-2xl font-bold mb-4">Social Media Marketing</h3>
         <ul className="space-y-2 text-sm md:text-base">
           <li>Brand Strategy & Positioning</li>
@@ -388,7 +556,7 @@ const AboutUs = () => {
       </div>
 
       {/* CARD 4 */}
-      <div className="bg-green-500 text-white p-8 rounded-2xl shadow-md">
+      <div className="bg-yellow-100 text-yellow-900 p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
         <h3 className="text-2xl font-bold mb-4">Content & Inbound Marketing</h3>
         <ul className="space-y-2 text-sm md:text-base">
           <li>SEO-Optimized Blog Strategy</li>
@@ -400,7 +568,7 @@ const AboutUs = () => {
       </div>
 
       {/* CARD 5 */}
-      <div className="bg-blue-500 text-white p-8 rounded-2xl shadow-md">
+      <div className="bg-pink-100 text-pink-900 p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
         <h3 className="text-2xl font-bold mb-4">Web & Experience Optimization</h3>
         <ul className="space-y-2 text-sm md:text-base">
           <li>Conversion-Focused Website Design</li>
@@ -413,13 +581,14 @@ const AboutUs = () => {
     </div>
 
   </div>
-</section>
+</motion.section>
 
 
-<section className="py-8 bg-gray-50">
+
+{/* <section className="py-8 bg-gray-50">
   <div className="max-w-7xl mx-auto px-6">
 
-    {/* SECTION HEADER */}
+    
     <div className="text-center mb-20">
       <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
         Our Working Model
@@ -429,13 +598,13 @@ const AboutUs = () => {
       </p>
     </div>
 
-    {/* STEPS GRID */}
+  
     <div className="grid md:grid-cols-5 gap-8">
 
-      {/* STEP 1 – Discover */}
+      
       <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300">
         <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5">
-          {/* Data Search Icon */}
+         
           <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
               d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
@@ -450,10 +619,10 @@ const AboutUs = () => {
         </p>
       </div>
 
-      {/* STEP 2 – Strategize */}
+      
       <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300">
         <div className="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-5">
-          {/* Data Blueprint Icon */}
+      
           <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
               d="M9 17v-6h6v6m2 4H7a2 2 0 01-2-2V7a2 2 0 012-2h5l5 5v9a2 2 0 01-2 2z" />
@@ -468,10 +637,10 @@ const AboutUs = () => {
         </p>
       </div>
 
-      {/* STEP 3 – Execute */}
+     
       <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300">
         <div className="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-5">
-          {/* Deployment / Data Flow Icon */}
+    
           <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
               d="M4 7h16M4 12h10M4 17h16" />
@@ -486,10 +655,9 @@ const AboutUs = () => {
         </p>
       </div>
 
-      {/* STEP 4 – Optimize */}
       <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300">
         <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-5">
-          {/* Analytics Chart Icon */}
+       
           <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
               d="M3 3v18h18M9 17V9m4 8v-4m4 4v-7" />
@@ -504,10 +672,10 @@ const AboutUs = () => {
         </p>
       </div>
 
-      {/* STEP 5 – Scale */}
+     
       <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300">
         <div className="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-5">
-          {/* Growth / Trending Up Icon */}
+         
           <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
               d="M3 17l6-6 4 4 8-8M14 7h7v7" />
@@ -525,10 +693,80 @@ const AboutUs = () => {
     </div>
 
   </div>
-</section>
+</section> */}
+
+<motion.section className="py-8 bg-gray-50"
+initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+>
+      <div className="max-w-7xl mx-auto px-6">
+        {/* SECTION HEADER */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">Our Working Model</h2>
+          <p className="text-lg text-gray-600 mt-4">We follow a structured yet agile growth framework.</p>
+        </div>
+
+        {/* STEPS GRID */}
+        <div className="grid md:grid-cols-5 gap-8">
+          {steps.map((step, i) => (
+          <div
+  key={i}
+  onClick={() => setActiveStep(step)}
+  className={`cursor-pointer p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300
+    ${step.color === "green" ? "bg-green-100/80 shadow-green-400/50 hover:shadow-green-500/70" : ""}
+    ${step.color === "red" ? "bg-red-100/80 shadow-red-400/50 hover:shadow-red-500/70" : ""}
+    ${step.color === "blue" ? "bg-blue-100/80 shadow-blue-400/50 hover:shadow-blue-500/70" : ""}
+    ${step.color === "indigo" ? "bg-indigo-100/80 shadow-indigo-400/50 hover:shadow-indigo-500/70" : ""}
+    ${step.color === "purple" ? "bg-purple-100/80 shadow-purple-400/50 hover:shadow-purple-500/70" : ""}
+  `}
+>
+  <div className={`w-14 h-14 bg-${step.color}-200 rounded-xl flex items-center justify-center mb-5`}>
+    <div className={`text-${step.color}-600`}>{step.icon}</div>
+  </div>
+  <h3 className="text-xl font-semibold mb-3 text-gray-900">{step.title}</h3>
+  <p className="text-gray-700 text-sm leading-relaxed">{step.desc}</p>
+</div>
+          ))}
+        </div>
+      </div>
+
+      {/* MODAL POP-UP */}
+      {activeStep && (
+        <div
+          onClick={() => setActiveStep(null)}
+          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4"
+        >
+          <div
+            className={`bg-white rounded-3xl max-w-3xl w-full p-12 relative animate-scale-up`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className={`text-4xl font-bold mb-6 text-${activeStep.color}-600`}>
+              {activeStep.title}
+            </h2>
+            <p className="text-lg text-gray-700">{activeStep.desc}</p>
+            <button
+              onClick={() => setActiveStep(null)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 text-2xl font-bold"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
+    </motion.section>
 
 
-<section className="py-10 px-6 bg-gray-50">
+
+
+
+<motion.section className="py-10 px-6 bg-gray-50"
+initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+>
   <div className="max-w-6xl mx-auto">
 
     {/* Section Heading */}
@@ -588,11 +826,16 @@ const AboutUs = () => {
 
     </div>
   </div>
-</section>
+</motion.section>
 
 
 
-<section className="py-20 px-6 bg-white">
+<motion.section className="py-20 px-6 bg-white"
+initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+>
   <div className="max-w-6xl mx-auto">
 
     {/* Section Heading */}
@@ -682,10 +925,15 @@ const AboutUs = () => {
     </div>
 
   </div>
-</section>
+</motion.section>
 
 
-<section className="py-24 px-6 bg-gray-50">
+<motion.section className="py-24 px-6 bg-gray-50" 
+initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+>
   <div className="max-w-6xl mx-auto">
 
     {/* Top Content */}
@@ -740,10 +988,15 @@ const AboutUs = () => {
     </div>
 
   </div>
-</section>
+</motion.section>
 
 
-<section className="py-18 px-6 bg-gradient-to-r from-blue-500 to-indigo-700 text-white text-center">
+<motion.section className="py-18 px-6 bg-gradient-to-r from-blue-500 to-indigo-700 text-white text-center"
+initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+>
   <div className="max-w-4xl mx-auto">
 
     {/* Main Heading */}
@@ -785,7 +1038,7 @@ const AboutUs = () => {
     </div>
 
   </div>
-</section>
+</motion.section>
 
         </>
     );

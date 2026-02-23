@@ -797,12 +797,12 @@ const Contact = () => {
 
             {/* Phone */}
             <a
-              href="tel:+91XXXXXXXXXX"
+              href="tel:+01169269633"
               className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:scale-105 hover:bg-white/20 transition duration-300 block"
             >
               <p className="text-3xl mb-3">📞</p>
               <p className="font-semibold text-lg text-white">Call Us</p>
-              <p className="text-white mt-2 underline">+91-XXXXXXXXXX</p>
+              <p className="text-white mt-2 underline">+01169269633</p>
             </a>
 
             {/* Location */}

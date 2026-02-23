@@ -4,6 +4,7 @@ import EcommerceD2Image from "../assets/EcommerceD2.png"
 import Education1Image from "../assets/education1.png"
 import healthImage from "../assets/health.jpeg"
 import RealEstateImage from "../assets/RealEstate.jpeg"
+import { motion } from "framer-motion";
 // import EcommerceD2Image from "../assets/EcommerceD2.png"
 // import EcommerceD2Image from "../assets/EcommerceD2.png"
 // import EcommerceD2Image from "../assets/EcommerceD2.png"
@@ -70,7 +71,14 @@ const SearchTrendsReports = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <motion.section className="py-16 bg-gray-50"
+    
+ initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    
+    >
       {/* Heading */}
       <div className="text-center max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold mb-6">
@@ -133,7 +141,7 @@ const SearchTrendsReports = () => {
 
       {/* View All Button */}
       
-    </section>
+    </motion.section>
   );
 };
 
