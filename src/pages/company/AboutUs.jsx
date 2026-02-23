@@ -286,8 +286,10 @@ initial={{ opacity: 0, y: 50 }}
     <div className="grid md:grid-cols-2 gap-12">
 
       {/* CARD 01 */}
-      <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+      {/* <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition"> */}
+        <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300">
+        {/* <h3 className="text-2xl font-bold text-gray-900 mb-4"> */}
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-500">
           01. Growth Anchored in Revenue
         </h3>
         <p className="text-gray-600 mb-4 font-medium">
@@ -306,8 +308,10 @@ initial={{ opacity: 0, y: 50 }}
       </div>
 
       {/* CARD 02 */}
-      <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+      {/* <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition"> */}
+      <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300">
+        {/* <h3 className="text-2xl font-bold text-gray-900 mb-4"> */}
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-500">
           02. Intelligence-Driven Strategy
         </h3>
         <p className="text-gray-600 mb-4">
@@ -326,8 +330,10 @@ initial={{ opacity: 0, y: 50 }}
       </div>
 
       {/* CARD 03 */}
-      <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+      {/* <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition"> */}
+      <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300">
+        {/* <h3 className="text-2xl font-bold text-gray-900 mb-4"> */}
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-500">
           03. Connected Digital Infrastructure
         </h3>
         <p className="text-gray-600 mb-4">
@@ -345,8 +351,10 @@ initial={{ opacity: 0, y: 50 }}
       </div>
 
       {/* CARD 04 */}
-      <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+      {/* <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition"> */}
+      <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300">
+        {/* <h3 className="text-2xl font-bold text-gray-900 mb-4"> */}
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-500">
           04. Built for Constant Change
         </h3>
         <p className="text-gray-600 mb-4">

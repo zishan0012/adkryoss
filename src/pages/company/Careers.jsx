@@ -8,6 +8,7 @@ import WhoWeArelookingImage from "../../assets/WhoWeAreLooking.png";
 import OurHiringPhilosophyImage from "../../assets/OurHiringPhilosophy.png";
 import GrowthImage from "../../assets/Growth.png";
 import InternshipImage from "../../assets/Internship.png";
+import ReadyToBuildImage from "../../assets/ReadyToBuild.png";
 
 const jobs = [
   {
@@ -322,7 +323,13 @@ style={{ backgroundImage:
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 mt-12">
 
       {/* Row 1 - 3 Cards */}
-      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2">
+      {/* <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2"> */}
+      <div className=" bg-white p-6 rounded-2xl shadow-md 
+              lg:col-span-2
+                hover:bg-blue-100 
+                hover:border-blue-200
+                hover:shadow-xl 
+                transition-all duration-300">
         <h3 className="text-xl font-semibold text-black mb-2">
           01. Ownership Over Hierarchy
         </h3>
@@ -331,7 +338,13 @@ style={{ backgroundImage:
         </p>
       </div>
 
-      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2">
+      {/* <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2"> */}
+      <div className="group bg-white p-6 rounded-2xl shadow-md 
+               lg:col-span-2
+                hover:bg-blue-50 
+                hover:border-blue-200
+                hover:shadow-xl 
+                transition-all duration-300">
         <h3 className="text-xl font-semibold text-black mb-2">
           02. Continuous Learning
         </h3>
@@ -340,7 +353,13 @@ style={{ backgroundImage:
         </p>
       </div>
 
-      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2">
+      {/* <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2"> */}
+      <div className="group bg-white p-6 rounded-2xl shadow-md 
+               lg:col-span-2
+                hover:bg-blue-100 
+                hover:border-blue-200
+                hover:shadow-xl 
+                transition-all duration-300">
         <h3 className="text-xl font-semibold text-black mb-2">
           03. Data-Backed Decisions
         </h3>
@@ -350,7 +369,14 @@ style={{ backgroundImage:
       </div>
 
       {/* Row 2 - Centered 2 Cards */}
-      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2 lg:col-start-2">
+      {/* <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2 lg:col-start-2"> */}
+      <div className="group bg-white p-6 rounded-2xl shadow-md 
+               lg:col-span-2
+               lg:col-start-2
+                hover:bg-blue-50 
+                hover:border-blue-200
+                hover:shadow-xl 
+                transition-all duration-300">
         <h3 className="text-xl font-semibold text-black mb-2">
           04. Collaboration Without Silos
         </h3>
@@ -359,7 +385,13 @@ style={{ backgroundImage:
         </p>
       </div>
 
-      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2">
+      {/* <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2"> */}
+      <div className="group bg-white p-6 rounded-2xl shadow-md 
+             lg:col-span-2
+                hover:bg-blue-100 
+                hover:border-blue-200
+                hover:shadow-xl 
+                transition-all duration-300">
         <h3 className="text-xl font-semibold text-black mb-2">
           05. Performance Recognition
         </h3>
@@ -860,7 +892,7 @@ style={{ backgroundImage:
       {/* Left Image */}
       <div>
         <img
-          src="https://www.techmagnate.com/wp-content/uploads/2025/06/TM-29.png"
+          src={ReadyToBuildImage}
           alt="Team Working"
           className="rounded-2xl w-full object-cover"
         />
