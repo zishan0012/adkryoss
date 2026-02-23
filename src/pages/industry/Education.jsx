@@ -1,6 +1,6 @@
 import React from "react";
 import industryeducation from "../../assets/industryeducation.png";
-import Edu from "../../assets/Education.png";
+import Edu from "../../assets/Education.jpg";
 import school from "../../assets/school.jpg";
 import College from "../../assets/college.jpg";
 import Edtech from "../../assets/edtech.jpg";
@@ -8,7 +8,7 @@ import Coaching from "../../assets/coaching.jpg";
 import Skills from "../../assets/skill.jpg";
 import Abroad from "../../assets/abroad.jpg";
 import Future from "../../assets/future.png";
-import education from "../../assets/education.png"
+// import education from "../../assets/education.png"
 import {
   Search,
   Target,
