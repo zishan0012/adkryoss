@@ -14,7 +14,7 @@ import {
 
 const RequestQuote = () => {
   const [formData, setFormData] = useState({
-    services: [],
+    service: "",
     name: "",
     email: "",
     phone: "",
@@ -109,8 +109,8 @@ const RequestQuote = () => {
   const validate = () => {
     let newErrors = {};
 
-    if (formData.services.length === 0) {
-      newErrors.services = "Please select at least one service";
+    if (!formData.service) {
+      newErrors.service = "Please select a service";
     }
 
     if (!formData.name.trim()) {
@@ -145,16 +145,6 @@ const RequestQuote = () => {
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
-  };
-
-  const handleServiceToggle = (service) => {
-    setFormData((prev) => ({
-      ...prev,
-      services: prev.services.includes(service)
-        ? prev.services.filter((s) => s !== service)
-        : [...prev.services, service],
-    }));
-    setErrors((prev) => ({ ...prev, services: "" }));
   };
 
   const handleChange = (e) => {
@@ -193,7 +183,7 @@ const RequestQuote = () => {
 
     const submitData = {
       ...formData,
-      services: formData.services.join(", "),
+      service: formData.service,
     };
 
     emailjs
@@ -211,7 +201,7 @@ const RequestQuote = () => {
         }, 4000);
 
         setFormData({
-          services: [],
+          service: "",
           name: "",
           email: "",
           phone: "",
@@ -410,11 +400,49 @@ const RequestQuote = () => {
                 ))}
               </div>
 
-              <div className="bg-white rounded-2xl p-6 border border-slate-200">
+              <div className="bg-white rounded-2xl p-6 border border-slate-200 mb-8">
                 <p className="text-slate-700 font-medium flex items-center gap-3">
                   <ShieldCheck className="text-green-600" size={24} />
                   No spam. No pressure. Just strategy.
                 </p>
+              </div>
+
+              {/* Mini Deliverables List */}
+              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200 mb-8">
+                <h4 className="font-bold text-slate-900 mb-4">Your quote includes:</h4>
+                <div className="space-y-3">
+                  {[
+                    "Scope of work breakdown",
+                    "Transparent pricing structure",
+                    "90-day action roadmap",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <CheckCircle2 size={18} className="text-[#0066CC] shrink-0" />
+                      <span className="text-slate-700 text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Contact Fallback */}
+              <div className="bg-white rounded-2xl p-6 border border-gray-200">
+                <p className="text-slate-700 font-medium mb-4">Prefer to talk directly?</p>
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="tel:+91XXXXXXXXXX"
+                    className="flex items-center gap-2 text-[#0066CC] font-medium hover:underline"
+                  >
+                    <Phone size={18} />
+                    Call Us
+                  </a>
+                  <a
+                    href="mailto:info@adkryoss.com"
+                    className="flex items-center gap-2 text-[#0066CC] font-medium hover:underline"
+                  >
+                    <Mail size={18} />
+                    Email Us
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -430,29 +458,32 @@ const RequestQuote = () => {
                   </p>
                 </div>
 
-                {/* Services of Interest */}
+                {/* Service of Interest */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Service(s) of Interest *
+                    Primary Service of Interest *
                   </label>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    {servicesList.map((service) => (
-                      <button
-                        key={service}
-                        type="button"
-                        onClick={() => handleServiceToggle(service)}
-                        className={`px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all duration-200 ${
-                          formData.services.includes(service)
-                            ? "bg-[#0066CC] text-white border-[#0066CC]"
-                            : "bg-white text-gray-700 border-gray-200 hover:border-[#0066CC]"
-                        }`}
-                      >
-                        {service}
-                      </button>
-                    ))}
+                  <div className="relative">
+                    <select
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-white"
+                    >
+                      <option value="">Select a service</option>
+                      {servicesList.map((service) => (
+                        <option key={service} value={service}>
+                          {service}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown
+                      size={20}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+                    />
                   </div>
-                  {errors.services && (
-                    <p className="text-red-500 text-sm mt-2">{errors.services}</p>
+                  {errors.service && (
+                    <p className="text-red-500 text-sm mt-2">{errors.service}</p>
                   )}
                 </div>
 
