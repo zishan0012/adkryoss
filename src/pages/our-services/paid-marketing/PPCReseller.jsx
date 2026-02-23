@@ -235,15 +235,23 @@ const resellerCTAPoints = [
 const PPCReseller = () => {
   return (
     <>
-      <section
-        className="relative py-16 md:py-20 lg:py-24 text-white bg-cover bg-center"
+
+ <section
+        className="relative flex items-center min-h-[70vh] bg-cover bg-center"
+
+      // <section
+      //   className="relative py-16 md:py-20 lg:py-24 text-white bg-cover bg-center"
+
         style={{
           backgroundImage:
             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
         }}
       >
-        {/* Overlay */}
-        <div className="relative w-full px-6 sm:px-10 lg:px-24 xl:px-32">
+
+  {/* Overlay */}
+  <div className="relative w-full px-6 sm:px-10 lg:px-24 xl:px-32">
+
+
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
@@ -267,22 +275,6 @@ const PPCReseller = () => {
                 and built to maximize ROI for your clients.
               </p>
 
-              {/* <div className="flex flex-col sm:flex-row gap-5 pt-3">
-        <button
-          className="w-full sm:w-auto bg-white text-blue-700 px-8 py-3 rounded-full font-semibold
-          hover:bg-blue-100 hover:shadow-lg transition"
-        >
-          Partner With Us →
-        </button>
-
-        <button
-          className="w-full sm:w-auto border border-white/70 px-8 py-3 rounded-full font-semibold
-          hover:bg-white hover:text-blue-700 transition"
-        >
-          Explore Reseller Model →
-        </button>
-      </div>
-     */}
               <div className="flex flex-col sm:flex-row gap-4 mt-2">
                 <a
                   href="/contact"
