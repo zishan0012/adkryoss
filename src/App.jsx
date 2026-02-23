@@ -75,7 +75,7 @@ import B2BCRO from './pages/our-services/martech/B2BCRO';
 import Company from './pages/company';
 import AboutUs from './pages/company/AboutUs';
 import Careers from './pages/company/Careers';
-import Awards from './pages/company/Awards';
+// import Awards from './pages/company/Awards';
 import PressReleases from './pages/company/PressReleases';
 import BestPlaceToWork from './pages/company/BestPlaceToWork';
 
@@ -163,7 +163,7 @@ function App() {
         <Route path="/company" element={<PageWrapper><Company /></PageWrapper>} />
         <Route path="/company/about-us" element={<PageWrapper><AboutUs /></PageWrapper>} />
         <Route path="/company/careers" element={<PageWrapper><Careers /></PageWrapper>} />
-        <Route path="/company/awards" element={<Awards />} />
+        {/* <Route path="/company/awards" element={<Awards />} /> */}
         <Route path="/company/press-releases" element={<PageWrapper><PressReleases /></PageWrapper>} />
         <Route path="/company/best-place-to-work" element={<PageWrapper><BestPlaceToWork /></PageWrapper>} />
 
