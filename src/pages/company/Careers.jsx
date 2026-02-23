@@ -124,7 +124,8 @@ const Careers = () => {
 
 
 <section className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
-style={{ backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')" }}>
+style={{ backgroundImage: 
+"url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')" }}>
 
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
@@ -222,25 +223,24 @@ style={{ backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/te
 </section>
 
 
-<section className=" bg-linear-to-br from-gray-50 via-blue-50 to-white">
+{/* <section className=" bg-linear-to-br from-gray-50 via-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
 
-    {/* HEADING */}
     <h2 className="text-4xl md:text-5xl font-bold text-black mt-4 leading-tight">
       Our Work Culture
     </h2>
 
-    {/* PARAGRAPH */}
+   
     <p className="text-gray-600 mt-6 text-lg leading-relaxed max-w-4xl mx-auto">
       At Adkryoss managed by Clink Consultancy Services pvt. ltd, culture is not a slogan — it’s a system. 
       <br />
      <p className="text-blue-600 font-bold">We believe in:</p> 
     </p>
 
-    {/* CARDS */}
+   
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 justify-items-center">
       
-      {/* Item 1 */}
+    
       <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition w-full max-w-xs">
         <h3 className="text-xl font-semibold text-black mb-2">
           01. Ownership Over Hierarchy
@@ -250,7 +250,7 @@ style={{ backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/te
         </p>
       </div>
 
-      {/* Item 2 */}
+     
       <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition w-full max-w-xs">
         <h3 className="text-xl font-semibold text-black mb-2">
           02. Continuous Learning
@@ -260,7 +260,7 @@ style={{ backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/te
         </p>
       </div>
 
-      {/* Item 3 */}
+      
       <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition w-full max-w-xs">
         <h3 className="text-xl font-semibold text-black mb-2">
           03. Data-Backed Decisions
@@ -270,7 +270,7 @@ style={{ backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/te
         </p>
       </div>
 
-      {/* Item 4 */}
+   
       <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition w-full max-w-xs">
         <h3 className="text-xl font-semibold text-black mb-2">
           04. Collaboration Without Silos
@@ -280,7 +280,7 @@ style={{ backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/te
         </p>
       </div>
 
-      {/* Item 5 */}
+      
       <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition w-full max-w-xs">
         <h3 className="text-xl font-semibold text-black mb-2">
           05. Performance Recognition
@@ -292,7 +292,81 @@ style={{ backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/te
 
     </div>
   </div>
+</section> */}
+
+
+
+
+<section className="bg-linear-to-br from-gray-50 via-blue-50 to-white py-20">
+  <div className="max-w-7xl mx-auto px-6 text-center">
+
+    {/* HEADING */}
+    <h2 className="text-4xl md:text-5xl font-bold text-black mt-4 leading-tight">
+      Our Work Culture
+    </h2>
+
+    {/* PARAGRAPH */}
+    <p className="text-gray-600 mt-6 text-lg leading-relaxed max-w-4xl mx-auto">
+      At Adkryoss managed by Clink Consultancy Services pvt. ltd, culture is not a slogan — it’s a system.
+    </p>
+    <p className="text-blue-600 font-bold mt-2">
+      We believe in:
+    </p>
+
+    {/* CARDS */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 mt-12">
+
+      {/* Row 1 - 3 Cards */}
+      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2">
+        <h3 className="text-xl font-semibold text-black mb-2">
+          01. Ownership Over Hierarchy
+        </h3>
+        <p className="text-gray-600">
+          If you see opportunity, you take it.
+        </p>
+      </div>
+
+      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2">
+        <h3 className="text-xl font-semibold text-black mb-2">
+          02. Continuous Learning
+        </h3>
+        <p className="text-gray-600">
+          SEO evolves. Algorithms shift. Platforms upgrade. We evolve faster.
+        </p>
+      </div>
+
+      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2">
+        <h3 className="text-xl font-semibold text-black mb-2">
+          03. Data-Backed Decisions
+        </h3>
+        <p className="text-gray-600">
+          We measure everything. We optimise relentlessly.
+        </p>
+      </div>
+
+      {/* Row 2 - Centered 2 Cards */}
+      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2 lg:col-start-2">
+        <h3 className="text-xl font-semibold text-black mb-2">
+          04. Collaboration Without Silos
+        </h3>
+        <p className="text-gray-600">
+          SEO works with content. Content works with paid. Paid works with analytics. Everything works together.
+        </p>
+      </div>
+
+      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2">
+        <h3 className="text-xl font-semibold text-black mb-2">
+          05. Performance Recognition
+        </h3>
+        <p className="text-gray-600">
+          Growth is rewarded. Initiative is noticed.
+        </p>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 
 
 <section className="py-14 bg-white">

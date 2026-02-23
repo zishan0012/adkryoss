@@ -109,7 +109,7 @@ const AgenticAI = () => {
 
     <div className="text-left text-white space-y-6">
 
-      <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white">
+      <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
         Agentic AI Digital Marketing Services
       </h2>
 
@@ -121,11 +121,29 @@ const AgenticAI = () => {
         AI is no longer a support tool — it’s the strategist, the optimizer, and the growth driver.
         <br />
         We build self-learning, goal-oriented marketing ecosystems that plan, execute, optimize, and scale campaigns in real time.
-        <br /><br />
+        <br />
         <span className="font-bold">
           Welcome to the era of Agentic AI Marketing.
         </span>
       </p>
+
+ <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                            <a
+                                href="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </a>
+                            <a
+                                href="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </a>
+                        </div>
+
+
+
 
     </div>
 

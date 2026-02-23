@@ -3,6 +3,8 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 
+
+
 // Services Pages
 import Services from './pages/our-services';
 
@@ -120,9 +122,13 @@ const ScrollToTop = () => {
 };
 
 function App() {
+    
   return (
     <Layout>
       <ScrollToTop />
+
+
+
       <Routes>
         {/* Home */}
         <Route path="/" element={<Home />} />
@@ -237,6 +243,10 @@ function App() {
 
 
       </Routes>
+
+
+
+       
     </Layout>
   );
 }

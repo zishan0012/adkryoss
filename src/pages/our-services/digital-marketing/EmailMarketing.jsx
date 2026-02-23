@@ -191,24 +191,26 @@ const results = [
 const EmailMarketing = () => {
   return (
     <>
-      {/* HERO SECTION */}
-      <section
+
+
+
+       {/* <section
         className="relative py-20 text-white bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-        }}
-      >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-blue-900/80"></div>
+           backgroundImage:
+             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+         }}
+       >
+       
+       <div className="absolute inset-0 bg-blue-900/80"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          {/* LEFT CONTENT */}
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-              Email Marketing Services
-            </h1>
+    
+    <div>
+      <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        Email Marketing Services
+      </h1>
 
             <h2 className="text-xl md:text-2xl font-semibold text-blue-200 mb-6">
               Turn Subscribers Into Revenue Machines
@@ -227,7 +229,7 @@ const EmailMarketing = () => {
               re-engage audiences, and generate predictable ROI.
             </p>
 
-            {/* <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4 flex-wrap">
         <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
           Book a Strategy Call →
         </button>
@@ -235,9 +237,48 @@ const EmailMarketing = () => {
         <button className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
           View Capabilities →
         </button>
-      </div> */}
+      </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+
+   
+    <div className="flex justify-center lg:justify-end">
+     <img
+        src={mail}
+        alt="Email Marketing"
+        className="w-full max-w-[520px] h-[400px] object-cover rounded-xl shadow-2xl"
+      />
+    </div>
+</div>
+  </div>
+</section>  */}
+
+
+
+<section
+  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    <div className="space-y-6">
+      <h1 className="text-4xl md:text-5xl font-bold leading-tight">Email Marketing Services</h1>
+      <h2 className="text-2xl md:text-3xl font-semibold text-blue-200">
+        Turn Subscribers Into Revenue Machines
+      </h2>
+
+      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+        Smart inbox strategies. Hyper-personalized journeys. Measurable growth.
+      </p>
+
+      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+        At <span className="font-semibold">Adkryoss managed by Clink Consultancy Services Private Limited</span>, we build high-converting email ecosystems that nurture leads, re-engage audiences, and generate predictable ROI.
+      </p>
+
+
+{/* <div className="flex flex-col sm:flex-row gap-4 mt-2">
               <a
                 href="/contact"
                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
@@ -250,20 +291,45 @@ const EmailMarketing = () => {
               >
                 Our Services →
               </a>
-            </div>
-          </div>
+            </div> */}
 
-          {/* RIGHT IMAGE */}
-          <div className="flex justify-center lg:justify-end">
+
+      <div className="flex flex-wrap gap-4">
+        <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
+          Book a Strategy Call →
+        </button>
+        <button className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
+          View Capabilities →
+        </button>
+      </div>
+    </div>
+
+    <div className="flex justify-center md:justify-end">
+      <img
+        src={mail}
+        alt="Email Marketing"
+        className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] object-cover rounded-xl shadow-lg"
+      />
+    </div>
+  </div>
+</section> 
+
+            
+         
+
+          
+           {/* <div className="flex justify-center lg:justify-end">
             <img
-              src={mail}
+               src={mail}
               alt="Email Marketing"
               className="w-full max-w-[520px] h-[400px] object-cover rounded-xl shadow-2xl"
             />
-          </div>
+          </div> */}
 
-        </div>
-      </section>
+      
+
+
+
 
       <div className="max-w-7xl mx-auto px-6 pt-6 text-sm text-gray-500">
         <span className="hover:text-blue-600 cursor-pointer">

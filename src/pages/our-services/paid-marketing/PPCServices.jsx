@@ -139,11 +139,20 @@ const industries = [
   },
 ];
 const PPCServices = () => {
-  return (
-    <>
-      {/* Hero section */}
-      <section className="bg-linear-to-r from-blue-700 to-blue-900 py-16 md:py-24">
-        <div className="w-full px-6 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-white">
+    return (
+        <>
+        {/* Hero section */}
+        {/* <section className="bg-linear-to-r from-blue-700 to-blue-900 py-16 md:py-24"> */}
+ <section
+        className="relative flex items-center min-h-[70vh] bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+        }}
+      >
+
+
+  <div className="w-full px-6 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-white">
 
 
           <div className="space-y-6">
@@ -536,10 +545,105 @@ const PPCServices = () => {
               </div>
 
             </div>
+          {/* ))} */}
+        </div>
+
+      </div>
+
+      {/* RIGHT SIDE IMAGE */}
+      <div className="flex justify-end">
+        <img
+          src={Output}
+          alt="PPC Strategy"
+          className="w-full max-w-lg rounded-2xl shadow-xl object-cover"
+        />
+      </div>
+
+    
+</section>
+
+
+
+
+{/*Process */}
+  {/* <section className="bg-gray-50">
+  <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[650px]">
+
+   
+    <div className="relative h-[400px] w-[900px] lg:h-auto">
+      <img
+        src={Process}
+        alt="Our PPC Process"
+        className="absolute inset-0 w-full h-full object-contain"
+      />
+    </div>
+
+    <div className="flex items-center">
+      <div className="pl-40 pr-0 py-16 lg:py-20 w-full">
+
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
+          Our PPC Process
+        </h2>
+
+        <div className="space-y-8">
+
+          <div>
+            <h3 className="text-lg font-semibold text-blue-700 mb-1">
+              1. Discovery & Goal Mapping
+            </h3>
+            <p className="text-gray-700">
+              Understanding your business objectives and defining KPIs.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-blue-700 mb-1">
+              2. Research & Planning
+            </h3>
+            <p className="text-gray-700">
+              Keyword research, competitor analysis, and campaign architecture.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-blue-700 mb-1">
+              3. Campaign Setup
+            </h3>
+            <p className="text-gray-700">
+              Ad creation, tracking implementation, and smart bidding configuration.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-blue-700 mb-1">
+              4. Optimization & Scaling
+            </h3>
+            <p className="text-gray-700">
+              Continuous testing, budget reallocation, and conversion optimization.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-blue-700 mb-1">
+              5. Reporting & Insights
+            </h3>
+            <p className="text-gray-700">
+              Data-backed insights with actionable recommendations.
+            </p>
+
           </div>
 
         </div>
-      </section>
+
+        </div>
+
+  </div>
+  </div>
+      </section> */}
+
+
+
+
 
       {/*Results */}
       <section className="bg-gradient-to-b from-slate-50 to-white py-20">

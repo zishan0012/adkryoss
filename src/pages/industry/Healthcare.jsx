@@ -8,6 +8,7 @@ import Multi from "../../assets/multi.jpg"
 import Diag from "../../assets/diagnisttic.jpg"
 import healthindus from "../../assets/industryhealth.png"
 import Cosmetic from "../../assets/cosmetic.jpg"
+import industryhealth from "../../assets/industryhealth.png"
 import {
   Search,
   Target,
@@ -196,35 +197,33 @@ const futureHealthcare = [
 const Healthcare = () => {
     return (
         <>
-        <section
-  className="relative py-24 text-white bg-cover bg-center"
+ <section
+  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
   style={{
     backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
   }}
 >
   {/* Overlay */}
-  <div className="absolute inset-0 bg-blue-900/85"></div>
+  {/* <div className="absolute inset-0 bg-blue-900/85"></div> */}
 
-  <div className="relative w-full px-8 lg:px-16">
-    <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-      {/* LEFT CONTENT */}
-      <div className="max-w-2xl space-y-6">
-
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+    {/* LEFT CONTENT */}
+    <div className="text-left text-white">
+        <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
           Healthcare Digital Marketing Services
-        </h1>
+        </h2>
 
-        <h2 className="text-xl md:text-2xl font-semibold text-blue-200">
+        <h2 className="text-2xl md:text-xl font-semibold leading-snug text-white">
           Data-Driven Growth for Hospitals, Clinics & Healthcare Brands
         </h2>
 
-        <p className="text-lg text-gray-200">
+        <p className="text-white md:text-md leading-relaxed max-w-[600px]">
           Drive More Appointments. Build Patient Trust. Stay Compliant.
-        </p>
+        {/* </p>
 
-        <p className="text-gray-300 leading-relaxed text-lg">
+        <p className="text-gray-300 leading-relaxed text-lg"> */}
           In today’s digital-first healthcare ecosystem, patients search,
           compare, and decide online. We help healthcare providers become the
           first and most trusted choice across search engines, social platforms,
@@ -233,22 +232,18 @@ const Healthcare = () => {
       </div>
 
       {/* RIGHT IMAGE */}
-      <div className="flex justify-center lg:justify-end">
-  <img
-    src={healthindus}
-    alt="Healthcare Digital Marketing Agency"
-    className="
-      w-full 
-      max-w-md 
-      lg:max-w-lg 
-      h-auto 
-      object-contain 
-      drop-shadow-2xl
-    "
-  />
-</div>
+      <div className="flex justify-center md:justify-end">
+          <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+             <img
+               src={industryhealth}
+               alt="Section Image"
+               className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+             />
+           </div>
+         </div>
+
     </div>
-  </div>
+ 
 </section>
 
 <section className="bg-gray-150 py-28">
