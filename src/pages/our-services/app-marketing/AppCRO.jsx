@@ -121,7 +121,7 @@ const AppCRO = () => {
 
 
 
-      <section id="services" className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
 
           {/* Left: Text */}
@@ -174,7 +174,7 @@ const AppCRO = () => {
       </section>
 
 
-      <section className="py-20 px-6 bg-blue-50">
+      <section id="services" className="py-20 px-6 bg-blue-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left text-gray-900">
             Our AP CRO Framework

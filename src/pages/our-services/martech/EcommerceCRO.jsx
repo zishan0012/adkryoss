@@ -220,7 +220,7 @@ const EcommerceCRO = () => {
                                 Your ecommerce store doesn’t need more traffic. It needs higher conversions, smarter journeys, and frictionless buying experiences.
                             </p>
                             <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium opacity-95">
-                                At Adkryoss managed by <span className="font-semibold underline decoration-blue-400">Clink Consultancy Services Private Limited</span>, we help ecommerce businesses unlock hidden revenue through data-driven CRO.
+                                At Adkryoss managed by <span className="font-semibold">Clink Consultancy Services Private Limited</span>, we help ecommerce businesses unlock hidden revenue through data-driven CRO.
                             </p>
                         </div>
                         <div className="flex flex-wrap gap-4">
@@ -258,7 +258,7 @@ const EcommerceCRO = () => {
             </section>
 
             {/* Why Ecommerce CRO Is No Longer Optional */}
-            <section id="services" className="pt-32 pb-24 bg-slate-50">
+            <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
@@ -310,7 +310,7 @@ const EcommerceCRO = () => {
             </section>
 
             {/* Our Ecommerce CRO Framework */}
-            <section className="py-24 bg-slate-900 text-white">
+            <section id="services" className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto text-center mb-16">
                     <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our Ecommerce CRO Framework</h2>
                     <p className="text-blue-200/80 max-w-2xl mx-auto font-medium mb-10">We follow a performance-first, experimentation-led methodology inspired by global best practices.</p>

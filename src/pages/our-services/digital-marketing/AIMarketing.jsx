@@ -173,8 +173,11 @@ const AIMarketing = () => {
               Grow your business with AI-driven marketing strategies that deliver faster results, smarter campaigns, and high-intent leads built for sustainable growth.
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <Link to="/contact" className="bg-white text-blue-800 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 transition-all duration-300 hover:shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <Link
+                to="/contact"
+                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+              >
                 Speak to Our Expert →
               </Link>
               <Link
@@ -313,7 +316,7 @@ const AIMarketing = () => {
           </div>
         </div>
       </section>
-      <section className="bg-white py-20">
+      <section id="services" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -415,7 +418,7 @@ const AIMarketing = () => {
           </div>
         </div>
       </section>
-      <section id="services" className="bg-white py-20">
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import javascripthero from "../../../assets/SEO/javascripthero.png";
+import javascriptseo from "../../../assets/SEO/javascript/javascriptseo.jpg";
 import {
     Code2,
     Search,
@@ -201,8 +202,12 @@ const JavascriptSEO = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="relative">
-                            <img src="https://www.techmagnate.com/wp-content/uploads/2026/01/Java-Script-SEO-Strategy.webp" alt="JS SEO Strategy" className="rounded-[30px] w-full shadow-[0_20px_40px_rgba(0,0,0,0.1)]" />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm translate-x-20">
+                            <img
+                                src={javascriptseo}
+                                alt="js seo strategy"
+                                className="max-w-[350px] w-full rounded-2xl drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
+                            />
                         </div>
                     </div>
                 </div>

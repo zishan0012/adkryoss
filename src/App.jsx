@@ -105,6 +105,9 @@ import TermsAndConditions from './pages/TermsAndConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import RefundAndCancellation from './pages/RefundAndCancellation';
 import Sitemap from './pages/Sitemap';
+import SEOROICalculator from './pages/tools/SEOROICalculator';
+import CROCalculator from './pages/tools/CROCalculator';
+import PPCROICalculator from './pages/tools/PPCROICalculator';
 
 import Future from "./pages/blog/Future";
 import Perfomance from './pages/blog/Perfomance';
@@ -271,6 +274,9 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/refund-cancellation" element={<RefundAndCancellation />} />
         <Route path="/sitemap" element={<Sitemap />} />
+        <Route path="/tools/seo-roi" element={<PageWrapper><SEOROICalculator /></PageWrapper>} />
+        <Route path="/tools/cro-roi" element={<PageWrapper><CROCalculator /></PageWrapper>} />
+        <Route path="/tools/ppc-roi" element={<PageWrapper><PPCROICalculator /></PageWrapper>} />
 
 
       </Routes>

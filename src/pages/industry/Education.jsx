@@ -9,6 +9,7 @@ import Skills from "../../assets/skill.jpg";
 import Abroad from "../../assets/abroad.jpg";
 import Future from "../../assets/future.png";
 // import education from "../../assets/education.png"
+
 import {
   Search,
   Target,
@@ -146,64 +147,55 @@ const Education = () => {
   return (
     <>
       <section
-  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
-  }}
->
+        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+        }}
+      >
         {/* Overlay */}
         {/* <div className="absolute inset-0 bg-blue-900/80"></div> */}
 
-       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-    {/* LEFT CONTENT */}
-    <div className="text-left text-white">
-        <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
-                Education Industry Digital Marketing Services
-              </h2>
+          {/* LEFT CONTENT */}
+          <div className="text-left text-white">
+            <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
+              Education Industry Digital Marketing Services
+            </h2>
 
-              <h2 className="text-2xl md:text-xl font-semibold leading-snug text-white">
-                Empowering Educational Institutions to Lead in the Digital Era
-              </h2>
+            <h2 className="text-2xl md:text-xl font-semibold leading-snug text-white">
+              Empowering Educational Institutions to Lead in the Digital Era
+            </h2>
 
-              <p className="text-white md:text-md leading-relaxed max-w-[600px]">
-                Smarter strategies. Measurable growth. Future-ready enrollments.
+            <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+              Smarter strategies. Measurable growth. Future-ready enrollments.
               {/* </p>
 
               <p className="text-gray-300 leading-relaxed"> */}
-                <span className="font-bold text-white">
-                  Adkryoss managed by Clink Consultancy Services Private Limited
-                </span>{" "}
-                helps schools, colleges, universities, edtech platforms, and
-                coaching institutes attract the right students, increase
-                admissions, and build long-term digital authority through
-                data-driven marketing strategies.
-              </p>
+              <span className="font-bold text-white">
+                Adkryoss managed by Clink Consultancy Services Private Limited
+              </span>{" "}
+              helps schools, colleges, universities, edtech platforms, and
+              coaching institutes attract the right students, increase
+              admissions, and build long-term digital authority through
+              data-driven marketing strategies.
+            </p>
 
-              <div className="flex gap-4 pt-4">
-                <button className="bg-white text-blue-700 px-7 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
-                  Speak to an Expert →
-                </button>
-
-                <button className="border border-white px-7 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-700 transition">
-                  Our Services →
-                </button>
-              </div>
-            </div>
-
-            {/* RIGHT IMAGE */}
-            <div className="flex justify-center md:justify-end">
-                <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
-                   <img
-                     src={industryeducation}
-                     alt="Section Image"
-                     className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
-                   />
-                 </div>
-               </div>
           </div>
-        
+
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center md:justify-end">
+            <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+              <img
+                src={industryeducation}
+                alt="Section Image"
+                className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+
       </section>
       {/* Why */}
       <section className="bg-gray-100 py-28">

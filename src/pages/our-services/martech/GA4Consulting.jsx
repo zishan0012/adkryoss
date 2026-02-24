@@ -192,7 +192,7 @@ const GA4Consulting = () => {
             </section>
 
             {/* Why Your Business Needs GA4 Expertise */}
-            <section id="services" className="pt-32 pb-24 bg-slate-50">
+            <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
@@ -230,7 +230,7 @@ const GA4Consulting = () => {
             </section>
 
             {/* Our GA4 Consulting Services */}
-            <section className="py-24 bg-slate-900 text-white">
+            <section id="services" className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-20">
                         <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our GA4 Consulting Services</h2>

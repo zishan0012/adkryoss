@@ -208,7 +208,7 @@ const CDPServices = () => {
             </section>
 
             {/* Why Your Business Needs a CDP Now */}
-            <section id="services" className="pt-32 pb-24 bg-slate-50">
+            <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
@@ -282,7 +282,7 @@ const CDPServices = () => {
             </section>
 
             {/* Our CDP Services */}
-            <section className="py-24 bg-slate-900 text-white">
+            <section id="services" className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto text-center mb-16">
                     <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our CDP Services</h2>
                     <p className="text-blue-200/80 max-w-2xl mx-auto font-medium mb-10">We deliver end-to-end CDP consulting, implementation, and optimization solutions tailored to your business objectives.</p>

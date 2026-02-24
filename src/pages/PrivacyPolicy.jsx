@@ -62,7 +62,7 @@ const PrivacyPolicy = () => {
                         </div>
 
                         {/* Use a generous gap to avoid 'tight' feeling */}
-                        <div className="flex flex-col gap-20">
+                        <div className="flex flex-col gap-[40px]">
 
                             {/* Section 1 */}
                             <SectionCard icon={ClipboardList} title="1. Information We Collect" highlight>
@@ -255,7 +255,7 @@ const PrivacyPolicy = () => {
                             </div>
 
                             {/* Final Note */}
-                            <div className="text-center pt-24 border-t border-slate-100 pb-16">
+                            <div className="text-center pt-24 border-t border-slate-100 pb-6">
                                 <h2 className="text-3xl font-extrabold text-slate-900 mb-6">Commitment to Transparency</h2>
                                 <p className="text-xl md:text-2xl font-bold text-slate-800 italic leading-tight max-w-3xl mx-auto mb-8">
                                     "We believe responsible data handling builds stronger digital partnerships. Your information powers better marketing strategies — and we treat it with the highest level of care."
