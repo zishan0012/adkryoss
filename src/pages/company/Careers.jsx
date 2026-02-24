@@ -9,6 +9,13 @@ import OurHiringPhilosophyImage from "../../assets/OurHiringPhilosophy.png";
 import GrowthImage from "../../assets/Growth.png";
 import InternshipImage from "../../assets/Internship.png";
 import ReadyToBuildImage from "../../assets/ReadyToBuild.png";
+import StructuredcareerprogressionImage from "../../assets/Structuredcareerprogression.png"
+import WorklifebalancesupportImage from "../../assets/Worklifebalancesupport.png"
+import SkilldevelopmentprogramsImage from "../../assets/Skilldevelopmentprograms.png"
+import PerformancebasedgrowthreviewsImage from "../../assets/Performancebasedgrowthreviews.png"
+import LeadershipmentorshipImage from "../../assets/Leadershipmentorship.png"
+import CollaborativeteamcultureImage from "../../assets/Collaborativeteamculture.png"
+import InnovationdrivenenvironmentImage from "../../assets/Innovationdrivenenvironment.png"
 
 const jobs = [
   {
@@ -1230,31 +1237,31 @@ style={{ backgroundImage:
       {[
         {
           title: "Structured career progression",
-          image: "",
+          image: StructuredcareerprogressionImage,
         },
         {
           title: "Skill development programs",
-          image: "",
+          image: SkilldevelopmentprogramsImage,
         },
         {
           title: "Performance-based growth reviews",
-          image: "",
+          image: PerformancebasedgrowthreviewsImage,
         },
         {
           title: "Leadership mentorship",
-          image: "",
+          image: LeadershipmentorshipImage,
         },
         {
           title: "Collaborative team culture",
-          image: "",
+          image: CollaborativeteamcultureImage,
         },
         {
           title: "Innovation-driven environment",
-          image: "",
+          image: InnovationdrivenenvironmentImage,
         },
         {
           title: "Work-life balance support",
-          image: "",
+          image: WorklifebalancesupportImage,
         },
       ].map((item, index) => (
         <div
