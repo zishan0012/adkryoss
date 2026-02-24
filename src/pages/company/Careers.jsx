@@ -1,4 +1,4 @@
-
+import { motion } from "framer-motion";
 import React from "react";
 import CareerImage from "../../assets/Career.jpeg";
 import WhatMakesUsDifferentImage from "../../assets/WhatMakesUsDifferent.png";
@@ -171,10 +171,12 @@ style={{ backgroundImage:
 </section>
 
 
-<section className="py-24 bg-linear-to-br from-gray-50 via-blue-50 to-white">
+
+
+{/* <section className="py-24 bg-linear-to-br from-gray-50 via-blue-50 to-white">
   <div className="max-w-7xl mx-auto px-6">
 
-    {/* CENTERED HEADING & PARAGRAPH */}
+    
     <div className="text-center max-w-3xl mx-auto">
       <h2 className="text-4xl md:text-5xl font-bold text-black leading-tight">
         Why Work With Adkryoss <br className="hidden md:block" /> 
@@ -186,10 +188,9 @@ style={{ backgroundImage:
       </p>
     </div>
 
-    {/* TWO-COLUMN GRID BELOW */}
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mt-16">
 
-  {/* LEFT SIDE */}
+ 
   <div>
     <h3 className="text-4xl font-semibold text-blue-600 mb-6 text-left">
       What Makes Us Different?
@@ -208,7 +209,7 @@ style={{ backgroundImage:
     </div>
   </div>
 
-  {/* RIGHT SIDE - IMAGE */}
+
   <div className="flex justify-center lg:justify-end mt-10 lg:mt-0">
     <img
       src={WhatMakesUsDifferentImage} 
@@ -219,99 +220,156 @@ style={{ backgroundImage:
 
 </div>
 
-{/* FINAL STATEMENT - FULL WIDTH BELOW IMAGE */}
+
 <p className="text-gray-500 mt-16 text-lg font-medium italic text-center max-w-4xl mx-auto">
   This isn’t a traditional agency job. <br />
   This is a digital growth lab. <br />
   Shape your career with impact.
 </p>
   </div>
-</section>
-
-
-{/* <section className=" bg-linear-to-br from-gray-50 via-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-
-    <h2 className="text-4xl md:text-5xl font-bold text-black mt-4 leading-tight">
-      Our Work Culture
-    </h2>
-
-   
-    <p className="text-gray-600 mt-6 text-lg leading-relaxed max-w-4xl mx-auto">
-      At Adkryoss managed by Clink Consultancy Services pvt. ltd, culture is not a slogan — it’s a system. 
-      <br />
-     <p className="text-blue-600 font-bold">We believe in:</p> 
-    </p>
-
-   
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 justify-items-center">
-      
-    
-      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition w-full max-w-xs">
-        <h3 className="text-xl font-semibold text-black mb-2">
-          01. Ownership Over Hierarchy
-        </h3>
-        <p className="text-gray-600">
-          If you see opportunity, you take it.
-        </p>
-      </div>
-
-     
-      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition w-full max-w-xs">
-        <h3 className="text-xl font-semibold text-black mb-2">
-          02. Continuous Learning
-        </h3>
-        <p className="text-gray-600">
-          SEO evolves. Algorithms shift. Platforms upgrade. We evolve faster.
-        </p>
-      </div>
-
-      
-      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition w-full max-w-xs">
-        <h3 className="text-xl font-semibold text-black mb-2">
-          03. Data-Backed Decisions
-        </h3>
-        <p className="text-gray-600">
-          We measure everything. We optimise relentlessly.
-        </p>
-      </div>
-
-   
-      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition w-full max-w-xs">
-        <h3 className="text-xl font-semibold text-black mb-2">
-          04. Collaboration Without Silos
-        </h3>
-        <p className="text-gray-600">
-          SEO works with content. Content works with paid. Paid works with analytics. Everything works together.
-        </p>
-      </div>
-
-      
-      <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition w-full max-w-xs">
-        <h3 className="text-xl font-semibold text-black mb-2">
-          05. Performance Recognition
-        </h3>
-        <p className="text-gray-600">
-          Growth is rewarded. Initiative is noticed.
-        </p>
-      </div>
-
-    </div>
-  </div>
 </section> */}
 
 
+<motion.section
+  initial={{ opacity: 0, y: 60 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="relative py-24 overflow-hidden 
+             bg-gradient-to-br from-gray-50 via-blue-50 to-white"
+>
+
+  {/* Background Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 
+                  bg-blue-200 rounded-full blur-3xl 
+                  opacity-20 animate-pulse"></div>
+
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 
+                  bg-orange-200 rounded-full blur-3xl 
+                  opacity-20 animate-pulse"></div>
+
+  <div className="relative max-w-7xl mx-auto px-6">
+
+    {/* CENTERED HEADING & PARAGRAPH */}
+    <div className="text-center max-w-3xl mx-auto">
+      <h2 className="text-4xl md:text-5xl font-bold text-black leading-tight">
+        Why Work With Adkryoss <br className="hidden md:block" /> 
+      </h2>
+
+      <h3 className="text-4xl md:text-xl font-bold text-black leading-tight">
+        managed by Clink Consultancy Services pvt. ltd?
+      </h3>
+
+      <p className="text-gray-700 mt-4 text-lg leading-relaxed">
+        We are building a performance-first digital marketing ecosystem designed for modern brands. 
+        That means you won’t just “do marketing.” You’ll build strategies that impact revenue.
+      </p>
+    </div>
+
+    {/* TWO COLUMN GRID */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mt-16">
+
+      {/* LEFT SIDE */}
+      <div>
+        <h3 className="text-4xl font-semibold text-blue-600 mb-6 text-left">
+          What Makes Us Different?
+        </h3>
+
+        <div className="text-gray-900 text-base">
+          <ul className="space-y-3 list-disc pl-5">
+            <li className="p-2 rounded-lg transition-all duration-300 
+                           hover:bg-blue-50 hover:translate-x-2 
+                           hover:text-blue-700 cursor-pointer">
+              Performance-driven culture (Data &gt; Assumptions)
+            </li>
+
+            <li className="p-2 rounded-lg transition-all duration-300 
+                           hover:bg-blue-50 hover:translate-x-2 
+                           hover:text-blue-700 cursor-pointer">
+              AI-integrated marketing workflows
+            </li>
+
+            <li className="p-2 rounded-lg transition-all duration-300 
+                           hover:bg-blue-50 hover:translate-x-2 
+                           hover:text-blue-700 cursor-pointer">
+              Cross-channel growth strategy exposure
+            </li>
+
+            <li className="p-2 rounded-lg transition-all duration-300 
+                           hover:bg-blue-50 hover:translate-x-2 
+                           hover:text-blue-700 cursor-pointer">
+              Enterprise-grade client portfolio
+            </li>
+
+            <li className="p-2 rounded-lg transition-all duration-300 
+                           hover:bg-blue-50 hover:translate-x-2 
+                           hover:text-blue-700 cursor-pointer">
+              Rapid skill acceleration environment
+            </li>
+
+            <li className="p-2 rounded-lg transition-all duration-300 
+                           hover:bg-blue-50 hover:translate-x-2 
+                           hover:text-blue-700 cursor-pointer">
+              Leadership mentorship model
+            </li>
+
+            <li className="p-2 rounded-lg transition-all duration-300 
+                           hover:bg-blue-50 hover:translate-x-2 
+                           hover:text-blue-700 cursor-pointer">
+              Growth-focused career path
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* RIGHT SIDE IMAGE */}
+      <div className="flex justify-center lg:justify-end mt-10 lg:mt-0">
+        <img
+          src={WhatMakesUsDifferentImage}
+          alt="Digital Growth Lab Illustration"
+          className="w-full max-w-md rounded-2xl shadow-xl 
+                     transition-all duration-500 
+                     hover:scale-105 hover:shadow-2xl"
+        />
+      </div>
+
+    </div>
+
+    {/* Divider Accent */}
+    <div className="w-24 h-1 mx-auto bg-gradient-to-r 
+                    from-blue-500 to-orange-400 
+                    rounded-full mt-16 mb-6"></div>
+
+    {/* FINAL STATEMENT */}
+    <p className="text-gray-500 text-lg font-medium italic text-center max-w-4xl mx-auto">
+      This isn’t a traditional agency job. <br />
+      This is a digital growth lab. <br />
+      Shape your career with impact.
+    </p>
+
+  </div>
+</motion.section>
 
 
-<section className="bg-linear-to-br from-gray-50 via-blue-50 to-white py-20">
+
+
+
+
+
+
+
+
+
+
+{/* <section className="bg-linear-to-br from-gray-50 via-blue-50 to-white py-20">
   <div className="max-w-7xl mx-auto px-6 text-center">
 
-    {/* HEADING */}
+  
     <h2 className="text-4xl md:text-5xl font-bold text-black mt-4 leading-tight">
       Our Work Culture
     </h2>
 
-    {/* PARAGRAPH */}
+ 
     <p className="text-gray-600 mt-6 text-lg leading-relaxed max-w-4xl mx-auto">
       At Adkryoss managed by Clink Consultancy Services pvt. ltd, culture is not a slogan — it’s a system.
     </p>
@@ -319,11 +377,9 @@ style={{ backgroundImage:
       We believe in:
     </p>
 
-    {/* CARDS */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 mt-12">
 
-      {/* Row 1 - 3 Cards */}
-      {/* <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2"> */}
+     
       <div className=" bg-white p-6 rounded-2xl shadow-md 
               lg:col-span-2
                 hover:bg-blue-100 
@@ -338,7 +394,6 @@ style={{ backgroundImage:
         </p>
       </div>
 
-      {/* <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2"> */}
       <div className="group bg-white p-6 rounded-2xl shadow-md 
                lg:col-span-2
                 hover:bg-blue-50 
@@ -353,7 +408,6 @@ style={{ backgroundImage:
         </p>
       </div>
 
-      {/* <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2"> */}
       <div className="group bg-white p-6 rounded-2xl shadow-md 
                lg:col-span-2
                 hover:bg-blue-100 
@@ -368,8 +422,7 @@ style={{ backgroundImage:
         </p>
       </div>
 
-      {/* Row 2 - Centered 2 Cards */}
-      {/* <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2 lg:col-start-2"> */}
+      
       <div className="group bg-white p-6 rounded-2xl shadow-md 
                lg:col-span-2
                lg:col-start-2
@@ -385,7 +438,6 @@ style={{ backgroundImage:
         </p>
       </div>
 
-      {/* <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition lg:col-span-2"> */}
       <div className="group bg-white p-6 rounded-2xl shadow-md 
              lg:col-span-2
                 hover:bg-blue-100 
@@ -402,14 +454,123 @@ style={{ backgroundImage:
 
     </div>
   </div>
+</section> */}
+
+
+
+<section className="relative py-20 overflow-hidden 
+                    bg-gradient-to-br from-gray-50 via-blue-50 to-white">
+
+  {/* Background Decorative Glow */}
+  <div className="absolute -top-40 -left-40 w-[500px] h-[500px] 
+                  bg-blue-200 opacity-20 blur-3xl rounded-full"></div>
+
+  <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] 
+                  bg-orange-200 opacity-20 blur-3xl rounded-full"></div>
+
+  <div className="relative max-w-7xl mx-auto px-6 text-center">
+
+    {/* HEADING */}
+    <h2 className="text-4xl md:text-5xl font-bold text-black mt-4 leading-tight">
+      Our Work Culture
+    </h2>
+
+    {/* Accent Line */}
+    <div className="w-24 h-1 mx-auto bg-gradient-to-r 
+                    from-blue-500 to-orange-400 
+                    rounded-full mt-6"></div>
+
+    {/* PARAGRAPH */}
+    <p className="text-gray-600 mt-6 text-lg leading-relaxed max-w-4xl mx-auto">
+      At Adkryoss managed by Clink Consultancy Services pvt. ltd, culture is not a slogan — it’s a system.
+    </p>
+
+    <p className="text-blue-600 font-bold mt-2">
+      We believe in:
+    </p>
+
+    {/* CARDS */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 mt-12">
+
+      {[
+        {
+          title: "01. Ownership Over Hierarchy",
+          desc: "If you see opportunity, you take it.",
+          span: "lg:col-span-2"
+        },
+        {
+          title: "02. Continuous Learning",
+          desc: "SEO evolves. Algorithms shift. Platforms upgrade. We evolve faster.",
+          span: "lg:col-span-2"
+        },
+        {
+          title: "03. Data-Backed Decisions",
+          desc: "We measure everything. We optimise relentlessly.",
+          span: "lg:col-span-2"
+        },
+        {
+          title: "04. Collaboration Without Silos",
+          desc: "SEO works with content. Content works with paid. Paid works with analytics. Everything works together.",
+          span: "lg:col-span-2 lg:col-start-2"
+        },
+        {
+          title: "05. Performance Recognition",
+          desc: "Growth is rewarded. Initiative is noticed.",
+          span: "lg:col-span-2"
+        }
+      ].map((card, index) => (
+        <div
+          key={index}
+          className={`group relative bg-white p-6 rounded-2xl shadow-md 
+                      border border-gray-100
+                      ${card.span}
+                      transition-all duration-500
+                      hover:-translate-y-3
+                      hover:shadow-2xl
+                      overflow-hidden`}
+        >
+
+          {/* Gradient Hover Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br 
+                          from-blue-50 via-transparent to-orange-50
+                          opacity-0 group-hover:opacity-100
+                          transition duration-500"></div>
+
+          {/* Accent Border */}
+          <span className="absolute left-0 top-0 h-full w-1 
+                           bg-gradient-to-b from-blue-500 to-orange-400"></span>
+
+          <div className="relative z-10 text-left">
+            <h3 className="text-xl font-semibold text-black mb-2 
+                           transition-colors duration-300 
+                           group-hover:text-blue-700">
+              {card.title}
+            </h3>
+
+            <p className="text-gray-600 
+                          transition-colors duration-300 
+                          group-hover:text-gray-800">
+              {card.desc}
+            </p>
+          </div>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
 </section>
 
 
 
-<section className="py-14 bg-white">
+
+
+
+
+{/* <section className="py-14 bg-white">
   <div className="max-w-6xl mx-auto px-6">
 
-    {/* HEADING */}
+    
     <div className="text-center">
       <h2 className="text-4xl md:text-5xl font-bold text-black leading-tight">
         Who We’re Looking For
@@ -420,10 +581,9 @@ style={{ backgroundImage:
       </p>
     </div>
 
-    {/* CARDS + IMAGE WRAPPER */}
+
     <div className="flex flex-col lg:flex-row items-center gap-12 mt-12">
 
-      {/* LEFT SIDE - CARDS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full lg:w-1/2">
 
         {[
@@ -448,7 +608,7 @@ style={{ backgroundImage:
 
       </div>
 
-      {/* RIGHT SIDE - IMAGE */}
+    
       <div className="w-full lg:w-1/2 flex justify-center">
         <img
           src={WhoWeArelookingImage}
@@ -459,21 +619,145 @@ style={{ backgroundImage:
 
     </div>
 
-    {/* FINAL NOTE */}
     <p className="text-gray-600 mt-12 text-lg font-medium text-center">
       We don’t hire based on degrees. <br />
       We hire based on potential, mindset, and hunger.
     </p>
 
   </div>
-</section>
+</section> */}
 
 
 
-<section className="py-24 bg-linear-to-br from-gray-50 via-blue-50 to-white">
+
+<motion.section
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="py-14 bg-white"
+>
+  <div className="max-w-6xl mx-auto px-6">
+
+    {/* HEADING */}
+    <div className="text-center">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-4xl md:text-5xl font-bold text-black leading-tight"
+      >
+        Who We’re Looking For
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-gray-600 mt-4 text-lg leading-relaxed"
+      >
+        We’re building a team of specialists and growth thinkers in:
+      </motion.p>
+    </div>
+
+    {/* CARDS + IMAGE WRAPPER */}
+    <div className="flex flex-col lg:flex-row items-center gap-12 mt-12">
+
+      {/* LEFT SIDE - CARDS */}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full lg:w-1/2"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.08,
+            },
+          },
+        }}
+      >
+        {[
+          "Search Engine Optimization (SEO)",
+          "Performance Marketing (Google Ads & Meta Ads)",
+          "Social Media Strategy",
+          "Content Marketing & Copywriting",
+          "Technical SEO & Web Optimization",
+          "Data Analytics & Marketing Automation",
+          "UI/UX & Conversion Optimization",
+          "Account Management & Client Strategy",
+        ].map((role, index) => (
+          <motion.div
+            key={index}
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.5 }}
+            whileHover={{
+              y: -6,
+              scale: 1.03,
+            }}
+            className="bg-gray-100 p-6 rounded-xl shadow 
+                       hover:shadow-md 
+                       transition 
+                       flex items-center justify-center 
+                       text-center min-h-[100px]"
+          >
+            <p className="font-semibold text-gray-700">
+              {role}
+            </p>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* RIGHT SIDE - IMAGE */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="w-full lg:w-1/2 flex justify-center"
+      >
+        <motion.img
+          src={WhoWeArelookingImage}
+          alt="Team Illustration"
+          className="rounded-2xl shadow-lg w-full max-w-md object-cover"
+          animate={{ y: [0, -10, 0] }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </motion.div>
+
+    </div>
+
+    {/* FINAL NOTE */}
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3, duration: 0.6 }}
+      viewport={{ once: true }}
+      className="text-gray-600 mt-12 text-lg font-medium text-center"
+    >
+      We don’t hire based on degrees. <br />
+      We hire based on potential, mindset, and hunger.
+    </motion.p>
+
+  </div>
+</motion.section>
+
+
+
+
+{/* <section className="py-24 bg-linear-to-br from-gray-50 via-blue-50 to-white">
   <div className="max-w-7xl mx-auto px-6">
     
-    {/* Heading */}
+   
     <div className="text-center mb-16">
       <h2 className="text-4xl md:text-5xl font-bold text-black leading-tight">
         Our Hiring Philosophy
@@ -483,10 +767,9 @@ style={{ backgroundImage:
       </p>
     </div>
 
-    {/* Content Layout */}
+   
     <div className="grid lg:grid-cols-12 gap-10 items-center">
       
-      {/* LEFT IMAGE (Bigger Now) */}
       <div className="lg:col-span-7 flex justify-center">
         <img
           src={OurHiringPhilosophyImage}
@@ -495,7 +778,6 @@ style={{ backgroundImage:
         />
       </div>
 
-      {/* RIGHT SIDE CARDS (Narrower Now) */}
       <div className="lg:col-span-5 space-y-6">
         
         {[
@@ -521,36 +803,154 @@ style={{ backgroundImage:
 
     </div>
 
-    {/* Bottom Statement */}
+  
     <p className="text-gray-600 mt-16 text-lg font-medium italic text-center">
       Experience matters. <br />
       But growth mindset matters more.
     </p>
 
   </div>
-</section>
+</section> */}
 
 
-<section className="py-12 bg-linear-to-br from-blue-50 via-white to-blue-50">
+
+<motion.section
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="py-24 bg-gradient-to-br from-gray-50 via-blue-50 to-white"
+>
+  <div className="max-w-7xl mx-auto px-6">
+
+    {/* Heading */}
+    <div className="text-center mb-16">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-4xl md:text-5xl font-bold text-black leading-tight"
+      >
+        Our Hiring Philosophy
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-blue-600 mt-4 text-lg font-bold"
+      >
+        We look for:
+      </motion.p>
+    </div>
+
+    {/* Content Layout */}
+    <div className="grid lg:grid-cols-12 gap-10 items-center">
+
+      {/* LEFT IMAGE */}
+      <motion.div
+        initial={{ opacity: 0, x: -60 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.9 }}
+        viewport={{ once: true }}
+        className="lg:col-span-7 flex justify-center"
+      >
+        <motion.img
+          src={OurHiringPhilosophyImage}
+          alt="Hiring Illustration"
+          className="w-full max-w-2xl h-[520px] object-cover rounded-2xl shadow-xl"
+          animate={{ y: [0, -12, 0] }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </motion.div>
+
+      {/* RIGHT SIDE CARDS */}
+      <motion.div
+        className="lg:col-span-5 space-y-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.1,
+            },
+          },
+        }}
+      >
+        {[
+          "Analytical thinkers",
+          "Problem solvers",
+          "Digital-first mindset",
+          "Adaptability to change",
+          "Clear communicators",
+          "Self-driven professionals",
+          "Results-focused executors"
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.5 }}
+            whileHover={{
+              y: -6,
+              scale: 1.04,
+            }}
+            className="bg-white px-3 py-2 m-3 rounded-xl shadow-md hover:shadow-xl transition text-center"
+          >
+            <p className="font-semibold text-gray-700 text-lg">
+              {item}
+            </p>
+          </motion.div>
+        ))}
+      </motion.div>
+
+    </div>
+
+    {/* Bottom Statement */}
+    <motion.p
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3, duration: 0.7 }}
+      viewport={{ once: true }}
+      className="text-gray-600 mt-16 text-lg font-medium italic text-center"
+    >
+      Experience matters. <br />
+      But growth mindset matters more.
+    </motion.p>
+
+  </div>
+</motion.section>
+
+
+{/* <section className="py-12 bg-linear-to-br from-blue-50 via-white to-blue-50">
   <div className="max-w-[1500px] mx-auto px-8">
     
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
-      {/* LEFT SIDE */}
+      
       <div>
         
-        {/* HEADING */}
+      
         <h2 className="text-5xl font-bold text-black leading-tight whitespace-nowrap">
           Growth & Learning Opportunities
         </h2>
 
-        {/* INTRO PARAGRAPH */}
+  
         <p className="text-gray-700 mt-6 text-lg leading-relaxed max-w-4xl">
           Digital marketing is one of the fastest-evolving industries in the world. 
           To stay ahead, you need exposure to:
         </p>
 
-        {/* CARDS GRID */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           
           {[
@@ -575,7 +975,7 @@ style={{ backgroundImage:
         </div>
       </div>
 
-      {/* RIGHT SIDE - BIGGER IMAGE */}
+    
       <div className="flex justify-center lg:justify-end">
         <img
           src={GrowthImage}
@@ -586,7 +986,7 @@ style={{ backgroundImage:
 
     </div>
 
-    {/* FINAL NOTE - FULL WIDTH CENTERED */}
+ 
     <div className="mt-20 text-center">
       <p className="text-gray-700 text-xl font-medium italic max-w-4xl mx-auto">
         At Adkryoss managed by Clink Consultancy Services pvt. ltd,
@@ -595,13 +995,138 @@ style={{ backgroundImage:
     </div>
 
   </div>
-</section>
+</section> */}
 
 
-<section className="py-24 bg-linear-to-br from-white via-blue-50 to-white">
+<motion.section
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="py-12 bg-gradient-to-br from-blue-50 via-white to-blue-50"
+>
+  <div className="max-w-[1500px] mx-auto px-8">
+
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+      {/* LEFT SIDE */}
+      <div>
+
+        {/* HEADING */}
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-5xl font-bold text-black leading-tight whitespace-nowrap"
+        >
+          Growth & Learning Opportunities
+        </motion.h2>
+
+        {/* INTRO PARAGRAPH */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-gray-700 mt-6 text-lg leading-relaxed max-w-4xl"
+        >
+          Digital marketing is one of the fastest-evolving industries in the world. 
+          To stay ahead, you need exposure to:
+        </motion.p>
+
+        {/* CARDS GRID */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.08,
+              },
+            },
+          }}
+        >
+          {[
+            "Advanced SEO frameworks",
+            "AI-powered marketing tools",
+            "Conversion Rate Optimization systems",
+            "Performance analytics dashboards",
+            "Multi-channel campaign management",
+            "International campaign strategy",
+            "Marketing automation platforms"
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5 }}
+              whileHover={{
+                y: -6,
+                scale: 1.03,
+              }}
+              className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition"
+            >
+              <p className="font-semibold text-blue-700">
+                {item}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* RIGHT SIDE IMAGE */}
+      <motion.div
+        initial={{ opacity: 0, x: 80 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.9 }}
+        viewport={{ once: true }}
+        className="flex justify-center lg:justify-end"
+      >
+        <motion.img
+          src={GrowthImage}
+          alt="Growth & Learning Illustration"
+          className="w-full max-w-2xl h-[600px] object-cover rounded-3xl shadow-2xl"
+          animate={{ y: [0, -15, 0] }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </motion.div>
+
+    </div>
+
+    {/* FINAL NOTE */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3, duration: 0.7 }}
+      viewport={{ once: true }}
+      className="mt-20 text-center"
+    >
+      <p className="text-gray-700 text-xl font-medium italic max-w-4xl mx-auto">
+        At Adkryoss managed by Clink Consultancy Services pvt. ltd,
+        you won’t just learn — you’ll implement.
+      </p>
+    </motion.div>
+
+  </div>
+</motion.section>
+
+
+
+
+
+{/* <section className="py-24 bg-linear-to-br from-white via-blue-50 to-white">
   <div className="max-w-7xl mx-auto px-6">
 
-    {/* HEADING */}
+    
     <div className="text-center mb-6">
       <h2 className="text-4xl md:text-5xl font-bold text-black">
         Life at Adkryoss
@@ -611,12 +1136,12 @@ style={{ backgroundImage:
       </p>
     </div>
 
-    {/* SUBHEADING */}
+   
     <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto mt-6">
       We believe productivity increases when people feel empowered.
     </p>
 
-    {/* CARDS */}
+    
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
 
       {[
@@ -654,7 +1179,7 @@ style={{ backgroundImage:
           className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 p-6 text-center 
           ${index === 6 ? "md:col-start-2" : ""}`}
         >
-          {/* IMAGE */}
+         
           <div className="w-full h-40 mb-5 flex items-center justify-center">
             <img
               src={card.image}
@@ -663,7 +1188,7 @@ style={{ backgroundImage:
             />
           </div>
 
-          {/* TEXT */}
+        
           <p className="font-semibold text-gray-700 text-lg">
             {card.title}
           </p>
@@ -672,13 +1197,113 @@ style={{ backgroundImage:
 
     </div>
 
-    {/* FINAL LINE */}
+   
     <p className="text-center text-gray-700 text-xl font-medium italic mt-20 max-w-4xl mx-auto">
       We combine agility of a startup with systems of an enterprise.
     </p>
 
   </div>
+</section> */}
+
+
+<section className="py-24 bg-gradient-to-br from-white via-blue-50 to-white">
+  <div className="max-w-7xl mx-auto px-6">
+
+    {/* HEADING */}
+    <div className="text-center mb-6">
+      <h2 className="text-4xl md:text-5xl font-bold text-black">
+        Life at Adkryoss
+      </h2>
+      <p className="text-gray-600 mt-3 text-lg font-medium">
+        Managed by Clink Consultancy Services pvt. ltd
+      </p>
+    </div>
+
+    {/* SUBHEADING */}
+    <p className="text-center text-gray-700 text-lg max-w-3xl mx-auto mt-6">
+      We believe productivity increases when people feel empowered.
+    </p>
+
+    {/* CARDS GRID */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-16">
+
+      {[
+        {
+          title: "Structured career progression",
+          image: "",
+        },
+        {
+          title: "Skill development programs",
+          image: "",
+        },
+        {
+          title: "Performance-based growth reviews",
+          image: "",
+        },
+        {
+          title: "Leadership mentorship",
+          image: "",
+        },
+        {
+          title: "Collaborative team culture",
+          image: "",
+        },
+        {
+          title: "Innovation-driven environment",
+          image: "",
+        },
+        {
+          title: "Work-life balance support",
+          image: "",
+        },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="group relative bg-white rounded-3xl 
+                     border border-blue-100
+                     shadow-md
+                     overflow-hidden
+                     transition-all duration-500 ease-out
+                     hover:shadow-2xl 
+                     hover:-translate-y-3 
+                     hover:border-orange-400"
+        >
+
+          {/* IMAGE */}
+          <div className="h-48 overflow-hidden">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+
+          {/* CONTENT */}
+          <div className="relative p-6">
+
+            {/* Hover Glow Background */}
+            <div className="absolute inset-0 rounded-b-3xl 
+                            bg-gradient-to-br from-orange-50 to-blue-50 
+                            opacity-0 group-hover:opacity-100 
+                            transition duration-500 -z-10" />
+
+            <p className="text-lg font-semibold text-gray-800 
+                          transition-colors duration-300
+                          group-hover:text-blue-700 text-center">
+              {item.title}
+            </p>
+
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+
+  </div>
 </section>
+
+
 
 
 <section className="py-0 bg-gray-50">
@@ -824,10 +1449,9 @@ style={{ backgroundImage:
 
 
 
-<section className="py-28 bg-gray-50">
+{/* <section className="py-28 bg-gray-50">
   <div className="max-w-7xl mx-auto px-6">
 
-    {/* ================= Career Path ================= */}
     <div className="text-center mb-20">
       <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
         Your Career Path Here
@@ -837,7 +1461,7 @@ style={{ backgroundImage:
       </p>
     </div>
 
-    {/* Career Flow */}
+ 
     <div className="flex flex-wrap justify-center items-center gap-6 text-lg md:text-xl font-semibold text-gray-800 mb-24">
       <span>Intern</span>
       <span className="text-blue-600">→</span>
@@ -856,12 +1480,54 @@ style={{ backgroundImage:
    
 
   </div>
+</section> */}
+
+<section className="relative py-28 overflow-hidden">
+
+  {/* Animated Blue + Orange Background */}
+  <div className="absolute inset-0 
+                  bg-gradient-to-r from-blue-600 via-orange-500 to-blue-600
+                  bg-[length:200%_200%]
+                  animate-bgMove opacity-10">
+  </div>
+
+  <div className="relative max-w-7xl mx-auto px-6">
+
+    {/* ================= Career Path ================= */}
+    <div className="text-center mb-20">
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+        Your Career Path Here
+      </h2>
+      <p className="text-lg text-gray-600 mt-4">
+        We believe in internal leadership building.
+      </p>
+    </div>
+
+    {/* Career Flow */}
+    <div className="group flex flex-wrap justify-center items-center 
+                    gap-6 text-lg md:text-xl font-semibold 
+                    text-gray-800 mb-24
+                    transition-all duration-500 hover:-translate-y-2">
+
+      <span>Intern</span>
+      <span className="text-blue-600">→</span>
+      <span>Executive</span>
+      <span className="text-blue-600">→</span>
+      <span>Specialist</span>
+      <span className="text-blue-600">→</span>
+      <span>Team Lead</span>
+      <span className="text-blue-600">→</span>
+      <span>Growth Strategist</span>
+      <span className="text-blue-600">→</span>
+      <span className="font-bold text-blue-700">Business Head</span>
+
+    </div>
+
+  </div>
 </section>
 
-
-
 {/* ================= Diversity Section ================= */}
-<section className="py-1 bg-gray-50">
+{/* <section className="py-1 bg-gray-50">
   <div className="max-w-6xl mx-auto px-6">
 
     <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
@@ -876,9 +1542,38 @@ style={{ backgroundImage:
     </div>
 
   </div>
+</section> */}
+
+
+
+<section className="py-12 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-6">
+
+    <div className="group relative rounded-2xl p-[2px] 
+                    bg-gradient-to-r from-blue-600 via-orange-500 to-blue-600
+                    bg-[length:200%_200%]
+                    animate-borderMove
+                    transition-all duration-500 hover:-translate-y-2">
+
+      {/* Inner Card */}
+      <div className="bg-white rounded-2xl shadow-lg p-12 text-center
+                      transition-all duration-500 group-hover:shadow-2xl">
+
+        <h3 className="text-3xl font-bold text-gray-900 mb-6">
+          Diversity & Inclusion
+        </h3>
+
+        <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          We value diverse perspectives, backgrounds, and creative thinking.
+          Innovation happens when different minds collaborate.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
 </section>
-
-
 
 
 

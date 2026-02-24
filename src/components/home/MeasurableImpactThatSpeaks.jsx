@@ -187,7 +187,7 @@ const AwardsSection = () => {
         <img
           src={ChooseAdkryossImage}
             alt="Why Choose Adkryoss"
-          className="w-full h-100 max-w-md md:max-w-lg object-contain hover:scale-105 transition duration-500"
+          className="w-full h-100 max-w-md md:max-w-lg  hover:scale-105 transition duration-500 rounded-4xl"
         />
       </div>
 

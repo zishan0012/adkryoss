@@ -55,7 +55,7 @@ const CaseStudySection = () => {
             <img
             src={aiImage}
                 alt="Future Marketing"
-              className="w-full max-w-md object-contain"
+              className="w-full max-w-md object-contain rounded-4xl"
             />
           </div>
         </div>

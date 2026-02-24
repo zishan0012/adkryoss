@@ -175,7 +175,7 @@ const BFSI = () => {
         We Build ROI-Focused Campaigns For:
       </h3>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         {[
           "Home Loans",
           "Personal Loans",
@@ -192,7 +192,48 @@ const BFSI = () => {
             <p className="font-medium text-gray-700">{item}</p>
           </div>
         ))}
-      </div>
+      </div> */}
+
+
+
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+  {[
+    "Home Loans",
+    "Personal Loans",
+    "Credit Cards",
+    "Insurance Policies",
+    "Investment Products",
+    "Mutual Funds",
+    "Fintech Apps",
+  ].map((item, index) => (
+    <div
+      key={index}
+      className="group relative bg-white rounded-xl p-8 
+                 shadow-md hover:shadow-xl
+                 transition-all duration-500
+                 overflow-hidden"
+    >
+
+      {/* LEFT BORDER (Normal State) */}
+      <div className="absolute left-0 top-0 h-full w-1 
+                      bg-gradient-to-b from-blue-600 to-orange-500"></div>
+
+      {/* SLIDING BOTTOM BORDER (Hover) */}
+      <div className="absolute bottom-0 left-0 h-1 w-full 
+                      bg-blue-600
+                      scale-x-0 group-hover:scale-x-100
+                      origin-left
+                      transition-transform duration-500"></div>
+
+      <p className="relative font-semibold text-gray-700 text-center">
+        {item}
+      </p>
+
+    </div>
+  ))}
+</div>
+
+
     </div>
 
     {/* OUR APPROACH */}
@@ -201,7 +242,7 @@ const BFSI = () => {
         Our Strategic Approach Includes:
       </h3>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      {/* <div className="grid md:grid-cols-2 gap-6">
         {[
           "Advanced audience segmentation",
           "Funnel-based campaign structuring",
@@ -218,7 +259,54 @@ const BFSI = () => {
             <p className="text-gray-700">{point}</p>
           </div>
         ))}
-      </div>
+      </div> */}
+
+
+<div className="grid md:grid-cols-2 gap-8">
+  {[
+    "Advanced audience segmentation",
+    "Funnel-based campaign structuring",
+    "AI-driven bidding strategies",
+    "Landing page optimization",
+    "Conversion rate optimization (CRO)",
+    "Real-time campaign tracking",
+  ].map((point, index) => (
+    <div
+      key={index}
+      className="group relative flex items-start 
+                 bg-white rounded-xl p-6 
+                 shadow-md overflow-hidden
+                 transition-all duration-500"
+    >
+
+      {/* Sliding Blue Background */}
+      <div className="absolute inset-0 
+                      bg-gradient-to-r from-transparent via-blue-100 to-transparent
+                      translate-x-[-100%] 
+                      group-hover:translate-x-[100%]
+                      transition-transform duration-700 ease-out "></div>
+
+
+       <div className="absolute bottom-0 left-0 h-1 w-full 
+                      bg-blue-600
+                      scale-x-0 group-hover:scale-x-100
+                      origin-left
+                      transition-transform duration-500"></div>               
+
+      <span className="relative text-blue-600 font-bold mr-4 text-lg">
+        ✓
+      </span>
+
+      <p className="relative text-gray-700">
+        {point}
+      </p>
+
+    </div>
+  ))}
+</div>
+
+
+
     </div>
 
     {/* STRONG STATEMENT */}
@@ -230,6 +318,12 @@ const BFSI = () => {
 
   </div>
 </section>
+
+
+
+
+
+
 
 
 

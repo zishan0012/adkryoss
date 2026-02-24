@@ -50,7 +50,7 @@ const ClientTestimonials = () => {
           <img
             src= {ReadyToAccelerateImage}
               alt="Client"
-            className="rounded-xl shadow-lg max-w-full h-100"
+            className="rounded-4xl shadow-lg max-w-full h-100"
           />
         </div>
       </div>

@@ -134,7 +134,7 @@ const Clients = () => {
 
     {/* LEFT CONTENT */}
     <div>
-      <span className="text-blue-600 font-semibold tracking-widest uppercase text-xs sm:text-sm">
+      <span className="text-orange-400 font-bold tracking-widest uppercase text-sm sm:text-2xl">
         About
       </span>
 
@@ -158,7 +158,7 @@ const Clients = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
 
       {/* 1 */}
-      <div className="bg-gray-50 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+      {/* <div className="bg-gray-50 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
         <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
           <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 17v-6h6v6M4 7h16M4 12h10M4 17h16" />
@@ -167,10 +167,63 @@ const Clients = () => {
         <p className="font-semibold text-gray-800 text-sm sm:text-base">
           Data Science & AI-driven insights
         </p>
-      </div>
+      </div> */}
+
+
+
+<div className="group relative bg-white p-6 rounded-2xl 
+                border border-blue-100
+                shadow-md hover:shadow-xl
+                transition-all duration-500 
+                hover:-translate-y-2
+                overflow-hidden">
+
+  {/* Gradient Accent Border (Left + Bottom) */}
+  <span className="absolute left-0 top-0 h-full w-1 
+                   bg-gradient-to-b from-blue-500 to-orange-400"></span>
+  <span className="absolute bottom-0 left-0 w-full h-1 
+                   bg-gradient-to-r from-blue-500 to-orange-400"></span>
+
+  {/* Soft Hover Glow */}
+  <div className="absolute inset-0 bg-gradient-to-br 
+                  from-blue-50 via-transparent to-orange-50 
+                  opacity-0 group-hover:opacity-100 
+                  transition duration-500"></div>
+
+  <div className="relative z-10">
+    
+    {/* Icon */}
+    <div className="w-12 h-12 bg-gradient-to-br 
+                    from-blue-100 to-orange-100
+                    rounded-xl flex items-center justify-center mb-4
+                    group-hover:from-blue-500 group-hover:to-orange-400
+                    transition-all duration-500">
+
+      <svg className="w-6 h-6 text-blue-600 
+                      group-hover:text-white 
+                      transition-colors duration-500"
+        fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round"
+          d="M9 17v-6h6v6M4 7h16M4 12h10M4 17h16" />
+      </svg>
+    </div>
+
+    {/* Text */}
+    <p className="font-semibold text-gray-800 
+                  group-hover:text-blue-700 
+                  transition-colors duration-300">
+      Data Science & AI-driven insights
+    </p>
+
+  </div>
+</div>
+
+
+
+
 
       {/* 2 */}
-      <div className="bg-gray-50 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+      {/* <div className="bg-gray-50 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
         <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
           <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v18h18M7 14l4-4 4 4 6-6" />
@@ -179,10 +232,61 @@ const Clients = () => {
         <p className="font-semibold text-gray-800 text-sm sm:text-base">
           Full-funnel marketing strategy
         </p>
-      </div>
+      </div> */}
+
+
+<div className="group relative bg-white p-6 rounded-2xl 
+                border border-blue-100
+                shadow-md hover:shadow-xl
+                transition-all duration-500 
+                hover:-translate-y-2
+                overflow-hidden">
+
+  {/* Gradient Accent Border (Left + Bottom) */}
+  <span className="absolute left-0 top-0 h-full w-1 
+                   bg-gradient-to-b from-blue-500 to-orange-400"></span>
+  <span className="absolute bottom-0 left-0 w-full h-1 
+                   bg-gradient-to-r from-blue-500 to-orange-400"></span>
+
+  {/* Soft Hover Glow */}
+  <div className="absolute inset-0 bg-gradient-to-br 
+                  from-blue-50 via-transparent to-orange-50 
+                  opacity-0 group-hover:opacity-100 
+                  transition duration-500"></div>
+
+  <div className="relative z-10">
+    
+    {/* Icon */}
+    <div className="w-12 h-12 bg-gradient-to-br 
+                    from-blue-100 to-orange-100
+                    rounded-xl flex items-center justify-center mb-4
+                    group-hover:from-blue-500 group-hover:to-orange-400
+                    transition-all duration-500">
+
+      <svg className="w-6 h-6 text-blue-600 
+                      group-hover:text-white 
+                      transition-colors duration-500"
+        fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v18h18M7 14l4-4 4 4 6-6" />
+         
+      </svg>
+    </div>
+
+    {/* Text */}
+    <p className="font-semibold text-gray-800 
+                  group-hover:text-blue-700 
+                  transition-colors duration-300">
+      Full-funnel marketing strategy
+    </p>
+
+  </div>
+</div>
+
+
+
 
       {/* 3 */}
-      <div className="bg-gray-50 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+      {/* <div className="bg-gray-50 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
         <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
           <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-2 0-4 1-4 4s2 4 4 4 4-1 4-4-2-4-4-4zm0 0V4m0 16v-4" />
@@ -191,10 +295,68 @@ const Clients = () => {
         <p className="font-semibold text-gray-800 text-sm sm:text-base">
           Conversion-focused creatives
         </p>
-      </div>
+      </div> */}
+
+
+
+
+<div className="group relative bg-white p-6 rounded-2xl 
+                border border-blue-100
+                shadow-md hover:shadow-xl
+                transition-all duration-500 
+                hover:-translate-y-2
+                overflow-hidden">
+
+  {/* Gradient Accent Border (Left + Bottom) */}
+  <span className="absolute left-0 top-0 h-full w-1 
+                   bg-gradient-to-b from-blue-500 to-orange-400"></span>
+  <span className="absolute bottom-0 left-0 w-full h-1 
+                   bg-gradient-to-r from-blue-500 to-orange-400"></span>
+
+  {/* Soft Hover Glow */}
+  <div className="absolute inset-0 bg-gradient-to-br 
+                  from-blue-50 via-transparent to-orange-50 
+                  opacity-0 group-hover:opacity-100 
+                  transition duration-500"></div>
+
+  <div className="relative z-10">
+    
+    {/* Icon */}
+    <div className="w-12 h-12 bg-gradient-to-br 
+                    from-blue-100 to-orange-100
+                    rounded-xl flex items-center justify-center mb-4
+                    group-hover:from-blue-500 group-hover:to-orange-400
+                    transition-all duration-500">
+
+      <svg className="w-6 h-6 text-blue-600 
+                      group-hover:text-white 
+                      transition-colors duration-500"
+        fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-2 0-4 1-4 4s2 4 4 4 4-1 4-4-2-4-4-4zm0 0V4m0 16v-4" />
+       
+      </svg>
+    </div>
+
+    {/* Text */}
+    <p className="font-semibold text-gray-800 
+                  group-hover:text-blue-700 
+                  transition-colors duration-300">
+       Conversion-focused creatives
+    </p>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
 
       {/* 4 */}
-      <div className="bg-gray-50 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+      {/* <div className="bg-gray-50 p-5 sm:p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
         <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
           <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3a3 3 0 00-3 3v2.25M14.25 3a3 3 0 013 3v2.25M4.5 12h15M6 21h12a2 2 0 002-2v-5H4v5a2 2 0 002 2z" />
@@ -203,7 +365,64 @@ const Clients = () => {
         <p className="font-semibold text-gray-800 text-sm sm:text-base">
           Advanced analytics & automation
         </p>
-      </div>
+      </div> */}
+
+
+
+
+
+
+
+<div className="group relative bg-white p-6 rounded-2xl 
+                border border-blue-100
+                shadow-md hover:shadow-xl
+                transition-all duration-500 
+                hover:-translate-y-2
+                overflow-hidden">
+
+  {/* Gradient Accent Border (Left + Bottom) */}
+  <span className="absolute left-0 top-0 h-full w-1 
+                   bg-gradient-to-b from-blue-500 to-orange-400"></span>
+  <span className="absolute bottom-0 left-0 w-full h-1 
+                   bg-gradient-to-r from-blue-500 to-orange-400"></span>
+
+  {/* Soft Hover Glow */}
+  <div className="absolute inset-0 bg-gradient-to-br 
+                  from-blue-50 via-transparent to-orange-50 
+                  opacity-0 group-hover:opacity-100 
+                  transition duration-500"></div>
+
+  <div className="relative z-10">
+    
+    {/* Icon */}
+    <div className="w-12 h-12 bg-gradient-to-br 
+                    from-blue-100 to-orange-100
+                    rounded-xl flex items-center justify-center mb-4
+                    group-hover:from-blue-500 group-hover:to-orange-400
+                    transition-all duration-500">
+
+      <svg className="w-6 h-6 text-blue-600 
+                      group-hover:text-white 
+                      transition-colors duration-500"
+        fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3a3 3 0 00-3 3v2.25M14.25 3a3 3 0 013 3v2.25M4.5 12h15M6 21h12a2 2 0 002-2v-5H4v5a2 2 0 002 2z" />
+       
+      </svg>
+    </div>
+
+    {/* Text */}
+    <p className="font-semibold text-gray-800 
+                  group-hover:text-blue-700 
+                  transition-colors duration-300">
+         Advanced analytics & automation
+    </p>
+
+  </div>
+</div>
+
+
+
+
 
     </div>
   </div>
