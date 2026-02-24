@@ -57,7 +57,7 @@ const RefundAndCancellation = () => {
                             </p>
                         </div>
 
-                        <div className="flex flex-col gap-20">
+                        <div className="flex flex-col gap-[40px]">
 
                             {/* Section 1 */}
                             <SectionCard icon={Info} title="1. Scope of Services" highlight>
@@ -99,7 +99,7 @@ const RefundAndCancellation = () => {
                                 </ul>
                                 <div className="mt-6 p-4 bg-slate-900 text-white rounded-2xl border border-slate-800 flex items-center gap-4">
                                     <AlertOctagon className="text-blue-400 shrink-0" size={20} />
-                                    <p className="text-sm m-0">Adkryoss managed by Clink Consultancy Services Private Limited reserves the right to pause services if payments are delayed beyond the agreed timeline.</p>
+                                    <p className="text-sm m-0 text-white">Adkryoss managed by Clink Consultancy Services Private Limited reserves the right to pause services if payments are delayed beyond the agreed timeline.</p>
                                 </div>
                             </SectionCard>
 
@@ -164,7 +164,7 @@ const RefundAndCancellation = () => {
 
                             {/* Section 6 */}
                             <SectionCard icon={FileText} title="6. Exceptional Cases" dark>
-                                <p className="mb-6">In rare and genuine cases, refund requests may be reviewed by the management team. Decisions will be made based on documented communication, project progress, and contractual commitments.</p>
+                                <p className="mb-6 text-white">In rare and genuine cases, refund requests may be reviewed by the management team. Decisions will be made based on documented communication, project progress, and contractual commitments.</p>
                                 <div className="p-5 bg-white/5 border border-white/10 rounded-2xl text-center font-bold text-lg text-blue-400">
                                     All refund decisions are final and at the sole discretion of Adkryoss managed by Clink Consultancy Services Private Limited.
                                 </div>

@@ -226,8 +226,11 @@ const DigitalMarketingServices = () => {
               <span className="font-semibold">We don’t chase clicks. We build growth systems.</span>
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <Link to="/contact" className="bg-white text-blue-700 px-5 py-2 rounded-full font-semibold hover:bg-blue-100 hover:shadow-xl transition">
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <Link
+                to="/contact"
+                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+              >
                 Speak to Our Expert →
               </Link>
               <Link
@@ -287,7 +290,7 @@ const DigitalMarketingServices = () => {
         </div>
 
         {/* Services Title */}
-        <div className="max-w-7xl mx-auto px-6 pt-16 pb-8">
+        <div id="services" className="max-w-7xl mx-auto px-6 pt-16 pb-8">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
             Our Digital Marketing Services
           </h3>
@@ -383,7 +386,7 @@ const DigitalMarketingServices = () => {
 
         </div>
       </section>
-      <section id="services" className="bg-white py-20">
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           <div>

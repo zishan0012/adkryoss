@@ -163,7 +163,7 @@ const YoutubeMarketing = () => {
 
 
 
-      <section id="services" className="bg-blue-50 py-12 px-6 md:px-16 lg:px-4 rounded-xl my-12 mx-4 md:mx-10 lg:mx-20">
+      <section className="bg-blue-50 py-12 px-6 md:px-16 lg:px-4 rounded-xl my-12 mx-4 md:mx-10 lg:mx-20">
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
@@ -348,7 +348,7 @@ const YoutubeMarketing = () => {
       </section>
 
 
-      <section className="bg-white py-6 px-6 md:px-16 lg:px-4 mx-4 md:mx-10 lg:mx-20 rounded-xl my-16">
+      <section id="services" className="bg-white py-6 px-6 md:px-16 lg:px-4 mx-4 md:mx-10 lg:mx-20 rounded-xl my-16">
 
         <div className="max-w-7xl mx-auto">
 

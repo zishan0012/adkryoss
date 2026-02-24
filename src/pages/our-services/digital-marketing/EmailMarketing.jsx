@@ -294,14 +294,14 @@ const EmailMarketing = () => {
               </Link>
             </div>
 
-            <div className="flex flex-wrap gap-4 mt-4">
+            {/* <div className="flex flex-wrap gap-4 mt-4">
               <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
                 Book a Strategy Call →
               </button>
               <button className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
                 View Capabilities →
               </button>
-            </div>
+            </div> */}
           </div>
 
 
@@ -345,7 +345,7 @@ const EmailMarketing = () => {
           Email Marketing
         </span>
       </div>
-      <section id="services" className="bg-white py-20">
+      <section className="bg-white py-20">
 
         <div className="max-w-5xl mx-auto px-6">
 
@@ -432,7 +432,7 @@ const EmailMarketing = () => {
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section id="services" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Heading */}

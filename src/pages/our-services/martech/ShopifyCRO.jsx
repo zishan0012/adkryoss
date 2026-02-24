@@ -235,7 +235,7 @@ const ShopifyCRO = () => {
             </section>
 
             {/* Why Shopify CRO Matters */}
-            <section id="services" className="pt-32 pb-24 bg-slate-50">
+            <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
@@ -325,7 +325,7 @@ const ShopifyCRO = () => {
             </section>
 
             {/* Shopify CRO Services We Offer */}
-            <section className="py-24 bg-white">
+            <section id="services" className="py-24 bg-white">
                 <div className="container px-6 mx-auto">
                     <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight">
                         Shopify CRO Services We Offer

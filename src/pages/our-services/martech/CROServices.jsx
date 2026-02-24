@@ -209,7 +209,7 @@ const CROServices = () => {
             </section> */}
 
             {/* Why Your Business Needs Section */}
-            <section id="services" className="pt-32 pb-24 bg-slate-50">
+            <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-6 leading-tight">
@@ -311,7 +311,7 @@ const CROServices = () => {
             </section>
 
             {/* Our CRO Services */}
-            <section className="py-24 bg-slate-900 text-white">
+            <section id="services" className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-20">
                         <h2 className="text-[36px] font-bold mb-6 leading-tight text-white tracking-tight">

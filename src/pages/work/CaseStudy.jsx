@@ -15,13 +15,21 @@ const CaseStudy = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
                     {/* LEFT CONTENT */}
                     <div className="text-left text-white">
-                        
+
                         <h1 className="text-[32px] md:text-[48px] font-bold mb-4 leading-tight">
                             Our Case Studies
                         </h1>
                         <p className="text-[18px] md:text-[20px] mb-8 text-white/90 leading-relaxed">
                             Real Growth. Real Results. Explore how we transform businesses through performance-driven digital marketing.
                         </p>
+                        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                            <Link
+                                to="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </Link>
+                        </div>
                     </div>
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end relative z-10">

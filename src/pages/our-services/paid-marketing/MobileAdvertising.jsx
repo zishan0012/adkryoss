@@ -201,7 +201,7 @@ const MobileAdvertising = () => {
         className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
         style={{
           backgroundImage:
-            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp%27)%22"
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
         }}
       >
         {/* <div className="absolute inset-0 bg-blue-900/85"></div> */}
@@ -257,7 +257,7 @@ const MobileAdvertising = () => {
         </div>
       </section>
 
-      <section id="services" className="bg-white pt-24 md:pt-28 lg:pt-32 pb-32 md:pb-36 lg:pb-40">
+      <section className="bg-white pt-24 md:pt-28 lg:pt-32 pb-32 md:pb-36 lg:pb-40">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* LEFT CONTENT */}
           <div className="space-y-6 text-left">
@@ -309,7 +309,7 @@ const MobileAdvertising = () => {
         </div>
       </section>
       <div className="h-16 bg-gray-50"></div>
-      <section className="bg-gray-50 pt-28 md:pt-32 lg:pt-36 pb-24 md:pb-28 lg:pb-32 border-t border-gray-200">
+      <section id="services" className="bg-gray-50 pt-28 md:pt-32 lg:pt-36 pb-24 md:pb-28 lg:pb-32 border-t border-gray-200">
         <div className="container">
           {/* Heading */}
           <div className="max-w-3xl mb-16">

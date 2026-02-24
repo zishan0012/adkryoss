@@ -110,7 +110,7 @@ const MobileAppMarketing = () => {
       </section>
 
 
-      <section id="services" className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
 
           {/* Left: Text & Points */}
@@ -161,7 +161,7 @@ const MobileAppMarketing = () => {
       </section>
 
 
-      <section className="py-20 px-6 bg-gray-50">
+      <section id="services" className="py-20 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto text-gray-900">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left">
             Our Mobile App Marketing Solutions

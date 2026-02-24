@@ -425,7 +425,7 @@ const AffiliateMarketing = () => {
       </section>
 
 
-      <section id="services" className="w-full bg-gray-50 py-24 px-6 md:px-16 lg:px-24">
+      <section className="w-full bg-gray-50 py-24 px-6 md:px-16 lg:px-24">
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
@@ -575,7 +575,7 @@ const AffiliateMarketing = () => {
 
 
 
-      <section className="px-8 md:px-16 lg:px-24 py-10 bg-gray-50">
+      <section id="services" className="px-8 md:px-16 lg:px-24 py-10 bg-gray-50">
         <h2 className="text-3xl md:text-4xl font-bold mb-14">
           Our Affiliate Marketing Services
         </h2>

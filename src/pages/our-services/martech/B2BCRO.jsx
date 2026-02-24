@@ -172,7 +172,7 @@ const B2BCRO = () => {
             </section>
 
             {/* Why B2B CRO Is Different */}
-            <section id="services" className="pt-32 pb-24 bg-slate-50">
+            <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
@@ -227,7 +227,7 @@ const B2BCRO = () => {
             </section>
 
             {/* Our B2B CRO Framework */}
-            <section className="py-24 bg-slate-900 text-white">
+            <section id="services" className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto text-center mb-16">
                     <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our B2B CRO Framework</h2>
                     <div className="w-24 h-2 bg-blue-500 mx-auto rounded-full"></div>

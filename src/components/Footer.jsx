@@ -47,12 +47,12 @@ const Footer = () => {
                         </h3>
                         <ul className="flex flex-col gap-4 list-none p-0">
                             {[
-                                { name: 'Search Engine Optimization', path: '/services/seo' },
-                                { name: 'Digital Marketing', path: '/services/digital-marketing' },
-                                { name: 'App Marketing', path: '/services/app-marketing' },
-                                { name: 'Content Marketing', path: '/services/content-marketing' },
-                                { name: 'PPC/Paid Marketing', path: '/services/paid-marketing' },
-                                { name: 'Marketing Technology', path: '/services/martech' },
+                                { name: 'Search Engine Optimization', path: '/services/seo/seo-services' },
+                                { name: 'Digital Marketing', path: '/services/digital-marketing/services' },
+                                { name: 'App Marketing', path: '/services/app-marketing/mobile-app-marketing' },
+                                { name: 'Content Marketing', path: '/services/content-marketing/services' },
+                                { name: 'PPC/Paid Marketing', path: '/services/paid-marketing/ppc-services' },
+                                { name: 'Marketing Technology', path: '/services/martech/martech-services' },
                             ].map(service => (
                                 <li key={service.name}>
                                     <Link to={service.path} className="text-[#ccc] text-sm transition-colors duration-200 no-underline hover:text-white flex items-center group">
