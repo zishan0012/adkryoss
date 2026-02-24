@@ -286,9 +286,16 @@ initial={{ opacity: 0, y: 50 }}
     <div className="grid md:grid-cols-2 gap-12">
 
       {/* CARD 01 */}
-      {/* <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition"> */}
-        <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300">
-        {/* <h3 className="text-2xl font-bold text-gray-900 mb-4"> */}
+     
+        {/* <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300"> */}
+        <div className="group relative bg-white p-10 rounded-3xl 
+                border-l-4 border-b-4 border-orange-300
+                shadow-lg hover:shadow-2xl 
+                hover:bg-blue-100 
+                transition-all duration-500 
+                hover:-translate-y-3 
+                overflow-hidden">
+      
         <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-500">
           01. Growth Anchored in Revenue
         </h3>
@@ -307,10 +314,21 @@ initial={{ opacity: 0, y: 50 }}
         </p>
       </div>
 
+
+
+
+
       {/* CARD 02 */}
-      {/* <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition"> */}
-      <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300">
-        {/* <h3 className="text-2xl font-bold text-gray-900 mb-4"> */}
+    
+      {/* <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300"> */}
+      <div className="group relative bg-white p-10 rounded-3xl 
+                border-l-4 border-b-4 border-orange-300
+                shadow-lg hover:shadow-2xl 
+                hover:bg-blue-100 
+                transition-all duration-500 
+                hover:-translate-y-3 
+                overflow-hidden">
+   
         <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-500">
           02. Intelligence-Driven Strategy
         </h3>
@@ -330,9 +348,16 @@ initial={{ opacity: 0, y: 50 }}
       </div>
 
       {/* CARD 03 */}
-      {/* <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition"> */}
-      <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300">
-        {/* <h3 className="text-2xl font-bold text-gray-900 mb-4"> */}
+  
+      {/* <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300"> */}
+      <div className="group relative bg-white p-10 rounded-3xl 
+                border-l-4 border-b-4 border-orange-300
+                shadow-lg hover:shadow-2xl 
+                hover:bg-blue-100 
+                transition-all duration-500 
+                hover:-translate-y-3 
+                overflow-hidden">
+
         <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-500">
           03. Connected Digital Infrastructure
         </h3>
@@ -351,9 +376,16 @@ initial={{ opacity: 0, y: 50 }}
       </div>
 
       {/* CARD 04 */}
-      {/* <div className="bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition"> */}
-      <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300">
-        {/* <h3 className="text-2xl font-bold text-gray-900 mb-4"> */}
+     
+      {/* <div className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-xl hover:bg-blue-100 transition-all duration-300"> */}
+      <div className="group relative bg-white p-10 rounded-3xl 
+                border-l-4 border-b-4 border-orange-300
+                shadow-lg hover:shadow-2xl 
+                hover:bg-blue-100 
+                transition-all duration-500 
+                hover:-translate-y-3 
+                overflow-hidden">
+
         <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-500">
           04. Built for Constant Change
         </h3>
@@ -777,7 +809,7 @@ initial={{ opacity: 0, y: 50 }}
     <div className="grid md:grid-cols-2 gap-10">
 
       {/* Vision Card */}
-      <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+      <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border-blue-100/80 shadow-blue-400/50">
 
         <div className="flex items-start gap-6">
           {/* Logo */}
@@ -801,7 +833,7 @@ initial={{ opacity: 0, y: 50 }}
       </div>
 
       {/* Mission Card */}
-      <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+      <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 border-orange-100/80 shadow-orange-400/50">
 
         <div className="flex items-start gap-6">
           {/* Logo */}
@@ -851,73 +883,152 @@ initial={{ opacity: 0, y: 50 }}
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
 
       {/* Card 1 */}
-      <div className="bg-gray-50 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2">
+      {/* <div className="bg-gray-50 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2 "> */}
+      <div className="group relative bg-gray-50 p-8 rounded-2xl text-center 
+                shadow-sm hover:shadow-xl transition-all duration-300 
+                hover:-translate-y-2 overflow-hidden shadow-orange-400/100">
+
+  {/* Left Sliding Line */}
+  <span className="absolute top-0 left-0 h-full w-1 bg-orange-500 
+                   scale-y-0 group-hover:scale-y-100 
+                   origin-bottom transition-transform duration-300" />
+
+  {/* Bottom Sliding Line */}
+  <span className="absolute bottom-0 left-0 h-1 w-full bg-orange-500 
+                   scale-x-0 group-hover:scale-x-100 
+                   origin-left transition-transform duration-300" />
         <img
           src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png"
           alt="E-commerce"
           className="w-16 h-16 mx-auto mb-6 object-contain"
         />
-        <h3 className="font-semibold text-lg">
+        <h3 className="font-semibold text-lg transition-colors duration-300 group-hover:text-[#0066cc]">
           E-commerce & D2C Brands
         </h3>
       </div>
 
       {/* Card 2 */}
-      <div className="bg-gray-50 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2">
+      {/* <div className="bg-gray-50 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2"> */}
+       <div className="group relative bg-gray-50 p-8 rounded-2xl text-center 
+                shadow-sm hover:shadow-xl transition-all duration-300 
+                hover:-translate-y-2 overflow-hidden shadow-orange-400/100">
+
+  {/* Left Sliding Line */}
+  <span className="absolute top-0 left-0 h-full w-1 bg-orange-500 
+                   scale-y-0 group-hover:scale-y-100 
+                   origin-bottom transition-transform duration-300" />
+
+  {/* Bottom Sliding Line */}
+  <span className="absolute bottom-0 left-0 h-1 w-full bg-orange-500 
+                   scale-x-0 group-hover:scale-x-100 
+                   origin-left transition-transform duration-300" />
         <img
           src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
           alt="Education"
           className="w-16 h-16 mx-auto mb-6 object-contain"
         />
-        <h3 className="font-semibold text-lg">
+        <h3 className="font-semibold text-lg  transition-colors duration-300 group-hover:text-[#0066cc]">
           Education & EdTech
         </h3>
       </div>
 
       {/* Card 3 */}
-      <div className="bg-gray-50 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2">
+
+      {/* <div className="bg-gray-50 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2"> */}
+       <div className="group relative bg-gray-50 p-8 rounded-2xl text-center 
+                shadow-sm hover:shadow-xl transition-all duration-300 
+                hover:-translate-y-2 overflow-hidden shadow-orange-400/100">
+
+  {/* Left Sliding Line */}
+  <span className="absolute top-0 left-0 h-full w-1 bg-orange-500 
+                   scale-y-0 group-hover:scale-y-100 
+                   origin-bottom transition-transform duration-300" />
+
+  {/* Bottom Sliding Line */}
+  <span className="absolute bottom-0 left-0 h-1 w-full bg-orange-500 
+                   scale-x-0 group-hover:scale-x-100 
+                   origin-left transition-transform duration-300" />
         <img
           src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png"
           alt="Healthcare"
           className="w-16 h-16 mx-auto mb-6 object-contain"
         />
-        <h3 className="font-semibold text-lg">
+        <h3 className="font-semibold text-lg  transition-colors duration-300 group-hover:text-[#0066cc]">
           Healthcare
         </h3>
       </div>
 
       {/* Card 4 */}
-      <div className="bg-gray-50 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2">
+      {/* <div className="bg-gray-50 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2"> */}
+       <div className="group relative bg-gray-50 p-8 rounded-2xl text-center 
+                shadow-sm hover:shadow-xl transition-all duration-300 
+                hover:-translate-y-2 overflow-hidden shadow-orange-400/100">
+
+  {/* Left Sliding Line */}
+  <span className="absolute top-0 left-0 h-full w-1 bg-orange-500 
+                   scale-y-0 group-hover:scale-y-100 
+                   origin-bottom transition-transform duration-300" />
+
+  {/* Bottom Sliding Line */}
+  <span className="absolute bottom-0 left-0 h-1 w-full bg-orange-500 
+                   scale-x-0 group-hover:scale-x-100 
+                   origin-left transition-transform duration-300" />
         <img
           src="https://cdn-icons-png.flaticon.com/512/3063/3063823.png"
           alt="Corporate"
           className="w-16 h-16 mx-auto mb-6 object-contain"
         />
-        <h3 className="font-semibold text-lg">
+        <h3 className="font-semibold text-lg  transition-colors duration-300 group-hover:text-[#0066cc]">
           Corporate & B2B Services
         </h3>
       </div>
 
       {/* Card 5 */}
-      <div className="bg-gray-50 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2">
+      {/* <div className="bg-gray-50 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2"> */}
+       <div className="group relative bg-gray-50 p-8 rounded-2xl text-center 
+                shadow-sm hover:shadow-xl transition-all duration-300 
+                hover:-translate-y-2 overflow-hidden shadow-orange-400/100">
+
+  {/* Left Sliding Line */}
+  <span className="absolute top-0 left-0 h-full w-1 bg-orange-500 
+                   scale-y-0 group-hover:scale-y-100 
+                   origin-bottom transition-transform duration-300" />
+
+  {/* Bottom Sliding Line */}
+  <span className="absolute bottom-0 left-0 h-1 w-full bg-orange-500 
+                   scale-x-0 group-hover:scale-x-100 
+                   origin-left transition-transform duration-300" />
         <img
           src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
           alt="Startups"
           className="w-16 h-16 mx-auto mb-6 object-contain"
         />
-        <h3 className="font-semibold text-lg">
+        <h3 className="font-semibold text-lg  transition-colors duration-300 group-hover:text-[#0066cc]">
           Startups & Technology Companies
         </h3>
       </div>
 
       {/* Card 6 */}
-      <div className="bg-gray-50 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2">
+      {/* <div className="bg-gray-50 p-8 rounded-2xl text-center shadow-sm hover:shadow-xl transition duration-300 hover:-translate-y-2"> */}
+       <div className="group relative bg-gray-50 p-8 rounded-2xl text-center 
+                shadow-sm hover:shadow-xl transition-all duration-300 
+                hover:-translate-y-2 overflow-hidden  shadow-orange-400/100">
+
+  {/* Left Sliding Line */}
+  <span className="absolute top-0 left-0 h-full w-1 bg-orange-500 
+                   scale-y-0 group-hover:scale-y-100 
+                   origin-bottom transition-transform duration-300" />
+
+  {/* Bottom Sliding Line */}
+  <span className="absolute bottom-0 left-0 h-1 w-full bg-orange-500 
+                   scale-x-0  group-hover:scale-x-100 
+                   origin-left transition-transform duration-300" />
         <img
           src="https://cdn-icons-png.flaticon.com/512/854/854878.png"
           alt="Real Estate"
           className="w-16 h-16 mx-auto mb-6 object-contain"
         />
-        <h3 className="font-semibold text-lg">
+        <h3 className="font-semibold text-lg  transition-colors duration-300 group-hover:text-[#0066cc]">
           Real Estate & Local Businesses
         </h3>
       </div>

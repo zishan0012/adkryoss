@@ -280,7 +280,7 @@ const ServicesTabs = () => {
     </p>
 
     {/* Tabs */}
-    <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-8 sm:mt-10">
+    {/* <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-8 sm:mt-10">
       {tabs.map((tab) => (
         <button
           key={tab}
@@ -296,8 +296,54 @@ const ServicesTabs = () => {
         >
           {tab}
         </button>
+
+
+
+
       ))}
-    </div>
+    </div> */}
+
+
+<div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-8 sm:mt-10 relative">
+
+  {tabs.map((tab) => (
+    <button
+      key={tab}
+      onClick={() => {
+        setActiveTab(tab);
+        setActiveService(null);
+      }}
+      className="relative px-4 sm:px-6 py-2 rounded-full 
+                 text-[13px] sm:text-[14px] font-medium 
+                 overflow-hidden"
+    >
+      {/* Sliding Orange Background */}
+      {activeTab === tab && (
+        <motion.span
+          layoutId="tabSlider"
+          className="absolute inset-0 bg-blue-600 rounded-full"
+          transition={{ type: "spring", stiffness: 400, damping: 30 }}
+        />
+      )}
+
+      {/* Text */}
+      <span
+        className={`relative z-10 transition-colors duration-300
+          ${
+            activeTab === tab
+              ? "text-white"
+              : "text-gray-700"
+          }`}
+      >
+        {tab}
+      </span>
+    </button>
+  ))}
+
+</div>
+
+
+
 
     {/* Content Box */}
     <div className="mt-10 sm:mt-14 bg-sky-100 rounded-3xl p-6 sm:p-8 md:p-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center relative">
@@ -321,7 +367,7 @@ const ServicesTabs = () => {
         <img
           src={content.image}
           alt={content.title}
-          className="max-w-[240px] sm:max-w-[280px] ml-30 md:max-w-[320px] w-full lg:mr-[240px]"
+          className="max-w-[240px] sm:max-w-[280px] ml-30 md:max-w-[320px] w-full lg:mr-[240px] rounded-4xl"
         />
 
         {/* Services List */}

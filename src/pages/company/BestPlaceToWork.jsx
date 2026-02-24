@@ -54,7 +54,8 @@ const BestPlaceToWork = () => {
 
 
 <section
-  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white "
+  // bg-gradient-to-r from-blue-900 via-blue-700 to-orange-600
   style={{
     backgroundImage:
       "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
@@ -120,9 +121,9 @@ const BestPlaceToWork = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
 
       {/* CARD 1 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+      {/* <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
         <div className="mb-4">
-          {/* Performance Icon */}
+       
           <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path d="M3 17l6-6 4 4 8-8" />
             <path d="M14 7h7v7" />
@@ -132,12 +133,44 @@ const BestPlaceToWork = () => {
         <p className="text-gray-600 text-sm">
           Scalable campaigns engineered for ROI and measurable growth.
         </p>
-      </div>
+      </div> */}
+
+
+      <div className="group relative rounded-2xl p-[1px] transition-all duration-500 ">
+
+  {/* Animated Border Layer */}
+  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 
+                  opacity-0 group-hover:opacity-100 
+                  group-hover:animate-[spin_3s_linear_infinite] 
+                  transition duration-500"></div>
+
+  {/* Card Content */}
+  <div className="relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                  group-hover:shadow-xl transition duration-300 border-blue-700">
+
+    <div className="mb-4">
+      {/* Icon */}
+      <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path d="M3 17l6-6 4 4 8-8" />
+        <path d="M14 7h7v7" />
+      </svg>
+    </div>
+
+    <h3 className="font-semibold text-gray-900 mb-2">
+      Performance Marketing & Paid Media
+    </h3>
+
+    <p className="text-gray-600 text-sm">
+      Scalable campaigns engineered for ROI and measurable growth.
+    </p>
+
+  </div>
+</div>
 
       {/* CARD 2 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+      {/* <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
         <div className="mb-4">
-          {/* SEO Icon */}
+         
           <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <circle cx="11" cy="11" r="8" />
             <path d="M21 21l-4.3-4.3" />
@@ -147,12 +180,44 @@ const BestPlaceToWork = () => {
         <p className="text-gray-600 text-sm">
           Sustainable visibility built on data-backed search intelligence.
         </p>
-      </div>
+      </div> */}
+
+
+      <div className="group relative rounded-2xl p-[1px] transition-all duration-500">
+
+  {/* Animated Border Layer */}
+  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 
+                  opacity-0 group-hover:opacity-100 
+                  group-hover:animate-[spin_3s_linear_infinite] 
+                  transition duration-500"></div>
+
+  {/* Card Content */}
+  <div className="relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                  group-hover:shadow-xl transition duration-300">
+
+    <div className="mb-4">
+      {/* Icon */}
+      <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.3-4.3" />
+      </svg>
+    </div>
+
+    <h3 className="font-semibold text-gray-900 mb-2">
+   SEO & Organic Growth Strategy
+    </h3>
+
+    <p className="text-gray-600 text-sm">
+    Sustainable visibility built on data-backed search intelligence.
+    </p>
+
+  </div>
+</div>
 
       {/* CARD 3 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+      {/* <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
         <div className="mb-4">
-          {/* Analytics Icon */}
+         
           <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path d="M4 20V10" />
             <path d="M10 20V4" />
@@ -164,12 +229,46 @@ const BestPlaceToWork = () => {
         <p className="text-gray-600 text-sm">
           Turning raw data into strategic business intelligence.
         </p>
-      </div>
+      </div> */}
+
+
+      <div className="group relative rounded-2xl p-[1px] transition-all duration-500">
+
+  {/* Animated Border Layer */}
+  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 
+                  opacity-0 group-hover:opacity-100 
+                  group-hover:animate-[spin_3s_linear_infinite] 
+                  transition duration-500"></div>
+
+  {/* Card Content */}
+  <div className="relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                  group-hover:shadow-xl transition duration-300">
+
+    <div className="mb-4">
+      {/* Icon */}
+      <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+         <path d="M4 20V10" />
+            <path d="M10 20V4" />
+            <path d="M16 20v-6" />
+            <path d="M22 20V14" />
+      </svg>
+    </div>
+
+    <h3 className="font-semibold text-gray-900 mb-2">
+     Data Analytics & Consumer Insights
+    </h3>
+
+    <p className="text-gray-600 text-sm">
+     Turning raw data into strategic business intelligence.
+    </p>
+
+  </div>
+</div>
 
       {/* CARD 4 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+      {/* <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
         <div className="mb-4">
-          {/* Creative Icon */}
+          
           <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path d="M12 2a7 7 0 017 7c0 3-2 5-4 6l-3 7-3-7c-2-1-4-3-4-6a7 7 0 017-7z" />
           </svg>
@@ -178,12 +277,42 @@ const BestPlaceToWork = () => {
         <p className="text-gray-600 text-sm">
           Storytelling that connects brands with modern audiences.
         </p>
-      </div>
+      </div> */}
+
+      <div className="group relative rounded-2xl p-[1px] transition-all duration-500">
+
+  {/* Animated Border Layer */}
+  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 
+                  opacity-0 group-hover:opacity-100 
+                  group-hover:animate-[spin_3s_linear_infinite] 
+                  transition duration-500"></div>
+
+  {/* Card Content */}
+  <div className="relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                  group-hover:shadow-xl transition duration-300">
+
+    <div className="mb-4">
+      {/* Icon */}
+      <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+         <path d="M12 2a7 7 0 017 7c0 3-2 5-4 6l-3 7-3-7c-2-1-4-3-4-6a7 7 0 017-7z" />
+      </svg>
+    </div>
+
+    <h3 className="font-semibold text-gray-900 mb-2">
+     Creative & Content Innovation
+    </h3>
+
+    <p className="text-gray-600 text-sm">
+       Storytelling that connects brands with modern audiences.
+    </p>
+
+  </div>
+</div>
 
       {/* CARD 5 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+      {/* <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
         <div className="mb-4">
-          {/* Automation Icon */}
+         
           <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <rect x="3" y="3" width="7" height="7" />
             <rect x="14" y="3" width="7" height="7" />
@@ -195,12 +324,46 @@ const BestPlaceToWork = () => {
         <p className="text-gray-600 text-sm">
           Smart systems that optimize journeys and scale efficiency.
         </p>
-      </div>
+      </div> */}
+
+
+      <div className="group relative rounded-2xl p-[1px] transition-all duration-500">
+
+  {/* Animated Border Layer */}
+  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 
+                  opacity-0 group-hover:opacity-100 
+                  group-hover:animate-[spin_3s_linear_infinite] 
+                  transition duration-500"></div>
+
+  {/* Card Content */}
+  <div className="relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                  group-hover:shadow-xl transition duration-300">
+
+    <div className="mb-4">
+      {/* Icon */}
+      <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+         <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+      </svg>
+    </div>
+
+    <h3 className="font-semibold text-gray-900 mb-2">
+    Marketing Automation & AI Tools
+    </h3>
+
+    <p className="text-gray-600 text-sm">
+     Smart systems that optimize journeys and scale efficiency.
+    </p>
+
+  </div>
+</div>
 
       {/* CARD 6 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+      {/* <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
         <div className="mb-4">
-          {/* CRO Icon */}
+          
           <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path d="M12 20V10" />
             <path d="M18 16l-6-6-6 6" />
@@ -210,7 +373,38 @@ const BestPlaceToWork = () => {
         <p className="text-gray-600 text-sm">
           Engineering seamless user journeys that drive higher conversions.
         </p>
-      </div>
+      </div> */}
+
+      <div className="group relative rounded-2xl p-[1px] transition-all duration-500">
+
+  {/* Animated Border Layer */}
+  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 
+                  opacity-0 group-hover:opacity-100 
+                  group-hover:animate-[spin_3s_linear_infinite] 
+                  transition duration-500"></div>
+
+  {/* Card Content */}
+  <div className="relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                  group-hover:shadow-xl transition duration-300">
+
+    <div className="mb-4">
+      {/* Icon */}
+      <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path d="M12 20V10" />
+            <path d="M18 16l-6-6-6 6" />
+      </svg>
+    </div>
+
+    <h3 className="font-semibold text-gray-900 mb-2">
+    Conversion Rate Optimization
+    </h3>
+
+    <p className="text-gray-600 text-sm">
+     Engineering seamless user journeys that drive higher conversions.
+    </p>
+
+  </div>
+</div>
 
     </div>
 
@@ -371,8 +565,8 @@ const BestPlaceToWork = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
 
       {/* CARD 1 */}
-      <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
-        <div className="flex items-center gap-4 mb-4">
+      <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border-l-4 border-b-4 border-blue-600 hover:bg-orange-200">
+        <div className="flex items-center gap-4 mb-4 ">
           <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path d="M12 2v20M5 12h14" />
           </svg>
@@ -388,7 +582,7 @@ const BestPlaceToWork = () => {
       </div>
 
       {/* CARD 2 */}
-      <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+      <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border-l-4 border-b-4 border-blue-600 hover:bg-orange-200">
         <div className="flex items-center gap-4 mb-4">
           <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path d="M3 3h18v18H3z" />
@@ -406,7 +600,7 @@ const BestPlaceToWork = () => {
       </div>
 
       {/* CARD 3 */}
-      <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+      <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border-l-4 border-b-4 border-blue-600 hover:bg-orange-200">
         <div className="flex items-center gap-4 mb-4">
           <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path d="M12 6v6l4 2" />
@@ -423,7 +617,7 @@ const BestPlaceToWork = () => {
       </div>
 
       {/* CARD 4 */}
-      <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+      <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border-l-4 border-b-4 border-blue-600 hover:bg-orange-200">
         <div className="flex items-center gap-4 mb-4">
           <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path d="M17 20h5V4H2v16h5" />
@@ -440,8 +634,8 @@ const BestPlaceToWork = () => {
         </p>
       </div>
 
-     <div className="md:col-span-2 flex justify-center">
-    <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 w-full md:w-[48%]">
+     <div className="md:col-span-2 flex justify-center ">
+    <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 w-full md:w-[48%] border-l-4 border-b-4 border-blue-600 hover:bg-orange-200">
       <div className="flex items-center gap-4 mb-4">
         <svg className="w-10 h-10 text-blue-700" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" />
@@ -636,80 +830,151 @@ const BestPlaceToWork = () => {
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
       {/* Card 1 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
-        <svg className="w-10 h-10 text-blue-700 mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path d="M3 12h18M12 3v18" />
-        </svg>
-        <p className="text-gray-800 text-base font-medium">
-          Flexible work structure
-        </p>
-      </div>
+    <div className="group relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                hover:shadow-lg transition duration-300 
+                border-l-4 border-transparent">
+
+  {/* Gradient Left Border */}
+  <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl 
+                  bg-gradient-to-b from-blue-600 to-orange-400"></div>
+
+  <svg className="w-10 h-10 text-blue-700 mb-4 relative z-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+    <path d="M3 12h18M12 3v18" />
+  </svg>
+
+  <p className="text-gray-800 text-base font-medium relative z-10">
+    Flexible work structure
+  </p>
+</div>
 
       {/* Card 2 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
-        <svg className="w-10 h-10 text-blue-700 mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path d="M17 20h5V4H2v16h5" />
+    
+      <div className="group relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                hover:shadow-lg transition duration-300 
+                border-l-4 border-transparent">
+
+  {/* Gradient Left Border */}
+  <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl 
+                  bg-gradient-to-b from-blue-600 to-orange-400"></div>
+
+  <svg className="w-10 h-10 text-blue-700 mb-4 relative z-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+    <path d="M17 20h5V4H2v16h5" />
           <path d="M12 4v16" />
-        </svg>
-        <p className="text-gray-800 text-base font-medium">
-          Hybrid collaboration model
-        </p>
-      </div>
+  </svg>
+
+  <p className="text-gray-800 text-base font-medium relative z-10">
+    Hybrid collaboration model
+  </p>
+</div>
 
       {/* Card 3 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
-        <svg className="w-10 h-10 text-blue-700 mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path d="M12 2l4 7H8l4-7zM2 22h20" />
-        </svg>
-        <p className="text-gray-800 text-base font-medium">
-          Leadership mentoring
-        </p>
-      </div>
+     
+
+
+      <div className="group relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                hover:shadow-lg transition duration-300 
+                border-l-4 border-transparent">
+
+  {/* Gradient Left Border */}
+  <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl 
+                  bg-gradient-to-b from-blue-600 to-orange-400"></div>
+
+  <svg className="w-10 h-10 text-blue-700 mb-4 relative z-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+   <path d="M12 2l4 7H8l4-7zM2 22h20" />
+  </svg>
+
+  <p className="text-gray-800 text-base font-medium relative z-10">
+   Leadership mentoring
+  </p>
+</div>
 
       {/* Card 4 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
-        <svg className="w-10 h-10 text-blue-700 mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <circle cx="12" cy="8" r="4" />
+      
+
+
+      <div className="group relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                hover:shadow-lg transition duration-300 
+                border-l-4 border-transparent">
+
+  {/* Gradient Left Border */}
+  <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl 
+                  bg-gradient-to-b from-blue-600 to-orange-400"></div>
+
+  <svg className="w-10 h-10 text-blue-700 mb-4 relative z-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+    <circle cx="12" cy="8" r="4" />
           <path d="M6 22v-2a6 6 0 0112 0v2" />
-        </svg>
-        <p className="text-gray-800 text-base font-medium">
-          Performance incentives
-        </p>
-      </div>
+  </svg>
+
+  <p className="text-gray-800 text-base font-medium relative z-10">
+   Performance incentives
+  </p>
+</div>
 
       {/* Card 5 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
-        <svg className="w-10 h-10 text-blue-700 mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path d="M12 20h9" />
+     
+
+
+
+      <div className="group relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                hover:shadow-lg transition duration-300 
+                border-l-4 border-transparent">
+
+  {/* Gradient Left Border */}
+  <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl 
+                  bg-gradient-to-b from-blue-600 to-orange-400"></div>
+
+  <svg className="w-10 h-10 text-blue-700 mb-4 relative z-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <path d="M12 20h9" />
           <path d="M12 4h9" />
           <path d="M4 9h16" />
           <path d="M4 15h16" />
-        </svg>
-        <p className="text-gray-800 text-base font-medium">
-          Skill enhancement programs
-        </p>
-      </div>
+  </svg>
+
+  <p className="text-gray-800 text-base font-medium relative z-10">
+      Skill enhancement programs
+  </p>
+</div>
 
       {/* Card 6 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
-        <svg className="w-10 h-10 text-blue-700 mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path d="M5 12l5 5L20 7" />
-        </svg>
-        <p className="text-gray-800 text-base font-medium">
-          Career acceleration roadmap
-        </p>
-      </div>
+    
 
-      {/* Card 7 */}
-      <div className="bg-gray-50 p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
-        <svg className="w-10 h-10 text-blue-700 mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <rect x="3" y="4" width="18" height="16" rx="2" />
-          <path d="M3 10h18" />
-        </svg>
-        <p className="text-gray-800 text-base font-medium">
-          Transparent appraisal system
-        </p>
-      </div>
+
+      <div className="group relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                hover:shadow-lg transition duration-300 
+                border-l-4 border-transparent">
+
+  {/* Gradient Left Border */}
+  <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl 
+                  bg-gradient-to-b from-blue-600 to-orange-400"></div>
+
+  <svg className="w-10 h-10 text-blue-700 mb-4 relative z-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+    <path d="M5 12l5 5L20 7" />
+  </svg>
+
+  <p className="text-gray-800 text-base font-medium relative z-10">
+Career acceleration roadmap
+  </p>
+</div>
+
+    <div className="sm:col-span-2 lg:col-span-1 lg:col-start-2">
+  <div className="relative bg-gray-50 p-6 rounded-2xl shadow-sm 
+                  hover:shadow-lg transition duration-300">
+
+    {/* Gradient Left Border */}
+    <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl 
+                    bg-gradient-to-b from-blue-600 to-orange-400"></div>
+
+    <svg className="w-10 h-10 text-blue-700 mb-4 relative z-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <path d="M3 10h18" />
+    </svg>
+
+    <p className="text-gray-800 text-base font-medium relative z-10">
+      Transparent appraisal system
+    </p>
+
+  </div>
+</div>
 
     </div>
 

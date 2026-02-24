@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import HerobgImage from "../../assets/Herobg.png";
+import HerobgImage from "../../assets/Herobg1.jpg";
 import { motion } from "framer-motion";
 const HeroSection = () => {
   const navigate = useNavigate();
