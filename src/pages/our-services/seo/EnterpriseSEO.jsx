@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     Globe,
     Search,
@@ -29,7 +31,237 @@ import {
     Briefcase
 } from 'lucide-react';
 import enterpriseseo from '../../../assets/SEO/enterprisehero.png';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const EnterpriseSEO = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whySectionRef = useRef(null);
+    const whyItemsRef = useRef([]);
+    const whyCardRef = useRef(null);
+    const frameworkCardsRef = useRef([]);
+    const solutionsRef = useRef(null);
+    const solutionItemsRef = useRef([]);
+    const diffCardsRef = useRef([]);
+    const modelStepsRef = useRef([]);
+    const industryCardsRef = useRef([]);
+    const resultsRef = useRef(null);
+    const resultsItemsRef = useRef([]);
+    const resultsGraphicRef = useRef(null);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Structural Build
+            gsap.from(heroContentRef.current, {
+                x: -50,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power4.out"
+            });
+            gsap.from(heroImageRef.current, {
+                scale: 0.9,
+                opacity: 0,
+                duration: 1.5,
+                ease: "power2.out",
+                delay: 0.3
+            });
+
+            // Why Section - Grid Stagger
+            gsap.from(whySectionRef.current, {
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: whySectionRef.current,
+                    start: "top 85%"
+                }
+            });
+            whyItemsRef.current.forEach((item, i) => {
+                gsap.from(item, {
+                    x: -20,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 95%"
+                    }
+                });
+            });
+            gsap.from(whyCardRef.current, {
+                x: 50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: whyCardRef.current,
+                    start: "top 80%"
+                }
+            });
+
+            // Framework - Building Blocks
+            frameworkCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: i * 0.1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%"
+                    }
+                });
+            });
+
+            // Solutions - Flowing Stagger
+            gsap.from(solutionsRef.current, {
+                opacity: 0,
+                y: 20,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: solutionsRef.current,
+                    start: "top 90%"
+                }
+            });
+            solutionItemsRef.current.forEach((item, i) => {
+                gsap.from(item, {
+                    scale: 0.8,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.05,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Differentiators - Precision Reveals
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    scale: 0.95,
+                    opacity: 0,
+                    duration: 0.7,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Working Model - Sequential
+            modelStepsRef.current.forEach((step, i) => {
+                gsap.from(step, {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: step,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Industries - Grid Fade
+            industryCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.5,
+                    delay: i * 0.05,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Results - Data Reveal
+            gsap.from(resultsRef.current, {
+                x: -40,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: resultsRef.current,
+                    start: "top 85%"
+                }
+            });
+            resultsItemsRef.current.forEach((item, i) => {
+                gsap.from(item, {
+                    x: -20,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 95%"
+                    }
+                });
+            });
+            gsap.from(resultsGraphicRef.current, {
+                scale: 0.8,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: resultsGraphicRef.current,
+                    start: "top 80%"
+                }
+            });
+
+            // CTA
+            gsap.from(ctaRef.current, {
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ctaRef.current,
+                    start: "top 85%"
+                }
+            });
+
+            // Hero Image Animation (Matrix style float)
+            gsap.to(heroImageRef.current, {
+                y: -10,
+                duration: 2.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            y: isEnter ? -10 : 0,
+            backgroundColor: isEnter ? "#f8fafc" : "white",
+            borderColor: isEnter ? "#0066CC" : "#e2e8f0",
+            shadow: isEnter ? "0 20px 40px rgba(0,102,204,0.1)" : "none",
+            duration: 0.3
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                scale: isEnter ? 1.1 : 1,
+                rotationY: isEnter ? 180 : 0,
+                duration: 0.6
+            });
+        }
+    };
+
+    const handleDarkHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            backgroundColor: isEnter ? "rgba(255,255,255,0.08)" : "rgba(255,255,255,0.05)",
+            borderColor: isEnter ? "#3b82f6" : "rgba(255,255,255,0.1)",
+            duration: 0.3
+        });
+    };
 
     const enterpriseFramework = [
         {
@@ -130,7 +362,7 @@ const EnterpriseSEO = () => {
     ];
 
     return (
-        <div style={{ backgroundColor: '#fff' }}>
+        <div ref={pageRef} style={{ backgroundColor: '#fff' }} className="overflow-hidden">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -139,7 +371,7 @@ const EnterpriseSEO = () => {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10 text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Enterprise SEO Services
                         </h1>
@@ -170,7 +402,7 @@ const EnterpriseSEO = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={enterpriseseo}
@@ -185,7 +417,7 @@ const EnterpriseSEO = () => {
             {/* Why Enterprise Section */}
             <section className="pt-32 pb-24 bg-white">
                 <div className="container">
-                    <div className="text-center mb-[60px]">
+                    <div className="text-center mb-[60px]" ref={whySectionRef}>
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
                             Why Enterprise SEO Demands a Different Approach
                         </h2>
@@ -204,7 +436,7 @@ const EnterpriseSEO = () => {
                                 "Frequent algorithm volatility & search shifts",
                                 "Brand reputation & compliance sensitivity"
                             ].map((item, i) => (
-                                <div key={i} className="flex gap-[15px] items-center bg-[#f8f9fa] p-[20px] rounded-[12px] border border-[#eee]">
+                                <div key={i} ref={el => whyItemsRef.current[i] = el} className="flex gap-[15px] items-center bg-[#f8f9fa] p-[20px] rounded-[12px] border border-[#eee] transition-all hover:border-[#0066cc]">
                                     <div className="bg-[#0066cc] text-white p-1 rounded-full">
                                         <CheckCircle2 size={16} />
                                     </div>
@@ -212,15 +444,15 @@ const EnterpriseSEO = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="bg-[#0f172a] text-white p-[50px] rounded-[40px] relative overflow-hidden">
-                            <div className="relative z-10">
+                        <div ref={whyCardRef} className="bg-[#0f172a] text-white p-[50px] rounded-[40px] relative overflow-hidden group">
+                            <div className="relative z-10 transition-transform group-hover:translate-x-2">
                                 <TrendingUp size={48} className="text-blue-500 mb-6" />
                                 <h3 className="text-[28px] font-semibold mb-[24px]">Strategic Integration</h3>
                                 <p className="text-[16px] md:text-[18px] mb-6 opacity-80 leading-[1.8] text-white font-medium">
                                     We don't just optimize for bots. We integrate SEO with your technology, content, analytics, and CRO teams to build a sustainable visibility engine that drives business value.
                                 </p>
                             </div>
-                            <div className="absolute -bottom-[20px] -right-[20px] opacity-10">
+                            <div className="absolute -bottom-[20px] -right-[20px] opacity-10 group-hover:scale-110 transition-transform duration-700">
                                 <Globe size={200} />
                             </div>
                         </div>
@@ -242,8 +474,12 @@ const EnterpriseSEO = () => {
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {enterpriseFramework.map((item, i) => (
-                            <div key={i} className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
-                                <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
+                            <div key={i}
+                                ref={el => frameworkCardsRef.current[i] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 cursor-pointer">
+                                <div className="text-[#0066cc] mb-[20px] card-icon">{item.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
                                 <p className="text-[#666] mb-[20px] leading-[1.6] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0 mt-[20px]">
@@ -261,8 +497,12 @@ const EnterpriseSEO = () => {
 
                     <div className="grid md:grid-cols-3 gap-8 mt-8">
                         {additionalFramework.map((item, i) => (
-                            <div key={i} className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 hover:-translate-y-[10px] hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
-                                <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
+                            <div key={i}
+                                ref={el => frameworkCardsRef.current[i + 3] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 cursor-pointer">
+                                <div className="text-[#0066cc] mb-[20px] card-icon">{item.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
                                 <p className="text-[#666] mb-[20px] leading-[1.6] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0">
@@ -282,7 +522,7 @@ const EnterpriseSEO = () => {
             {/* Solutions Section */}
             <section className="py-[100px] bg-white">
                 <div className="container">
-                    <div className="text-center mb-[60px]">
+                    <div className="text-center mb-[60px]" ref={solutionsRef}>
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">Enterprise SEO Solutions We Offer</h2>
                         <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                             Tailored strategies for your industry dynamics and growth stage.
@@ -290,7 +530,7 @@ const EnterpriseSEO = () => {
                     </div>
                     <div className="flex flex-wrap justify-center gap-[16px]">
                         {solutionsOffered.map((sol, i) => (
-                            <div key={i} className="py-[20px] px-[40px] bg-[#f8f9fa] rounded-[50px] border border-[#eee] text-[18px] font-semibold text-[#1a1a1a] transition-all duration-300 cursor-pointer hover:bg-[#0066cc] hover:text-white hover:border-[#0066cc]">
+                            <div key={i} ref={el => solutionItemsRef.current[i] = el} className="py-[20px] px-[40px] bg-[#f8f9fa] rounded-[50px] border border-[#eee] text-[18px] font-semibold text-[#1a1a1a] transition-all duration-300 cursor-pointer hover:bg-[#0066cc] hover:text-white hover:border-[#0066cc]">
                                 {sol}
                             </div>
                         ))}
@@ -313,7 +553,11 @@ const EnterpriseSEO = () => {
                             { t: "Transparent Intelligence", d: "Clear, business-driven metrics and predictive growth modeling.", i: <BarChart3 size={32} /> },
                             { t: "Regulatory Alignment", d: "We ensure compliance with healthcare, finance, or brand standards.", i: <Shield size={32} /> }
                         ].map((item, i) => (
-                            <div key={i} className="p-[40px] bg-[rgba(255,255,255,0.05)] rounded-[24px] border border-[rgba(255,255,255,0.1)]">
+                            <div key={i}
+                                ref={el => diffCardsRef.current[i] = el}
+                                onMouseEnter={(e) => handleDarkHover(e, true)}
+                                onMouseLeave={(e) => handleDarkHover(e, false)}
+                                className="p-[40px] bg-[rgba(255,255,255,0.05)] rounded-[24px] border border-[rgba(255,255,255,0.1)] transition-all duration-300 cursor-default">
                                 <div className="text-blue-500 mb-6">{item.i}</div>
                                 <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white">
                                     {item.t}
@@ -336,7 +580,7 @@ const EnterpriseSEO = () => {
                     </div>
                     <div className="grid md:grid-cols-5 gap-[24px]">
                         {workingModel.map((item, i) => (
-                            <div key={i} className="bg-[#f8f9fa] p-[30px] rounded-[24px] text-center border border-[#eee]">
+                            <div key={i} ref={el => modelStepsRef.current[i] = el} className="bg-[#f8f9fa] p-[30px] rounded-[24px] text-center border border-[#eee] transition-transform hover:-translate-y-2">
                                 <div className="text-[32px] font-bold text-[rgba(0,102,204,0.1)] mb-[10px]">{item.step}</div>
                                 <h4 className="text-[20px] font-semibold text-[#1a1a1a] mb-[10px]">{item.title}</h4>
                                 <p className="text-[14px] text-[#666] leading-[1.6] font-medium">{item.desc}</p>
@@ -363,7 +607,7 @@ const EnterpriseSEO = () => {
                             { name: "Corporate Enterprises", icon: <Briefcase size={20} /> },
                             { name: "Global Marketplaces", icon: <Globe size={20} /> }
                         ].map((item, i) => (
-                            <div key={i} className="bg-white p-[24px_20px] rounded-[20px] text-center shadow-[0_10px_20px_rgba(0,0,0,0.05)] transition-all duration-300 border border-[#f1f5f9] hover:-translate-y-[5px] hover:border-[#0066cc] hover:shadow-[0_15px_30px_rgba(0,102,204,0.1)]">
+                            <div key={i} ref={el => industryCardsRef.current[i] = el} className="bg-white p-[24px_20px] rounded-[20px] text-center shadow-[0_10px_20px_rgba(0,0,0,0.05)] transition-all duration-300 border border-[#f1f5f9] hover:-translate-y-[5px] hover:border-[#0066cc] hover:shadow-[0_15px_30px_rgba(0,102,204,0.1)]">
                                 <div className="text-[#0066cc] mb-[15px] flex justify-center">{item.icon}</div>
                                 <div className="font-semibold text-[#1e293b] text-[15px]">{item.name}</div>
                             </div>
@@ -376,7 +620,7 @@ const EnterpriseSEO = () => {
             <section className="py-[100px] bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
+                        <div ref={resultsRef}>
                             <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[30px]">Results You Can Expect</h2>
                             <div className="space-y-6">
                                 {[
@@ -387,7 +631,7 @@ const EnterpriseSEO = () => {
                                     "Stronger conversion rates through category-level optimization",
                                     "Long-term search dominance in your industry segment"
                                 ].map((res, i) => (
-                                    <div key={i} className="flex gap-[15px] items-start">
+                                    <div key={i} ref={el => resultsItemsRef.current[i] = el} className="flex gap-[15px] items-start">
                                         <div className="bg-[#e0f2fe] text-[#0369a1] p-1 rounded-[5px] mt-[4px]">
                                             <TrendingUp size={18} />
                                         </div>
@@ -396,8 +640,8 @@ const EnterpriseSEO = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] p-[60px] rounded-[40px] text-white text-center">
-                            <PieChart size={64} className="text-blue-500 mb-8 mx-auto" />
+                        <div ref={resultsGraphicRef} className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] p-[60px] rounded-[40px] text-white text-center group">
+                            <PieChart size={64} className="text-blue-500 mb-8 mx-auto transition-transform group-hover:scale-110 duration-500" />
                             <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white">
                                 Dominance at Scale
                             </h3>
@@ -409,16 +653,14 @@ const EnterpriseSEO = () => {
                 </div>
             </section>
 
-
-
             {/* CTA */}
-            <section className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
+            <section ref={ctaRef} className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
                 <div className="container">
                     <h2 className="text-[36px] font-bold mb-[20px] text-white">Ready to Lead Your Industry in Search?</h2>
                     <p className="text-[16px] md:text-[18px] mb-6 opacity-90 text-white font-medium">
                         Partner with Adkryoss managed by Clink Consultancy Services Private Limited to build a scalable search growth engine.
                     </p>
-                    <Link to="/contact" className="inline-flex items-center gap-[10px] bg-white text-[#0066cc] py-[18px] px-[40px] rounded-[50px] font-semibold no-underline transition-all duration-300 hover:scale-[1.05]">
+                    <Link to="/contact" className="inline-flex items-center gap-[10px] bg-white text-[#0066cc] py-[18px] px-[40px] rounded-[50px] font-semibold no-underline transition-all duration-300 hover:scale-[1.05] hover:shadow-xl">
                         Build Your Enterprise Dominance <ArrowRight size={20} />
                     </Link>
                 </div>
@@ -428,3 +670,4 @@ const EnterpriseSEO = () => {
 };
 
 export default EnterpriseSEO;
+

@@ -20,11 +20,25 @@ import {
     Scale,
     Search,
     RefreshCw,
-    Gauge
+    Gauge,
+    ChevronDown,
+    ChevronUp
 } from 'lucide-react';
 
 const CROCalculator = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [openFaq, setOpenFaq] = useState(null);
+
+    const toggleFaq = (i) => {
+        setOpenFaq(openFaq === i ? null : i);
+    };
+
+    const faqs = [
+        { q: "1. Is conversion rate the same for all industries?", a: "No. It varies depending on business model, pricing, audience intent, and acquisition channels." },
+        { q: "2. Does higher traffic guarantee more conversions?", a: "Not always. Without optimization, more traffic can mean higher costs without better results." },
+        { q: "3. How often should I monitor conversion rate?", a: "Ideally weekly for active campaigns and monthly for long-term strategy." },
+        { q: "4. Can CRO reduce ad spend?", a: "Yes. Improving conversion rate lowers acquisition cost and increases revenue per visitor." }
+    ];
 
     return (
         <div className="bg-white min-h-screen">
@@ -36,14 +50,14 @@ const CROCalculator = () => {
                 </div>
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-4xl">
-                        <h1 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight">CRO Calculator – Instantly Measure & Improve Your Conversion Performance</h1>
-                        <p className="text-xl md:text-2xl text-blue-100 mb-10 leading-relaxed font-light">
+                        <h1 className="text-[28px] md:text-[36px] font-bold mb-8 tracking-tight">CRO Calculator – Instantly Measure & Improve Your Conversion Performance</h1>
+                        <p className="text-[20px] md:text-[24px] text-blue-100 mb-10 leading-relaxed font-light">
                             Turn traffic into tangible growth. Use our smart CRO Calculator to evaluate how effectively your website converts visitors into leads, customers, or revenue — and discover the true impact of optimization.
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <button
                                 onClick={() => setIsPopupOpen(true)}
-                                className="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-2xl hover:shadow-blue-500/25 flex items-center gap-2"
+                                className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-full font-semibold text-[16px] md:text-[20px] transition-all duration-300 transform hover:-translate-y-1 shadow-2xl hover:shadow-blue-500/25 flex items-center gap-2"
                             >
                                 Calculate Your Conversion Rate <ArrowRight size={20} />
                             </button>
@@ -309,22 +323,24 @@ const CROCalculator = () => {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-24 bg-gray-50">
-                <div className="container mx-auto px-6 max-w-4xl">
-                    <h2 className="text-4xl font-extrabold mb-16 text-center text-gray-900 tracking-tight">Frequently Asked Questions</h2>
-                    <div className="space-y-6">
-                        {[
-                            { q: "1. Is conversion rate the same for all industries?", a: "No. It varies depending on business model, pricing, audience intent, and acquisition channels." },
-                            { q: "2. Does higher traffic guarantee more conversions?", a: "Not always. Without optimization, more traffic can mean higher costs without better results." },
-                            { q: "3. How often should I monitor conversion rate?", a: "Ideally weekly for active campaigns and monthly for long-term strategy." },
-                            { q: "4. Can CRO reduce ad spend?", a: "Yes. Improving conversion rate lowers acquisition cost and increases revenue per visitor." }
-                        ].map((faq, i) => (
-                            <div key={i} className="bg-white p-10 rounded-[2rem] shadow-sm border border-gray-200 hover:border-blue-500 transition-all duration-500 group">
-                                <h4 className="text-xl font-extrabold mb-4 flex items-start gap-4">
-                                    <HelpCircle className="text-blue-500 shrink-0 mt-1" />
-                                    {faq.q}
-                                </h4>
-                                <p className="text-gray-600 leading-relaxed pl-10 text-lg font-light leading-[1.8]">{faq.a}</p>
+            <section className="py-24 bg-slate-50">
+                <div className="container px-6 mx-auto max-w-[800px]">
+                    <h2 className="text-[28px] md:text-[36px] font-bold text-center mb-10 md:mb-[60px] text-slate-900 leading-tight">Frequently Asked Questions</h2>
+                    <div className="space-y-4">
+                        {faqs.map((faq, i) => (
+                            <div key={i} className="border border-slate-200 rounded-[15px] overflow-hidden bg-white shadow-sm transition-all duration-300 hover:shadow-md">
+                                <button
+                                    onClick={() => toggleFaq(i)}
+                                    className={`w-full p-[20px_30px] flex justify-between items-center transition-all duration-300 border-none cursor-pointer ${openFaq === i ? 'bg-[#f8fafc]' : 'bg-white'}`}
+                                >
+                                    <span className="text-[18px] font-bold text-slate-900 text-left">{faq.q}</span>
+                                    {openFaq === i ? <ChevronUp size={20} className="text-[#0066cc]" /> : <ChevronDown size={20} className="text-slate-400" />}
+                                </button>
+                                {openFaq === i && (
+                                    <div className="p-[20px_30px] bg-white border-t border-slate-100">
+                                        <p className="m-0 text-slate-600 leading-[1.7] text-[16px] font-medium">{faq.a}</p>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>
@@ -334,15 +350,15 @@ const CROCalculator = () => {
             {/* Final CTA Section */}
             <section className="py-24 bg-gradient-to-br from-blue-700 to-indigo-900 text-white relative overflow-hidden">
                 <div className="container mx-auto px-6 text-center space-y-12 relative z-10">
-                    <Rocket size={80} className="mx-auto text-blue-300 animate-bounce" />
-                    <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">Optimize Before You Scale</h2>
-                    <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
+                    <Rocket size={80} className="mx-auto animate-bounce" />
+                    <h2 className="text-[28px] md:text-[36px] font-bold tracking-tighter">Optimize Before You Scale</h2>
+                    <p className="text-[20px] md:text-[24px] text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
                         Before increasing marketing budgets, understand how efficiently your website converts. Small optimization changes can unlock exponential growth.
                     </p>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                         <button
                             onClick={() => setIsPopupOpen(true)}
-                            className="w-full md:w-auto px-12 py-5 bg-white text-blue-900 font-extrabold text-2xl rounded-full shadow-2xl hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
+                            className="w-full md:w-auto px-8 py-3 bg-white text-blue-900 font-semibold text-[16px] md:text-[20px] rounded-full shadow-2xl hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
                         >
                             Open CRO Calculator
                         </button>
@@ -358,7 +374,7 @@ const CROCalculator = () => {
                     </div>
                 </div>
                 {/* Decorative Elements */}
-                <div className="absolute top-0 left-0 w-1/3 h-full bg-white opacity-[0.02] transform -skew-x-[30deg] -translate-x-full animate-marquee"></div>
+                {/* <div className="absolute top-0 left-0 w-1/3 h-full bg-white opacity-[0.02] transform -skew-x-[30deg] -translate-x-full animate-marquee"></div> */}
             </section>
 
             {/* CRO Calculator Popup */}

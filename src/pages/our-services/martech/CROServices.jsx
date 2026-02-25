@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import croservicehero from "../../../assets/martech/croservicehero.png";
 import {
     Target,
@@ -23,7 +25,247 @@ import {
     TrendingUp
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const CROServices = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whyTitleRef = useRef(null);
+    const whyCardsRef = useRef([]);
+    const engineerBoxRef = useRef(null);
+    const whatCdpTextRef = useRef(null);
+    const whatCdpBoxRef = useRef(null);
+    const philCardsRef = useRef([]);
+    const serviceCardsRef = useRef([]);
+    const integrationBoxRef = useRef(null);
+    const integrationLinesRef = useRef([]);
+    const industriesTagsRef = useRef([]);
+    const metricsBoxRef = useRef(null);
+    const chooseCardsRef = useRef([]);
+    const workflowRef = useRef(null);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Soft expand + Slide
+            gsap.from(heroContentRef.current, {
+                scale: 0.9,
+                opacity: 0,
+                x: -50,
+                duration: 1.2,
+                ease: "power2.out"
+            });
+            gsap.from(heroImageRef.current, {
+                scale: 1.2,
+                opacity: 0,
+                x: 50,
+                duration: 1.2,
+                ease: "power2.out",
+                delay: 0.2
+            });
+
+            // Why Section - Elastic Stagger
+            gsap.from(whyTitleRef.current, {
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: whyTitleRef.current,
+                    start: "top 85%"
+                }
+            });
+            whyCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    scale: 0.5,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: i * 0.1,
+                    ease: "elastic.out(1, 0.5)",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+            gsap.from(engineerBoxRef.current, {
+                y: 100,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: engineerBoxRef.current,
+                    start: "top 85%"
+                }
+            });
+
+            // What is CRO - Sliding Door
+            gsap.from(whatCdpTextRef.current, {
+                x: -100,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: whatCdpTextRef.current,
+                    start: "top 80%"
+                }
+            });
+            gsap.from(whatCdpBoxRef.current, {
+                x: 100,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: whatCdpBoxRef.current,
+                    start: "top 80%"
+                }
+            });
+
+            // Philosophy - High-tech sequential
+            philCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.7,
+                    delay: i * 0.15,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%"
+                    }
+                });
+            });
+
+            // Services Grid
+            serviceCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    scale: 0.8,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Integration - Gradient Sweep
+            gsap.from(integrationBoxRef.current, {
+                scale: 0.95,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: integrationBoxRef.current,
+                    start: "top 85%"
+                }
+            });
+            integrationLinesRef.current.forEach((line, i) => {
+                gsap.from(line, {
+                    x: 30,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: line,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Industries & Metrics
+            industriesTagsRef.current.forEach((tag, i) => {
+                gsap.from(tag, {
+                    scale: 0,
+                    opacity: 0,
+                    duration: 0.4,
+                    delay: i * 0.05,
+                    scrollTrigger: {
+                        trigger: tag,
+                        start: "top 95%"
+                    }
+                });
+            });
+            gsap.from(metricsBoxRef.current, {
+                x: 100,
+                opacity: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: metricsBoxRef.current,
+                    start: "top 85%"
+                }
+            });
+
+            // Why Choose Us
+            chooseCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    y: 20,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Workflow
+            gsap.from(workflowRef.current, {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: workflowRef.current,
+                    start: "top 85%"
+                }
+            });
+
+            // Final CTA
+            gsap.from(ctaRef.current, {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ctaRef.current,
+                    start: "top 85%"
+                }
+            });
+
+            // Floating effect for hero image
+            gsap.to(heroImageRef.current, {
+                y: -10,
+                duration: 2.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            scale: isEnter ? 1.05 : 1,
+            backgroundColor: isEnter ? "rgba(59, 130, 246, 0.05)" : "white",
+            borderColor: isEnter ? "rgba(59, 130, 246, 0.4)" : "rgba(241, 245, 249, 1)",
+            duration: 0.3
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                scale: isEnter ? 1.2 : 1,
+                rotation: isEnter ? 15 : 0,
+                duration: 0.3
+            });
+        }
+    };
+
+    const handleDarkHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            scale: isEnter ? 1.05 : 1,
+            backgroundColor: isEnter ? "rgba(255, 255, 255, 0.1)" : "rgba(255, 255, 255, 0.05)",
+            duration: 0.3
+        });
+    };
+
     const philSteps = [
         {
             title: "1. Deep Conversion Audit",
@@ -144,7 +386,7 @@ const CROServices = () => {
     ];
 
     return (
-        <div className="bg-white text-slate-900 overflow-hidden">
+        <div ref={pageRef} className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -154,22 +396,16 @@ const CROServices = () => {
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10 animate-fade-in-up text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             CRO Services (CRO)?
                         </h1>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-relaxed text-white font-medium">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-relaxed text-white font-medium text-justify px-1">
                             Conversion Rate Optimization (CRO) is the science of increasing the percentage of website visitors who take a desired action — whether it’s a purchase, form submission, demo booking, or app download.
                         </p>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-relaxed text-white font-medium">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-relaxed text-white font-medium text-justify px-1">
                             At Adkryoss managed by <span className="font-semibold">Clink Consultancy Services Private Limited</span>, CRO is not about guesswork or random A/B tests. It’s about combining analytics, behavioral insights, UX strategy, and performance marketing intelligence to build a measurable growth engine.
                         </p>
-                        <div className="flex flex-wrap gap-4">
-                            {/* <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
-                                <Zap className="text-yellow-400" size={24} />
-                                <span className="font-semibold text-white text-sm tracking-widest">Transform Traffic to Revenue</span>
-                            </div> */}
-                        </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <Link
@@ -187,7 +423,7 @@ const CROServices = () => {
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={croservicehero}
@@ -199,20 +435,11 @@ const CROServices = () => {
                 </div>
             </section>
 
-            {/* Quick Intro Section */}
-            {/* <section className="py-20 bg-white border-b border-slate-100">
-                <div className="container px-6 mx-auto text-center">
-                    <h2 className="text-[36px] font-bold text-slate-900 mb-6">
-                        We transform traffic into revenue without increasing ad spend.
-                    </h2>
-                </div>
-            </section> */}
-
             {/* Why Your Business Needs Section */}
             <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-16">
-                        <h2 className="text-[36px] font-bold text-slate-900 mb-6 leading-tight">
+                        <h2 ref={whyTitleRef} className="text-[36px] font-bold text-slate-900 mb-6 leading-tight">
                             Why Your Business Needs CRO Now
                         </h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto font-medium">
@@ -227,16 +454,20 @@ const CROServices = () => {
                             { title: "Landing pages underperform", icon: "📑" },
                             { title: "Leads don’t convert into sales", icon: "🤝" }
                         ].map((item, index) => (
-                            <div key={index} className="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 transition-all hover:shadow-xl hover:-translate-y-2 group">
+                            <div
+                                key={index}
+                                ref={el => whyCardsRef.current[index] = el}
+                                className="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 transition-all hover:shadow-xl hover:-translate-y-2 group cursor-default"
+                            >
                                 <div className="text-4xl mb-6 group-hover:scale-110 transition-transform">{item.icon}</div>
                                 <h3 className="text-lg font-semibold text-slate-900 leading-tight">{item.title}</h3>
                             </div>
                         ))}
                     </div>
 
-                    <div className="max-w-4xl mx-auto p-12 bg-white rounded-[40px] shadow-2xl border border-blue-50 relative overflow-hidden text-center">
+                    <div ref={engineerBoxRef} className="max-w-4xl mx-auto p-12 bg-white rounded-[40px] shadow-2xl border border-blue-50 relative overflow-hidden text-center">
                         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-blue-600"></div>
-                        <h3 className="text-2xl font-semibold text-slate-900 mb-6">Turn Clicks Into Customers. Predictably.</h3>
+                        <h3 className="text-2xl font-semibold text-slate-900 mb-6 font-black tracking-tight">Turn Clicks Into Customers. Predictably.</h3>
                         <p className="text-[16px] md:text-[18px] mb-6 text-slate-600 leading-relaxed font-medium">
                             Your traffic is growing. But are your conversions? <br />
                             We don’t just optimize pages — we engineer profitable user journeys.
@@ -252,9 +483,9 @@ const CROServices = () => {
             <section className="py-24 bg-white overflow-hidden">
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-20 items-center">
-                        <div>
+                        <div ref={whatCdpTextRef} className="px-1">
                             <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight">
-                                What Is Conversion Rate Optimization
+                                What is Conversion Rate Optimization
                             </h2>
                             <p className="text-xl text-slate-600 leading-relaxed font-medium italic mb-8 border-l-8 border-blue-500 pl-8">
                                 "Revenue growth stagnates without effective optimization."
@@ -263,7 +494,7 @@ const CROServices = () => {
                                 CRO ensures every visitor has a seamless, persuasive, and frictionless journey — from first click to final conversion.
                             </p>
                         </div>
-                        <div className="bg-slate-900 p-12 rounded-[50px] text-white relative shadow-2xl">
+                        <div ref={whatCdpBoxRef} className="bg-slate-900 p-12 rounded-[50px] text-white relative shadow-2xl">
                             <div className="absolute -top-10 -right-10 w-32 h-32 bg-blue-600/20 rounded-full blur-[50px]"></div>
                             <h3 className="text-[20px] md:text-[24px] mb-4 text-2xl font-semibold text-white tracking-tighter">
                                 Our CRO Philosophy:
@@ -286,14 +517,20 @@ const CROServices = () => {
                 <div className="container px-6 mx-auto">
                     <div className="flex flex-wrap justify-center gap-10">
                         {philSteps.map((item, index) => (
-                            <div key={index} className="bg-white border-2 border-slate-100 rounded-[32px] p-10 transition-all duration-300 w-full md:w-[calc(50%-20px)] lg:w-[calc(33.33%-27px)] min-w-[300px] grow cursor-pointer group hover:border-blue-500 hover:-translate-y-3 hover:shadow-2xl">
+                            <div
+                                key={index}
+                                ref={el => philCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white border-2 border-slate-100 rounded-[32px] p-10 transition-all duration-300 w-full md:w-[calc(50%-20px)] lg:w-[calc(33.33%-27px)] min-w-[300px] grow cursor-pointer group hover:border-blue-500 hover:-translate-y-3 hover:shadow-2xl"
+                            >
                                 <div className="text-blue-500 font-extrabold text-5xl mb-8 group-hover:scale-110 transition-transform opacity-30 tracking-tighter leading-none">
                                     Step 0{index + 1}
                                 </div>
                                 <h3 className="text-[24px] font-semibold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors leading-tight">
                                     {item.title}
                                 </h3>
-                                <p className="text-slate-500 mb-8 font-medium italic leading-relaxed text-xs tracking-widest">
+                                <p className="text-slate-500 mb-8 font-medium italic leading-relaxed text-xs tracking-widest uppercase">
                                     "{item.desc}"
                                 </p>
                                 <div className="space-y-4">
@@ -313,7 +550,7 @@ const CROServices = () => {
             {/* Our CRO Services */}
             <section id="services" className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto">
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-20 text-white">
                         <h2 className="text-[36px] font-bold mb-6 leading-tight text-white tracking-tight">
                             Our CRO Services
                         </h2>
@@ -322,7 +559,13 @@ const CROServices = () => {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {services.map((service, index) => (
-                            <div key={index} className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer group hover:-translate-y-2">
+                            <div
+                                key={index}
+                                ref={el => serviceCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleDarkHover(e, true)}
+                                onMouseLeave={(e) => handleDarkHover(e, false)}
+                                className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer group hover:-translate-y-2"
+                            >
                                 <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                     {service.icon}
                                 </div>
@@ -341,11 +584,11 @@ const CROServices = () => {
             {/* Integration Section */}
             <section className="py-24 bg-white">
                 <div className="container px-6 mx-auto">
-                    <div className="max-w-5xl mx-auto rounded-[50px] bg-gradient-to-br from-[#0066CC] to-[#004999] p-16 text-white relative shadow-[0_30px_60px_-12px_rgba(0,102,204,0.4)] overflow-hidden">
+                    <div ref={integrationBoxRef} className="max-w-5xl mx-auto rounded-[50px] bg-gradient-to-br from-[#0066CC] to-[#004999] p-16 text-white relative shadow-[0_30px_60px_-12px_rgba(0,102,204,0.4)] overflow-hidden">
                         <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -mr-40 -mt-40 blur-3xl"></div>
-                        <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">CRO + Performance Marketing = Maximum ROI</h2>
+                        <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight px-1">CRO + Performance Marketing = Maximum ROI</h2>
                         <div className="grid md:grid-cols-2 gap-16 items-center">
-                            <div>
+                            <div className="text-justify px-1">
                                 <p className="text-[16px] md:text-[18px] mb-6 text-xl font-medium italic text-white leading-relaxed">
                                     Traffic without optimization burns budget. <br />
                                     Optimization without traffic limits growth.
@@ -356,7 +599,11 @@ const CROServices = () => {
                             </div>
                             <div className="grid gap-4">
                                 {alignment.map((item, index) => (
-                                    <div key={index} className="bg-white/10 p-5 rounded-2xl flex items-center gap-5 backdrop-blur-md border border-white/20 transition-all hover:bg-white/20 hover:translate-x-3">
+                                    <div
+                                        key={index}
+                                        ref={el => integrationLinesRef.current[index] = el}
+                                        className="bg-white/10 p-5 rounded-2xl flex items-center gap-5 backdrop-blur-md border border-white/20 transition-all hover:bg-white/20 hover:translate-x-3 cursor-default"
+                                    >
                                         <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white">
                                             {item.icon}
                                         </div>
@@ -381,14 +628,18 @@ const CROServices = () => {
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 {industries.map((item, index) => (
-                                    <div key={index} className="px-8 py-5 bg-white border-2 border-slate-100 rounded-2xl font-black text-slate-900 shadow-sm transition-all hover:border-blue-500 hover:text-blue-600 hover:-translate-y-1">
+                                    <div
+                                        key={index}
+                                        ref={el => industriesTagsRef.current[index] = el}
+                                        className="px-8 py-5 bg-white border-2 border-slate-100 rounded-2xl font-black text-slate-900 shadow-sm transition-all hover:border-blue-500 hover:text-blue-600 hover:-translate-y-1 cursor-default"
+                                    >
                                         {item}
                                     </div>
                                 ))}
                             </div>
                         </div>
                         {/* Metrics */}
-                        <div className="bg-slate-900 p-12 rounded-[50px] text-white shadow-2xl">
+                        <div ref={metricsBoxRef} className="bg-slate-900 p-12 rounded-[50px] text-white shadow-2xl">
                             <h2 className="text-[36px] font-bold mb-8 text-white tracking-tight">Key Metrics We Improve</h2>
                             <div className="space-y-4">
                                 {metrics.map((point, index) => (
@@ -415,11 +666,15 @@ const CROServices = () => {
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {chooseUs.map((item, index) => (
-                            <div key={index} className="flex items-center gap-6 p-8 bg-slate-50 rounded-3xl transition-all duration-300 hover:bg-white hover:shadow-2xl hover:scale-105 border border-transparent hover:border-blue-100 group">
+                            <div
+                                key={index}
+                                ref={el => chooseCardsRef.current[index] = el}
+                                className="flex items-center gap-6 p-8 bg-slate-50 rounded-3xl transition-all duration-300 hover:bg-white hover:shadow-2xl hover:scale-105 border border-transparent hover:border-blue-100 group cursor-default"
+                            >
                                 <div className="text-blue-600 group-hover:scale-110 transition-transform">
                                     {item.icon}
                                 </div>
-                                <span className="text-[18px] font-black text-slate-900 leading-tight tracking-tight">{item.title}</span>
+                                <span className="text-[18px] font-black text-slate-900 leading-tight tracking-tight uppercase tracking-tighter">{item.title}</span>
                             </div>
                         ))}
                     </div>
@@ -429,27 +684,27 @@ const CROServices = () => {
             {/* Workflow Section */}
             <section className="py-24 bg-slate-50 overflow-hidden">
                 <div className="container px-6 mx-auto">
-                    <div className="text-center mb-20 text-slate-900">
+                    <div ref={workflowRef} className="text-center mb-20 text-slate-900">
                         <h2 className="text-[36px] font-bold mb-6 tracking-tight">Our CRO Workflow</h2>
-                        <div className="inline-flex items-center gap-4 bg-slate-900 text-white px-10 py-5 rounded-full font-black text-xl tracking-tighter shadow-2xl">
+                        <div className="inline-flex flex-wrap justify-center items-center gap-4 bg-slate-900 text-white px-10 py-5 rounded-[40px] font-black text-xl tracking-tighter shadow-2xl">
                             Discovery <ArrowRight size={24} className="text-blue-500" /> Audit <ArrowRight size={24} className="text-blue-500" /> Strategy <ArrowRight size={24} className="text-blue-500" /> Experimentation <ArrowRight size={24} className="text-blue-500" /> Validation <ArrowRight size={24} className="text-blue-500" /> Scale
                         </div>
                     </div>
                     <div className="text-center grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-                        <div className="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm font-bold">Each stage is measurable.</div>
-                        <div className="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm font-bold">Each decision is trackable.</div>
-                        <div className="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm font-bold">Each result is optimized for revenue growth.</div>
+                        <div className="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm font-bold hover:shadow-lg transition-shadow">Each stage is measurable.</div>
+                        <div className="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm font-bold hover:shadow-lg transition-shadow">Each decision is trackable.</div>
+                        <div className="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm font-bold hover:shadow-lg transition-shadow">Each result is optimized for revenue growth.</div>
                     </div>
                 </div>
             </section>
 
             {/* Final CTA Section */}
-            <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
-                <div className="container max-w-4xl mx-auto animate-fade-in">
+            <section ref={ctaRef} className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
+                <div className="container max-w-4xl mx-auto">
                     <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">Ready to Unlock Hidden Revenue?</h2>
                     <p className="text-[16px] md:text-[18px] mb-6 text-2xl text-white font-medium opacity-90 max-w-3xl mx-auto leading-relaxed">
                         You don’t need more traffic. <br />
-                        <span className="text-white">You need better conversions.</span>
+                        <span className="text-white font-black">You need better conversions.</span>
                     </p>
                     <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white font-medium opacity-80 max-w-2xl mx-auto italic">
                         Let’s turn your existing visitors into consistent revenue streams.

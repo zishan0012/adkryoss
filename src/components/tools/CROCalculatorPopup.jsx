@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { X, Info, TrendingUp, Users, MousePointer2, Calculator, IndianRupee, ArrowRight, RefreshCw, BarChart } from 'lucide-react';
+import { X, Info, TrendingUp, Users, MousePointer2, Calculator, IndianRupee, ArrowRight, RefreshCw, BarChart, RotateCcw } from 'lucide-react';
 
 const CROCalculatorPopup = ({ isOpen, onClose }) => {
     // State for inputs
@@ -8,6 +8,14 @@ const CROCalculatorPopup = ({ isOpen, onClose }) => {
     const [conversions, setConversions] = useState(300);
     const [orderValue, setOrderValue] = useState(1500);
     const [improvement, setImprovement] = useState(20); // 20% improvement goal
+
+    // Reset handler
+    const handleReset = () => {
+        setVisitors(0);
+        setConversions(0);
+        setOrderValue(0);
+        setImprovement(0);
+    };
 
     // State for results
     const [results, setResults] = useState({
@@ -21,7 +29,7 @@ const CROCalculatorPopup = ({ isOpen, onClose }) => {
 
     // Calculation logic
     useEffect(() => {
-        const currentRate = (conversions / visitors) * 100;
+        const currentRate = visitors > 0 ? (conversions / visitors) * 100 : 0;
         const currentRevenue = conversions * orderValue;
 
         const targetRate = currentRate * (1 + improvement / 100);
@@ -63,10 +71,19 @@ const CROCalculatorPopup = ({ isOpen, onClose }) => {
                 </button>
 
                 {/* LEFT SIDE: Inputs */}
-                <div className="w-full md:w-2/3 p-8 md:p-14 bg-white">
-                    <div className="mb-10">
-                        <h2 className="text-3xl font-black text-gray-900 mb-2 tracking-tight">CRO Impact Calculator</h2>
-                        <p className="text-gray-500 text-lg font-light leading-relaxed">Adjust your metrics to see how conversion optimization transforms your bottom line.</p>
+                <div className="w-full md:w-2/3 p-8 md:p-14 bg-white overflow-y-auto max-h-[90vh]">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
+                        <div>
+                            <h2 className="text-3xl font-black text-gray-900 mb-1 tracking-tight">CRO Impact Calculator</h2>
+                            <p className="text-gray-500 text-lg font-light leading-relaxed">Adjust your metrics to see the transformation.</p>
+                        </div>
+                        <button
+                            onClick={handleReset}
+                            className="flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-2xl transition-all duration-300 font-bold text-sm whitespace-nowrap shadow-sm"
+                        >
+                            <RotateCcw size={18} />
+                            Reset to Zero
+                        </button>
                     </div>
 
                     <div className="space-y-10">
@@ -86,7 +103,7 @@ const CROCalculatorPopup = ({ isOpen, onClose }) => {
                             </div>
                             <input
                                 type="range"
-                                min="100"
+                                min="0"
                                 max="1000000"
                                 step="100"
                                 value={visitors}
@@ -94,7 +111,7 @@ const CROCalculatorPopup = ({ isOpen, onClose }) => {
                                 className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-blue-600"
                             />
                             <div className="flex justify-between text-[10px] text-gray-400 font-bold uppercase tracking-widest">
-                                <span>100</span>
+                                <span>0</span>
                                 <span>1M</span>
                             </div>
                         </div>
@@ -115,15 +132,15 @@ const CROCalculatorPopup = ({ isOpen, onClose }) => {
                             </div>
                             <input
                                 type="range"
-                                min="1"
-                                max={visitors}
+                                min="0"
+                                max={visitors || 1000}
                                 value={conversions}
                                 onChange={(e) => setConversions(Number(e.target.value))}
                                 className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-blue-600"
                             />
                             <div className="flex justify-between text-[10px] text-gray-400 font-bold uppercase tracking-widest">
-                                <span>1</span>
-                                <span>{formatNumber(visitors)}</span>
+                                <span>0</span>
+                                <span>{formatNumber(visitors || 1000)}</span>
                             </div>
                         </div>
 
@@ -143,7 +160,7 @@ const CROCalculatorPopup = ({ isOpen, onClose }) => {
                             </div>
                             <input
                                 type="range"
-                                min="10"
+                                min="0"
                                 max="100000"
                                 step="10"
                                 value={orderValue}
@@ -151,7 +168,7 @@ const CROCalculatorPopup = ({ isOpen, onClose }) => {
                                 className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-blue-600"
                             />
                             <div className="flex justify-between text-[10px] text-gray-400 font-bold uppercase tracking-widest">
-                                <span>₹10</span>
+                                <span>₹0</span>
                                 <span>₹1L</span>
                             </div>
                         </div>
@@ -175,14 +192,14 @@ const CROCalculatorPopup = ({ isOpen, onClose }) => {
                             </div>
                             <input
                                 type="range"
-                                min="1"
+                                min="0"
                                 max="500"
                                 value={improvement}
                                 onChange={(e) => setImprovement(Number(e.target.value))}
                                 className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-green-600"
                             />
                             <div className="flex justify-between text-[10px] text-gray-400 font-bold uppercase tracking-widest">
-                                <span>1%</span>
+                                <span>0%</span>
                                 <span>500% Lift</span>
                             </div>
                         </div>
@@ -229,7 +246,7 @@ const CROCalculatorPopup = ({ isOpen, onClose }) => {
                         >
                             Start Optimizing <ArrowRight size={20} />
                         </Link>
-                        <p className="text-[10px] text-blue-200/60 text-center font-medium leading-relaxed uppercase tracking-widest">
+                        <p className="text-[10px] text-white text-center font-medium leading-relaxed uppercase tracking-widest mt-2">
                             Managed by Clink Consultancy Service Pvt. Ltd.
                         </p>
                     </div>

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     Shield,
     Zap,
@@ -22,7 +24,171 @@ import {
     Users
 } from 'lucide-react';
 import seomigrationservices from '../../../assets/SEO/seomigrationhero.jpeg';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const SEOMigrationServices = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const riskRef = useRef(null);
+    const riskCardsRef = useRef([]);
+    const frameworkRef = useRef(null);
+    const frameworkCardsRef = useRef([]);
+    const typesRef = useRef(null);
+    const typesCardsRef = useRef([]);
+    const diffRef = useRef(null);
+    const diffCardsRef = useRef([]);
+    const metricsRef = useRef(null);
+    const metricsCardsRef = useRef([]);
+    const considerRef = useRef(null);
+    const approachRef = useRef(null);
+    const approachStepsRef = useRef([]);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Shield surge
+            gsap.from(heroContentRef.current, {
+                x: -100,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power4.out"
+            });
+            gsap.from(heroImageRef.current, {
+                x: 100,
+                opacity: 0,
+                scale: 0.8,
+                duration: 1.2,
+                ease: "power4.out"
+            });
+
+            // Risks - Alert pulse
+            riskCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    scale: 0.9,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Framework - Defensive shield reveals
+            frameworkCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: i * 0.15,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Migration Types - Smooth transition
+            typesCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Differentiators - Glass reveal
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.7,
+                    delay: i * 0.2,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Metrics - Flowing lines
+            metricsCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    scale: 0,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Approach - Connected path
+            approachStepsRef.current.forEach((step, i) => {
+                gsap.from(step, {
+                    y: 20,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.2,
+                    scrollTrigger: {
+                        trigger: step,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // CTA
+            gsap.from(ctaRef.current, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ctaRef.current,
+                    start: "top 90%"
+                }
+            });
+
+            // Floating animation for hero image
+            gsap.to(heroImageRef.current, {
+                y: -15,
+                duration: 4,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            y: isEnter ? -10 : 0,
+            scale: isEnter ? 1.02 : 1,
+            backgroundColor: isEnter ? "#f0f9ff" : "white",
+            borderColor: isEnter ? "#0066CC" : "#e2e8f0",
+            duration: 0.3
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                scale: isEnter ? 1.2 : 1,
+                rotate: isEnter ? 360 : 0,
+                duration: 0.5
+            });
+        }
+    };
+
     const migrationSteps = [
         {
             icon: <Search size={32} />,
@@ -125,7 +291,7 @@ const SEOMigrationServices = () => {
     ];
 
     return (
-        <div className="bg-white">
+        <div ref={pageRef} className="bg-white overflow-hidden">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -135,7 +301,7 @@ const SEOMigrationServices = () => {
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10 text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             SEO Migration Services
                         </h1>
@@ -167,7 +333,7 @@ const SEOMigrationServices = () => {
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={seomigrationservices}
@@ -194,7 +360,7 @@ const SEOMigrationServices = () => {
                             "Drop in domain authority",
                             "Traffic and revenue decline"
                         ].map((risk, i) => (
-                            <div key={i} className="p-6 bg-red-50 rounded-xl border-l-[5px] border-l-red-400 flex items-center gap-[15px] w-[calc(33.333%-14px)] min-w-[280px] grow max-w-[380px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:shadow-red-400/10">
+                            <div key={i} ref={el => riskCardsRef.current[i] = el} className="p-6 bg-red-50 rounded-xl border-l-[5px] border-l-red-400 flex items-center gap-[15px] w-[calc(33.333%-14px)] min-w-[280px] grow max-w-[380px] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:shadow-red-400/10">
                                 <AlertTriangle size={20} className="text-red-400" />
                                 <span className="font-bold text-red-700">{risk}</span>
                             </div>
@@ -207,15 +373,21 @@ const SEOMigrationServices = () => {
             </section>
 
             {/* Framework Section */}
-            <section id="services" className="py-20 bg-[#f8fafc]">
+            <section id="services" ref={frameworkRef} className="py-20 bg-[#f8fafc]">
                 <div className="container">
                     <h2 className="text-[36px] font-bold text-center mb-[60px] text-slate-900">
                         Our SEO Migration Framework
                     </h2>
                     <div className="flex flex-wrap justify-center gap-[30px]">
                         {migrationSteps.map((step, index) => (
-                            <div key={index} className="bg-white p-10 rounded-[20px] shadow-sm border border-slate-100 w-[calc(33.333%-20px)] min-w-[320px] grow max-w-[400px] transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
-                                <div className="text-[#0066cc] mb-5">{step.icon}</div>
+                            <div
+                                key={index}
+                                ref={el => frameworkCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white p-10 rounded-[20px] shadow-sm border border-slate-100 w-[calc(33.333%-20px)] min-w-[320px] grow max-w-[400px] transition-all duration-300 group cursor-pointer"
+                            >
+                                <div className="text-[#0066cc] mb-5 card-icon">{step.icon}</div>
                                 <h3 className="text-[22px] font-semibold mb-5 text-slate-900">
                                     {index + 1}. {step.title}
                                 </h3>
@@ -234,14 +406,14 @@ const SEOMigrationServices = () => {
             </section>
 
             {/* Migration Types */}
-            <section className="py-20 bg-white">
+            <section className="py-20 bg-white" ref={typesRef}>
                 <div className="container">
                     <h2 className="text-[36px] font-bold text-center mb-[50px] text-slate-900">
                         Types of SEO Migration We Handle
                     </h2>
                     <div className="flex flex-wrap justify-center gap-5">
                         {migrationTypes.map((type, i) => (
-                            <div key={i} className="p-6 bg-slate-50 rounded-xl flex items-center gap-4 transition-all duration-300 w-[calc(25%-15px)] min-w-[250px] grow max-w-[300px] border border-transparent hover:bg-white hover:border-[#0066cc] hover:scale-105 hover:shadow-xl hover:shadow-blue-900/5 group">
+                            <div key={i} ref={el => typesCardsRef.current[i] = el} className="p-6 bg-slate-50 rounded-xl flex items-center gap-4 transition-all duration-300 w-[calc(25%-15px)] min-w-[250px] grow max-w-[300px] border border-transparent hover:bg-white hover:border-[#0066cc] hover:scale-105 hover:shadow-xl hover:shadow-blue-900/5 group">
                                 <div className="text-[#0066cc] group-hover:scale-110 transition-transform">{type.icon}</div>
                                 <span className="font-bold text-slate-900">{type.name}</span>
                             </div>
@@ -258,7 +430,7 @@ const SEOMigrationServices = () => {
                     </h2>
                     <div className="flex flex-wrap justify-center gap-8">
                         {differentiators.map((diff, i) => (
-                            <div key={i} className="p-8 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-lg w-[calc(25%-23px)] min-w-[260px] grow max-w-[350px] transition-all duration-300 hover:-translate-y-2 hover:bg-white/15">
+                            <div key={i} ref={el => diffCardsRef.current[i] = el} className="p-8 bg-white/10 rounded-2xl border border-white/20 backdrop-blur-lg w-[calc(25%-23px)] min-w-[260px] grow max-w-[350px] transition-all duration-300 hover:-translate-y-2 hover:bg-white/15">
                                 <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white">
                                     {diff.title}
                                 </h3>
@@ -288,15 +460,12 @@ const SEOMigrationServices = () => {
                             { label: "Crawl Efficiency", icon: <Zap size={24} /> },
                             { label: "Conversion Performance", icon: <Users size={24} /> },
                         ].map((metric, i) => (
-                            <div key={i} className="flex items-center gap-4 p-6 bg-white rounded-xl border border-slate-200 shadow-sm min-w-[260px] grow max-w-[320px] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0066cc] hover:shadow-[0_10px_30px_rgba(0,102,204,0.1)]">
+                            <div key={i} ref={el => metricsCardsRef.current[i] = el} className="flex items-center gap-4 p-6 bg-white rounded-xl border border-slate-200 shadow-sm min-w-[260px] grow max-w-[320px] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0066cc] hover:shadow-[0_10px_30px_rgba(0,102,204,0.1)]">
                                 <div className="text-[#0066cc] shrink-0">{metric.icon}</div>
                                 <span className="font-semibold text-slate-800">{metric.label}</span>
                             </div>
                         ))}
                     </div>
-                    <p className="text-center text-[16px] md:text-[18px] font-medium text-slate-600 mt-12 max-w-[700px] mx-auto">
-                        Because rankings alone don't define success — <span className="text-[#0066cc] font-semibold">business growth does.</span>
-                    </p>
                 </div>
             </section>
 
@@ -320,15 +489,15 @@ const SEOMigrationServices = () => {
                                     "Shifting hosting/server",
                                     "Experiencing unexplained ranking drops after launch",
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3">
+                                    <li key={i} className="flex items-start gap-3 transition-transform hover:translate-x-2">
                                         <CheckCircle2 size={20} className="text-[#0066cc] shrink-0 mt-1" />
                                         <span className="text-[16px] text-slate-700 font-medium">{item}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                        <div className="bg-[#0066cc] text-white p-10 rounded-2xl">
-                            <AlertTriangle size={40} className="text-yellow-300 mb-5" />
+                        <div className="bg-[#0066cc] text-white p-10 rounded-2xl shadow-2xl hover:shadow-blue-400/20 transition-shadow duration-500">
+                            <AlertTriangle size={40} className="text-yellow-300 mb-5 animate-pulse" />
                             <h3 className="text-[24px] font-bold mb-4">Don't Risk It</h3>
                             <p className="text-[16px] md:text-[18px] text-white/90 leading-relaxed font-medium">
                                 Even a well-designed website can lose 30–60% of organic traffic after migration without a structured SEO strategy. Protect your investment with a proven migration framework.
@@ -352,9 +521,9 @@ const SEOMigrationServices = () => {
                             { step: "Monitoring", desc: "Live tracking of crawl, index & rankings" },
                             { step: "Optimization", desc: "Refinement, recovery & authority rebuilding" },
                         ].map((item, i, arr) => (
-                            <div key={i} className="flex items-center">
+                            <div key={i} ref={el => approachStepsRef.current[i] = el} className="flex items-center">
                                 <div className="flex flex-col items-center text-center p-6 w-[170px]">
-                                    <div className="w-14 h-14 rounded-full bg-[#0066cc] text-white flex items-center justify-center font-bold text-lg mb-3 shrink-0">
+                                    <div className="w-14 h-14 rounded-full bg-[#0066cc] text-white flex items-center justify-center font-bold text-lg mb-3 shrink-0 shadow-lg">
                                         {i + 1}
                                     </div>
                                     <span className="font-bold text-slate-900 text-[15px]">{item.step}</span>
@@ -373,15 +542,12 @@ const SEOMigrationServices = () => {
                             "Dedicated SEO migration specialist",
                             "Clear reporting dashboard",
                         ].map((item, i) => (
-                            <div key={i} className="flex items-center gap-3 bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <div key={i} className="flex items-center gap-3 bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-[#0066cc] hover:shadow-md transition-all">
                                 <CheckCircle2 size={18} className="text-[#0066cc] shrink-0" />
                                 <span className="text-[14px] font-semibold text-slate-800">{item}</span>
                             </div>
                         ))}
                     </div>
-                    <p className="text-center text-[16px] text-slate-600 font-medium mt-8">
-                        You always know what's happening.
-                    </p>
                 </div>
             </section>
 
@@ -410,7 +576,7 @@ const SEOMigrationServices = () => {
                                 { label: "Entity-based optimization", icon: <Globe size={18} /> },
                                 { label: "Core Web Vitals performance engineering", icon: <Rocket size={18} /> },
                             ].map((item, i) => (
-                                <div key={i} className="flex items-center gap-4 p-5 bg-white/5 rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-[#60a5fa]">
+                                <div key={i} className="flex items-center gap-4 p-5 bg-white/5 rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-[#60a5fa] cursor-default">
                                     <div className="text-[#60a5fa] shrink-0">{item.icon}</div>
                                     <span className="font-medium text-white/90">{item.label}</span>
                                 </div>
@@ -421,7 +587,7 @@ const SEOMigrationServices = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-24 text-center bg-[#f8fafc]">
+            <section ref={ctaRef} className="py-24 text-center bg-[#f8fafc]">
                 <div className="container">
                     <h2 className="text-[36px] font-bold mb-6 text-slate-900 leading-tight">
                         Let's Migrate Without Losing Momentum
@@ -440,3 +606,4 @@ const SEOMigrationServices = () => {
 };
 
 export default SEOMigrationServices;
+

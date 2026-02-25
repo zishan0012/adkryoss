@@ -1,0 +1,210 @@
+﻿
+> adkryoss@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 2414 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                                           [39m[1m[2m    0.48 kB[22m[1m[22m[2m Γöé gzip:   0.32 kB[22m
+[2mdist/[22m[32massets/phara-DAEixd6c.jpg                            [39m[1m[2m    7.85 kB[22m[1m[22m
+[2mdist/[22m[32massets/health-CulSZbdL.jpg                           [39m[1m[2m    8.21 kB[22m[1m[22m
+[2mdist/[22m[32massets/ivf-ZROMpVtV.jpg                              [39m[1m[2m    8.36 kB[22m[1m[22m
+[2mdist/[22m[32massets/healthtech-CaVDS-8v.jpg                       [39m[1m[2m    9.07 kB[22m[1m[22m
+[2mdist/[22m[32massets/cosmetic-CVok_nQF.jpg                         [39m[1m[2m    9.75 kB[22m[1m[22m
+[2mdist/[22m[32massets/dental-fAe-7qld.jpg                           [39m[1m[2m    9.93 kB[22m[1m[22m
+[2mdist/[22m[32massets/college-1i-12NcS.jpg                          [39m[1m[2m   10.13 kB[22m[1m[22m
+[2mdist/[22m[32massets/coaching-CXhjEBS8.jpg                         [39m[1m[2m   10.27 kB[22m[1m[22m
+[2mdist/[22m[32massets/edtech-DJFX90eg.jpg                           [39m[1m[2m   10.45 kB[22m[1m[22m
+[2mdist/[22m[32massets/multi-CyCGikxI.jpg                            [39m[1m[2m   10.50 kB[22m[1m[22m
+[2mdist/[22m[32massets/diagnisttic-C7s0554N.jpg                      [39m[1m[2m   10.80 kB[22m[1m[22m
+[2mdist/[22m[32massets/school-DfeG5Ozk.jpg                           [39m[1m[2m   11.44 kB[22m[1m[22m
+[2mdist/[22m[32massets/abroad-QNjcnOO1.jpg                           [39m[1m[2m   11.83 kB[22m[1m[22m
+[2mdist/[22m[32massets/skill-CL0VYxrS.jpg                            [39m[1m[2m   15.35 kB[22m[1m[22m
+[2mdist/[22m[32massets/javascriptseo-DCK-mKM8.jpg                    [39m[1m[2m   28.76 kB[22m[1m[22m
+[2mdist/[22m[32massets/Education-DC__Ktyt.jpg                        [39m[1m[2m   33.31 kB[22m[1m[22m
+[2mdist/[22m[32massets/Performancebasedgrowthreviews-D0L_2OdR.png    [39m[1m[2m   37.17 kB[22m[1m[22m
+[2mdist/[22m[32massets/mainlogo-BA-p_HzY.png                         [39m[1m[2m   42.15 kB[22m[1m[22m
+[2mdist/[22m[32massets/TheEcommerceGrowthChallenge-D2ZR2u4M.png      [39m[1m[2m   43.28 kB[22m[1m[22m
+[2mdist/[22m[32massets/output-DIjHmDAi.jpg                           [39m[1m[2m   44.61 kB[22m[1m[22m
+[2mdist/[22m[32massets/contactuss-D_VhhA66.webp                      [39m[1m[2m   46.28 kB[22m[1m[22m
+[2mdist/[22m[32massets/googlepenaltyhero-CYjDK-Sj.png                [39m[1m[2m   46.33 kB[22m[1m[22m
+[2mdist/[22m[32massets/footerlogo-C2bFIrAD.png                       [39m[1m[2m   47.86 kB[22m[1m[22m
+[2mdist/[22m[32massets/multilingualhero-BrDpQJad.png                 [39m[1m[2m   48.35 kB[22m[1m[22m
+[2mdist/[22m[32massets/ConversionRateOptimization-Cb0gXuSa.png       [39m[1m[2m   50.15 kB[22m[1m[22m
+[2mdist/[22m[32massets/B2BMarketingIsDifferent-DjF8-Aep.png          [39m[1m[2m   50.54 kB[22m[1m[22m
+[2mdist/[22m[32massets/approach-CYlBygl_.jpg                         [39m[1m[2m   51.72 kB[22m[1m[22m
+[2mdist/[22m[32massets/Skilldevelopmentprograms-BabWbM86.png         [39m[1m[2m   56.32 kB[22m[1m[22m
+[2mdist/[22m[32massets/PressRelease-BORiI5tT.jpeg                    [39m[1m[2m   56.56 kB[22m[1m[22m
+[2mdist/[22m[32massets/WhyB2BBrandsChooseUs-BiDdOyVh.png             [39m[1m[2m   57.70 kB[22m[1m[22m
+[2mdist/[22m[32massets/Innovationdrivenenvironment-CHiyZLq5.png      [39m[1m[2m   58.09 kB[22m[1m[22m
+[2mdist/[22m[32massets/ecommercehero-DmJo8jdM.png                    [39m[1m[2m   58.99 kB[22m[1m[22m
+[2mdist/[22m[32massets/Collaborativeteamculture-swMvhjDu.png         [39m[1m[2m   61.36 kB[22m[1m[22m
+[2mdist/[22m[32massets/Leadershipmentorship-BeiDsy3V.png             [39m[1m[2m   65.23 kB[22m[1m[22m
+[2mdist/[22m[32massets/mobile1-BOESFrM3.jpg                          [39m[1m[2m   66.23 kB[22m[1m[22m
+[2mdist/[22m[32massets/aiseohero-Bn0gtaGJ.jpeg                       [39m[1m[2m   74.58 kB[22m[1m[22m
+[2mdist/[22m[32massets/Amazon-CiajlRU4.jpg                           [39m[1m[2m   77.75 kB[22m[1m[22m
+[2mdist/[22m[32massets/ProfessionalServices-D4ghE2gG.png             [39m[1m[2m   78.82 kB[22m[1m[22m
+[2mdist/[22m[32massets/contentmarketinghero-aLyS5Tn0.png             [39m[1m[2m   80.09 kB[22m[1m[22m
+[2mdist/[22m[32massets/ReadyToaccelerate-2-9pkPYE.jpeg               [39m[1m[2m   88.21 kB[22m[1m[22m
+[2mdist/[22m[32massets/health-Da5h8bgT.jpeg                          [39m[1m[2m   89.09 kB[22m[1m[22m
+[2mdist/[22m[32massets/seoserviceshero-DuDdij27.jpeg                 [39m[1m[2m   93.13 kB[22m[1m[22m
+[2mdist/[22m[32massets/whitelevelseohero-Dq-bqGw0.jpeg               [39m[1m[2m   96.61 kB[22m[1m[22m
+[2mdist/[22m[32massets/seomigrationhero-BUEcYa1P.jpeg                [39m[1m[2m   97.46 kB[22m[1m[22m
+[2mdist/[22m[32massets/vernacularseo-Dq6gZlI_.jpg                    [39m[1m[2m  101.66 kB[22m[1m[22m
+[2mdist/[22m[32massets/ppcservice-BU99V37x.jpg                       [39m[1m[2m  105.29 kB[22m[1m[22m
+[2mdist/[22m[32massets/B2B-ClDteeaS.jpeg                             [39m[1m[2m  109.15 kB[22m[1m[22m
+[2mdist/[22m[32massets/Career-CBgViAfj.jpeg                          [39m[1m[2m  111.06 kB[22m[1m[22m
+[2mdist/[22m[32massets/BFSI-GA_CZzDR.jpeg                            [39m[1m[2m  118.20 kB[22m[1m[22m
+[2mdist/[22m[32massets/mobile-Cgm1svUr.jpg                           [39m[1m[2m  122.97 kB[22m[1m[22m
+[2mdist/[22m[32massets/BestPlaceToWork--zfVmA22.jpeg                 [39m[1m[2m  130.93 kB[22m[1m[22m
+[2mdist/[22m[32massets/hyperlocalhero-B1WmtOAG.jpeg                  [39m[1m[2m  131.10 kB[22m[1m[22m
+[2mdist/[22m[32massets/socialmedia-Ct5eEtqm.jpg                      [39m[1m[2m  146.83 kB[22m[1m[22m
+[2mdist/[22m[32massets/About-BOgbz04F.jpeg                           [39m[1m[2m  154.03 kB[22m[1m[22m
+[2mdist/[22m[32massets/agenticaihero-Bjeb7W3v.jpeg                   [39m[1m[2m  173.09 kB[22m[1m[22m
+[2mdist/[22m[32massets/reseller-CwIJ-NtP.jpg                         [39m[1m[2m  182.99 kB[22m[1m[22m
+[2mdist/[22m[32massets/RealEstate-_J6ecFGc.jpeg                      [39m[1m[2m  238.63 kB[22m[1m[22m
+[2mdist/[22m[32massets/PPC-DarD5KcR.png                              [39m[1m[2m  539.12 kB[22m[1m[22m
+[2mdist/[22m[32massets/b2bservicehero-jIx2CZ2_.png                   [39m[1m[2m  565.52 kB[22m[1m[22m
+[2mdist/[22m[32massets/SEO-4CeBLuK5.png                              [39m[1m[2m  568.81 kB[22m[1m[22m
+[2mdist/[22m[32massets/WhatMakesUsDifferent-BlP4iMkg.png             [39m[1m[2m  589.65 kB[22m[1m[22m
+[2mdist/[22m[32massets/cdpservicehero-C_i18Qkh.png                   [39m[1m[2m  640.39 kB[22m[1m[22m
+[2mdist/[22m[32massets/CRO-CulHQVtH.png                              [39m[1m[2m  642.36 kB[22m[1m[22m
+[2mdist/[22m[32massets/enterprisehero-B-AZ8x6f.png                   [39m[1m[2m  645.96 kB[22m[1m[22m
+[2mdist/[22m[32massets/blog6-BlZiD3Xu.png                            [39m[1m[2m  665.36 kB[22m[1m[22m
+[2mdist/[22m[32massets/blog9-Dbxjz7cF.png                            [39m[1m[2m  674.46 kB[22m[1m[22m
+[2mdist/[22m[32massets/contentwritinghero-D_91UnTI.png               [39m[1m[2m  745.34 kB[22m[1m[22m
+[2mdist/[22m[32massets/linkbuildinghero-BDRp_wbK.png                 [39m[1m[2m  749.09 kB[22m[1m[22m
+[2mdist/[22m[32massets/process-S8ngJ2BN.png                          [39m[1m[2m  764.07 kB[22m[1m[22m
+[2mdist/[22m[32massets/socialMedia-D193gUJj.png                      [39m[1m[2m  765.90 kB[22m[1m[22m
+[2mdist/[22m[32massets/ga4hero-Cs6CqYm0.png                          [39m[1m[2m  892.81 kB[22m[1m[22m
+[2mdist/[22m[32massets/ReadyToBuild-COanYFKD.png                     [39m[1m[2m  895.93 kB[22m[1m[22m
+[2mdist/[22m[32massets/blog7-Dqe9wauo.png                            [39m[1m[2m  918.29 kB[22m[1m[22m
+[2mdist/[22m[32massets/Choose-CrHmJgIt.png                           [39m[1m[2m  925.35 kB[22m[1m[22m
+[2mdist/[22m[32massets/blog10-D-yotP8Y.png                           [39m[1m[2m  936.85 kB[22m[1m[22m
+[2mdist/[22m[32massets/shopifyhero-CEzSCA3Z.png                      [39m[1m[2m  937.91 kB[22m[1m[22m
+[2mdist/[22m[32massets/guestpostinghero-DxArPxwH.png                 [39m[1m[2m  946.47 kB[22m[1m[22m
+[2mdist/[22m[32massets/Mobile-CE5i-yM6.png                           [39m[1m[2m  948.28 kB[22m[1m[22m
+[2mdist/[22m[32massets/ASO-BbhDryPD.png                              [39m[1m[2m  965.87 kB[22m[1m[22m
+[2mdist/[22m[32massets/education1-BR88dG0W.png                       [39m[1m[2m1,024.69 kB[22m[1m[22m
+[2mdist/[22m[32massets/Ecommerce-Bs0d7MQS.png                        [39m[1m[2m1,039.95 kB[22m[1m[22m
+[2mdist/[22m[32massets/WhyChooseAdkryoss-CHqA6N55.png                [39m[1m[2m1,087.86 kB[22m[1m[22m
+[2mdist/[22m[32massets/martechhero-Bw052LYB.png                      [39m[1m[2m1,092.53 kB[22m[1m[22m
+[2mdist/[22m[32massets/Herobg1-MqrUu8j-.jpg                          [39m[1m[2m1,127.41 kB[22m[1m[22m
+[2mdist/[22m[32massets/portfoliohero-Ccg2g82X.png                    [39m[1m[2m1,135.92 kB[22m[1m[22m
+[2mdist/[22m[32massets/ChooseAdkryoss-B9PmeB0P.png                   [39m[1m[2m1,175.53 kB[22m[1m[22m
+[2mdist/[22m[32massets/ORM-C5fvRmdi.png                              [39m[1m[2m1,186.02 kB[22m[1m[22m
+[2mdist/[22m[32massets/blog4-g6tmAcZV.png                            [39m[1m[2m1,196.11 kB[22m[1m[22m
+[2mdist/[22m[32massets/testimonialhero-BZNRfyGm.png                  [39m[1m[2m1,201.79 kB[22m[1m[22m
+[2mdist/[22m[32massets/digimark-GHOJRUJS.png                         [39m[1m[2m1,213.84 kB[22m[1m[22m
+[2mdist/[22m[32massets/technicalseohero-CkLvqQ47.png                 [39m[1m[2m1,227.06 kB[22m[1m[22m
+[2mdist/[22m[32massets/llmoptimizationhero-DsF_d6Mu.png              [39m[1m[2m1,294.93 kB[22m[1m[22m
+[2mdist/[22m[32massets/seoaudithero-Dcxfvc-Q.png                     [39m[1m[2m1,323.19 kB[22m[1m[22m
+[2mdist/[22m[32massets/ai-BPiBUkeF.png                               [39m[1m[2m1,388.76 kB[22m[1m[22m
+[2mdist/[22m[32massets/inboundmarketing-CtLMmnXE.png                 [39m[1m[2m1,412.13 kB[22m[1m[22m
+[2mdist/[22m[32massets/Agentic-BZxLdiou.png                          [39m[1m[2m1,441.44 kB[22m[1m[22m
+[2mdist/[22m[32massets/BestPlace-BcmM2boB.png                        [39m[1m[2m1,471.19 kB[22m[1m[22m
+[2mdist/[22m[32massets/Affiliate-BMmLOWFz.png                        [39m[1m[2m1,474.46 kB[22m[1m[22m
+[2mdist/[22m[32massets/blog5-C-gQJ0up.png                            [39m[1m[2m1,484.72 kB[22m[1m[22m
+[2mdist/[22m[32massets/Learning-CpF_BMfh.png                         [39m[1m[2m1,503.89 kB[22m[1m[22m
+[2mdist/[22m[32massets/casestudyhero-ByHGLhVR.png                    [39m[1m[2m1,512.40 kB[22m[1m[22m
+[2mdist/[22m[32massets/ecomarce-BR82uoSY.png                         [39m[1m[2m1,517.31 kB[22m[1m[22m
+[2mdist/[22m[32massets/HomeCRO-BIyWaBLK.png                          [39m[1m[2m1,522.35 kB[22m[1m[22m
+[2mdist/[22m[32massets/WhyPartner-BhXiBnck.png                       [39m[1m[2m1,552.79 kB[22m[1m[22m
+[2mdist/[22m[32massets/WhoWeAreLooking-BDw3Whh-.png                  [39m[1m[2m1,582.98 kB[22m[1m[22m
+[2mdist/[22m[32massets/WhoWeAre-DBbCzcWT.png                         [39m[1m[2m1,584.47 kB[22m[1m[22m
+[2mdist/[22m[32massets/seocopywritinghero-DsjxqEbM.png               [39m[1m[2m1,625.53 kB[22m[1m[22m
+[2mdist/[22m[32massets/DigitalMarketing-ELkrOtbb.png                 [39m[1m[2m1,654.25 kB[22m[1m[22m
+[2mdist/[22m[32massets/Growth-CirsjuYx.png                           [39m[1m[2m1,693.55 kB[22m[1m[22m
+[2mdist/[22m[32massets/blog8-CulZnoGo.png                            [39m[1m[2m1,720.12 kB[22m[1m[22m
+[2mdist/[22m[32massets/ecommercecrohero-BInMNJIf.png                 [39m[1m[2m1,730.02 kB[22m[1m[22m
+[2mdist/[22m[32massets/blog3-BCLVSUcm.png                            [39m[1m[2m1,740.73 kB[22m[1m[22m
+[2mdist/[22m[32massets/future-DeEaeuys.png                           [39m[1m[2m1,773.32 kB[22m[1m[22m
+[2mdist/[22m[32massets/blog1-DPW0C4C1.png                            [39m[1m[2m1,792.64 kB[22m[1m[22m
+[2mdist/[22m[32massets/seoresellerhero-Bq4OzgEx.png                  [39m[1m[2m1,792.67 kB[22m[1m[22m
+[2mdist/[22m[32massets/Approach-BPorwZ8V.png                         [39m[1m[2m1,797.84 kB[22m[1m[22m
+[2mdist/[22m[32massets/education-BSOyh9Lj.png                        [39m[1m[2m1,859.50 kB[22m[1m[22m
+[2mdist/[22m[32massets/e-commerce-KrtyjIav.png                       [39m[1m[2m1,902.12 kB[22m[1m[22m
+[2mdist/[22m[32massets/healthcare-NIGeYWK-.png                       [39m[1m[2m1,911.54 kB[22m[1m[22m
+[2mdist/[22m[32massets/saas-DQKcknAR.png                             [39m[1m[2m1,961.13 kB[22m[1m[22m
+[2mdist/[22m[32massets/OurHiringPhilosophy-CXmYu89Y.png              [39m[1m[2m1,966.84 kB[22m[1m[22m
+[2mdist/[22m[32massets/industryhealth-b5acHnvZ.png                   [39m[1m[2m1,973.14 kB[22m[1m[22m
+[2mdist/[22m[32massets/mail-C3-dHCfM.png                             [39m[1m[2m1,981.79 kB[22m[1m[22m
+[2mdist/[22m[32massets/digitalprhero-BLiOmpkE.png                    [39m[1m[2m2,010.69 kB[22m[1m[22m
+[2mdist/[22m[32massets/realestate-DeJC6wUR.png                       [39m[1m[2m2,047.32 kB[22m[1m[22m
+[2mdist/[22m[32massets/Youtube-DKvcoRlK.png                          [39m[1m[2m2,124.62 kB[22m[1m[22m
+[2mdist/[22m[32massets/finance-BG1-f5xP.png                          [39m[1m[2m2,136.30 kB[22m[1m[22m
+[2mdist/[22m[32massets/croservicehero-B1nb9znc.png                   [39m[1m[2m2,136.76 kB[22m[1m[22m
+[2mdist/[22m[32massets/mobile3-C-gutVHW.png                          [39m[1m[2m2,194.59 kB[22m[1m[22m
+[2mdist/[22m[32massets/localseohero-CljN1wR_.png                     [39m[1m[2m2,195.93 kB[22m[1m[22m
+[2mdist/[22m[32massets/vernacularhero-BtEN9YHI.png                   [39m[1m[2m2,253.42 kB[22m[1m[22m
+[2mdist/[22m[32massets/javascripthero-D2Yi33EA.png                   [39m[1m[2m2,553.66 kB[22m[1m[22m
+[2mdist/[22m[32massets/contactus-BYT8HYJ7.png                        [39m[1m[2m2,596.22 kB[22m[1m[22m
+[2mdist/[22m[32massets/Internship-D8D7Bmtd.png                       [39m[1m[2m2,810.13 kB[22m[1m[22m
+[2mdist/[22m[32massets/EcommerceD2-PWvImESQ.png                      [39m[1m[2m2,834.69 kB[22m[1m[22m
+[2mdist/[22m[32massets/D2Cecommercehero-CvP_3EDM.png                 [39m[1m[2m3,287.87 kB[22m[1m[22m
+[2mdist/[22m[32massets/blog2-mNmkcuZr.png                            [39m[1m[2m3,482.34 kB[22m[1m[22m
+[2mdist/[22m[32massets/ibphero-XwV6zC3y.png                          [39m[1m[2m3,664.90 kB[22m[1m[22m
+node.exe : [33m
+At line:1 char:1
++ & "C:\Program Files
+\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: ([33m:S   
+ tring) [], Remot    
+eException
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+(!) Some chunks are 
+larger than 500 kB 
+after minification. 
+Consider:
+- Using dynamic 
+import() to 
+code-split the 
+application
+- Use build.rollupOpt
+ions.output.manualChu
+nks to improve 
+chunking: https://rol
+lupjs.org/configurati
+on-options/#output-ma
+nualchunks
+- Adjust chunk size 
+limit for this 
+warning via build.chu
+nkSizeWarningLimit.[
+39m
+[2mdist/[22m[32massets/Rebranding_SocialMediahero-CDI51HOC.png       [39m[1m[2m3,707.99 kB[22m[1m[22m
+[2mdist/[22m[32massets/realestatesnapshot-CF2fujR8.png               [39m[1m[2m4,238.45 kB[22m[1m[22m
+[2mdist/[22m[32massets/realestatehero-DYUrQCSx.png                   [39m[1m[2m4,284.21 kB[22m[1m[22m
+[2mdist/[22m[32massets/D2Cfashionhero-BBOxDEoV.png                   [39m[1m[2m4,794.40 kB[22m[1m[22m
+[2mdist/[22m[32massets/B2Bsnapshot-Cc5p3x-J.png                      [39m[1m[2m5,291.73 kB[22m[1m[22m
+[2mdist/[22m[32massets/Worklifebalancesupport-CmmebQ59.png           [39m[1m[2m5,394.48 kB[22m[1m[22m
+[2mdist/[22m[32massets/educationhero-Nf5pWwgK.png                    [39m[1m[2m5,613.77 kB[22m[1m[22m
+[2mdist/[22m[32massets/B2Bhero-BS-4DYrI.png                          [39m[1m[2m6,060.03 kB[22m[1m[22m
+[2mdist/[22m[32massets/Rebranding_SocialMediasnapshot-C-WsElwk.png   [39m[1m[2m6,345.26 kB[22m[1m[22m
+[2mdist/[22m[32massets/D2Cecommercesnapshot-Dp-FmREu.png             [39m[1m[2m6,349.68 kB[22m[1m[22m
+[2mdist/[22m[32massets/WhyChooseUsforBFSIMarketing-B2ZADy0x.png      [39m[1m[2m6,473.99 kB[22m[1m[22m
+[2mdist/[22m[32massets/ContentMarketingThatBuildsTrust-CRgTZIMA.png  [39m[1m[2m6,763.98 kB[22m[1m[22m
+[2mdist/[22m[32massets/SocialMediaBrandAuthority-By9UiJ7Z.png        [39m[1m[2m7,004.19 kB[22m[1m[22m
+[2mdist/[22m[32massets/educationsnapshot-DReZiGuj.png                [39m[1m[2m7,005.72 kB[22m[1m[22m
+[2mdist/[22m[32massets/SEOforBFSIBrands-Dm82UEiR.png                 [39m[1m[2m7,145.76 kB[22m[1m[22m
+[2mdist/[22m[32massets/StartupsEntrepreneurs-CGSiCQnn.png            [39m[1m[2m7,580.05 kB[22m[1m[22m
+[2mdist/[22m[32massets/Structuredcareerprogression-CgszODXF.png      [39m[1m[2m7,720.29 kB[22m[1m[22m
+[2mdist/[22m[32massets/D2Cfashionsnapshot-CLzNKE1f.png               [39m[1m[2m8,658.43 kB[22m[1m[22m
+[2mdist/[22m[32massets/ITSaaS-CSmDEK0K.png                           [39m[1m[2m9,383.52 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-D5Ijtg1n.css                            [39m[1m[2m  173.09 kB[22m[1m[22m[2m Γöé gzip:  23.68 kB[22m
+[2mdist/[22m[36massets/index-Cm7jUVbT.js                             [39m[1m[33m2,385.58 kB[39m[22m[2m Γöé gzip: 764.86 kB[22m
+[32mΓ£ô built in 1m 8s[39m

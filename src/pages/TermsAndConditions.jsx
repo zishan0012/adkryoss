@@ -264,7 +264,7 @@ const TermsAndConditions = () => {
                                             <Globe size={24} />
                                         </div>
                                         <span className="font-bold text-lg mb-1">Website</span>
-                                        <a href="https://adkross.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">adkross.vercel.app</a>
+                                        <a href="http://adkryoss.com/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">adkryoss.com</a>
                                     </div>
                                 </div>
                             </div>
