@@ -189,6 +189,7 @@
 import React, { useRef, useLayoutEffect } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
+import video from "../../assets/video.mp4"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
  
 gsap.registerPlugin(ScrollTrigger);
@@ -425,7 +426,7 @@ const VideoSection = () => {
         >
           <video
             ref={videoRef}
-            src="https://www.vecteezy.com/video/20941259-digital-marketing-golden-text-with-top-flares-light"
+            src={video}
             controls
             autoPlay
             muted

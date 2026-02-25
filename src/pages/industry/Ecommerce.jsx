@@ -519,7 +519,7 @@ const Ecommerce = () => {
       </div>
 
       {/* Luxury & Lifestyle Brands */}
-      <div className="flex flex-col items-center bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+      <div className="flex flex-col items-center bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition lg:col-start-2">
         <img src={LuxuryLifestyleBrandsImage} alt="Luxury & Lifestyle Brands" className="mb-4" />
         <h3 className="text-xl font-semibold text-gray-800">Luxury & Lifestyle Brands</h3>
       </div>
@@ -535,6 +535,8 @@ const Ecommerce = () => {
 
 
 
+
+
 <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
   <div className="max-w-7xl mx-auto text-center">
     {/* Heading */}
@@ -546,39 +548,41 @@ const Ecommerce = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
       {/* Shopify */}
-      <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <img src={ShopifyImage} alt="Shopify" className="mb-4" />
-        <h3 className="text-xl font-semibold text-gray-800">Shopify</h3>
+      <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition h-50">
+        <img src={ShopifyImage} alt="Shopify" className="mb-4 h-30" />
+        <h3 className="text-xl font-bold text-gray-800 ">Shopify</h3>
       </div>
 
+  
+
       {/* WooCommerce */}
-      <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <img src={WooImage} alt="WooCommerce" className="mb-4" />
-        <h3 className="text-xl font-semibold text-gray-800">WooCommerce</h3>
+      <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition h-50">
+        <img src={WooImage} alt="WooCommerce" className="mb-4 h-30" />
+        <h3 className="text-xl font-bold text-gray-800">WooCommerce</h3>
       </div>
 
       {/* Magento */}
-      <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <img src={MazentoImage} alt="Magento" className="mb-4" />
-        <h3 className="text-xl font-semibold text-gray-800">Magento</h3>
+      <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition h-50">
+        <img src={MazentoImage} alt="Magento" className="mb-4 h-30" />
+        <h3 className="text-xl font-bold text-gray-800">Magento</h3>
       </div>
 
       {/* BigCommerce */}
-      <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <img src={BigImage} alt="BigCommerce" className="mb-4" />
-        <h3 className="text-xl font-semibold text-gray-800">BigCommerce</h3>
+      <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition h-50">
+        <img src={BigImage} alt="BigCommerce" className="mb-4 h-30" />
+        <h3 className="text-xl font-bold text-gray-800">BigCommerce</h3>
       </div>
 
       {/* Amazon Seller Central */}
-      <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <img src={AmazonImage} alt="Amazon Seller Central" className="mb-4" />
-        <h3 className="text-xl font-semibold text-gray-800">Amazon Seller Central</h3>
+      <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition h-50">
+        <img src={AmazonImage} alt="Amazon Seller Central" className="mb-4 h-30" />
+        <h3 className="text-xl font-bold text-gray-800">Amazon Seller Central</h3>
       </div>
 
       {/* Flipkart Seller Hub */}
-      <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <img src={FlipkartImage} alt="Flipkart Seller Hub" className="mb-4" />
-        <h3 className="text-xl font-semibold text-gray-800">Flipkart Seller Hub</h3>
+      <div className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition h-50">
+        <img src={FlipkartImage} alt="Flipkart Seller Hub" className="mb-4 h-30" />
+        <h3 className="text-xl font-bold text-gray-800">Flipkart Seller Hub</h3>
       </div>
 
     </div>

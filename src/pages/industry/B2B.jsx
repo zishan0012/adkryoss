@@ -739,6 +739,7 @@ const B2B = () => {
 
     {/* TECHNOLOGY GRID */}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+    
 
       {/* CARD */}
       <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
@@ -774,7 +775,7 @@ const B2B = () => {
       </div>
 
       {/* CARD */}
-      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300  ">
         <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path d="M12 6v6l4 2" />
           <circle cx="12" cy="12" r="10" />
@@ -785,7 +786,7 @@ const B2B = () => {
       </div>
 
       {/* CARD */}
-      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300">
+      <div className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 ">
         <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path d="M4 20V10M10 20V4M16 20v-6M22 20V14" />
         </svg>

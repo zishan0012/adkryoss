@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+
 import BFSIImage from "../../assets/BFSI.jpeg";
 import WhyChooseUsforBFSIMarketingImage from "../../assets/WhyChooseUsforBFSIMarketing.png"
 import ConversionRateOptimizationImage from "../../assets/ConversionRateOptimization.png"
@@ -9,6 +10,11 @@ import SEOforBFSIBrandsImage from "../../assets/SEOforBFSIBrands.png"
 import WhyBFSINeedsSpecializedDigitalMarketingImage from "../../assets/WhyBFSINeedsSpecializedDigitalMarketing.png"
 
 const BFSI = () => {
+
+
+
+
+
   const navigate = useNavigate();
     return (
         <>
@@ -77,6 +83,7 @@ const BFSI = () => {
 
     {/* LEFT CONTENT */}
     <div className="text-left text-white">
+  
         <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
         BFSI Digital Marketing Services
       </h2>
@@ -98,6 +105,7 @@ const BFSI = () => {
 
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end">
+    
        <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
         <img
           src={BFSIImage}
@@ -113,6 +121,7 @@ const BFSI = () => {
         
 
 <section className="bg-gradient-to-r from-gray-50 to-blue-50 py-20 px-6">
+
   <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
     {/* LEFT CONTENT */}
@@ -939,3 +948,28 @@ const BFSI = () => {
 };
 
 export default BFSI;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
