@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import javascripthero from "../../../assets/SEO/javascripthero.png";
+import javascriptseo from "../../../assets/SEO/javascript/javascriptseo.jpg";
 import {
     Code2,
     Search,
@@ -152,18 +153,18 @@ const JavascriptSEO = () => {
                         </div> */}
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
@@ -201,8 +202,12 @@ const JavascriptSEO = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="relative">
-                            <img src="https://www.techmagnate.com/wp-content/uploads/2026/01/Java-Script-SEO-Strategy.webp" alt="JS SEO Strategy" className="rounded-[30px] w-full shadow-[0_20px_40px_rgba(0,0,0,0.1)]" />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm translate-x-20">
+                            <img
+                                src={javascriptseo}
+                                alt="js seo strategy"
+                                className="max-w-[350px] w-full rounded-2xl drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
+                            />
                         </div>
                     </div>
                 </div>
@@ -211,7 +216,7 @@ const JavascriptSEO = () => {
 
 
             {/* Approach Section */}
-            <section className="py-20 bg-[#f8fafc]">
+            <section id="services" className="py-20 bg-[#f8fafc]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-5 text-[#0f172a]">

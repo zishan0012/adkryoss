@@ -28,7 +28,8 @@ import {
     Film,
     DollarSign
 } from 'lucide-react';
-import vernacularseo from '../../../assets/SEO/vernacularhero.png';
+import vernacularhero from '../../../assets/SEO/vernacularhero.png';
+import vernacularseo from "../../../assets/SEO/vernacular/vernacularseo.jpg";
 const VernacularSEOServices = () => {
     const vernacularFramework = [
         {
@@ -141,24 +142,24 @@ const VernacularSEOServices = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
-                                src={vernacularseo}
+                                src={vernacularhero}
                                 alt="Vernacular SEO Services"
                                 className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
                             />
@@ -188,15 +189,19 @@ const VernacularSEOServices = () => {
                                 Vernacular SEO bridges this gap by optimizing your digital presence for multiple regional languages — ensuring discoverability, cultural relevance, and conversion power.
                             </p>
                         </div>
-                        <div className="relative group overflow-hidden rounded-[30px]">
-                            <img src="https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/vernacular-seo-side.webp" alt="Market Opportunity" className="w-full h-auto transition-transform duration-500 group-hover:scale-105" />
+                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm translate-x-20">
+                            <img
+                                src={vernacularseo}
+                                alt="Marketing opportunity"
+                                className="max-w-[350px] w-full rounded-2xl drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
+                            />
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Framework Section */}
-            <section className="py-24 bg-slate-50">
+            <section id="services" className="py-24 bg-slate-50">
                 <div className="container">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5">

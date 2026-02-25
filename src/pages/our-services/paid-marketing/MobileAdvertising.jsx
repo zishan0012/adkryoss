@@ -113,7 +113,7 @@ const industries = [
     image: finance,
   },
 ];
- 
+
 const differentiators = [
   {
     title: "Revenue-Focused Strategy",
@@ -136,7 +136,7 @@ const differentiators = [
       "Clear dashboards, real metrics, and performance clarity without inflated numbers.",
   },
 ];
- 
+
 const platforms = [
   {
     icon: Smartphone,
@@ -192,84 +192,79 @@ const faqs = [
       "Absolutely. With intent-based targeting, remarketing funnels, and mobile-optimized landing experiences, mobile advertising works effectively for B2B lead generation.",
   },
 ];
- const MobileAdvertising = () => {
+const MobileAdvertising = () => {
   const [openIndex, setOpenIndex] = useState(null);
- 
+
   return (
     <>
       <section
-        className="relative bg-cover bg-center bg-no-repeat py-20 md:py-24 flex items-center text-white"
+        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
         style={{
           backgroundImage:
-            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp%27)%22"
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
         }}
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-blue-900/85"></div>
- 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 xl:px-28 grid md:grid-cols-2 items-center gap-12 w-full">
- 
+        {/* <div className="absolute inset-0 bg-blue-900/85"></div> */}
+
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
           {/* LEFT CONTENT */}
-          <div className="text-left max-w-[600px]">
-            <h1 className="text-[32px] md:text-[48px] font-bold mb-4 leading-tight">
+          <div className="text-left relative z-10 text-white leading-tight">
+
+            <h1 className="text-[28px] md:text-[36px] lg:text-[48px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
               Mobile Advertising
               <span className="block text-blue-300">
                 Services That Convert
               </span>
             </h1>
- 
+
             <h3 className="text-[20px] md:text-[24px] font-semibold mb-6 text-blue-200">
               Reach. Engage. Convert — On Every Screen.
             </h3>
- 
- 
-            <p className="text-[16px] md:text-[18px] text-white/90 leading-relaxed mb-8">
+
+            <p className="text-[16px] md:text-[18px] mb-8 leading-[1.8] text-white/90 max-w-xl">
               Your audience lives on mobile. Your growth should too.
               Drive real business impact with performance-focused mobile
               advertising strategies designed to convert micro-moments
               into measurable revenue.
             </p>
-            <div className="flex flex-col sm:flex-row gap-5">
-              <Link to="/contact">
-                <button
-                  className="bg-white text-blue-700 px-7 py-3 rounded-full font-semibold
-            hover:bg-blue-100 hover:shadow-xl transition-all duration-300"
-                >
-                  Speak to a Mobile Ads Expert →
-                </button>
-              </Link>
- 
-              <button
-                className="border border-white/70 text-white px-7 py-3 rounded-full font-semibold
-          hover:bg-white hover:text-blue-700 transition-all duration-300"
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <Link
+                to="/contact"
+                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
               >
-                Our Mobile Advertising Services →
-              </button>
+                Speak to Our Expert →
+              </Link>
+              <Link
+                to="#services"
+                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Our Services →
+              </Link>
             </div>
           </div>
- 
+
           {/* RIGHT IMAGE */}
           <div className="flex justify-center md:justify-end">
-            <div className="w-full max-w-[450px] h-[260px] sm:h-[320px] md:h-[360px] flex items-center justify-center">
-              <img
-                src={mobile}
-                alt="Mobile Advertising Services"
-                className="max-w-full max-h-full object-contain rounded-xl shadow-xl"
-              />
-            </div>
+            <img
+              src={mobile}
+              alt="Mobile Advertising Services"
+              className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
+            />
           </div>
- 
+
         </div>
       </section>
- 
+
       <section className="bg-white pt-24 md:pt-28 lg:pt-32 pb-32 md:pb-36 lg:pb-40">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* LEFT CONTENT */}
           <div className="space-y-6 text-left">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
               Why Mobile Advertising is Non-Negotiable in 2026
             </h2>
- 
+
             <p className="text-gray-700 text-base md:text-lg">
               Smartphones are no longer a secondary device — they are the{" "}
               <span className="font-semibold text-gray-900">
@@ -279,11 +274,11 @@ const faqs = [
               From app browsing to impulse buying, every interaction creates a
               conversion opportunity.
             </p>
- 
+
             <p className="text-gray-700">
               Mobile advertising today is powered by:
             </p>
- 
+
             <ul className="space-y-2 text-gray-700 list-disc list-inside">
               <li>AI-driven audience segmentation</li>
               <li>Predictive analytics & behavioral targeting</li>
@@ -291,7 +286,7 @@ const faqs = [
               <li>Performance-driven bidding models</li>
               <li>Privacy-compliant tracking ecosystems</li>
             </ul>
- 
+
             <p className="text-gray-700">
               <span className="font-semibold text-gray-900">
                 Adkryoss managed by Clink Consultancy Services Private Limited
@@ -302,7 +297,7 @@ const faqs = [
               </span>
             </p>
           </div>
- 
+
           {/* RIGHT IMAGE */}
           <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
             <img
@@ -314,8 +309,8 @@ const faqs = [
         </div>
       </section>
       <div className="h-16 bg-gray-50"></div>
-      <section className="bg-gray-50 pt-28 md:pt-32 lg:pt-36 pb-24 md:pb-28 lg:pb-32 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 xl:px-28">
+      <section id="services" className="bg-gray-50 pt-28 md:pt-32 lg:pt-36 pb-24 md:pb-28 lg:pb-32 border-t border-gray-200">
+        <div className="container">
           {/* Heading */}
           <div className="max-w-3xl mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
@@ -326,7 +321,7 @@ const faqs = [
               attention into measurable business growth.
             </p>
           </div>
- 
+
           {/* Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10">
             {mobileServices.map((service, index) => {
@@ -350,24 +345,24 @@ const faqs = [
                     >
                       <Icon className="w-6 h-6 text-teal-700 group-hover:text-white transition" />
                     </div>
- 
+
                     {/* Title */}
                     <h3 className="text-lg font-semibold text-gray-900 mb-4 group-hover:text-white transition">
                       {service.title}
                     </h3>
- 
+
                     {/* Description */}
                     <p className="text-sm text-gray-600 leading-relaxed mb-5 group-hover:text-white/90 transition">
                       {service.desc}
                     </p>
- 
+
                     {/* Points */}
                     <ul className="space-y-2 text-sm text-gray-600 group-hover:text-white/90 transition">
                       {service.points.map((point, i) => (
                         <li key={i}>• {point}</li>
                       ))}
                     </ul>
- 
+
                     {/* Extra Info */}
                     {service.bestFor && (
                       <p className="text-sm mt-5 text-gray-700 group-hover:text-white/90 transition">
@@ -375,7 +370,7 @@ const faqs = [
                         {service.bestFor}
                       </p>
                     )}
- 
+
                     {service.note && (
                       <p className="text-sm mt-5 text-gray-700 group-hover:text-white/90 transition">
                         {service.note}
@@ -388,18 +383,18 @@ const faqs = [
           </div>
         </div>
       </section>
- <section className="bg-gray-70 py-16 md:py-20">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="bg-gray-70 py-16 md:py-20">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* LEFT CONTENT */}
           <div className="px-6 lg:pl-20 xl:pl-28 text-left">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Our Approach: Strategy → Execution → Scale
             </h2>
- 
+
             <p className="text-lg md:text-xl font-semibold text-gray-800 mb-8">
               We don’t run campaigns. We build performance ecosystems.
             </p>
- 
+
             <div className="space-y-6">
               <div>
                 <h3 className="text-blue-700 font-semibold">
@@ -409,7 +404,7 @@ const faqs = [
                   Data research, competitor benchmarking, user intent mapping.
                 </p>
               </div>
- 
+
               <div>
                 <h3 className="text-blue-700 font-semibold">
                   2. Conversion-Focused Media Planning
@@ -418,7 +413,7 @@ const faqs = [
                   Budget allocation across platforms based on predicted ROI.
                 </p>
               </div>
- 
+
               <div>
                 <h3 className="text-blue-700 font-semibold">
                   3. Creative Built for Mobile Psychology
@@ -428,7 +423,7 @@ const faqs = [
                   formats.
                 </p>
               </div>
- 
+
               <div>
                 <h3 className="text-blue-700 font-semibold">
                   4. Smart Bidding & AI Optimization
@@ -438,7 +433,7 @@ const faqs = [
                   performance.
                 </p>
               </div>
- 
+
               <div>
                 <h3 className="text-blue-700 font-semibold">
                   5. Transparent Reporting & Analytics
@@ -449,7 +444,7 @@ const faqs = [
                 </p>
               </div>
             </div>
- 
+
             <p className="text-gray-700 text-lg mt-10 max-w-3xl">
               <span className="font-semibold text-gray-900">
                 Adkryoss managed by Clink Consultancy Services Private Limited
@@ -458,7 +453,7 @@ const faqs = [
               <span className="font-semibold"> not assumptions.</span>
             </p>
           </div>
- 
+
           {/* RIGHT IMAGE */}
           <div className="flex justify-end pr-6 lg:pr-12 xl:pr-20 mt-10 lg:mt-0">
             <img
@@ -471,11 +466,11 @@ const faqs = [
       </section>
       <div className="bg-gray-100 h-6"></div>
       <section className="bg-gray-100 py-16 md:py-20">
-        <div className="w-full px-6 lg:px-20 xl:px-28 text-left">
+        <div className="container text-left">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-12">
             Industries We Serve
           </h2>
- 
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
               <div
@@ -491,7 +486,7 @@ const faqs = [
                     className="w-full h-48 object-fit group-hover:scale-105 transition duration-500"
                   />
                 </div>
- 
+
                 {/* Title */}
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900">
@@ -503,13 +498,13 @@ const faqs = [
           </div>
         </div>
       </section>
- 
+
       <section className="bg-white py-16 md:py-20">
-        <div className="w-full px-6 lg:px-20 xl:px-28 text-left">
+        <div className="container text-left">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-14">
             What Makes Us Different
           </h2>
- 
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {differentiators.map((item, index) => (
               <div
@@ -522,19 +517,19 @@ const faqs = [
               >
                 {/* Top Accent Line */}
                 <div className="h-1 w-12 bg-blue-700 mb-6 rounded-full"></div>
- 
+
                 {/* Content */}
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   {item.title}
                 </h3>
- 
+
                 <p className="text-gray-600 leading-relaxed">
                   {item.description}
                 </p>
               </div>
             ))}
           </div>
- 
+
           <p className="text-lg text-gray-700 mt-16 max-w-4xl">
             We don’t focus on vanity metrics.{" "}
             <span className="font-semibold text-gray-900">
@@ -545,15 +540,15 @@ const faqs = [
       </section>
       <div className="bg-gray-200 h-8"></div>
       <section className="bg-gray-200 py-16 md:py-20">
-        <div className="w-full px-6 lg:px-20 xl:px-28 text-left">
+        <div className="container text-left">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-14">
             Technologies & Platforms We Leverage
           </h2>
- 
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {platforms.map((item, index) => {
               const Icon = item.icon;
- 
+
               return (
                 <div
                   key={index}
@@ -567,11 +562,11 @@ const faqs = [
                   <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-6">
                     <Icon className="w-6 h-6 text-green-600 group-hover:text-blue-700 transition" />
                   </div>
- 
+
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
                     {item.title}
                   </h3>
- 
+
                   <p className="text-gray-600 text-sm leading-relaxed">
                     {item.description}
                   </p>
@@ -581,25 +576,16 @@ const faqs = [
           </div>
         </div>
       </section>
- 
-      <section className="bg-blue-50 py-24 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 xl:px-28">
-          {/* Heading */}
-          <div className="max-w-3xl mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Clear answers to help you understand how our mobile advertising
-              strategies drive measurable business growth.
-            </p>
-          </div>
- 
-          {/* FAQ Container */}
-          <div className="bg-white rounded-3xl shadow-lg divide-y divide-gray-200 overflow-hidden">
+      <section className="py-20 bg-blue-50">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="divide-y divide-blue-200">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
- 
+
               return (
                 <div
                   key={index}
@@ -613,7 +599,7 @@ const faqs = [
                     <span className="text-lg md:text-xl font-semibold text-gray-900 pr-6 group-hover:text-blue-700 transition">
                       {faq.question}
                     </span>
- 
+
                     <span className="flex-shrink-0">
                       {isOpen ? (
                         <X className="w-5 h-5 text-blue-600 transition-transform duration-300 rotate-90" />
@@ -622,7 +608,7 @@ const faqs = [
                       )}
                     </span>
                   </button>
- 
+
                   {/* Answer */}
                   {isOpen && (
                     <div className="mt-5 text-gray-700 text-base leading-relaxed max-w-4xl">
@@ -635,21 +621,21 @@ const faqs = [
           </div>
         </div>
       </section>
- 
+
       <section className="bg-linear-to-r from-blue-700 to-blue-900 py-20">
         <div className="max-w-5xl mx-auto px-6 text-center text-white">
           <h2 className="text-white md:text-4xl font-bold mb-6">
             Ready to Dominate the Mobile Ecosystem?
           </h2>
- 
+
           <p className="text-lg text-blue-100 mb-4">
             Your customers are already scrolling.
           </p>
- 
+
           <p className="text-white font-semibold mb-8">
             Let’s make sure they stop for you.
           </p>
- 
+
           <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-10">
             Partner with{" "}
             <span className="font-semibold text-white">
@@ -657,7 +643,7 @@ const faqs = [
             </span>{" "}
             and turn mobile attention into measurable business growth.
           </p>
- 
+
           <Link to="/contact">
             <button
               className="
@@ -675,5 +661,5 @@ const faqs = [
     </>
   );
 };
- 
+
 export default MobileAdvertising;

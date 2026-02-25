@@ -101,7 +101,7 @@ const Portfolio = () => {
         { step: "04", title: "Analyze & Optimize", desc: "Continuous monitoring and A/B testing to refine performance and reduce costs." },
         { step: "05", title: "Scale & Dominate", desc: "Ramping up successful funnels to maximize reach and market share." }
     ];
-const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(null);
     return (
         <div className="bg-white">
             <section
@@ -121,7 +121,16 @@ const [activeIndex, setActiveIndex] = useState(null);
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white/90">
                             We don’t just run campaigns — we build scalable digital growth engines. Explore how strategy, creativity, and performance marketing come together to deliver measurable business impact.
                         </p>
+                        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                            <Link
+                                to="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </Link>
+                        </div>
                     </div>
+
                     <div className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
@@ -134,7 +143,7 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section>
 
             {/* Our Work Philosophy */}
-            < section className="py-24 bg-white" >
+            <section className="py-24 bg-white" >
                 <div className="container px-6 mx-auto">
                     <div className="max-w-3xl mx-auto text-center mb-16">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-6">Our Work Philosophy</h2>
@@ -156,34 +165,34 @@ const [activeIndex, setActiveIndex] = useState(null);
                             // </div>
 
 
-<div
-  key={i}
-  className="group relative overflow-hidden p-6 rounded-24 
+                            <div
+                                key={i}
+                                className="group relative overflow-hidden p-6 rounded-24 
              border border-[#e2e8f0] text-center cursor-pointer"
->
+                            >
 
-  {/* Sliding Background */}
-  <span className="absolute inset-0 bg-blue-600 
+                                {/* Sliding Background */}
+                                <span className="absolute inset-0 bg-blue-600 
                    -translate-x-full 
                    group-hover:translate-x-0 
                    transition-transform duration-500 ease-out" />
 
-  {/* Content */}
-  <div className="relative z-10 transition-colors duration-300 
+                                {/* Content */}
+                                <div className="relative z-10 transition-colors duration-300 
                   text-[#0f172a] group-hover:text-white">
 
-    <div className="mb-4 flex justify-center 
+                                    <div className="mb-4 flex justify-center 
                     transition-colors duration-300">
-      {React.cloneElement(item.icon, { 
-        className: "text-blue-600 group-hover:text-white" 
-      })}
-    </div>
+                                        {React.cloneElement(item.icon, {
+                                            className: "text-blue-600 group-hover:text-white"
+                                        })}
+                                    </div>
 
-    <h4 className="text-[16px] font-bold">
-      {item.title}
-    </h4>
-  </div>
-</div>
+                                    <h4 className="text-[16px] font-bold">
+                                        {item.title}
+                                    </h4>
+                                </div>
+                            </div>
 
 
                         ))}
@@ -197,7 +206,7 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* Industries We’ve Empowered */}
-            < section className="py-24 bg-[#f8fafc]" >
+            <section className="py-24 bg-[#f8fafc]" >
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-4">Industries We’ve Empowered</h2>
@@ -220,7 +229,7 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* Case Studies */}
-            < section className="py-24 bg-white" >
+            <section className="py-24 bg-white" >
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-4">Featured Case Studies</h2>
@@ -267,61 +276,61 @@ const [activeIndex, setActiveIndex] = useState(null);
 
 
 
-{caseStudies.map((caseStudy, i) => {
-  const isActive = activeIndex === i;
-  const isInactive = activeIndex !== null && activeIndex !== i;
+                        {caseStudies.map((caseStudy, i) => {
+                            const isActive = activeIndex === i;
+                            const isInactive = activeIndex !== null && activeIndex !== i;
 
-  return (
-    <motion.div
-      key={i}
-      onMouseEnter={() => setActiveIndex(i)}
-      onMouseLeave={() => setActiveIndex(null)}
-      animate={{
-        scale: isActive ? 1.08 : 1,
-        opacity: isInactive ? 0.5 : 1,
-        y: isActive ? -10 : 0,
-      }}
-      transition={{ duration: 0.4 }}
-      className="relative bg-white rounded-32 border border-[#e2e8f0] 
+                            return (
+                                <motion.div
+                                    key={i}
+                                    onMouseEnter={() => setActiveIndex(i)}
+                                    onMouseLeave={() => setActiveIndex(null)}
+                                    animate={{
+                                        scale: isActive ? 1.08 : 1,
+                                        opacity: isInactive ? 0.5 : 1,
+                                        y: isActive ? -10 : 0,
+                                    }}
+                                    transition={{ duration: 0.4 }}
+                                    className="relative bg-white rounded-32 border border-[#e2e8f0] 
                  overflow-hidden hover:shadow-2xl 
                  transition-all duration-500"
-      style={{ zIndex: isActive ? 20 : 1 }}
-    >
-     <div className="p-8 md:p-12">
-                                    <div className="flex items-center gap-4 mb-6">
-                                        <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-xl">
-                                            {i + 1}
+                                    style={{ zIndex: isActive ? 20 : 1 }}
+                                >
+                                    <div className="p-8 md:p-12">
+                                        <div className="flex items-center gap-4 mb-6">
+                                            <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-xl">
+                                                {i + 1}
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-[#0f172a] group-hover:text-[#0066cc] transition-colors">{caseStudy.title}</h3>
                                         </div>
-                                        <h3 className="text-2xl font-bold text-[#0f172a] group-hover:text-[#0066cc] transition-colors">{caseStudy.title}</h3>
-                                    </div>
-                                    <div className="space-y-6 mb-8">
-                                        <div>
-                                            <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600">Objective</span>
-                                            <p className="text-[#0f172a] font-medium mt-1">{caseStudy.objective}</p>
+                                        <div className="space-y-6 mb-8">
+                                            <div>
+                                                <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600">Objective</span>
+                                                <p className="text-[#0f172a] font-medium mt-1">{caseStudy.objective}</p>
+                                            </div>
+                                            <div>
+                                                <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600">Strategy</span>
+                                                <p className="text-[#0f172a] font-medium mt-1">{caseStudy.strategy}</p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600">Strategy</span>
-                                            <p className="text-[#0f172a] font-medium mt-1">{caseStudy.strategy}</p>
+                                        <div className="bg-blue-50 p-6 rounded-24 mb-6">
+                                            <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600 mb-4 block">Impact</span>
+                                            <ul className="space-y-3">
+                                                {caseStudy.impact.map((point, idx) => (
+                                                    <li key={idx} className="flex gap-3 text-[15px] font-bold text-[#0f172a]">
+                                                        <CheckCircle2 size={18} className="text-green-500 shrink-0 mt-0.5" />
+                                                        {point}
+                                                    </li>
+                                                ))}
+                                            </ul>
                                         </div>
+                                        <p className="text-[#64748b] leading-relaxed text-[15px]">
+                                            {caseStudy.desc}
+                                        </p>
                                     </div>
-                                    <div className="bg-blue-50 p-6 rounded-24 mb-6">
-                                        <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600 mb-4 block">Impact</span>
-                                        <ul className="space-y-3">
-                                            {caseStudy.impact.map((point, idx) => (
-                                                <li key={idx} className="flex gap-3 text-[15px] font-bold text-[#0f172a]">
-                                                    <CheckCircle2 size={18} className="text-green-500 shrink-0 mt-0.5" />
-                                                    {point}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                    <p className="text-[#64748b] leading-relaxed text-[15px]">
-                                        {caseStudy.desc}
-                                    </p>
-                                </div>
-    </motion.div>
-  );
-})}
+                                </motion.div>
+                            );
+                        })}
 
 
 
@@ -332,7 +341,7 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* Working Model */}
-            < section className="py-24 bg-[#0f172a] text-white" >
+            <section className="py-24 bg-[#0f172a] text-white" >
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-white mb-4">Our Working Model</h2>
@@ -360,7 +369,7 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* Tools & Technologies We Leverage */}
-            < section className="py-24 bg-white" >
+            <section className="py-24 bg-white" >
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-4">Tools & Technologies We Leverage</h2>
@@ -387,7 +396,7 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* What Makes Our Portfolio Different? */}
-            < section className="py-24 bg-[#0f172a] text-white" >
+            <section className="py-24 bg-[#0f172a] text-white" >
                 <div className="container px-6 mx-auto">
                     <div className="max-w-4xl mx-auto text-center mb-16">
                         <h2 className="text-[32px] md:text-[42px] font-bold mb-6 text-white">What Makes Our Portfolio Different?</h2>
@@ -413,7 +422,7 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* Results That Matter */}
-            < section className="py-24 bg-[#f8fafc]" >
+            <section className="py-24 bg-[#f8fafc]" >
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
@@ -456,7 +465,7 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* Let’s Build the Next Success Story */}
-            < section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white" >
+            <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white" >
                 <div className="container px-6 mx-auto">
                     <h2 className="text-[32px] md:text-[48px] font-bold mb-6 text-white leading-tight">
                         Let’s Build the Next Success Story

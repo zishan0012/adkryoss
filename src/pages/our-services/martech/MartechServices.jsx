@@ -151,18 +151,18 @@ const MartechServices = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
@@ -217,7 +217,7 @@ const MartechServices = () => {
             </section>
 
             {/* Our Martech Capabilities */}
-            <section className="py-24 bg-slate-900 text-white">
+            <section id="services" className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto text-center mb-16">
                     <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our Martech Capabilities</h2>
                     <div className="w-24 h-2 bg-blue-500 mx-auto rounded-full"></div>

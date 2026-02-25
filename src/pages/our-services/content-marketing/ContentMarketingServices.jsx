@@ -171,8 +171,8 @@ const ContentMarketingServices = () => {
                         {/* 
                         { CTA Buttons — uncomment when ready to use} */}
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white 
                                 text-black font-semibold
                                 px-8 py-4 rounded-full
@@ -180,10 +180,10 @@ const ContentMarketingServices = () => {
                                 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
+                            </Link>
 
-                            <a
-                                href="#services"
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500
                                 text-white
                                 px-8 py-4 rounded-full font-semibold
@@ -191,7 +191,7 @@ const ContentMarketingServices = () => {
                                  hover:text-black  hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
 
 
@@ -301,7 +301,7 @@ const ContentMarketingServices = () => {
             </section>
 
             {/* Content Types Section */}
-            <section className="py-24 bg-slate-900 text-white">
+            <section id="services" className="py-24 bg-slate-900 text-white">
                 <div className="container">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold mb-5 leading-tight text-white">Types of Content We Specialize In</h2>

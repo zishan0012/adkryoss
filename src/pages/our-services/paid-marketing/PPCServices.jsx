@@ -139,77 +139,55 @@ const industries = [
   },
 ];
 const PPCServices = () => {
-    return (
-        <>
-        {/* Hero section */}
-        {/* <section className="bg-linear-to-r from-blue-700 to-blue-900 py-16 md:py-24"> */}
- <section
-        className="relative flex items-center min-h-[70vh] bg-cover bg-center"
+  return (
+    <>
+      {/* Hero section */}
+      <section
+        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
         style={{
-          backgroundImage:
-            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+          backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
         }}
       >
-
-
-  <div className="w-full px-6 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center text-white">
-
-
-          <div className="space-y-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+          <div className="text-left relative z-10 text-white">
+            <h1 className="text-[28px] md:text-[36px] lg:text-[48px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
               Increase ROI with India’s Leading PPC Agency
             </h1>
 
-            <p className="text-blue-100 text-lg max-w-xl">
+            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white max-w-xl">
               Partner with us, the leading PPC company in India, for campaigns that
               deliver measurable results, qualified leads, and higher ROI. Backed
               by data-driven insights and years of expertise, we help brands grow
               through transparent, ROI-focused advertising that builds long-term
               trust and performance.
             </p>
-            {/* <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <button
-                className="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold
-              hover:bg-blue-100 hover:shadow-lg transition"
-              >
-                Speak to an Expert →
-              </button>
-
-              <button
-                className="border border-white/70 px-6 py-3 rounded-full font-semibold
-              hover:bg-white hover:text-blue-700 transition"
-              >
-                Our Services →
-              </button>
-            </div> */}
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
               >
                 Speak to Our Expert →
-              </a>
-              <a
-                href="#services"
+              </Link>
+              <Link
+                to="#services"
                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
               >
                 Our Services →
-              </a>
+              </Link>
             </div>
           </div>
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center md:justify-end relative z-10">
             <img
               src={heroImage}
               alt="PPC Services"
-              className="h-96 w-auto object-contain"
+              className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
             />
           </div>
-
         </div>
       </section>
       {/*why ppc*/}
       <section className="py-16 md:py-24 bg-white">
-        <div className="w-full px-6 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -260,7 +238,7 @@ const PPCServices = () => {
       </section>
       {/*Approach */}
       <section className="bg-blue-50 py-16 md:py-24">
-        <div className="w-full px-6 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
 
           <div className="space-y-6">
@@ -313,8 +291,8 @@ const PPCServices = () => {
         </div>
       </section>
       {/*Services*/}
-      <section className="bg-white py-16 md:py-24">
-        <div className="w-full px-6 lg:px-20 xl:px-28">
+      <section id="services" className="bg-white py-16 md:py-24">
+        <div className="container">
           <div className="max-w-3xl mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our PPC Services
@@ -366,7 +344,7 @@ const PPCServices = () => {
       </section>
       {/* Platform */}
       <section className="bg-blue-50 py-16 md:py-24">
-        <div className="w-full px-6 lg:px-20 xl:px-28">
+        <div className="container">
           <div className="max-w-3xl mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Platforms We Work On
@@ -403,7 +381,7 @@ const PPCServices = () => {
       </section>
       {/* Difference */}
       <section className="bg-white py-12 lg:py-16">
-        <div className="w-full pl-6 pr-6 lg:pr-16">
+        <div className="container">
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -475,183 +453,89 @@ const PPCServices = () => {
       </section>
 
       {/*Process */}
-      <section className="bg-gray-50">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[650px]">
+      <section className="bg-gray-50 py-16 md:py-20 lg:py-24">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* LEFT SIDE - FULL IMAGE */}
-          <div className="relative h-[400px] lg:h-auto">
-            <img
-              src={Process}
-              alt="Our PPC Process"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
+            {/* LEFT SIDE - IMAGE */}
+            <div className="relative">
+              <img
+                src={Process}
+                alt="Our PPC Process"
+                className="w-full h-auto rounded-3xl shadow-xl"
+              />
+            </div>
 
-          {/* RIGHT SIDE - CONTENT (NO PADDING ON RIGHT EDGE) */}
-          <div className="flex items-center">
-            <div className="pl-10 pr-0 py-16 lg:py-20 w-full">
+            {/* RIGHT SIDE - CONTENT */}
+            <div className="flex items-center">
+              <div className="w-full">
 
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
-                Our PPC Process
-              </h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
+                  Our PPC Process
+                </h2>
 
-              <div className="space-y-8">
+                <div className="space-y-8">
 
-                <div>
-                  <h3 className="text-lg font-semibold text-blue-700 mb-1">
-                    1. Discovery & Goal Mapping
-                  </h3>
-                  <p className="text-gray-700">
-                    Understanding your business objectives and defining KPIs.
-                  </p>
-                </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-blue-700 mb-1">
+                      1. Discovery & Goal Mapping
+                    </h3>
+                    <p className="text-gray-700">
+                      Understanding your business objectives and defining KPIs.
+                    </p>
+                  </div>
 
-                <div>
-                  <h3 className="text-lg font-semibold text-blue-700 mb-1">
-                    2. Research & Planning
-                  </h3>
-                  <p className="text-gray-700">
-                    Keyword research, competitor analysis, and campaign architecture.
-                  </p>
-                </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-blue-700 mb-1">
+                      2. Research & Planning
+                    </h3>
+                    <p className="text-gray-700">
+                      Keyword research, competitor analysis, and campaign architecture.
+                    </p>
+                  </div>
 
-                <div>
-                  <h3 className="text-lg font-semibold text-blue-700 mb-1">
-                    3. Campaign Setup
-                  </h3>
-                  <p className="text-gray-700">
-                    Ad creation, tracking implementation, and smart bidding configuration.
-                  </p>
-                </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-blue-700 mb-1">
+                      3. Campaign Setup
+                    </h3>
+                    <p className="text-gray-700">
+                      Ad creation, tracking implementation, and smart bidding configuration.
+                    </p>
+                  </div>
 
-                <div>
-                  <h3 className="text-lg font-semibold text-blue-700 mb-1">
-                    4. Optimization & Scaling
-                  </h3>
-                  <p className="text-gray-700">
-                    Continuous testing, budget reallocation, and conversion optimization.
-                  </p>
-                </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-blue-700 mb-1">
+                      4. Optimization & Scaling
+                    </h3>
+                    <p className="text-gray-700">
+                      Continuous testing, budget reallocation, and conversion optimization.
+                    </p>
+                  </div>
 
-                <div>
-                  <h3 className="text-lg font-semibold text-blue-700 mb-1">
-                    5. Reporting & Insights
-                  </h3>
-                  <p className="text-gray-700">
-                    Data-backed insights with actionable recommendations.
-                  </p>
+                  <div>
+                    <h3 className="text-lg font-semibold text-blue-700 mb-1">
+                      5. Reporting & Insights
+                    </h3>
+                    <p className="text-gray-700">
+                      Data-backed insights with actionable recommendations.
+                    </p>
+                  </div>
+
                 </div>
 
               </div>
-
             </div>
-          {/* ))} */}
+          </div>
         </div>
-
-      </div>
-
-      {/* RIGHT SIDE IMAGE */}
-      <div className="flex justify-end">
-        <img
-          src={Output}
-          alt="PPC Strategy"
-          className="w-full max-w-lg rounded-2xl shadow-xl object-cover"
-        />
-      </div>
-
-    
-</section>
-
-
-
-
-{/*Process */}
-  {/* <section className="bg-gray-50">
-  <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[650px]">
-
-   
-    <div className="relative h-[400px] w-[900px] lg:h-auto">
-      <img
-        src={Process}
-        alt="Our PPC Process"
-        className="absolute inset-0 w-full h-full object-contain"
-      />
-    </div>
-
-    <div className="flex items-center">
-      <div className="pl-40 pr-0 py-16 lg:py-20 w-full">
-
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
-          Our PPC Process
-        </h2>
-
-        <div className="space-y-8">
-
-          <div>
-            <h3 className="text-lg font-semibold text-blue-700 mb-1">
-              1. Discovery & Goal Mapping
-            </h3>
-            <p className="text-gray-700">
-              Understanding your business objectives and defining KPIs.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-blue-700 mb-1">
-              2. Research & Planning
-            </h3>
-            <p className="text-gray-700">
-              Keyword research, competitor analysis, and campaign architecture.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-blue-700 mb-1">
-              3. Campaign Setup
-            </h3>
-            <p className="text-gray-700">
-              Ad creation, tracking implementation, and smart bidding configuration.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-blue-700 mb-1">
-              4. Optimization & Scaling
-            </h3>
-            <p className="text-gray-700">
-              Continuous testing, budget reallocation, and conversion optimization.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-blue-700 mb-1">
-              5. Reporting & Insights
-            </h3>
-            <p className="text-gray-700">
-              Data-backed insights with actionable recommendations.
-            </p>
-
-          </div>
-
-        </div>
-
-        </div>
-
-  </div>
-  </div>
-      </section> */}
-
-
-
-
+      </section>
 
       {/*Results */}
       <section className="bg-gradient-to-b from-slate-50 to-white py-20">
 
-        <div className="w-full">
+        <div className="container">
 
           {/* HEADING */}
-          <div className="pl-12 pr-8 lg:pr-24 mb-16">
+          <div className="mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Results That Drive Real Business Growth
             </h2>
@@ -665,7 +549,7 @@ const PPCServices = () => {
 
 
           {/* CARDS */}
-          <div className="pl-12 pr-8 lg:pr-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {[
               {
@@ -735,7 +619,7 @@ const PPCServices = () => {
 
 
           {/* CLOSING STATEMENT */}
-          <div className="pl-12 pr-8 lg:pr-24 mt-20">
+          <div className="mt-20">
             <p className="text-gray-800 text-xl max-w-4xl">
               Through strategic planning and continuous optimization,
               <span className="font-semibold text-gray-900">

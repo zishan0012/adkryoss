@@ -96,6 +96,29 @@ const GooglePenaltyRecovery = () => {
         "Backlink spike from unknown sources"
     ];
 
+    const faqs = [
+        {
+            q: "What is a Google Penalty?",
+            a: "A Google penalty is a negative impact on a website's search rankings based on updates to Google's search algorithms or manual review. It's intended to lower the rankings of sites that violate search quality guidelines."
+        },
+        {
+            q: "How do I know if my site has been penalized?",
+            a: "Signs include a sudden and sharp drop in organic traffic, your website disappearing from search results for your brand name, and manual action notifications in Google Search Console."
+        },
+        {
+            q: "Can you recover from a Manual Action?",
+            a: "Yes. Manual actions require identifying the violation, fixing it across the entire site, and submitting a reconsideration request to Google with documentation of the cleanup."
+        },
+        {
+            q: "How long does the recovery process take?",
+            a: "Recovery timelines vary. Minor algorithmic issues can take 4-8 weeks, while manual actions or severe link penalties can take 2-6 months depending on the extent of the damage and cleanup required."
+        },
+        {
+            q: "Do I need to delete my whole website and start over?",
+            a: "Rarely. Most penalties can be recovered from by pruning toxic content, removing bad backlinks, and improving overall site quality and authority (E-E-A-T)."
+        }
+    ];
+
     return (
         <div className="bg-white">
             {/* Hero Section */}
@@ -124,18 +147,18 @@ const GooglePenaltyRecovery = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
@@ -200,7 +223,7 @@ const GooglePenaltyRecovery = () => {
             </section>
 
             {/* Framework Section */}
-            <section id="audit" className="py-20 bg-white">
+            <section id="services" className="py-20 bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-5 text-[#0f172a]">
