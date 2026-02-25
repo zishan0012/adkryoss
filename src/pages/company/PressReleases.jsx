@@ -2,6 +2,11 @@ import React from 'react';
 import PressReleaseImage from "../../assets/PressRelease.jpeg";
 import ChooseImage from "../../assets/Choose.png";
 import ApproachImage from "../../assets/Approach.png";
+import MediaOutreachCoverageImage from "../../assets/MediaOutreachCoverage.png"
+import PerformanceReportingImage from "../../assets/PerformanceReporting.png"
+import ReputationManagementImage from "../../assets/ReputationManagement.png"
+import StrategicPRPlanningImage from "../../assets/StrategicPRPlanning.png"
+import ThoughtLeadershipImage from "../../assets/ThoughtLeadership.png"
 
 const PressReleases = () => {
     return (
@@ -271,27 +276,27 @@ const PressReleases = () => {
         {
           title: "Strategic PR Planning",
           desc: "Data-driven story angles aligned with your brand positioning and business goals.",
-          image: "",
+          image: StrategicPRPlanningImage,
         },
         {
           title: "Media Outreach & Coverage",
           desc: "Targeted journalist connections to secure high-impact media placements.",
-          image: "",
+          image: MediaOutreachCoverageImage,
         },
         {
           title: "Reputation Management",
           desc: "Proactive monitoring and narrative control to protect brand credibility.",
-          image: "",
+          image: ReputationManagementImage,
         },
         {
           title: "Thought Leadership",
           desc: "Positioning founders and executives as industry authorities.",
-          image: "",
+          image: ThoughtLeadershipImage,
         },
         {
           title: "Performance Reporting",
           desc: "Transparent analytics and measurable KPIs to track PR impact.",
-          image: "",
+          image: PerformanceReportingImage,
         },
       ].map((item, index) => (
        
