@@ -322,7 +322,7 @@ const JavascriptSEO = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
-                            JavaScript SEO Services<span className="terminal-cursor">_</span>
+                            JavaScript SEO Services
                         </h1>
                         <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             Make Your Dynamic Website Search-Ready
