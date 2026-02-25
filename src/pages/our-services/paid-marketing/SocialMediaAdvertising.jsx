@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import socialmedia from "../../../assets/socialmedia.jpg"
 import {
   Facebook,
@@ -115,7 +116,7 @@ const industries = [
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
   },
 ];
- 
+
 const services = [
   { title: "Paid Social Strategy Development", icon: Target },
   { title: "Campaign Setup & Management", icon: Settings },
@@ -160,119 +161,91 @@ const point = [
   "Performance marketing science",
   "Continuous experimentation",
 ];
- 
- 
+
+
 const SocialMediaAdvertising = () => {
   return (
     <>
       <section
-        className="relative py-16 md:py-20 lg:py-24 text-white bg-cover bg-center"
+        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
         style={{
           backgroundImage:
-            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp%27)%22"
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
         }}
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-blue-900/85"></div>
- 
-        <div className="relative w-full px-4 sm:px-6 lg:px-20 xl:px-28">
- 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
- 
-            {/* LEFT CONTENT */}
-            <div className="space-y-6 text-left">
- 
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                Social Media Advertising Services
-              </h1>
- 
-              <p className="text-lg md:text-xl font-semibold text-blue-100">
-                Drive Revenue. Not Just Reach.
-              </p>
- 
-              <p className="text-blue-100 text-base md:text-lg max-w-xl">
-                Turn attention into action with data-driven, performance-focused
-                social media advertising campaigns built to scale your business
-                faster and smarter.
-              </p>
- 
-              <p className="text-white font-semibold text-base md:text-lg">
-                Paid Social That Performs — Across Platforms, Audiences & Funnel Stages.
-              </p>
-              {/*
-        <div className="flex flex-col sm:flex-row gap-4 pt-2">
-          <button
-            className="
-              w-full sm:w-auto
-              bg-white text-blue-700 px-6 py-3 rounded-full font-semibold
-              hover:bg-blue-100 hover:shadow-lg transition
-            "
-          >
-            Launch Paid Social Campaigns →
-          </button>
- 
-          <button
-            className="
-              w-full sm:w-auto
-              border border-white/70 px-6 py-3 rounded-full font-semibold
-              hover:bg-white hover:text-blue-700 transition
-            "
-          >
-            Explore Our Social Strategy →
-          </button>
-        </div> */}
- 
-              <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                <a
-                  href="/contact"
-                  className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
-                >
-                  Speak to Our Expert →
-                </a>
-                <a
-                  href="#services"
-                  className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
-                >
-                  Our Services →
-                </a>
-              </div>
+        {/* <div className="absolute inset-0 bg-blue-900/85"></div> */}
+
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+          {/* LEFT CONTENT */}
+          <div className="text-left relative z-10 text-white leading-tight">
+
+            <h1 className="text-[28px] md:text-[36px] lg:text-[48px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
+              Social Media Advertising Services
+            </h1>
+
+            <p className="text-[20px] md:text-[24px] font-semibold mb-6 text-blue-100">
+              Drive Revenue. Not Just Reach.
+            </p>
+
+            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-blue-100 max-w-xl">
+              Turn attention into action with data-driven, performance-focused
+              social media advertising campaigns built to scale your business
+              faster and smarter.
+            </p>
+
+            <p className="text-white font-semibold text-base md:text-lg mb-8">
+              Paid Social That Performs — Across Platforms, Audiences & Funnel Stages.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <Link
+                to="/contact"
+                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Speak to Our Expert →
+              </Link>
+              <Link
+                to="#services"
+                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Our Services →
+              </Link>
             </div>
- 
-            {/* RIGHT IMAGE */}
-            <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
-              <img
-                src={socialmedia}
-                alt="Social Media Advertising"
-                className="w-200 h-100 object-contain"
-              />
-            </div>
- 
           </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center md:justify-end">
+            <img
+              src={socialmedia}
+              alt="Social Media Advertising"
+              className="max-w-[200px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
+            />
+          </div>
+
         </div>
       </section>
- 
+
       <section className="bg-white py-16 md:py-20">
- 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
- 
+        <div className="container grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
           {/* LEFT CONTENT */}
           <div className="space-y-6 text-left">
- 
+
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
               Why Social Media Advertising Matters Today
             </h2>
- 
+
             <p className="text-base md:text-lg text-gray-700">
               Organic reach is shrinking. Competition is rising. Audiences are overloaded.
             </p>
- 
+
             <p className="text-base md:text-lg text-gray-700">
               Smart businesses win by combining{" "}
               <span className="font-semibold text-gray-900">
                 precision targeting, creative storytelling, and performance optimization.
               </span>
             </p>
- 
+
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
               <span className="font-semibold text-gray-900">
                 Adkryoss managed by Clink Consultancy Services Private Limited
@@ -281,9 +254,9 @@ const SocialMediaAdvertising = () => {
               Our approach connects your brand with the right audience at the right
               moment — and converts that attention into measurable growth.
             </p>
- 
+
           </div>
- 
+
           {/* RIGHT IMAGE */}
           <div className="flex justify-center lg:justify-end">
             <img
@@ -292,25 +265,24 @@ const SocialMediaAdvertising = () => {
               className="w-full max-w-md lg:max-w-lg rounded-2xl shadow-lg object-cover"
             />
           </div>
- 
+
         </div>
- 
+
       </section>
- 
-      <section className="py-16 md:py-20 bg-gray-50">
-        <div className="w-full px-6 sm:px-8 lg:px-16">
- 
+
+      <section id="services" className="py-16 md:py-20 bg-gray-50">
+        <div className="container">
           {/* Heading */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-10 md:mb-14">
             Platforms We Advertise On
           </h2>
- 
+
           {/* Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
- 
+
             {platforms.map((item, index) => {
               const Icon = item.icon;
- 
+
               return (
                 <div
                   key={index}
@@ -323,7 +295,7 @@ const SocialMediaAdvertising = () => {
             "
                 >
                   <div>
- 
+
                     {/* Icon */}
                     <div
                       className="
@@ -336,7 +308,7 @@ const SocialMediaAdvertising = () => {
                     >
                       <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-teal-700 group-hover:text-white" />
                     </div>
- 
+
                     {/* Title */}
                     <h3
                       className="
@@ -347,7 +319,7 @@ const SocialMediaAdvertising = () => {
                     >
                       {item.title}
                     </h3>
- 
+
                     {/* Description */}
                     <p
                       className="
@@ -358,7 +330,7 @@ const SocialMediaAdvertising = () => {
                     >
                       {item.description}
                     </p>
- 
+
                     {/* Best For */}
                     <p
                       className="
@@ -371,30 +343,28 @@ const SocialMediaAdvertising = () => {
                         {item.bestFor}
                       </span>
                     </p>
- 
+
                   </div>
                 </div>
               );
             })}
- 
+
           </div>
         </div>
       </section>
- 
-<section className="py-16 md:py-20 bg-gray-100">
-        <div className="w-full px-6 sm:px-8 lg:px-16">
- 
+      <section className="py-16 md:py-20 bg-gray-100">
+        <div className="container">
           {/* Heading */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-10 md:mb-14">
             Our Approach: Performance-First Social Strategy
           </h2>
- 
+
           {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
- 
+
             {approach.map((item, index) => {
               const Icon = item.icon;
- 
+
               return (
                 <div
                   key={index}
@@ -417,7 +387,7 @@ const SocialMediaAdvertising = () => {
                     >
                       <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-teal-700 group-hover:text-white" />
                     </div>
- 
+
                     <span
                       className="
                   text-xs sm:text-sm font-semibold text-teal-700
@@ -427,7 +397,7 @@ const SocialMediaAdvertising = () => {
                       {item.step}
                     </span>
                   </div>
- 
+
                   {/* Title */}
                   <h3
                     className="
@@ -437,7 +407,7 @@ const SocialMediaAdvertising = () => {
                   >
                     {item.title}
                   </h3>
- 
+
                   {/* Description */}
                   <p
                     className="
@@ -450,30 +420,29 @@ const SocialMediaAdvertising = () => {
                 </div>
               );
             })}
- 
+
           </div>
- 
+
         </div>
       </section>
- 
+
       <section className="py-16 md:py-20 bg-gray-50">
-        <div className="w-full px-6 sm:px-8 lg:px-16">
- 
+        <div className="container">
           {/* Heading */}
           <div className="mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
               What Makes Our Paid Social Different
             </h2>
- 
+
             <p className="text-base sm:text-lg text-gray-600 mt-4">
               We don’t run ads.
               <span className="text-gray-900 font-semibold"> We build revenue systems.</span>
             </p>
           </div>
- 
+
           {/* Horizontal Cards */}
           <div className="space-y-6">
- 
+
             {points.map((item, index) => (
               <div
                 key={index}
@@ -495,7 +464,7 @@ const SocialMediaAdvertising = () => {
               object-cover
             "
                 />
- 
+
                 {/* Text Right */}
                 <div className="p-6 flex items-center">
                   <p className="text-sm sm:text-base font-medium text-gray-800 leading-relaxed">
@@ -504,19 +473,18 @@ const SocialMediaAdvertising = () => {
                 </div>
               </div>
             ))}
- 
+
           </div>
- 
+
         </div>
       </section>
- 
+
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto">
- 
+        <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-14">
             Industries We Serve
           </h2>
- 
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
               <div
@@ -536,7 +504,7 @@ const SocialMediaAdvertising = () => {
                     className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
                   />
                 </div>
- 
+
                 {/* Title */}
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900">
@@ -546,21 +514,20 @@ const SocialMediaAdvertising = () => {
               </div>
             ))}
           </div>
- 
+
         </div>
       </section>
- 
+
       <section className="py-24 bg-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
- 
+        <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
             Our Social Media Advertising Services Include
           </h2>
- 
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-14">
             {services.map((service, index) => {
               const Icon = service.icon;
- 
+
               return (
                 <div
                   key={index}
@@ -580,7 +547,7 @@ const SocialMediaAdvertising = () => {
                   >
                     <Icon className="w-6 h-6 text-teal-700 group-hover:text-white" />
                   </div>
- 
+
                   <h3
                     className="
                     text-sm font-semibold text-gray-900
@@ -593,7 +560,7 @@ const SocialMediaAdvertising = () => {
               );
             })}
           </div>
- 
+
           <p className="max-w-5xl text-lg text-gray-700 leading-relaxed">
             <span className="font-semibold text-gray-900">
               Adkryoss managed by Clink Consultancy Services Private Limited
@@ -602,66 +569,65 @@ const SocialMediaAdvertising = () => {
             every campaign contributes directly to pipeline growth, revenue
             generation, or customer acquisition.
           </p>
- 
+
         </div>
       </section>
       <section className="py-24 md:py-28 bg-white">
-  <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 xl:px-28">
- 
-    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-16">
-      Performance Metrics We Optimize For
-    </h2>
- 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-      {metrics.map((metric, index) => {
-        const Icon = metric.icon;
- 
-        return (
-          <div
-            key={index}
-            className="
+        <div className="container">
+
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-16">
+            Performance Metrics We Optimize For
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {metrics.map((metric, index) => {
+              const Icon = metric.icon;
+
+              return (
+                <div
+                  key={index}
+                  className="
               group border border-gray-200 rounded-2xl p-8
               transition-all duration-300
               hover:-translate-y-1 hover:shadow-xl hover:bg-teal-700
             "
-          >
-            <div
-              className="
+                >
+                  <div
+                    className="
                 w-12 h-12 rounded-full bg-gray-100
                 flex items-center justify-center mb-6
                 transition group-hover:bg-white/20
               "
-            >
-              <Icon className="w-6 h-6 text-teal-700 group-hover:text-white transition" />
-            </div>
- 
-            <h3 className="text-lg font-semibold text-gray-900 group-hover:text-white transition">
-              {metric.title}
-            </h3>
+                  >
+                    <Icon className="w-6 h-6 text-teal-700 group-hover:text-white transition" />
+                  </div>
+
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-white transition">
+                    {metric.title}
+                  </h3>
+                </div>
+              );
+            })}
           </div>
-        );
-      })}
-    </div>
- 
-    <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
-      Our reporting goes beyond vanity metrics — we focus on{" "}
-      <span className="font-semibold text-gray-900">
-        numbers that directly impact your bottom line.
-      </span>
-    </p>
- 
-  </div>
-</section>
- 
+
+          <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
+            Our reporting goes beyond vanity metrics — we focus on{" "}
+            <span className="font-semibold text-gray-900">
+              numbers that directly impact your bottom line.
+            </span>
+          </p>
+
+        </div>
+      </section>
+
       <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
- 
+        <div className="container grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
           {/* LEFT SIDE */}
-          <div className="pl-6 lg:pl-16">
+          <div className="text-left">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Why Choose Us
             </h2>
- 
+
             <p className="text-lg text-gray-700 mt-6 max-w-md">
               We don’t rely on isolated tactics.
               <br />
@@ -670,9 +636,9 @@ const SocialMediaAdvertising = () => {
               </span>
             </p>
           </div>
- 
+
           {/* RIGHT SIDE */}
-          <div className="lg:col-span-2 pr-6 lg:pr-16 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {points.map((point, index) => (
               <div
                 key={index}
@@ -692,24 +658,24 @@ const SocialMediaAdvertising = () => {
               </div>
             ))}
           </div>
- 
+
         </div>
       </section>
- 
+
       <section className="bg-gradient-to-r from-blue-700 to-blue-900 py-20 md:py-24">
         <div className="max-w-5xl mx-auto px-6 text-center text-white">
- 
+
           <h2 className="text-white sm:text-3xl md:text-4xl font-bold mb-6">
             Let’s Scale Your Social Revenue
           </h2>
- 
+
           <p className="text-base sm:text-lg text-blue-100 mb-6">
             Your audience is already online. <br className="hidden sm:block" />
             <span className="font-semibold text-white">
               The question is — are you reaching them effectively?
             </span>
           </p>
- 
+
           <p className="text-base sm:text-lg text-blue-100 max-w-4xl mx-auto mb-8">
             Partner with{" "}
             <span className="font-semibold text-white">
@@ -718,14 +684,14 @@ const SocialMediaAdvertising = () => {
             to build high-performing social advertising campaigns that deliver
             measurable growth.
           </p>
- 
+
           <p className="text-white sm:text-xl font-semibold mb-8">
             Ready to launch performance-driven paid social campaigns? <br className="hidden sm:block" />
             <span className="text-blue-200">
               Let’s build your next growth engine.
             </span>
           </p>
- 
+
           <button
             className="
         bg-white text-blue-700 font-semibold
@@ -736,14 +702,13 @@ const SocialMediaAdvertising = () => {
           >
             Start Paid Social Growth →
           </button>
- 
+
         </div>
       </section>
- 
+
     </>
   );
 };
- 
+
 export default SocialMediaAdvertising;
- 
- 
+

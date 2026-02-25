@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import shopifyhero from "../../../assets/martech/shopifyhero.png";
 import {
     ShoppingCart,
@@ -30,7 +32,231 @@ import {
     PenTool
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const ShopifyCRO = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whyTitleRef = useRef(null);
+    const whyCardsRef = useRef([]);
+    const approachCardsRef = useRef([]);
+    const diffCardsRef = useRef([]);
+    const serviceTagsRef = useRef([]);
+    const industryTagsRef = useRef([]);
+    const impactBoxRef = useRef(null);
+    const impactItemsRef = useRef([]);
+    const frameworkBoxRef = useRef(null);
+    const frameworkStepsRef = useRef([]);
+    const toolsBoxRef = useRef(null);
+    const toolsTagsRef = useRef([]);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Rapid Zoom
+            gsap.from(heroContentRef.current, {
+                scale: 1.2,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+            gsap.from(heroImageRef.current, {
+                x: 100,
+                scale: 0.8,
+                opacity: 0,
+                duration: 1.2,
+                delay: 0.2,
+                ease: "back.out(1.7)"
+            });
+
+            // Why Section - Bouncy Stagger
+            gsap.from(whyTitleRef.current, {
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: whyTitleRef.current,
+                    start: "top 85%"
+                }
+            });
+            whyCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    scale: 0.5,
+                    opacity: 0,
+                    duration: 0.7,
+                    delay: i * 0.1,
+                    ease: "elastic.out(1, 0.5)",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Approach - Diagonal Reveal
+            approachCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    x: (i % 3 - 1) * 50,
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%"
+                    }
+                });
+            });
+
+            // Differentiators
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Services Tags - Sequential Pop
+            serviceTagsRef.current.forEach((tag, i) => {
+                gsap.from(tag, {
+                    scale: 0,
+                    opacity: 0,
+                    duration: 0.4,
+                    delay: i * 0.05,
+                    scrollTrigger: {
+                        trigger: tag,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Industries & Impact
+            industryTagsRef.current.forEach((tag, i) => {
+                gsap.from(tag, {
+                    x: -20,
+                    opacity: 0,
+                    duration: 0.4,
+                    delay: i * 0.05,
+                    scrollTrigger: {
+                        trigger: tag,
+                        start: "top 95%"
+                    }
+                });
+            });
+            gsap.from(impactBoxRef.current, {
+                scale: 0.9,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: impactBoxRef.current,
+                    start: "top 85%"
+                }
+            });
+            impactItemsRef.current.forEach((item, i) => {
+                gsap.from(item, {
+                    x: 30,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: 0.5 + i * 0.1,
+                    scrollTrigger: {
+                        trigger: impactBoxRef.current,
+                        start: "top 85%"
+                    }
+                });
+            });
+
+            // Framework
+            gsap.from(frameworkBoxRef.current, {
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: frameworkBoxRef.current,
+                    start: "top 80%"
+                }
+            });
+            frameworkStepsRef.current.forEach((step, i) => {
+                gsap.from(step, {
+                    x: -50,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.15,
+                    scrollTrigger: {
+                        trigger: step,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Tools
+            toolsBoxRef.current.childNodes.forEach((tool, i) => {
+                gsap.from(tool, {
+                    scale: 0.8,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: tool,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Final CTA
+            gsap.from(ctaRef.current, {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ctaRef.current,
+                    start: "top 85%"
+                }
+            });
+
+            // Floating hero effect
+            gsap.to(heroImageRef.current, {
+                y: -10,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            scale: isEnter ? 1.05 : 1,
+            backgroundColor: isEnter ? "rgba(59, 130, 246, 0.05)" : "white",
+            borderColor: isEnter ? "rgba(59, 130, 246, 0.4)" : "rgba(241, 245, 249, 1)",
+            duration: 0.3
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                scale: isEnter ? 1.2 : 1,
+                rotation: isEnter ? 15 : 0,
+                duration: 0.3
+            });
+        }
+    };
+
+    const handleDarkHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            scale: isEnter ? 1.05 : 1,
+            backgroundColor: isEnter ? "rgba(255, 255, 255, 0.1)" : "rgba(255, 255, 255, 0.05)",
+            duration: 0.3
+        });
+    };
+
     const approach = [
         {
             title: "1. Conversion Audit & Data Intelligence",
@@ -175,7 +401,7 @@ const ShopifyCRO = () => {
     ];
 
     return (
-        <div className="bg-white text-slate-900 overflow-hidden">
+        <div ref={pageRef} className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -185,45 +411,39 @@ const ShopifyCRO = () => {
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10 animate-fade-in-up text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             Shopify CRO Services
                         </h1>
-                        <h2 className="text-[32px] font-medium mb-6 text-white">
+                        <h2 className="text-[32px] font-medium mb-6 text-white leading-tight">
                             Turn More Traffic Into Revenue
                         </h2>
                         <div className="space-y-4 mb-8">
-                            <p className="text-[16px] md:text-[18px] mb-6 font-semibold text-white leading-relaxed">
+                            <p className="text-[16px] md:text-[18px] mb-6 font-semibold text-white leading-relaxed text-justify px-1">
                                 High traffic. Low conversions. That’s where growth gets stuck.
                             </p>
-                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium opacity-95">
+                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium opacity-95 text-justify px-1">
                                 We transform your Shopify store into a high-performing sales engine with data-driven CRO strategies, behavioral insights, and continuous experimentation. At Adkryoss managed by <span className="font-semibold ">Clink Consultancy Services Private Limited</span>, we deliver measurable revenue lift.
                             </p>
                         </div>
-                        <div className="flex flex-wrap gap-4">
-                            {/* <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
-                                <Zap className="text-blue-400" size={24} />
-                                <span className="font-semibold text-white text-sm tracking-widest uppercase">Optimize. Test. Scale. Repeat.</span>
-                            </div> */}
-                        </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={shopifyhero}
@@ -239,17 +459,17 @@ const ShopifyCRO = () => {
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight tracking-tight">
+                            <h2 ref={whyTitleRef} className="text-[36px] font-bold text-slate-900 mb-8 leading-tight tracking-tight">
                                 Why Shopify CRO Matters
                             </h2>
                             <div className="space-y-6">
-                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium text-justify">
                                     Running ads and driving traffic is only half the battle. If your Shopify store isn’t optimized for conversion, you’re leaking revenue every single day.
                                 </p>
-                                <div className="p-8 bg-white border-l-8 border-blue-600 rounded-r-2xl shadow-sm leading-relaxed text-slate-700 font-medium italic">
+                                <div className="p-8 bg-white border-l-8 border-blue-600 rounded-r-2xl shadow-sm leading-relaxed text-slate-700 font-medium italic text-justify px-6">
                                     "At Adkryoss managed by <span className="font-semibold text-blue-600 underline">Clink Consultancy Services Private Limited</span>, we approach Shopify CRO as a science, not a design tweak."
                                 </div>
-                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium mt-6">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium mt-6 text-justify">
                                     We combine analytics, psychology, UX intelligence, and A/B experimentation to build conversion-focused digital storefronts.
                                 </p>
                             </div>
@@ -261,8 +481,14 @@ const ShopifyCRO = () => {
                                 { title: "Checkout Success", icon: <CheckCircle2 /> },
                                 { title: "Revenue Growth", icon: <RotateCcw /> }
                             ].map((item, index) => (
-                                <div key={index} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center gap-4 text-center group hover:shadow-xl hover:-translate-y-2 transition-all">
-                                    <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                <div
+                                    key={index}
+                                    ref={el => whyCardsRef.current[index] = el}
+                                    className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center gap-4 text-center group hover:shadow-xl hover:-translate-y-2 transition-all cursor-pointer"
+                                    onMouseEnter={(e) => handleHover(e, true)}
+                                    onMouseLeave={(e) => handleHover(e, false)}
+                                >
+                                    <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all card-icon">
                                         {item.icon}
                                     </div>
                                     <h3 className="font-semibold text-slate-900 leading-tight">{item.title}</h3>
@@ -277,22 +503,28 @@ const ShopifyCRO = () => {
             <section className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto text-center mb-16">
                     <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our Shopify CRO Approach</h2>
-                    <p className="text-blue-200/80 max-w-2xl mx-auto font-medium mb-10">We don’t believe in random “best practices.” We build structured, insight-driven frameworks that maximize performance.</p>
+                    <p className="text-blue-200/80 max-w-2xl mx-auto font-medium mb-10 text-center">We don’t believe in random “best practices.” We build structured, insight-driven frameworks that maximize performance.</p>
                     <div className="w-24 h-2 bg-blue-500 mx-auto rounded-full"></div>
                 </div>
                 <div className="container px-6 mx-auto flex flex-wrap justify-center gap-10">
                     {approach.map((item, index) => (
-                        <div key={index} className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group flex flex-col w-full md:w-[calc(50%-20px)] lg:w-[calc(33.33%-27px)]">
-                            <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
+                        <div
+                            key={index}
+                            ref={el => approachCardsRef.current[index] = el}
+                            onMouseEnter={(e) => handleDarkHover(e, true)}
+                            onMouseLeave={(e) => handleDarkHover(e, false)}
+                            className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group flex flex-col w-full md:w-[calc(50%-20px)] lg:w-[calc(33.33%-27px)] cursor-pointer"
+                        >
+                            <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block card-icon">
                                 {item.icon}
                             </div>
-                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
+                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight leading-tight">
                                 {item.title}
                             </h3>
                             <p className="text-blue-200/80 mb-6 font-medium italic">"{item.desc}"</p>
                             <div className="space-y-3 flex-grow">
                                 {item.points.map((point, idx) => (
-                                    <div key={idx} className="flex items-start gap-3 text-sm text-white/80">
+                                    <div key={idx} className="flex items-start gap-3 text-sm text-white/80 group-hover:translate-x-1 transition-transform">
                                         <CheckCircle2 size={16} className="text-blue-400 mt-1 shrink-0" />
                                         <span>{point}</span>
                                     </div>
@@ -304,14 +536,18 @@ const ShopifyCRO = () => {
             </section>
 
             {/* What Makes Us Different */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-24 bg-slate-50 text-center">
                 <div className="container px-6 mx-auto">
-                    <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight">
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight px-1">
                         What Makes Our Shopify CRO Different?
                     </h2>
                     <div className="flex flex-wrap justify-center gap-8">
                         {differentiators.map((item, index) => (
-                            <div key={index} className="bg-white p-10 rounded-3xl border border-slate-100 flex flex-col items-center text-center gap-6 group hover:shadow-2xl hover:-translate-y-2 transition-all w-full md:w-[calc(50%-16px)] lg:w-[calc(33.33%-22px)]">
+                            <div
+                                key={index}
+                                ref={el => diffCardsRef.current[index] = el}
+                                className="bg-white p-10 rounded-3xl border border-slate-100 flex flex-col items-center text-center gap-6 group hover:shadow-2xl hover:-translate-y-2 transition-all w-full md:w-[calc(50%-16px)] lg:w-[calc(33.33%-22px)] cursor-default"
+                            >
                                 <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
                                     {item.icon}
                                 </div>
@@ -325,18 +561,22 @@ const ShopifyCRO = () => {
             </section>
 
             {/* Shopify CRO Services We Offer */}
-            <section className="py-24 bg-white">
+            <section id="services" className="py-24 bg-white text-center">
                 <div className="container px-6 mx-auto">
-                    <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight">
+                    <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight px-1">
                         Shopify CRO Services We Offer
                     </h2>
                     <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
                         {services.map((service, index) => (
-                            <div key={index} className="flex items-center gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100 group hover:bg-blue-50 hover:border-blue-100 transition-all w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)]">
+                            <div
+                                key={index}
+                                ref={el => serviceTagsRef.current[index] = el}
+                                className="flex items-center gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100 group hover:bg-blue-50 hover:border-blue-100 transition-all w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] cursor-default"
+                            >
                                 <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-black shrink-0">
                                     {index + 1}
                                 </div>
-                                <span className="text-[17px] font-semibold text-slate-800 tracking-tight">{service}</span>
+                                <span className="text-[17px] font-semibold text-slate-800 tracking-tight text-left">{service}</span>
                             </div>
                         ))}
                     </div>
@@ -353,16 +593,24 @@ const ShopifyCRO = () => {
                             <p className="text-blue-200/80 mb-10 font-medium">We optimize Shopify stores across high-growth categories:</p>
                             <div className="flex flex-wrap gap-4">
                                 {industries.map((item, index) => (
-                                    <div key={index} className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-black font-semibold transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1">
+                                    <div
+                                        key={index}
+                                        ref={el => industryTagsRef.current[index] = el}
+                                        className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-black font-semibold transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1 cursor-default"
+                                    >
                                         {item}
                                     </div>
                                 ))}
                             </div>
-                            <div className="mt-16 bg-white/5 p-10 rounded-[40px] border border-white/10 shadow-2xl">
+                            <div ref={impactBoxRef} className="mt-16 bg-white/5 p-10 rounded-[40px] border border-white/10 shadow-2xl">
                                 <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight text-center">Impact You Can Expect</h2>
                                 <div className="space-y-6">
                                     {impact.map((item, index) => (
-                                        <div key={index} className="flex items-center gap-5 group">
+                                        <div
+                                            key={index}
+                                            ref={el => impactItemsRef.current[index] = el}
+                                            className="flex items-center gap-5 group"
+                                        >
                                             <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold group-hover:scale-110 transition-transform">
                                                 ✔
                                             </div>
@@ -375,29 +623,33 @@ const ShopifyCRO = () => {
                         </div>
                         {/* Execution Framework */}
                         <div className="flex flex-col gap-12">
-                            <div className="bg-white/5 p-10 rounded-[40px] border border-white/10 shadow-2xl">
+                            <div ref={frameworkBoxRef} className="bg-white/5 p-10 rounded-[40px] border border-white/10 shadow-2xl">
                                 <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">Our CRO Execution Framework</h2>
                                 <div className="space-y-8">
                                     {steps.map((step, index) => (
-                                        <div key={index} className="flex gap-6 items-start group">
+                                        <div
+                                            key={index}
+                                            ref={el => frameworkStepsRef.current[index] = el}
+                                            className="flex gap-6 items-start group"
+                                        >
                                             <div className="text-blue-400 font-semibold text-lg py-2 min-w-[100px] uppercase tracking-wider">Step {index + 1}</div>
                                             <div className="flex-1 border-l-2 border-white/10 pl-6 py-2 group-hover:border-blue-500 transition-colors">
-                                                <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-xl text-white opacity-95 group-hover:text-white transition-colors tracking-tight">
+                                                <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white opacity-95 group-hover:text-white transition-colors tracking-tight leading-tight">
                                                     {step}
                                                 </h3>
                                             </div>
                                         </div>
                                     ))}
                                 </div>
-                                <p className="mt-10 text-blue-300 font-medium italic text-center">CRO is not a one-time fix. It’s a growth system.</p>
+                                <p className="mt-10 text-blue-300 font-medium italic text-center text-sm">CRO is not a one-time fix. It’s a growth system.</p>
                             </div>
 
                             {/* Tools section */}
-                            <div className="bg-white/5 p-10 rounded-[42px] border border-white/10 shadow-2xl">
+                            <div ref={toolsBoxRef} className="bg-white/5 p-10 rounded-[42px] border border-white/10 shadow-2xl">
                                 <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">Tools & Technologies We Use</h2>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {tools.map((tool, index) => (
-                                        <div key={index} className="flex items-center gap-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/10 group hover:bg-blue-600 transition-all">
+                                        <div key={index} className="flex items-center gap-3 p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/10 group hover:bg-blue-600 transition-all cursor-default">
                                             <div className="text-blue-400 group-hover:text-white">
                                                 {tool.icon}
                                             </div>
@@ -413,20 +665,20 @@ const ShopifyCRO = () => {
             </section>
 
             {/* Final CTA Section */}
-            <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
-                <div className="container max-w-4xl mx-auto animate-fade-in text-left md:text-center">
-                    <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">Ready to Unlock Hidden Revenue?</h2>
+            <section ref={ctaRef} className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
+                <div className="container max-w-4xl mx-auto text-center">
+                    <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight px-1">Ready to Unlock Hidden Revenue?</h2>
                     <div className="space-y-12">
                         <div className="text-2xl font-semibold opacity-90 max-w-3xl text-white mx-auto leading-relaxed">
-                            <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium">
+                            <p className="text-[20px] mb-6 text-white font-medium">
                                 Your Shopify store already has traffic. <br /> Let’s convert it into profit.
                             </p>
                         </div>
-                        <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white font-medium opacity-90 max-w-3xl mx-auto italic">
+                        <p className="text-[18px] mb-6 text-xl text-white font-medium opacity-90 max-w-3xl mx-auto italic">
                             Partner with Adkryoss managed by <span className="font-semibold underline decoration-blue-300">Clink Consultancy Services Private Limited</span> and turn your Shopify store into a scalable, conversion-focused revenue machine.
                         </p>
                         <div className="flex flex-col items-center gap-10">
-                            <p className="text-[16px] md:text-[18px] mb-6 font-medium text-white italic  leading-tight pb-4">
+                            <p className="text-[24px] mb-6 font-medium text-white italic leading-tight">
                                 Start optimizing today.
                             </p>
                             <Link to="/contact" className="inline-flex items-center gap-4 bg-white text-[#0066CC] py-6 px-16 rounded-[25px] text-[22px] font-black transition-all duration-300 hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.4)] hover:-translate-y-2 hover:scale-105 active:scale-95 group tracking-tight">

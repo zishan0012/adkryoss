@@ -1,0 +1,130 @@
+﻿
+> adkryoss@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 2414 modules transformed.
+node.exe : 
+[31mΓ£ù[39m Build 
+failed in 5.58s
+At line:1 char:1
++ & "C:\Program Files
+\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: ([31mΓ£   
+ ù[39m Build fai    
+led in 5.58s:Str    
+ing) [], RemoteE    
+xception
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+[31merror during 
+build:
+[31msrc/App.jsx 
+(68:7): "default" is 
+not exported by "src/
+pages/our-services/ma
+rtech/GA4Consulting.j
+sx", imported by 
+"src/App.jsx".[31m
+file: [36mD:/adkryos
+s1/adkryoss/src/App.j
+sx:68:7[31m
+[33m
+66: import 
+CROServices from './p
+ages/our-services/mar
+tech/CROServices';
+67: import 
+EcommerceCRO from './
+pages/our-services/ma
+rtech/EcommerceCRO';
+68: import 
+GA4Consulting from '.
+/pages/our-services/m
+artech/GA4Consulting'
+;
+           ^
+69: import 
+ShopifyCRO from './pa
+ges/our-services/mart
+ech/ShopifyCRO';
+70: import 
+MartechServices from 
+'./pages/our-services
+/martech/MartechServi
+ces';
+[31m
+    at 
+getRollupError (file:
+///D:/adkryoss1/adkry
+oss/node_modules/roll
+up/dist/es/shared/par
+seAst.js:402:41)
+    at error (file://
+/D:/adkryoss1/adkryos
+s/node_modules/rollup
+/dist/es/shared/parse
+Ast.js:398:42)
+    at Module.error (
+file:///D:/adkryoss1/
+adkryoss/node_modules
+/rollup/dist/es/share
+d/node-entry.js:17040
+:16)
+    at 
+Module.traceVariable 
+(file:///D:/adkryoss1
+/adkryoss/node_module
+s/rollup/dist/es/shar
+ed/node-entry.js:1745
+2:29)
+    at ModuleScope.fi
+ndVariable (file:///D
+:/adkryoss1/adkryoss/
+node_modules/rollup/d
+ist/es/shared/node-en
+try.js:15070:39)
+    at FunctionScope.
+findVariable (file://
+/D:/adkryoss1/adkryos
+s/node_modules/rollup
+/dist/es/shared/node-
+entry.js:5673:38)
+    at FunctionBodySc
+ope.findVariable (fil
+e:///D:/adkryoss1/adk
+ryoss/node_modules/ro
+llup/dist/es/shared/n
+ode-entry.js:5673:38)
+    at 
+Identifier.bind (file
+:///D:/adkryoss1/adkr
+yoss/node_modules/rol
+lup/dist/es/shared/no
+de-entry.js:5447:40)
+    at 
+CallExpression.bind (
+file:///D:/adkryoss1/
+adkryoss/node_modules
+/rollup/dist/es/share
+d/node-entry.js:2825:
+28)
+    at 
+CallExpression.bind (
+file:///D:/adkryoss1/
+adkryoss/node_modules
+/rollup/dist/es/share
+d/node-entry.js:12179
+:15)[39m

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import cdpservicehero from "../../../assets/martech/cdpservicehero.png";
 import {
     Database,
@@ -27,7 +29,192 @@ import {
     Smartphone
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const CDPServices = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const needsTitleRef = useRef(null);
+    const needsCardsRef = useRef([]);
+    const whatCdpBoxRef = useRef(null);
+    const whatCdpTextRef = useRef(null);
+    const serviceCardsRef = useRef([]);
+    const diffCardsRef = useRef([]);
+    const industryTagsRef = useRef([]);
+    const benefitsBoxRef = useRef(null);
+    const frameworkStepsRef = useRef([]);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - 3D Flip/Slide
+            gsap.from(heroContentRef.current, {
+                rotateX: -45,
+                y: 100,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+            gsap.from(heroImageRef.current, {
+                x: 100,
+                opacity: 0,
+                scale: 0.8,
+                duration: 1,
+                delay: 0.3,
+                ease: "power3.out"
+            });
+
+            // Needs Section - Staggered Fall-in
+            gsap.from(needsTitleRef.current, {
+                y: 30,
+                opacity: 0,
+                scrollTrigger: {
+                    trigger: needsTitleRef.current,
+                    start: "top 85%"
+                }
+            });
+            needsCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    y: -50,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    ease: "bounce.out",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // What is CDP - Perspective Reveal
+            gsap.from(whatCdpBoxRef.current, {
+                rotateY: 90,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: whatCdpBoxRef.current,
+                    start: "top 80%"
+                }
+            });
+            gsap.from(whatCdpTextRef.current, {
+                x: 50,
+                opacity: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: whatCdpTextRef.current,
+                    start: "top 80%"
+                }
+            });
+
+            // Services - Spiral Entrance
+            serviceCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    scale: 0,
+                    rotation: 180,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%"
+                    }
+                });
+            });
+
+            // Differentiators - Side Slide
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    x: i % 2 === 0 ? -100 : 100,
+                    opacity: 0,
+                    duration: 0.7,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Industries & Benefits
+            industryTagsRef.current.forEach((tag, i) => {
+                gsap.from(tag, {
+                    scale: 0.5,
+                    opacity: 0,
+                    duration: 0.4,
+                    delay: i * 0.05,
+                    scrollTrigger: {
+                        trigger: tag,
+                        start: "top 95%"
+                    }
+                });
+            });
+            gsap.from(benefitsBoxRef.current, {
+                y: 100,
+                opacity: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: benefitsBoxRef.current,
+                    start: "top 85%"
+                }
+            });
+
+            // Framework Steps - Sequential
+            frameworkStepsRef.current.forEach((step, i) => {
+                gsap.from(step, {
+                    x: 50,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.15,
+                    scrollTrigger: {
+                        trigger: step,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Final CTA
+            gsap.from(ctaRef.current, {
+                scale: 0.8,
+                opacity: 0,
+                duration: 1,
+                ease: "elastic.out(1, 0.5)",
+                scrollTrigger: {
+                    trigger: ctaRef.current,
+                    start: "top 85%"
+                }
+            });
+
+            // Floating effect for hero image
+            gsap.to(heroImageRef.current, {
+                y: -15,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            scale: isEnter ? 1.05 : 1,
+            boxShadow: isEnter ? "0 20px 40px rgba(0,0,0,0.1)" : "0 0px 0px rgba(0,0,0,0)",
+            backgroundColor: isEnter ? "rgba(255,255,255,0.08)" : "transparent",
+            duration: 0.3
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                scale: isEnter ? 1.2 : 1,
+                rotation: isEnter ? 360 : 0,
+                duration: 0.5
+            });
+        }
+    };
+
     const needsCDP = [
         { title: "Eliminate data silos", icon: <Layers size={24} /> },
         { title: "Create a single customer view", icon: <Users size={24} /> },
@@ -147,7 +334,7 @@ const CDPServices = () => {
     ];
 
     return (
-        <div className="bg-white text-slate-900 overflow-hidden">
+        <div ref={pageRef} className="bg-white text-slate-900 overflow-hidden" style={{ perspective: "1000px" }}>
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -157,7 +344,7 @@ const CDPServices = () => {
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10 animate-fade-in-up text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             Customer Data Platform (CDP) Services
                         </h1>
@@ -172,30 +359,24 @@ const CDPServices = () => {
                                 Build a 360° customer view, personalize every interaction, and activate real-time journeys with advanced CDP solutions. At Adkryoss managed by <span className="font-bold ">Clink Consultancy Services Private Limited</span>, we help you master your first-party data.
                             </p>
                         </div>
-                        <div className="flex flex-wrap gap-4">
-                            {/* <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
-                                <Rocket className="text-blue-400" size={24} />
-                                <span className="font-bold text-white text-sm tracking-widest uppercase">Drive Predictive Personalization</span>
-                            </div> */}
-                        </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={cdpservicehero}
@@ -212,10 +393,10 @@ const CDPServices = () => {
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight tracking-tight">
+                            <h2 ref={needsTitleRef} className="text-[36px] font-bold text-slate-900 mb-8 leading-tight tracking-tight">
                                 Why Your Business Needs a CDP Now
                             </h2>
-                            <div className="space-y-6">
+                            <div className="space-y-6 text-justify">
                                 <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
                                     Data is everywhere — website analytics, CRM, mobile apps, ad platforms, email tools, offline stores. But without integration, it's just noise.
                                 </p>
@@ -229,7 +410,11 @@ const CDPServices = () => {
                         </div>
                         <div className="flex flex-wrap justify-center gap-6">
                             {needsCDP.map((item, index) => (
-                                <div key={index} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center gap-4 text-center group hover:shadow-xl hover:-translate-y-2 transition-all w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)]">
+                                <div
+                                    key={index}
+                                    ref={el => needsCardsRef.current[index] = el}
+                                    className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center gap-4 text-center group hover:shadow-xl hover:-translate-y-2 transition-all w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)]"
+                                >
                                     <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
                                         {item.icon}
                                     </div>
@@ -246,9 +431,9 @@ const CDPServices = () => {
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div className="order-2 md:order-1">
-                            <div className="bg-slate-900 p-12 rounded-[50px] text-white relative shadow-2xl">
+                            <div ref={whatCdpBoxRef} className="bg-slate-900 p-12 rounded-[50px] text-white relative shadow-2xl">
                                 <h3 className="text-2xl font-semibold mb-6 text-blue-400 tracking-tighter uppercase">Beyond CRM & DMP</h3>
-                                <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white font-medium leading-relaxed italic border-l-4 border-blue-600 pl-6">
+                                <p className="text-[16px] md:text-[18px] mb-6 text-xl text-white font-medium leading-relaxed italic border-l-4 border-blue-600 pl-6 text-justify">
                                     "A CDP becomes the backbone of your personalization and performance marketing strategy."
                                 </p>
                                 <div className="space-y-4">
@@ -266,7 +451,7 @@ const CDPServices = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="order-1 md:order-2">
+                        <div ref={whatCdpTextRef} className="order-1 md:order-2 text-justify">
                             <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight tracking-tight">
                                 What Is a Customer Data Platform?
                             </h2>
@@ -282,7 +467,7 @@ const CDPServices = () => {
             </section>
 
             {/* Our CDP Services */}
-            <section className="py-24 bg-slate-900 text-white">
+            <section id="services" className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto text-center mb-16">
                     <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our CDP Services</h2>
                     <p className="text-blue-200/80 max-w-2xl mx-auto font-medium mb-10">We deliver end-to-end CDP consulting, implementation, and optimization solutions tailored to your business objectives.</p>
@@ -290,8 +475,14 @@ const CDPServices = () => {
                 </div>
                 <div className="container px-6 mx-auto flex flex-wrap justify-center gap-10">
                     {services.map((item, index) => (
-                        <div key={index} className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group flex flex-col w-full md:w-[calc(50%-20px)] lg:w-[calc(33.33%-27px)]">
-                            <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
+                        <div
+                            key={index}
+                            ref={el => serviceCardsRef.current[index] = el}
+                            onMouseEnter={(e) => handleHover(e, true)}
+                            onMouseLeave={(e) => handleHover(e, false)}
+                            className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group flex flex-col w-full md:w-[calc(50%-20px)] lg:w-[calc(33.33%-27px)] cursor-pointer"
+                        >
+                            <div className="card-icon text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
                                 {item.icon}
                             </div>
                             <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
@@ -313,13 +504,17 @@ const CDPServices = () => {
 
             {/* Why Choose Us */}
             <section className="py-24 bg-white">
-                <div className="container px-6 mx-auto">
+                <div className="container px-6 mx-auto text-justify">
                     <h2 className="text-[36px] font-bold text-slate-900 mb-16 text-center leading-tight tracking-tight">
                         Why Choose Us for CDP Services?
                     </h2>
                     <div className="flex flex-wrap justify-center gap-8">
                         {differentiators.map((item, index) => (
-                            <div key={index} className="bg-slate-50 p-10 rounded-3xl border border-slate-100 flex flex-col items-center text-center gap-6 group hover:shadow-2xl hover:-translate-y-2 transition-all w-full md:w-[calc(50%-16px)] lg:w-[calc(25%-24px)]">
+                            <div
+                                key={index}
+                                ref={el => diffCardsRef.current[index] = el}
+                                className="bg-slate-50 p-10 rounded-3xl border border-slate-100 flex flex-col items-center text-center gap-6 group hover:shadow-2xl hover:-translate-y-2 transition-all w-full md:w-[calc(50%-16px)] lg:w-[calc(25%-24px)] cursor-default"
+                            >
                                 <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white group-hover:bg-slate-900 transition-all">
                                     {item.icon}
                                 </div>
@@ -341,14 +536,18 @@ const CDPServices = () => {
                             <p className="text-slate-600 mb-10 font-medium">We customize CDP implementations for high-growth sectors:</p>
                             <div className="flex flex-wrap gap-4">
                                 {industries.map((item, index) => (
-                                    <div key={index} className="px-8 py-5 bg-white text-slate-800 rounded-2xl font-black border-2 border-slate-100 transition-all hover:bg-blue-600 hover:text-white hover:border-blue-600 hover:-translate-y-1 shadow-sm">
+                                    <div
+                                        key={index}
+                                        ref={el => industryTagsRef.current[index] = el}
+                                        className="px-8 py-5 bg-white text-slate-800 rounded-2xl font-black border-2 border-slate-100 transition-all hover:bg-blue-600 hover:text-white hover:border-blue-600 hover:-translate-y-1 shadow-sm cursor-default"
+                                    >
                                         {item}
                                     </div>
                                 ))}
                             </div>
-                            <div className="mt-16 bg-slate-900 p-10 rounded-[40px] text-white shadow-2xl">
+                            <div ref={benefitsBoxRef} className="mt-16 bg-slate-900 p-10 rounded-[40px] text-white shadow-2xl">
                                 <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight text-center">Key Benefits</h2>
-                                <div className="grid sm:grid-cols-2 gap-6">
+                                <div className="grid sm:grid-cols-2 gap-6 text-justify">
                                     {benefits.map((item, index) => (
                                         <div key={index} className="flex items-center gap-4 group">
                                             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-black group-hover:scale-110 transition-transform text-xs">
@@ -365,9 +564,9 @@ const CDPServices = () => {
                         <div className="flex flex-col gap-12">
                             <div className="bg-white p-10 rounded-[40px] border border-slate-200 shadow-xl">
                                 <h2 className="text-[36px] font-bold mb-10 text-slate-900 tracking-tight">Implementation Framework</h2>
-                                <div className="space-y-8">
+                                <div className="space-y-8 text-justify">
                                     {framework.map((item, index) => (
-                                        <div key={index} className="flex gap-6 items-start group">
+                                        <div key={index} ref={el => frameworkStepsRef.current[index] = el} className="flex gap-6 items-start group">
                                             <div className="text-blue-600 font-black text-lg py-1 min-w-[60px]">{index + 1}.</div>
                                             <div className="flex-1 border-l-2 border-slate-100 pl-6 py-1 group-hover:border-blue-600 transition-colors">
                                                 <h3 className="font-semibold text-xl text-slate-900 mb-2">{item.title}</h3>
@@ -378,7 +577,7 @@ const CDPServices = () => {
                                 </div>
                             </div>
                             <div className="p-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-[40px] text-white text-center">
-                                <h2 className="text-[36px] font-bold mb-6 leading-tight">Ready to build your customer intelligence engine?</h2>
+                                <h2 className="text-[34px] font-bold mb-6 leading-tight">Ready to build your customer intelligence engine?</h2>
                                 <p className="text-[16px] md:text-[18px] mb-6 text-white/80 font-medium">
                                     Move from fragmented campaigns to predictive personalization.
                                 </p>
@@ -392,14 +591,14 @@ const CDPServices = () => {
             </section>
 
             {/* Final CTA Section */}
-            <section className="py-24 bg-white text-center px-6">
+            <section ref={ctaRef} className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-center px-6">
                 <div className="container max-w-4xl mx-auto  pt-24">
                     <h2 className="text-[36px] font-bold mb-8 leading-tight text-slate-900 tracking-tight">Transform Data into Competitive Advantage</h2>
                     <div className="space-y-8">
-                        <p className="text-xl text-slate-600 font-medium max-w-3xl mx-auto leading-relaxed">
-                            The future of marketing belongs to businesses that own, understand, and activate their first-party data intelligently.
+                        <p className="text-xl text-slate-600 font-medium max-w-3xl mx-auto text-white leading-relaxed text-justify px-2">
+                            The future of marketing belongs to businesses that own, understand, and activate their first-party data intelligently. The businesses that harness this power will thrive, while others struggle with fragmented insights.
                         </p>
-                        <p className="text-2xl font-medium text-blue-600 italic tracking-tighter leading-tight">
+                        <p className="text-2xl font-medium text-white  tracking-tighter leading-tight">
                             Partner with Adkryoss managed by Clink Consultancy Services Private Limited.
                         </p>
                         <div className="flex flex-col items-center gap-10">

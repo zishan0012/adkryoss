@@ -264,7 +264,7 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_lb93y5t",
+        "service_q8qm5ah",
         "template_34mfvgd",
         {
           email: formData.email,
@@ -361,10 +361,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_lb93y5t",
-        "template_cdooj2p",
+        "service_o2hqsiu",
+        "template_2hvikhe",
         formData,
-        "wzMZB3gXbCN1HTitr",
+        "2X4j1gjI4qCBNp-1j",
       )
       .then(() => {
         setSuccess("Your message has been sent successfully!");
@@ -797,12 +797,12 @@ const Contact = () => {
 
             {/* Phone */}
             <a
-              href="tel:+91XXXXXXXXXX"
+              href="tel:+01169269633"
               className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:scale-105 hover:bg-white/20 transition duration-300 block"
             >
               <p className="text-3xl mb-3">📞</p>
               <p className="font-semibold text-lg text-white">Call Us</p>
-              <p className="text-white mt-2 underline">+91-XXXXXXXXXX</p>
+              <p className="text-white mt-2 underline">+01169269633</p>
             </a>
 
             {/* Location */}
