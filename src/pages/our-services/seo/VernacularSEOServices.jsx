@@ -30,7 +30,8 @@ import {
     Film,
     DollarSign
 } from 'lucide-react';
-import vernacularseo from '../../../assets/SEO/vernacularhero.png';
+import vernacularhero from '../../../assets/SEO/vernacularhero.png';
+import vernacularseo from '../../../assets/SEO/vernacular/vernacularseo.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -303,7 +304,7 @@ const VernacularSEOServices = () => {
                     <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
-                                src={vernacularseo}
+                                src={vernacularhero}
                                 alt="Vernacular SEO Services"
                                 className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
                             />
@@ -333,8 +334,12 @@ const VernacularSEOServices = () => {
                                 Vernacular SEO bridges this gap by optimizing your digital presence for multiple regional languages — ensuring discoverability, cultural relevance, and conversion power.
                             </p>
                         </div>
-                        <div ref={whyImageRef} className="relative group overflow-hidden rounded-[30px]">
-                            <img src="https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/vernacular-seo-side.webp" alt="Market Opportunity" className="w-full h-auto transition-transform duration-500 group-hover:scale-105" />
+                        <div ref={whyImageRef} className="relative rounded-3xl overflow-hidden bg-white/10 backdrop-blur-sm p-4 border border-slate-100 shadow-2xl">
+                            <img
+                                src={vernacularseo}
+                                alt="vernacular seo strategy"
+                                className="max-w-[450px] w-full rounded-2xl"
+                            />
                         </div>
                     </div>
                 </div>
