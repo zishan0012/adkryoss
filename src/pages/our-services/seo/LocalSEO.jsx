@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import localseohero from "../../../assets/SEO/localseohero.png";
 import {
     MapPin,
@@ -36,11 +38,184 @@ import {
     HomeIcon
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const LocalSEO = () => {
     const [openFaq, setOpenFaq] = useState(null);
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const mattersRef = useRef(null);
+    const matterPointsRef = useRef([]);
+    const industryCardsRef = useRef([]);
+    const approachCardsRef = useRef([]);
+    const processStepsRef = useRef([]);
+    const diffCardsRef = useRef([]);
+    const faqRef = useRef(null);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Radial Expand
+            gsap.from(heroContentRef.current, {
+                y: 50,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out"
+            });
+            gsap.from(heroImageRef.current, {
+                scale: 0.5,
+                opacity: 0,
+                duration: 1.5,
+                ease: "expo.out",
+                delay: 0.3
+            });
+
+            // Why Matters - Ripple Reveal
+            gsap.from(mattersRef.current, {
+                x: -50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: mattersRef.current,
+                    start: "top 85%"
+                }
+            });
+            matterPointsRef.current.forEach((point, i) => {
+                gsap.from(point, {
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: point,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Industries - Circular Entrance
+            industryCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    scale: 0.8,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.05,
+                    ease: "back.out(1.7)",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Approach - Orbiting reveal
+            approachCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%"
+                    }
+                });
+            });
+
+            // Process - Step by step
+            processStepsRef.current.forEach((step, i) => {
+                gsap.from(step, {
+                    scale: 0.9,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.15,
+                    scrollTrigger: {
+                        trigger: step,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Differentiators - Pop out
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // FAQ
+            gsap.from(faqRef.current, {
+                opacity: 0,
+                y: 30,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: faqRef.current,
+                    start: "top 85%"
+                }
+            });
+
+            // CTA
+            gsap.from(ctaRef.current, {
+                scale: 0.95,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ctaRef.current,
+                    start: "top 90%"
+                }
+            });
+
+            // Image Float (Orbit style)
+            gsap.to(heroImageRef.current, {
+                y: -10,
+                x: 5,
+                duration: 3,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
 
     const toggleFaq = (i) => {
         setOpenFaq(openFaq === i ? null : i);
+    };
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            y: isEnter ? -10 : 0,
+            scale: isEnter ? 1.02 : 1,
+            backgroundColor: isEnter ? "#f0f9ff" : "white",
+            borderColor: isEnter ? "#0066CC" : "#e2e8f0",
+            duration: 0.3
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                scale: isEnter ? 1.2 : 1,
+                rotation: isEnter ? 360 : 0,
+                duration: 0.6,
+                ease: "back.out"
+            });
+        }
+    };
+
+    const handleDarkHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            backgroundColor: isEnter ? "#1e293b" : "rgba(255,255,255,0.05)",
+            y: isEnter ? -5 : 0,
+            duration: 0.3
+        });
     };
 
     const approach = [
@@ -120,7 +295,7 @@ const LocalSEO = () => {
         { name: "Legal & Law Firms", icon: <Scale size={24} />, desc: "Establishing local authority for practice areas." },
         { name: "Retail & Franchises", icon: <ShoppingBag size={24} />, desc: "Unified local strategy for national brands." },
         { name: "Multi-location Enterprises ", icon: <Building2 size={24} />, desc: "Mulitple location business." },
-        { name: "Home Services  ", icon: <Home size={24} />, desc: "Home services business." },
+        { name: "Home Services  ", icon: <HomeIcon size={24} />, desc: "Home services business." },
     ];
 
     const localSEOProcess = [
@@ -138,7 +313,7 @@ const LocalSEO = () => {
     ];
 
     return (
-        <div style={{ backgroundColor: '#fff' }}>
+        <div ref={pageRef} style={{ backgroundColor: '#fff' }} className="overflow-hidden">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -147,7 +322,7 @@ const LocalSEO = () => {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10 text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Local SEO Optimization
                         </h1>
@@ -162,8 +337,6 @@ const LocalSEO = () => {
                                 At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we help businesses dominate local search ecosystems and drive consistent foot traffic.
                             </p>
                         </div>
-                        {/* 
-                        { CTA Buttons — uncomment when ready to use} */}
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <Link
                                 to="/contact"
@@ -179,7 +352,7 @@ const LocalSEO = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={localseohero}
@@ -195,7 +368,7 @@ const LocalSEO = () => {
             <section className="pt-32 pb-24 md:py-[80px] bg-white">
                 <div className="container px-6 mx-auto">
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-[60px] items-center">
-                        <div>
+                        <div ref={mattersRef}>
                             <h2 className="text-[28px] md:text-[36px] font-bold mb-[20px] md:mb-[30px] text-[#0f172a]">
                                 Why Local SEO Matters
                             </h2>
@@ -208,7 +381,7 @@ const LocalSEO = () => {
                                     { t: "Google Maps Results", d: "Dominating on-the-go searches." },
                                     { t: "Geo-Organic Rankings", d: "Ranking for 'near me' intent queries." }
                                 ].map((item, i) => (
-                                    <div key={i} className="flex gap-[15px]">
+                                    <div key={i} ref={el => matterPointsRef.current[i] = el} className="flex gap-[15px]">
                                         <div className="text-[#0066cc] mt-[4px]"><MapPin size={24} /></div>
                                         <div>
                                             <h4 className="text-[18px] font-bold text-[#0f172a] mb-[4px]">{item.t}</h4>
@@ -222,15 +395,12 @@ const LocalSEO = () => {
                             <h3 className="text-[22px] md:text-[24px] font-semibold mb-6 md:mb-[30px] text-[#0f172a]">Industries We Dominate:</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {industries.map((ind, i) => (
-                                    <div key={i} className="p-4 md:p-[20px] bg-white rounded-[15px] flex gap-[12px] items-center border border-[#e2e8f0]">
+                                    <div key={i} ref={el => industryCardsRef.current[i] = el} className="p-4 md:p-[20px] bg-white rounded-[15px] flex gap-[12px] items-center border border-[#e2e8f0] transition-transform hover:scale-105">
                                         <div className="text-[#0066cc] shrink-0">{ind.icon}</div>
                                         <span className="font-semibold text-[14px] md:text-[15px] text-[#0f172a]">{ind.name}</span>
                                     </div>
                                 ))}
                             </div>
-                            {/* <div style={{ marginTop: '30px', padding: '20px', background: '#0066cc', borderRadius: '15px', color: '#fff', textAlign: 'center' }}>
-                                <p style={{ fontWeight: '600', margin: 0 }}>Multi-location Enterprises & Franchises Specialists</p>
-                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -247,8 +417,12 @@ const LocalSEO = () => {
                     </div>
                     <div className="flex flex-wrap justify-center gap-6 md:gap-[40px]">
                         {approach.map((pillar, i) => (
-                            <div key={i} className="w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)] bg-white p-8 md:p-[50px_40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 grow max-w-[380px] hover:-translate-y-[10px] hover:border-[#0066cc] hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)]">
-                                <div className="text-[#0066cc] mb-[24px]">{pillar.icon}</div>
+                            <div key={i}
+                                ref={el => approachCardsRef.current[i] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="w-full md:w-[calc(50%-20px)] lg:w-[calc(33.333%-27px)] bg-white p-8 md:p-[50px_40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 grow max-w-[380px] cursor-pointer">
+                                <div className="text-[#0066cc] mb-[24px] card-icon">{pillar.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-[20px] text-[#0f172a]">{pillar.title}</h3>
                                 <p className="text-[16px] text-[#475569] mb-[30px] leading-[1.6] font-medium">{pillar.desc}</p>
                                 <ul className="space-y-6">
@@ -276,7 +450,7 @@ const LocalSEO = () => {
                     </div>
                     <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-[30px]">
                         {localSEOProcess.map((step, i) => (
-                            <div key={i} className="p-[40px] bg-[#f8fafc] rounded-[30px] border border-[#e2e8f0] transition-all duration-300 hover:border-[#0066cc]">
+                            <div key={i} ref={el => processStepsRef.current[i] = el} className="p-[40px] bg-[#f8fafc] rounded-[30px] border border-[#e2e8f0] transition-all duration-300 hover:border-[#0066cc] cursor-default">
                                 <h4 className="text-[18px] font-bold text-[#0066cc] mb-[15px]">{step.t}</h4>
                                 <p className="text-[15px] text-[#475569] leading-[1.6] font-medium">{step.d}</p>
                             </div>
@@ -296,7 +470,11 @@ const LocalSEO = () => {
                             { t: "Multi-Location Frameworks", d: "Unified strategy for businesses with 1 to 100+ stores." },
                             { t: "AI-Assisted Management", d: "Smart analysis of reviews and GMB engagement data." }
                         ].map((item, i) => (
-                            <div key={i} className="p-[30px] bg-[rgba(255,255,255,0.05)] rounded-[20px] border border-[rgba(255,255,255,0.1)]">
+                            <div key={i}
+                                ref={el => diffCardsRef.current[i] = el}
+                                onMouseEnter={(e) => handleDarkHover(e, true)}
+                                onMouseLeave={(e) => handleDarkHover(e, false)}
+                                className="p-[30px] bg-[rgba(255,255,255,0.05)] rounded-[20px] border border-[rgba(255,255,255,0.1)] transition-all duration-300">
                                 <h4 className="text-[20px] font-bold text-[#60a5fa] mb-[12px]">{item.t}</h4>
                                 <p className="text-[15px] text-[#cbd5e1] font-medium">{item.d}</p>
                             </div>
@@ -306,7 +484,7 @@ const LocalSEO = () => {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-16 md:py-[80px] bg-white">
+            <section ref={faqRef} className="py-16 md:py-[80px] bg-white">
                 <div className="container px-6 mx-auto">
                     <h2 className="text-[28px] md:text-[36px] font-bold text-center mb-10 md:mb-[60px] text-[#0f172a]">Local SEO Intelligence (FAQs)</h2>
                     <div className="max-w-[800px] mx-auto">
@@ -331,7 +509,7 @@ const LocalSEO = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-20 md:py-[100px] text-center bg-gradient-to-br from-[#0066cc] to-[#00458a] text-white">
+            <section ref={ctaRef} className="py-20 md:py-[100px] text-center bg-gradient-to-br from-[#0066cc] to-[#00458a] text-white">
                 <div className="container px-6 mx-auto">
                     <h2 className="text-[28px] md:text-[36px] font-bold mb-[24px]">Ready to Dominate Local Search?</h2>
                     <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto text-white font-medium">
@@ -347,3 +525,4 @@ const LocalSEO = () => {
 };
 
 export default LocalSEO;
+

@@ -16,11 +16,26 @@ import {
     Briefcase,
     Rocket,
     LineChart,
-    Zap
+    Zap,
+    ChevronDown,
+    ChevronUp
 } from 'lucide-react';
 
 const SEOROICalculator = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [openFaq, setOpenFaq] = useState(null);
+
+    const toggleFaq = (i) => {
+        setOpenFaq(openFaq === i ? null : i);
+    };
+
+    const faqs = [
+        { q: "How accurate is the SEO ROI Calculator?", a: "It provides a realistic estimate based on your inputs. Actual results may vary depending on competition, execution quality, and market conditions." },
+        { q: "Is SEO better than paid advertising?", a: "Both have their place. However, SEO typically delivers stronger long-term ROI due to its compounding nature." },
+        { q: "How long does it take to see ROI from SEO?", a: "Most industries see early traction within 3–6 months, with stronger ROI scaling after consistent optimization." },
+        { q: "Can small businesses benefit from SEO?", a: "Absolutely. SEO levels the playing field by allowing smaller brands to compete through strategic targeting." }
+    ];
+
     return (
         <div className="bg-white min-h-screen">
             {/* Hero Section */}
@@ -31,16 +46,16 @@ const SEOROICalculator = () => {
                 </div>
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-4xl">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">How Our SEO ROI Calculator Works</h1>
-                        <p className="text-xl md:text-2xl text-blue-200 mb-8 leading-relaxed">
+                        <h1 className="text-[28px] md:text-[36px] font-bold mb-6">How Our SEO ROI Calculator Works</h1>
+                        <p className="text-[20px] md:text-[24px] text-blue-200 mb-8 leading-relaxed">
                             The calculator uses performance-based inputs to project your potential earnings from SEO.
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <button
                                 onClick={() => setIsPopupOpen(true)}
-                                className="bg-[#0066cc] hover:bg-blue-600 text-white px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+                                className="bg-[#0066cc] hover:bg-blue-600 text-white px-6 py-3 rounded-full font-semibold text-base md:text-lg transition-all duration-300 transform hover:-translate-y-0.5 shadow-md"
                             >
-                                Calculate Your ROI Now <ArrowRight className="inline ml-2" />
+                                Calculate Your ROI Now <ArrowRight className="inline ml-2 w-4 h-4" />
                             </button>
                         </div>
                     </div>
@@ -212,23 +227,25 @@ const SEOROICalculator = () => {
                 </div>
             </section>
 
-            {/* FAQ */}
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-6 max-w-4xl">
-                    <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Frequently Asked Questions</h2>
-                    <div className="space-y-6">
-                        {[
-                            { q: "How accurate is the SEO ROI Calculator?", a: "It provides a realistic estimate based on your inputs. Actual results may vary depending on competition, execution quality, and market conditions." },
-                            { q: "Is SEO better than paid advertising?", a: "Both have their place. However, SEO typically delivers stronger long-term ROI due to its compounding nature." },
-                            { q: "How long does it take to see ROI from SEO?", a: "Most industries see early traction within 3–6 months, with stronger ROI scaling after consistent optimization." },
-                            { q: "Can small businesses benefit from SEO?", a: "Absolutely. SEO levels the playing field by allowing smaller brands to compete through strategic targeting." }
-                        ].map((faq, i) => (
-                            <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 hover:border-blue-500 transition-colors group">
-                                <h4 className="text-xl font-bold mb-3 flex items-start gap-3">
-                                    <HelpCircle className="text-blue-500 shrink-0 mt-1" />
-                                    {faq.q}
-                                </h4>
-                                <p className="text-gray-600 leading-relaxed pl-9">{faq.a}</p>
+            {/* FAQ Section */}
+            <section className="py-24 bg-slate-50">
+                <div className="container px-6 mx-auto max-w-[800px]">
+                    <h2 className="text-[28px] md:text-[36px] font-bold text-center mb-10 md:mb-[60px] text-slate-900 leading-tight">Frequently Asked Questions</h2>
+                    <div className="space-y-4">
+                        {faqs.map((faq, i) => (
+                            <div key={i} className="border border-slate-200 rounded-[15px] overflow-hidden bg-white shadow-sm transition-all duration-300 hover:shadow-md">
+                                <button
+                                    onClick={() => toggleFaq(i)}
+                                    className={`w-full p-[20px_30px] flex justify-between items-center transition-all duration-300 border-none cursor-pointer ${openFaq === i ? 'bg-[#f8fafc]' : 'bg-white'}`}
+                                >
+                                    <span className="text-[18px] font-bold text-slate-900 text-left">{faq.q}</span>
+                                    {openFaq === i ? <ChevronUp size={20} className="text-[#0066cc]" /> : <ChevronDown size={20} className="text-slate-400" />}
+                                </button>
+                                {openFaq === i && (
+                                    <div className="p-[20px_30px] bg-white border-t border-slate-100">
+                                        <p className="m-0 text-slate-600 leading-[1.7] text-[16px] font-medium">{faq.a}</p>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>
@@ -236,11 +253,11 @@ const SEOROICalculator = () => {
             </section>
 
             {/* Final CTA */}
-            <section className="py-24 bg-gradient-to-br from-blue-600 to-indigo-800 text-white text-center rounded-t-[50px]">
+            <section className="py-24 bg-gradient-to-br from-blue-600 to-indigo-800 text-white text-center">
                 <div className="container mx-auto px-6">
                     <Rocket size={60} className="mx-auto mb-8 animate-bounce" />
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Calculate Your SEO Growth Potential?</h2>
-                    <p className="text-2xl mb-12 text-blue-100 max-w-2xl mx-auto">
+                    <h2 className="text-[28px] md:text-[36px] font-bold mb-6">Ready to Calculate Your SEO Growth Potential?</h2>
+                    <p className="text-[20px] md:text-[24px] mb-12 text-blue-100 max-w-2xl mx-auto">
                         Stop investing blindly. <br />
                         Start forecasting intelligently.
                     </p>
@@ -251,11 +268,11 @@ const SEOROICalculator = () => {
                     </div>
                     <button
                         onClick={() => setIsPopupOpen(true)}
-                        className="inline-block bg-white text-blue-700 px-12 py-5 rounded-full text-2xl font-bold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+                        className="inline-block bg-white text-blue-700 px-8 py-3 rounded-full text-[16px] md:text-[20px] font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl"
                     >
                         Calculate Your ROI Now
                     </button>
-                    <p className="mt-12 text-blue-200 font-medium opacity-80">
+                    <p className="mt-12 text-blue-200 font-medium text-white opacity-80">
                         Adkryoss managed by Clink Consultancy Services Private Limited helps businesses turn search visibility into measurable profit.
                     </p>
                 </div>

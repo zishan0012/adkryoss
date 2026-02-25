@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { X, Info, TrendingUp, Users, MousePointer2, Calculator, IndianRupee, ArrowRight, DollarSign, BarChart, Percent, CreditCard } from 'lucide-react';
+import { X, Info, TrendingUp, Users, MousePointer2, Calculator, IndianRupee, ArrowRight, DollarSign, BarChart, Percent, CreditCard, RotateCcw } from 'lucide-react';
 
 const PPCROICalculatorPopup = ({ isOpen, onClose }) => {
     // State for inputs
@@ -9,6 +9,15 @@ const PPCROICalculatorPopup = ({ isOpen, onClose }) => {
     const [convRate, setConvRate] = useState(3.5);
     const [aov, setAov] = useState(2500);
     const [margin, setMargin] = useState(40);
+
+    // Reset handler
+    const handleReset = () => {
+        setAdSpend(0);
+        setCpc(0);
+        setConvRate(0);
+        setAov(0);
+        setMargin(0);
+    };
 
     // State for results
     const [results, setResults] = useState({
@@ -21,7 +30,7 @@ const PPCROICalculatorPopup = ({ isOpen, onClose }) => {
 
     // Calculation logic
     useEffect(() => {
-        const clicks = Math.round(adSpend / cpc);
+        const clicks = cpc > 0 ? Math.round(adSpend / cpc) : 0;
         const conversions = Math.round(clicks * (convRate / 100));
         const revenue = conversions * aov;
         const netProfit = (revenue * (margin / 100)) - adSpend;
@@ -60,15 +69,24 @@ const PPCROICalculatorPopup = ({ isOpen, onClose }) => {
                 </button>
 
                 {/* LEFT SIDE: Inputs */}
-                <div className="w-full md:w-2/3 p-8 md:p-14 bg-white overflow-y-auto no-scrollbar">
-                    <div className="mb-10">
-                        <div className="flex items-center gap-3 mb-2">
-                            <div className="p-2 bg-blue-600 rounded-lg text-white">
-                                <Calculator size={20} />
+                <div className="w-full md:w-2/3 p-8 md:p-14 bg-white overflow-y-auto max-h-[90vh] no-scrollbar">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
+                        <div>
+                            <div className="flex items-center gap-3 mb-1">
+                                <div className="p-2 bg-blue-600 rounded-lg text-white">
+                                    <Calculator size={20} />
+                                </div>
+                                <h2 className="text-3xl font-black text-gray-900 tracking-tight">PPC Profitability</h2>
                             </div>
-                            <h2 className="text-3xl font-black text-gray-900 tracking-tight">PPC Profitability Lab</h2>
+                            <p className="text-gray-500 text-lg font-light">Project your ad returns based on quality.</p>
                         </div>
-                        <p className="text-gray-500 text-lg font-light">Project your ad returns based on spend and conversion quality.</p>
+                        <button
+                            onClick={handleReset}
+                            className="flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-2xl transition-all duration-300 font-bold text-sm whitespace-nowrap shadow-sm"
+                        >
+                            <RotateCcw size={18} />
+                            Reset to Zero
+                        </button>
                     </div>
 
                     <div className="space-y-12">
@@ -91,7 +109,7 @@ const PPCROICalculatorPopup = ({ isOpen, onClose }) => {
                             </div>
                             <input
                                 type="range"
-                                min="1000"
+                                min="0"
                                 max="10000000"
                                 step="1000"
                                 value={adSpend}
@@ -99,7 +117,7 @@ const PPCROICalculatorPopup = ({ isOpen, onClose }) => {
                                 className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-blue-600"
                             />
                             <div className="flex justify-between text-[10px] text-gray-400 font-bold uppercase tracking-widest">
-                                <span>₹1k</span>
+                                <span>₹0</span>
                                 <span>₹1Cr</span>
                             </div>
                         </div>
@@ -120,7 +138,7 @@ const PPCROICalculatorPopup = ({ isOpen, onClose }) => {
                             </div>
                             <input
                                 type="range"
-                                min="1"
+                                min="0"
                                 max="1000"
                                 step="1"
                                 value={cpc}
@@ -128,7 +146,7 @@ const PPCROICalculatorPopup = ({ isOpen, onClose }) => {
                                 className="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-blue-600"
                             />
                             <div className="flex justify-between text-[10px] text-gray-400 font-bold uppercase tracking-widest">
-                                <span>₹1</span>
+                                <span>₹0</span>
                                 <span>₹1000</span>
                             </div>
                         </div>
@@ -154,7 +172,7 @@ const PPCROICalculatorPopup = ({ isOpen, onClose }) => {
                                 </div>
                                 <input
                                     type="range"
-                                    min="0.1"
+                                    min="0"
                                     max="50"
                                     step="0.1"
                                     value={convRate}
@@ -182,7 +200,7 @@ const PPCROICalculatorPopup = ({ isOpen, onClose }) => {
                                 </div>
                                 <input
                                     type="range"
-                                    min="1"
+                                    min="0"
                                     max="100"
                                     value={margin}
                                     onChange={(e) => setMargin(Number(e.target.value))}
@@ -207,7 +225,7 @@ const PPCROICalculatorPopup = ({ isOpen, onClose }) => {
                             </div>
                             <input
                                 type="range"
-                                min="10"
+                                min="0"
                                 max="1000000"
                                 step="100"
                                 value={aov}

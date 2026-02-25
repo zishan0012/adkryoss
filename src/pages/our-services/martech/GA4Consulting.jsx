@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ga4hero from "../../../assets/martech/ga4hero.png";
 import {
     CheckCircle2,
@@ -18,11 +20,190 @@ import {
     ShoppingCart
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const GA4Consulting = () => {
     const [openFaq, setOpenFaq] = useState(null);
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whyTextRef = useRef(null);
+    const whyCardsRef = useRef([]);
+    const serviceCardsRef = useRef([]);
+    const approachStepsRef = useRef([]);
+    const diffItemsRef = useRef([]);
+    const industryCardsRef = useRef([]);
+    const toolTagsRef = useRef([]);
+    const faqSectionRef = useRef(null);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Blur and Slide
+            gsap.from(heroContentRef.current, {
+                filter: "blur(15px)",
+                x: -100,
+                opacity: 0,
+                duration: 1,
+                ease: "power2.out"
+            });
+            gsap.from(heroImageRef.current, {
+                filter: "blur(15px)",
+                scale: 1.2,
+                opacity: 0,
+                duration: 1,
+                ease: "power2.out",
+                delay: 0.3
+            });
+
+            // Why Section - Vertical Reveal
+            gsap.from(whyTextRef.current, {
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: whyTextRef.current,
+                    start: "top 85%"
+                }
+            });
+            whyCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    x: 50,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Services Cards - Pop-in with Rotation
+            serviceCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    scale: 0.5,
+                    rotation: i % 2 === 0 ? -5 : 5,
+                    opacity: 0,
+                    duration: 0.7,
+                    delay: i * 0.1,
+                    ease: "back.out(1.5)",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%"
+                    }
+                });
+            });
+
+            // Approach Steps - Diagonal Stagger
+            approachStepsRef.current.forEach((step, i) => {
+                gsap.from(step, {
+                    x: -30,
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: step,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Differentiators & Industries
+            diffItemsRef.current.forEach((item, i) => {
+                gsap.from(item, {
+                    x: -20,
+                    opacity: 0,
+                    duration: 0.4,
+                    delay: i * 0.05,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 95%"
+                    }
+                });
+            });
+            industryCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    scale: 0.8,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.1,
+                    ease: "elastic.out(1, 0.5)",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Tool Tags - Cascade
+            toolTagsRef.current.forEach((tag, i) => {
+                gsap.from(tag, {
+                    y: 20,
+                    opacity: 0,
+                    duration: 0.4,
+                    delay: i * 0.05,
+                    scrollTrigger: {
+                        trigger: tag,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // FAQ Section
+            gsap.from(faqSectionRef.current, {
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: faqSectionRef.current,
+                    start: "top 85%"
+                }
+            });
+
+            // Final CTA
+            gsap.from(ctaRef.current, {
+                scale: 0.95,
+                opacity: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: ctaRef.current,
+                    start: "top 90%"
+                }
+            });
+
+            // Hero Image Floating
+            gsap.to(heroImageRef.current, {
+                y: -20,
+                duration: 2.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
 
     const toggleFaq = (index) => {
         setOpenFaq(openFaq === index ? null : index);
+    };
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            scale: isEnter ? 1.05 : 1,
+            y: isEnter ? -10 : 0,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                rotate: isEnter ? 15 : 0,
+                duration: 0.3
+            });
+        }
     };
 
     const setupServices = [
@@ -137,7 +318,7 @@ const GA4Consulting = () => {
     ];
 
     return (
-        <div className="bg-white text-slate-900 overflow-hidden">
+        <div ref={pageRef} className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -147,7 +328,7 @@ const GA4Consulting = () => {
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10 animate-fade-in-up text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             GA4 Consulting Services
                         </h1>
@@ -157,12 +338,6 @@ const GA4Consulting = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-relaxed text-white font-medium">
                             Data is powerful—only when it’s accurate, structured, and aligned with business goals. Our GA4 Consulting Services help you transform raw analytics into measurable growth strategies. From seamless migration to advanced event tracking and cross-channel attribution, we ensure your analytics ecosystem drives real ROI.
                         </p>
-                        <div className="flex flex-wrap gap-4">
-                            {/* <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
-                                <Activity className="text-blue-400" size={24} />
-                                <span className="font-semibold text-white text-sm tracking-widest">Actionable Data ROI</span>
-                            </div> */}
-                        </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <Link
@@ -180,7 +355,7 @@ const GA4Consulting = () => {
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={ga4hero}
@@ -195,7 +370,7 @@ const GA4Consulting = () => {
             <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
+                        <div ref={whyTextRef}>
                             <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight">
                                 Why Your Business Needs GA4 Expertise
                             </h2>
@@ -217,8 +392,12 @@ const GA4Consulting = () => {
                                 { title: "Predictive Insights", icon: <Brain className="text-blue-600" /> },
                                 { title: "Cross-Device Analytics", icon: <Smartphone className="text-blue-600" /> }
                             ].map((item, index) => (
-                                <div key={index} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-6 group hover:translate-x-2 transition-transform">
-                                    <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                <div
+                                    key={index}
+                                    ref={el => whyCardsRef.current[index] = el}
+                                    className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-6 group hover:translate-x-2 transition-transform cursor-pointer"
+                                >
+                                    <div className="card-icon w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
                                         {item.icon}
                                     </div>
                                     <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
@@ -238,119 +417,38 @@ const GA4Consulting = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        {/* Setup & Config */}
-                        <div className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                            <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
-                                <Zap size={32} />
+                        {[
+                            { icon: <Zap size={32} />, title: "GA4 Setup & Configuration", desc: "We design a customized GA4 architecture aligned with your KPIs.", points: setupServices },
+                            { icon: <Rocket size={32} />, title: "GA4 Migration from UA", desc: "Ensuring a smooth transition from Universal Analytics.", points: migrationSteps },
+                            { icon: <Monitor size={32} />, title: "Advanced Event Tracking", desc: "Precision tracking for modern marketing demands.", points: trackingTools },
+                            { icon: <ShoppingCart size={32} />, title: "Ecommerce & Conversion Optimization", desc: "Because every micro-conversion matters.", points: ecommerceOptimization },
+                            { icon: <LineChart size={32} />, title: "GA4 Data Analysis & Reporting", desc: "Transforming noise into actionable interpretation.", points: reportingTools },
+                            { icon: <Search size={32} />, title: "CRO Insights", desc: "Identifying friction points and growth opportunities.", points: croInsights }
+                        ].map((item, index) => (
+                            <div
+                                key={index}
+                                ref={el => serviceCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group cursor-pointer"
+                            >
+                                <div className="card-icon text-blue-400 mb-8 transition-transform inline-block">
+                                    {item.icon}
+                                </div>
+                                <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
+                                    {item.title}
+                                </h3>
+                                <p className="text-blue-200/80 mb-6 font-medium italic">"{item.desc}"</p>
+                                <div className="space-y-3">
+                                    {item.points.map((point, idx) => (
+                                        <div key={idx} className="flex items-start gap-3 text-sm text-white/80">
+                                            <CheckCircle2 size={16} className="text-blue-400 mt-1 shrink-0" />
+                                            <span>{point}</span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
-                                GA4 Setup & Configuration
-                            </h3>
-                            <p className="text-blue-200/80 mb-6 font-medium italic">We design a customized GA4 architecture aligned with your KPIs.</p>
-                            <div className="space-y-3">
-                                {setupServices.map((point, idx) => (
-                                    <div key={idx} className="flex items-start gap-3 text-sm text-white/80">
-                                        <CheckCircle2 size={16} className="text-blue-400 mt-1 shrink-0" />
-                                        <span>{point}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Migration */}
-                        <div className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                            <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
-                                <Rocket size={32} />
-                            </div>
-                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
-                                GA4 Migration from UA
-                            </h3>
-                            <p className="text-blue-200/80 mb-6 font-medium italic">Ensuring a smooth transition from Universal Analytics.</p>
-                            <div className="space-y-3">
-                                {migrationSteps.map((point, idx) => (
-                                    <div key={idx} className="flex items-start gap-3 text-sm text-white/80">
-                                        <CheckCircle2 size={16} className="text-blue-400 mt-1 shrink-0" />
-                                        <span>{point}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Event Tracking */}
-                        <div className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                            <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
-                                <Monitor size={32} />
-                            </div>
-                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
-                                Advanced Event Tracking
-                            </h3>
-                            <p className="text-blue-200/80 mb-6 font-medium italic">Precision tracking for modern marketing demands.</p>
-                            <div className="space-y-3">
-                                {trackingTools.map((point, idx) => (
-                                    <div key={idx} className="flex items-start gap-3 text-sm text-white/80">
-                                        <CheckCircle2 size={16} className="text-blue-400 mt-1 shrink-0" />
-                                        <span>{point}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Ecommerce */}
-                        <div className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                            <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
-                                <ShoppingCart size={32} />
-                            </div>
-                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
-                                Ecommerce & Conversion Optimization
-                            </h3>
-                            <p className="text-blue-200/80 mb-6 font-medium italic">Because every micro-conversion matters.</p>
-                            <div className="space-y-3">
-                                {ecommerceOptimization.map((point, idx) => (
-                                    <div key={idx} className="flex items-start gap-3 text-sm text-white/80">
-                                        <CheckCircle2 size={16} className="text-blue-400 mt-1 shrink-0" />
-                                        <span>{point}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Analysis & Reporting */}
-                        <div className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                            <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
-                                <LineChart size={32} />
-                            </div>
-                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
-                                GA4 Data Analysis & Reporting
-                            </h3>
-                            <p className="text-blue-200/80 mb-6 font-medium italic">Transforming noise into actionable interpretation.</p>
-                            <div className="space-y-3">
-                                {reportingTools.map((point, idx) => (
-                                    <div key={idx} className="flex items-start gap-3 text-sm text-white/80">
-                                        <CheckCircle2 size={16} className="text-blue-400 mt-1 shrink-0" />
-                                        <span>{point}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* CRO Insights */}
-                        <div className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                            <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
-                                <Search size={32} />
-                            </div>
-                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
-                                CRO Insights
-                            </h3>
-                            <p className="text-blue-200/80 mb-6 font-medium italic">Identifying friction points and growth opportunities.</p>
-                            <div className="space-y-3">
-                                {croInsights.map((point, idx) => (
-                                    <div key={idx} className="flex items-start gap-3 text-sm text-white/80">
-                                        <CheckCircle2 size={16} className="text-blue-400 mt-1 shrink-0" />
-                                        <span>{point}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -367,7 +465,13 @@ const GA4Consulting = () => {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
                         {approach.map((item, index) => (
-                            <div key={index} className="p-8 bg-slate-50 border border-slate-100 rounded-[30px] transition-all hover:shadow-xl hover:-translate-y-2 group flex flex-col">
+                            <div
+                                key={index}
+                                ref={el => approachStepsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="p-8 bg-slate-50 border border-slate-100 rounded-[30px] transition-all hover:shadow-xl hover:-translate-y-2 group flex flex-col cursor-pointer"
+                            >
                                 <div className="text-[48px] font-black text-blue-600/10 leading-none mb-6 group-hover:text-blue-600/20 transition-all italic">
                                     {item.step}
                                 </div>
@@ -388,7 +492,11 @@ const GA4Consulting = () => {
                             <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">What Makes Us Different?</h2>
                             <div className="space-y-6">
                                 {differentiators.map((item, index) => (
-                                    <div key={index} className="flex items-center gap-4 bg-white/5 p-5 rounded-2xl border border-white/10 group hover:bg-white/10 transition-colors">
+                                    <div
+                                        key={index}
+                                        ref={el => diffItemsRef.current[index] = el}
+                                        className="flex items-center gap-4 bg-white/5 p-5 rounded-2xl border border-white/10 group hover:bg-white/10 transition-colors cursor-default"
+                                    >
                                         <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white font-black group-hover:scale-110 transition-transform">
                                             ✔
                                         </div>
@@ -406,7 +514,11 @@ const GA4Consulting = () => {
                             <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">Industries We Serve</h2>
                             <div className="flex flex-wrap gap-4">
                                 {industries.map((industry, index) => (
-                                    <div key={index} className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-black transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1">
+                                    <div
+                                        key={index}
+                                        ref={el => industryCardsRef.current[index] = el}
+                                        className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-black transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1 cursor-default"
+                                    >
                                         {industry}
                                     </div>
                                 ))}
@@ -422,7 +534,11 @@ const GA4Consulting = () => {
                     <h2 className="text-[36px] font-bold text-slate-900 mb-12 leading-tight">Tools & Platforms We Work With</h2>
                     <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
                         {tools.map((tool, index) => (
-                            <div key={index} className="px-10 py-6 bg-slate-50 border border-slate-100 rounded-3xl flex items-center gap-4 font-bold text-slate-900 group hover:border-blue-500 hover:text-blue-600 transition-all shadow-sm hover:shadow-md">
+                            <div
+                                key={index}
+                                ref={el => toolTagsRef.current[index] = el}
+                                className="px-10 py-6 bg-slate-50 border border-slate-100 rounded-3xl flex items-center gap-4 font-bold text-slate-900 group hover:border-blue-500 hover:text-blue-600 transition-all shadow-sm hover:shadow-md cursor-default"
+                            >
                                 <div className="w-3 h-3 bg-blue-500 rounded-full group-hover:scale-125 transition-transform"></div>
                                 <span className="text-lg">{tool}</span>
                             </div>
@@ -432,7 +548,7 @@ const GA4Consulting = () => {
             </section>
 
             {/* FAQs */}
-            <section className="py-24 bg-slate-50">
+            <section ref={faqSectionRef} className="py-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-4 leading-tight">GA4 Consulting Intelligence (FAQs)</h2>
@@ -461,8 +577,8 @@ const GA4Consulting = () => {
             </section>
 
             {/* Final CTA Section */}
-            <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
-                <div className="container max-w-4xl mx-auto animate-fade-in text-left md:text-center">
+            <section ref={ctaRef} className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
+                <div className="container max-w-4xl mx-auto text-left md:text-center">
                     <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">Ready to Turn Data into Revenue?</h2>
                     <p className="text-[16px] md:text-[18px] mb-6 text-2xl text-white font-medium opacity-90 max-w-3xl mx-auto leading-relaxed">
                         Analytics should empower decisions—not confuse them.
@@ -486,4 +602,3 @@ const GA4Consulting = () => {
 };
 
 export default GA4Consulting;
-

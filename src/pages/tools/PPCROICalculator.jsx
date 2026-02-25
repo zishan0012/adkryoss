@@ -39,14 +39,14 @@ const PPCROICalculator = () => {
                 </div>
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-4xl">
-                        <h1 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight">PPC ROI Calculator – Instantly Measure the Real Profit Behind Your Ads</h1>
-                        <p className="text-xl md:text-2xl text-blue-100 mb-10 leading-relaxed font-light">
+                        <h1 className="text-[28px] md:text-[36px] font-bold mb-8 tracking-tight">PPC ROI Calculator – Instantly Measure the Real Profit Behind Your Ads</h1>
+                        <p className="text-[20px] md:text-[24px] text-blue-100 mb-10 leading-relaxed font-light">
                             Stop guessing. Start calculating. Our PPC ROI Calculator helps you estimate how much revenue your paid campaigns can generate — before you scale your budget.
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <button
                                 onClick={() => setIsPopupOpen(true)}
-                                className="bg-[#0066cc] hover:bg-blue-600 text-white px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 shadow-2xl hover:shadow-blue-500/25 flex items-center gap-2"
+                                className="bg-[#0066cc] hover:bg-blue-600 text-white px-6 py-3 rounded-full font-semibold text-[16px] md:text-[20px] transition-all duration-300 transform hover:-translate-y-1 shadow-2xl hover:shadow-blue-500/25 flex items-center gap-2"
                             >
                                 Start Calculating Now <ArrowRight size={20} />
                             </button>
@@ -337,14 +337,14 @@ const PPCROICalculator = () => {
             {/* Final CTA */}
             <section className="py-24 bg-gradient-to-br from-blue-700 to-indigo-900 text-white">
                 <div className="container mx-auto px-6 text-center space-y-12">
-                    <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">Take Control of Your Ad Profitability</h2>
-                    <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
+                    <h2 className="text-[28px] md:text-[36px] font-bold tracking-tighter">Take Control of Your Ad Profitability</h2>
+                    <p className="text-[20px] md:text-[24px] text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
                         Use our PPC ROI Calculator to estimate your campaign potential today. Want expert-backed execution? Let’s build campaigns that deliver measurable returns and sustainable growth.
                     </p>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-8">
                         <button
                             onClick={() => setIsPopupOpen(true)}
-                            className="px-14 py-6 bg-white text-blue-900 font-black text-2xl rounded-full shadow-2xl hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
+                            className="px-8 py-3 bg-white text-blue-900 font-semibold text-[16px] md:text-[20px] rounded-full shadow-2xl hover:bg-blue-50 transition-all duration-300 transform hover:scale-105"
                         >
                             Open Calculator
                         </button>

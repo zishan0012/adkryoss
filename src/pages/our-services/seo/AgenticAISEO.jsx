@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import agenticaihero from "../../../assets/SEO/agenticaihero.jpeg";
 import {
     Search,
@@ -18,7 +20,186 @@ import {
     DollarSign
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const AgenticAISEO = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whatRef = useRef(null);
+    const whatCard1Ref = useRef(null);
+    const whatCard2Ref = useRef(null);
+    const frameworkRef = useRef(null);
+    const frameworkCardsRef = useRef([]);
+    const servicesListRef = useRef(null);
+    const serviceItemsRef = useRef([]);
+    const hybridCardRef = useRef(null);
+    const industriesRef = useRef(null);
+    const industryBadgesRef = useRef([]);
+    const futureRef = useRef(null);
+    const futureCardRef = useRef(null);
+    const futureContentRef = useRef(null);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Autonomous assembly
+            gsap.from(heroContentRef.current, {
+                x: -100,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power4.out"
+            });
+            gsap.from(heroImageRef.current, {
+                x: 100,
+                opacity: 0,
+                scale: 0.9,
+                duration: 1.2,
+                ease: "power4.out"
+            });
+
+            // What is Agentic - Branched reveal
+            gsap.from(whatRef.current.querySelector('h2'), {
+                opacity: 0,
+                y: 30,
+                scrollTrigger: {
+                    trigger: whatRef.current,
+                    start: "top 80%"
+                }
+            });
+            gsap.from(whatCard1Ref.current, {
+                x: -50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: whatCard1Ref.current,
+                    start: "top 85%"
+                }
+            });
+            gsap.from(whatCard2Ref.current, {
+                x: 50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: whatCard2Ref.current,
+                    start: "top 85%"
+                }
+            });
+
+            // Framework - Self-organizing nodes
+            frameworkCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    y: 60,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: i * 0.15,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Services List - Growing branches
+            serviceItemsRef.current.forEach((item, i) => {
+                gsap.from(item, {
+                    x: -20,
+                    opacity: 0,
+                    duration: 0.4,
+                    delay: i * 0.05,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 95%"
+                    }
+                });
+            });
+            gsap.from(hybridCardRef.current, {
+                scale: 0.95,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: hybridCardRef.current,
+                    start: "top 85%"
+                }
+            });
+
+            // Industries - Distributed nodes
+            industryBadgesRef.current.forEach((badge, i) => {
+                gsap.from(badge, {
+                    scale: 0.5,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.08,
+                    scrollTrigger: {
+                        trigger: badge,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Future - Matrix transition
+            gsap.from(futureCardRef.current, {
+                x: -40,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: futureCardRef.current,
+                    start: "top 85%"
+                }
+            });
+            gsap.from(futureContentRef.current, {
+                x: 40,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: futureContentRef.current,
+                    start: "top 85%"
+                }
+            });
+
+            // CTA - Final pulse
+            gsap.from(ctaRef.current, {
+                scale: 0.9,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ctaRef.current,
+                    start: "top 90%"
+                }
+            });
+
+            // Perpetual brain drift
+            gsap.to('.node-icon', {
+                y: -8,
+                duration: 2.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            y: isEnter ? -12 : 0,
+            scale: isEnter ? 1.03 : 1,
+            backgroundColor: isEnter ? "#f0f9ff" : "white",
+            borderColor: isEnter ? "#0066CC" : "#e2e8f0",
+            boxShadow: isEnter ? "0 20px 40px rgba(0,102,204,0.12)" : "0 4px 6px -1px rgba(0,0,0,0.1)",
+            duration: 0.4,
+            ease: "back.out(1.5)"
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                rotateY: isEnter ? 180 : 0,
+                scale: isEnter ? 1.2 : 1,
+                duration: 0.6
+            });
+        }
+    };
 
     const agenticFramework = [
         {
@@ -102,7 +283,7 @@ const AgenticAISEO = () => {
     ];
 
     return (
-        <div style={{ backgroundColor: '#fff' }}>
+        <div ref={pageRef} className="overflow-hidden bg-white">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -111,43 +292,38 @@ const AgenticAISEO = () => {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10 text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Agentic AI SEO Services
                         </h1>
                         <h3 className="text-[20px] md:text-[24px] mb-4 font-medium text-white">
                             The Search for Tomorrow. Driven by Autonomous Intelligence.
                         </h3>
-                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
+                        <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white/90 font-medium">
                             Search is evolving from keywords to intelligence. We build AI-driven SEO systems that don’t just optimize pages — they think, learn, and adapt in real time to dominate modern search ecosystems.
                         </p>
-                        {/* <div className="p-0  mb-6">
-                            <p className="text-[18px] leading-[1.8] text-white m-0">
-                                At Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span>, we deploy autonomous search agents that continuously monitor, analyze, and optimize your website for maximum organic output.
-                            </p>
-                        </div> */}
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <Link
                                 to="/contact"
-                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                                className="bg-white text-black font-bold px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-blue-50 text-center"
                             >
                                 Speak to Our Expert →
                             </Link>
                             <Link
                                 to="#services"
-                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                                className="border-2 border-white text-white px-10 py-4 rounded-full font-bold transition-all duration-300 hover:bg-white hover:text-blue-900 hover:-translate-y-1 hover:shadow-2xl text-center"
                             >
                                 Our Services →
                             </Link>
                         </div>
                     </div>
-                    <div className="flex justify-center md:justify-end relative z-10">
-                        <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
+                        <div className="relative rounded-3xl overflow-hidden bg-white/10 backdrop-blur-sm p-4 border border-white/20">
                             <img
                                 src={agenticaihero}
                                 alt="Agentic AI SEO Services"
-                                className="max-w-[450px] w-full rounded-2xl drop-shadow-[0_20px_50px_rgba(0,0,0,0.25)] "
+                                className="max-w-[450px] w-full rounded-2xl drop-shadow-[0_25px_50px_rgba(0,0,0,0.5)] "
                             />
                         </div>
                     </div>
@@ -155,42 +331,44 @@ const AgenticAISEO = () => {
             </section>
 
             {/* What is Agentic SEO Section */}
-            <section className="pt-32 pb-24 bg-white">
+            <section ref={whatRef} className="pt-32 pb-24 bg-white">
                 <div className="container">
-                    <div className="text-center mb-[60px]">
-                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
+                    <div className="text-center mb-[70px]">
+                        <h2 className="text-[36px] font-bold text-[#0f172a] mb-[20px]">
                             What is Agentic AI SEO?
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 max-w-[850px] mx-auto font-medium">
+                        <p className="text-[16px] md:text-[18px] text-slate-600 mb-6 max-w-[850px] mx-auto font-medium leading-relaxed">
                             Agentic AI SEO is the next evolution of search optimization — powered by autonomous AI agents that continuously analyze data and execute improvements without constant manual intervention.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="bg-[#f8f9fa] p-[50px] rounded-[40px] border border-[#eee]">
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
+                    <div className="grid md:grid-cols-2 gap-12 items-stretch">
+                        <div ref={whatCard1Ref} className="bg-[#f8fafc] p-[50px] rounded-[48px] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                            <p className="text-[18px] md:text-[20px] mb-6 leading-[1.8] font-medium text-slate-700">
                                 Unlike traditional SEO that reacts to algorithm updates, Agentic AI anticipates shifts and adapts strategies instantly to scale performance intelligently.
                             </p>
-                            <p className="text-[16px] md:text-[18px] mb-6 font-medium leading-[1.8]">
-                                At Adkryoss managed by Clink Consultancy Services Private Limited, we build self-learning systems that transform your website into an organic growth machine.
+                            <p className="text-[18px] md:text-[20px] mb-6 font-bold leading-[1.8] text-[#0f172a]">
+                                At Adkryoss managed by <span className="text-blue-600 underline decoration-blue-200">Clink Consultancy Services Private Limited</span>, we build self-learning systems that transform your website into an organic growth machine.
                             </p>
                         </div>
-                        <div className="bg-[#0f172a] p-[50px] rounded-[40px] text-white">
-                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white">
+                        <div ref={whatCard2Ref} className="bg-[#0f172a] p-[50px] rounded-[48px] text-white shadow-2xl relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+                            <h3 className="text-[20px] md:text-[24px] mb-8 font-semibold text-white flex items-center gap-3">
+                                <Sparkles className="text-blue-400" />
                                 Traditional vs Agentic SEO
                             </h3>
-                            <div className="space-y-6">
+                            <div className="space-y-6 relative z-10">
                                 {[
-                                    { t: "Traditional:", v: "Manual audits & reactive strategies" },
-                                    { t: "Agentic:", v: "Autonomous optimization & predictive modeling" },
-                                    { t: "Agentic:", v: "Continuous technical fixes & real-time intelligence" },
-                                    { t: "Agentic:", v: "Multi-platform visibility (Search, AI, Voice)" }
+                                    { t: "Traditional:", v: "Manual audits & reactive strategies", c: "text-slate-400" },
+                                    { t: "Agentic:", v: "Autonomous optimization & predictive modeling", c: "text-blue-400" },
+                                    { t: "Agentic:", v: "Continuous technical fixes & real-time intelligence", c: "text-blue-400" },
+                                    { t: "Agentic:", v: "Multi-platform visibility (Search, AI, Voice)", c: "text-blue-400" }
                                 ].map((item, i) => (
-                                    <div key={i} className="flex gap-[12px] items-start">
-                                        <div className="bg-blue-500 rounded-full p-1 mt-1"><CheckCircle2 size={14} color="#fff" /></div>
+                                    <div key={i} className="flex gap-[16px] items-start group/item">
+                                        <div className="bg-blue-600 rounded-full p-1.5 mt-1 group-hover/item:scale-125 transition-transform"><CheckCircle2 size={16} color="#fff" /></div>
                                         <div>
-                                            <span className="font-semibold text-[#3b82f6] mr-[8px]">{item.t}</span>
-                                            <span className="text-[15px]">{item.v}</span>
+                                            <span className={`font-semibold text-blue-400 mr-[10px] text-lg uppercase tracking-wider`}>{item.t}</span>
+                                            <span className="text-[17px] font-medium text-slate-200">{item.v}</span>
                                         </div>
                                     </div>
                                 ))}
@@ -201,31 +379,38 @@ const AgenticAISEO = () => {
             </section>
 
             {/* Framework Section */}
-            <section id="services" className="py-[100px] bg-[#f1f5f9]">
+            <section id="services" ref={frameworkRef} className="py-[100px] bg-slate-50">
                 <div className="container">
-                    <div className="text-center mb-[60px]">
-                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
+                    <div className="text-center mb-[70px]">
+                        <h2 className="text-[36px] font-bold text-[#0f172a] mb-[20px]">
                             Our Agentic AI SEO Framework
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
+                        <p className="text-[16px] md:text-[18px] text-slate-600 mb-6 font-medium max-w-2xl mx-auto">
                             A structured yet adaptive methodology designed for performance and long-term authority.
                         </p>
                     </div>
 
                     <div className="flex flex-wrap justify-center gap-8">
                         {agenticFramework.map((item, i) => (
-                            <div key={i} className="flex-1 min-w-[350px] max-w-[380px] bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] relative overflow-hidden border border-[#e2e8f0] flex-grow max-w-[450px] hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)] hover:border-[#0066cc]">
-                                <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
-                                <h3 className="text-[22px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
-                                <p className="text-[#666] mb-[20px] leading-[1.6] text-[15px] font-medium">{item.desc}</p>
-                                <ul className="list-none p-0">
+                            <div
+                                key={i}
+                                ref={el => frameworkCardsRef.current[i] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="flex-1 min-w-[350px] max-w-[380px] bg-white p-[40px] rounded-[32px] border border-slate-100 shadow-lg relative overflow-hidden flex-grow transition-all duration-500 cursor-pointer group"
+                            >
+                                <div className="text-blue-600 mb-[24px] card-icon inline-block bg-blue-50 p-4 rounded-2xl">{item.icon}</div>
+                                <h3 className="text-[22px] font-bold mb-[18px] text-[#0f172a] leading-tight group-hover:text-blue-700 transition-colors">{item.title}</h3>
+                                <p className="text-slate-500 mb-[24px] leading-[1.7] text-[16px] font-medium">{item.desc}</p>
+                                <ul className="list-none p-0 space-y-4">
                                     {item.points.map((p, j) => (
-                                        <li key={j} className="flex gap-[8px] mb-[10px] text-[#444] text-[14px]">
-                                            <div className="text-[#0066cc] mt-[4px]"><CheckCircle2 size={14} /></div>
+                                        <li key={j} className="flex gap-[12px] mb-[10px] text-slate-700 text-[15px] items-start font-medium group-hover:translate-x-1 transition-transform">
+                                            <div className="text-blue-600 mt-[4px] shrink-0"><CheckCircle2 size={18} /></div>
                                             {p}
                                         </li>
                                     ))}
                                 </ul>
+                                <div className="absolute top-0 right-0 -mr-8 -mt-8 w-24 h-24 bg-blue-500/5 rounded-full scale-0 group-hover:scale-100 transition-transform duration-700"></div>
                             </div>
                         ))}
                     </div>
@@ -233,35 +418,44 @@ const AgenticAISEO = () => {
             </section>
 
             {/* Services List Section */}
-            <section className="py-[100px] bg-white">
+            <section ref={servicesListRef} className="py-[120px] bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[30px]">Our Agentic AI SEO Services</h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
+                            <h2 className="text-[42px] font-black text-[#0f172a] mb-[30px] tracking-tight leading-tight">Our Agentic AI SEO Services</h2>
+                            <p className="text-[18px] md:text-[20px] text-slate-600 mb-10 leading-[1.8] font-medium">
                                 We don't just use AI tools; we build intelligent SEO ecosystems that evolve with search engine expectations.
                             </p>
-                            <div className="grid grid-cols-2 gap-y-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-8">
                                 {agenticServices.map((service, i) => (
-                                    <div key={i} className="flex gap-[10px] items-center">
-                                        <div className="bg-blue-100 p-1 rounded-full"><ArrowRight size={14} className="text-blue-600" /></div>
-                                        <span className="font-medium text-[#1e293b]">{service}</span>
+                                    <div key={i} ref={el => serviceItemsRef.current[i] = el} className="flex gap-[12px] items-center group/service">
+                                        <div className="bg-blue-100 p-2 rounded-xl group-hover/service:bg-blue-600 transition-colors duration-300">
+                                            <ArrowRight size={16} className="text-blue-600 group-hover/service:text-white transition-colors" />
+                                        </div>
+                                        <span className="font-medium text-slate-800 text-lg group-hover/service:translate-x-2 transition-transform duration-300">{service}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="bg-[#0f172a] p-[60px] rounded-[40px] text-white">
-                            <h3 className="text-[28px] font-semibold mb-[30px]">The Hybrid Advantage</h3>
-                            <div className="space-y-6">
+                        <div ref={hybridCardRef} className="bg-[#0f172a] p-[60px] rounded-[56px] text-white shadow-2xl relative overflow-hidden border border-white/5">
+                            <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-900/40 rounded-full -ml-24 -mb-24 blur-3xl"></div>
+                            <h3 className="text-[28px] font-black mb-[40px] text-white flex items-center gap-3">
+                                <Cpu className="text-blue-400" />
+                                The Hybrid Advantage
+                            </h3>
+                            <div className="space-y-10 relative z-10">
                                 {[
-                                    { t: "Strategic Oversight", d: "Human expertise guiding AI execution." },
-                                    { t: "Deep Data Science", d: "Search psychology combined with algorithm data." },
-                                    { t: "Scale + Creativity", d: "Autonomous scale with creative brand storytelling." },
-                                    { t: "Technical Precision", d: "Error-free technical maintenance at any scale." }
+                                    { t: "Strategic Oversight", d: "Human expertise guiding AI execution.", i: <BrainCircuit size={20} /> },
+                                    { t: "Deep Data Science", d: "Search psychology combined with algorithm data.", i: <TrendingUp size={20} /> },
+                                    { t: "Scale + Creativity", d: "Autonomous scale with creative brand storytelling.", i: <Zap size={20} /> },
+                                    { t: "Technical Precision", d: "Error-free technical maintenance at any scale.", i: <Target size={20} /> }
                                 ].map((item, i) => (
-                                    <div key={i}>
-                                        <h4 className="font-semibold text-[#3b82f6] mb-[4px]">{item.t}</h4>
-                                        <p className="text-[#e2e8f0] text-[15px] font-medium">{item.d}</p>
+                                    <div key={i} className="flex gap-5 group/hybrid">
+                                        <div className="mt-1 text-blue-400 group-hover/hybrid:scale-150 transition-transform duration-500">{item.i}</div>
+                                        <div>
+                                            <h4 className="text-[20px] font-semibold text-blue-400 mb-[6px] tracking-wide">{item.t}</h4>
+                                            <p className="text-slate-300 text-[15px] font-medium leading-relaxed">{item.d}</p>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -271,19 +465,23 @@ const AgenticAISEO = () => {
             </section>
 
             {/* Industries We Serve */}
-            <section className="py-[100px] bg-[#f1f5f9]">
+            <section ref={industriesRef} className="py-[100px] bg-slate-50">
                 <div className="container">
-                    <div className="text-center mb-[60px]">
-                        <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">Industries We Empower</h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
+                    <div className="text-center mb-[70px]">
+                        <h2 className="text-[36px] font-bold text-[#0f172a] mb-[20px]">Industries We Empower</h2>
+                        <p className="text-[16px] md:text-[18px] text-slate-600 mb-6 font-medium max-w-2xl mx-auto">
                             Every industry requires intelligent visibility — and we build it strategically.
                         </p>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-[16px]">
+                    <div className="flex flex-wrap justify-center gap-[20px]">
                         {industriesEmpowered.map((item, i) => (
-                            <div key={i} className="flex items-center gap-[10px] bg-white px-[25px] py-[15px] rounded-[12px] border border-[#e2e8f0] font-medium text-[#1e293b] transition-all duration-300 hover:border-[#0066cc] hover:-translate-y-[5px]">
-                                <span className="text-blue-500">{item.icon}</span>
-                                {item.name}
+                            <div
+                                key={i}
+                                ref={el => industryBadgesRef.current[i] = el}
+                                className="flex items-center gap-[12px] bg-white px-[32px] py-[20px] rounded-[24px] border border-slate-100 font-medium text-slate-800 transition-all duration-300 shadow-sm hover:shadow-xl hover:border-blue-500 hover:-translate-y-[8px] cursor-default group"
+                            >
+                                <span className="text-blue-600 group-hover:scale-125 transition-transform duration-300">{item.icon}</span>
+                                <span className="text-lg">{item.name}</span>
                             </div>
                         ))}
                     </div>
@@ -291,42 +489,45 @@ const AgenticAISEO = () => {
             </section>
 
             {/* The Future Section */}
-            <section className="py-[100px] bg-white">
+            <section ref={futureRef} className="py-[120px] bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div className="bg-[#0f172a] p-[60px] rounded-[40px] border border-[#eee]">
-                            <BrainCircuit size={48} className="text-blue-400 mb-6" />
-                            <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white">
+                        <div ref={futureCardRef} className="bg-[#0f172a] p-[60px] rounded-[56px] shadow-2xl relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+                            <BrainCircuit size={64} className="text-blue-400 mb-8 node-icon" />
+                            <h3 className="text-[20px] md:text-[24px] mb-6 text-white font-semibold">
                                 The Future is Autonomous
                             </h3>
-                            <p className="text-[16px] md:text-[18px] text-white mb-6 leading-[1.8] font-medium">
-                                Search engines are integrating AI at their core. Brands that rely on manual SEO will struggle to scale. Adkryoss managed by Clink Consultancy Services Private Limited helps you transition to a system that learns faster, executes smarter, and delivers ROI predictably.
+                            <p className="text-[16px] md:text-[18px] text-slate-300 mb-6 leading-[1.8] font-medium">
+                                Search engines are integrating AI at their core. Brands that rely on manual SEO will struggle to scale. <span className="text-white font-bold">Adkryoss managed by Clink Consultancy Services Private Limited</span> helps you transition to a system that learns faster, executes smarter, and delivers ROI predictably.
                             </p>
                         </div>
-                        <div>
-                            <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[30px]">Lead the AI Search Revolution</h2>
-                            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] font-medium">
+                        <div ref={futureContentRef}>
+                            <h2 className="text-[36px] font-black text-[#0f172a] mb-[30px] tracking-tight leading-tight">Lead the AI Search Revolution</h2>
+                            <p className="text-[18px] md:text-[20px] text-slate-600 mb-10 leading-[1.8] font-medium">
                                 The next era of SEO isn’t about ranking pages. It’s about building intelligent digital authority.
                             </p>
-                            <div className="p-[30px] bg-[rgba(59,130,246,0.1)] rounded-[20px] border-l-4 border-[#3b82f6]">
-                                <p className="m-0 font-medium text-[#1a1a1a]">"Partner with us to create a self-optimizing search ecosystem that drives consistent organic growth."</p>
+                            <div className="p-[45px] bg-blue-50 rounded-[40px] border-l-[12px] border-blue-600 shadow-inner group hover:bg-blue-100 transition-colors duration-500">
+                                <p className="m-0 font-bold text-[#0f172a] text-[20px] leading-relaxed italic group-hover:scale-105 transition-transform">
+                                    "Partner with us to create a self-optimizing search ecosystem that drives consistent organic growth."
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-
-
             {/* CTA */}
-            <section className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
-                <div className="container">
-                    <h2 className="text-[36px] font-bold mb-[20px] text-white">Ready to Build Your AI-Driven Advantage?</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 opacity-100 text-white font-medium">
+            <section ref={ctaRef} className="py-[120px] bg-gradient-to-br from-[#0066cc] to-[#003366] text-white text-center relative overflow-hidden">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_70%)]"></div>
+                <div className="container relative z-10">
+                    <h2 className="text-[36px] font-black mb-[30px] text-white tracking-tight leading-tight">Ready to Build Your AI-Driven Advantage?</h2>
+                    <p className="text-[22px] md:text-[24px] mb-12 opacity-90 text-blue-50 font-medium max-w-3xl mx-auto leading-relaxed">
                         The future of search is now. Let's build your intelligent growth engine.
                     </p>
-                    <Link to="/contact" className="inline-flex items-center gap-[10px] bg-white text-[#0066cc] py-[18px] px-[40px] rounded-[50px] font-semibold no-underline transition-all duration-300 hover:scale-[1.05]">
-                        Start Your Agentic Strategy <ArrowRight size={20} />
+                    <Link to="/contact" className="inline-flex items-center gap-[15px] bg-white text-[#0066cc] py-[24px] px-[60px] rounded-full font-black text-[20px] no-underline transition-all duration-300 shadow-2xl hover:scale-[1.05] hover:bg-blue-50 hover:shadow-white/20 active:scale-95 group">
+                        Start Your Agentic Strategy
+                        <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform" />
                     </Link>
                 </div>
             </section>
@@ -335,3 +536,4 @@ const AgenticAISEO = () => {
 };
 
 export default AgenticAISEO;
+

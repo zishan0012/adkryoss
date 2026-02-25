@@ -1,0 +1,1170 @@
+﻿
+> adkryoss@0.0.0 lint
+> eslint .
+
+
+D:\adkryoss1\adkryoss\src\App.jsx
+  5:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\components\FixedCTA.jsx
+  107:9  error  'handleChange' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\components\Footer.jsx
+  31:38  error  'Icon' is defined but never used  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\components\home\About.jsx
+  473:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\components\home\MeasurableImpactThatSpeaks.jsx
+  234:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\components\home\OURCOREDIGITAL.jsx
+  441:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\components\home\VideoSection.jsx
+  190:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\components\tools\CROCalculatorPopup.jsx
+  32:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  30 |         const revenueLift = targetRevenue - currentRevenue;
+  31 |
+> 32 |         setResults({
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  33 |             currentRate: currentRate.toFixed(2),
+  34 |             currentRevenue,
+  35 |             targetRate: targetRate.toFixed(2),  react-hooks/set-state-in-effect
+
+D:\adkryoss1\adkryoss\src\components\tools\PPCROICalculatorPopup.jsx
+  30:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  28 |         const roi = adSpend > 0 ? (netProfit / adSpend) * 100 : 0;
+  29 |
+> 30 |         setResults({
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  31 |             clicks,
+  32 |             conversions,
+  33 |             revenue,  react-hooks/set-state-in-effect
+
+D:\adkryoss1\adkryoss\src\components\tools\ROICalculatorPopup.jsx
+  28:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  26 |         const estimatedRevenue = Math.round(totalConversions * leadValue);
+  27 |
+> 28 |         setResults({
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  29 |             estimatedTraffic,
+  30 |             expectedTraffic,
+  31 |             totalConversions,  react-hooks/set-state-in-effect
+
+D:\adkryoss1\adkryoss\src\pages\Contact.jsx
+  213:8  error    'contact1' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          no-unused-vars
+  244:7  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  242 |   useEffect(() => {
+  243 |     if (service) {
+> 244 |       setFormData((prev) => ({
+      |       ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  245 |         ...prev,
+  246 |         inquiry: getDefaultInquiry(),
+  247 |       }));  react-hooks/set-state-in-effect
+  249:6  warning  React Hook useEffect has a missing dependency: 'getDefaultInquiry'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     react-hooks/exhaustive-deps
+
+D:\adkryoss1\adkryoss\src\pages\Industry-Focused.jsx
+  10:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\PrivacyPolicy.jsx
+    6:34  error  'Icon' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             no-unused-vars
+   68:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  66 |
+  67 |                             {/* Section 1 */}
+> 68 |                             <SectionCard icon={ClipboardList} title="1. Information We Collect" highlight>
+     |                              ^^^^^^^^^^^ This component is created during render
+  69 |                                 <p className="mb-8 font-medium text-slate-800">We collect information to provide better marketing solutions, improve user experience, and ensure secure digital interactions.</p>
+  70 |
+  71 |                                 <div className="space-y-8">
+
+   4 |
+   5 | const PrivacyPolicy = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                           react-hooks/static-components
+  108:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  106 |
+  107 |                             {/* Section 2 */}
+> 108 |                             <SectionCard icon={Eye} title="2. How We Use Your Information">
+      |                              ^^^^^^^^^^^ This component is created during render
+  109 |                                 <p className="mb-6">Adkryoss managed by Clink Consultancy Services Private Limited uses your data to:</p>
+  110 |                                 <div className="grid sm:grid-cols-2 gap-4">
+  111 |                                     {[
+
+   4 |
+   5 | const PrivacyPolicy = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                    react-hooks/static-components
+  131:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  129 |
+  130 |                             {/* Section 3 */}
+> 131 |                             <SectionCard icon={Cookie} title="3. Cookies & Tracking">
+      |                              ^^^^^^^^^^^ This component is created during render
+  132 |                                 <p className="mb-6">We use cookies and similar technologies to enhance performance and personalize your experience. These include:</p>
+  133 |                                 <div className="space-y-4">
+  134 |                                     {[
+
+   4 |
+   5 | const PrivacyPolicy = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                             react-hooks/static-components
+  154:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  152 |
+  153 |                             {/* Section 4 */}
+> 154 |                             <SectionCard icon={Share2} title="4. Data Sharing & Disclosure">
+      |                              ^^^^^^^^^^^ This component is created during render
+  155 |                                 <p className="mb-6">We may share information only when necessary and under strict safeguards:</p>
+  156 |                                 <ul className="space-y-4">
+  157 |                                     {[
+
+   4 |
+   5 | const PrivacyPolicy = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                            react-hooks/static-components
+  174:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  172 |
+  173 |                             {/* Section 5 */}
+> 174 |                             <SectionCard icon={Lock} title="5. Data Security" highlight>
+      |                              ^^^^^^^^^^^ This component is created during render
+  175 |                                 <p className="mb-6">Adkryoss managed by Clink Consultancy Services Private Limited implements industry-standard safeguards including:</p>
+  176 |                                 <div className="grid grid-cols-2 gap-4 mb-8">
+  177 |                                     {["SSL encryption", "Secure hosting", "Access control", "System monitoring"].map((item, i) => (
+
+   4 |
+   5 | const PrivacyPolicy = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                        react-hooks/static-components
+  190:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  188 |
+  189 |                             {/* Section 6 */}
+> 190 |                             <SectionCard icon={RefreshCw} title="6. Data Retention">
+      |                              ^^^^^^^^^^^ This component is created during render
+  191 |                                 <p className="mb-6">We retain personal information only as long as necessary for:</p>
+  192 |                                 <div className="flex flex-wrap gap-4 mb-8">
+  193 |                                     {["Service delivery", "Legal compliance", "Business analytics"].map((item, i) => (
+
+   4 |
+   5 | const PrivacyPolicy = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                               react-hooks/static-components
+  205:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  203 |
+  204 |                             {/* Section 7 */}
+> 205 |                             <SectionCard icon={UserCheck} title="7. Your Rights">
+      |                              ^^^^^^^^^^^ This component is created during render
+  206 |                                 <p className="mb-6">Depending on your location, you may have rights including:</p>
+  207 |                                 <div className="grid sm:grid-cols-2 gap-4">
+  208 |                                     {["Access to personal data", "Correction of inaccurate info", "Request for data deletion", "Withdrawal of consent", "Objection to processing"].map((item, i) => (
+
+   4 |
+   5 | const PrivacyPolicy = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                      react-hooks/static-components
+  220:34  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  218 |                             {/* Simplified Sections */}
+  219 |                             <div className="grid md:grid-cols-2 gap-8">
+> 220 |                                 <SectionCard icon={Link2} title="8. Third-Party Links">
+      |                                  ^^^^^^^^^^^ This component is created during render
+  221 |                                     <p className="text-sm">We are not responsible for the privacy practices of external websites linked from our platform. Review their policies independently.</p>
+  222 |                                 </SectionCard>
+  223 |                                 <SectionCard icon={UserCheck} title="9. Children's Privacy">
+
+   4 |
+   5 | const PrivacyPolicy = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                               react-hooks/static-components
+  223:34  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  221 |                                     <p className="text-sm">We are not responsible for the privacy practices of external websites linked from our platform. Review their policies independently.</p>
+  222 |                                 </SectionCard>
+> 223 |                                 <SectionCard icon={UserCheck} title="9. Children's Privacy">
+      |                                  ^^^^^^^^^^^ This component is created during render
+  224 |                                     <p className="text-sm">Our services are for professionals. We do not knowingly collect information from individuals under 18 years of age.</p>
+  225 |                                 </SectionCard>
+  226 |                             </div>
+
+   4 |
+   5 | const PrivacyPolicy = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">  react-hooks/static-components
+  228:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  226 |                             </div>
+  227 |
+> 228 |                             <SectionCard icon={RefreshCw} title="10. Policy Updates">
+      |                              ^^^^^^^^^^^ This component is created during render
+  229 |                                 <p>We may update this Privacy Policy to reflect changes in regulations, technologies, or business practices. Updated versions will be published on this page with a revised effective date.</p>
+  230 |                             </SectionCard>
+  231 |
+
+   4 |
+   5 | const PrivacyPolicy = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                       react-hooks/static-components
+
+D:\adkryoss1\adkryoss\src\pages\RefundAndCancellation.jsx
+    6:34  error  'Icon' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+   63:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  61 |
+  62 |                             {/* Section 1 */}
+> 63 |                             <SectionCard icon={Info} title="1. Scope of Services" highlight>
+     |                              ^^^^^^^^^^^ This component is created during render
+  64 |                                 <p className="mb-6 font-medium text-slate-800">This policy applies to all services including but not limited to:</p>
+  65 |                                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
+  66 |                                     {[
+
+   4 |
+   5 | const RefundAndCancellation = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                                                           react-hooks/static-components
+   86:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  84 |
+  85 |                             {/* Section 2 */}
+> 86 |                             <SectionCard icon={CreditCard} title="2. Payment Terms">
+     |                              ^^^^^^^^^^^ This component is created during render
+  87 |                                 <ul className="space-y-4">
+  88 |                                     {[
+  89 |                                         "All services require advance payment as agreed in the proposal or service contract.",
+
+   4 |
+   5 | const RefundAndCancellation = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                                                                                                               react-hooks/static-components
+  107:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  105 |
+  106 |                             {/* Section 3 */}
+> 107 |                             <SectionCard icon={XCircle} title="3. Cancellation Policy" highlight>
+      |                              ^^^^^^^^^^^ This component is created during render
+  108 |                                 <div className="space-y-8">
+  109 |                                     <div className="p-6 bg-white border border-slate-100 rounded-2xl hover:border-blue-200 transition-all">
+  110 |                                         <h3 className="text-lg font-bold text-blue-600 mb-3">Before Project Initiation:</h3>
+
+   4 |
+   5 | const RefundAndCancellation = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                       react-hooks/static-components
+  127:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  125 |
+  126 |                             {/* Section 4 */}
+> 127 |                             <SectionCard icon={RefreshCcw} title="4. Refund Policy">
+      |                              ^^^^^^^^^^^ This component is created during render
+  128 |                                 <p className="mb-6 font-medium text-slate-800 italic">Due to the digital and customized nature of marketing services:</p>
+  129 |                                 <div className="grid gap-4">
+  130 |                                     {[
+
+   4 |
+   5 | const RefundAndCancellation = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                                                                           react-hooks/static-components
+  147:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  145 |
+  146 |                             {/* Section 5 */}
+> 147 |                             <SectionCard icon={Ban} title="5. Non-Refundable Situations" highlight>
+      |                              ^^^^^^^^^^^ This component is created during render
+  148 |                                 <p className="mb-6 font-bold text-slate-900">Refund requests will not be entertained under the following circumstances:</p>
+  149 |                                 <div className="grid sm:grid-cols-2 gap-3">
+  150 |                                     {[
+
+   4 |
+   5 | const RefundAndCancellation = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                                           react-hooks/static-components
+  166:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  164 |
+  165 |                             {/* Section 6 */}
+> 166 |                             <SectionCard icon={FileText} title="6. Exceptional Cases" dark>
+      |                              ^^^^^^^^^^^ This component is created during render
+  167 |                                 <p className="mb-6 text-white">In rare and genuine cases, refund requests may be reviewed by the management team. Decisions will be made based on documented communication, project progress, and contractual commitments.</p>
+  168 |                                 <div className="p-5 bg-white/5 border border-white/10 rounded-2xl text-center font-bold text-lg text-blue-400">
+  169 |                                     All refund decisions are final and at the sole discretion of Adkryoss managed by Clink Consultancy Services Private Limited.
+
+   4 |
+   5 | const RefundAndCancellation = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">  react-hooks/static-components
+  175:34  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  173 |                             {/* Section 7 - 8 Grid */}
+  174 |                             <div className="grid md:grid-cols-2 gap-8">
+> 175 |                                 <SectionCard icon={Shield} title="7. Disputes">
+      |                                  ^^^^^^^^^^^ This component is created during render
+  176 |                                     <p className="text-sm">Clients should contact support before initiating chargebacks. Unauthorized disputes may lead to service termination.</p>
+  177 |                                 </SectionCard>
+  178 |                                 <SectionCard icon={RefreshCcw} title="8. Policy Updates">
+
+   4 |
+   5 | const RefundAndCancellation = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                            react-hooks/static-components
+  178:34  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  176 |                                     <p className="text-sm">Clients should contact support before initiating chargebacks. Unauthorized disputes may lead to service termination.</p>
+  177 |                                 </SectionCard>
+> 178 |                                 <SectionCard icon={RefreshCcw} title="8. Policy Updates">
+      |                                  ^^^^^^^^^^^ This component is created during render
+  179 |                                     <p className="text-sm">This policy may be updated periodically. Clients are advised to review this page regularly for changes.</p>
+  180 |                                 </SectionCard>
+  181 |                             </div>
+
+   4 |
+   5 | const RefundAndCancellation = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                  react-hooks/static-components
+
+D:\adkryoss1\adkryoss\src\pages\RequestQuote.jsx
+  51:17  error    Error: Cannot access variable before it is declared
+
+`servicesList` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  49 |             };
+  50 |             const mappedService = serviceMap[serviceParam.toLowerCase()] || serviceParam;
+> 51 |             if (servicesList.includes(mappedService)) {
+     |                 ^^^^^^^^^^^^ `servicesList` accessed before it is declared
+  52 |                 setFormData(prev => ({ ...prev, service: mappedService }));
+  53 |             }
+  54 |         }
+
+  59 |     const [success, setSuccess] = useState("");
+  60 |
+> 61 |     const servicesList = [
+     |     ^^^^^^^^^^^^^^^^^^^^^^
+> 62 |         "SEO",
+     | ^^^^^^^^^^^^^^
+> 63 |         "Paid Ads",
+     | ^^^^^^^^^^^^^^
+> 64 |         "Content Marketing",
+     | ^^^^^^^^^^^^^^
+> 65 |         "AI Automation",
+     | ^^^^^^^^^^^^^^
+> 66 |         "CRO",
+     | ^^^^^^^^^^^^^^
+> 67 |         "ORM",
+     | ^^^^^^^^^^^^^^
+> 68 |         "ASO",
+     | ^^^^^^^^^^^^^^
+> 69 |         "App Marketing",
+     | ^^^^^^^^^^^^^^
+> 70 |     ];
+     | ^^^^^^^ `servicesList` is declared here
+  71 |
+  72 |     const budgetOptions = [
+  73 |         "Γé╣10k ΓÇô Γé╣30k",  react-hooks/immutability
+  55:8   warning  React Hook useEffect has a missing dependency: 'servicesList'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             react-hooks/exhaustive-deps
+
+D:\adkryoss1\adkryoss\src\pages\Sitemap.jsx
+  11:44  error  'Icon' is defined but never used  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\TermsAndConditions.jsx
+    6:34  error  'Icon' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                no-unused-vars
+   62:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  60 |                         <div className="flex flex-col gap-[40px]">
+  61 |                             {/* Section 1 */}
+> 62 |                             <SectionCard icon={Info} title="1. About Us" highlight>
+     |                              ^^^^^^^^^^^ This component is created during render
+  63 |                                 <p>
+  64 |                                     This website is operated by <strong>Adkryoss managed by Clink Consultancy Services Private Limited</strong>, a digital marketing services provider delivering SEO, paid advertising, branding, web development, performance marketing, content marketing, and strategic consulting services globally.
+  65 |                                 </p>
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                        react-hooks/static-components
+   72:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  70 |
+  71 |                             {/* Section 2 */}
+> 72 |                             <SectionCard icon={Scale} title="2. Acceptance of Terms">
+     |                              ^^^^^^^^^^^ This component is created during render
+  73 |                                 <p className="mb-6 font-medium text-slate-800">By accessing, browsing, or engaging with this website, you confirm that:</p>
+  74 |                                 <div className="grid gap-4">
+  75 |                                     {[
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                                                                                                                                                            react-hooks/static-components
+   89:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  87 |
+  88 |                             {/* Section 3 */}
+> 89 |                             <SectionCard icon={Globe} title="3. Scope of Services">
+     |                              ^^^^^^^^^^^ This component is created during render
+  90 |                                 <p className="mb-8">Adkryoss managed by Clink Consultancy Services Private Limited provides professional digital marketing services, including but not limited to:</p>
+  91 |                                 <div className="grid sm:grid-cols-2 gap-4">
+  92 |                                     {[
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                                                                                                    react-hooks/static-components
+  114:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  112 |
+  113 |                             {/* Section 4 */}
+> 114 |                             <SectionCard icon={Shield} title="4. User Responsibilities">
+      |                              ^^^^^^^^^^^ This component is created during render
+  115 |                                 <p className="mb-6">By using this website or engaging our services, you agree to:</p>
+  116 |                                 <div className="space-y-4">
+  117 |                                     {[
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                                                                                                                                                                                         react-hooks/static-components
+  135:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  133 |
+  134 |                             {/* Section 5 */}
+> 135 |                             <SectionCard icon={Lock} title="5. Intellectual Property Rights" dark>
+      |                              ^^^^^^^^^^^ This component is created during render
+  136 |                                 <p className="text-white">All content on this website ΓÇö including text, graphics, logos, images, design elements, strategies, and proprietary frameworks ΓÇö is the intellectual property of Adkryoss managed by Clink Consultancy Services Private Limited unless otherwise stated.</p>
+  137 |                                 <p className="mt-6 text-white">You may not reproduce, distribute, modify, transmit, republish, or exploit any website content without prior written consent.</p>
+  138 |                                 <div className="mt-8 p-6 bg-white/5 rounded-2xl border border-white/10 text-white font-bold">
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">  react-hooks/static-components
+  144:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  142 |
+  143 |                             {/* Section 6 */}
+> 144 |                             <SectionCard icon={CreditCard} title="6. Payments & Billing">
+      |                              ^^^^^^^^^^^ This component is created during render
+  145 |                                 <div className="grid gap-4">
+  146 |                                     {[
+  147 |                                         "Service fees are governed by individual agreements.",
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                                                                                                                                                                                                              react-hooks/static-components
+  162:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  160 |
+  161 |                             {/* Section 7 */}
+> 162 |                             <SectionCard icon={Shield} title="7. Confidentiality">
+      |                              ^^^^^^^^^^^ This component is created during render
+  163 |                                 <div className="space-y-6">
+  164 |                                     <p className="bg-slate-100 p-6 rounded-2xl border-l-4 border-blue-600">
+  165 |                                         We respect confidentiality. Any business information, marketing data, credentials, analytics, or proprietary information shared with us will be treated as confidential.
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                               react-hooks/static-components
+  174:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  172 |
+  173 |                             {/* Section 8 */}
+> 174 |                             <SectionCard icon={AlertTriangle} title="8. Performance & Results Disclaimer">
+      |                              ^^^^^^^^^^^ This component is created during render
+  175 |                                 <p className="mb-8">Digital marketing performance depends on multiple external variables:</p>
+  176 |                                 <div className="flex flex-wrap gap-3 mb-8">
+  177 |                                     {["Algorithm updates", "Market competition", "Industry trends", "Budget allocation", "Consumer behavior"].map((item, i) => (
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                     react-hooks/static-components
+  189:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  187 |
+  188 |                             {/* Section 9 */}
+> 189 |                             <SectionCard icon={Globe} title="9. Third-Party Tools & Platforms">
+      |                              ^^^^^^^^^^^ This component is created during render
+  190 |                                 <p className="mb-6">Our services involve third-party platforms. We are not responsible for:</p>
+  191 |                                 <div className="grid gap-4">
+  192 |                                     {["Platform policy changes", "Account suspensions due to policy violations", "Service interruptions beyond our control"].map((item, i) => (
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                              react-hooks/static-components
+  202:30  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  200 |
+  201 |                             {/* Section 10 */}
+> 202 |                             <SectionCard icon={AlertTriangle} title="10. Limitation of Liability">
+      |                              ^^^^^^^^^^^ This component is created during render
+  203 |                                 <div className="space-y-4">
+  204 |                                     <p className="font-bold text-slate-900 mb-4">Liability shall not be held for:</p>
+  205 |                                     <ul className="grid md:grid-cols-2 gap-4 list-none p-0">
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                                                                                                                        react-hooks/static-components
+  220:34  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  218 |                             {/* Section 11 - 16 Simplified Grid */}
+  219 |                             <div className="grid md:grid-cols-2 gap-8">
+> 220 |                                 <SectionCard icon={AlertTriangle} title="11. Termination">
+      |                                  ^^^^^^^^^^^ This component is created during render
+  221 |                                     <p className="text-sm">Breach of terms, overdue payments, or legal violations may result in termination of services as per contractual terms.</p>
+  222 |                                 </SectionCard>
+  223 |                                 <SectionCard icon={Shield} title="12. Restrictions">
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                    react-hooks/static-components
+  223:34  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  221 |                                     <p className="text-sm">Breach of terms, overdue payments, or legal violations may result in termination of services as per contractual terms.</p>
+  222 |                                 </SectionCard>
+> 223 |                                 <SectionCard icon={Shield} title="12. Restrictions">
+      |                                  ^^^^^^^^^^^ This component is created during render
+  224 |                                     <p className="text-sm">No hacking, data scraping, or posting harmful content. Security is our priority.</p>
+  225 |                                 </SectionCard>
+  226 |                                 <SectionCard icon={FileText} title="13. Privacy">
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                          react-hooks/static-components
+  226:34  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  224 |                                     <p className="text-sm">No hacking, data scraping, or posting harmful content. Security is our priority.</p>
+  225 |                                 </SectionCard>
+> 226 |                                 <SectionCard icon={FileText} title="13. Privacy">
+      |                                  ^^^^^^^^^^^ This component is created during render
+  227 |                                     <p className="text-sm">Use is governed by our Privacy Policy, ensuring data protection and compliance.</p>
+  228 |                                 </SectionCard>
+  229 |                                 <SectionCard icon={Shield} title="14. Indemnity">
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                    react-hooks/static-components
+  229:34  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  227 |                                     <p className="text-sm">Use is governed by our Privacy Policy, ensuring data protection and compliance.</p>
+  228 |                                 </SectionCard>
+> 229 |                                 <SectionCard icon={Shield} title="14. Indemnity">
+      |                                  ^^^^^^^^^^^ This component is created during render
+  230 |                                     <p className="text-sm">Users agree to indemnify the Company from claims arising from their breach of these Terms.</p>
+  231 |                                 </SectionCard>
+  232 |                                 <SectionCard icon={Scale} title="15. Governing Law">
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                       react-hooks/static-components
+  232:34  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  230 |                                     <p className="text-sm">Users agree to indemnify the Company from claims arising from their breach of these Terms.</p>
+  231 |                                 </SectionCard>
+> 232 |                                 <SectionCard icon={Scale} title="15. Governing Law">
+      |                                  ^^^^^^^^^^^ This component is created during render
+  233 |                                     <p className="text-sm">Governed by the laws of India. Exclusive jurisdiction of Indian courts for all disputes.</p>
+  234 |                                 </SectionCard>
+  235 |                                 <SectionCard icon={FileText} title="16. Updates">
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                              react-hooks/static-components
+  235:34  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  233 |                                     <p className="text-sm">Governed by the laws of India. Exclusive jurisdiction of Indian courts for all disputes.</p>
+  234 |                                 </SectionCard>
+> 235 |                                 <SectionCard icon={FileText} title="16. Updates">
+      |                                  ^^^^^^^^^^^ This component is created during render
+  236 |                                     <p className="text-sm">We reserve the right to modify Terms. Continued use constitutes acceptance of updates.</p>
+  237 |                                 </SectionCard>
+  238 |                             </div>
+
+   4 |
+   5 | const TermsAndConditions = () => {
+>  6 |     const SectionCard = ({ icon: Icon, title, children, dark = false, highlight = false }) => (
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |         <div className={`
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |             p-8 md:p-10 rounded-[32px] border transition-all duration-300 group
+     ΓÇª
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |         </div>
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 28 |     );
+     | ^^^^^^ The component is created during render here
+  29 |
+  30 |     return (
+  31 |         <div className="bg-white">                                                                                                                                                                                                                                                                    react-hooks/static-components
+
+D:\adkryoss1\adkryoss\src\pages\company\AboutUs.jsx
+  7:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\company\Careers.jsx
+   1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u             no-unused-vars
+  79:9   error  'navigate' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\industry\Healthcare.jsx
+  9:8  error  'healthindus' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\app-marketing\ASOServices.jsx
+  6:9  error  'navigate' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\app-marketing\AppCRO.jsx
+  6:9  error  'navigate' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\app-marketing\MobileAppMarketing.jsx
+  6:9  error  'navigate' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\content-marketing\DigitalPR.jsx
+  33:11  error  'whyCardsRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\content-marketing\GuestPosting.jsx
+  197:11  error  'integrationPoints' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\martech\B2BCRO.jsx
+  29:11  error  'whyBoxRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\martech\CDPServices.jsx
+  1:36  error  'useState' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\martech\GA4Consulting.jsx
+  25:7  error  Fast refresh only works when a file has exports. Move your component(s) to a separate file  react-refresh/only-export-components
+
+D:\adkryoss1\adkryoss\src\pages\our-services\martech\ShopifyCRO.jsx
+  52:11  error  'toolsTagsRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\paid-marketing\AmazonAdvertising.jsx
+  20:7  error  'amazonServices' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\paid-marketing\PPCServices.jsx
+  104:7  error  'industries' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\paid-marketing\SocialMediaAdvertising.jsx
+  158:7  error  'point' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\seo\EcommerceSEO.jsx
+  1:17  error  'useState' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\seo\SEOMigrationServices.jsx
+  34:11  error  'riskRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u      no-unused-vars
+  40:11  error  'diffRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u      no-unused-vars
+  42:11  error  'metricsRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u   no-unused-vars
+  44:11  error  'considerRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  45:11  error  'approachRef' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\our-services\seo\WhiteLabelSEOServices.jsx
+  465:41  error  'arr' is defined but never used  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\partners\IPP.jsx
+  66:11  error  'audiences' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\adkryoss1\adkryoss\src\pages\work\Portfolio.jsx
+  4:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+Γ£û 79 problems (77 errors, 2 warnings)
+

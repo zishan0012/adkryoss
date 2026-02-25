@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import gsap from 'gsap';
 
 const MarTech = () => {
+    const heroRef = useRef(null);
+
+    useEffect(() => {
+        gsap.from(heroRef.current, {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        });
+    }, []);
+
     return (
-        <div className="container py-20">
+        <div ref={heroRef} className="container py-20">
             <div className="text-center mb-[60px]">
                 <h1 className="text-5xl text-[#0066cc] mb-5 font-bold">
                     MarTech / Data Analytics

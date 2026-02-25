@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { X, Info, TrendingUp, Users, MousePointer2, Calculator, IndianRupee, ArrowRight } from 'lucide-react';
+import { X, Info, TrendingUp, Users, MousePointer2, Calculator, IndianRupee, ArrowRight, RotateCcw } from 'lucide-react';
 
 const ROICalculatorPopup = ({ isOpen, onClose }) => {
     // State for inputs
@@ -9,6 +9,15 @@ const ROICalculatorPopup = ({ isOpen, onClose }) => {
     const [visitPercent, setVisitPercent] = useState(62);
     const [conversionRate, setConversionRate] = useState(2);
     const [leadValue, setLeadValue] = useState(23);
+
+    // Reset handler
+    const handleReset = () => {
+        setKeywords(0);
+        setSearchVolume(0);
+        setVisitPercent(0);
+        setConversionRate(0);
+        setLeadValue(0);
+    };
 
     // State for results
     const [results, setResults] = useState({
@@ -58,8 +67,19 @@ const ROICalculatorPopup = ({ isOpen, onClose }) => {
 
                 {/* LEFT SIDE: Inputs */}
                 <div className="w-full md:w-2/3 p-8 md:p-12 overflow-y-auto max-h-[90vh]">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-2">Input your data to calculate your monthly SEO ROI.</h2>
-                    <p className="text-gray-500 mb-8">Adjust the sliders or type directly to see real-time projections.</p>
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                        <div>
+                            <h2 className="text-2xl font-bold text-gray-900 mb-1">Input your data</h2>
+                            <p className="text-gray-500">Adjust the sliders or type directly.</p>
+                        </div>
+                        <button
+                            onClick={handleReset}
+                            className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl transition-all duration-300 font-bold text-sm"
+                        >
+                            <RotateCcw size={16} />
+                            Reset to Zero
+                        </button>
+                    </div>
 
                     <div className="space-y-8">
                         {/* Field 1: Keywords */}
@@ -78,7 +98,7 @@ const ROICalculatorPopup = ({ isOpen, onClose }) => {
                             </div>
                             <input
                                 type="range"
-                                min="1"
+                                min="0"
                                 max="1000"
                                 value={keywords}
                                 onChange={(e) => setKeywords(Number(e.target.value))}
@@ -106,7 +126,7 @@ const ROICalculatorPopup = ({ isOpen, onClose }) => {
                             </div>
                             <input
                                 type="range"
-                                min="1"
+                                min="0"
                                 max="10000"
                                 value={searchVolume}
                                 onChange={(e) => setSearchVolume(Number(e.target.value))}
@@ -135,7 +155,7 @@ const ROICalculatorPopup = ({ isOpen, onClose }) => {
                             </div>
                             <input
                                 type="range"
-                                min="1"
+                                min="0"
                                 max="100"
                                 value={visitPercent}
                                 onChange={(e) => setVisitPercent(Number(e.target.value))}
@@ -164,7 +184,7 @@ const ROICalculatorPopup = ({ isOpen, onClose }) => {
                             </div>
                             <input
                                 type="range"
-                                min="1"
+                                min="0"
                                 max="100"
                                 value={conversionRate}
                                 onChange={(e) => setConversionRate(Number(e.target.value))}
@@ -192,7 +212,7 @@ const ROICalculatorPopup = ({ isOpen, onClose }) => {
                             </div>
                             <input
                                 type="range"
-                                min="1"
+                                min="0"
                                 max="100000"
                                 value={leadValue}
                                 onChange={(e) => setLeadValue(Number(e.target.value))}
