@@ -6,6 +6,7 @@ import ConversionRateOptimizationImage from "../../assets/ConversionRateOptimiza
 import SocialMediaBrandAuthorityImage from "../../assets/SocialMediaBrandAuthority.png"
 import ContentMarketingThatBuildsTrustImage from "../../assets/ContentMarketingThatBuildsTrust.png"
 import SEOforBFSIBrandsImage from "../../assets/SEOforBFSIBrands.png"
+import WhyBFSINeedsSpecializedDigitalMarketingImage from "../../assets/WhyBFSINeedsSpecializedDigitalMarketing.png"
 
 const BFSI = () => {
   const navigate = useNavigate();
@@ -151,7 +152,7 @@ const BFSI = () => {
     {/* RIGHT IMAGE */}
     <div>
       <img
-        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"
+        src={WhyBFSINeedsSpecializedDigitalMarketingImage}
         alt="BFSI Digital Marketing Strategy"
         className="rounded-2xl shadow-xl w-full object-cover"
       />
