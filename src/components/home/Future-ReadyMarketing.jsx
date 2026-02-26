@@ -2,9 +2,9 @@ import React, { useRef, useLayoutEffect } from "react";
 import aiImage from "../../assets/ai.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+ 
 gsap.registerPlugin(ScrollTrigger);
-
+ 
 const CaseStudySection = () => {
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
@@ -13,31 +13,26 @@ const CaseStudySection = () => {
   const bulletsRef = useRef([]);
   const imageRef = useRef(null);
   const bottomTextRef = useRef(null);
-
+ 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      ScrollTrigger.getAll().forEach(st => st.kill());
-
-      const isMobile = window.innerWidth < 768;
-
-      // === SECTION PUSH EFFECT (slower, later) ===
-      if (!isMobile) {
-        gsap.fromTo(sectionRef.current,
-          { y: 0 },
-          {
-            y: -30,
-            ease: "none",
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top bottom",
-              end: "bottom top",
-              scrub: 1.2,
-            }
+ 
+      // === SECTION PUSH EFFECT (PARALLAX) ===
+      gsap.fromTo(sectionRef.current,
+        { y: 0 },
+        {
+          y: -30,
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1.2,
           }
-        );
-      }
-
-      // === MAIN HEADING (slower, starts later) ===
+        }
+      );
+ 
+      // === MAIN HEADING PREMIUM ANIMATION ===
       gsap.fromTo(headingRef.current,
         {
           opacity: 0,
@@ -48,18 +43,18 @@ const CaseStudySection = () => {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: isMobile ? 1.4 : 2.0,
-          ease: "power3.out",
+          duration: 1.4,
+          ease: "power4.out",
           scrollTrigger: {
             trigger: headingRef.current,
-            start: "top 75%",        // later than 85%
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
+            start: "top 85%",
+            end: "bottom 20%",
+            toggleActions: "restart reverse restart reverse",
           }
         }
       );
-
-      // === SUBHEADING (starts later) ===
+ 
+      // === SUBHEADING PREMIUM ANIMATION ===
       gsap.fromTo(subHeadingRef.current,
         {
           opacity: 0,
@@ -68,19 +63,19 @@ const CaseStudySection = () => {
         {
           opacity: 1,
           y: 0,
-          duration: isMobile ? 1.2 : 1.8,
+          duration: 1.2,
           delay: 0.2,
-          ease: "power2.out",
+          ease: "power3.out",
           scrollTrigger: {
             trigger: subHeadingRef.current,
-            start: "top 75%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
+            start: "top 85%",
+            end: "bottom 20%",
+            toggleActions: "restart reverse restart reverse",
           }
         }
       );
-
-      // === LEFT HEADING (later, with slower rotation) ===
+ 
+      // === LEFT HEADING ANIMATION ===
       gsap.fromTo(leftHeadingRef.current,
         {
           opacity: 0,
@@ -91,18 +86,18 @@ const CaseStudySection = () => {
           opacity: 1,
           x: 0,
           rotate: 0,
-          duration: isMobile ? 1.2 : 1.8,
+          duration: 1.3,
           ease: "back.out(1.2)",
           scrollTrigger: {
             trigger: leftHeadingRef.current,
-            start: "top 75%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
+            start: "top 85%",
+            end: "bottom 20%",
+            toggleActions: "restart reverse restart reverse",
           }
         }
       );
-
-      // === BULLET POINTS (staggered, later) ===
+ 
+      // === BULLET POINTS PREMIUM STAGGER ANIMATION ===
       gsap.fromTo(bulletsRef.current,
         {
           opacity: 0,
@@ -113,19 +108,22 @@ const CaseStudySection = () => {
           opacity: 1,
           x: 0,
           scale: 1,
-          duration: isMobile ? 1.0 : 1.5,
-          stagger: isMobile ? 0.1 : 0.2,
+          duration: 1.2,
+          stagger: {
+            amount: 1.5,
+            from: "start",
+          },
           ease: "back.out(1.2)",
           scrollTrigger: {
             trigger: leftHeadingRef.current,
-            start: "top 70%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "restart reverse restart reverse",
           }
         }
       );
-
-      // === IMAGE (later, with more dramatic pop) ===
+ 
+      // === IMAGE PREMIUM REVEAL ===
       gsap.fromTo(imageRef.current,
         {
           opacity: 0,
@@ -138,18 +136,18 @@ const CaseStudySection = () => {
           x: 0,
           scale: 1,
           rotate: 0,
-          duration: isMobile ? 1.3 : 2.0,
+          duration: 1.6,
           ease: "back.out(1.4)",
           scrollTrigger: {
             trigger: imageRef.current,
-            start: "top 75%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "restart reverse restart reverse",
           }
         }
       );
-
-      // === BOTTOM TEXT (later) ===
+ 
+      // === BOTTOM TEXT PREMIUM ANIMATION ===
       gsap.fromTo(bottomTextRef.current,
         {
           opacity: 0,
@@ -160,26 +158,22 @@ const CaseStudySection = () => {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: isMobile ? 1.2 : 1.8,
-          ease: "power3.out",
+          duration: 1.4,
+          ease: "power4.out",
           scrollTrigger: {
             trigger: bottomTextRef.current,
-            start: "top 75%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
+            start: "top 85%",
+            end: "bottom 20%",
+            toggleActions: "restart reverse restart reverse",
           }
         }
       );
-
-      ScrollTrigger.refresh();
+ 
     }, sectionRef);
-
-    return () => {
-      ctx.revert();
-      ScrollTrigger.getAll().forEach(st => st.kill());
-    };
+ 
+    return () => ctx.revert();
   }, []);
-
+ 
   return (
     <section
       ref={sectionRef}
@@ -189,9 +183,9 @@ const CaseStudySection = () => {
       <div className="absolute top-20 left-10 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl -z-10"></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-100/10 to-purple-100/10 rounded-full blur-3xl -z-10"></div>
-
+ 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-
+ 
         {/* Top Heading */}
         <div className="text-center mb-14">
           <h2
@@ -207,7 +201,7 @@ const CaseStudySection = () => {
             The digital landscape is evolving — and so are we.
           </p>
         </div>
-
+ 
         {/* Two-column Content */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-10">
           {/* LEFT SIDE - Heading + Points */}
@@ -237,7 +231,7 @@ const CaseStudySection = () => {
               ))}
             </ul>
           </div>
-
+ 
           {/* RIGHT SIDE - Image */}
           <div className="flex justify-center">
             <img
@@ -248,7 +242,7 @@ const CaseStudySection = () => {
             />
           </div>
         </div>
-
+ 
         {/* Paragraph Below Full Width */}
         <p
           ref={bottomTextRef}
@@ -257,10 +251,9 @@ const CaseStudySection = () => {
           We blend creativity with technology to stay ahead of algorithms and competitors.
           <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></span>
         </p>
-
+ 
       </div>
     </section>
   );
 };
-
-export default CaseStudySection;
+ export default CaseStudySection;
