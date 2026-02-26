@@ -1,12 +1,5 @@
-
-
-
-
-
-
-
 import React from "react";
-
+ 
 const Card = ({ title, desc, image }) => {
   return (
     <div
@@ -35,7 +28,7 @@ const Card = ({ title, desc, image }) => {
           }}
         />
       </div>
-
+ 
       {/* Title */}
       <h3
         style={{
@@ -47,7 +40,7 @@ const Card = ({ title, desc, image }) => {
       >
         {title}
       </h3>
-
+ 
       {/* Description */}
       <p
         style={{
@@ -61,5 +54,5 @@ const Card = ({ title, desc, image }) => {
     </div>
   );
 };
-
+ 
 export default Card;
