@@ -1,6 +1,7 @@
-
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     ArrowRight,
     Megaphone,
@@ -29,7 +30,117 @@ import {
 } from 'lucide-react';
 import ibphero from "../../assets/partner/ibphero.png";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const IBP = () => {
+    const mainRef = useRef(null);
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            // Hero
+            gsap.fromTo(".hero-content", { opacity: 0, x: -50 }, {
+                opacity: 1, x: 0, duration: 1, delay: 0.2,
+                scrollTrigger: { trigger: ".hero-content", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".hero-image", { opacity: 0, scale: 0.8 }, {
+                opacity: 1, scale: 1, duration: 1, delay: 0.4,
+                scrollTrigger: { trigger: ".hero-image", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Why Partner
+            gsap.fromTo(".why-partner-header", { opacity: 0, y: 30 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".why-partner-header", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // What is IBP
+            gsap.fromTo(".what-is-ibp-content", { opacity: 0, y: 30 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".what-is-ibp-content", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Services
+            gsap.fromTo(".service-card", { opacity: 0, y: 30 }, {
+                opacity: 1, y: 0, duration: 0.6, stagger: 0.1,
+                scrollTrigger: { trigger: ".services-grid", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Steps
+            gsap.fromTo(".step-card", { opacity: 0, x: -30 }, {
+                opacity: 1, x: 0, duration: 0.6, stagger: 0.2,
+                scrollTrigger: { trigger: ".steps-grid", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Trends
+            gsap.fromTo(".trend-content", { opacity: 0, x: -50 }, {
+                opacity: 1, x: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".trend-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Advantage
+            gsap.fromTo(".advantage-card", { opacity: 0, scale: 0.9 }, {
+                opacity: 1, scale: 1, duration: 0.5, stagger: 0.1,
+                scrollTrigger: { trigger: ".advantage-grid", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Who Should Join
+            gsap.fromTo(".who-join-header", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".who-join-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".who-join-item", { opacity: 0, x: -20 }, {
+                opacity: 1, x: 0, duration: 0.5, stagger: 0.1,
+                scrollTrigger: { trigger: ".who-join-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Revenue Potential
+            gsap.fromTo(".revenue-header", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".revenue-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".revenue-box", { opacity: 0, scale: 0.95 }, {
+                opacity: 1, scale: 1, duration: 1,
+                scrollTrigger: { trigger: ".revenue-section", start: "top 75%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Tools Stack
+            gsap.fromTo(".tools-stack-header", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".tools-stack-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".tool-item", { opacity: 0, x: -20 }, {
+                opacity: 1, x: 0, duration: 0.5, stagger: 0.1,
+                scrollTrigger: { trigger: ".tools-stack-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // What Makes Us Different
+            gsap.fromTo(".differences-header", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".differences-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".difference-card", { opacity: 0, x: 20 }, {
+                opacity: 1, x: 0, duration: 0.5, stagger: 0.1,
+                scrollTrigger: { trigger: ".differences-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Commitment
+            gsap.fromTo(".commitment-header", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".commitment-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".commitment-badge", { opacity: 0, scale: 0.8 }, {
+                opacity: 1, scale: 1, duration: 0.5, stagger: 0.1,
+                scrollTrigger: { trigger: ".commitment-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // CTA
+            gsap.fromTo(".cta-content", { opacity: 0, scale: 0.9 }, {
+                opacity: 1, scale: 1, duration: 1,
+                scrollTrigger: { trigger: ".cta-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+        }, mainRef);
+        return () => ctx.revert();
+    }, []);
 
     const services = [
         { icon: <Zap size={28} />, title: "Performance Marketing (Google & Meta Ads)" },
@@ -125,7 +236,7 @@ const IBP = () => {
     ];
 
     return (
-        <div className="bg-white text-slate-900">
+        <div className="bg-white text-slate-900" ref={mainRef}>
 
             {/* Hero Section */}
             <section
@@ -137,7 +248,7 @@ const IBP = () => {
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="grid md:grid-cols-2 items-center gap-12">
                         {/* LEFT CONTENT */}
-                        <div className="text-left">
+                        <div className="text-left hero-content">
                             <h1 className="text-[36px] md:text-[48px] font-bold mb-4 leading-tight">
                                 Become Our <span className="text-blue-200">IBP</span>
                             </h1>
@@ -165,7 +276,7 @@ const IBP = () => {
                         </div>
 
                         {/* RIGHT IMAGE */}
-                        <div className="flex justify-center md:justify-end relative z-10">
+                        <div className="flex justify-center md:justify-end relative z-10 hero-image">
                             <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                                 <img
                                     src={ibphero}
@@ -181,7 +292,7 @@ const IBP = () => {
             {/* Why Partner With Us */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-4xl mx-auto text-center mb-10">
+                    <div className="max-w-4xl mx-auto text-center mb-10 why-partner-header">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-4">Why Partner With Us?</h2>
                         <p className="text-[18px] text-slate-700 leading-relaxed mb-4">
                             The digital economy is growing faster than ever. Businesses need performance-driven marketing, data-backed strategies, and measurable ROI.
@@ -208,7 +319,7 @@ const IBP = () => {
             <section className="py-24 bg-slate-50 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full blur-3xl -ml-32 -mt-32 opacity-50"></div>
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="max-w-4xl mx-auto text-center mb-10">
+                    <div className="max-w-4xl mx-auto text-center mb-10 what-is-ibp-content">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-6">What Is IBP?</h2>
                         <p className="text-[18px] text-slate-700 leading-relaxed mb-4">
                             Our Independent Business Partner Program empowers entrepreneurs, consultants, freelancers, agencies, and corporate professionals to launch their own digital marketing vertical — under a strong and credible delivery system.
@@ -235,9 +346,9 @@ const IBP = () => {
                         <h2 className="text-[36px] font-bold text-slate-900 mb-4">What You Can Offer Clients</h2>
                         <p className="text-[18px] text-slate-600">As our IBP, you can confidently provide:</p>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 services-grid">
                         {services.map((svc, i) => (
-                            <div key={i} className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#0066cc] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex items-start gap-4">
+                            <div key={i} className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#0066cc] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group flex items-start gap-4 service-card">
                                 <div className="w-12 h-12 shrink-0 bg-gradient-to-br from-[#0066cc] to-[#3b82f6] text-white rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
                                     {svc.icon}
                                 </div>
@@ -258,9 +369,9 @@ const IBP = () => {
                         <h2 className="text-[36px] font-bold text-slate-900 mb-4">How It Works</h2>
                         <p className="text-[18px] text-slate-600">A structured framework to get you from zero to scale.</p>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 steps-grid">
                         {steps.map((step, i) => (
-                            <div key={i} className="relative p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#0066cc] hover:shadow-lg transition-all group">
+                            <div key={i} className="relative p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#0066cc] hover:shadow-lg transition-all group step-card">
                                 <div className="text-sm font-bold text-blue-500 uppercase tracking-widest mb-3">{step.step}</div>
                                 <div className="w-12 h-12 bg-gradient-to-br from-[#0066cc] to-[#3b82f6] text-white rounded-xl flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform">
                                     {step.icon}
@@ -274,11 +385,11 @@ const IBP = () => {
             </section>
 
             {/* Why This Model Works */}
-            <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+            <section className="py-24 bg-slate-900 text-white relative overflow-hidden trend-section">
                 <div className="absolute inset-0 opacity-10"></div>
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
+                        <div className="trend-content">
                             <h2 className="text-[36px] font-bold mb-6 leading-tight text-white">Why This Model Works in 2026 & Beyond</h2>
                             <p className="text-[18px] text-blue-200 mb-8">The digital marketing industry is moving toward:</p>
                             <ul className="space-y-4">
@@ -317,22 +428,22 @@ const IBP = () => {
             </section>
 
             {/* Who Should Join */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-white who-join-section">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-16 items-start">
-                        <div>
+                        <div className="who-join-header">
                             <h2 className="text-[36px] font-bold text-slate-900 mb-4">Who Should Join?</h2>
                             <p className="text-[18px] text-slate-600 mb-8">This program is ideal for:</p>
                             <ul className="space-y-4">
                                 {whoShouldJoin.map((w, i) => (
-                                    <li key={i} className="flex items-center gap-3 text-lg text-slate-800 font-medium">
+                                    <li key={i} className="flex items-center gap-3 text-lg text-slate-800 font-medium who-join-item">
                                         <span className="text-[#0066cc] shrink-0">{w.icon}</span>
                                         {w.text}
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                        <div className="bg-slate-50 border border-slate-100 rounded-2xl p-8 shadow-sm">
+                        <div className="bg-slate-50 border border-slate-100 rounded-2xl p-8 shadow-sm who-join-item">
                             <p className="text-[20px] font-bold text-slate-700 italic leading-relaxed">
                                 "If you have strong communication skills and a growth mindset, this model is built for you."
                             </p>
@@ -351,9 +462,9 @@ const IBP = () => {
                             When you partner with <span className="text-[#0066cc] font-semibold">Adkryoss managed by Clink Consultancy Services Private Limited</span>, you gain:
                         </p>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 advantage-grid">
                         {advantages.map((adv, i) => (
-                            <div key={i} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all flex items-center gap-3 group">
+                            <div key={i} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all flex items-center gap-3 group advantage-card">
                                 <div className="w-10 h-10 shrink-0 bg-blue-50 text-[#0066cc] rounded-lg flex items-center justify-center group-hover:bg-[#0066cc] group-hover:text-white transition-colors">
                                     {adv.icon}
                                 </div>
@@ -368,17 +479,19 @@ const IBP = () => {
             </section>
 
             {/* Revenue Potential */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-white revenue-section">
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-[36px] font-bold text-slate-900 mb-6">Revenue Potential</h2>
-                        <p className="text-[18px] text-slate-700 leading-relaxed mb-6">
-                            The digital marketing industry continues to expand rapidly across India and globally.
-                        </p>
-                        <p className="text-[17px] text-slate-600 mb-6">
-                            With recurring retainers, performance-based campaigns, and long-term client relationships, your earning potential compounds over time.
-                        </p>
-                        <div className="bg-gradient-to-r from-[#0066cc] to-[#00458a] rounded-2xl p-8 text-white text-left md:text-center mt-8">
+                        <div className="revenue-header">
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-6">Revenue Potential</h2>
+                            <p className="text-[18px] text-slate-700 leading-relaxed mb-6">
+                                The digital marketing industry continues to expand rapidly across India and globally.
+                            </p>
+                            <p className="text-[17px] text-slate-600 mb-6">
+                                With recurring retainers, performance-based campaigns, and long-term client relationships, your earning potential compounds over time.
+                            </p>
+                        </div>
+                        <div className="bg-gradient-to-r from-[#0066cc] to-[#00458a] rounded-2xl p-8 text-white text-left md:text-center mt-8 revenue-box">
                             <p className="text-[20px] font-bold italic text-white mb-2">This is not commission-based selling.</p>
                             <p className="text-[20px] font-bold italic text-white">This is building your own scalable digital business ecosystem.</p>
                         </div>
@@ -387,16 +500,18 @@ const IBP = () => {
             </section>
 
             {/* Tools & Technology */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-24 bg-slate-50 tools-stack-section">
                 <div className="container mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-16">
                         {/* Tools */}
                         <div className="bg-white p-10 rounded-2xl shadow-xl border border-slate-100">
-                            <h2 className="text-[30px] font-bold text-slate-900 mb-4">Tools & Technology Stack</h2>
-                            <p className="text-slate-600 mb-6">We leverage modern marketing technologies including:</p>
+                            <div className="tools-stack-header">
+                                <h2 className="text-[30px] font-bold text-slate-900 mb-4">Tools & Technology Stack</h2>
+                                <p className="text-slate-600 mb-6">We leverage modern marketing technologies including:</p>
+                            </div>
                             <div className="space-y-4">
                                 {tools.map((tool, i) => (
-                                    <div key={i} className="flex items-center gap-3 text-lg text-slate-700">
+                                    <div key={i} className="flex items-center gap-3 text-lg text-slate-700 tool-item">
                                         <div className="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">
                                             {tool.icon}
                                         </div>
@@ -410,12 +525,14 @@ const IBP = () => {
                         </div>
 
                         {/* What Makes Us Different */}
-                        <div>
-                            <h2 className="text-[30px] font-bold text-slate-900 mb-4">What Makes Us Different?</h2>
-                            <p className="text-slate-600 mb-6 text-[17px]">Unlike traditional affiliate or reseller programs:</p>
+                        <div className="differences-section">
+                            <div className="differences-header">
+                                <h2 className="text-[30px] font-bold text-slate-900 mb-4">What Makes Us Different?</h2>
+                                <p className="text-slate-600 mb-6 text-[17px]">Unlike traditional affiliate or reseller programs:</p>
+                            </div>
                             <div className="space-y-4">
                                 {differences.map((d, i) => (
-                                    <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                                    <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100 difference-card">
                                         <div className="text-[#0066cc] shrink-0">{d.icon}</div>
                                         <span className="font-semibold text-slate-800">{d.text}</span>
                                     </div>
@@ -428,9 +545,9 @@ const IBP = () => {
             </section>
 
             {/* Our Commitment */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-white commitment-section">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-3xl mx-auto text-center mb-12">
+                    <div className="max-w-3xl mx-auto text-center mb-12 commitment-header">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-4">Our Commitment to You</h2>
                         <p className="text-[18px] text-slate-600">
                             We believe in long-term partnerships, not short-term transactions.<br />
@@ -439,7 +556,7 @@ const IBP = () => {
                     </div>
                     <div className="flex flex-wrap justify-center gap-4">
                         {commitments.map((c, i) => (
-                            <div key={i} className="flex items-center gap-2 px-6 py-3 bg-slate-50 border border-slate-200 rounded-full hover:border-blue-400 hover:bg-blue-50 transition-all">
+                            <div key={i} className="flex items-center gap-2 px-6 py-3 bg-slate-50 border border-slate-200 rounded-full hover:border-blue-400 hover:bg-blue-50 transition-all commitment-badge">
                                 <span className="text-[#0066cc]">{c.icon}</span>
                                 <span className="font-semibold text-slate-700">{c.text}</span>
                             </div>
@@ -452,9 +569,9 @@ const IBP = () => {
             </section>
 
             {/* Final CTA */}
-            <section className="py-24 bg-slate-800 text-white text-center">
+            <section className="py-24 bg-slate-800 text-white text-center cta-section">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-3xl mx-auto">
+                    <div className="max-w-3xl mx-auto cta-content">
                         <h2 className="text-[40px] font-bold mb-6 leading-tight text-white">Let's Build Your Digital Empire</h2>
                         <p className="text-[18px] text-slate-300 mb-4 max-w-2xl mx-auto">
                             The opportunity is massive. The system is ready. The demand is growing.

@@ -49,139 +49,210 @@ const CDPServices = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - 3D Flip/Slide
-            gsap.from(heroContentRef.current, {
+            gsap.fromTo(heroContentRef.current, {
                 rotateX: -45,
                 y: 100,
-                opacity: 0,
+                opacity: 0
+            }, {
+                rotateX: 0,
+                y: 0,
+                opacity: 1,
                 duration: 1,
-                ease: "power3.out"
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: heroContentRef.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
             });
-            gsap.from(heroImageRef.current, {
+            gsap.fromTo(heroImageRef.current, {
                 x: 100,
                 opacity: 0,
-                scale: 0.8,
+                scale: 0.8
+            }, {
+                x: 0,
+                opacity: 1,
+                scale: 1,
                 duration: 1,
                 delay: 0.3,
-                ease: "power3.out"
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: heroImageRef.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
             });
 
             // Needs Section - Staggered Fall-in
-            gsap.from(needsTitleRef.current, {
+            gsap.fromTo(needsTitleRef.current, {
                 y: 30,
-                opacity: 0,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
                 scrollTrigger: {
                     trigger: needsTitleRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
             needsCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     y: -50,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
                     duration: 0.6,
                     delay: i * 0.1,
                     ease: "bounce.out",
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // What is CDP - Perspective Reveal
-            gsap.from(whatCdpBoxRef.current, {
+            gsap.fromTo(whatCdpBoxRef.current, {
                 rotateY: 90,
-                opacity: 0,
+                opacity: 0
+            }, {
+                rotateY: 0,
+                opacity: 1,
                 duration: 1,
                 scrollTrigger: {
                     trigger: whatCdpBoxRef.current,
-                    start: "top 80%"
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
-            gsap.from(whatCdpTextRef.current, {
+            gsap.fromTo(whatCdpTextRef.current, {
                 x: 50,
-                opacity: 0,
+                opacity: 0
+            }, {
+                x: 0,
+                opacity: 1,
                 duration: 0.8,
                 scrollTrigger: {
                     trigger: whatCdpTextRef.current,
-                    start: "top 80%"
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
 
             // Services - Spiral Entrance
             serviceCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     scale: 0,
                     rotation: 180,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    rotation: 0,
+                    opacity: 1,
                     duration: 0.8,
                     delay: i * 0.1,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 85%"
+                        start: "top 85%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Differentiators - Side Slide
             diffCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     x: i % 2 === 0 ? -100 : 100,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
                     duration: 0.7,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Industries & Benefits
             industryTagsRef.current.forEach((tag, i) => {
-                gsap.from(tag, {
+                gsap.fromTo(tag, {
                     scale: 0.5,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    opacity: 1,
                     duration: 0.4,
                     delay: i * 0.05,
                     scrollTrigger: {
                         trigger: tag,
-                        start: "top 95%"
+                        start: "top 95%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
-            gsap.from(benefitsBoxRef.current, {
+            gsap.fromTo(benefitsBoxRef.current, {
                 y: 100,
-                opacity: 0,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
                 duration: 0.8,
                 scrollTrigger: {
                     trigger: benefitsBoxRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
 
             // Framework Steps - Sequential
             frameworkStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
+                gsap.fromTo(step, {
                     x: 50,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
                     duration: 0.6,
                     delay: i * 0.15,
                     scrollTrigger: {
                         trigger: step,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Final CTA
-            gsap.from(ctaRef.current, {
+            gsap.fromTo(ctaRef.current, {
                 scale: 0.8,
-                opacity: 0,
+                opacity: 0
+            }, {
+                scale: 1,
+                opacity: 1,
                 duration: 1,
                 ease: "elastic.out(1, 0.5)",
                 scrollTrigger: {
                     trigger: ctaRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
 
@@ -539,7 +610,7 @@ const CDPServices = () => {
                                     <div
                                         key={index}
                                         ref={el => industryTagsRef.current[index] = el}
-                                        className="px-8 py-5 bg-white text-slate-800 rounded-2xl font-black border-2 border-slate-100 transition-all hover:bg-blue-600 hover:text-white hover:border-blue-600 hover:-translate-y-1 shadow-sm cursor-default"
+                                        className="px-8 py-5 bg-white text-slate-800 rounded-2xl font-semibold border-2 border-slate-100 transition-all hover:bg-blue-600 hover:text-white hover:border-blue-600 hover:-translate-y-1 shadow-sm cursor-default"
                                     >
                                         {item}
                                     </div>
@@ -547,7 +618,7 @@ const CDPServices = () => {
                             </div>
                             <div ref={benefitsBoxRef} className="mt-16 bg-slate-900 p-10 rounded-[40px] text-white shadow-2xl">
                                 <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight text-center">Key Benefits</h2>
-                                <div className="grid sm:grid-cols-2 gap-6 text-justify">
+                                <div className="grid sm:grid-cols-2 gap-6">
                                     {benefits.map((item, index) => (
                                         <div key={index} className="flex items-center gap-4 group">
                                             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-black group-hover:scale-110 transition-transform text-xs">

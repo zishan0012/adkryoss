@@ -39,148 +39,219 @@ const B2BCRO = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Precision Reveal
-            gsap.from(heroContentRef.current, {
+            gsap.fromTo(heroContentRef.current, {
                 filter: "blur(15px)",
                 opacity: 0,
-                y: 30,
+                y: 30
+            }, {
+                filter: "blur(0px)",
+                opacity: 1,
+                y: 0,
                 duration: 1,
-                ease: "power2.out"
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: heroContentRef.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
             });
-            gsap.from(heroImageRef.current, {
+            gsap.fromTo(heroImageRef.current, {
                 clipPath: "inset(0% 100% 0% 0%)",
-                opacity: 0,
+                opacity: 0
+            }, {
+                clipPath: "inset(0% 0% 0% 0%)",
+                opacity: 1,
                 duration: 1.2,
                 ease: "power3.inOut",
-                delay: 0.3
+                delay: 0.3,
+                scrollTrigger: {
+                    trigger: heroImageRef.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
             });
 
             // Why B2B - Unveiling
-            gsap.from(whyTitleRef.current, {
+            gsap.fromTo(whyTitleRef.current, {
                 x: -50,
-                opacity: 0,
+                opacity: 0
+            }, {
+                x: 0,
+                opacity: 1,
                 duration: 0.8,
                 scrollTrigger: {
                     trigger: whyTitleRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
-            gsap.from(whyContentRef.current, {
+            gsap.fromTo(whyContentRef.current, {
                 y: 30,
-                opacity: 0,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
                 duration: 0.8,
                 scrollTrigger: {
                     trigger: whyContentRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
             whyGridCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     scale: 0.8,
                     rotateY: 20,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    rotateY: 0,
+                    opacity: 1,
                     duration: 0.6,
                     delay: i * 0.1,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Framework - Staggered Fall-in
             frameworkCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     y: 100,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
                     duration: 0.8,
                     delay: i * 0.15,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 85%"
+                        start: "top 85%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Differentiators
             diffCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     scale: 0.9,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    opacity: 1,
                     duration: 0.5,
                     delay: i * 0.1,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Industries
             industriesTagsRef.current.forEach((tag, i) => {
-                gsap.from(tag, {
+                gsap.fromTo(tag, {
                     y: 20,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
                     duration: 0.4,
                     delay: i * 0.05,
                     scrollTrigger: {
                         trigger: tag,
-                        start: "top 95%"
+                        start: "top 95%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Process
             processStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
+                gsap.fromTo(step, {
                     x: -30,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
                     duration: 0.5,
                     delay: i * 0.1,
                     scrollTrigger: {
                         trigger: step,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Tools
             toolsTagsRef.current.forEach((tool, i) => {
-                gsap.from(tool, {
+                gsap.fromTo(tool, {
                     scale: 0,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    opacity: 1,
                     duration: 0.4,
                     delay: i * 0.05,
                     scrollTrigger: {
                         trigger: tool,
-                        start: "top 95%"
+                        start: "top 95%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Choose Us - Building Blocks
             chooseCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     rotateX: -45,
                     y: 50,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    rotateX: 0,
+                    y: 0,
+                    opacity: 1,
                     duration: 0.8,
                     delay: i * 0.2,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Final CTA
-            gsap.from(ctaRef.current, {
+            gsap.fromTo(ctaRef.current, {
                 y: 50,
-                opacity: 0,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
                 duration: 1,
                 scrollTrigger: {
                     trigger: ctaRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
 
@@ -501,7 +572,7 @@ const B2BCRO = () => {
                                     <div
                                         key={index}
                                         ref={el => industriesTagsRef.current[index] = el}
-                                        className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-extrabold transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1 cursor-default"
+                                        className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-semibold transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1 cursor-default"
                                     >
                                         {item}
                                     </div>
@@ -525,7 +596,7 @@ const B2BCRO = () => {
                                             {index + 1}
                                         </div>
                                         <div>
-                                            <span className="font-extrabold text-blue-300 mr-2 uppercase text-sm tracking-widest">{item.step}:</span>
+                                            <span className="font-semibold text-blue-300 mr-2 uppercase text-sm tracking-widest">{item.step}:</span>
                                             <span className="font-semibold text-lg text-white opacity-90 group-hover:opacity-100 transition-opacity">{item.title}</span>
                                         </div>
                                     </div>
@@ -549,7 +620,7 @@ const B2BCRO = () => {
                             <div
                                 key={index}
                                 ref={el => toolsTagsRef.current[index] = el}
-                                className="px-10 py-6 bg-slate-50 border border-slate-100 rounded-3xl flex items-center gap-4 font-bold text-slate-900 group hover:border-blue-500 hover:text-blue-600 transition-all shadow-sm hover:shadow-md cursor-default"
+                                className="px-10 py-6 bg-slate-50 border border-slate-100 rounded-3xl flex items-center gap-4 font-semibold text-slate-900 group hover:border-blue-500 hover:text-blue-600 transition-all shadow-sm hover:shadow-md cursor-default"
                             >
                                 <div className="w-3 h-3 bg-blue-500 rounded-full group-hover:scale-125 transition-transform"></div>
                                 <span className="text-lg">{tool}</span>

@@ -44,129 +44,197 @@ const AgenticAISEO = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Autonomous assembly
-            gsap.from(heroContentRef.current, {
-                x: -100,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power4.out"
-            });
-            gsap.from(heroImageRef.current, {
-                x: 100,
-                opacity: 0,
-                scale: 0.9,
-                duration: 1.2,
-                ease: "power4.out"
-            });
+            gsap.fromTo(heroContentRef.current,
+                { x: -100, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { x: 100, opacity: 0, scale: 0.9 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1.2,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // What is Agentic - Branched reveal
-            gsap.from(whatRef.current.querySelector('h2'), {
-                opacity: 0,
-                y: 30,
-                scrollTrigger: {
-                    trigger: whatRef.current,
-                    start: "top 80%"
+            gsap.fromTo(whatRef.current.querySelector('h2'),
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    scrollTrigger: {
+                        trigger: whatRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
-            gsap.from(whatCard1Ref.current, {
-                x: -50,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: whatCard1Ref.current,
-                    start: "top 85%"
+            );
+            gsap.fromTo(whatCard1Ref.current,
+                { x: -50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: whatCard1Ref.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
-            gsap.from(whatCard2Ref.current, {
-                x: 50,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: whatCard2Ref.current,
-                    start: "top 85%"
+            );
+            gsap.fromTo(whatCard2Ref.current,
+                { x: 50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: whatCard2Ref.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Framework - Self-organizing nodes
             frameworkCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    y: 60,
-                    opacity: 0,
-                    duration: 0.8,
-                    delay: i * 0.15,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: i * 0.15,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Services List - Growing branches
             serviceItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    x: -20,
-                    opacity: 0,
-                    duration: 0.4,
-                    delay: i * 0.05,
-                    scrollTrigger: {
-                        trigger: item,
-                        start: "top 95%"
+                gsap.fromTo(item,
+                    { x: -20, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.4,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
-            gsap.from(hybridCardRef.current, {
-                scale: 0.95,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: hybridCardRef.current,
-                    start: "top 85%"
+            gsap.fromTo(hybridCardRef.current,
+                { scale: 0.95, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: hybridCardRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Industries - Distributed nodes
             industryBadgesRef.current.forEach((badge, i) => {
-                gsap.from(badge, {
-                    scale: 0.5,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.08,
-                    scrollTrigger: {
-                        trigger: badge,
-                        start: "top 95%"
+                gsap.fromTo(badge,
+                    { scale: 0.5, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.08,
+                        scrollTrigger: {
+                            trigger: badge,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Future - Matrix transition
-            gsap.from(futureCardRef.current, {
-                x: -40,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: futureCardRef.current,
-                    start: "top 85%"
+            gsap.fromTo(futureCardRef.current,
+                { x: -40, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: futureCardRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
-            gsap.from(futureContentRef.current, {
-                x: 40,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: futureContentRef.current,
-                    start: "top 85%"
+            );
+            gsap.fromTo(futureContentRef.current,
+                { x: 40, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: futureContentRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // CTA - Final pulse
-            gsap.from(ctaRef.current, {
-                scale: 0.9,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: ctaRef.current,
-                    start: "top 90%"
+            gsap.fromTo(ctaRef.current,
+                { scale: 0.9, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ctaRef.current,
+                        start: "top 90%",
+                        end: "bottom 10%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Perpetual brain drift
             gsap.to('.node-icon', {
@@ -379,7 +447,7 @@ const AgenticAISEO = () => {
             </section>
 
             {/* Framework Section */}
-            <section id="services" ref={frameworkRef} className="py-[100px] bg-slate-50">
+            <section ref={frameworkRef} className="py-[100px] bg-slate-50">
                 <div className="container">
                     <div className="text-center mb-[70px]">
                         <h2 className="text-[36px] font-bold text-[#0f172a] mb-[20px]">
@@ -418,11 +486,11 @@ const AgenticAISEO = () => {
             </section>
 
             {/* Services List Section */}
-            <section ref={servicesListRef} className="py-[120px] bg-white">
+            <section id="services" ref={servicesListRef} className="py-[120px] bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-[42px] font-black text-[#0f172a] mb-[30px] tracking-tight leading-tight">Our Agentic AI SEO Services</h2>
+                            <h2 className="text-[42px] font-semibold text-[#0f172a] mb-[30px] tracking-tight leading-tight">Our Agentic AI SEO Services</h2>
                             <p className="text-[18px] md:text-[20px] text-slate-600 mb-10 leading-[1.8] font-medium">
                                 We don't just use AI tools; we build intelligent SEO ecosystems that evolve with search engine expectations.
                             </p>
@@ -439,7 +507,7 @@ const AgenticAISEO = () => {
                         </div>
                         <div ref={hybridCardRef} className="bg-[#0f172a] p-[60px] rounded-[56px] text-white shadow-2xl relative overflow-hidden border border-white/5">
                             <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-900/40 rounded-full -ml-24 -mb-24 blur-3xl"></div>
-                            <h3 className="text-[28px] font-black mb-[40px] text-white flex items-center gap-3">
+                            <h3 className="text-[28px] font-semibold mb-[40px] text-white flex items-center gap-3">
                                 <Cpu className="text-blue-400" />
                                 The Hybrid Advantage
                             </h3>
@@ -503,7 +571,7 @@ const AgenticAISEO = () => {
                             </p>
                         </div>
                         <div ref={futureContentRef}>
-                            <h2 className="text-[36px] font-black text-[#0f172a] mb-[30px] tracking-tight leading-tight">Lead the AI Search Revolution</h2>
+                            <h2 className="text-[36px] font-semibold text-[#0f172a] mb-[30px] tracking-tight leading-tight">Lead the AI Search Revolution</h2>
                             <p className="text-[18px] md:text-[20px] text-slate-600 mb-10 leading-[1.8] font-medium">
                                 The next era of SEO isn’t about ranking pages. It’s about building intelligent digital authority.
                             </p>

@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ROICalculatorPopup from '../../components/tools/ROICalculatorPopup';
+
+gsap.registerPlugin(ScrollTrigger);
 import {
     Calculator,
     TrendingUp,
@@ -24,6 +28,66 @@ import {
 const SEOROICalculator = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [openFaq, setOpenFaq] = useState(null);
+    const mainRef = useRef(null);
+
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero Section
+            gsap.fromTo(".hero-content", { opacity: 0, y: 30 }, {
+                opacity: 1, y: 0, duration: 1,
+                scrollTrigger: { trigger: ".hero-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Steps Section
+            gsap.fromTo(".step-card", { opacity: 0, x: -30 }, {
+                opacity: 1, x: 0, duration: 0.8, stagger: 0.2,
+                scrollTrigger: { trigger: ".steps-grid", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Key Factors
+            gsap.fromTo(".factor-card", { opacity: 0, scale: 0.9 }, {
+                opacity: 1, scale: 1, duration: 0.6, stagger: 0.1,
+                scrollTrigger: { trigger: ".factors-grid", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Who Should Use
+            gsap.fromTo(".audience-box", { opacity: 0, y: 40 }, {
+                opacity: 1, y: 0, duration: 1,
+                scrollTrigger: { trigger: ".audience-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".audience-tag", { opacity: 0, scale: 0.8 }, {
+                opacity: 1, scale: 1, duration: 0.5, stagger: 0.1,
+                scrollTrigger: { trigger: ".audience-section", start: "top 75%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Comparison Section
+            gsap.fromTo(".comparison-left", { opacity: 0, x: -50 }, {
+                opacity: 1, x: 0, duration: 1,
+                scrollTrigger: { trigger: ".comparison-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".comparison-right", { opacity: 0, x: 50 }, {
+                opacity: 1, x: 0, duration: 1,
+                scrollTrigger: { trigger: ".comparison-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Benefits Section
+            gsap.fromTo(".benefit-card", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.6, stagger: 0.1,
+                scrollTrigger: { trigger: ".benefits-grid", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // FAQ and CTA
+            gsap.fromTo(".faq-section", { opacity: 0, y: 30 }, {
+                opacity: 1, y: 0, duration: 1,
+                scrollTrigger: { trigger: ".faq-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".cta-content", { opacity: 0, scale: 0.95 }, {
+                opacity: 1, scale: 1, duration: 1,
+                scrollTrigger: { trigger: ".cta-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+        }, mainRef);
+        return () => ctx.revert();
+    }, []);
 
     const toggleFaq = (i) => {
         setOpenFaq(openFaq === i ? null : i);
@@ -37,14 +101,14 @@ const SEOROICalculator = () => {
     ];
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-white min-h-screen" ref={mainRef}>
             {/* Hero Section */}
-            <section className="bg-[#0f172a] text-white py-20 relative overflow-hidden">
+            <section className="bg-[#0f172a] text-white py-20 relative overflow-hidden hero-section">
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
                     <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl translate-x-1/2 translate-y-1/2"></div>
                 </div>
-                <div className="container mx-auto px-6 relative z-10">
+                <div className="container mx-auto px-6 relative z-10 hero-content">
                     <div className="max-w-4xl">
                         <h1 className="text-[28px] md:text-[36px] font-bold mb-6">How Our SEO ROI Calculator Works</h1>
                         <p className="text-[20px] md:text-[24px] text-blue-200 mb-8 leading-relaxed">
@@ -65,9 +129,9 @@ const SEOROICalculator = () => {
             {/* Steps Section */}
             <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-6">
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-3 gap-8 steps-grid">
                         {/* Step 1 */}
-                        <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                        <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group step-card">
                             <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                                 <Target size={28} />
                             </div>
@@ -82,7 +146,7 @@ const SEOROICalculator = () => {
                         </div>
 
                         {/* Step 2 */}
-                        <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                        <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group step-card">
                             <div className="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
                                 <BarChart size={28} />
                             </div>
@@ -97,7 +161,7 @@ const SEOROICalculator = () => {
                         </div>
 
                         {/* Step 3 */}
-                        <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                        <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group step-card">
                             <div className="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
                                 <PieChart size={28} />
                             </div>
@@ -123,7 +187,7 @@ const SEOROICalculator = () => {
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Key Factors That Impact SEO ROI</h2>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 factors-grid">
                         {[
                             { title: "1. Keyword Intent", desc: "High-intent commercial keywords generate better ROI than informational queries.", icon: <MousePointer2 /> },
                             { title: "2. Conversion Rate Optimization (CRO)", desc: "Traffic alone doesn’t guarantee revenue. Optimized landing pages increase ROI significantly.", icon: <LineChart /> },
@@ -131,25 +195,25 @@ const SEOROICalculator = () => {
                             { title: "4. Customer Lifetime Value (CLV)", desc: "Businesses with repeat customers often see exponentially higher SEO returns.", icon: <Users /> },
                             { title: "5. SEO Timeline", desc: "SEO is a long-term growth strategy. Most businesses begin seeing measurable ROI within 4–6 months, with significant scaling after 8–12 months.", icon: <Clock /> }
                         ].map((factor, i) => (
-                            <div key={i} className="p-6 rounded-xl border border-gray-100 hover:border-blue-500 transition-all duration-300 hover:shadow-md bg-gray-50/50">
+                            <div key={i} className="p-6 rounded-xl border border-gray-100 hover:border-blue-500 transition-all duration-300 hover:shadow-md bg-gray-50/50 factor-card">
                                 <div className="text-blue-600 mb-4">{factor.icon}</div>
                                 <h4 className="text-xl font-bold mb-2">{factor.title}</h4>
                                 <p className="text-gray-600 leading-relaxed">{factor.desc}</p>
                             </div>
                         ))}
                     </div>
-                    <div className="mt-16 bg-blue-50 p-8 rounded-3xl border border-blue-100">
-                        <div className="text-center mb-10">
+                    <div className="mt-16 bg-blue-50 p-8 rounded-3xl border border-blue-100 audience-section">
+                        <div className="text-center mb-10 audience-box">
                             <h2 className="text-3xl font-bold text-gray-900">Who Should Use This SEO ROI Calculator?</h2>
                         </div>
                         <div className="flex flex-wrap justify-center gap-4">
                             {["E-commerce businesses", "SaaS companies", "Local service providers", "Startup founders", "Digital marketing managers", "Enterprise brands"].map((item, i) => (
-                                <div key={i} className="bg-white px-6 py-3 rounded-full shadow-sm font-medium text-blue-800 border border-blue-200 hover:bg-blue-600 hover:text-white transition-all duration-300">
+                                <div key={i} className="bg-white px-6 py-3 rounded-full shadow-sm font-medium text-blue-800 border border-blue-200 hover:bg-blue-600 hover:text-white transition-all duration-300 audience-tag">
                                     {item}
                                 </div>
                             ))}
                         </div>
-                        <p className="text-center mt-8 text-gray-700 font-medium">
+                        <p className="text-center mt-8 text-gray-700 font-medium audience-box">
                             Whether you are launching a new website or scaling an existing one, this tool provides financial clarity before you invest.
                         </p>
                     </div>
@@ -157,10 +221,10 @@ const SEOROICalculator = () => {
             </section>
 
             {/* SEO vs Paid Ads */}
-            <section className="py-20 bg-[#0f172a] text-white overflow-hidden relative">
+            <section className="py-20 bg-[#0f172a] text-white overflow-hidden relative comparison-section">
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div>
+                        <div className="comparison-left">
                             <h2 className="text-3xl font-bold text-white mb-6">SEO vs Paid Ads – Long-Term ROI Perspective</h2>
                             <p className="text-blue-100 text-lg mb-8">
                                 Unlike paid advertising where traffic stops once spending stops, SEO compounds over time.
@@ -190,7 +254,7 @@ const SEOROICalculator = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex justify-center">
+                        <div className="flex justify-center comparison-right">
                             <div className="relative">
                                 <div className="w-64 h-64 bg-blue-500/20 rounded-full animate-pulse blur-3xl absolute"></div>
                                 <Calculator size={250} className="text-blue-500/40 relative z-10" />
@@ -204,7 +268,7 @@ const SEOROICalculator = () => {
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Benefits of Using Our SEO ROI Calculator</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 benefits-grid">
                         {[
                             "Data-driven decision making",
                             "Investment clarity before campaign launch",
@@ -213,7 +277,7 @@ const SEOROICalculator = () => {
                             "Performance forecasting",
                             "Risk minimization"
                         ].map((benefit, i) => (
-                            <div key={i} className="flex flex-col items-center p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-green-500 hover:bg-green-50 transition-all duration-300 group">
+                            <div key={i} className="flex flex-col items-center p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-green-500 hover:bg-green-50 transition-all duration-300 group benefit-card">
                                 <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
                                     <ShieldCheck className="text-green-500" />
                                 </div>
@@ -228,7 +292,7 @@ const SEOROICalculator = () => {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-24 bg-slate-50 faq-section">
                 <div className="container px-6 mx-auto max-w-[800px]">
                     <h2 className="text-[28px] md:text-[36px] font-bold text-center mb-10 md:mb-[60px] text-slate-900 leading-tight">Frequently Asked Questions</h2>
                     <div className="space-y-4">
@@ -253,8 +317,8 @@ const SEOROICalculator = () => {
             </section>
 
             {/* Final CTA */}
-            <section className="py-24 bg-gradient-to-br from-blue-600 to-indigo-800 text-white text-center">
-                <div className="container mx-auto px-6">
+            <section className="py-24 bg-gradient-to-br from-blue-600 to-indigo-800 text-white text-center cta-section">
+                <div className="container mx-auto px-6 cta-content">
                     <Rocket size={60} className="mx-auto mb-8 animate-bounce" />
                     <h2 className="text-[28px] md:text-[36px] font-bold mb-6">Ready to Calculate Your SEO Growth Potential?</h2>
                     <p className="text-[20px] md:text-[24px] mb-12 text-blue-100 max-w-2xl mx-auto">

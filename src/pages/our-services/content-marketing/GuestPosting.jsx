@@ -34,90 +34,133 @@ const GuestPosting = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Zoom out entrance
-            gsap.from(heroContentRef.current, {
-                scale: 1.2,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power2.out"
-            });
-            gsap.from(heroImageRef.current, {
-                x: 100,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out",
-                delay: 0.2
-            });
+            gsap.fromTo(heroContentRef.current,
+                { scale: 1.2, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { x: 100, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    delay: 0.2,
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Why Benefits - Alternating side slides
             whyBenefitsRef.current.forEach((benefit, i) => {
-                gsap.from(benefit, {
-                    x: i % 2 === 0 ? -50 : 50,
-                    opacity: 0,
-                    duration: 0.6,
-                    scrollTrigger: {
-                        trigger: benefit,
-                        start: "top 90%"
+                gsap.fromTo(benefit,
+                    { x: i % 2 === 0 ? -50 : 50, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        scrollTrigger: {
+                            trigger: benefit,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Framework Steps - Staggered rise with rotation
             frameworkStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
-                    y: 100,
-                    rotation: 5,
-                    opacity: 0,
-                    duration: 0.7,
-                    delay: i * 0.1,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: step,
-                        start: "top 85%"
+                gsap.fromTo(step,
+                    { y: 100, rotation: 5, opacity: 0 },
+                    {
+                        y: 0,
+                        rotation: 0,
+                        opacity: 1,
+                        duration: 0.7,
+                        delay: i * 0.1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Offering Types - Horizontal fade shift
             typeCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    x: -30,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { x: -30, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Differentiators - Bounce Pop
             diffCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    scale: 0.8,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    ease: "back.out(1.5)",
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { scale: 0.8, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        ease: "back.out(1.5)",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Industry Tags - Cascade
             industryTagsRef.current.forEach((tag, i) => {
-                gsap.from(tag, {
-                    y: 20,
-                    opacity: 0,
-                    duration: 0.4,
-                    delay: i * 0.05,
-                    scrollTrigger: {
-                        trigger: tag,
-                        start: "top 95%"
+                gsap.fromTo(tag,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.4,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: tag,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Hero Image Floating
@@ -415,7 +458,7 @@ const GuestPosting = () => {
                                 <div
                                     key={index}
                                     ref={el => industryTagsRef.current[index] = el}
-                                    className="px-8 py-4 bg-white border-2 border-slate-100 rounded-xl font-extrabold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm cursor-default"
+                                    className="px-8 py-4 bg-white border-2 border-slate-100 rounded-xl font-semibold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm cursor-default"
                                 >
                                     {industry}
                                 </div>

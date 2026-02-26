@@ -53,128 +53,191 @@ const HyperLocalMarketing = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Local reveal
-            gsap.from(heroContentRef.current, {
-                opacity: 0,
-                scale: 0.9,
-                duration: 1.2,
-                ease: "power2.out"
-            });
-            gsap.from(heroImageRef.current, {
-                opacity: 0,
-                x: 50,
-                duration: 1.2,
-                ease: "power2.out"
-            });
+            gsap.fromTo(heroContentRef.current,
+                { opacity: 0, scale: 0.9 },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1.2,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { opacity: 0, x: 50 },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1.2,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // What is Hyperlocal - Expanding pulse
-            gsap.from(whatRef.current.querySelector('h2'), {
-                opacity: 0,
-                y: 30,
-                scrollTrigger: {
-                    trigger: whatRef.current,
-                    start: "top 80%"
-                }
-            });
-            whatItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    scale: i === 0 ? 0.95 : 1.05,
-                    opacity: 0,
-                    duration: 0.8,
-                    delay: i * 0.2,
+            gsap.fromTo(whatRef.current.querySelector('h2'),
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
                     scrollTrigger: {
-                        trigger: item,
-                        start: "top 85%"
+                        trigger: whatRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
-                });
+                }
+            );
+            whatItemsRef.current.forEach((item, i) => {
+                gsap.fromTo(item,
+                    { scale: i === 0 ? 0.95 : 1.05, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: i * 0.2,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
             });
 
             // Solutions - Map pin drops
             solutionsCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    y: -40,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    ease: "bounce.out",
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { y: -40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        ease: "bounce.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Difference - Pulse staggers
             differenceItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    x: -20,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: item,
-                        start: "top 95%"
+                gsap.fromTo(item,
+                    { x: -20, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
-            gsap.from(benefitCardRef.current, {
-                x: 50,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: benefitCardRef.current,
-                    start: "top 85%"
+            gsap.fromTo(benefitCardRef.current,
+                { x: 50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: benefitCardRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Industries - Neighborhood spread
             industryItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    scale: 0,
-                    opacity: 0,
-                    duration: 0.4,
-                    delay: i * 0.05,
-                    scrollTrigger: {
-                        trigger: item,
-                        start: "top 95%"
+                gsap.fromTo(item,
+                    { scale: 0, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.4,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Approach - Connecting the dots
             approachStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
-                    y: 20,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.15,
-                    scrollTrigger: {
-                        trigger: step,
-                        start: "top 90%"
+                gsap.fromTo(step,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.15,
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Advantage
-            gsap.from(advantageRef.current, {
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: advantageRef.current,
-                    start: "top 85%"
+            gsap.fromTo(advantageRef.current,
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: advantageRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // CTA
-            gsap.from(ctaRef.current, {
-                opacity: 0,
-                scale: 0.9,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: ctaRef.current,
-                    start: "top 90%"
+            gsap.fromTo(ctaRef.current,
+                { opacity: 0, scale: 0.9 },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ctaRef.current,
+                        start: "top 90%",
+                        end: "bottom 10%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Global pulse for all card icons
             const icons = document.querySelectorAll('.card-icon');

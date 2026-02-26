@@ -57,121 +57,179 @@ const LocalSEO = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Radial Expand
-            gsap.from(heroContentRef.current, {
-                y: 50,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power3.out"
-            });
-            gsap.from(heroImageRef.current, {
-                scale: 0.5,
-                opacity: 0,
-                duration: 1.5,
-                ease: "expo.out",
-                delay: 0.3
-            });
+            gsap.fromTo(heroContentRef.current,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { scale: 0.5, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1.5,
+                    ease: "expo.out",
+                    delay: 0.3,
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Why Matters - Ripple Reveal
-            gsap.from(mattersRef.current, {
-                x: -50,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: mattersRef.current,
-                    start: "top 85%"
-                }
-            });
-            matterPointsRef.current.forEach((point, i) => {
-                gsap.from(point, {
-                    x: -30,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
+            gsap.fromTo(mattersRef.current,
+                { x: -50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
                     scrollTrigger: {
-                        trigger: point,
-                        start: "top 95%"
+                        trigger: mattersRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
                     }
-                });
+                }
+            );
+            matterPointsRef.current.forEach((point, i) => {
+                gsap.fromTo(point,
+                    { x: -30, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: point,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
             });
 
             // Industries - Circular Entrance
             industryCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    scale: 0.8,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.05,
-                    ease: "back.out(1.7)",
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 95%"
+                gsap.fromTo(card,
+                    { scale: 0.8, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.05,
+                        ease: "back.out(1.7)",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Approach - Orbiting reveal
             approachCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    y: 40,
-                    opacity: 0,
-                    duration: 0.8,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 85%"
+                gsap.fromTo(card,
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Process - Step by step
             processStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
-                    scale: 0.9,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.15,
-                    scrollTrigger: {
-                        trigger: step,
-                        start: "top 90%"
+                gsap.fromTo(step,
+                    { scale: 0.9, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.15,
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Differentiators - Pop out
             diffCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    y: 30,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 95%"
+                gsap.fromTo(card,
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // FAQ
-            gsap.from(faqRef.current, {
-                opacity: 0,
-                y: 30,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: faqRef.current,
-                    start: "top 85%"
+            gsap.fromTo(faqRef.current,
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: faqRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // CTA
-            gsap.from(ctaRef.current, {
-                scale: 0.95,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: ctaRef.current,
-                    start: "top 90%"
+            gsap.fromTo(ctaRef.current,
+                { scale: 0.95, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ctaRef.current,
+                        start: "top 90%",
+                        end: "bottom 10%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Image Float (Orbit style)
             gsap.to(heroImageRef.current, {

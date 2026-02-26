@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import PPCROICalculatorPopup from '../../components/tools/PPCROICalculatorPopup';
+
+gsap.registerPlugin(ScrollTrigger);
 import {
     Calculator,
     TrendingUp,
@@ -28,16 +32,125 @@ import {
 
 const PPCROICalculator = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const mainRef = useRef(null);
+
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero Section
+            gsap.fromTo(".hero-content", { opacity: 0, scale: 1.1 }, {
+                opacity: 1, scale: 1, duration: 1.2,
+                scrollTrigger: { trigger: ".hero-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Quick Clarity
+            gsap.fromTo(".clarity-text", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 1,
+                scrollTrigger: { trigger: ".clarity-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Definition Section
+            gsap.fromTo(".def-text", { opacity: 0, x: -30 }, {
+                opacity: 1, x: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".def-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".def-card", { opacity: 0, scale: 0.9, y: 20 }, {
+                opacity: 1, scale: 1, y: 0, duration: 0.6, stagger: 0.1,
+                scrollTrigger: { trigger: ".def-grid", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Why PPC
+            gsap.fromTo(".why-ppc-header", { opacity: 0, y: -30 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".why-ppc-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".why-ppc-item", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.5, stagger: 0.1,
+                scrollTrigger: { trigger: ".why-ppc-grid", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // How It Works
+            gsap.fromTo(".how-works-left", { opacity: 0, x: -40 }, {
+                opacity: 1, x: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".how-works-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".how-works-right", { opacity: 0, x: 40 }, {
+                opacity: 1, x: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".how-works-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".how-works-item", { opacity: 0, x: -20 }, {
+                opacity: 1, x: 0, duration: 0.4, stagger: 0.1,
+                scrollTrigger: { trigger: ".how-works-list", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Audience
+            gsap.fromTo(".audience-card", { opacity: 0, scale: 0.85 }, {
+                opacity: 1, scale: 1, duration: 0.6, stagger: 0.1,
+                scrollTrigger: { trigger: ".audience-grid", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Benefits
+            gsap.fromTo(".benefits-header", { opacity: 0, x: -30 }, {
+                opacity: 1, x: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".benefits-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".benefit-item", { opacity: 0, x: -20 }, {
+                opacity: 1, x: 0, duration: 0.5, stagger: 0.1,
+                scrollTrigger: { trigger: ".benefits-header", start: "top 75%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".benefits-quote", { opacity: 0, scale: 0.95 }, {
+                opacity: 1, scale: 1, duration: 1,
+                scrollTrigger: { trigger: ".benefits-section", start: "top 75%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Metrics
+            gsap.fromTo(".metric-card", { opacity: 0, y: 30 }, {
+                opacity: 1, y: 0, duration: 0.6, stagger: 0.1,
+                scrollTrigger: { trigger: ".metrics-grid", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Mistakes
+            gsap.fromTo(".mistakes-box", { opacity: 0, scale: 0.98 }, {
+                opacity: 1, scale: 1, duration: 1,
+                scrollTrigger: { trigger: ".mistakes-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".mistake-item", { opacity: 0, borderLeftWidth: 0 }, {
+                opacity: 1, borderLeftWidth: 4, duration: 0.8, stagger: 0.2,
+                scrollTrigger: { trigger: ".mistakes-section", start: "top 75%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Why Adkryoss
+            gsap.fromTo(".why-us-header", { opacity: 0, x: -40 }, {
+                opacity: 1, x: 0, duration: 1,
+                scrollTrigger: { trigger: ".why-us-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".why-us-item", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.5, stagger: 0.1,
+                scrollTrigger: { trigger: ".why-us-section", start: "top 75%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".why-us-visual", { opacity: 0, scale: 0.9 }, {
+                opacity: 1, scale: 1, duration: 1,
+                scrollTrigger: { trigger: ".why-us-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // CTA
+            gsap.fromTo(".cta-content", { opacity: 0, y: 40 }, {
+                opacity: 1, y: 0, duration: 1,
+                scrollTrigger: { trigger: ".cta-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+        }, mainRef);
+        return () => ctx.revert();
+    }, []);
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-white min-h-screen" ref={mainRef}>
             {/* Hero Section */}
-            <section className="bg-[#0f172a] text-white py-24 relative overflow-hidden">
+            <section className="bg-[#0f172a] text-white py-24 relative overflow-hidden hero-section">
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
                     <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl translate-x-1/2 translate-y-1/2"></div>
                 </div>
-                <div className="container mx-auto px-6 relative z-10">
+                <div className="container mx-auto px-6 relative z-10 hero-content">
                     <div className="max-w-4xl">
                         <h1 className="text-[28px] md:text-[36px] font-bold mb-8 tracking-tight">PPC ROI Calculator – Instantly Measure the Real Profit Behind Your Ads</h1>
                         <p className="text-[20px] md:text-[24px] text-blue-100 mb-10 leading-relaxed font-light">
@@ -56,8 +169,8 @@ const PPCROICalculator = () => {
             </section>
 
             {/* Quick Clarity Section */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-6 text-center">
+            <section className="py-20 bg-white clarity-section">
+                <div className="container mx-auto px-6 text-center clarity-text">
                     <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
                         Whether you’re running Google Ads, social media ads, or display campaigns, this tool gives you quick clarity on performance potential and profitability.
                     </p>
@@ -65,10 +178,10 @@ const PPCROICalculator = () => {
             </section>
 
             {/* Definition Section */}
-            <section className="py-24 bg-gray-50">
+            <section className="py-24 bg-gray-50 def-section">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div className="space-y-6">
+                        <div className="space-y-6 def-text">
                             <div className="inline-block px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-bold uppercase tracking-wider mb-2">
                                 Definitions
                             </div>
@@ -83,16 +196,16 @@ const PPCROICalculator = () => {
                                 "This tool is designed for founders, marketers, and performance-driven brands that want clarity before increasing ad spend."
                             </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-6">
-                            <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-all text-center flex flex-col items-center">
+                        <div className="grid grid-cols-2 gap-6 def-grid">
+                            <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-all text-center flex flex-col items-center def-card">
                                 <DollarSign size={40} className="text-green-600 mb-4" />
                                 <span className="font-bold text-gray-900">Revenue</span>
                             </div>
-                            <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-all text-center flex flex-col items-center">
+                            <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-all text-center flex flex-col items-center def-card">
                                 <Scale size={40} className="text-blue-600 mb-4" />
                                 <span className="font-bold text-gray-900">Profit Margin</span>
                             </div>
-                            <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-all text-center flex flex-col items-center col-span-2">
+                            <div className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-all text-center flex flex-col items-center col-span-2 def-card">
                                 <PieChart size={40} className="text-purple-600 mb-4" />
                                 <span className="font-bold text-gray-900">ROI Analytics</span>
                             </div>
@@ -102,14 +215,14 @@ const PPCROICalculator = () => {
             </section>
 
             {/* Why Matters Section */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-white why-ppc-section">
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-4xl font-bold mb-10 text-gray-900 text-center">Why PPC ROI Calculation Matters</h2>
-                        <p className="text-xl text-gray-600 mb-12 text-center leading-relaxed">
+                        <h2 className="text-4xl font-bold mb-10 text-gray-900 text-center why-ppc-header">Why PPC ROI Calculation Matters</h2>
+                        <p className="text-xl text-gray-600 mb-12 text-center leading-relaxed why-ppc-header">
                             Running ads without calculating ROI is like investing without tracking returns. Understanding your projected ROI helps you:
                         </p>
-                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 why-ppc-grid">
                             {[
                                 { text: "Identify profitable budgets", icon: <Target className="text-blue-500" /> },
                                 { text: "Optimize bidding strategies", icon: <TrendingUp className="text-blue-500" /> },
@@ -117,13 +230,13 @@ const PPCROICalculator = () => {
                                 { text: "Reduce wasted ad spend", icon: <AlertTriangle className="text-red-500" /> },
                                 { text: "Improve scalability", icon: <Rocket className="text-blue-500" /> }
                             ].map((item, i) => (
-                                <div key={i} className="p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-blue-100 group">
+                                <div key={i} className="p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-blue-100 group why-ppc-item">
                                     <div className="mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
                                     <span className="text-lg font-bold text-gray-800">{item.text}</span>
                                 </div>
                             ))}
                         </div>
-                        <div className="p-8 bg-blue-50 rounded-3xl border border-blue-100 text-center">
+                        <div className="p-8 bg-blue-50 rounded-3xl border border-blue-100 text-center why-ppc-header">
                             <p className="text-xl text-blue-900 font-bold italic">
                                 "At Adkryoss managed by Clink Consultancy Services Private Limited, we strongly believe performance marketing should always be backed by measurable data — not guesswork."
                             </p>
@@ -133,21 +246,21 @@ const PPCROICalculator = () => {
             </section>
 
             {/* How It Works Section */}
-            <section className="py-24 bg-[#0f172a] text-white overflow-hidden relative">
+            <section className="py-24 bg-[#0f172a] text-white overflow-hidden relative how-works-section">
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-5xl mx-auto">
-                        <div className="text-center mb-16">
+                        <div className="text-center mb-16 how-works-left">
                             <h2 className="text-4xl font-bold text-white mb-6">How the PPC ROI Calculator Works</h2>
                             <p className="text-xl text-blue-200/70 font-light">Our calculator uses core PPC metrics to estimate profitability.</p>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-12 items-center">
-                            <div className="space-y-8">
+                            <div className="space-y-8 how-works-left">
                                 <div className="space-y-4">
                                     <h3 className="text-2xl font-bold flex items-center gap-3"><RefreshCw className="text-blue-400" /> You simply enter:</h3>
-                                    <ul className="grid grid-cols-1 gap-3">
+                                    <ul className="grid grid-cols-1 gap-3 how-works-list">
                                         {["Total ad spend", "Expected cost per click (CPC)", "Conversion rate (%)", "Average order value (AOV)", "Profit margin (%)"].map((item, i) => (
-                                            <li key={i} className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                                            <li key={i} className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10 how-works-item">
                                                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                                                 <span className="font-semibold text-blue-50">{item}</span>
                                             </li>
@@ -156,7 +269,7 @@ const PPCROICalculator = () => {
                                 </div>
                             </div>
 
-                            <div className="bg-white/5 p-10 rounded-[3rem] border border-white/10 backdrop-blur-sm">
+                            <div className="bg-white/5 p-10 rounded-[3rem] border border-white/10 backdrop-blur-sm how-works-right">
                                 <h3 className="text-2xl font-bold mb-8 flex items-center gap-3 text-green-400"><BarChart /> Instantly estimates:</h3>
                                 <div className="space-y-6">
                                     {["Total clicks generated", "Expected conversions", "Revenue projection", "Net profit", "ROI percentage"].map((item, i) => (
@@ -178,10 +291,10 @@ const PPCROICalculator = () => {
             </section>
 
             {/* Audience Section */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-white audience-section">
                 <div className="container mx-auto px-6">
                     <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">Who Should Use This Tool?</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 audience-grid">
                         {[
                             { name: "Startups", icon: <Rocket /> },
                             { name: "E-commerce", icon: <Zap /> },
@@ -189,7 +302,7 @@ const PPCROICalculator = () => {
                             { name: "Marketing Managers", icon: <Search /> },
                             { name: "Founders", icon: <Users /> }
                         ].map((audience, i) => (
-                            <div key={i} className="p-8 bg-gray-50 rounded-3xl text-center hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-blue-100 group">
+                            <div key={i} className="p-8 bg-gray-50 rounded-3xl text-center hover:bg-white hover:shadow-xl transition-all duration-500 border border-transparent hover:border-blue-100 group audience-card">
                                 <div className="w-16 h-16 bg-white rounded-2xl mx-auto flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all text-blue-600">
                                     {React.cloneElement(audience.icon, { size: 32 })}
                                 </div>
@@ -197,17 +310,17 @@ const PPCROICalculator = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-center mt-16 text-2xl font-bold text-blue-600 max-w-3xl mx-auto italic">
+                    <p className="text-center mt-16 text-2xl font-bold text-blue-600 max-w-3xl mx-auto italic audience-card">
                         "If you want predictable growth from paid campaigns, calculating ROI before scaling is non-negotiable."
                     </p>
                 </div>
             </section>
 
             {/* Benefits Section */}
-            <section className="py-24 bg-blue-600 text-white rounded-t-[4rem]">
+            <section className="py-24 bg-blue-600 text-white rounded-t-[4rem] benefits-section">
                 <div className="container mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
+                        <div className="benefits-header">
                             <h2 className="text-4xl font-bold mb-10">Benefits of Using Our PPC ROI Calculator</h2>
                             <div className="space-y-6">
                                 {[
@@ -217,14 +330,14 @@ const PPCROICalculator = () => {
                                     "Profit-first campaign approach",
                                     "Data-driven decision making"
                                 ].map((benefit, i) => (
-                                    <div key={i} className="flex items-center gap-4 text-xl">
+                                    <div key={i} className="flex items-center gap-4 text-xl benefit-item">
                                         <ShieldCheck className="text-blue-300" size={28} />
                                         <span className="font-medium">{benefit}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="p-12 bg-white rounded-[3rem] text-[#0f172a] shadow-2xl">
+                        <div className="p-12 bg-white rounded-[3rem] text-[#0f172a] shadow-2xl benefits-quote">
                             <p className="text-2xl leading-relaxed italic font-light">
                                 "At Adkryoss managed by Clink Consultancy Services Private Limited, we use ROI-first frameworks to design performance marketing strategies that focus on long-term profitability, not short-term vanity metrics."
                             </p>
@@ -234,13 +347,13 @@ const PPCROICalculator = () => {
             </section>
 
             {/* Key Metrics Section */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-white metrics-section">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-20">
                         <h2 className="text-4xl font-bold mb-6 text-gray-900">Key Metrics That Influence PPC ROI</h2>
                         <p className="text-xl text-gray-600 font-light italic">To maximize your ROI, focus on optimizing these core performance factors:</p>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 metrics-grid">
                         {[
                             { name: "Click-Through Rate (CTR)", desc: "The percentage of people who click your ad after seeing it.", icon: <MousePointer2 /> },
                             { name: "Cost Per Click (CPC)", desc: "The average price you pay for each click on your advertisement.", icon: <DollarSign /> },
@@ -249,7 +362,7 @@ const PPCROICalculator = () => {
                             { name: "Quality Score", desc: "Google's assessment of the quality and relevance of your ads.", icon: <Gauge /> },
                             { name: "Landing Page Optimization", desc: "Ensuring your destination page maximizes conversion potential.", icon: <LineChart /> }
                         ].map((metric, i) => (
-                            <div key={i} className="p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:border-blue-500 transition-all group">
+                            <div key={i} className="p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:border-blue-500 transition-all group metric-card">
                                 <div className="mb-6 text-blue-600 group-hover:scale-110 transition-transform">{metric.icon}</div>
                                 <h4 className="text-xl font-bold mb-3">{metric.name}</h4>
                                 <p className="text-gray-600 leading-relaxed font-light">{metric.desc}</p>
@@ -263,9 +376,9 @@ const PPCROICalculator = () => {
             </section>
 
             {/* Common Mistakes Section */}
-            <section className="py-24 bg-gray-50 overflow-hidden relative">
+            <section className="py-24 bg-gray-50 overflow-hidden relative mistakes-section">
                 <div className="container mx-auto px-6 relative z-10">
-                    <div className="max-w-4xl mx-auto bg-white p-12 md:p-20 rounded-[4rem] shadow-xl border border-gray-100">
+                    <div className="max-w-4xl mx-auto bg-white p-12 md:p-20 rounded-[4rem] shadow-xl border border-gray-100 mistakes-box">
                         <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">Common Mistakes That Reduce PPC ROI</h2>
                         <div className="grid sm:grid-cols-2 gap-8 mb-12">
                             {[
@@ -275,7 +388,7 @@ const PPCROICalculator = () => {
                                 "Not tracking micro-conversions",
                                 "Overlooking customer lifetime value"
                             ].map((mistake, i) => (
-                                <div key={i} className="flex gap-4 items-start border-l-4 border-red-500 pl-6 py-2">
+                                <div key={i} className="flex gap-4 items-start border-l-4 border-red-500 pl-6 py-2 mistake-item">
                                     <span className="text-lg font-bold text-gray-800 leading-tight">{mistake}</span>
                                 </div>
                             ))}
@@ -288,10 +401,10 @@ const PPCROICalculator = () => {
             </section>
 
             {/* Why Choice Adkryoss */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-white why-us-section">
                 <div className="container mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
-                        <div>
+                        <div className="why-us-header">
                             <h2 className="text-4xl font-bold mb-10 text-gray-900 leading-tight">Why Choose Adkryoss for PPC Campaign Management?</h2>
                             <p className="text-xl text-gray-600 mb-10 leading-relaxed font-light">
                                 While this calculator gives you projections, real performance requires strategic execution. <span className="font-bold text-[#0f172a]">Adkryoss managed by Clink Consultancy Services Private Limited</span> combines:
@@ -305,14 +418,14 @@ const PPCROICalculator = () => {
                                     "Continuous A/B testing",
                                     "Performance tracking & reporting"
                                 ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-4 p-4 bg-blue-50 rounded-2xl border border-blue-100">
+                                    <div key={i} className="flex items-center gap-4 p-4 bg-blue-50 rounded-2xl border border-blue-100 why-us-item">
                                         <CheckCircle2 className="text-blue-600 shadow-sm" />
                                         <span className="font-bold text-blue-900">{item}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="relative">
+                        <div className="relative why-us-visual">
                             <div className="absolute inset-0 bg-blue-600/5 blur-[100px] rounded-full"></div>
                             <div className="relative p-12 bg-white rounded-[4rem] shadow-2xl border border-gray-100 flex flex-col items-center text-center">
                                 <Rocket size={120} className="text-blue-600 mb-8 animate-bounce" />
@@ -321,11 +434,11 @@ const PPCROICalculator = () => {
                                     "We don’t just run ads. We build scalable revenue engines."
                                 </p>
                                 <button
-
                                     onClick={() => {
                                         window.location.href = "/contact";
                                     }}
-                                    className="w-full py-5 bg-[#0f172a] text-white font-extrabold rounded-2xl hover:bg-blue-900 transition-all shadow-xl">
+                                    className="w-full py-5 bg-[#0f172a] text-white font-extrabold rounded-2xl hover:bg-blue-900 transition-all shadow-xl"
+                                >
                                     Book Performance Strategy
                                 </button>
                             </div>
@@ -335,8 +448,8 @@ const PPCROICalculator = () => {
             </section>
 
             {/* Final CTA */}
-            <section className="py-24 bg-gradient-to-br from-blue-700 to-indigo-900 text-white">
-                <div className="container mx-auto px-6 text-center space-y-12">
+            <section className="py-24 bg-gradient-to-br from-blue-700 to-indigo-900 text-white cta-section">
+                <div className="container mx-auto px-6 text-center space-y-12 cta-content">
                     <h2 className="text-[28px] md:text-[36px] font-bold tracking-tighter">Take Control of Your Ad Profitability</h2>
                     <p className="text-[20px] md:text-[24px] text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
                         Use our PPC ROI Calculator to estimate your campaign potential today. Want expert-backed execution? Let’s build campaigns that deliver measurable returns and sustainable growth.

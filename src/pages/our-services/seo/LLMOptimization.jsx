@@ -48,148 +48,216 @@ const LLMOptimization = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Semantic assembly
-            gsap.from(heroContentRef.current, {
-                y: 50,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power3.out"
-            });
-            gsap.from(heroImageRef.current, {
-                scale: 0.8,
-                opacity: 0,
-                duration: 1.5,
-                ease: "elastic.out(1, 0.75)"
-            });
+            gsap.fromTo(heroContentRef.current,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { scale: 0.8, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1.5,
+                    ease: "elastic.out(1, 0.75)",
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // What is LLM - Node reveals
             if (whatRef.current) {
-                gsap.from(whatRef.current.querySelector('h2'), {
-                    opacity: 0,
-                    x: -30,
-                    scrollTrigger: {
-                        trigger: whatRef.current,
-                        start: "top 80%"
+                gsap.fromTo(whatRef.current.querySelector('h2'),
+                    { opacity: 0, x: -30 },
+                    {
+                        opacity: 1,
+                        x: 0,
+                        scrollTrigger: {
+                            trigger: whatRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
             whatFeaturesRef.current.forEach((feat, i) => {
                 if (!feat) return;
-                gsap.from(feat, {
-                    scale: 0.9,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: feat,
-                        start: "top 95%"
+                gsap.fromTo(feat,
+                    { scale: 0.9, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: feat,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
             if (whatImportanceRef.current) {
-                gsap.from(whatImportanceRef.current, {
-                    x: 40,
-                    opacity: 0,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: whatImportanceRef.current,
-                        start: "top 85%"
+                gsap.fromTo(whatImportanceRef.current,
+                    { x: 40, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: whatImportanceRef.current,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
 
             // Approach - Flowing staggers
             approachCardsRef.current.forEach((card, i) => {
                 if (!card) return;
-                gsap.from(card, {
-                    y: 60,
-                    opacity: 0,
-                    duration: 0.8,
-                    delay: i * 0.15,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: i * 0.15,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Strategy & Tech - Contextual connections
             if (strategyRef.current) {
-                gsap.from(strategyRef.current, {
-                    x: -40,
-                    opacity: 0,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: strategyRef.current,
-                        start: "top 85%"
+                gsap.fromTo(strategyRef.current,
+                    { x: -40, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: strategyRef.current,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
             if (techStackRef.current) {
-                gsap.from(techStackRef.current, {
-                    x: 40,
-                    opacity: 0,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: techStackRef.current,
-                        start: "top 85%"
+                gsap.fromTo(techStackRef.current,
+                    { x: 40, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: techStackRef.current,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
             techItemsRef.current.forEach((item, i) => {
                 if (!item) return;
-                gsap.from(item, {
-                    y: 20,
-                    opacity: 0,
-                    duration: 0.4,
-                    delay: 0.2 + (i * 0.08),
-                    scrollTrigger: {
-                        trigger: techStackRef.current,
-                        start: "top 85%"
+                gsap.fromTo(item,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.4,
+                        delay: 0.2 + (i * 0.08),
+                        scrollTrigger: {
+                            trigger: techStackRef.current,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Benefits - Authority growth
             benefitCardsRef.current.forEach((card, i) => {
                 if (!card) return;
-                gsap.from(card, {
-                    scale: 0.9,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 95%"
+                gsap.fromTo(card,
+                    { scale: 0.9, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Audiences - Distributed signals
             audienceBadgesRef.current.forEach((badge, i) => {
                 if (!badge) return;
-                gsap.from(badge, {
-                    y: 20,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.08,
-                    scrollTrigger: {
-                        trigger: badge,
-                        start: "top 95%"
+                gsap.fromTo(badge,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.08,
+                        scrollTrigger: {
+                            trigger: badge,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // CTA - Neural pulse
             if (ctaRef.current) {
-                gsap.from(ctaRef.current, {
-                    y: 40,
-                    opacity: 0,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: ctaRef.current,
-                        start: "top 90%"
+                gsap.fromTo(ctaRef.current,
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: ctaRef.current,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
 
             // Brain drift

@@ -46,130 +46,193 @@ const AISEO = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Neural flow
-            gsap.from(heroContentRef.current, {
-                x: -50,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power3.out"
-            });
-            gsap.from(heroImageRef.current, {
-                scale: 0.8,
-                opacity: 0,
-                duration: 1.5,
-                ease: "elastic.out(1, 0.75)"
-            });
+            gsap.fromTo(heroContentRef.current,
+                { x: -50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { scale: 0.8, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1.5,
+                    ease: "elastic.out(1, 0.75)",
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Why AI SEO - Brain pulse
-            gsap.from(whyRef.current.querySelector('h2'), {
-                opacity: 0,
-                y: 30,
-                scrollTrigger: {
-                    trigger: whyRef.current,
-                    start: "top 80%"
-                }
-            });
-            whyItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    x: -30,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.15,
+            gsap.fromTo(whyRef.current.querySelector('h2'),
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
                     scrollTrigger: {
-                        trigger: item,
-                        start: "top 90%"
+                        trigger: whyRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
-                });
-            });
-            gsap.from(whyCardRef.current, {
-                scale: 0.9,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: whyCardRef.current,
-                    start: "top 85%"
                 }
+            );
+            whyItemsRef.current.forEach((item, i) => {
+                gsap.fromTo(item,
+                    { x: -30, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.15,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
             });
+            gsap.fromTo(whyCardRef.current,
+                { scale: 0.9, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: whyCardRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Framework - Fluid staggers
             frameworkCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    y: 60,
-                    opacity: 0,
-                    duration: 0.8,
-                    delay: i * 0.15,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: i * 0.15,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Services - Data nodes
             servicesCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    scale: 0.8,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 95%"
+                gsap.fromTo(card,
+                    { scale: 0.8, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Model - Step sequence
             modelStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
-                    opacity: 0,
-                    y: 20,
-                    duration: 0.6,
-                    delay: i * 0.2,
-                    scrollTrigger: {
-                        trigger: step,
-                        start: "top 90%"
+                gsap.fromTo(step,
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.6,
+                        delay: i * 0.2,
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Choose - Semantic staggers
             chooseItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    x: i % 2 === 0 ? -20 : 20,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: item,
-                        start: "top 95%"
+                gsap.fromTo(item,
+                    { x: i % 2 === 0 ? -20 : 20, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Future - Matrix grid
             futureItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    y: 30,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: item,
-                        start: "top 95%"
+                gsap.fromTo(item,
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // CTA
-            gsap.from(ctaRef.current, {
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: ctaRef.current,
-                    start: "top 90%"
+            gsap.fromTo(ctaRef.current,
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ctaRef.current,
+                        start: "top 90%",
+                        end: "bottom 10%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Perpetual brain drift
             gsap.to('.brain-icon', {

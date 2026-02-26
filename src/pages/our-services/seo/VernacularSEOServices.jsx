@@ -51,125 +51,183 @@ const VernacularSEOServices = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Rhythmic Expansion
-            gsap.from(heroContentRef.current, {
-                x: -60,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power3.out"
-            });
-            gsap.from(heroImageRef.current, {
-                scale: 0.9,
-                opacity: 0,
-                duration: 1.5,
-                ease: "back.out(1.7)"
-            });
+            gsap.fromTo(heroContentRef.current,
+                { x: -60, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { scale: 0.9, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1.5,
+                    ease: "back.out(1.7)",
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Why Section - Heartbeat reveal
             if (whyRef.current) {
-                gsap.from(whyRef.current, {
-                    y: 50,
-                    opacity: 0,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: whyRef.current,
-                        start: "top 80%"
+                gsap.fromTo(whyRef.current,
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: whyRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
             if (whyImageRef.current) {
-                gsap.from(whyImageRef.current, {
-                    x: 100,
-                    opacity: 0,
-                    duration: 1.2,
-                    scrollTrigger: {
-                        trigger: whyImageRef.current,
-                        start: "top 85%"
+                gsap.fromTo(whyImageRef.current,
+                    { x: 100, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 1.2,
+                        scrollTrigger: {
+                            trigger: whyImageRef.current,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
 
             // Framework - Pulse staggers
             frameworkCardsRef.current.forEach((card, i) => {
                 if (!card) return;
-                gsap.from(card, {
-                    scale: 0.95,
-                    opacity: 0,
-                    duration: 0.8,
-                    delay: i * 0.15,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { scale: 0.95, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: i * 0.15,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Approach - Slide in connections
             if (approachRef.current) {
-                gsap.from(approachRef.current, {
-                    y: 40,
-                    opacity: 0,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: approachRef.current,
-                        start: "top 85%"
+                gsap.fromTo(approachRef.current,
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: approachRef.current,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
 
             // Industry Badges - Bouncing reveal
             industryBadgesRef.current.forEach((badge, i) => {
                 if (!badge) return;
-                gsap.from(badge, {
-                    y: 20,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.08,
-                    scrollTrigger: {
-                        trigger: badge,
-                        start: "top 95%"
+                gsap.fromTo(badge,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.08,
+                        scrollTrigger: {
+                            trigger: badge,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Process - Sequential flow
             processStepsRef.current.forEach((step, i) => {
                 if (!step) return;
-                gsap.from(step, {
-                    x: -30,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: step,
-                        start: "top 90%"
+                gsap.fromTo(step,
+                    { x: -30, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Advantage - Connection pulses
             if (advantageRef.current) {
-                gsap.from(advantageRef.current, {
-                    opacity: 0,
-                    filter: "blur(10px)",
-                    duration: 1.2,
-                    scrollTrigger: {
-                        trigger: advantageRef.current,
-                        start: "top 80%"
+                gsap.fromTo(advantageRef.current,
+                    { opacity: 0, filter: "blur(10px)" },
+                    {
+                        opacity: 1,
+                        filter: "blur(0px)",
+                        duration: 1.2,
+                        scrollTrigger: {
+                            trigger: advantageRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
 
             // CTA - Final Expansion
             if (ctaRef.current) {
-                gsap.from(ctaRef.current, {
-                    scale: 0.95,
-                    opacity: 0,
-                    duration: 1.2,
-                    scrollTrigger: {
-                        trigger: ctaRef.current,
-                        start: "top 90%"
+                gsap.fromTo(ctaRef.current,
+                    { scale: 0.95, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 1.2,
+                        scrollTrigger: {
+                            trigger: ctaRef.current,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
         }, pageRef);
 

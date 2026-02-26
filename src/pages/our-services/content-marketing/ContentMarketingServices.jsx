@@ -46,116 +46,169 @@ const ContentMarketingServices = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero Animations
-            gsap.from(heroContentRef.current, {
-                opacity: 0,
-                y: 30,
-                duration: 0.6,
-                ease: "power2.out"
-            });
-            gsap.from(heroImageRef.current, {
-                opacity: 0,
-                x: 100,
-                duration: 0.8,
-                ease: "power3.out"
-            });
-
-            // Why Content Card - 3D Rotation Entrance
-            gsap.from(whyCardRef.current, {
-                rotationX: -45,
-                opacity: 0,
-                y: 50,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: whyCardRef.current,
-                    start: "top 85%"
+            gsap.fromTo(heroContentRef.current,
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
-
-            // Approach Cards - Elastic Slide
-            approachCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    x: i % 2 === 0 ? -100 : 100,
-                    opacity: 0,
+            );
+            gsap.fromTo(heroImageRef.current,
+                { opacity: 0, x: 100 },
+                {
+                    opacity: 1,
+                    x: 0,
                     duration: 0.8,
                     ease: "power3.out",
                     scrollTrigger: {
-                        trigger: card,
-                        start: "top 80%"
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
-                });
+                }
+            );
+
+            // Why Content Card - 3D Rotation Entrance
+            gsap.fromTo(whyCardRef.current,
+                { rotationX: -45, opacity: 0, y: 50 },
+                {
+                    rotationX: 0,
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: whyCardRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Approach Cards - Elastic Slide
+            approachCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { x: i % 2 === 0 ? -100 : 100, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
             });
 
             // Content Type Cards - Staggered Scale Pop
             typeCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    scale: 0.5,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    ease: "back.out(1.7)",
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { scale: 0.5, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        ease: "back.out(1.7)",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Philosophy Blocks - Staggered Fade Up
             philosophyBlocksRef.current.forEach((block, i) => {
-                gsap.from(block, {
-                    y: 30,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: block,
-                        start: "top 90%"
+                gsap.fromTo(block,
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: block,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Differentiators - Vertical Stagger
             diffItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    x: -30,
-                    opacity: 0,
-                    duration: 0.4,
-                    delay: i * 0.05,
-                    scrollTrigger: {
-                        trigger: item,
-                        start: "top 90%"
+                gsap.fromTo(item,
+                    { x: -30, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.4,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Industries - Cascade Animation
             industryCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    y: 40,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.05,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 95%"
+                gsap.fromTo(card,
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Impact Blocks - Pop-in
-            gsap.from(".impact-block", {
-                scale: 0.8,
-                opacity: 0,
-                y: 20,
-                stagger: 0.08,
-                duration: 0.5,
-                ease: "back.out(1.7)",
-                scrollTrigger: {
-                    trigger: impactRef.current,
-                    start: "top 85%",
-                    onEnter: () => ScrollTrigger.refresh()
+            gsap.fromTo(".impact-block",
+                { scale: 0.8, opacity: 0, y: 20 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    y: 0,
+                    stagger: 0.08,
+                    duration: 0.5,
+                    ease: "back.out(1.7)",
+                    scrollTrigger: {
+                        trigger: impactRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse",
+                        onEnter: () => ScrollTrigger.refresh()
+                    }
                 }
-            });
+            );
 
             // Continuous Animation (Hero Image Float)
             gsap.to(heroImageRef.current, {
@@ -510,7 +563,7 @@ const ContentMarketingServices = () => {
                             <div
                                 key={index}
                                 ref={el => philosophyBlocksRef.current[index] = el}
-                                className="px-10 py-8 bg-slate-50 rounded-2xl border-2 border-slate-100 text-2xl font-black text-[#0066CC] shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 cursor-default"
+                                className="px-10 py-8 bg-slate-50 rounded-2xl border-2 border-slate-100 text-2xl font-semibold text-[#0066CC] shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 cursor-default"
                             >
                                 {item}
                             </div>
@@ -531,7 +584,7 @@ const ContentMarketingServices = () => {
                     <div className="grid md:grid-cols-2 gap-20">
                         {/* What Makes Us Different */}
                         <div>
-                            <h2 className="text-[36px] font-bold text-slate-900 mb-10 leading-tight">What Makes Us Different</h2>
+                            <h2 className="text-[36px] font-semibold text-slate-900 mb-10 leading-tight">What Makes Us Different</h2>
                             <div className="grid gap-6">
                                 {differentiators.map((item, index) => (
                                     <div
@@ -553,7 +606,7 @@ const ContentMarketingServices = () => {
 
                         {/* Industries */}
                         <div>
-                            <h2 className="text-[36px] font-bold text-slate-900 mb-10 leading-tight">Industries We Serve</h2>
+                            <h2 className="text-[36px] font-semibold text-slate-900 mb-10 leading-tight">Industries We Serve</h2>
                             <div className="grid grid-cols-2 gap-6">
                                 {industries.map((item, index) => (
                                     <div
@@ -591,7 +644,7 @@ const ContentMarketingServices = () => {
                                 key={index}
                                 onMouseEnter={(e) => handleHover(e, true)}
                                 onMouseLeave={(e) => handleHover(e, false)}
-                                className="impact-block px-8 py-5 bg-blue-500 text-white rounded-xl shadow-xl shadow-blue-600/20 font-black text-lg cursor-pointer"
+                                className="impact-block px-8 py-5 bg-blue-500 text-white rounded-xl shadow-xl shadow-blue-600/20 font-semibold text-lg cursor-pointer"
                             >
                                 {point}
                             </div>

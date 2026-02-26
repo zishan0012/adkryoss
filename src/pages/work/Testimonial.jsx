@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     Rocket,
     TrendingUp,
@@ -12,7 +14,113 @@ import {
     Quote
 } from 'lucide-react';
 import testimonialhero from '../../assets/work/testimonialhero.png';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Testimonial = () => {
+    const mainRef = useRef(null);
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            // Hero Section
+            gsap.fromTo(".hero-content",
+                { opacity: 0, x: -50 },
+                {
+                    opacity: 1, x: 0, duration: 1, delay: 0.2,
+                    scrollTrigger: {
+                        trigger: ".hero-content",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".hero-image",
+                { opacity: 0, scale: 0.8 },
+                {
+                    opacity: 1, scale: 1, duration: 1, delay: 0.4,
+                    scrollTrigger: {
+                        trigger: ".hero-image",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Testimonials Grid
+            gsap.fromTo(".testimonial-card",
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1, y: 0, duration: 0.8, stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: ".testimonial-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Why Clients Choose Us
+            gsap.fromTo(".why-choose-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".why-choose-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".choice-point",
+                { opacity: 0, x: -30 },
+                {
+                    opacity: 1, x: 0, duration: 0.6, stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: ".choice-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".why-choose-quote",
+                { opacity: 0, scale: 0.95 },
+                {
+                    opacity: 1, scale: 1, duration: 1,
+                    scrollTrigger: {
+                        trigger: ".why-choose-quote",
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Final CTA
+            gsap.fromTo(".cta-content",
+                { opacity: 0, scale: 0.9 },
+                {
+                    opacity: 1, scale: 1, duration: 1,
+                    scrollTrigger: {
+                        trigger: ".cta-section",
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+        }, mainRef);
+
+        return () => ctx.revert();
+    }, []);
+
     const testimonials = [
         {
             title: "Performance Marketing Transformation",
@@ -62,7 +170,7 @@ const Testimonial = () => {
     ];
 
     return (
-        <div className="bg-white text-slate-900">
+        <div className="bg-white text-slate-900" ref={mainRef}>
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -71,7 +179,7 @@ const Testimonial = () => {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10 text-white">
+                    <div className="text-left relative z-10 text-white hero-content">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Client Testimonials
                         </h1>
@@ -90,7 +198,7 @@ const Testimonial = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div className="flex justify-center md:justify-end relative z-10 hero-image">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={testimonialhero}
@@ -104,11 +212,11 @@ const Testimonial = () => {
             {/* Testimonials Grid */}
             <section className="py-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 testimonial-grid">
                         {testimonials.map((t, i) => (
                             <div
                                 key={i}
-                                className="bg-white p-8 rounded-[30px] border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group"
+                                className="bg-white p-8 rounded-[30px] border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group testimonial-card"
                             >
                                 <div className="text-blue-600 mb-6 group-hover:scale-110 transition-transform duration-300">
                                     {React.cloneElement(t.icon, { size: 36 })}
@@ -134,18 +242,18 @@ const Testimonial = () => {
             <section className="py-24 bg-white">
                 <div className="container px-6 mx-auto">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-[36px] font-bold text-slate-900 mb-8">
+                        <h2 className="text-[36px] font-bold text-slate-900 mb-8 why-choose-header">
                             Why Clients Choose Us
                         </h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12 text-left">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12 text-left choice-grid">
                             {whyChooseUs.map((point, i) => (
-                                <div key={i} className="flex gap-3 bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                                <div key={i} className="flex gap-3 bg-slate-50 p-5 rounded-2xl border border-slate-100 choice-point">
                                     <CheckCircle2 className="text-blue-600 shrink-0 mt-0.5" size={20} />
                                     <span className="font-bold text-slate-800">{point}</span>
                                 </div>
                             ))}
                         </div>
-                        <p className="text-[18px] leading-[1.8] text-slate-700 font-medium italic mb-8">
+                        <p className="text-[18px] leading-[1.8] text-slate-700 font-medium italic mb-8 why-choose-quote">
                             Adkryoss managed by <span className="font-bold text-blue-600">Clink Consultancy Services Private Limited</span> operates as a strategic growth partner — not just a digital marketing agency. We combine analytics, creativity, automation, and performance intelligence to build scalable digital ecosystems for ambitious brands.
                         </p>
                     </div>
@@ -153,8 +261,8 @@ const Testimonial = () => {
             </section>
 
             {/* Let's Build Your Growth Story Next */}
-            <section className="py-24 bg-gradient-to-br from-[#0066cc] to-[#00458a] text-white text-center">
-                <div className="container px-6 mx-auto">
+            <section className="py-24 bg-gradient-to-br from-[#0066cc] to-[#00458a] text-white text-center cta-section">
+                <div className="container px-6 mx-auto cta-content">
                     <h2 className="text-[36px] font-bold mb-6">Let’s Build Your Growth Story Next</h2>
                     <p className="text-[18px] mb-4 font-bold text-white">Results are not accidental. They are engineered.</p>
                     <p className="text-[18px] mb-8 opacity-90 font-medium text-white">Partner with a team that treats your growth like their own.</p>

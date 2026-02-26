@@ -34,125 +34,184 @@ const MartechServices = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero Animations
-            gsap.from(heroContentRef.current, {
+            gsap.fromTo(heroContentRef.current, {
                 y: -50,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out"
-            });
-            gsap.from(heroImageRef.current, {
-                x: 50,
-                opacity: 0,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
                 duration: 0.8,
                 ease: "power3.out",
-                delay: 0.2
+                scrollTrigger: {
+                    trigger: heroContentRef.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
+            });
+            gsap.fromTo(heroImageRef.current, {
+                x: 50,
+                opacity: 0
+            }, {
+                x: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: "power3.out",
+                delay: 0.2,
+                scrollTrigger: {
+                    trigger: heroImageRef.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
             });
 
             // Future Section
-            gsap.from(futureTextRef.current, {
+            gsap.fromTo(futureTextRef.current, {
                 y: 30,
-                opacity: 0,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
                 duration: 0.8,
                 scrollTrigger: {
                     trigger: futureTextRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
             futureCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     scale: 0.8,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    opacity: 1,
                     duration: 0.6,
                     delay: i * 0.1,
                     ease: "back.out(1.7)",
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Capability Cards - 3D Rotation
             capabilityCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     rotationY: 45,
                     opacity: 0,
-                    y: 50,
+                    y: 50
+                }, {
+                    rotationY: 0,
+                    opacity: 1,
+                    y: 0,
                     duration: 0.8,
                     delay: i * 0.1,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 85%"
+                        start: "top 85%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Banner Section
-            gsap.from(bannerRef.current, {
+            gsap.fromTo(bannerRef.current, {
                 scale: 0.9,
-                opacity: 0,
+                opacity: 0
+            }, {
+                scale: 1,
+                opacity: 1,
                 duration: 1,
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: bannerRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
 
             // Differentiators
             diffCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     x: -30,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
                     duration: 0.5,
                     delay: i * 0.1,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Process Steps
             processStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
+                gsap.fromTo(step, {
                     y: 40,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
                     duration: 0.6,
                     delay: i * 0.1,
                     ease: "power2.out",
                     scrollTrigger: {
                         trigger: step,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Industries
             industryTagsRef.current.forEach((tag, i) => {
-                gsap.from(tag, {
+                gsap.fromTo(tag, {
                     scale: 0,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    opacity: 1,
                     duration: 0.4,
                     delay: i * 0.05,
                     ease: "back.out(2)",
                     scrollTrigger: {
                         trigger: tag,
-                        start: "top 95%"
+                        start: "top 95%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Advantages
             advantageItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
+                gsap.fromTo(item, {
                     x: 20,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
                     duration: 0.4,
                     delay: i * 0.1,
                     scrollTrigger: {
                         trigger: item,
-                        start: "top 95%"
+                        start: "top 95%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
@@ -517,7 +576,7 @@ const MartechServices = () => {
                                         ref={el => industryTagsRef.current[index] = el}
                                         onMouseEnter={(e) => handleHover(e, true)}
                                         onMouseLeave={(e) => handleHover(e, false)}
-                                        className="cursor-pointer px-8 py-5 bg-white text-slate-900 rounded-2xl font-black transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1 transition-duration-300"
+                                        className="cursor-pointer px-8 py-5 bg-white text-slate-900 rounded-2xl font-semibold transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1 transition-duration-300"
                                     >
                                         {item}
                                     </div>
@@ -540,7 +599,7 @@ const MartechServices = () => {
                                         <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-black group-hover:scale-110 transition-transform">
                                             ✔
                                         </div>
-                                        <span className="font-bold text-lg text-white opacity-90 group-hover:opacity-100 transition-opacity">{item}</span>
+                                        <span className="font-semibold text-lg text-white opacity-90 group-hover:opacity-100 transition-opacity">{item}</span>
                                     </div>
                                 ))}
                             </div>

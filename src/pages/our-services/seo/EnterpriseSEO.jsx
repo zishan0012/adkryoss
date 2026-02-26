@@ -55,174 +55,257 @@ const EnterpriseSEO = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Structural Build
-            gsap.from(heroContentRef.current, {
-                x: -50,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power4.out"
-            });
-            gsap.from(heroImageRef.current, {
-                scale: 0.9,
-                opacity: 0,
-                duration: 1.5,
-                ease: "power2.out",
-                delay: 0.3
-            });
+            gsap.fromTo(heroContentRef.current,
+                { x: -50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { scale: 0.9, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1.5,
+                    ease: "power2.out",
+                    delay: 0.3,
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Why Section - Grid Stagger
-            gsap.from(whySectionRef.current, {
-                y: 30,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: whySectionRef.current,
-                    start: "top 85%"
-                }
-            });
-            whyItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    x: -20,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
+            gsap.fromTo(whySectionRef.current,
+                { y: 30, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
                     scrollTrigger: {
-                        trigger: item,
-                        start: "top 95%"
+                        trigger: whySectionRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
                     }
-                });
-            });
-            gsap.from(whyCardRef.current, {
-                x: 50,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: whyCardRef.current,
-                    start: "top 80%"
                 }
+            );
+            whyItemsRef.current.forEach((item, i) => {
+                gsap.fromTo(item,
+                    { x: -20, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
             });
+            gsap.fromTo(whyCardRef.current,
+                { x: 50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: whyCardRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Framework - Building Blocks
             frameworkCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    y: 40,
-                    opacity: 0,
-                    duration: 0.8,
-                    delay: i * 0.1,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 85%"
+                gsap.fromTo(card,
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: i * 0.1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Solutions - Flowing Stagger
-            gsap.from(solutionsRef.current, {
-                opacity: 0,
-                y: 20,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: solutionsRef.current,
-                    start: "top 90%"
-                }
-            });
-            solutionItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    scale: 0.8,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.05,
+            gsap.fromTo(solutionsRef.current,
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
                     scrollTrigger: {
-                        trigger: item,
-                        start: "top 95%"
+                        trigger: solutionsRef.current,
+                        start: "top 90%",
+                        end: "bottom 10%",
+                        toggleActions: "play reverse play reverse"
                     }
-                });
+                }
+            );
+            solutionItemsRef.current.forEach((item, i) => {
+                gsap.fromTo(item,
+                    { scale: 0.8, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
             });
 
             // Differentiators - Precision Reveals
             diffCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    scale: 0.95,
-                    opacity: 0,
-                    duration: 0.7,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { scale: 0.95, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.7,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Working Model - Sequential
             modelStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
-                    opacity: 0,
-                    y: 20,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: step,
-                        start: "top 90%"
+                gsap.fromTo(step,
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Industries - Grid Fade
             industryCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    opacity: 0,
-                    y: 20,
-                    duration: 0.5,
-                    delay: i * 0.05,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 95%"
+                gsap.fromTo(card,
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.5,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Results - Data Reveal
-            gsap.from(resultsRef.current, {
-                x: -40,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: resultsRef.current,
-                    start: "top 85%"
-                }
-            });
-            resultsItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    x: -20,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.1,
+            gsap.fromTo(resultsRef.current,
+                { x: -40, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
                     scrollTrigger: {
-                        trigger: item,
-                        start: "top 95%"
+                        trigger: resultsRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
                     }
-                });
-            });
-            gsap.from(resultsGraphicRef.current, {
-                scale: 0.8,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: resultsGraphicRef.current,
-                    start: "top 80%"
                 }
+            );
+            resultsItemsRef.current.forEach((item, i) => {
+                gsap.fromTo(item,
+                    { x: -20, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
             });
+            gsap.fromTo(resultsGraphicRef.current,
+                { scale: 0.8, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: resultsGraphicRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // CTA
-            gsap.from(ctaRef.current, {
-                y: 30,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: ctaRef.current,
-                    start: "top 85%"
+            gsap.fromTo(ctaRef.current,
+                { y: 30, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ctaRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Hero Image Animation (Matrix style float)
             gsap.to(heroImageRef.current, {
@@ -461,7 +544,7 @@ const EnterpriseSEO = () => {
             </section>
 
             {/* Framework Section */}
-            <section id="services" className="py-[100px] bg-[#f1f5f9]">
+            <section className="py-[100px] bg-[#f1f5f9]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
@@ -520,7 +603,7 @@ const EnterpriseSEO = () => {
             </section>
 
             {/* Solutions Section */}
-            <section className="py-[100px] bg-white">
+            <section id="services" className="py-[100px] bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]" ref={solutionsRef}>
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">Enterprise SEO Solutions We Offer</h2>

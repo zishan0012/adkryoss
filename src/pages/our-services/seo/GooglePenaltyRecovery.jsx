@@ -56,176 +56,254 @@ const GooglePenaltyRecovery = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Rising from Depths
-            gsap.from(heroContentRef.current, {
-                x: -100,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power3.out"
-            });
-            gsap.from(heroImageRef.current, {
-                x: 100,
-                opacity: 0,
-                scale: 0.8,
-                duration: 1.5,
-                ease: "elastic.out(1, 0.75)"
-            });
+            gsap.fromTo(heroContentRef.current,
+                { x: -100, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { x: 100, opacity: 0, scale: 0.8 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1.5,
+                    ease: "elastic.out(1, 0.75)",
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Message & Reasons - Cleaning Reveal
             if (messageRef.current) {
-                gsap.from(messageRef.current, {
-                    y: 50,
-                    opacity: 0,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: messageRef.current,
-                        start: "top 80%"
+                gsap.fromTo(messageRef.current,
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: messageRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
             if (reasonsRef.current) {
-                gsap.from(reasonsRef.current, {
-                    scale: 0.9,
-                    opacity: 0,
-                    filter: "blur(10px)",
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: reasonsRef.current,
-                        start: "top 80%"
+                gsap.fromTo(reasonsRef.current,
+                    { scale: 0.9, opacity: 0, filter: "blur(10px)" },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        filter: "blur(0px)",
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: reasonsRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
 
             // Penalty Types - Distinct Identity
             typeCardsRef.current.forEach((card, i) => {
                 if (!card) return;
-                gsap.from(card, {
-                    y: 60,
-                    opacity: 0,
-                    duration: 0.8,
-                    delay: i * 0.15,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 85%"
+                gsap.fromTo(card,
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: i * 0.15,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Framework - Sequential Progression
             phaseCardsRef.current.forEach((card, i) => {
                 if (!card) return;
-                gsap.from(card, {
-                    x: i % 2 === 0 ? -50 : 50,
-                    opacity: 0,
-                    duration: 0.8,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { x: i % 2 === 0 ? -50 : 50, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Signs - Red Alert
             if (signsContentRef.current) {
-                gsap.from(signsContentRef.current, {
-                    x: -50,
-                    opacity: 0,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: signsContentRef.current,
-                        start: "top 80%"
+                gsap.fromTo(signsContentRef.current,
+                    { x: -50, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: signsContentRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
             if (signsGridRef.current) {
-                gsap.from(signsGridRef.current.children, {
-                    scale: 0,
-                    opacity: 0,
-                    stagger: 0.1,
-                    duration: 0.6,
-                    scrollTrigger: {
-                        trigger: signsGridRef.current,
-                        start: "top 85%"
+                gsap.fromTo(signsGridRef.current.children,
+                    { scale: 0, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        stagger: 0.1,
+                        duration: 0.6,
+                        scrollTrigger: {
+                            trigger: signsGridRef.current,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
 
             // Approach - Unified Badge
             if (approachRef.current) {
-                gsap.from(approachRef.current.children, {
-                    y: 20,
-                    opacity: 0,
-                    stagger: 0.05,
-                    duration: 0.5,
-                    scrollTrigger: {
-                        trigger: approachRef.current,
-                        start: "top 90%"
+                gsap.fromTo(approachRef.current.children,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        stagger: 0.05,
+                        duration: 0.5,
+                        scrollTrigger: {
+                            trigger: approachRef.current,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
 
             // Tools & Industries - Logic Grid
             if (toolsRef.current) {
-                gsap.from(toolsRef.current, {
-                    x: -40,
-                    opacity: 0,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: toolsRef.current,
-                        start: "top 80%"
+                gsap.fromTo(toolsRef.current,
+                    { x: -40, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: toolsRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
             if (industriesRef.current) {
-                gsap.from(industriesRef.current, {
-                    x: 40,
-                    opacity: 0,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: industriesRef.current,
-                        start: "top 80%"
+                gsap.fromTo(industriesRef.current,
+                    { x: 40, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: industriesRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
 
             // Timeline - Recovery Path
             timelineCardsRef.current.forEach((card, i) => {
                 if (!card) return;
-                gsap.from(card, {
-                    y: 30,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.2,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.2,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // FAQ - Knowledge Reveal
             if (faqRef.current) {
-                gsap.from(faqRef.current, {
-                    y: 30,
-                    opacity: 0,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: faqRef.current,
-                        start: "top 80%"
+                gsap.fromTo(faqRef.current,
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: faqRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
 
             // CTA - Final Triumph
             if (ctaRef.current) {
-                gsap.from(ctaRef.current, {
-                    scale: 0.9,
-                    opacity: 0,
-                    duration: 1.2,
-                    scrollTrigger: {
-                        trigger: ctaRef.current,
-                        start: "top 90%"
+                gsap.fromTo(ctaRef.current,
+                    { scale: 0.9, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 1.2,
+                        scrollTrigger: {
+                            trigger: ctaRef.current,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             }
         }, pageRef);
 

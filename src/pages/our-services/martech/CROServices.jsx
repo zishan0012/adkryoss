@@ -49,182 +49,272 @@ const CROServices = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Soft expand + Slide
-            gsap.from(heroContentRef.current, {
+            gsap.fromTo(heroContentRef.current, {
                 scale: 0.9,
                 opacity: 0,
-                x: -50,
-                duration: 1.2,
-                ease: "power2.out"
-            });
-            gsap.from(heroImageRef.current, {
-                scale: 1.2,
-                opacity: 0,
-                x: 50,
+                x: -50
+            }, {
+                scale: 1,
+                opacity: 1,
+                x: 0,
                 duration: 1.2,
                 ease: "power2.out",
-                delay: 0.2
+                scrollTrigger: {
+                    trigger: heroContentRef.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
+            });
+            gsap.fromTo(heroImageRef.current, {
+                scale: 1.2,
+                opacity: 0,
+                x: 50
+            }, {
+                scale: 1,
+                opacity: 1,
+                x: 0,
+                duration: 1.2,
+                ease: "power2.out",
+                delay: 0.2,
+                scrollTrigger: {
+                    trigger: heroImageRef.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
             });
 
             // Why Section - Elastic Stagger
-            gsap.from(whyTitleRef.current, {
+            gsap.fromTo(whyTitleRef.current, {
                 y: 50,
-                opacity: 0,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
                 duration: 0.8,
                 scrollTrigger: {
                     trigger: whyTitleRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
             whyCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     scale: 0.5,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    opacity: 1,
                     duration: 0.8,
                     delay: i * 0.1,
                     ease: "elastic.out(1, 0.5)",
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
-            gsap.from(engineerBoxRef.current, {
+            gsap.fromTo(engineerBoxRef.current, {
                 y: 100,
-                opacity: 0,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
                 duration: 1,
                 scrollTrigger: {
                     trigger: engineerBoxRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
 
             // What is CRO - Sliding Door
-            gsap.from(whatCdpTextRef.current, {
+            gsap.fromTo(whatCdpTextRef.current, {
                 x: -100,
-                opacity: 0,
+                opacity: 0
+            }, {
+                x: 0,
+                opacity: 1,
                 duration: 1,
                 scrollTrigger: {
                     trigger: whatCdpTextRef.current,
-                    start: "top 80%"
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
-            gsap.from(whatCdpBoxRef.current, {
+            gsap.fromTo(whatCdpBoxRef.current, {
                 x: 100,
-                opacity: 0,
+                opacity: 0
+            }, {
+                x: 0,
+                opacity: 1,
                 duration: 1,
                 scrollTrigger: {
                     trigger: whatCdpBoxRef.current,
-                    start: "top 80%"
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
 
             // Philosophy - High-tech sequential
             philCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     y: 50,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
                     duration: 0.7,
                     delay: i * 0.15,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 85%"
+                        start: "top 85%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Services Grid
             serviceCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     scale: 0.8,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    opacity: 1,
                     duration: 0.6,
                     delay: i * 0.1,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Integration - Gradient Sweep
-            gsap.from(integrationBoxRef.current, {
+            gsap.fromTo(integrationBoxRef.current, {
                 scale: 0.95,
-                opacity: 0,
+                opacity: 0
+            }, {
+                scale: 1,
+                opacity: 1,
                 duration: 1,
                 scrollTrigger: {
                     trigger: integrationBoxRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
             integrationLinesRef.current.forEach((line, i) => {
-                gsap.from(line, {
+                gsap.fromTo(line, {
                     x: 30,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
                     duration: 0.5,
                     delay: i * 0.1,
                     scrollTrigger: {
                         trigger: line,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Industries & Metrics
             industriesTagsRef.current.forEach((tag, i) => {
-                gsap.from(tag, {
+                gsap.fromTo(tag, {
                     scale: 0,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    opacity: 1,
                     duration: 0.4,
                     delay: i * 0.05,
                     scrollTrigger: {
                         trigger: tag,
-                        start: "top 95%"
+                        start: "top 95%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
-            gsap.from(metricsBoxRef.current, {
+            gsap.fromTo(metricsBoxRef.current, {
                 x: 100,
-                opacity: 0,
+                opacity: 0
+            }, {
+                x: 0,
+                opacity: 1,
                 duration: 0.8,
                 scrollTrigger: {
                     trigger: metricsBoxRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
 
             // Why Choose Us
             chooseCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     y: 20,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
                     duration: 0.5,
                     delay: i * 0.1,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Workflow
-            gsap.from(workflowRef.current, {
+            gsap.fromTo(workflowRef.current, {
                 y: 50,
-                opacity: 0,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
                 duration: 1,
                 scrollTrigger: {
                     trigger: workflowRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
 
             // Final CTA
-            gsap.from(ctaRef.current, {
+            gsap.fromTo(ctaRef.current, {
                 y: 50,
-                opacity: 0,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
                 duration: 1,
                 scrollTrigger: {
                     trigger: ctaRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
 
@@ -631,7 +721,7 @@ const CROServices = () => {
                                     <div
                                         key={index}
                                         ref={el => industriesTagsRef.current[index] = el}
-                                        className="px-8 py-5 bg-white border-2 border-slate-100 rounded-2xl font-black text-slate-900 shadow-sm transition-all hover:border-blue-500 hover:text-blue-600 hover:-translate-y-1 cursor-default"
+                                        className="px-8 py-5 bg-white border-2 border-slate-100 rounded-2xl font-semibold text-slate-900 shadow-sm transition-all hover:border-blue-500 hover:text-blue-600 hover:-translate-y-1 cursor-default"
                                     >
                                         {item}
                                     </div>
@@ -645,7 +735,7 @@ const CROServices = () => {
                                 {metrics.map((point, index) => (
                                     <div key={index} className="flex items-center gap-4 group">
                                         <div className="w-2 h-2 bg-blue-500 rounded-full group-hover:scale-[3] transition-transform"></div>
-                                        <span className="font-bold text-white text-lg opacity-90 transition-opacity group-hover:opacity-100">{point}</span>
+                                        <span className="font-semibold text-white text-lg opacity-90 transition-opacity group-hover:opacity-100">{point}</span>
                                     </div>
                                 ))}
                             </div>
@@ -674,7 +764,7 @@ const CROServices = () => {
                                 <div className="text-blue-600 group-hover:scale-110 transition-transform">
                                     {item.icon}
                                 </div>
-                                <span className="text-[18px] font-black text-slate-900 leading-tight tracking-tight uppercase tracking-tighter">{item.title}</span>
+                                <span className="text-[18px] font-semibold text-slate-900 leading-tight tracking-tight uppercase tracking-tighter">{item.title}</span>
                             </div>
                         ))}
                     </div>
@@ -686,7 +776,7 @@ const CROServices = () => {
                 <div className="container px-6 mx-auto">
                     <div ref={workflowRef} className="text-center mb-20 text-slate-900">
                         <h2 className="text-[36px] font-bold mb-6 tracking-tight">Our CRO Workflow</h2>
-                        <div className="inline-flex flex-wrap justify-center items-center gap-4 bg-slate-900 text-white px-10 py-5 rounded-[40px] font-black text-xl tracking-tighter shadow-2xl">
+                        <div className="inline-flex flex-wrap justify-center items-center gap-4 bg-slate-900 text-white px-10 py-5 rounded-[40px] font-semibold text-xl tracking-tighter shadow-2xl">
                             Discovery <ArrowRight size={24} className="text-blue-500" /> Audit <ArrowRight size={24} className="text-blue-500" /> Strategy <ArrowRight size={24} className="text-blue-500" /> Experimentation <ArrowRight size={24} className="text-blue-500" /> Validation <ArrowRight size={24} className="text-blue-500" /> Scale
                         </div>
                     </div>

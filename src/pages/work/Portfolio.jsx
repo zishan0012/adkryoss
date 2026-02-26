@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import portfoliohero from '../../assets/work/portfoliohero.png';
 import { motion } from "framer-motion";
 import { useState } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     CheckCircle2,
     ArrowRight,
@@ -35,7 +37,259 @@ import {
     PenTool
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Portfolio = () => {
+    const mainRef = useRef(null);
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            // Hero Section
+            gsap.fromTo(".hero-content",
+                { opacity: 0, x: -50 },
+                {
+                    opacity: 1, x: 0, duration: 1, delay: 0.2,
+                    scrollTrigger: {
+                        trigger: ".hero-content",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".hero-image",
+                { opacity: 0, scale: 0.8 },
+                {
+                    opacity: 1, scale: 1, duration: 1, delay: 0.4,
+                    scrollTrigger: {
+                        trigger: ".hero-image",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Our Work Philosophy
+            gsap.fromTo(".philosophy-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".philosophy-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".philosophy-card",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.6, stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: ".philosophy-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".philosophy-quote",
+                { opacity: 0, scale: 0.95 },
+                {
+                    opacity: 1, scale: 1, duration: 1,
+                    scrollTrigger: {
+                        trigger: ".philosophy-quote",
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Industries We’ve Empowered
+            gsap.fromTo(".industry-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".industry-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".industry-card",
+                { opacity: 0, scale: 0.9 },
+                {
+                    opacity: 1, scale: 1, duration: 0.6, stagger: 0.05,
+                    scrollTrigger: {
+                        trigger: ".industry-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Case Studies
+            gsap.fromTo(".casestudy-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".casestudy-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".casestudy-card",
+                { opacity: 0, x: (i) => i % 2 === 0 ? -30 : 30 },
+                {
+                    opacity: 1, x: 0, duration: 0.8, stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: ".casestudy-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Working Model
+            gsap.fromTo(".model-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".model-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".model-step",
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1, y: 0, duration: 0.8, stagger: 0.15,
+                    scrollTrigger: {
+                        trigger: ".model-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Tools & Technologies
+            gsap.fromTo(".tools-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".tools-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".tool-item",
+                { opacity: 0, scale: 0.5 },
+                {
+                    opacity: 1, scale: 1, duration: 0.6, stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: ".tools-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Differentiation
+            gsap.fromTo(".diff-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".diff-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".diff-item",
+                { opacity: 0, x: -30 },
+                {
+                    opacity: 1, x: 0, duration: 0.6, stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: ".diff-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Results That Matter
+            gsap.fromTo(".results-content",
+                { opacity: 0, x: -50 },
+                {
+                    opacity: 1, x: 0, duration: 1,
+                    scrollTrigger: {
+                        trigger: ".results-section",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".stat-card",
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1, y: 0, duration: 0.8, stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: ".stats-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Final CTA
+            gsap.fromTo(".cta-section-content",
+                { opacity: 0, scale: 0.9 },
+                {
+                    opacity: 1, scale: 1, duration: 1,
+                    scrollTrigger: {
+                        trigger: ".cta-section",
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+        }, mainRef);
+
+        return () => ctx.revert();
+    }, []);
     const industries = [
         { name: "Corporate & B2B Services", icon: <Briefcase size={24} /> },
         { name: "HR & Recruitment Ecosystems", icon: <Target size={24} /> },
@@ -103,7 +357,7 @@ const Portfolio = () => {
     ];
     const [activeIndex, setActiveIndex] = useState(null);
     return (
-        <div className="bg-white">
+        <div className="bg-white" ref={mainRef}>
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
@@ -111,7 +365,7 @@ const Portfolio = () => {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10 text-white">
+                    <div className="text-left relative z-10 text-white hero-content">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1px] text-white leading-[1.1]">
                             Portfolio
                         </h1>
@@ -131,7 +385,7 @@ const Portfolio = () => {
                         </div>
                     </div>
 
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div className="flex justify-center md:justify-end relative z-10 hero-image">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={portfoliohero}
@@ -145,13 +399,13 @@ const Portfolio = () => {
             {/* Our Work Philosophy */}
             <section className="py-24 bg-white" >
                 <div className="container px-6 mx-auto">
-                    <div className="max-w-3xl mx-auto text-center mb-16">
+                    <div className="max-w-3xl mx-auto text-center mb-16 philosophy-header">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-6">Our Work Philosophy</h2>
                         <p className="text-[16px] md:text-[18px] text-[#475569] leading-[1.8]">
                             Every project at Adkryoss managed by <span className="font-bold text-[#0066cc]">Clink Consultancy Services Private Limited</span> begins with one goal — sustainable digital growth backed by data.
                         </p>
                     </div>
-                    <div className="grid md:grid-cols-5 gap-6">
+                    <div className="grid md:grid-cols-5 gap-6 philosophy-grid">
                         {[
                             { title: "Performance Marketing Precision", icon: <Target className="text-blue-600" /> },
                             { title: "SEO-led Organic Visibility", icon: <Search className="text-blue-600" /> },
@@ -168,7 +422,7 @@ const Portfolio = () => {
                             <div
                                 key={i}
                                 className="group relative overflow-hidden p-6 rounded-24 
-             border border-[#e2e8f0] text-center cursor-pointer"
+                             border border-[#e2e8f0] text-center cursor-pointer philosophy-card"
                             >
 
                                 {/* Sliding Background */}
@@ -197,7 +451,7 @@ const Portfolio = () => {
 
                         ))}
                     </div>
-                    <div className="mt-16 bg-[#0f172a] p-10 rounded-40 text-center text-white">
+                    <div className="mt-16 bg-[#0f172a] p-10 rounded-40 text-center text-white philosophy-quote">
                         <p className="text-[18px] md:text-[20px] font-medium max-w-4xl mx-auto opacity-90 leading-relaxed text-white">
                             "Our portfolio reflects a structured, ROI-driven approach inspired by modern performance agencies — blending consulting mindset with execution excellence."
                         </p>
@@ -208,13 +462,13 @@ const Portfolio = () => {
             {/* Industries We’ve Empowered */}
             <section className="py-24 bg-[#f8fafc]" >
                 <div className="container px-6 mx-auto">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16 industry-header">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-4">Industries We’ve Empowered</h2>
                         <p className="text-[#64748b]">We work across diverse sectors with tailored digital strategies</p>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 industry-grid">
                         {industries.map((ind, i) => (
-                            <div key={i} className="bg-white p-8 rounded-24 border border-[#e2e8f0] flex flex-col items-center text-center group hover:bg-[#0066cc] hover:border-[#0066cc] transition-all duration-300">
+                            <div key={i} className="bg-white p-8 rounded-24 border border-[#e2e8f0] flex flex-col items-center text-center group hover:bg-[#0066cc] hover:border-[#0066cc] transition-all duration-300 industry-card">
                                 <div className="text-[#0066cc] group-hover:text-white mb-4 transition-colors">
                                     {ind.icon}
                                 </div>
@@ -222,7 +476,7 @@ const Portfolio = () => {
                             </div>
                         ))}
                     </div>
-                    <p className="text-center mt-12 text-[18px] font-bold text-[#0066cc] italic">
+                    <p className="text-center mt-12 text-[18px] font-bold text-[#0066cc] italic industry-footer">
                         Each campaign is custom-built — no recycled templates, no generic playbooks.
                     </p>
                 </div>
@@ -231,11 +485,11 @@ const Portfolio = () => {
             {/* Case Studies */}
             <section className="py-24 bg-white" >
                 <div className="container px-6 mx-auto">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16 casestudy-header">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-4">Featured Case Studies</h2>
                         <p className="text-[#64748b]">Real impact across diverse business objectives</p>
                     </div>
-                    <div className="grid lg:grid-cols-2 gap-12">
+                    <div className="grid lg:grid-cols-2 gap-12 casestudy-grid">
                         {/* {caseStudies.map((caseStudy, i) => (
                             <div key={i} className="bg-white rounded-32 border border-[#e2e8f0] overflow-hidden hover:shadow-2xl transition-all duration-500 group">
                                 <div className="p-8 md:p-12">
@@ -292,8 +546,8 @@ const Portfolio = () => {
                                     }}
                                     transition={{ duration: 0.4 }}
                                     className="relative bg-white rounded-32 border border-[#e2e8f0] 
-                 overflow-hidden hover:shadow-2xl 
-                 transition-all duration-500"
+                                     overflow-hidden hover:shadow-2xl 
+                                     transition-all duration-500 casestudy-card"
                                     style={{ zIndex: isActive ? 20 : 1 }}
                                 >
                                     <div className="p-8 md:p-12">
@@ -343,13 +597,13 @@ const Portfolio = () => {
             {/* Working Model */}
             <section className="py-24 bg-[#0f172a] text-white" >
                 <div className="container px-6 mx-auto">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16 model-header">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-white mb-4">Our Working Model</h2>
                         <p className="text-white/60">A structured approach to consistent growth</p>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-8 md:gap-0">
+                    <div className="flex flex-wrap justify-center gap-8 md:gap-0 model-grid">
                         {model.map((step, i) => (
-                            <div key={i} className="flex-1 min-w-[240px] px-6 relative group">
+                            <div key={i} className="flex-1 min-w-[240px] px-6 relative group model-step">
                                 <div className="mb-6">
                                     <span className="text-[48px] font-black text-white group-hover:text-blue-500/30 transition-colors duration-500 leading-none">
                                         {step.step}
@@ -371,11 +625,11 @@ const Portfolio = () => {
             {/* Tools & Technologies We Leverage */}
             <section className="py-24 bg-white" >
                 <div className="container px-6 mx-auto">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16 tools-header">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-4">Tools & Technologies We Leverage</h2>
                         <p className="text-[#64748b]">Technology empowers us — but strategy drives results.</p>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 tools-grid">
                         {[
                             { name: "Google Analytics 4", icon: <BarChart3 /> },
                             { name: "Google Tag Manager", icon: <Settings /> },
@@ -384,7 +638,7 @@ const Portfolio = () => {
                             { name: "HubSpot & CRM Automations", icon: <Activity /> },
                             { name: "AI-powered Content & Predictive Analytics", icon: <Brain /> }
                         ].map((tool, i) => (
-                            <div key={i} className="flex flex-col items-center gap-4 text-center">
+                            <div key={i} className="flex flex-col items-center gap-4 text-center tool-item">
                                 <div className="p-6 bg-blue-50 text-blue-600 rounded-full transition-transform hover:scale-110">
                                     {tool.icon}
                                 </div>
@@ -398,13 +652,13 @@ const Portfolio = () => {
             {/* What Makes Our Portfolio Different? */}
             <section className="py-24 bg-[#0f172a] text-white" >
                 <div className="container px-6 mx-auto">
-                    <div className="max-w-4xl mx-auto text-center mb-16">
+                    <div className="max-w-4xl mx-auto text-center mb-16 diff-header">
                         <h2 className="text-[32px] md:text-[42px] font-bold mb-6 text-white">What Makes Our Portfolio Different?</h2>
                         <p className="text-white/70 text-lg">
                             Unlike agencies that focus only on impressions and clicks, Adkryoss managed by <span className="text-white font-bold">Clink Consultancy Services Private Limited</span> focuses on revenue impact and scalable digital assets.
                         </p>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-6">
+                    <div className="flex flex-wrap justify-center gap-6 diff-grid">
                         {[
                             "ROI-Focused Campaign Architecture",
                             "Conversion-Driven Design Thinking",
@@ -412,7 +666,7 @@ const Portfolio = () => {
                             "Performance Reporting Transparency",
                             "Continuous Testing & Optimization"
                         ].map((item, i) => (
-                            <div key={i} className="flex items-center gap-4 p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-blue-600/20 transition-all">
+                            <div key={i} className="flex items-center gap-4 p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-blue-600/20 transition-all diff-item">
                                 <CheckCircle2 className="text-green-400 shrink-0" size={24} />
                                 <span className="font-bold text-[17px]">{item}</span>
                             </div>
@@ -425,7 +679,7 @@ const Portfolio = () => {
             <section className="py-24 bg-[#f8fafc]" >
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
+                        <div className="results-content">
                             <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-6">Results That Matter</h2>
                             <p className="text-[18px] text-[#475569] leading-relaxed mb-8">
                                 Numbers define credibility. Strategy defines sustainability. We don’t chase short-term spikes. We build long-term digital authority.
@@ -447,14 +701,14 @@ const Portfolio = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-6">
+                        <div className="grid grid-cols-2 gap-6 stats-grid">
                             {[
                                 { label: "Growth Delivered", val: "250%+" },
                                 { label: "Lower CPL", val: "45%" },
                                 { label: "ROAS Range", val: "4X-8X" },
                                 { label: "Client Retentions", val: "95%" }
                             ].map((stat, i) => (
-                                <div key={i} className="bg-white p-8 rounded-32 border border-[#e2e8f0] shadow-sm hover:shadow-xl transition-all">
+                                <div key={i} className="bg-white p-8 rounded-32 border border-[#e2e8f0] shadow-sm hover:shadow-xl transition-all stat-card">
                                     <div className="text-3xl font-bold text-[#0066cc] mb-1">{stat.val}</div>
                                     <div className="text-[14px] font-bold text-[#0f172a] opacity-60 uppercase tracking-wider">{stat.label}</div>
                                 </div>
@@ -465,8 +719,8 @@ const Portfolio = () => {
             </section >
 
             {/* Let’s Build the Next Success Story */}
-            <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white" >
-                <div className="container px-6 mx-auto">
+            <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white cta-section" >
+                <div className="container px-6 mx-auto cta-section-content">
                     <h2 className="text-[32px] md:text-[48px] font-bold mb-6 text-white leading-tight">
                         Let’s Build the Next Success Story
                     </h2>

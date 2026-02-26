@@ -40,136 +40,203 @@ const GA4Consulting = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Blur and Slide
-            gsap.from(heroContentRef.current, {
+            gsap.fromTo(heroContentRef.current, {
                 filter: "blur(15px)",
                 x: -100,
-                opacity: 0,
-                duration: 1,
-                ease: "power2.out"
-            });
-            gsap.from(heroImageRef.current, {
-                filter: "blur(15px)",
-                scale: 1.2,
-                opacity: 0,
+                opacity: 0
+            }, {
+                filter: "blur(0px)",
+                x: 0,
+                opacity: 1,
                 duration: 1,
                 ease: "power2.out",
-                delay: 0.3
+                scrollTrigger: {
+                    trigger: heroContentRef.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
+            });
+            gsap.fromTo(heroImageRef.current, {
+                filter: "blur(15px)",
+                scale: 1.2,
+                opacity: 0
+            }, {
+                filter: "blur(0px)",
+                scale: 1,
+                opacity: 1,
+                duration: 1,
+                ease: "power2.out",
+                delay: 0.3,
+                scrollTrigger: {
+                    trigger: heroImageRef.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
             });
 
             // Why Section - Vertical Reveal
-            gsap.from(whyTextRef.current, {
+            gsap.fromTo(whyTextRef.current, {
                 y: 50,
-                opacity: 0,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
                 duration: 0.8,
                 scrollTrigger: {
                     trigger: whyTextRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
             whyCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     x: 50,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
                     duration: 0.6,
                     delay: i * 0.1,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Services Cards - Pop-in with Rotation
             serviceCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     scale: 0.5,
                     rotation: i % 2 === 0 ? -5 : 5,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    rotation: 0,
+                    opacity: 1,
                     duration: 0.7,
                     delay: i * 0.1,
                     ease: "back.out(1.5)",
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 85%"
+                        start: "top 85%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Approach Steps - Diagonal Stagger
             approachStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
+                gsap.fromTo(step, {
                     x: -30,
                     y: 30,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    y: 0,
+                    opacity: 1,
                     duration: 0.6,
                     delay: i * 0.1,
                     scrollTrigger: {
                         trigger: step,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Differentiators & Industries
             diffItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
+                gsap.fromTo(item, {
                     x: -20,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
                     duration: 0.4,
                     delay: i * 0.05,
                     scrollTrigger: {
                         trigger: item,
-                        start: "top 95%"
+                        start: "top 95%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
             industryCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
+                gsap.fromTo(card, {
                     scale: 0.8,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    opacity: 1,
                     duration: 0.5,
                     delay: i * 0.1,
                     ease: "elastic.out(1, 0.5)",
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%"
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // Tool Tags - Cascade
             toolTagsRef.current.forEach((tag, i) => {
-                gsap.from(tag, {
+                gsap.fromTo(tag, {
                     y: 20,
-                    opacity: 0,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
                     duration: 0.4,
                     delay: i * 0.05,
                     scrollTrigger: {
                         trigger: tag,
-                        start: "top 95%"
+                        start: "top 95%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
                 });
             });
 
             // FAQ Section
-            gsap.from(faqSectionRef.current, {
+            gsap.fromTo(faqSectionRef.current, {
                 y: 50,
-                opacity: 0,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
                 duration: 0.8,
                 scrollTrigger: {
                     trigger: faqSectionRef.current,
-                    start: "top 85%"
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
 
             // Final CTA
-            gsap.from(ctaRef.current, {
+            gsap.fromTo(ctaRef.current, {
                 scale: 0.95,
-                opacity: 0,
+                opacity: 0
+            }, {
+                scale: 1,
+                opacity: 1,
                 duration: 0.8,
                 scrollTrigger: {
                     trigger: ctaRef.current,
-                    start: "top 90%"
+                    start: "top 90%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
                 }
             });
 
@@ -500,7 +567,7 @@ const GA4Consulting = () => {
                                         <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white font-black group-hover:scale-110 transition-transform">
                                             ✔
                                         </div>
-                                        <span className="font-bold text-lg text-white">{item}</span>
+                                        <span className="font-semibold text-lg text-white">{item}</span>
                                     </div>
                                 ))}
                             </div>
@@ -517,7 +584,7 @@ const GA4Consulting = () => {
                                     <div
                                         key={index}
                                         ref={el => industryCardsRef.current[index] = el}
-                                        className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-black transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1 cursor-default"
+                                        className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-semibold transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1 cursor-default"
                                     >
                                         {industry}
                                     </div>
@@ -537,7 +604,7 @@ const GA4Consulting = () => {
                             <div
                                 key={index}
                                 ref={el => toolTagsRef.current[index] = el}
-                                className="px-10 py-6 bg-slate-50 border border-slate-100 rounded-3xl flex items-center gap-4 font-bold text-slate-900 group hover:border-blue-500 hover:text-blue-600 transition-all shadow-sm hover:shadow-md cursor-default"
+                                className="px-10 py-6 bg-slate-50 border border-slate-100 rounded-3xl flex items-center gap-4 font-semibold text-slate-900 group hover:border-blue-500 hover:text-blue-600 transition-all shadow-sm hover:shadow-md cursor-default"
                             >
                                 <div className="w-3 h-3 bg-blue-500 rounded-full group-hover:scale-125 transition-transform"></div>
                                 <span className="text-lg">{tool}</span>

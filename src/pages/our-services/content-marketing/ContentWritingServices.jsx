@@ -46,105 +46,153 @@ const ContentWritingServices = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Blur and Fade
-            gsap.from(heroContentRef.current, {
-                filter: "blur(10px)",
-                opacity: 0,
-                x: -50,
-                duration: 0.8,
-                ease: "power2.out"
-            });
-            gsap.from(heroImageRef.current, {
-                opacity: 0,
-                scale: 0.8,
-                duration: 0.8,
-                ease: "power3.out",
-                delay: 0.2
-            });
+            gsap.fromTo(heroContentRef.current,
+                { filter: "blur(10px)", opacity: 0, x: -50 },
+                {
+                    filter: "blur(0px)",
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { opacity: 0, scale: 0.8 },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    delay: 0.2,
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Why Content - Staggered Slide In
-            gsap.from(".why-text", {
-                y: 30,
-                opacity: 0,
-                stagger: 0.2,
-                duration: 0.6,
-                scrollTrigger: {
-                    trigger: whySectionRef.current,
-                    start: "top 80%"
+            gsap.fromTo(".why-text",
+                { y: 30, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    stagger: 0.2,
+                    duration: 0.6,
+                    scrollTrigger: {
+                        trigger: whySectionRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Expertise Cards - Spiral Entrance (Rotate + Scale)
             expertiseCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    rotation: 15,
-                    scale: 0.8,
-                    opacity: 0,
-                    y: 50,
-                    duration: 0.7,
-                    delay: i * 0.1,
-                    ease: "back.out(1.2)",
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 85%"
+                gsap.fromTo(card,
+                    { rotation: 15, scale: 0.8, opacity: 0, y: 50 },
+                    {
+                        rotation: 0,
+                        scale: 1,
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.7,
+                        delay: i * 0.1,
+                        ease: "back.out(1.2)",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Approach Steps - Slide from Left
             approachStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
-                    x: -100,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: step,
-                        start: "top 90%"
+                gsap.fromTo(step,
+                    { x: -100, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Industry Items - Spring Pop
             industryItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    scale: 0,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.05,
-                    ease: "elastic.out(1, 0.5)",
-                    scrollTrigger: {
-                        trigger: item,
-                        start: "top 95%"
+                gsap.fromTo(item,
+                    { scale: 0, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.05,
+                        ease: "elastic.out(1, 0.5)",
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Differentiators - Flip Effect
             diffCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    rotationY: 90,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { rotationY: 90, opacity: 0 },
+                    {
+                        rotationY: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Authority Block - Smooth Slide Up
-            gsap.from(authorityBlockRef.current, {
-                y: 100,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: authorityBlockRef.current,
-                    start: "top 85%"
+            gsap.fromTo(authorityBlockRef.current,
+                { y: 100, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: authorityBlockRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Floating Hero Image
             gsap.to(heroImageRef.current, {

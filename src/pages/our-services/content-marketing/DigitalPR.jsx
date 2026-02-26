@@ -40,31 +40,55 @@ const DigitalPR = () => {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            // Hero Animations
-            gsap.from(heroContentRef.current, {
-                x: -50,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out"
-            });
-            gsap.from(heroImageRef.current, {
-                x: 50,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out",
-                delay: 0.2
-            });
+            // Hero Animations with ScrollTrigger for reversal
+            gsap.fromTo(heroContentRef.current,
+                { x: -50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(heroImageRef.current,
+                { x: 50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    delay: 0.2,
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Why Digital PR Animation
-            gsap.from(".why-main-card", {
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: ".why-main-card",
-                    start: "top 80%"
+            gsap.fromTo(".why-main-card",
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".why-main-card",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Approach Cards Pop-out
             approachCardsRef.current.forEach((card, i) => {
@@ -79,7 +103,9 @@ const DigitalPR = () => {
                         ease: "back.out(1.5)",
                         scrollTrigger: {
                             trigger: card,
-                            start: "top 85%"
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
                         }
                     }
                 );
@@ -87,70 +113,95 @@ const DigitalPR = () => {
 
             // Services Cards Animation
             servicesCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    y: 40,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Process Steps Animation
             processStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
-                    scale: 0.5,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: step,
-                        start: "top 90%"
+                gsap.fromTo(step,
+                    { scale: 0.5, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // What Makes Us Different Animation
-            gsap.from(diffContainerRef.current, {
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: diffContainerRef.current,
-                    start: "top 85%"
+            gsap.fromTo(diffContainerRef.current,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: diffContainerRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Industries Animation
             industriesRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    y: 20,
-                    opacity: 0,
-                    duration: 0.4,
-                    delay: i * 0.05,
-                    scrollTrigger: {
-                        trigger: item,
-                        start: "top 90%"
+                gsap.fromTo(item,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.4,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Impact Cards Animation
             impactCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    x: i % 2 === 0 ? -30 : 30,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { x: i % 2 === 0 ? -30 : 30, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Floating animation for hero image
@@ -492,7 +543,7 @@ const DigitalPR = () => {
                                     ref={el => industriesRef.current[index] = el}
                                     onMouseEnter={(e) => handleHover(e, true)}
                                     onMouseLeave={(e) => handleHover(e, false)}
-                                    className="px-8 py-4 bg-white border-2 border-slate-100 rounded-xl font-black text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] shadow-sm cursor-pointer"
+                                    className="px-8 py-4 bg-white border-2 border-slate-100 rounded-xl font-semibold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] shadow-sm cursor-pointer"
                                 >
                                     {industry}
                                 </div>
@@ -519,7 +570,7 @@ const DigitalPR = () => {
                                 ref={el => impactCardsRef.current[index] = el}
                                 onMouseEnter={(e) => handleHover(e, true)}
                                 onMouseLeave={(e) => handleHover(e, false)}
-                                className="px-10 py-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl font-black text-xl hover:bg-blue-600 hover:border-blue-500 transition-all duration-300 flex items-center gap-4 cursor-pointer group"
+                                className="px-10 py-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl font-semibold text-xl hover:bg-blue-600 hover:border-blue-500 transition-all duration-300 flex items-center gap-4 cursor-pointer group"
                             >
                                 <div className="card-icon">
                                     {point.icon}

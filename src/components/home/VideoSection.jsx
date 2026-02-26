@@ -2,9 +2,10 @@ import React, { useRef, useLayoutEffect } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
- 
+import video from "../../assets/video.mp4"
+
 gsap.registerPlugin(ScrollTrigger);
- 
+
 const VideoSection = () => {
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
@@ -12,10 +13,10 @@ const VideoSection = () => {
   const videoRef = useRef(null);
   const descriptionRef = useRef(null);
   const buttonRef = useRef(null);
- 
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
- 
+
       // === PREMIUM SECTION PUSH EFFECT (PARALLAX) ===
       gsap.fromTo(sectionRef.current,
         { y: 0 },
@@ -30,7 +31,7 @@ const VideoSection = () => {
           }
         }
       );
- 
+
       // === PREMIUM HEADING REVEAL ===
       gsap.fromTo(headingRef.current,
         {
@@ -52,7 +53,7 @@ const VideoSection = () => {
           }
         }
       );
- 
+
       // === PREMIUM VIDEO CONTAINER REVEAL ===
       gsap.fromTo(videoContainerRef.current,
         {
@@ -74,7 +75,7 @@ const VideoSection = () => {
           }
         }
       );
- 
+
       // === PREMIUM VIDEO ITSELF (SLIGHT ZOOM) ===
       gsap.fromTo(videoRef.current,
         {
@@ -92,7 +93,7 @@ const VideoSection = () => {
           }
         }
       );
- 
+
       // === PREMIUM DESCRIPTION REVEAL ===
       gsap.fromTo(descriptionRef.current,
         {
@@ -112,7 +113,7 @@ const VideoSection = () => {
           }
         }
       );
- 
+
       // === PREMIUM BUTTON REVEAL ===
       gsap.fromTo(buttonRef.current,
         {
@@ -134,12 +135,12 @@ const VideoSection = () => {
           }
         }
       );
- 
+
     }, sectionRef);
- 
+
     return () => ctx.revert();
   }, []);
- 
+
   // Premium button hover effect (only on hover)
   const handleButtonHover = (e, isEnter) => {
     gsap.to(e.target, {
@@ -151,7 +152,7 @@ const VideoSection = () => {
       ease: isEnter ? "back.out(1.2)" : "power2.out"
     });
   };
- 
+
   return (
     <motion.section
       ref={sectionRef}
@@ -187,7 +188,7 @@ const VideoSection = () => {
         borderRadius: "50%",
         pointerEvents: "none",
       }} />
- 
+
       <div
         style={{
           maxWidth: "1024px",
@@ -222,7 +223,7 @@ const VideoSection = () => {
             borderRadius: "2px",
           }} />
         </h1>
- 
+
         {/* Video Container */}
         <div
           ref={videoContainerRef}
@@ -237,7 +238,7 @@ const VideoSection = () => {
         >
           <video
             ref={videoRef}
-            src="https://www.vecteezy.com/video/20941259-digital-marketing-golden-text-with-top-flares-light"
+            src={video}
             controls
             autoPlay
             muted
@@ -250,7 +251,7 @@ const VideoSection = () => {
             }}
           />
         </div>
- 
+
         {/* Description */}
         <p
           ref={descriptionRef}
@@ -267,7 +268,7 @@ const VideoSection = () => {
           transformational growth for 300+ clients by 2030.
           Ready to unlock your brand's complete digital potential?
         </p>
- 
+
         {/* Button */}
         <button
           ref={buttonRef}
@@ -290,5 +291,5 @@ const VideoSection = () => {
     </motion.section>
   );
 };
- 
+
 export default VideoSection;

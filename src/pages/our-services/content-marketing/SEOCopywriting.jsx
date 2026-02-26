@@ -43,119 +43,172 @@ const SEOCopywriting = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Slide down entrance
-            gsap.from(heroContentRef.current, {
-                y: -50,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power2.out"
-            });
-            gsap.from(heroImageRef.current, {
-                scale: 0.9,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out",
-                delay: 0.2
-            });
+            gsap.fromTo(heroContentRef.current,
+                { y: -50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { scale: 0.9, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    delay: 0.2,
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Why Engine - Vertical Stack Reveal
             whyBenefitsRef.current.forEach((benefit, i) => {
-                gsap.from(benefit, {
-                    y: 20,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: benefit,
-                        start: "top 90%"
+                gsap.fromTo(benefit,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: benefit,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Services - Staggered Scale and Rotation
             serviceCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    scale: 0.8,
-                    rotation: i % 2 === 0 ? -5 : 5,
-                    opacity: 0,
-                    duration: 0.7,
-                    delay: i * 0.1,
-                    ease: "back.out(1.4)",
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 85%"
+                gsap.fromTo(card,
+                    { scale: 0.8, rotation: i % 2 === 0 ? -5 : 5, opacity: 0 },
+                    {
+                        scale: 1,
+                        rotation: 0,
+                        opacity: 1,
+                        duration: 0.7,
+                        delay: i * 0.1,
+                        ease: "back.out(1.4)",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Strategy Steps - Side Entrance Pop
             strategyStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
-                    x: i % 2 === 0 ? -100 : 100,
-                    opacity: 0,
-                    duration: 0.8,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: step,
-                        start: "top 85%"
+                gsap.fromTo(step,
+                    { x: i % 2 === 0 ? -100 : 100, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Differentiators - Vertical Stagger
             diffCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    y: 50,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                gsap.fromTo(card,
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Industry Tags - Snappy Bounce
             industryTagsRef.current.forEach((tag, i) => {
-                gsap.from(tag, {
-                    scale: 0,
-                    opacity: 0,
-                    duration: 0.4,
-                    delay: i * 0.05,
-                    ease: "back.out(2)",
-                    scrollTrigger: {
-                        trigger: tag,
-                        start: "top 95%"
+                gsap.fromTo(tag,
+                    { scale: 0, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.4,
+                        delay: i * 0.05,
+                        ease: "back.out(2)",
+                        scrollTrigger: {
+                            trigger: tag,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Results - Pop with delay
             resultBlocksRef.current.forEach((block, i) => {
-                gsap.from(block, {
-                    opacity: 0,
-                    scale: 0.5,
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: block,
-                        start: "top 90%"
+                gsap.fromTo(block,
+                    { opacity: 0, scale: 0.5 },
+                    {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: block,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // FAQs - Smooth Slide List
             faqItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    y: 30,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: item,
-                        start: "top 95%"
+                gsap.fromTo(item,
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Floating Hero Image

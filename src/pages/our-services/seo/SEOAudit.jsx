@@ -46,163 +46,241 @@ const SEOAudit = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // Hero - Prism reveal
-            gsap.from(heroContentRef.current, {
-                x: -100,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power4.out"
-            });
-            gsap.from(heroImageRef.current, {
-                x: 100,
-                opacity: 0,
-                scale: 0.9,
-                duration: 1.2,
-                ease: "power4.out"
-            });
+            gsap.fromTo(heroContentRef.current,
+                { x: -100, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { x: 100, opacity: 0, scale: 0.9 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1.2,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Why Audit - Scanning reveal
-            gsap.from(whyAuditRef.current, {
-                opacity: 0,
-                y: 30,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: whyAuditRef.current,
-                    start: "top 80%"
-                }
-            });
-            whyItemsRef.current.forEach((item, i) => {
-                gsap.from(item, {
-                    x: -20,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.1,
+            gsap.fromTo(whyAuditRef.current,
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
                     scrollTrigger: {
-                        trigger: item,
-                        start: "top 95%"
+                        trigger: whyAuditRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
                     }
-                });
-            });
-            gsap.from(deliverablesRef.current, {
-                scale: 0.95,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: deliverablesRef.current,
-                    start: "top 75%"
                 }
+            );
+            whyItemsRef.current.forEach((item, i) => {
+                gsap.fromTo(item,
+                    { x: -20, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
             });
+            gsap.fromTo(deliverablesRef.current,
+                { scale: 0.95, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: deliverablesRef.current,
+                        start: "top 75%",
+                        end: "bottom 25%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
 
             // Framework - Prismatic cards
-            gsap.from(frameworkRef.current, {
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: frameworkRef.current,
-                    start: "top 85%"
-                }
-            });
-            frameworkCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    y: 40,
-                    opacity: 0,
-                    duration: 0.8,
-                    delay: i * 0.15,
+            gsap.fromTo(frameworkRef.current,
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
                     scrollTrigger: {
-                        trigger: card,
-                        start: "top 90%"
+                        trigger: frameworkRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
                     }
-                });
+                }
+            );
+            frameworkCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: i * 0.15,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
             });
 
             // Differentiators - Data spectrum
-            gsap.from(diffRef.current, {
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: diffRef.current,
-                    start: "top 85%"
-                }
-            });
-            diffCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    opacity: 0,
-                    scale: 0.8,
-                    duration: 0.6,
-                    delay: i * 0.1,
+            gsap.fromTo(diffRef.current,
+                { opacity: 0 },
+                {
+                    opacity: 1,
+                    duration: 1,
                     scrollTrigger: {
-                        trigger: card,
-                        start: "top 95%"
+                        trigger: diffRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
                     }
-                });
+                }
+            );
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { opacity: 0, scale: 0.8 },
+                    {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
             });
 
             // Industries
             industryCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    opacity: 0,
-                    y: 20,
-                    duration: 0.5,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 95%"
+                gsap.fromTo(card,
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // When to Audit - Alert pulse
             whenToAuditCardsRef.current.forEach((card, i) => {
-                gsap.from(card, {
-                    x: i % 2 === 0 ? -30 : 30,
-                    opacity: 0,
-                    duration: 0.6,
-                    delay: i * 0.1,
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top 95%"
+                gsap.fromTo(card,
+                    { x: i % 2 === 0 ? -30 : 30, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Tools - Glass bubbling
             toolsItemsRef.current.forEach((tool, i) => {
-                gsap.from(tool, {
-                    scale: 0.5,
-                    opacity: 0,
-                    duration: 0.5,
-                    delay: i * 0.05,
-                    scrollTrigger: {
-                        trigger: tool,
-                        start: "top 95%"
+                gsap.fromTo(tool,
+                    { scale: 0.5, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: tool,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // Process - Step sequence
             processStepsRef.current.forEach((step, i) => {
-                gsap.from(step, {
-                    x: -50,
-                    opacity: 0,
-                    duration: 0.7,
-                    delay: i * 0.2,
-                    scrollTrigger: {
-                        trigger: step,
-                        start: "top 90%"
+                gsap.fromTo(step,
+                    { x: -50, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.7,
+                        delay: i * 0.2,
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
                     }
-                });
+                );
             });
 
             // CTA
-            gsap.from(ctaRef.current, {
-                y: 50,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: ctaRef.current,
-                    start: "top 90%"
+            gsap.fromTo(ctaRef.current,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ctaRef.current,
+                        start: "top 90%",
+                        end: "bottom 10%",
+                        toggleActions: "play reverse play reverse"
+                    }
                 }
-            });
+            );
 
             // Image Float (Refraction sway)
             gsap.to(heroImageRef.current, {
