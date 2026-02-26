@@ -194,67 +194,11 @@ const EmailMarketing = () => {
 
 
 
-       {/* <section
-        className="relative py-20 text-white bg-cover bg-center"
-        style={{
-           backgroundImage:
-             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-         }}
-       >
        
-       <div className="absolute inset-0 bg-blue-900/80"></div>
-
-        <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-    
-    <div>
-      <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-        Email Marketing Services
-      </h1>
-
-            <h2 className="text-xl md:text-2xl font-semibold text-blue-200 mb-6">
-              Turn Subscribers Into Revenue Machines
-            </h2>
-
-            <p className="text-blue-100 mb-4 max-w-xl leading-relaxed">
-              Smart inbox strategies. Hyper-personalized journeys. Measurable growth.
-            </p>
-
-            <p className="text-blue-100 mb-8 max-w-xl leading-relaxed">
-              At{" "}
-              <span className="font-semibold text-white">
-                Adkryoss managed by Clink Consultancy Services Private Limited
-              </span>
-              , we build high-converting email ecosystems that nurture leads,
-              re-engage audiences, and generate predictable ROI.
-            </p>
-
-            <div className="flex gap-4 flex-wrap">
-        <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
-          Book a Strategy Call →
-        </button>
-
-        <button className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
-          View Capabilities →
-        </button>
-      </div>
-
-
-   
-    <div className="flex justify-center lg:justify-end">
-     <img
-        src={mail}
-        alt="Email Marketing"
-        className="w-full max-w-[520px] h-[400px] object-cover rounded-xl shadow-2xl"
-      />
-    </div>
-</div>
-  </div>
-</section>  */}
 
 
 
-<section
+{/* <section
   className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
   style={{
     backgroundImage:
@@ -293,15 +237,7 @@ const EmailMarketing = () => {
               </a>
             </div>
 
-{/* 
-      <div className="flex flex-wrap gap-4">
-        <button className="bg-white text-blue-800 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
-          Book a Strategy Call →
-        </button>
-        <button className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition">
-          View Capabilities →
-        </button>
-      </div> */}
+
     </div>
 
     <div className="flex justify-center md:justify-end">
@@ -312,19 +248,78 @@ const EmailMarketing = () => {
       />
     </div>
   </div>
-</section> 
+</section>  */}
 
             
          
 
           
-           {/* <div className="flex justify-center lg:justify-end">
-            <img
-               src={mail}
-              alt="Email Marketing"
-              className="w-full max-w-[520px] h-[400px] object-cover rounded-xl shadow-2xl"
-            />
-          </div> */}
+    <section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  {/* Dark + Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div className="text-left max-w-[600px] space-y-6">
+      <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          Email Marketing Services
+        </span>
+      </h2>
+
+      <h3 className="text-xl md:text-2xl font-semibold text-blue-100">
+        Turn Subscribers Into Revenue Machines
+      </h3>
+
+      <p className="text-gray-200 leading-relaxed font-medium">
+        Smart inbox strategies. Hyper-personalized journeys. Measurable growth.
+      </p>
+
+      <p className="text-gray-200 leading-relaxed font-medium">
+        At <span className="font-semibold text-white">Adkryoss managed by Clink Consultancy Services Private Limited</span>, we build high-converting email ecosystems that nurture leads, re-engage audiences, and generate predictable ROI.
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 pt-2">
+        <a
+          href="/contact"
+          className="inline-flex items-center justify-center bg-white text-black font-semibold px-8 py-4 rounded-full 
+                     transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Speak to Our Expert →
+        </a>
+
+        <a
+          href="#services"
+          className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold 
+                     transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Our Services →
+        </a>
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end relative z-10">
+      <div className="relative group w-full max-w-[400px]">
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+        <img
+          src={mail}
+          alt="Email Marketing"
+          className="relative w-full object-contain rounded-2xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>  
 
       
 

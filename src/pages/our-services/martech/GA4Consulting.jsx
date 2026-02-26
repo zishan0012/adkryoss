@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import ga4hero from "../../../assets/martech/ga4hero.png";
 import {
     CheckCircle2,
@@ -139,14 +140,14 @@ const GA4Consulting = () => {
     return (
         <div className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
-            <section
+            {/* <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    {/* LEFT CONTENT */}
+                   
                     <div className="text-left relative z-10 animate-fade-in-up text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             GA4 Consulting Services
@@ -158,10 +159,7 @@ const GA4Consulting = () => {
                             Data is powerful—only when it’s accurate, structured, and aligned with business goals. Our GA4 Consulting Services help you transform raw analytics into measurable growth strategies. From seamless migration to advanced event tracking and cross-channel attribution, we ensure your analytics ecosystem drives real ROI.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            {/* <div className="bg-white/10 backdrop-blur-md border border-white/20 px-6 py-4 rounded-2xl flex items-center gap-3">
-                                <Activity className="text-blue-400" size={24} />
-                                <span className="font-semibold text-white text-sm tracking-widest">Actionable Data ROI</span>
-                            </div> */}
+                           
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
@@ -179,7 +177,7 @@ const GA4Consulting = () => {
                             </a>
                         </div>
                     </div>
-                    {/* RIGHT IMAGE */}
+                 
                     <div className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
@@ -189,7 +187,98 @@ const GA4Consulting = () => {
                             /></div>
                     </div>
                 </div>
-            </section>
+            </section> */}
+
+
+            <motion.section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+>
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  {/* Floating Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div className="text-left max-w-[600px] space-y-6">
+
+      <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          GA4 Consulting Services
+        </span>
+      </h2>
+
+      <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+        Unlock Accurate, Actionable Insights with Advanced GA4 Consulting
+      </h3>
+
+      <p className="text-gray-200 text-md md:text-lg leading-relaxed font-medium">
+        Data is powerful—only when it’s accurate, structured, and aligned with business goals. Our GA4 Consulting Services help you transform raw analytics into measurable growth strategies. From seamless migration to advanced event tracking and cross-channel attribution, we ensure your analytics ecosystem drives real ROI.
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 pt-2">
+        <a
+          href="/contact"
+          className="inline-flex items-center justify-center bg-white text-black font-semibold px-8 py-4 rounded-full 
+                     transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Speak to Our Expert →
+        </a>
+
+        <a
+          href="#services"
+          className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold 
+                     transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Our Services →
+        </a>
+      </div>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end relative z-10">
+      <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+
+        {/* Image Glow */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+        <img
+          src={ga4hero}
+          alt="GA4 Consulting"
+          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
+                     transform group-hover:-translate-y-2 transition duration-500"
+        />
+
+      </div>
+    </div>
+
+  </div>
+
+  {/* Floating Animation */}
+  <style>
+    {`
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(30px); }
+      }
+    `}
+  </style>
+
+</motion.section>
 
             {/* Why Your Business Needs GA4 Expertise */}
             <section className="pt-32 pb-24 bg-slate-50">

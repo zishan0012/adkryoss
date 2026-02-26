@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import seller from "../../../assets/reseller.jpg"
 import {
   Target,
@@ -236,11 +237,9 @@ const PPCReseller = () => {
   return (
     <>
 
- <section
+ {/* <section
         className="relative flex items-center min-h-[70vh] bg-cover bg-center"
 
-      // <section
-      //   className="relative py-16 md:py-20 lg:py-24 text-white bg-cover bg-center"
 
         style={{
           backgroundImage:
@@ -248,14 +247,14 @@ const PPCReseller = () => {
         }}
       >
 
-  {/* Overlay */}
+
   <div className="relative w-full px-6 sm:px-10 lg:px-24 xl:px-32">
 
 
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
-            {/* LEFT CONTENT */}
+           
             <div className="space-y-7 text-left max-w-2xl">
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -291,7 +290,7 @@ const PPCReseller = () => {
               </div>
             </div>
 
-            {/* RIGHT IMAGE */}
+        
             <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
               <img
                 src={seller}
@@ -303,7 +302,76 @@ const PPCReseller = () => {
           </div>
         </div>
 
-      </section>
+      </section> */}
+
+
+
+
+{/* PPC Reseller Section */}
+      <motion.section
+        className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+        }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+          <div className="text-left max-w-[600px] space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+              <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+                PPC Reseller
+              </span>
+            </h2>
+
+            <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+              Scale Faster. Deliver Smarter. Earn More.
+            </h3>
+
+            <p className="text-gray-200 text-md md:text-lg leading-relaxed">
+              White-label PPC solutions designed for agencies that want to grow without hiring in-house teams. Performance-focused, data-driven, and built to maximize ROI for your clients.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <a href="/contact">
+                <button className="inline-flex items-center justify-center bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  Speak to Our Expert →
+                </button>
+              </a>
+
+              <button
+                onClick={() => navigate("/contact")}
+                className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl"
+              >
+                Our Services →
+              </button>
+            </div>
+          </div>
+
+          <div className="flex justify-center md:justify-end relative z-10">
+            <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+              <img
+                src={seller}
+                alt="PPC Reseller"
+                className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
+              />
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+     
+
+
+
 
       <section className="bg-white py-16 md:py-20 lg:py-24">
         <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-32">

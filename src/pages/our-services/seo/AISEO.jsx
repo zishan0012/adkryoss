@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
     Brain,
     Search,
@@ -117,7 +118,7 @@ const AISEO = () => {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    {/* LEFT CONTENT */}
+                    
                     <div className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1px] text-white">
                             AI SEO Services
@@ -133,9 +134,7 @@ const AISEO = () => {
                                 Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span> delivers next-generation AI SEO solutions that help businesses become discoverable across modern search landscapes.
                             </p>
                         </div>
-                        {/* <p className="text-[16px] md:text-[18px] mb-6 font-medium text-white">
-                            We combine human expertise with machine intelligence to build scalable, future-ready SEO systems.
-                        </p> */}
+                       
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <a
@@ -152,7 +151,7 @@ const AISEO = () => {
                             </a>
                         </div>
                     </div>
-                    {/* RIGHT IMAGE */}
+                    
                     <div className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
@@ -164,6 +163,11 @@ const AISEO = () => {
                     </div>
                 </div>
             </section>
+
+
+
+
+
 
             {/* Why AI SEO Section */}
             <section className="pt-32 pb-24 bg-white">

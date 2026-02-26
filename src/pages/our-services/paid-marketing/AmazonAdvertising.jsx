@@ -1,6 +1,7 @@
 import React from "react";
 import amazon from "../../../assets/Amazon.jpg";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Megaphone,
   Radar,
@@ -125,19 +126,19 @@ const AmazonAdvertising = () => {
   };
   return (
     <>
-      <section
+      {/* <section
   className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-[480px] flex items-center relative text-white"
   style={{
     backgroundImage:
       "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp%27)%22"
   }}
 >
-  {/* Overlay */}
+  
   <div className="absolute inset-0 bg-blue-900/85"></div>
  
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
  
-    {/* LEFT CONTENT */}
+    
     <div className="text-left text-white max-w-[600px]">
  
       <h2 className="text-white md:text-[48px] font-bold mb-4 leading-tight">
@@ -172,7 +173,7 @@ const AmazonAdvertising = () => {
  
     </div>
  
-    {/* RIGHT IMAGE */}
+    
     <div className="flex justify-center md:justify-end">
       <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
         <img
@@ -184,7 +185,100 @@ const AmazonAdvertising = () => {
     </div>
  
   </div>
-</section>
+</section> */}
+
+
+<motion.section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+>
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  {/* Floating Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div className="text-left max-w-[600px] space-y-6">
+
+      <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          Amazon Advertising Services
+        </span>
+      </h2>
+
+      <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+        Scale Faster. Sell Smarter. Dominate Amazon.
+      </h3>
+
+      <p className="text-gray-200 text-md md:text-lg leading-relaxed">
+        Turn product visibility into predictable revenue with performance-driven Amazon Advertising strategies. We combine data science, creative optimization, and marketplace intelligence to help you win the Buy Box, outrank competitors, and maximize ROAS.
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 pt-2">
+        <Link to="/contact">
+          <button className="inline-flex items-center justify-center bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            Speak to Our Expert →
+          </button>
+        </Link>
+
+        <button
+          onClick={() => navigate("/contact")}
+          className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Our Services →
+        </button>
+      </div>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end relative z-10">
+      <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+
+        {/* Image Glow */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+        <img
+          src={amazon}
+          alt="Amazon Advertising Services"
+          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
+        />
+
+      </div>
+    </div>
+
+  </div>
+
+  {/* Floating Animation */}
+  <style>
+    {`
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(30px); }
+      }
+    `}
+  </style>
+
+</motion.section>
+
+
+
+
+
+
  
 <div className="h-6 bg-white"></div>
  

@@ -152,7 +152,7 @@ const techStack = [
 const AIMarketing = () => {
   return (
     <>
-<section
+{/* <section
   className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
   style={{
     backgroundImage:
@@ -161,7 +161,7 @@ const AIMarketing = () => {
 >
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-    {/* LEFT CONTENT */}
+    
     <div className="text-left space-y-6">
       <h1 className="text-4xl md:text-5xl font-bold leading-tight">
         AI-Powered Digital Marketing Agency <br />
@@ -182,7 +182,7 @@ const AIMarketing = () => {
       </div>
     </div>
 
-    {/* RIGHT IMAGE */}
+    
     <div className="flex justify-center md:justify-end">
       <img
         src={digi}
@@ -191,11 +191,66 @@ const AIMarketing = () => {
       />
     </div>
   </div>
+</section> */}
+
+
+
+<section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  {/* Dark overlay for readability */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div className="space-y-6 max-w-[600px]">
+      <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+        AI-Powered Digital Marketing Agency <br />
+        <span className="text-blue-300 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+          for Smarter, Faster Growth
+        </span>
+      </h1>
+
+      <p className="text-white md:text-md leading-relaxed">
+        Grow your business with AI-driven marketing strategies that deliver faster results, smarter campaigns, and high-intent leads built for sustainable growth.
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-wrap gap-4">
+        <a
+          href="/contact"
+          className="bg-white text-blue-800 font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:bg-blue-100 hover:shadow-xl inline-block text-center"
+        >
+          Speak to an Expert →
+        </a>
+        <a
+          href="#services"
+          className="border border-white font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:bg-white hover:text-blue-800 inline-block text-center"
+        >
+          Our Services →
+        </a>
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end relative z-10">
+      <div className="relative group w-full max-w-[400px]">
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+        <img
+          src={digi}
+          alt="AI Digital Marketing"
+          className="relative w-full h-[260px] sm:h-[300px] md:h-[320px] object-cover rounded-xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
+        />
+      </div>
+    </div>
+
+  </div>
 </section>
-
-
-
-
 
 
 

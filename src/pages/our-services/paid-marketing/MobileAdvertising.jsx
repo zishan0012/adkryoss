@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import mobile from "../../../assets/mobile.jpg";
 import mobile1 from "../../../assets/mobile1.jpg";
@@ -197,19 +198,18 @@ const faqs = [
  
   return (
     <>
-      <section
+      {/* <section
         className="relative bg-cover bg-center bg-no-repeat py-20 md:py-24 flex items-center text-white"
         style={{
           backgroundImage:
             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp%27)%22"
         }}
       >
-        {/* Overlay */}
+        
         <div className="absolute inset-0 bg-blue-900/85"></div>
  
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 xl:px-28 grid md:grid-cols-2 items-center gap-12 w-full">
  
-          {/* LEFT CONTENT */}
           <div className="text-left max-w-[600px]">
             <h1 className="text-[32px] md:text-[48px] font-bold mb-4 leading-tight">
               Mobile Advertising
@@ -248,7 +248,7 @@ const faqs = [
             </div>
           </div>
  
-          {/* RIGHT IMAGE */}
+         
           <div className="flex justify-center md:justify-end">
             <div className="w-full max-w-[450px] h-[260px] sm:h-[320px] md:h-[360px] flex items-center justify-center">
               <img
@@ -260,7 +260,96 @@ const faqs = [
           </div>
  
         </div>
-      </section>
+      </section> */}
+
+<motion.section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+>
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  {/* Floating Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+
+  <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-20 xl:px-28 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div className="text-left max-w-[600px] space-y-6">
+
+      <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          Mobile Advertising Services That Convert
+        </span>
+      </h2>
+
+      <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+        Reach. Engage. Convert — On Every Screen.
+      </h3>
+
+      <p className="text-gray-200 text-md md:text-lg leading-relaxed">
+        Your audience lives on mobile. Your growth should too. Drive real business impact with performance-focused mobile advertising strategies designed to convert micro-moments into measurable revenue.
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-5 pt-2">
+        <Link to="/contact">
+          <button className="inline-flex items-center justify-center bg-white text-blue-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            Speak to a Mobile Ads Expert →
+          </button>
+        </Link>
+
+        <button
+          className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 hover:text-blue-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Our Mobile Advertising Services →
+        </button>
+      </div>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end relative z-10">
+      <div className="relative group w-full max-w-[450px] h-[260px] sm:h-[320px] md:h-[360px] flex items-center justify-center">
+
+        {/* Image Glow */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+        <img
+          src={mobile}
+          alt="Mobile Advertising Services"
+          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
+        />
+
+      </div>
+    </div>
+
+  </div>
+
+  {/* Floating Animation */}
+  <style>
+    {`
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(30px); }
+      }
+    `}
+  </style>
+
+</motion.section>
+
+
+
+
  
       <section className="bg-white pt-24 md:pt-28 lg:pt-32 pb-32 md:pb-36 lg:pb-40">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 xl:px-28 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

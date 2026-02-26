@@ -120,14 +120,14 @@ const DigitalPR = () => {
     return (
         <div className="bg-white text-slate-900">
             {/* Hero Section */}
-            <section
+            {/* <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    {/* LEFT CONTENT */}
+                    
                     <div className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Digital PR Services
@@ -155,7 +155,7 @@ const DigitalPR = () => {
                             </a>
                         </div>
                     </div>
-                    {/* RIGHT IMAGE */}
+                   
                     <div className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
@@ -165,7 +165,86 @@ const DigitalPR = () => {
                             /></div>
                     </div>
                 </div>
-            </section>
+            </section> */}
+
+
+<section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div className="text-left max-w-[600px] space-y-6">
+
+      <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          Digital PR Services
+        </span>
+      </h2>
+
+      <h3 className="text-xl md:text-2xl font-semibold text-blue-100">
+        Earn Authority. Build Trust. Drive Real Impact.
+      </h3>
+
+      <p className="text-gray-200 leading-relaxed font-medium">
+        Modern visibility is not about noise — it’s about influence.
+      </p>
+
+      <p className="text-gray-200 leading-relaxed">
+        Our Digital PR strategies help you earn credible media coverage, high-quality backlinks, and powerful online authority that fuels long-term SEO growth and brand trust.
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 pt-2">
+
+        <a
+          href="/contact"
+          className="inline-flex items-center justify-center bg-white text-black font-semibold px-8 py-4 rounded-full 
+                     transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Speak to Our Expert →
+        </a>
+
+        <a
+          href="#services"
+          className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold 
+                     transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Our Services →
+        </a>
+
+      </div>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end relative z-10">
+
+      <div className="relative group w-full max-w-[400px]">
+
+        {/* Image Glow */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+        <img
+          src={digitalprhero}
+          alt="Digital PR"
+          className="relative w-full object-contain rounded-2xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
             {/* Why Digital PR Section */}
             <section className="pt-32 pb-24 bg-white">
