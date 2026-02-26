@@ -538,13 +538,13 @@ const PPCServices = () => {
             <img
               src={Process}
               alt="Our PPC Process"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain ml-20"
             />
           </div>
 
           {/* RIGHT SIDE - CONTENT (NO PADDING ON RIGHT EDGE) */}
           <div className="flex items-center">
-            <div className="pl-10 pr-0 py-16 lg:py-20 w-full">
+            <div className="pl-30 pr-0 py-16 lg:py-20 w-full">
 
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
                 Our PPC Process
@@ -605,14 +605,7 @@ const PPCServices = () => {
 
       </div>
 
-      {/* RIGHT SIDE IMAGE */}
-      <div className="flex justify-end">
-        <img
-          src={Output}
-          alt="PPC Strategy"
-          className="w-full max-w-lg rounded-2xl shadow-xl object-cover"
-        />
-      </div>
+    
 
     
 </section>
