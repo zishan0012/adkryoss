@@ -115,10 +115,10 @@ export default function FixedCTA() {
  
     emailjs
       .send(
-        "service_8r41dff",
-        "template_y39nc0i",
+        "service_q8qm5ah",
+        "template_ftj0nm8",
         formData,
-        "2X4j1gjI4qCBNp-1j"
+        "wzMZB3gXbCN1HTitr"
       )
       .then(() => {
         setSuccess("Message sent successfully!");

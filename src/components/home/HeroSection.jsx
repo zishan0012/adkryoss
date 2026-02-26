@@ -1,112 +1,3 @@
-
-
-// import React from "react";
-// import { useNavigate } from "react-router-dom";
-// import HerobgImage from "../../assets/Herobg1.jpg";
-// import { motion } from "framer-motion";
-// const HeroSection = () => {
-//   const navigate = useNavigate();
-//   return (
-//     <>
-//       <motion.section
-//         className="relative flex items-center min-h-[90vh] bg-cover bg-left bg-no-repeat "
-//         style={{
-//           backgroundImage: `url(${HerobgImage})`
-//             // "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/banner_desk_bg.webp')",
-//           }}
-
-//            initial={{ opacity: 0, y: 50 }}
-//       whileInView={{ opacity: 1, y: 0 }}
-//       viewport={{ once: true }}
-//       transition={{ duration: 1 }}
-//       >
-//         {/* Gradient Overlay */}
-//         {/* <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(13,59,102,0.95)_0%,rgba(11,95,76,0.85)_100%)]"></div> */}
-
-//         {/* Content Container */}
-//         <div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4">
-
-//           {/* LEFT SIDE */}
-          
-//                   <div className="text-left lg:text-left text-white space-y-6 mx-auto lg:mx-0">
-
-//             <h1 className="text-[36px] font-extrabold mt-5 leading-[1.2]">
-//               We Build Digital Growth Systems That Drive Revenue.
-//             </h1>
-
-//             <p className="mt-[25px] text-[18px] max-w-[550px] text-white">
-//               Not just traffic. Not just engagement.
-//               <br />
-//               We engineer data-driven marketing strategies that turn clicks
-//               into customers and brands into market leaders.
-//             </p>
-
-//             {/* Buttons */}
-//             <div className="mt-[35px] flex flex-col sm:flex-row gap-5">
-//               <button 
-//               onClick={()=> navigate("/contact")}
-//               className="bg-[#ff7a00] text-white px-[28px] py-[14px] rounded-[40px] font-semibold text-[15px]">
-//                 Get a Free Growth Audit →
-//               </button>
-
-//               <button 
-//               onClick={()=> navigate("/contact")}
-//               className="border-2 border-white text-white px-[28px] py-[14px] rounded-[40px] font-semibold text-[15px] bg-transparent">
-//                 Talk to a Growth Strategist →
-//               </button>
-//             </div>
-//           </div>
-
-         
-//            {/* <div className="flex justify-center lg:justify-end mt-10 lg:mt-0">
-//               <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
-//               <img
-//                 src={HeroImage}
-//                 alt="Section Image"
-//                 className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
-//               />
-//             </div>
-//           </div> */}
-
-//         </div>
-//       </motion.section>
-//     </>
-//   );
-// };
-
-// export default HeroSection;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useRef, useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import HerobgImage from "../../assets/Herobg1.jpg";
@@ -120,196 +11,177 @@ const HeroSection = () => {
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
   const paragraphRef = useRef(null);
-  const buttonContainerRef = useRef(null);
   const buttonsRef = useRef([]);
  
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
- 
-      // === SECTION PARALLAX EFFECT ===
+      // Kill any existing ScrollTriggers to prevent conflicts
+      ScrollTrigger.getAll().forEach(st => st.kill());
+      
+      // === OPTIMIZED PARALLAX - Reduced movement for better performance ===
       gsap.to(sectionRef.current, {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
           end: "bottom top",
-          scrub: 1,
+          scrub: 0.5, // Reduced for smoother performance
+          invalidateOnRefresh: true,
         },
-        y: -80,
+        y: -40, // Reduced movement
+        ease: "none"
       });
  
-      // === HEADING PREMIUM ANIMATION ===
+      // === HEADING ANIMATION - Longer duration with reverse ===
       gsap.fromTo(headingRef.current,
         { 
           opacity: 0,
-          y: 80,
+          y: 60,
         },
         {
           opacity: 1,
           y: 0,
-          duration: 1.4,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 85%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
-          }
-        }
-      );
- 
-      // === PARAGRAPH PREMIUM ANIMATION ===
-      gsap.fromTo(paragraphRef.current,
-        { 
-          opacity: 0,
-          y: 50,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          delay: 0.2,
-          ease: "power3.out",
+          duration: 2.5, // Increased duration
+          ease: "power2.out",
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
+            end: "bottom 30%",
+            toggleActions: "play reverse play reverse", // This enables reverse on scroll back
+            scrub: false, // Disable scrub for smooth reverse
           }
         }
       );
  
-      // === BUTTONS STAGGER ANIMATION ===
-      gsap.fromTo(buttonsRef.current,
+      // === PARAGRAPH ANIMATION - Longer duration with reverse ===
+      gsap.fromTo(paragraphRef.current,
         { 
           opacity: 0,
           y: 40,
-          scale: 0.95,
         },
         {
           opacity: 1,
           y: 0,
-          scale: 1,
-          duration: 1.2,
-          stagger: 0.2,
-          ease: "back.out(1.4)",
+          duration: 2.2, // Increased duration
+          ease: "power2.out",
           scrollTrigger: {
-            trigger: buttonContainerRef.current,
-            start: "top 85%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
+            trigger: sectionRef.current,
+            start: "top 75%",
+            end: "bottom 30%",
+            toggleActions: "play reverse play reverse",
+            scrub: false,
           }
         }
       );
  
+      // === BUTTONS STAGGER ANIMATION - Smoother with reverse ===
+      gsap.fromTo(buttonsRef.current,
+        { 
+          opacity: 0,
+          y: 30,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 2.0, // Increased duration
+          stagger: 0.3, // Slightly longer stagger
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 70%",
+            end: "bottom 30%",
+            toggleActions: "play reverse play reverse",
+            scrub: false,
+          }
+        }
+      );
+ 
+      // Refresh ScrollTrigger after setup
+      ScrollTrigger.refresh();
+      
     }, sectionRef);
  
-    return () => ctx.revert();
+    return () => {
+      // Cleanup properly
+      ctx.revert();
+      ScrollTrigger.getAll().forEach(st => st.kill());
+    };
   }, []);
  
-  // Premium hover effect for buttons
+  // Optimized hover effects with hardware acceleration
   const handleButtonHover = (e, isEnter, isOrange = true) => {
-    if (isOrange) {
-      gsap.to(e.target, {
-        scale: isEnter ? 1.08 : 1,
-        y: isEnter ? -3 : 0,
-        boxShadow: isEnter ? "0 20px 30px -10px rgba(255, 122, 0, 0.4)" : "none",
-        duration: 0.4,
-        ease: isEnter ? "back.out(1.2)" : "power2.out"
-      });
-    } else {
-      gsap.to(e.target, {
-        scale: isEnter ? 1.08 : 1,
-        y: isEnter ? -3 : 0,
-        backgroundColor: isEnter ? "rgba(255,255,255,0.15)" : "transparent",
-        borderColor: isEnter ? "#ffffff" : "#ffffff",
-        boxShadow: isEnter ? "0 20px 30px -10px rgba(255,255,255,0.2)" : "none",
-        duration: 0.4,
-        ease: isEnter ? "back.out(1.2)" : "power2.out"
-      });
-    }
+    gsap.to(e.target, {
+      scale: isEnter ? 1.05 : 1,
+      y: isEnter ? -2 : 0,
+      backgroundColor: !isOrange && isEnter ? "rgba(255,255,255,0.15)" : isOrange ? "#ff7a00" : "transparent",
+      boxShadow: isEnter ? "0 15px 25px -8px rgba(0,0,0,0.3)" : "none",
+      duration: 0.5,
+      ease: "power2.out",
+      overwrite: true
+    });
   };
  
   return (
-<section
+    <section
       ref={sectionRef}
-      className="relative flex items-center min-h-[90vh] bg-cover bg-left bg-no-repeat overflow-hidden"
+      className="relative flex items-center min-h-[90vh] bg-cover bg-left bg-no-repeat overflow-hidden will-change-transform"
       style={{
         backgroundImage: `url(${HerobgImage})`,
       }}
->
-      {/* Dark overlay for better text readability */}
-<div className="absolute inset-0 bg-black/30 z-0"></div>
+    >
+      {/* Optimized overlay with better opacity */}
+      <div className="absolute inset-0 bg-black/40 z-0 will-change-opacity"></div>
  
-      {/* Decorative overlay elements */}
-<div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl z-0"></div>
-<div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl z-0"></div>
+      {/* Decorative elements - reduced blur for performance */}
+      <div className="absolute top-20 right-20 w-64 h-64 bg-orange-500/10 rounded-full blur-2xl z-0"></div>
+      <div className="absolute bottom-20 left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl z-0"></div>
  
       {/* Content Container */}
-<div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4">
+      <div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4">
         {/* LEFT SIDE */}
-<div className="text-left lg:text-left text-white space-y-6 mx-auto lg:mx-0">
-<h1 
+        <div className="text-left lg:text-left text-white space-y-6 mx-auto lg:mx-0">
+          <h1 
             ref={headingRef}
-            className="text-[36px] md:text-[48px] font-extrabold mt-5 leading-[1.2]"
->
+            className="text-[36px] md:text-[48px] font-extrabold mt-5 leading-[1.2] will-change-transform"
+          >
             We Build Digital Growth Systems <span className="text-[#ff7a00]">That Drive Revenue.</span>
-</h1>
+          </h1>
  
           <p 
             ref={paragraphRef}
-            className="mt-[25px] text-[18px] max-w-[550px] text-white/90 leading-relaxed"
->
+            className="mt-[25px] text-[18px] max-w-[550px] text-white/90 leading-relaxed will-change-transform"
+          >
             Not just traffic. Not just engagement.
-<br />
+            <br />
             We engineer data-driven marketing strategies that turn clicks
             into customers and brands into market leaders.
-</p>
+          </p>
  
           {/* Buttons */}
-<div 
-            ref={buttonContainerRef}
-            className="mt-[35px] flex flex-col sm:flex-row gap-5"
->
-<button 
+          <div className="mt-[35px] flex flex-col sm:flex-row gap-5">
+            <button 
               ref={el => buttonsRef.current[0] = el}
               onClick={() => navigate("/contact")}
-              className="bg-[#ff7a00] text-white px-[28px] py-[14px] rounded-[40px] font-semibold text-[15px] transition-all duration-300"
+              className="bg-[#ff7a00] text-white px-[28px] py-[14px] rounded-[40px] font-semibold text-[15px] transition-none will-change-transform"
               onMouseEnter={(e) => handleButtonHover(e, true, true)}
               onMouseLeave={(e) => handleButtonHover(e, false, true)}
->
+            >
               Get a Free Growth Audit →
-</button>
+            </button>
  
             <button 
               ref={el => buttonsRef.current[1] = el}
               onClick={() => navigate("/contact")}
-              className="border-2 border-white text-white px-[28px] py-[14px] rounded-[40px] font-semibold text-[15px] bg-transparent transition-all duration-300"
+              className="border-2 border-white text-white px-[28px] py-[14px] rounded-[40px] font-semibold text-[15px] bg-transparent transition-none will-change-transform"
               onMouseEnter={(e) => handleButtonHover(e, true, false)}
               onMouseLeave={(e) => handleButtonHover(e, false, false)}
->
+            >
               Talk to a Growth Strategist →
-</button>
-</div>
-</div>
-</div>
-</section>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
  
 export default HeroSection;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
