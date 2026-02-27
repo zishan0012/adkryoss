@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import DigitalMarketingImage from "../../../assets/DigitalMarketing.png";
 import {
   Search,
@@ -154,30 +155,45 @@ const DigitalMarketingServices = () => {
 >
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-    <div className="space-y-6">
-      <h1 className="text-4xl md:text-5xl font-bold">
-        Digital Marketing Services
-      </h1>
-      <h2 className="text-2xl md:text-3xl font-semibold text-blue-200">
-        Accelerate Growth. Maximize Visibility. Dominate Digital.
-      </h2>
-      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
-        Your audience is online. Your competitors are investing. The real question is — <span className="font-semibold">are you growing strategically?</span>
-        <br />
-        Adkryoss managed by <span className="font-semibold">Clink Consultancy Services Private Limited</span> delivers performance-focused digital marketing solutions that generate traffic, leads, and real revenue.
-        <br />
-        <span className="font-semibold">We don’t chase clicks. We build growth systems.</span>
-      </p>
+      <section
+        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-      <div className="flex flex-wrap gap-4">
-        <button className="bg-white text-blue-700 px-5 py-2 rounded-full font-semibold hover:bg-blue-100 hover:shadow-xl transition">
-          Speak to an Expert →
-        </button>
-        <button className="border border-white px-5 py-2 rounded-full font-semibold hover:bg-white hover:text-blue-700 transition">
-          Our Services →
-        </button>
-      </div>
-    </div>
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold">
+              Digital Marketing Services
+            </h1>
+            <h2 className="text-2xl md:text-3xl font-semibold text-blue-200">
+              Accelerate Growth. Maximize Visibility. Dominate Digital.
+            </h2>
+            <p className="text-white md:text-md leading-relaxed max-w-[600px]">
+              Your audience is online. Your competitors are investing. The real question is — <span className="font-semibold">are you growing strategically?</span>
+              <br />
+              Adkryoss managed by <span className="font-semibold">Clink Consultancy Services Private Limited</span> delivers performance-focused digital marketing solutions that generate traffic, leads, and real revenue.
+              <br />
+              <span className="font-semibold">We don’t chase clicks. We build growth systems.</span>
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <Link
+                to="/contact"
+                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Speak to Our Expert →
+              </Link>
+              <Link
+                to="#services"
+                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Our Services →
+              </Link>
+            </div>
+          </div>
 
     <div className="flex justify-center md:justify-end">
       <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center rounded-xl shadow-lg bg-white/10">
@@ -186,6 +202,13 @@ const DigitalMarketingServices = () => {
     </div>
   </div>
   </section> */}
+          {/* <div className="flex justify-center md:justify-end">
+            <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center rounded-xl shadow-lg bg-white/10">
+              <img src={DigitalMarketingImage} alt="Digital Marketing" className="max-w-full max-h-full object-contain rounded-xl" />
+            </div>
+          </div>
+        </div>
+      </section> */}
 
 
 
@@ -297,7 +320,7 @@ const DigitalMarketingServices = () => {
         </div>
 
         {/* Services Title */}
-        <div className="max-w-7xl mx-auto px-6 pt-16 pb-8">
+        <div id="services" className="max-w-7xl mx-auto px-6 pt-16 pb-8">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
             Our Digital Marketing Services
           </h3>

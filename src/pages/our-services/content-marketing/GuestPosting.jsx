@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import guestpostinghero from "../../../assets/content-marketing/guestpostinghero.png";
 import {
     Award,
@@ -17,7 +19,179 @@ import {
     SearchCode
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const GuestPosting = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whyBenefitsRef = useRef([]);
+    const frameworkStepsRef = useRef([]);
+    const typeCardsRef = useRef([]);
+    const diffCardsRef = useRef([]);
+    const industryTagsRef = useRef([]);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Zoom out entrance
+            gsap.fromTo(heroContentRef.current,
+                { scale: 1.2, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { x: 100, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    delay: 0.2,
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Why Benefits - Alternating side slides
+            whyBenefitsRef.current.forEach((benefit, i) => {
+                gsap.fromTo(benefit,
+                    { x: i % 2 === 0 ? -50 : 50, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        scrollTrigger: {
+                            trigger: benefit,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Framework Steps - Staggered rise with rotation
+            frameworkStepsRef.current.forEach((step, i) => {
+                gsap.fromTo(step,
+                    { y: 100, rotation: 5, opacity: 0 },
+                    {
+                        y: 0,
+                        rotation: 0,
+                        opacity: 1,
+                        duration: 0.7,
+                        delay: i * 0.1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Offering Types - Horizontal fade shift
+            typeCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { x: -30, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Differentiators - Bounce Pop
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { scale: 0.8, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        ease: "back.out(1.5)",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Industry Tags - Cascade
+            industryTagsRef.current.forEach((tag, i) => {
+                gsap.fromTo(tag,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.4,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: tag,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Hero Image Floating
+            gsap.to(heroImageRef.current, {
+                y: -20,
+                duration: 2.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            scale: isEnter ? 1.05 : 1,
+            y: isEnter ? -10 : 0,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+        const iconContainer = e.currentTarget.querySelector('.icon-container');
+        if (iconContainer) {
+            gsap.to(iconContainer, {
+                scale: isEnter ? 1.2 : 1,
+                rotate: isEnter ? 10 : 0,
+                duration: 0.3
+            });
+        }
+    };
     const strategySteps = [
         {
             step: "01",
@@ -82,7 +256,7 @@ const GuestPosting = () => {
     ];
 
     return (
-        <div className="bg-white text-slate-900">
+        <div ref={pageRef} className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
             {/* <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -93,6 +267,8 @@ const GuestPosting = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                    
                     <div className="text-left relative z-10 text-white">
+                   
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Guest Posting Services
                         </h1>
@@ -105,22 +281,24 @@ const GuestPosting = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                   
                     <div className="flex justify-center md:justify-end relative z-10">
+                   
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={guestpostinghero}
@@ -145,7 +323,7 @@ const GuestPosting = () => {
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
     {/* LEFT CONTENT */}
-    <div className="text-left max-w-[600px] space-y-6">
+    <div ref={heroContentRef} className="text-left max-w-[600px] space-y-6">
       <h2 className="text-4xl md:text-5xl font-bold leading-tight">
         <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
           Guest Posting Services
@@ -186,7 +364,7 @@ const GuestPosting = () => {
 
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end relative z-10">
-      <div className="relative group w-full max-w-[400px]">
+      <div ref={heroImageRef} className="relative group w-full max-w-[400px]">
         <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
         <img
           src={guestpostinghero}
@@ -225,7 +403,11 @@ const GuestPosting = () => {
                                     "Build brand credibility",
                                     "Support long-term SEO performance"
                                 ].map((point, index) => (
-                                    <div key={index} className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                    <div
+                                        key={index}
+                                        ref={el => whyBenefitsRef.current[index] = el}
+                                        className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100"
+                                    >
                                         <CheckCircle2 size={20} className="text-[#0066CC] shrink-0" />
                                         <span className="font-semibold text-slate-800">{point}</span>
                                     </div>
@@ -251,8 +433,14 @@ const GuestPosting = () => {
 
                     <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {strategySteps.map((item, index) => (
-                            <div key={index} className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 hover:border-[#0066CC] hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)] flex flex-col group">
-                                <div className="text-[#0066CC] font-extrabold text-4xl mb-6 group-hover:scale-110 transition-transform">
+                            <div
+                                key={index}
+                                ref={el => frameworkStepsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 w-full flex flex-col group cursor-pointer hover:border-[#0066CC] hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)]"
+                            >
+                                <div className="text-[#0066CC] font-extrabold text-4xl mb-6 transition-transform group-hover:scale-110">
                                     {item.step}
                                 </div>
                                 <h3 className="text-[18px] font-semibold text-slate-900 mb-4 group-hover:text-[#0066CC] transition-colors leading-tight">
@@ -268,7 +456,7 @@ const GuestPosting = () => {
             </section>
 
             {/* Types of Guest Posting Section */}
-            <section className="py-24 bg-slate-900 text-white">
+            <section id="services" className="py-24 bg-slate-900 text-white">
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold mb-5 leading-tight text-white">Types of Guest Posting We Offer</h2>
@@ -279,8 +467,14 @@ const GuestPosting = () => {
 
                     <div className="flex flex-wrap justify-center gap-8">
                         {offeringTypes.map((item, index) => (
-                            <div key={index} className="bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:bg-white/10 w-full md:w-[calc(33.33%-22px)] min-w-[300px] flex items-center gap-6 group shadow-sm">
-                                <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                            <div
+                                key={index}
+                                ref={el => typeCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:bg-white/10 w-full md:w-[calc(33.33%-22px)] min-w-[300px] flex items-center gap-6 group shadow-sm cursor-pointer"
+                            >
+                                <div className="icon-container w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors">
                                     {React.cloneElement(item.icon, { size: 24, className: "group-hover:text-white" })}
                                 </div>
                                 <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white group-hover:text-blue-400 transition-colors">
@@ -307,7 +501,11 @@ const GuestPosting = () => {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
                         {differentiators.map((point, index) => (
-                            <div key={index} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex items-start gap-4 hover:shadow-md transition-all">
+                            <div
+                                key={index}
+                                ref={el => diffCardsRef.current[index] = el}
+                                className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex items-start gap-4 hover:shadow-md transition-all cursor-default"
+                            >
                                 <ShieldCheck size={28} className="text-[#0066CC] shrink-0" />
                                 <span className="font-semibold text-slate-800 leading-tight">{point}</span>
                             </div>
@@ -330,7 +528,11 @@ const GuestPosting = () => {
                         <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight">Industries We Serve</h2>
                         <div className="flex flex-wrap justify-center gap-4 mb-16">
                             {industries.map((industry, index) => (
-                                <div key={index} className="px-8 py-4 bg-white border-2 border-slate-100 rounded-xl font-extrabold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm">
+                                <div
+                                    key={index}
+                                    ref={el => industryTagsRef.current[index] = el}
+                                    className="px-8 py-4 bg-white border-2 border-slate-100 rounded-xl font-semibold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm cursor-default"
+                                >
                                     {industry}
                                 </div>
                             ))}

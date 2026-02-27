@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     Settings,
     Search,
@@ -28,8 +30,284 @@ import {
     ChevronUp
 } from 'lucide-react';
 import technicalseo from '../../../assets/SEO/technicalseohero.png';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const TechnicalSEO = () => {
     const [openFaq, setOpenFaq] = useState(null);
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whyContentRef = useRef(null);
+    const whyBoxRef = useRef(null);
+    const frameworkCardsRef = useRef([]);
+    const additionalCardsRef = useRef([]);
+    const approachStepsRef = useRef([]);
+    const whoNeedsCardsRef = useRef([]);
+    const whyChooseRef = useRef(null);
+    const toolsRef = useRef(null);
+    const resultsCardsRef = useRef([]);
+    const faqRef = useRef(null);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Precision Slide
+            gsap.fromTo(heroContentRef.current,
+                { x: -100, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { x: 100, opacity: 0, scale: 0.8 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1.2,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Why section - Alternating
+            gsap.fromTo(whyContentRef.current,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: whyContentRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(whyBoxRef.current,
+                { scale: 0.9, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: whyBoxRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Framework - Building Blocks
+            frameworkCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: i * 0.2,
+                        ease: "back.out(1.7)",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Additional Services - Horizontal Flow
+            additionalCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { x: -30, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.7,
+                        delay: i * 0.15,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Approach - Steps reveal
+            approachStepsRef.current.forEach((step, i) => {
+                gsap.fromTo(step,
+                    { scale: 0.8, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Who Needs & Why Choose (Dark section)
+            whoNeedsCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+            gsap.fromTo(whyChooseRef.current,
+                { x: 50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: whyChooseRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Tools & Results
+            gsap.fromTo(toolsRef.current,
+                { y: 30, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: toolsRef.current,
+                        start: "top 90%",
+                        end: "bottom 10%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            resultsCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { x: 20, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // FAQ & CTA
+            gsap.fromTo(faqRef.current,
+                { y: 40, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: faqRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(ctaRef.current,
+                { scale: 0.9, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ctaRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Floating hero image
+            gsap.to(heroImageRef.current, {
+                y: -20,
+                duration: 3,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            y: isEnter ? -10 : 0,
+            scale: isEnter ? 1.02 : 1,
+            backgroundColor: isEnter ? "#f8fafc" : "white",
+            borderColor: isEnter ? "#0066cc" : "#e2e8f0",
+            duration: 0.3
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                scale: isEnter ? 1.2 : 1,
+                rotation: isEnter ? 360 : 0,
+                duration: 0.6
+            });
+        }
+    };
+
+    const handleDarkHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            backgroundColor: isEnter ? "rgba(255, 255, 255, 0.15)" : "rgba(255, 255, 255, 0.05)",
+            borderColor: isEnter ? "#3b82f6" : "rgba(255, 255, 255, 0.1)",
+            x: isEnter ? 5 : 0,
+            duration: 0.3
+        });
+    };
 
     const toggleFaq = (i) => {
         setOpenFaq(openFaq === i ? null : i);
@@ -159,7 +437,7 @@ const TechnicalSEO = () => {
     ];
 
     return (
-        <div className="bg-white">
+        <div ref={pageRef} className="bg-white overflow-hidden">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -168,7 +446,7 @@ const TechnicalSEO = () => {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10 text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Technical SEO Services
                         </h1>
@@ -185,21 +463,21 @@ const TechnicalSEO = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={technicalseo}
@@ -224,7 +502,7 @@ const TechnicalSEO = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="space-y-6">
+                        <div ref={whyContentRef} className="space-y-6">
                             <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
                                 If your technical infrastructure is weak, your entire SEO strategy suffers:
                             </p>
@@ -242,7 +520,7 @@ const TechnicalSEO = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="bg-slate-50 p-10 rounded-[30px] border border-slate-100 italic transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/5">
+                        <div ref={whyBoxRef} className="bg-slate-50 p-10 rounded-[30px] border border-slate-100 italic transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/5">
                             <Lock size={48} className="text-[#0066cc] mb-5" />
                             <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-relaxed font-medium">
                                 "Technical SEO ensures your website performs flawlessly — for both users and search engines. "
@@ -253,7 +531,7 @@ const TechnicalSEO = () => {
             </section>
 
             {/* Framework Section */}
-            <section className="py-24 bg-slate-50">
+            <section id="services" className="py-24 bg-slate-50">
                 <div className="container">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5">
@@ -266,8 +544,12 @@ const TechnicalSEO = () => {
 
                     <div className="grid md:grid-cols-3 gap-8 mb-8">
                         {technicalFramework.map((item, i) => (
-                            <div key={i} className="bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc] group">
-                                <div className="text-[#0066cc] mb-5">{item.icon}</div>
+                            <div key={i}
+                                ref={el => frameworkCardsRef.current[i] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300 group">
+                                <div className="text-[#0066cc] mb-5 card-icon">{item.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-4 text-slate-900">{item.title}</h3>
                                 <p className="text-slate-600 mb-5 leading-relaxed font-medium">{item.desc}</p>
                                 <ul className="list-none p-0 space-y-3">
@@ -285,8 +567,12 @@ const TechnicalSEO = () => {
 
                     <div className="flex flex-wrap justify-center gap-8">
                         {additionalServices.map((item, i) => (
-                            <div key={i} className="w-full md:w-[calc(33.333%-22px)] min-w-[300px] bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
-                                <div className="text-[#0066cc] mb-5">{item.icon}</div>
+                            <div key={i}
+                                ref={el => additionalCardsRef.current[i] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="w-full md:w-[calc(33.333%-22px)] min-w-[300px] bg-white p-10 rounded-3xl border border-slate-200 transition-all duration-300">
+                                <div className="text-[#0066cc] mb-5 card-icon">{item.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-4 text-slate-900">{item.title}</h3>
                                 <p className="text-slate-600 mb-5 leading-relaxed font-medium">{item.desc}</p>
                                 <ul className="list-none p-0 space-y-3">
@@ -315,7 +601,9 @@ const TechnicalSEO = () => {
                     </div>
                     <div className="flex flex-wrap justify-center gap-6">
                         {workingApproach.map((item, i) => (
-                            <div key={i} className="flex-1 min-w-[240px] max-w-[300px] bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-blue-900/5 group">
+                            <div key={i}
+                                ref={el => approachStepsRef.current[i] = el}
+                                className="flex-1 min-w-[240px] max-w-[300px] bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-blue-900/5 group">
                                 <div className="text-[14px] font-bold text-[#0066cc] mb-3 uppercase tracking-wider">{item.step}</div>
                                 <h4 className="text-[18px] font-bold text-slate-900 mb-3">{item.title}</h4>
                                 <p className="text-[14px] text-slate-600 leading-relaxed font-medium">{item.desc}</p>
@@ -340,7 +628,11 @@ const TechnicalSEO = () => {
                                     { name: "Startups preparing for scale", icon: <Rocket size={18} /> },
                                     { name: "Websites facing ranking drops", icon: <TrendingUp size={18} /> }
                                 ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-3 bg-white/5 p-5 rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-blue-500/50">
+                                    <div key={i}
+                                        ref={el => whoNeedsCardsRef.current[i] = el}
+                                        onMouseEnter={(e) => handleDarkHover(e, true)}
+                                        onMouseLeave={(e) => handleDarkHover(e, false)}
+                                        className="flex items-center gap-3 bg-white/5 p-5 rounded-xl border border-white/10 transition-all duration-300">
                                         <span className="text-blue-400 group-hover:scale-110 transition-transform">{item.icon}</span>
                                         <span className="text-[15px] font-medium">{item.name}</span>
                                     </div>
@@ -350,7 +642,7 @@ const TechnicalSEO = () => {
                                 If your site has more than 50 pages, technical SEO is critical.
                             </p>
                         </div>
-                        <div>
+                        <div ref={whyChooseRef}>
                             <h2 className="text-[36px] font-bold mb-10 text-white leading-tight">Why Choose Us</h2>
                             <div className="space-y-8">
                                 {[
@@ -377,13 +669,13 @@ const TechnicalSEO = () => {
             <section className="py-24 bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16">
-                        <div className="md:border-r border-slate-100 md:pr-16">
+                        <div ref={toolsRef} className="md:border-r border-slate-100 md:pr-16">
                             <h2 className="text-[36px] font-bold mb-8 text-slate-900 leading-tight">What Makes Our Technical SEO Different?</h2>
                             <div className="flex flex-wrap gap-3">
                                 {[
                                     "GSC", "GA4", "Screaming Frog", "Ahrefs", "SEMrush", "PageSpeed Insights", "GTmetrix", "Schema Generators", "CDN Tools"
                                 ].map((tool, i) => (
-                                    <span key={i} className="px-5 py-2 bg-slate-50 text-slate-800 rounded-full text-[14px] font-bold border border-slate-100 transition-all hover:bg-white hover:border-[#0066cc] hover:text-[#0066cc]">
+                                    <span key={i} className="px-5 py-2 bg-slate-50 text-slate-800 rounded-full text-[14px] font-bold border border-slate-100 transition-all hover:bg-[#0066cc] hover:text-white cursor-default">
                                         {tool}
                                     </span>
                                 ))}
@@ -401,7 +693,7 @@ const TechnicalSEO = () => {
                                     "Increased organic traffic",
                                     "Higher user engagement"
                                 ].map((res, i) => (
-                                    <div key={i} className="flex items-center gap-3 group">
+                                    <div key={i} ref={el => resultsCardsRef.current[i] = el} className="flex items-center gap-3 group">
                                         <div className="bg-green-50 p-2 rounded-lg text-green-600 transition-colors group-hover:bg-green-600 group-hover:text-white">
                                             <TrendingUp size={18} />
                                         </div>
@@ -415,7 +707,7 @@ const TechnicalSEO = () => {
             </section>
 
             {/* FAQs */}
-            <section className="py-24 bg-slate-50">
+            <section ref={faqRef} className="py-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <h2 className="text-[36px] font-bold text-center mb-16 text-slate-900">Frequently Asked Questions</h2>
                     <div className="max-w-[800px] mx-auto">
@@ -440,13 +732,13 @@ const TechnicalSEO = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004999] text-white">
+            <section ref={ctaRef} className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004999] text-white">
                 <div className="container">
                     <h2 className="text-[36px] font-bold mb-6 text-white leading-tight">Let’s Strengthen Your Digital Foundation</h2>
-                    <p className="text-[16px] md:text-[18px] mb-6 opacity-90 max-w-[800px] mx-auto leading-relaxed font-medium">
+                    <p className="text-[16px] md:text-[18px] text-white mb-6 opacity-90 max-w-[800px] mx-auto leading-relaxed font-medium">
                         Partner with Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span> and build a website that search engines trust — and customers love.
                     </p>
-                    <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-[#0066cc] py-5 px-12 rounded-full text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:scale-[1.05] hover:shadow-white/20">
+                    <Link to="/contact" className="inline-flex items-center gap-3 bg-white text-[#0066cc] py-5 px-12 rounded-full text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1.5 hover:shadow-white/20">
                         Unlock Your Search Potential
                         <ArrowRight size={20} />
                     </Link>
@@ -457,3 +749,4 @@ const TechnicalSEO = () => {
 };
 
 export default TechnicalSEO;
+

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import portfoliohero from '../../assets/work/portfoliohero.png';
 import { motion } from "framer-motion";
 import { useState } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     CheckCircle2,
     ArrowRight,
@@ -35,7 +37,259 @@ import {
     PenTool
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Portfolio = () => {
+    const mainRef = useRef(null);
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            // Hero Section
+            gsap.fromTo(".hero-content",
+                { opacity: 0, x: -50 },
+                {
+                    opacity: 1, x: 0, duration: 1, delay: 0.2,
+                    scrollTrigger: {
+                        trigger: ".hero-content",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".hero-image",
+                { opacity: 0, scale: 0.8 },
+                {
+                    opacity: 1, scale: 1, duration: 1, delay: 0.4,
+                    scrollTrigger: {
+                        trigger: ".hero-image",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Our Work Philosophy
+            gsap.fromTo(".philosophy-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".philosophy-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".philosophy-card",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.6, stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: ".philosophy-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".philosophy-quote",
+                { opacity: 0, scale: 0.95 },
+                {
+                    opacity: 1, scale: 1, duration: 1,
+                    scrollTrigger: {
+                        trigger: ".philosophy-quote",
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Industries We’ve Empowered
+            gsap.fromTo(".industry-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".industry-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".industry-card",
+                { opacity: 0, scale: 0.9 },
+                {
+                    opacity: 1, scale: 1, duration: 0.6, stagger: 0.05,
+                    scrollTrigger: {
+                        trigger: ".industry-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Case Studies
+            gsap.fromTo(".casestudy-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".casestudy-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".casestudy-card",
+                { opacity: 0, x: (i) => i % 2 === 0 ? -30 : 30 },
+                {
+                    opacity: 1, x: 0, duration: 0.8, stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: ".casestudy-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Working Model
+            gsap.fromTo(".model-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".model-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".model-step",
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1, y: 0, duration: 0.8, stagger: 0.15,
+                    scrollTrigger: {
+                        trigger: ".model-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Tools & Technologies
+            gsap.fromTo(".tools-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".tools-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".tool-item",
+                { opacity: 0, scale: 0.5 },
+                {
+                    opacity: 1, scale: 1, duration: 0.6, stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: ".tools-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Differentiation
+            gsap.fromTo(".diff-header",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".diff-header",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".diff-item",
+                { opacity: 0, x: -30 },
+                {
+                    opacity: 1, x: 0, duration: 0.6, stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: ".diff-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Results That Matter
+            gsap.fromTo(".results-content",
+                { opacity: 0, x: -50 },
+                {
+                    opacity: 1, x: 0, duration: 1,
+                    scrollTrigger: {
+                        trigger: ".results-section",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".stat-card",
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1, y: 0, duration: 0.8, stagger: 0.1,
+                    scrollTrigger: {
+                        trigger: ".stats-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Final CTA
+            gsap.fromTo(".cta-section-content",
+                { opacity: 0, scale: 0.9 },
+                {
+                    opacity: 1, scale: 1, duration: 1,
+                    scrollTrigger: {
+                        trigger: ".cta-section",
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+        }, mainRef);
+
+        return () => ctx.revert();
+    }, []);
     const industries = [
         { name: "Corporate & B2B Services", icon: <Briefcase size={24} /> },
         { name: "HR & Recruitment Ecosystems", icon: <Target size={24} /> },
@@ -101,17 +355,19 @@ const Portfolio = () => {
         { step: "04", title: "Analyze & Optimize", desc: "Continuous monitoring and A/B testing to refine performance and reduce costs." },
         { step: "05", title: "Scale & Dominate", desc: "Ramping up successful funnels to maximize reach and market share." }
     ];
-const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(null);
     return (
         <div className="bg-white">
             {/* <section
+        <div className="bg-white" ref={mainRef}>
+            <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10 text-white">
+                    <div className="text-left relative z-10 text-white hero-content">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1px] text-white leading-[1.1]">
                             Portfolio
                         </h1>
@@ -121,8 +377,17 @@ const [activeIndex, setActiveIndex] = useState(null);
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white/90">
                             We don’t just run campaigns — we build scalable digital growth engines. Explore how strategy, creativity, and performance marketing come together to deliver measurable business impact.
                         </p>
+                        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                            <Link
+                                to="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </Link>
+                        </div>
                     </div>
-                    <div className="flex justify-center md:justify-end relative z-10">
+
+                    <div className="flex justify-center md:justify-end relative z-10 hero-image">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={portfoliohero}
@@ -208,15 +473,15 @@ const [activeIndex, setActiveIndex] = useState(null);
 
 
             {/* Our Work Philosophy */}
-            < section className="py-24 bg-white" >
+            <section className="py-24 bg-white" >
                 <div className="container px-6 mx-auto">
-                    <div className="max-w-3xl mx-auto text-center mb-16">
+                    <div className="max-w-3xl mx-auto text-center mb-16 philosophy-header">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-6">Our Work Philosophy</h2>
                         <p className="text-[16px] md:text-[18px] text-[#475569] leading-[1.8]">
                             Every project at Adkryoss managed by <span className="font-bold text-[#0066cc]">Clink Consultancy Services Private Limited</span> begins with one goal — sustainable digital growth backed by data.
                         </p>
                     </div>
-                    <div className="grid md:grid-cols-5 gap-6">
+                    <div className="grid md:grid-cols-5 gap-6 philosophy-grid">
                         {[
                             { title: "Performance Marketing Precision", icon: <Target className="text-blue-600" /> },
                             { title: "SEO-led Organic Visibility", icon: <Search className="text-blue-600" /> },
@@ -230,39 +495,39 @@ const [activeIndex, setActiveIndex] = useState(null);
                             // </div>
 
 
-<div
-  key={i}
-  className="group relative overflow-hidden p-6 rounded-24 
-             border border-[#e2e8f0] text-center cursor-pointer"
->
+                            <div
+                                key={i}
+                                className="group relative overflow-hidden p-6 rounded-24 
+                             border border-[#e2e8f0] text-center cursor-pointer philosophy-card"
+                            >
 
-  {/* Sliding Background */}
-  <span className="absolute inset-0 bg-blue-600 
+                                {/* Sliding Background */}
+                                <span className="absolute inset-0 bg-blue-600 
                    -translate-x-full 
                    group-hover:translate-x-0 
                    transition-transform duration-500 ease-out" />
 
-  {/* Content */}
-  <div className="relative z-10 transition-colors duration-300 
+                                {/* Content */}
+                                <div className="relative z-10 transition-colors duration-300 
                   text-[#0f172a] group-hover:text-white">
 
-    <div className="mb-4 flex justify-center 
+                                    <div className="mb-4 flex justify-center 
                     transition-colors duration-300">
-      {React.cloneElement(item.icon, { 
-        className: "text-blue-600 group-hover:text-white" 
-      })}
-    </div>
+                                        {React.cloneElement(item.icon, {
+                                            className: "text-blue-600 group-hover:text-white"
+                                        })}
+                                    </div>
 
-    <h4 className="text-[16px] font-bold">
-      {item.title}
-    </h4>
-  </div>
-</div>
+                                    <h4 className="text-[16px] font-bold">
+                                        {item.title}
+                                    </h4>
+                                </div>
+                            </div>
 
 
                         ))}
                     </div>
-                    <div className="mt-16 bg-[#0f172a] p-10 rounded-40 text-center text-white">
+                    <div className="mt-16 bg-[#0f172a] p-10 rounded-40 text-center text-white philosophy-quote">
                         <p className="text-[18px] md:text-[20px] font-medium max-w-4xl mx-auto opacity-90 leading-relaxed text-white">
                             "Our portfolio reflects a structured, ROI-driven approach inspired by modern performance agencies — blending consulting mindset with execution excellence."
                         </p>
@@ -271,15 +536,15 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* Industries We’ve Empowered */}
-            < section className="py-24 bg-[#f8fafc]" >
+            <section className="py-24 bg-[#f8fafc]" >
                 <div className="container px-6 mx-auto">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16 industry-header">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-4">Industries We’ve Empowered</h2>
                         <p className="text-[#64748b]">We work across diverse sectors with tailored digital strategies</p>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 industry-grid">
                         {industries.map((ind, i) => (
-                            <div key={i} className="bg-white p-8 rounded-24 border border-[#e2e8f0] flex flex-col items-center text-center group hover:bg-[#0066cc] hover:border-[#0066cc] transition-all duration-300">
+                            <div key={i} className="bg-white p-8 rounded-24 border border-[#e2e8f0] flex flex-col items-center text-center group hover:bg-[#0066cc] hover:border-[#0066cc] transition-all duration-300 industry-card">
                                 <div className="text-[#0066cc] group-hover:text-white mb-4 transition-colors">
                                     {ind.icon}
                                 </div>
@@ -287,20 +552,20 @@ const [activeIndex, setActiveIndex] = useState(null);
                             </div>
                         ))}
                     </div>
-                    <p className="text-center mt-12 text-[18px] font-bold text-[#0066cc] italic">
+                    <p className="text-center mt-12 text-[18px] font-bold text-[#0066cc] italic industry-footer">
                         Each campaign is custom-built — no recycled templates, no generic playbooks.
                     </p>
                 </div>
             </section >
 
             {/* Case Studies */}
-            < section className="py-24 bg-white" >
+            <section className="py-24 bg-white" >
                 <div className="container px-6 mx-auto">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16 casestudy-header">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-4">Featured Case Studies</h2>
                         <p className="text-[#64748b]">Real impact across diverse business objectives</p>
                     </div>
-                    <div className="grid lg:grid-cols-2 gap-12">
+                    <div className="grid lg:grid-cols-2 gap-12 casestudy-grid">
                         {/* {caseStudies.map((caseStudy, i) => (
                             <div key={i} className="bg-white rounded-32 border border-[#e2e8f0] overflow-hidden hover:shadow-2xl transition-all duration-500 group">
                                 <div className="p-8 md:p-12">
@@ -341,61 +606,61 @@ const [activeIndex, setActiveIndex] = useState(null);
 
 
 
-{caseStudies.map((caseStudy, i) => {
-  const isActive = activeIndex === i;
-  const isInactive = activeIndex !== null && activeIndex !== i;
+                        {caseStudies.map((caseStudy, i) => {
+                            const isActive = activeIndex === i;
+                            const isInactive = activeIndex !== null && activeIndex !== i;
 
-  return (
-    <motion.div
-      key={i}
-      onMouseEnter={() => setActiveIndex(i)}
-      onMouseLeave={() => setActiveIndex(null)}
-      animate={{
-        scale: isActive ? 1.08 : 1,
-        opacity: isInactive ? 0.5 : 1,
-        y: isActive ? -10 : 0,
-      }}
-      transition={{ duration: 0.4 }}
-      className="relative bg-white rounded-32 border border-[#e2e8f0] 
-                 overflow-hidden hover:shadow-2xl 
-                 transition-all duration-500"
-      style={{ zIndex: isActive ? 20 : 1 }}
-    >
-     <div className="p-8 md:p-12">
-                                    <div className="flex items-center gap-4 mb-6">
-                                        <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-xl">
-                                            {i + 1}
+                            return (
+                                <motion.div
+                                    key={i}
+                                    onMouseEnter={() => setActiveIndex(i)}
+                                    onMouseLeave={() => setActiveIndex(null)}
+                                    animate={{
+                                        scale: isActive ? 1.08 : 1,
+                                        opacity: isInactive ? 0.5 : 1,
+                                        y: isActive ? -10 : 0,
+                                    }}
+                                    transition={{ duration: 0.4 }}
+                                    className="relative bg-white rounded-32 border border-[#e2e8f0] 
+                                     overflow-hidden hover:shadow-2xl 
+                                     transition-all duration-500 casestudy-card"
+                                    style={{ zIndex: isActive ? 20 : 1 }}
+                                >
+                                    <div className="p-8 md:p-12">
+                                        <div className="flex items-center gap-4 mb-6">
+                                            <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-xl">
+                                                {i + 1}
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-[#0f172a] group-hover:text-[#0066cc] transition-colors">{caseStudy.title}</h3>
                                         </div>
-                                        <h3 className="text-2xl font-bold text-[#0f172a] group-hover:text-[#0066cc] transition-colors">{caseStudy.title}</h3>
-                                    </div>
-                                    <div className="space-y-6 mb-8">
-                                        <div>
-                                            <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600">Objective</span>
-                                            <p className="text-[#0f172a] font-medium mt-1">{caseStudy.objective}</p>
+                                        <div className="space-y-6 mb-8">
+                                            <div>
+                                                <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600">Objective</span>
+                                                <p className="text-[#0f172a] font-medium mt-1">{caseStudy.objective}</p>
+                                            </div>
+                                            <div>
+                                                <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600">Strategy</span>
+                                                <p className="text-[#0f172a] font-medium mt-1">{caseStudy.strategy}</p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600">Strategy</span>
-                                            <p className="text-[#0f172a] font-medium mt-1">{caseStudy.strategy}</p>
+                                        <div className="bg-blue-50 p-6 rounded-24 mb-6">
+                                            <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600 mb-4 block">Impact</span>
+                                            <ul className="space-y-3">
+                                                {caseStudy.impact.map((point, idx) => (
+                                                    <li key={idx} className="flex gap-3 text-[15px] font-bold text-[#0f172a]">
+                                                        <CheckCircle2 size={18} className="text-green-500 shrink-0 mt-0.5" />
+                                                        {point}
+                                                    </li>
+                                                ))}
+                                            </ul>
                                         </div>
+                                        <p className="text-[#64748b] leading-relaxed text-[15px]">
+                                            {caseStudy.desc}
+                                        </p>
                                     </div>
-                                    <div className="bg-blue-50 p-6 rounded-24 mb-6">
-                                        <span className="text-[12px] uppercase tracking-wider font-bold text-blue-600 mb-4 block">Impact</span>
-                                        <ul className="space-y-3">
-                                            {caseStudy.impact.map((point, idx) => (
-                                                <li key={idx} className="flex gap-3 text-[15px] font-bold text-[#0f172a]">
-                                                    <CheckCircle2 size={18} className="text-green-500 shrink-0 mt-0.5" />
-                                                    {point}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                    <p className="text-[#64748b] leading-relaxed text-[15px]">
-                                        {caseStudy.desc}
-                                    </p>
-                                </div>
-    </motion.div>
-  );
-})}
+                                </motion.div>
+                            );
+                        })}
 
 
 
@@ -406,15 +671,15 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* Working Model */}
-            < section className="py-24 bg-[#0f172a] text-white" >
+            <section className="py-24 bg-[#0f172a] text-white" >
                 <div className="container px-6 mx-auto">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16 model-header">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-white mb-4">Our Working Model</h2>
                         <p className="text-white/60">A structured approach to consistent growth</p>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-8 md:gap-0">
+                    <div className="flex flex-wrap justify-center gap-8 md:gap-0 model-grid">
                         {model.map((step, i) => (
-                            <div key={i} className="flex-1 min-w-[240px] px-6 relative group">
+                            <div key={i} className="flex-1 min-w-[240px] px-6 relative group model-step">
                                 <div className="mb-6">
                                     <span className="text-[48px] font-black text-white group-hover:text-blue-500/30 transition-colors duration-500 leading-none">
                                         {step.step}
@@ -434,13 +699,13 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* Tools & Technologies We Leverage */}
-            < section className="py-24 bg-white" >
+            <section className="py-24 bg-white" >
                 <div className="container px-6 mx-auto">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16 tools-header">
                         <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-4">Tools & Technologies We Leverage</h2>
                         <p className="text-[#64748b]">Technology empowers us — but strategy drives results.</p>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 tools-grid">
                         {[
                             { name: "Google Analytics 4", icon: <BarChart3 /> },
                             { name: "Google Tag Manager", icon: <Settings /> },
@@ -449,7 +714,7 @@ const [activeIndex, setActiveIndex] = useState(null);
                             { name: "HubSpot & CRM Automations", icon: <Activity /> },
                             { name: "AI-powered Content & Predictive Analytics", icon: <Brain /> }
                         ].map((tool, i) => (
-                            <div key={i} className="flex flex-col items-center gap-4 text-center">
+                            <div key={i} className="flex flex-col items-center gap-4 text-center tool-item">
                                 <div className="p-6 bg-blue-50 text-blue-600 rounded-full transition-transform hover:scale-110">
                                     {tool.icon}
                                 </div>
@@ -461,15 +726,15 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* What Makes Our Portfolio Different? */}
-            < section className="py-24 bg-[#0f172a] text-white" >
+            <section className="py-24 bg-[#0f172a] text-white" >
                 <div className="container px-6 mx-auto">
-                    <div className="max-w-4xl mx-auto text-center mb-16">
+                    <div className="max-w-4xl mx-auto text-center mb-16 diff-header">
                         <h2 className="text-[32px] md:text-[42px] font-bold mb-6 text-white">What Makes Our Portfolio Different?</h2>
                         <p className="text-white/70 text-lg">
                             Unlike agencies that focus only on impressions and clicks, Adkryoss managed by <span className="text-white font-bold">Clink Consultancy Services Private Limited</span> focuses on revenue impact and scalable digital assets.
                         </p>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-6">
+                    <div className="flex flex-wrap justify-center gap-6 diff-grid">
                         {[
                             "ROI-Focused Campaign Architecture",
                             "Conversion-Driven Design Thinking",
@@ -477,7 +742,7 @@ const [activeIndex, setActiveIndex] = useState(null);
                             "Performance Reporting Transparency",
                             "Continuous Testing & Optimization"
                         ].map((item, i) => (
-                            <div key={i} className="flex items-center gap-4 p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-blue-600/20 transition-all">
+                            <div key={i} className="flex items-center gap-4 p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-blue-600/20 transition-all diff-item">
                                 <CheckCircle2 className="text-green-400 shrink-0" size={24} />
                                 <span className="font-bold text-[17px]">{item}</span>
                             </div>
@@ -487,10 +752,10 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* Results That Matter */}
-            < section className="py-24 bg-[#f8fafc]" >
+            <section className="py-24 bg-[#f8fafc]" >
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
+                        <div className="results-content">
                             <h2 className="text-[32px] md:text-[42px] font-bold text-[#0f172a] mb-6">Results That Matter</h2>
                             <p className="text-[18px] text-[#475569] leading-relaxed mb-8">
                                 Numbers define credibility. Strategy defines sustainability. We don’t chase short-term spikes. We build long-term digital authority.
@@ -512,14 +777,14 @@ const [activeIndex, setActiveIndex] = useState(null);
                                 ))}
                             </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-6">
+                        <div className="grid grid-cols-2 gap-6 stats-grid">
                             {[
                                 { label: "Growth Delivered", val: "250%+" },
                                 { label: "Lower CPL", val: "45%" },
                                 { label: "ROAS Range", val: "4X-8X" },
                                 { label: "Client Retentions", val: "95%" }
                             ].map((stat, i) => (
-                                <div key={i} className="bg-white p-8 rounded-32 border border-[#e2e8f0] shadow-sm hover:shadow-xl transition-all">
+                                <div key={i} className="bg-white p-8 rounded-32 border border-[#e2e8f0] shadow-sm hover:shadow-xl transition-all stat-card">
                                     <div className="text-3xl font-bold text-[#0066cc] mb-1">{stat.val}</div>
                                     <div className="text-[14px] font-bold text-[#0f172a] opacity-60 uppercase tracking-wider">{stat.label}</div>
                                 </div>
@@ -530,8 +795,8 @@ const [activeIndex, setActiveIndex] = useState(null);
             </section >
 
             {/* Let’s Build the Next Success Story */}
-            < section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white" >
-                <div className="container px-6 mx-auto">
+            <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white cta-section" >
+                <div className="container px-6 mx-auto cta-section-content">
                     <h2 className="text-[32px] md:text-[48px] font-bold mb-6 text-white leading-tight">
                         Let’s Build the Next Success Story
                     </h2>

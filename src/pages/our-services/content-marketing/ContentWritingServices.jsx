@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     FileText,
     Target,
@@ -27,8 +29,200 @@ import {
     Layout,
     Cpu
 } from 'lucide-react';
+
+gsap.registerPlugin(ScrollTrigger);
 import contentwriting from "../../../assets/content-marketing/contentwritinghero.png";
 const ContentWritingServices = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whySectionRef = useRef(null);
+    const expertiseCardsRef = useRef([]);
+    const approachStepsRef = useRef([]);
+    const industryItemsRef = useRef([]);
+    const diffCardsRef = useRef([]);
+    const authorityBlockRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Blur and Fade
+            gsap.fromTo(heroContentRef.current,
+                { filter: "blur(10px)", opacity: 0, x: -50 },
+                {
+                    filter: "blur(0px)",
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { opacity: 0, scale: 0.8 },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    delay: 0.2,
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Why Content - Staggered Slide In
+            gsap.fromTo(".why-text",
+                { y: 30, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    stagger: 0.2,
+                    duration: 0.6,
+                    scrollTrigger: {
+                        trigger: whySectionRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Expertise Cards - Spiral Entrance (Rotate + Scale)
+            expertiseCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { rotation: 15, scale: 0.8, opacity: 0, y: 50 },
+                    {
+                        rotation: 0,
+                        scale: 1,
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.7,
+                        delay: i * 0.1,
+                        ease: "back.out(1.2)",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Approach Steps - Slide from Left
+            approachStepsRef.current.forEach((step, i) => {
+                gsap.fromTo(step,
+                    { x: -100, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Industry Items - Spring Pop
+            industryItemsRef.current.forEach((item, i) => {
+                gsap.fromTo(item,
+                    { scale: 0, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.05,
+                        ease: "elastic.out(1, 0.5)",
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Differentiators - Flip Effect
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { rotationY: 90, opacity: 0 },
+                    {
+                        rotationY: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Authority Block - Smooth Slide Up
+            gsap.fromTo(authorityBlockRef.current,
+                { y: 100, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: authorityBlockRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Floating Hero Image
+            gsap.to(heroImageRef.current, {
+                y: 15,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            scale: isEnter ? 1.05 : 1,
+            y: isEnter ? -10 : 0,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                scale: isEnter ? 1.2 : 1,
+                rotate: isEnter ? 15 : 0,
+                duration: 0.3
+            });
+        }
+    };
     const expertise = [
         {
             icon: <Search size={32} />,
@@ -167,9 +361,9 @@ const ContentWritingServices = () => {
     ];
 
     return (
-        <div className="bg-white text-slate-900">
+        <div ref={pageRef} className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
-            {/* <section
+             {/* <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
@@ -178,6 +372,8 @@ const ContentWritingServices = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                   
                     <div className="text-left relative z-10 text-white">
+              
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Content Writing Services
                         </h1>
@@ -193,22 +389,24 @@ const ContentWritingServices = () => {
 
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                    
                     <div className="flex justify-center md:justify-end relative z-10">
+                    
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={contentwriting}
@@ -218,7 +416,7 @@ const ContentWritingServices = () => {
                         </div>
                     </div>
                 </div>
-            </section> */}
+            </section>  */}
 
 
 <section
@@ -234,7 +432,7 @@ const ContentWritingServices = () => {
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
     {/* LEFT CONTENT */}
-    <div className="text-left max-w-[600px] space-y-6">
+    <div ref={heroContentRef} className="text-left max-w-[600px] space-y-6">
 
       <h2 className="text-4xl md:text-5xl font-bold leading-tight">
         <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
@@ -280,7 +478,7 @@ const ContentWritingServices = () => {
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end relative z-10">
 
-      <div className="relative group w-full max-w-[400px]">
+      <div ref={heroImageRef} className="relative group w-full max-w-[400px]">
 
         {/* Image Glow */}
         <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
@@ -300,18 +498,18 @@ const ContentWritingServices = () => {
 
 
             {/* Why Content is Growth Section */}
-            <section className="pt-32 pb-24 bg-slate-50">
+            <section ref={whySectionRef} className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">
+                        <h2 className="why-text text-[36px] font-bold text-slate-900 mb-5 leading-tight">
                             Why Content is the Growth Engine of Modern Brands
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
+                        <p className="why-text text-[16px] md:text-[18px] mb-6 font-medium">
                             In today’s digital economy, content is not just communication—it’s infrastructure.
                         </p>
                     </div>
 
-                    <div className="max-w-4xl mx-auto">
+                    <div className="why-text max-w-4xl mx-auto">
                         <div className="bg-white p-10 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-slate-100 mb-12 transition-all duration-300 hover:shadow-xl">
                             <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8] font-medium">
                                 It influences search visibility, buyer trust, conversion rates, retention, and even investor perception. Businesses that treat content as a strategic asset dominate search results and customer conversations.
@@ -326,7 +524,7 @@ const ContentWritingServices = () => {
             </section>
 
             {/* Expertise Section */}
-            <section className="py-24 bg-white">
+            <section id="services" className="py-24 bg-white">
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">Our Content Writing Expertise</h2>
@@ -337,9 +535,15 @@ const ContentWritingServices = () => {
 
                     <div className="flex flex-wrap justify-center gap-10">
                         {expertise.map((item, index) => (
-                            <div key={index} className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 w-full md:w-[calc(33.333%-27px)] min-w-[300px] max-w-[400px] grow cursor-pointer group hover:border-[#0066CC] hover:-translate-y-3 hover:shadow-[0_20px_40_rgba(0,102,204,0.15)] flex flex-col">
+                            <div
+                                key={index}
+                                ref={el => expertiseCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 w-full md:w-[calc(33.333%-27px)] min-w-[300px] max-w-[400px] grow cursor-pointer group hover:border-[#0066CC] hover:shadow-[0_20px_40_rgba(0,102,204,0.15)] flex flex-col"
+                            >
                                 <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-16 h-16 bg-gradient-to-br from-[#0066CC] to-[#004999] rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                                    <div className="card-icon w-16 h-16 bg-gradient-to-br from-[#0066CC] to-[#004999] rounded-xl flex items-center justify-center text-white">
                                         {item.icon}
                                     </div>
                                     <span className="text-4xl font-semibold text-slate-100 group-hover:text-blue-50 transition-colors">0{index + 1}</span>
@@ -379,8 +583,12 @@ const ContentWritingServices = () => {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {steps.map((item, index) => (
-                            <div key={index} className="relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                                <div className="text-blue-500 font-extrabold text-xl mb-4 group-hover:scale-110 transition-transform">{item.step}</div>
+                            <div
+                                key={index}
+                                ref={el => approachStepsRef.current[index] = el}
+                                className="relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group cursor-default"
+                            >
+                                <div className="text-blue-500 font-extrabold text-xl mb-4 transition-transform group-hover:translate-x-2">{item.step}</div>
                                 <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white group-hover:text-blue-400 transition-colors leading-tight">
                                     {item.title}
                                 </h3>
@@ -411,7 +619,11 @@ const ContentWritingServices = () => {
                         </p>
                         <div className="flex flex-wrap justify-center gap-4 mb-12">
                             {industries.map((industry, index) => (
-                                <div key={index} className="px-6 py-4 bg-slate-50 border-2 border-slate-100 rounded-xl font-bold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1">
+                                <div
+                                    key={index}
+                                    ref={el => industryItemsRef.current[index] = el}
+                                    className="px-6 py-4 bg-slate-50 border-2 border-slate-100 rounded-xl font-bold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 cursor-default"
+                                >
                                     {industry}
                                 </div>
                             ))}
@@ -431,8 +643,14 @@ const ContentWritingServices = () => {
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {differentiators.map((item, index) => (
-                            <div key={index} className="bg-white p-8 rounded-2xl shadow-[0_4px_15_rgba(0,0,0,0.05)] border border-slate-100 hover:shadow-xl transition-all duration-300 group text-center">
-                                <div className="w-14 h-14 bg-blue-50 text-[#0066CC] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0066CC] group-hover:text-white transition-all">
+                            <div
+                                key={index}
+                                ref={el => diffCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white p-8 rounded-2xl shadow-[0_4px_15_rgba(0,0,0,0.05)] border border-slate-100 hover:shadow-xl transition-all duration-300 group text-center cursor-default"
+                            >
+                                <div className="card-icon w-14 h-14 bg-blue-50 text-[#0066CC] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0066CC] group-hover:text-white transition-all">
                                     {item.icon}
                                 </div>
                                 <h3 className="text-xl font-semibold text-slate-900 mb-4 leading-tight">{item.title}</h3>
@@ -458,7 +676,7 @@ const ContentWritingServices = () => {
             {/* Authority Section */}
             <section className="py-24 bg-white overflow-hidden">
                 <div className="container px-6">
-                    <div className="max-w-5xl mx-auto rounded-[40px] bg-gradient-to-br from-[#0066CC] to-[#004999] p-12 text-white relative shadow-2xl">
+                    <div ref={authorityBlockRef} className="max-w-5xl mx-auto rounded-[40px] bg-gradient-to-br from-[#0066CC] to-[#004999] p-12 text-white relative shadow-2xl">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
                         <h2 className="text-[36px] font-bold mb-10 leading-tight">Content That Builds Authority, Not Just Traffic</h2>
                         <div className="grid md:grid-cols-2 gap-12 items-center">

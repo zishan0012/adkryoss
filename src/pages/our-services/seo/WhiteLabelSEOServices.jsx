@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     Users,
     Shield,
@@ -15,10 +17,217 @@ import {
     Link2,
     MapPin,
     Cpu,
-    TrendingUp
+    TrendingUp,
+    Target
 } from 'lucide-react';
 import whitelevelseoservices from '../../../assets/SEO/whitelevelseohero.jpeg';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const WhiteLabelSEOServices = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whyRef = useRef(null);
+    const frameworkCardsRef = useRef([]);
+    const audiencesRef = useRef(null);
+    const partnerCardsRef = useRef([]);
+    const modelStepsRef = useRef([]);
+    const techContentRef = useRef(null);
+    const resultsCardsRef = useRef([]);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Manifesting Force
+            gsap.fromTo(heroContentRef.current,
+                { y: 30, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { scale: 1.1, opacity: 0, filter: "blur(20px)" },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    filter: "blur(0px)",
+                    duration: 1.5,
+                    ease: "power2.inOut",
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Why Section - Precise Assembly
+            gsap.fromTo(whyRef.current,
+                { opacity: 0 },
+                {
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: whyRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Framework - Background Manifestation
+            frameworkCardsRef.current.forEach((card, i) => {
+                if (card) {
+                    gsap.fromTo(card,
+                        { y: 40, opacity: 0 },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.8,
+                            delay: i * 0.1,
+                            scrollTrigger: {
+                                trigger: card,
+                                start: "top 90%",
+                                end: "bottom 10%",
+                                toggleActions: "play reverse play reverse"
+                            }
+                        }
+                    );
+                }
+            });
+
+            // Audiences
+            if (audiencesRef.current) {
+                gsap.fromTo(audiencesRef.current,
+                    { opacity: 0 },
+                    {
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: audiencesRef.current,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            }
+
+            // Partner
+            partnerCardsRef.current.forEach((card, i) => {
+                if (card) {
+                    gsap.fromTo(card,
+                        { y: 30, opacity: 0 },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.6,
+                            delay: i * 0.1,
+                            scrollTrigger: {
+                                trigger: card,
+                                start: "top 90%",
+                                end: "bottom 10%",
+                                toggleActions: "play reverse play reverse"
+                            }
+                        }
+                    );
+                }
+            });
+
+            // Model
+            modelStepsRef.current.forEach((step, i) => {
+                if (step) {
+                    gsap.fromTo(step,
+                        { y: 20, opacity: 0 },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.5,
+                            delay: i * 0.1,
+                            scrollTrigger: {
+                                trigger: step,
+                                start: "top 90%",
+                                end: "bottom 10%",
+                                toggleActions: "play reverse play reverse"
+                            }
+                        }
+                    );
+                }
+            });
+
+            // Tech
+            if (techContentRef.current) {
+                gsap.fromTo(techContentRef.current,
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: techContentRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            }
+
+            // Results
+            resultsCardsRef.current.forEach((card, i) => {
+                if (card) {
+                    gsap.fromTo(card,
+                        { y: 30, opacity: 0 },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.8,
+                            delay: i * 0.1,
+                            scrollTrigger: {
+                                trigger: card,
+                                start: "top 90%",
+                                end: "bottom 10%",
+                                toggleActions: "play reverse play reverse"
+                            }
+                        }
+                    );
+                }
+            });
+
+            // CTA
+            if (ctaRef.current) {
+                gsap.fromTo(ctaRef.current,
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: ctaRef.current,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            }
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
     const framework = [
         {
             icon: <Search size={32} />,
@@ -67,7 +276,7 @@ const WhiteLabelSEOServices = () => {
     ];
 
     return (
-        <div className="bg-white text-slate-900">
+        <div ref={pageRef} className="bg-white text-slate-900">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -77,7 +286,7 @@ const WhiteLabelSEOServices = () => {
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10 text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             White Label SEO Services
                         </h1>
@@ -91,32 +300,23 @@ const WhiteLabelSEOServices = () => {
                             Adkryoss managed by <span className="font-bold text-white">Clink Consultancy Services Private Limited</span> delivers fully managed White Label SEO solutions for agencies and consultants who want to scale revenue without operational complexity.
                         </p>
 
-                        {/* <div className="flex gap-5 flex-wrap">
-                            <div className="flex items-center gap-2 bg-white/5 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-sm">
-                                <CheckCircle2 size={20} className="text-black" /> <span className="text-white font-medium">100% Confidential</span>
-                            </div>
-                            <div className="flex items-center gap-2 bg-white/5 px-5 py-2.5 rounded-full border border-white/10 backdrop-blur-sm">
-                                <CheckCircle2 size={20} className="text-black" /> <span className="text-white font-medium">Scalable Models</span>
-                            </div>
-                        </div> */}
-
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
-                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                            </Link>
+                            <Link
+                                to="#services"
+                                className="border-2 border-[#0066CC] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={whitelevelseoservices}
@@ -129,7 +329,7 @@ const WhiteLabelSEOServices = () => {
             </section>
 
             {/* Why Choose Section */}
-            <section className="pt-32 pb-24 bg-slate-50">
+            <section ref={whyRef} className="pt-32 pb-24 bg-slate-50">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
@@ -164,14 +364,14 @@ const WhiteLabelSEOServices = () => {
             </section>
 
             {/* Framework Section */}
-            <section className="py-24 bg-white">
+            <section id="services" className="py-24 bg-white">
                 <div className="container">
                     <h2 className="text-[36px] font-bold text-center mb-16 text-slate-900 leading-tight">
                         Our White Label SEO Framework
                     </h2>
                     <div className="flex flex-wrap justify-center gap-8">
                         {framework.map((step, i) => (
-                            <div key={i} className="bg-white p-10 border border-slate-100 rounded-2xl transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:border-[#0066CC] group w-full md:w-[calc(33.333%-22px)] min-w-[320px] max-w-[400px]">
+                            <div key={i} ref={el => frameworkCardsRef.current[i] = el} className="bg-white p-10 border border-slate-100 rounded-2xl transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:border-[#0066CC] group w-full md:w-[calc(33.333%-22px)] min-w-[320px] max-w-[400px]">
                                 <div className="text-[#0066CC] mb-6 group-hover:scale-110 transition-transform">{step.icon}</div>
                                 <h3 className="text-[22px] font-semibold mb-6 text-slate-900 group-hover:text-[#0066CC] transition-colors">{step.title}</h3>
                                 <ul className="list-none p-0 space-y-4">
@@ -189,7 +389,7 @@ const WhiteLabelSEOServices = () => {
             </section>
 
             {/* Who We Work With */}
-            <section className="py-24 bg-slate-900 text-white">
+            <section ref={audiencesRef} className="py-24 bg-slate-900 text-white">
                 <div className="container text-center">
                     <h2 className="text-[36px] font-bold mb-12 text-white leading-tight">Who We Work With</h2>
                     <div className="flex flex-wrap justify-center gap-5">
@@ -213,7 +413,7 @@ const WhiteLabelSEOServices = () => {
                             { title: "Dedicated Account Managers", desc: "Dedicated strategist to streamline communication." },
                             { title: "100% Confidentiality", desc: "Strict NDA-backed operations. Complete brand invisibility." }
                         ].map((item, i) => (
-                            <div key={i} className="flex-1 min-w-[280px] max-w-[350px] p-10 bg-slate-50 rounded-3xl border border-transparent transition-all duration-300 hover:bg-white hover:border-[#0066CC] hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-900/10 group text-center">
+                            <div key={i} ref={el => partnerCardsRef.current[i] = el} className="flex-1 min-w-[280px] max-w-[350px] p-10 bg-slate-50 rounded-3xl border border-transparent transition-all duration-300 hover:bg-white hover:border-[#0066CC] hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-900/10 group text-center">
                                 <h3 className="text-[20px] font-semibold mb-4 text-slate-900 group-hover:text-[#0066CC] transition-colors">{item.title}</h3>
                                 <p className="text-slate-600 text-[15px] leading-relaxed m-0 font-medium">{item.desc}</p>
                             </div>
@@ -237,7 +437,7 @@ const WhiteLabelSEOServices = () => {
                             { step: "Branded Reports", desc: "You receive white-labeled reports" },
                             { step: "Client Results", desc: "Client sees results — under your brand" }
                         ].map((item, i, arr) => (
-                            <div key={i} className="flex items-center">
+                            <div key={i} ref={el => modelStepsRef.current[i] = el} className="flex items-center">
                                 <div className="flex flex-col items-center text-center p-6 w-[180px]">
                                     <div className="w-14 h-14 rounded-full bg-[#0066CC] text-white flex items-center justify-center font-bold text-lg mb-4 shrink-0 shadow-lg shadow-blue-600/20">
                                         {i + 1}
@@ -261,7 +461,7 @@ const WhiteLabelSEOServices = () => {
             <section className="py-24 bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
+                        <div ref={techContentRef}>
                             <h2 className="text-[36px] font-bold text-slate-900 mb-6 leading-tight">
                                 Technology & Tools We Leverage
                             </h2>
@@ -339,7 +539,7 @@ const WhiteLabelSEOServices = () => {
                             { title: "Long-Term Ranking Stability", desc: "Protection against algorithm updates and competitors." },
                             { title: "Increased Recurring Revenue", desc: "Boost your agency's MRR with higher-value SEO packages." }
                         ].map((item, i) => (
-                            <div key={i} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-[#0066CC] group">
+                            <div key={i} ref={el => resultsCardsRef.current[i] = el} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-[#0066CC] group">
                                 <CheckCircle2 size={24} className="text-[#0066CC] mb-4 group-hover:scale-110 transition-transform" />
                                 <h4 className="text-[18px] font-bold text-slate-900 mb-2">{item.title}</h4>
                                 <p className="text-slate-600 text-[14px] leading-relaxed m-0 font-medium">{item.desc}</p>
@@ -354,10 +554,8 @@ const WhiteLabelSEOServices = () => {
                 </div>
             </section>
 
-
-
             {/* CTA Section */}
-            <section className="py-24 text-center bg-gradient-to-br from-[#0066CC] to-[#004999] text-white">
+            <section ref={ctaRef} className="py-24 text-center bg-gradient-to-br from-[#0066CC] to-[#004999] text-white">
                 <div className="container">
                     <h2 className="text-[36px] font-bold mb-6 text-white leading-tight">
                         Ready to Scale Without Expanding Your Team?

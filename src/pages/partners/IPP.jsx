@@ -1,6 +1,7 @@
-
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     Briefcase,
     Globe,
@@ -29,7 +30,101 @@ import {
 } from 'lucide-react';
 import approach from "../../assets/approach.jpg";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const IPP = () => {
+    const mainRef = useRef(null);
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            // Hero
+            gsap.fromTo(".hero-content", { opacity: 0, x: -50 }, {
+                opacity: 1, x: 0, duration: 1, delay: 0.2,
+                scrollTrigger: { trigger: ".hero-content", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".hero-image", { opacity: 0, scale: 0.8 }, {
+                opacity: 1, scale: 1, duration: 1, delay: 0.4,
+                scrollTrigger: { trigger: ".hero-image", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // What is IPP
+            gsap.fromTo(".what-is-ipp-header", { opacity: 0, y: 30 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".what-is-ipp-header", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Why Partner
+            gsap.fromTo(".why-partner-card", { opacity: 0, y: 30 }, {
+                opacity: 1, y: 0, duration: 0.6, stagger: 0.1,
+                scrollTrigger: { trigger: ".why-partner-grid", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Services
+            gsap.fromTo(".service-card", { opacity: 0, y: 30 }, {
+                opacity: 1, y: 0, duration: 0.6, stagger: 0.1,
+                scrollTrigger: { trigger: ".services-grid", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Who can become
+            gsap.fromTo(".who-can-content", { opacity: 0, x: -50 }, {
+                opacity: 1, x: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".who-can-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // Steps
+            gsap.fromTo(".step-card", { opacity: 0, y: 30 }, {
+                opacity: 1, y: 0, duration: 0.6, stagger: 0.1,
+                scrollTrigger: { trigger: ".steps-grid", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+
+            // IPP Differences
+            gsap.fromTo(".ipp-differences-header", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".ipp-differences-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".ipp-difference-item", { opacity: 0, x: -20 }, {
+                opacity: 1, x: 0, duration: 0.5, stagger: 0.1,
+                scrollTrigger: { trigger: ".ipp-differences-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // IPP Tech Advantage
+            gsap.fromTo(".ipp-tech-advantage-header", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".ipp-tech-advantage-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".ipp-tech-item", { opacity: 0, x: 20 }, {
+                opacity: 1, x: 0, duration: 0.5, stagger: 0.1,
+                scrollTrigger: { trigger: ".ipp-tech-advantage-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // IPP Revenue
+            gsap.fromTo(".ipp-revenue-header", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".ipp-revenue-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".ipp-revenue-item", { opacity: 0, scale: 0.95 }, {
+                opacity: 1, scale: 1, duration: 1,
+                scrollTrigger: { trigger: ".ipp-revenue-section", start: "top 75%", toggleActions: "play reverse play reverse" }
+            });
+
+            // IPP Support
+            gsap.fromTo(".ipp-support-header", { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: { trigger: ".ipp-support-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+            gsap.fromTo(".ipp-support-tag", { opacity: 0, scale: 0.8 }, {
+                opacity: 1, scale: 1, duration: 0.5, stagger: 0.1,
+                scrollTrigger: { trigger: ".ipp-support-section", start: "top 80%", toggleActions: "play reverse play reverse" }
+            });
+
+            // CTA
+            gsap.fromTo(".cta-content", { opacity: 0, scale: 0.9 }, {
+                opacity: 1, scale: 1, duration: 1,
+                scrollTrigger: { trigger: ".cta-section", start: "top 85%", toggleActions: "play reverse play reverse" }
+            });
+        }, mainRef);
+        return () => ctx.revert();
+    }, []);
     const services = [
         {
             icon: <Zap size={32} />,
@@ -140,10 +235,11 @@ const IPP = () => {
     ];
 
     return (
-        <div className="bg-white text-slate-900">
+        <div className="bg-white text-slate-900" ref={mainRef}>
             {/* Hero Section */}
             
             {/* <section c className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+            <section className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
@@ -153,6 +249,8 @@ const IPP = () => {
                     <div className="grid md:grid-cols-2 items-center gap-12">
                       
                         <div className="text-left animate-fadeInLeft">
+                       
+                        <div className="text-left hero-content">
                             <h1 className="text-[36px] md:text-[48px] font-bold mb-4 leading-tight">
                                 Become Our <span className="text-blue-200">IPP</span>
                             </h1>
@@ -175,6 +273,8 @@ const IPP = () => {
 
                         
                         <div className="flex justify-center md:justify-end relative z-10">
+                       
+                        <div className="flex justify-center md:justify-end relative z-10 hero-image">
                             <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                                 <img
                                     src={approach}
@@ -293,7 +393,7 @@ const IPP = () => {
             {/* What is IPP Section */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-4xl mx-auto text-center mb-16">
+                    <div className="max-w-4xl mx-auto text-center mb-16 what-is-ipp-header">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-6">What is IPP?</h2>
                         <p className="text-[18px] text-slate-700 leading-relaxed mb-6">
                             IPP (Independent Partner Program) is a strategic partnership model designed for ambitious professionals, consultants, agencies, and entrepreneurs who want to run their own digital marketing business with complete operational support.
@@ -316,7 +416,7 @@ const IPP = () => {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 why-partner-grid">
                         {[
                             { text: "A fully operational digital marketing backend", icon: <Cpu size={24} /> },
                             { text: "Access to certified strategists and specialists", icon: <Award size={24} /> },
@@ -325,7 +425,7 @@ const IPP = () => {
                             { text: "Structured growth support", icon: <Rocket size={24} /> },
                             { text: "White-label delivery capabilities", icon: <ShieldCheck size={24} /> }
                         ].map((item, index) => (
-                            <div key={index} className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-blue-200 transition-all group">
+                            <div key={index} className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-blue-200 transition-all group why-partner-card">
                                 <div className="w-12 h-12 bg-blue-50 text-[#0066cc] rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#0066cc] group-hover:text-white transition-colors">
                                     {item.icon}
                                 </div>
@@ -348,9 +448,9 @@ const IPP = () => {
                         <h2 className="text-[36px] font-bold text-slate-900 mb-4">Our Core Service Ecosystem</h2>
                         <p className="text-[18px] text-slate-600">As an IPP partner, you can offer a comprehensive suite of digital growth solutions to your clients.</p>
                     </div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 services-grid">
                         {services.map((service, index) => (
-                            <div key={index} className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-[#0066cc] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                            <div key={index} className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-[#0066cc] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group service-card">
                                 <div className="w-14 h-14 bg-gradient-to-br from-[#0066cc] to-[#3b82f6] text-white rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
                                     {service.icon}
                                 </div>
@@ -368,11 +468,11 @@ const IPP = () => {
             </section>
 
             {/* Who can become an IPP */}
-            <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+            <section className="py-24 bg-slate-900 text-white relative overflow-hidden who-can-section">
                 <div className="absolute inset-0 bg-pattern opacity-10"></div>
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
+                        <div className="who-can-content">
                             <h2 className="text-[36px] font-bold mb-6 leading-tight text-white">Who Can Become an IPP?</h2>
                             <p className="text-[18px] text-blue-200 mb-8">The program is built for growth-oriented individuals and organizations such as:</p>
                             <ul className="space-y-4">
@@ -421,9 +521,9 @@ const IPP = () => {
                         <p className="text-[18px] text-slate-600">This structured framework ensures you focus on growth, not operational chaos.</p>
                     </div>
 
-                    <div className="grid md:grid-cols-4 gap-8">
+                    <div className="grid md:grid-cols-4 gap-8 steps-grid">
                         {steps.map((step, index) => (
-                            <div key={index} className="relative p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#0066cc] hover:shadow-lg transition-all group">
+                            <div key={index} className="relative p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#0066cc] hover:shadow-lg transition-all group step-card">
                                 <div className="text-sm font-bold text-blue-500 uppercase tracking-widest mb-3">{step.step}</div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-[#0066cc] transition-colors leading-tight">{step.title}</h3>
                                 <p className="text-slate-600 text-sm leading-relaxed">{step.desc}</p>
@@ -438,14 +538,16 @@ const IPP = () => {
                 <div className="container mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-16">
                         {/* Differentiators */}
-                        <div>
-                            <h2 className="text-[32px] font-bold text-slate-900 mb-8">What Makes Our IPP Different?</h2>
-                            <p className="text-slate-600 mb-8 text-lg">
-                                Unlike traditional reseller or affiliate models, this partnership is built around:
-                            </p>
+                        <div className="ipp-differences-section">
+                            <div className="ipp-differences-header">
+                                <h2 className="text-[32px] font-bold text-slate-900 mb-8">What Makes Our IPP Different?</h2>
+                                <p className="text-slate-600 mb-8 text-lg">
+                                    Unlike traditional reseller or affiliate models, this partnership is built around:
+                                </p>
+                            </div>
                             <div className="grid sm:grid-cols-2 gap-6">
                                 {differentiators.map((diff, index) => (
-                                    <div key={index} className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                                    <div key={index} className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-slate-100 ipp-difference-item">
                                         <div className="text-[#0066cc]">{diff.icon}</div>
                                         <span className="font-semibold text-slate-800">{diff.title}</span>
                                     </div>
@@ -457,12 +559,14 @@ const IPP = () => {
                         </div>
 
                         {/* Tech Stats */}
-                        <div className="bg-white p-10 rounded-2xl shadow-xl border border-slate-100">
-                            <h3 className="text-[28px] font-bold text-slate-900 mb-6">Technology & Tools Advantage</h3>
-                            <p className="text-slate-600 mb-6">Our backend ecosystem integrates:</p>
+                        <div className="bg-white p-10 rounded-2xl shadow-xl border border-slate-100 ipp-tech-advantage-section">
+                            <div className="ipp-tech-advantage-header">
+                                <h3 className="text-[28px] font-bold text-slate-900 mb-6">Technology & Tools Advantage</h3>
+                                <p className="text-slate-600 mb-6">Our backend ecosystem integrates:</p>
+                            </div>
                             <div className="space-y-4">
                                 {toolsPoints.map((tool, index) => (
-                                    <div key={index} className="flex items-center gap-3 text-lg text-slate-700">
+                                    <div key={index} className="flex items-center gap-3 text-lg text-slate-700 ipp-tech-item">
                                         <div className="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold text-sm">✓</div>
                                         {tool}
                                     </div>
@@ -479,22 +583,26 @@ const IPP = () => {
             </section>
 
             {/* Revenue & Support */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-white ipp-revenue-section">
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl mx-auto text-center mb-16">
-                        <h2 className="text-[36px] font-bold text-slate-900 mb-6">Revenue & Growth Potential</h2>
-                        <p className="text-[18px] text-slate-700 leading-relaxed mb-8">
-                            Digital marketing is one of the fastest-growing global industries. With the IPP model, you get <strong>Low operational investment, No infrastructure burden, No hiring stress, High-margin service offerings, and Unlimited scalability.</strong>
-                        </p>
-                        <p className="text-2xl font-bold text-[#0066cc] mb-12">You can build a long-term, recurring revenue business.</p>
+                        <div className="ipp-revenue-header">
+                            <h2 className="text-[36px] font-bold text-slate-900 mb-6">Revenue & Growth Potential</h2>
+                            <p className="text-[18px] text-slate-700 leading-relaxed mb-8">
+                                Digital marketing is one of the fastest-growing global industries. With the IPP model, you get <strong>Low operational investment, No infrastructure burden, No hiring stress, High-margin service offerings, and Unlimited scalability.</strong>
+                            </p>
+                        </div>
+                        <p className="text-2xl font-bold text-[#0066cc] mb-12 ipp-revenue-item">You can build a long-term, recurring revenue business.</p>
                     </div>
 
-                    <div className="bg-gradient-to-r from-[#0066cc] to-[#00458a] rounded-3xl p-12 text-white text-center">
-                        <h2 className="text-[32px] font-bold mb-8">Support & Training</h2>
-                        <p className="text-lg mb-8 opacity-90 text-white">Our IPP partners receive comprehensive backing because we grow when you grow.</p>
+                    <div className="bg-gradient-to-r from-[#0066cc] to-[#00458a] rounded-3xl p-12 text-white text-center ipp-support-section">
+                        <div className="ipp-support-header">
+                            <h2 className="text-[32px] font-bold mb-8">Support & Training</h2>
+                            <p className="text-lg mb-8 opacity-90 text-white">Our IPP partners receive comprehensive backing because we grow when you grow.</p>
+                        </div>
                         <div className="flex flex-wrap justify-center gap-4">
                             {supportPoints.map((point, index) => (
-                                <div key={index} className="px-6 py-3 bg-white/10 text-white rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all cursor-default">
+                                <div key={index} className="px-6 py-3 bg-white/10 text-white rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all cursor-default ipp-support-tag">
                                     {point}
                                 </div>
                             ))}
@@ -504,9 +612,9 @@ const IPP = () => {
             </section>
 
             {/* Final CTA */}
-            <section className="py-24 bg-slate-800 text-white text-center">
+            <section className="py-24 bg-slate-800 text-white text-center cta-section">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-3xl mx-auto">
+                    <div className="max-w-3xl mx-auto cta-content">
                         <h2 className="text-[40px] font-bold mb-6 leading-tight text-white">Your Opportunity Starts Now</h2>
                         <p className="text-[18px] text-slate-300 mb-8 max-w-2xl mx-auto">
                             If you’ve been planning to start your own digital marketing company but were unsure about operations, team management, or service delivery — this is your opportunity.

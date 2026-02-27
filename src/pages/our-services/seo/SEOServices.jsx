@@ -1,9 +1,235 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TrendingUp, Target, Zap, BarChart3, Users, Globe, Shield, Award, CheckCircle2, ArrowRight, Search, Code, FileText, Link2, MapPin, Building2, Heart, GraduationCap, ShoppingCart, Briefcase, ChevronRight, PieChart, ChevronDown, ChevronUp } from 'lucide-react';
 import seoservices from '../../../assets/SEO/seoserviceshero.jpeg';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const SEOServices = () => {
     const [openFaq, setOpenFaq] = useState(null);
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whyCardsRef = useRef([]);
+    const approachCardsRef = useRef([]);
+    const industryCardsRef = useRef([]);
+    const processCardsRef = useRef([]);
+    const diffCardsRef = useRef([]);
+    const metricsCardsRef = useRef([]);
+    const faqRef = useRef(null);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Vertical Journey
+            gsap.fromTo(heroContentRef.current,
+                { y: 50, opacity: 0, filter: "blur(10px)" },
+                {
+                    y: 0,
+                    opacity: 1,
+                    filter: "blur(0px)",
+                    duration: 1.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { y: 100, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.5,
+                    ease: "power2.out",
+                    delay: 0.3,
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Why SEO - Pop-in Reveal
+            whyCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { scale: 0.8, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Approach - Staggered Cascade
+            approachCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: i * 0.15,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Industries - Gentle Lift
+            industryCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Process - Sequential Progression
+            processCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { x: -30, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.7,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Differentiators - Side Slides
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { x: i % 2 === 0 ? -50 : 50, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Metrics - Pulses
+            metricsCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { scale: 0.9, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // FAQ & CTA
+            gsap.fromTo(faqRef.current,
+                { y: 40, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: faqRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(ctaRef.current,
+                { scale: 0.95, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ctaRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Hero Floating
+            gsap.to(heroImageRef.current, {
+                y: -15,
+                duration: 2.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            scale: isEnter ? 1.05 : 1,
+            backgroundColor: isEnter ? "rgba(59, 130, 246, 0.05)" : "white",
+            borderColor: isEnter ? "#0066CC" : "transparent",
+            duration: 0.3
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                scale: isEnter ? 1.2 : 1,
+                rotation: isEnter ? 10 : 0,
+                duration: 0.3
+            });
+        }
+    };
 
     const toggleFaq = (i) => {
         setOpenFaq(openFaq === i ? null : i);
@@ -175,12 +401,12 @@ const SEOServices = () => {
         },
         {
             question: "Is SEO better than paid ads?",
-            answer: "SEO builds sustainable, long-term traffic. Paid ads deliver instant results. The best strategy integrates both."
+            answer: "SEO builds sustainable, long-traffic. Paid ads deliver instant results. The best strategy integrates both."
         }
     ];
 
     return (
-        <div className="bg-white text-slate-900">
+        <div ref={pageRef} className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -190,7 +416,7 @@ const SEOServices = () => {
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10 text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             SEO Services
                         </h1>
@@ -205,27 +431,27 @@ const SEOServices = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={seoservices}
                                 alt="SEO Services"
-                                className="max-w-[450px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
+                                className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
                             />
                         </div>
                     </div>
@@ -251,8 +477,10 @@ const SEOServices = () => {
                             { icon: <Globe size={32} />, text: "Building search ecosystems, not isolated pages" },
                             { icon: <Zap size={32} />, text: "Optimizing for AI & search experience" }
                         ].map((item, index) => (
-                            <div key={index} className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 w-full md:w-[calc(25%-24px)] min-w-[250px] max-w-[300px] grow cursor-pointer group hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(0,102,204,0.18)] border border-transparent hover:border-[#0066CC]">
-                                <div className="text-[#0066CC] mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[5deg]">
+                            <div key={index}
+                                ref={el => whyCardsRef.current[index] = el}
+                                className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 w-full md:w-[calc(25%-24px)] min-w-[250px] max-w-[300px] grow cursor-pointer group border border-transparent">
+                                <div className="text-[#0066CC] mb-4 card-icon transition-transform duration-300">
                                     {item.icon}
                                 </div>
                                 <p className="text-[16px] font-medium text-slate-900 leading-relaxed m-0">
@@ -269,7 +497,7 @@ const SEOServices = () => {
             </section>
 
             {/* Our SEO Approach */}
-            <section className="py-24 bg-white">
+            <section id="services" className="py-24 bg-white">
                 <div className="container">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5">
@@ -285,8 +513,12 @@ const SEOServices = () => {
 
                     <div className="flex flex-wrap justify-center gap-10">
                         {approaches.map((approach, index) => (
-                            <div key={index} className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 w-full md:w-[calc(33.333%-27px)] min-w-[300px] max-w-[380px] grow cursor-pointer group hover:border-[#0066CC] hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)]">
-                                <div className="w-16 h-16 bg-gradient-to-br from-[#0066CC] to-[#004999] rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                            <div key={index}
+                                ref={el => approachCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 w-full md:w-[calc(33.333%-27px)] min-w-[300px] max-w-[380px] grow cursor-pointer group">
+                                <div className="w-16 h-16 bg-gradient-to-br from-[#0066CC] to-[#004999] rounded-xl flex items-center justify-center text-white mb-6 card-icon">
                                     {approach.icon}
                                 </div>
                                 <h3 className="text-[20px] font-semibold text-slate-900 mb-5 group-hover:text-[#0066CC] transition-colors leading-tight">
@@ -326,8 +558,10 @@ const SEOServices = () => {
 
                     <div className="flex flex-wrap justify-center gap-6">
                         {industries.map((industry, index) => (
-                            <div key={index} className="bg-white p-7 rounded-2xl text-center transition-all duration-300 cursor-pointer border-2 border-transparent w-full md:w-[calc(25%-18px)] min-w-[200px] max-w-[280px] grow hover:border-[#0066CC] hover:-translate-y-2 hover:scale-[1.05] hover:shadow-[0_10px_30px_rgba(0,102,204,0.1)] group">
-                                <div className="text-[#0066CC] mb-3 flex justify-center group-hover:scale-110 transition-transform">
+                            <div key={index}
+                                ref={el => industryCardsRef.current[index] = el}
+                                className="bg-white p-7 rounded-2xl text-center transition-all duration-300 cursor-pointer border-2 border-transparent w-full md:w-[calc(25%-18px)] min-w-[200px] max-w-[280px] grow hover:border-[#0066CC] hover:shadow-[0_10px_30px_rgba(0,102,204,0.1)] group">
+                                <div className="text-[#0066CC] mb-3 flex justify-center card-icon transition-transform">
                                     {industry.icon}
                                 </div>
                                 <p className="text-[16px] font-medium text-slate-900 m-0 group-hover:text-[#0066CC] transition-colors">
@@ -346,7 +580,7 @@ const SEOServices = () => {
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5">
                             Our Process Framework
                         </h2>
-                        <p className="text-[16px] md:text-[18px] mb-6 font-medium">
+                        <p className="text-[16px] md:text-[18px] mb-6 font-medium text-blue-600">
                             Discover → Strategize → Optimize → Scale → Measure
                         </p>
                         <p className="text-[16px] text-slate-600 font-medium">
@@ -356,7 +590,9 @@ const SEOServices = () => {
 
                     <div className="flex flex-wrap justify-center gap-6">
                         {processSteps.map((step, index) => (
-                            <div key={index} className="bg-gradient-to-br from-[#0066CC] to-[#004999] text-white p-10 rounded-2xl relative overflow-hidden w-full md:w-[calc(33.333%-16px)] min-w-[250px] max-w-[350px] grow transition-all duration-300 hover:scale-105 hover:shadow-xl group">
+                            <div key={index}
+                                ref={el => processCardsRef.current[index] = el}
+                                className="bg-gradient-to-br from-[#0066CC] to-[#004999] text-white p-10 rounded-2xl relative overflow-hidden w-full md:w-[calc(33.333%-16px)] min-w-[250px] max-w-[350px] grow transition-all duration-300 group">
                                 <div className="absolute top-4 right-4 text-[48px] font-bold opacity-[0.15] group-hover:scale-125 transition-transform duration-500">
                                     {index + 1}
                                 </div>
@@ -380,8 +616,10 @@ const SEOServices = () => {
 
                     <div className="flex flex-wrap justify-center gap-8">
                         {differentiators.map((item, index) => (
-                            <div key={index} className="bg-white p-10 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 w-full md:w-[calc(50%-16px)] min-w-[300px] max-w-[550px] grow cursor-pointer group hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,102,204,0.18)] border border-transparent hover:border-[#0066CC]">
-                                <div className="text-[#0066CC] mb-6 group-hover:scale-110 transition-transform">
+                            <div key={index}
+                                ref={el => diffCardsRef.current[index] = el}
+                                className="bg-white p-10 rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 w-full md:w-[calc(50%-16px)] min-w-[300px] max-w-[550px] grow cursor-pointer group border border-transparent hover:border-[#0066CC]">
+                                <div className="text-[#0066CC] mb-6 card-icon transition-transform">
                                     {item.icon}
                                 </div>
                                 <h3 className="text-[20px] font-semibold text-slate-900 mb-4 group-hover:text-[#0066CC] transition-colors leading-tight">
@@ -410,8 +648,10 @@ const SEOServices = () => {
 
                     <div className="flex flex-wrap justify-center gap-5">
                         {metrics.map((metric, index) => (
-                            <div key={index} className="bg-slate-50 p-6 rounded-2xl flex items-center gap-4 transition-all duration-300 w-full md:w-[calc(25%-15px)] min-w-[250px] max-w-[300px] grow cursor-pointer group hover:bg-[#0066CC] hover:text-white hover:-translate-y-1.5 hover:scale-105 hover:shadow-lg hover:shadow-blue-600/20 border border-slate-100">
-                                <BarChart3 size={24} className="shrink-0 group-hover:scale-110 transition-transform" />
+                            <div key={index}
+                                ref={el => metricsCardsRef.current[index] = el}
+                                className="bg-slate-50 p-6 rounded-2xl flex items-center gap-4 transition-all duration-300 w-full md:w-[calc(25%-15px)] min-w-[250px] max-w-[300px] grow cursor-pointer group hover:bg-[#0066CC] hover:text-white border border-slate-100">
+                                <BarChart3 size={24} className="shrink-0 card-icon transition-transform" />
                                 <span className="text-[16px] font-bold">
                                     {metric}
                                 </span>
@@ -422,7 +662,7 @@ const SEOServices = () => {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-24 bg-slate-50">
+            <section ref={faqRef} className="py-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <h2 className="text-[28px] md:text-[36px] font-bold text-center mb-10 md:mb-[60px] text-slate-900 leading-tight">Frequently Asked Questions</h2>
                     <div className="max-w-[800px] mx-auto">
@@ -447,7 +687,7 @@ const SEOServices = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center">
+            <section ref={ctaRef} className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center">
                 <div className="container">
                     <h2 className="text-[36px] font-bold mb-6 text-white leading-tight">
                         Ready to Dominate Search?
@@ -475,3 +715,4 @@ const SEOServices = () => {
 };
 
 export default SEOServices;
+

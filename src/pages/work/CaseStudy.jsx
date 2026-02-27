@@ -1,10 +1,78 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import caseStudiesData from '../../data/caseStudiesData';
 import casestudyhero from '../../assets/work/casestudyhero.png';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const CaseStudy = () => {
+    const mainRef = useRef(null);
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            // Hero Section
+            gsap.fromTo(".hero-content",
+                { opacity: 0, x: -50 },
+                {
+                    opacity: 1, x: 0, duration: 1, delay: 0.2,
+                    scrollTrigger: {
+                        trigger: ".hero-content",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(".hero-image",
+                { opacity: 0, scale: 0.8 },
+                {
+                    opacity: 1, scale: 1, duration: 1, delay: 0.4,
+                    scrollTrigger: {
+                        trigger: ".hero-image",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Case Studies Grid
+            gsap.fromTo(".casestudy-card",
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1, y: 0, duration: 0.8, stagger: 0.2,
+                    scrollTrigger: {
+                        trigger: ".casestudy-grid",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // CTA Section
+            gsap.fromTo(".cta-content",
+                { opacity: 0, scale: 0.9 },
+                {
+                    opacity: 1, scale: 1, duration: 1,
+                    scrollTrigger: {
+                        trigger: ".cta-section",
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+        }, mainRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
-        <div className="bg-white">
+        <div className="bg-white" ref={mainRef}>
             {/* Hero Section */}
 
             
@@ -18,15 +86,28 @@ const CaseStudy = () => {
                  
                     <div className="text-left text-white">
                         
+                    
+                    <div className="text-left text-white hero-content">
+
                         <h1 className="text-[32px] md:text-[48px] font-bold mb-4 leading-tight">
                             Our Case Studies
                         </h1>
                         <p className="text-[18px] md:text-[20px] mb-8 text-white/90 leading-relaxed">
                             Real Growth. Real Results. Explore how we transform businesses through performance-driven digital marketing.
                         </p>
+                        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                            <Link
+                                to="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </Link>
+                        </div>
                     </div>
                     
                     <div className="flex justify-center md:justify-end relative z-10">
+                  
+                    <div className="flex justify-center md:justify-end relative z-10 hero-image">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={casestudyhero}
@@ -110,9 +191,9 @@ const CaseStudy = () => {
             {/* Case Studies Grid */}
             <section className="py-24 bg-[#f8fafc]">
                 <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 casestudy-grid">
                         {caseStudiesData.map((study, index) => (
-                            <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col group">
+                            <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col group casestudy-card">
                                 {/* IMAGE CONTAINER */}
                                 <div className="relative overflow-hidden aspect-[16/10]">
                                     <img
@@ -152,8 +233,8 @@ const CaseStudy = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-gradient-to-br from-[#0066cc] to-[#00458a]">
-                <div className="max-w-4xl mx-auto px-6 text-center">
+            <section className="py-20 bg-gradient-to-br from-[#0066cc] to-[#00458a] cta-section">
+                <div className="max-w-4xl mx-auto px-6 text-center cta-content">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Want to see similar growth for your brand?</h2>
                     <p className="text-white/80 text-lg mb-10">Let's discuss how our data-driven strategies can scale your business.</p>
                     <Link

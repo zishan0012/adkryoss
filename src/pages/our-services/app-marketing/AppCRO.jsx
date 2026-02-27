@@ -6,23 +6,26 @@ import WhenShouldYouInvestinAPCROImage from "../../../assets/WhenShouldYouInvest
 
 const AppCRO = () => {
   const navigate = useNavigate();
-    return (
-        <>
-      
+  return (
+    <>
 
 
 
 
 {/* <section
   className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+      {/* <section
+  className="relative flex items-center min-h-[70vh] bg-cover bg-center"
   style={{
     backgroundImage:
       "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
   }}
 >
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+  <div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4">
 
-    <div className="text-left text-white space-y-6">
+   
+      <div className="text-left lg:text-left text-white space-y-6 mx-auto lg:mx-0">
 
       <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
         AP CRO Services
@@ -40,29 +43,14 @@ const AppCRO = () => {
         AP CRO (Advanced Performance Conversion Rate Optimization) helps you unlock hidden revenue from your existing visitors through data, psychology, and AI-driven experimentation.
       </p>
 
-
-
- <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
-                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
-                            >
-                                Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
-                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
-                            >
-                                Our Services →
-                            </a>
-                        </div>
-
-
-
     </div>
 
-    <div className="flex justify-center md:justify-end">
-      <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+    
+
+
+
+     <div className="flex justify-center lg:justify-end mt-10 lg:mt-0">
+        <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
         <img
           src={CROImage}
           alt="Section Image"
@@ -73,6 +61,9 @@ const AppCRO = () => {
 
   </div>
 </section> */}
+
+
+    
 
 
 
@@ -226,7 +217,7 @@ const AppCRO = () => {
       </section>
 
 
-      <section className="py-20 px-6 bg-blue-50">
+      <section id="services" className="py-20 px-6 bg-blue-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-left text-gray-900">
             Our AP CRO Framework
@@ -634,12 +625,12 @@ const AppCRO = () => {
             Let’s engineer your growth.
           </p>
 
-          <button
-            onClick={() => navigate("/contact?service=cro")}
+          <Link
+            to="/contact?service=cro"
             className="mt-6 inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300"
           >
-            Start Optimizing Today
-          </button>
+            Speak to Our Expert →
+          </Link>
         </div>
       </section>
 

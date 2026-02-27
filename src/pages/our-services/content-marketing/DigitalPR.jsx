@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import digitalprhero from "../../../assets/content-marketing/digitalprhero.png";
 import {
     Globe,
@@ -17,10 +19,221 @@ import {
     BarChart,
     Brain,
     Rocket,
-    MessageCircle
+    MessageCircle,
+    ChevronDown,
+    ChevronUp
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const DigitalPR = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whyCardsRef = useRef([]);
+    const approachCardsRef = useRef([]);
+    const servicesCardsRef = useRef([]);
+    const processStepsRef = useRef([]);
+    const diffContainerRef = useRef(null);
+    const industriesRef = useRef([]);
+    const impactCardsRef = useRef([]);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero Animations with ScrollTrigger for reversal
+            gsap.fromTo(heroContentRef.current,
+                { x: -50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            gsap.fromTo(heroImageRef.current,
+                { x: 50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    delay: 0.2,
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Why Digital PR Animation
+            gsap.fromTo(".why-main-card",
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: ".why-main-card",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Approach Cards Pop-out
+            approachCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { scale: 0.8, opacity: 0, y: 30 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        ease: "back.out(1.5)",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Services Cards Animation
+            servicesCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { y: 40, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Process Steps Animation
+            processStepsRef.current.forEach((step, i) => {
+                gsap.fromTo(step,
+                    { scale: 0.5, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // What Makes Us Different Animation
+            gsap.fromTo(diffContainerRef.current,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: diffContainerRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Industries Animation
+            industriesRef.current.forEach((item, i) => {
+                gsap.fromTo(item,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.4,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Impact Cards Animation
+            impactCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { x: i % 2 === 0 ? -30 : 30, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Floating animation for hero image
+            gsap.to(heroImageRef.current, {
+                y: -15,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            scale: isEnter ? 1.05 : 1,
+            y: isEnter ? -10 : 0,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                rotate: isEnter ? 10 : 0,
+                scale: isEnter ? 1.1 : 1,
+                duration: 0.3
+            });
+        }
+    };
+
     const approachSteps = [
         {
             step: "01",
@@ -118,9 +331,9 @@ const DigitalPR = () => {
     ];
 
     return (
-        <div className="bg-white text-slate-900">
+        <div ref={pageRef} className="bg-white text-slate-900 overflow-x-hidden">
             {/* Hero Section */}
-            {/* <section
+             {/* <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
@@ -129,6 +342,8 @@ const DigitalPR = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     
                     <div className="text-left relative z-10 text-white">
+                   
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Digital PR Services
                         </h1>
@@ -141,22 +356,24 @@ const DigitalPR = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                    
                     <div className="flex justify-center md:justify-end relative z-10">
+                   
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={digitalprhero}
@@ -165,7 +382,7 @@ const DigitalPR = () => {
                             /></div>
                     </div>
                 </div>
-            </section> */}
+            </section>  */}
 
 
 <section
@@ -181,7 +398,7 @@ const DigitalPR = () => {
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
     {/* LEFT CONTENT */}
-    <div className="text-left max-w-[600px] space-y-6">
+    <div ref={heroContentRef} className="text-left max-w-[600px] space-y-6">
 
       <h2 className="text-4xl md:text-5xl font-bold leading-tight">
         <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
@@ -227,7 +444,7 @@ const DigitalPR = () => {
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end relative z-10">
 
-      <div className="relative group w-full max-w-[400px]">
+      <div ref={heroImageRef} className="relative group w-full max-w-[400px]">
 
         {/* Image Glow */}
         <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
@@ -259,7 +476,7 @@ const DigitalPR = () => {
                     </div>
 
                     <div className="max-w-4xl mx-auto">
-                        <div className="bg-white p-10 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-slate-100 mb-12 transition-all duration-300 hover:shadow-xl">
+                        <div className="why-main-card bg-white p-10 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] border border-slate-100 mb-12 transition-all duration-300 hover:shadow-xl">
                             <p className="text-[16px] md:text-[18px] mb-6 text-slate-700 leading-[1.8] font-medium">
                                 Digital PR bridges SEO, content marketing, and reputation management into one strategic growth engine. It improves search rankings, strengthens brand perception, and generates referral traffic from trusted publications.
                             </p>
@@ -297,8 +514,14 @@ const DigitalPR = () => {
 
                     <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {approachSteps.map((item, index) => (
-                            <div key={index} className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 hover:border-[#0066CC] hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)] flex flex-col group">
-                                <div className="text-[#0066CC] font-extrabold text-4xl mb-6 group-hover:scale-110 transition-transform">
+                            <div
+                                key={index}
+                                ref={el => approachCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 hover:border-[#0066CC] hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)] flex flex-col group cursor-pointer"
+                            >
+                                <div className="card-icon text-[#0066CC] font-extrabold text-4xl mb-6 group-hover:scale-110 transition-transform">
                                     {item.step}
                                 </div>
                                 <h3 className="text-[18px] font-semibold text-slate-900 mb-4 group-hover:text-[#0066CC] transition-colors leading-tight">
@@ -314,7 +537,7 @@ const DigitalPR = () => {
             </section>
 
             {/* Our Digital PR Services Section */}
-            <section className="py-24 bg-slate-900 text-white">
+            <section id="services" className="py-24 bg-slate-900 text-white">
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold mb-5 leading-tight text-white">Our Digital PR Services</h2>
@@ -322,9 +545,15 @@ const DigitalPR = () => {
 
                     <div className="flex flex-wrap justify-center gap-8">
                         {services.map((item, index) => (
-                            <div key={index} className="bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:bg-white/10 w-full md:w-[calc(33.33%-22px)] min-w-[300px] flex flex-col group">
-                                <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors mb-8">
-                                    {React.cloneElement(item.icon, { size: 28, className: "group-hover:text-white" })}
+                            <div
+                                key={index}
+                                ref={el => servicesCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white/5 border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:bg-white/10 w-full md:w-[calc(33.33%-22px)] min-w-[300px] flex flex-col group cursor-pointer"
+                            >
+                                <div className="card-icon w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors mb-8">
+                                    {React.cloneElement(item.icon, { size: 28, className: "group-hover:text-white text-blue-400" })}
                                 </div>
                                 <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white group-hover:text-blue-400 transition-colors leading-tight">
                                     {item.title}
@@ -341,7 +570,7 @@ const DigitalPR = () => {
             {/* What Makes Us Different Section */}
             <section className="py-24 bg-white">
                 <div className="container px-6">
-                    <div className="max-w-5xl mx-auto rounded-[40px] bg-white p-12 shadow-xl border border-slate-100">
+                    <div ref={diffContainerRef} className="max-w-5xl mx-auto rounded-[40px] bg-white p-12 shadow-xl border border-slate-100">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
                                 <h2 className="text-[36px] font-bold text-slate-900 mb-6 leading-tight">What Makes Our Digital PR Different</h2>
@@ -365,14 +594,14 @@ const DigitalPR = () => {
                                 </div>
                             </div>
                             <div className="grid gap-6">
-                                <div className="bg-gradient-to-br from-[#0066CC] to-[#004999] p-8 rounded-3xl text-white shadow-lg">
+                                <div className="bg-gradient-to-br from-[#0066CC] to-[#004999] p-8 rounded-3xl text-white shadow-lg transform transition-transform hover:scale-105 duration-300">
                                     <PieChart size={48} className="mb-6 text-blue-100" />
                                     <h3 className="text-xl font-semibold mb-4 uppercase">Advanced Analytics</h3>
                                     <p className="text-blue-50/80 leading-relaxed font-medium italic">
                                         Monitor mentions, sentiment, and media performance to optimise continuously.
                                     </p>
                                 </div>
-                                <div className="bg-slate-900 p-8 rounded-3xl text-white shadow-lg">
+                                <div className="bg-slate-900 p-8 rounded-3xl text-white shadow-lg transform transition-transform hover:scale-105 duration-300">
                                     <Zap size={48} className="mb-6 text-blue-400" />
                                     <h3 className="text-xl font-semibold mb-4 uppercase">Strategic Impact</h3>
                                     <p className="text-[16px] md:text-[18px] mb-6 text-white leading-relaxed font-medium italic">
@@ -392,7 +621,13 @@ const DigitalPR = () => {
                         <h2 className="text-[36px] font-bold text-slate-900 mb-12 leading-tight">Industries We Serve</h2>
                         <div className="flex flex-wrap justify-center gap-4 mb-16">
                             {industries.map((industry, index) => (
-                                <div key={index} className="px-8 py-4 bg-white border-2 border-slate-100 rounded-xl font-black text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm">
+                                <div
+                                    key={index}
+                                    ref={el => industriesRef.current[index] = el}
+                                    onMouseEnter={(e) => handleHover(e, true)}
+                                    onMouseLeave={(e) => handleHover(e, false)}
+                                    className="px-8 py-4 bg-white border-2 border-slate-100 rounded-xl font-semibold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] shadow-sm cursor-pointer"
+                                >
                                     {industry}
                                 </div>
                             ))}
@@ -413,8 +648,16 @@ const DigitalPR = () => {
                     </div>
                     <div className="flex flex-wrap justify-center gap-6">
                         {impactPoints.map((point, index) => (
-                            <div key={index} className="px-10 py-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl font-black text-xl hover:bg-blue-600 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2 flex items-center gap-4">
-                                {point.icon}
+                            <div
+                                key={index}
+                                ref={el => impactCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="px-10 py-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl font-semibold text-xl hover:bg-blue-600 hover:border-blue-500 transition-all duration-300 flex items-center gap-4 cursor-pointer group"
+                            >
+                                <div className="card-icon">
+                                    {point.icon}
+                                </div>
                                 {point.title}
                             </div>
                         ))}
@@ -434,7 +677,11 @@ const DigitalPR = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {processSteps.map((step, index) => (
-                                <div key={index} className="p-8 bg-slate-50 border-2 border-slate-100 rounded-2xl flex flex-col items-center text-center group hover:border-[#0066CC] transition-all">
+                                <div
+                                    key={index}
+                                    ref={el => processStepsRef.current[index] = el}
+                                    className="p-8 bg-slate-50 border-2 border-slate-100 rounded-2xl flex flex-col items-center text-center group hover:border-[#0066CC] transition-all cursor-pointer"
+                                >
                                     <div className="w-12 h-12 bg-[#0066CC] text-white rounded-full flex items-center justify-center font-black text-xl mb-6 shadow-lg group-hover:scale-110 transition-transform">
                                         {index + 1}
                                     </div>

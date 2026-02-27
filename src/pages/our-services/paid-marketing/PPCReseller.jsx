@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import seller from "../../../assets/reseller.jpg"
+import LetHelpYouScaleProfitablyImage from "../../../assets/LetHelpYouScaleProfitably.png"
 import {
   Target,
   Search,
@@ -17,7 +19,7 @@ import {
   CheckCircle,
   Cpu,
   Database,
-  Link,
+  Link as LinkIcon,
   BarChart4,
   Layers,
   LineChart,
@@ -200,7 +202,7 @@ const modernApproach = [
   { title: "AI-driven bidding optimization", icon: Cpu },
   { title: "Performance Max integration strategies", icon: TrendingUp },
   { title: "First-party data activation", icon: Database },
-  { title: "Conversion API implementation support", icon: Link },
+  { title: "Conversion API implementation support", icon: LinkIcon },
   { title: "GA4 advanced event tracking setup", icon: BarChart4 },
   { title: "Funnel-based campaign structuring", icon: Layers },
   { title: "Performance forecasting models", icon: LineChart },
@@ -241,53 +243,54 @@ const PPCReseller = () => {
         className="relative flex items-center min-h-[70vh] bg-cover bg-center"
 
 
+      <section
+        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
         style={{
           backgroundImage:
             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
         }}
       >
+        
 
 
   <div className="relative w-full px-6 sm:px-10 lg:px-24 xl:px-32">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
+         
+          <div className="text-left relative z-10 text-white leading-tight">
 
+            <h1 className="text-[28px] md:text-[36px] lg:text-[48px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
+              PPC Reseller
+              <span className="block text-blue-200">
+                Services
+              </span>
+            </h1>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+            <p className="text-[20px] md:text-[24px] font-semibold mb-6 text-blue-100">
+              Scale Faster. Deliver Smarter. Earn More.
+            </p>
 
            
             <div className="space-y-7 text-left max-w-2xl">
+            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-blue-100 max-w-xl">
+              White-label PPC solutions designed for agencies that want to grow
+              without hiring in-house teams. Performance-focused, data-driven,
+              and built to maximize ROI for your clients.
+            </p>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                PPC Reseller
-                <span className="block text-blue-200">
-                  Services
-                </span>
-              </h1>
-
-              <p className="text-xl md:text-2xl font-semibold text-blue-100">
-                Scale Faster. Deliver Smarter. Earn More.
-              </p>
-
-              <p className="text-blue-100 text-base md:text-lg leading-relaxed">
-                White-label PPC solutions designed for agencies that want to grow
-                without hiring in-house teams. Performance-focused, data-driven,
-                and built to maximize ROI for your clients.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                <a
-                  href="/contact"
-                  className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
-                >
-                  Speak to Our Expert →
-                </a>
-                <a
-                  href="#services"
-                  className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
-                >
-                  Our Services →
-                </a>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <Link
+                to="/contact"
+                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Speak to Our Expert →
+              </Link>
+              <Link
+                to="#services"
+                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Our Services →
+              </Link>
             </div>
 
         
@@ -300,7 +303,6 @@ const PPCReseller = () => {
             </div>
 
           </div>
-        </div>
 
       </section> */}
 
@@ -372,9 +374,20 @@ const PPCReseller = () => {
 
 
 
+          {/* RIGHT IMAGE */}
+          {/* <div className="flex justify-center md:justify-end">
+            <img
+              src={seller}
+              alt="PPC Reseller Services"
+              className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
+            />
+          </div>
 
-      <section className="bg-white py-16 md:py-20 lg:py-24">
-        <div className="w-full px-6 sm:px-10 lg:px-20 xl:px-32">
+        </div>
+      </section> */}
+
+      <section id="services" className="bg-white py-16 md:py-20 lg:py-24">
+        <div className="container">
 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-14">
             What You Get With Our PPC Reseller Program
@@ -407,7 +420,7 @@ const PPCReseller = () => {
       </section>
 
       <section className="bg-gray-400 py-16 md:py-20 lg:py-24">
-        <div className="w-full px-6 sm:px-10 lg:px-16 xl:px-24">
+        <div className="container">
 
           <div className="max-w-3xl mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -458,7 +471,7 @@ const PPCReseller = () => {
       </section>
 
       <section className="bg-white py-16 md:py-20 lg:py-24">
-        <div className="w-full px-6 sm:px-10 lg:px-16 xl:px-24">
+        <div className="container">
 
           <div className="max-w-3xl mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -502,7 +515,7 @@ const PPCReseller = () => {
       </section>
 
       <section className="bg-slate-50 py-16 md:py-20 lg:py-24">
-        <div className="w-full px-6 sm:px-10 lg:px-16 xl:px-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
           {/* LEFT SIDE */}
           <div className="space-y-6 max-w-2xl">
@@ -562,7 +575,7 @@ const PPCReseller = () => {
       </section>
 
       <section className="bg-slate-200 py-16 md:py-20 lg:py-24">
-        <div className="w-full px-6 sm:px-10 lg:px-16 xl:px-24">
+        <div className="container">
 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-14">
             Our Core PPC Services Under Reseller Model
@@ -695,15 +708,15 @@ const PPCReseller = () => {
       </section>
 
       <section className="bg-blue-50 py-16 md:py-20 lg:py-24">
-        <div className="w-full">
+        <div className="container">
 
-          <div className="px-0">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 px-6 md:px-10 lg:px-16">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
               Seamless Communication Model
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14 px-6 md:px-10 lg:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
             {communicationPoints.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -733,7 +746,7 @@ const PPCReseller = () => {
             })}
           </div>
 
-          <div className="px-6 md:px-10 lg:px-16">
+          <div>
             <p className="text-2xl font-semibold text-gray-900">
               You focus on client acquisition.
             </p>
@@ -745,65 +758,67 @@ const PPCReseller = () => {
         </div>
       </section>
 
-      <section className="bg-blue-100">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+      <section className="bg-blue-100 py-16 md:py-20 lg:py-24">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* LEFT SIDE */}
-          <div className="flex items-center">
-            <div className="px-8 lg:px-16 py-16 md:py-20 lg:py-24 w-full">
+            {/* LEFT SIDE CONTENT */}
+            <div className="flex items-center">
+              <div className="w-full">
 
-              <h2 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Let’s Help You Scale Profitably
-              </h2>
+                <h2 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                  Let’s Help You Scale Profitably
+                </h2>
 
-              <p className="text-lg text-blue-700 mb-8">
-                If you’re looking to:
-              </p>
+                <p className="text-lg text-blue-700 mb-8">
+                  If you’re looking to:
+                </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-                {resellerCTAPoints.map((point, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-500 mt-1 shrink-0" />
-                    <p className="text-lg text-gray-800">{point}</p>
-                  </div>
-                ))}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                  {resellerCTAPoints.map((point, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-6 h-6 text-green-500 mt-1 shrink-0" />
+                      <p className="text-lg text-gray-800">{point}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="text-xl font-semibold mb-6 text-gray-900">
+                  Then this partnership is your next strategic move.
+                </p>
+
+                <p className="text-gray-800 text-lg mb-8 max-w-xl">
+                  <span className="font-semibold">
+                    Adkryoss managed by Clink Consultancy Services Private Limited
+                  </span>{" "}
+                  is built to power agencies that want predictable growth in a
+                  competitive digital landscape.
+                </p>
+
+                <button
+                  className="
+              bg-blue-700 text-white font-semibold
+              px-8 py-4 rounded-full
+              transition-all duration-300
+              hover:bg-blue-800 hover:shadow-lg
+            "
+                >
+                  Become a PPC Reseller Partner →
+                </button>
+
               </div>
-
-              <p className="text-xl font-semibold mb-6 text-gray-900">
-                Then this partnership is your next strategic move.
-              </p>
-
-              <p className="text-gray-800 text-lg mb-8 max-w-xl">
-                <span className="font-semibold">
-                  Adkryoss managed by Clink Consultancy Services Private Limited
-                </span>{" "}
-                is built to power agencies that want predictable growth in a
-                competitive digital landscape.
-              </p>
-
-              <button
-                className="
-            bg-blue-700 text-white font-semibold
-            px-8 py-4 rounded-full
-            transition-all duration-300
-            hover:bg-blue-800 hover:shadow-lg
-          "
-              >
-                Become a PPC Reseller Partner →
-              </button>
-
             </div>
-          </div>
 
-          {/* RIGHT SIDE IMAGE */}
-          <div className="relative h-[400px] lg:h-auto">
-            <img
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692"
-              alt="PPC Growth Partnership"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
+            {/* RIGHT SIDE IMAGE */}
+            <div className="relative">
+              <img
+                src={LetHelpYouScaleProfitablyImage}
+                alt="PPC Growth Partnership"
+                className="w-full h-auto rounded-3xl shadow-xl object-cover"
+              />
+            </div>
 
+          </div>
         </div>
       </section>
 

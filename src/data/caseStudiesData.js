@@ -1,10 +1,24 @@
+import D2Cfashionsnap from '../assets/casestudy/D2Cfashionsnapshot.png';
+import D2Cfashionhero from '../assets/casestudy/D2Cfashionhero.png';
+import realestatesnap from '../assets/casestudy/realestatesnapshot.png';
+import realestatehero from '../assets/casestudy/realestatehero.png';
+import educationsnap from '../assets/casestudy/educationsnapshot.png';
+import educationhero from '../assets/casestudy/educationhero.png';
+import lifestylesnap from '../assets/casestudy/Rebranding&SocialMediasnapshot.png';
+import lifestylehero from '../assets/casestudy/Rebranding&SocialMediahero.png';
+import b2bsnap from '../assets/casestudy/B2Bsnapshot.png';
+import b2bhero from '../assets/casestudy/B2Bhero.png';
+import ecommercesnap from '../assets/casestudy/D2Cecommercesnapshot.png';
+import ecommercehero from '../assets/casestudy/D2Cecommercehero.png';
+
 const caseStudiesData = [
     {
         slug: "d2c-fashion-growth",
         title: "Scaling a D2C Fashion Brand from ₹0 to ₹1.2 Cr Revenue in 6 Months",
         hero: {
             title: "Performance Marketing + SEO = Revenue Growth Engine",
-            subtitle: "Turning paid traffic into predictable sales."
+            subtitle: "Turning paid traffic into predictable sales.",
+            bgImage: D2Cfashionhero
         },
         snapshot: {
             industry: "D2C Fashion (Women’s Wear)",
@@ -12,7 +26,7 @@ const caseStudiesData = [
             market: "Pan-India",
             objective: "Revenue Growth & Brand Visibility",
             cardSummary: "How we scaled a startup women's wear brand into a revenue powerhouse using full-funnel marketing.",
-            image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop"
+            image: D2Cfashionsnap
         },
         challenge: [
             "No structured SEO strategy",
@@ -67,14 +81,15 @@ const caseStudiesData = [
         title: "Transforming a Real Estate Brand into a Lead Generation Machine",
         hero: {
             title: "From Zero Qualified Leads to 320+ Verified Monthly Inquiries",
-            subtitle: "Verified growth for high-ticket investments."
+            subtitle: "Verified growth for high-ticket investments.",
+            bgImage: realestatehero
         },
         snapshot: {
             industry: "Real Estate Developer",
             location: "Tier-1 City",
             objective: "High-quality lead generation",
             cardSummary: "Transforming high-cost, low-quality real estate ads into a high-intent lead generation engine.",
-            image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop"
+            image: realestatesnap
         },
         challenge: [
             "Leads were unqualified",
@@ -126,13 +141,14 @@ const caseStudiesData = [
         title: "Building a National Presence for an Education Brand",
         hero: {
             title: "Dominating Search Rankings Across 20+ Cities",
-            subtitle: "Scaling education visibility through targeted SEO."
+            subtitle: "Scaling education visibility through targeted SEO.",
+            bgImage: educationhero
         },
         snapshot: {
             industry: "EdTech / Education Services",
             objective: "National Expansion & Organic Growth",
             cardSummary: "Dominating competitive search rankings across 20+ cities for a national education brand.",
-            image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop"
+            image: educationsnap
         },
         challenge: [
             "Zero visibility in competitive keywords",
@@ -185,13 +201,14 @@ const caseStudiesData = [
         title: "Rebranding & Social Media Growth for a Lifestyle Startup",
         hero: {
             title: "From Low Engagement to Viral Brand Visibility",
-            subtitle: "Storytelling that connects and converts."
+            subtitle: "Storytelling that connects and converts.",
+            bgImage: lifestylehero
         },
         snapshot: {
             industry: "Lifestyle & Personal Care",
             objective: "Social Media Growth & Brand Recall",
             cardSummary: "Revitalizing a lifestyle brand's digital presence through viral storytelling and influencer strategy.",
-            image: "https://i.pinimg.com/736x/d0/e5/e8/d0e5e8cdad4dcfcef75389f86db829b8.jpg"
+            image: lifestylesnap
         },
         challenge: [
             "Inconsistent posting",
@@ -242,13 +259,14 @@ const caseStudiesData = [
         title: "B2B SaaS Growth Through Performance & Content Strategy",
         hero: {
             title: "Reducing CAC by 45% While Doubling Pipeline Value",
-            subtitle: "Precision targeting for complex B2B sales cycles."
+            subtitle: "Precision targeting for complex B2B sales cycles.",
+            bgImage: b2bhero
         },
         snapshot: {
             industry: "B2B SaaS",
             objective: "Lead Quality & Sales Pipeline Growth",
             cardSummary: "Precision B2B targeting that doubled pipeline value and slashed customer acquisition costs.",
-            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
+            image: b2bsnap
         },
         challenge: [
             "Long sales cycle",
@@ -299,14 +317,15 @@ const caseStudiesData = [
         title: "Scaling Beyond Clicks: Turning Fragmented Marketing into Revenue Intelligence",
         hero: {
             title: "Re-Engineering the Growth Ecosystem for Sustainable Revenue",
-            subtitle: "From scattered campaigns to measurable revenue acceleration."
+            subtitle: "From scattered campaigns to measurable revenue acceleration.",
+            bgImage: ecommercehero
         },
         snapshot: {
             industry: "D2C E-Commerce (Fashion & Lifestyle)",
             objective: "Revenue Scaling & Marketing Intelligence",
             duration: "8 Months",
             cardSummary: "Re-engineering a D2C ecosystem to turn fragmented marketing into a unified revenue engine.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+            image: ecommercesnap
         },
         challenge: [
             "Rising ad costs",
@@ -368,3 +387,6 @@ const caseStudiesData = [
 ];
 
 export default caseStudiesData;
+
+
+

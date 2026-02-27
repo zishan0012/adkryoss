@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import seocopywritinghero from "../../../assets/content-marketing/seocopywritinghero.png";
 import {
     PenTool,
@@ -24,7 +26,220 @@ import {
     ShieldCheck
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const SEOCopywriting = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whyBenefitsRef = useRef([]);
+    const serviceCardsRef = useRef([]);
+    const strategyStepsRef = useRef([]);
+    const diffCardsRef = useRef([]);
+    const industryTagsRef = useRef([]);
+    const resultBlocksRef = useRef([]);
+    const faqItemsRef = useRef([]);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Slide down entrance
+            gsap.fromTo(heroContentRef.current,
+                { y: -50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { scale: 0.9, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    delay: 0.2,
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Why Engine - Vertical Stack Reveal
+            whyBenefitsRef.current.forEach((benefit, i) => {
+                gsap.fromTo(benefit,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: benefit,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Services - Staggered Scale and Rotation
+            serviceCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { scale: 0.8, rotation: i % 2 === 0 ? -5 : 5, opacity: 0 },
+                    {
+                        scale: 1,
+                        rotation: 0,
+                        opacity: 1,
+                        duration: 0.7,
+                        delay: i * 0.1,
+                        ease: "back.out(1.4)",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Strategy Steps - Side Entrance Pop
+            strategyStepsRef.current.forEach((step, i) => {
+                gsap.fromTo(step,
+                    { x: i % 2 === 0 ? -100 : 100, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: step,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Differentiators - Vertical Stagger
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Industry Tags - Snappy Bounce
+            industryTagsRef.current.forEach((tag, i) => {
+                gsap.fromTo(tag,
+                    { scale: 0, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.4,
+                        delay: i * 0.05,
+                        ease: "back.out(2)",
+                        scrollTrigger: {
+                            trigger: tag,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Results - Pop with delay
+            resultBlocksRef.current.forEach((block, i) => {
+                gsap.fromTo(block,
+                    { opacity: 0, scale: 0.5 },
+                    {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: block,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // FAQs - Smooth Slide List
+            faqItemsRef.current.forEach((item, i) => {
+                gsap.fromTo(item,
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Floating Hero Image
+            gsap.to(heroImageRef.current, {
+                y: -15,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            scale: isEnter ? 1.05 : 1,
+            y: isEnter ? -10 : 0,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+        const iconContainer = e.currentTarget.querySelector('.icon-container');
+        if (iconContainer) {
+            gsap.to(iconContainer, {
+                rotate: isEnter ? 10 : 0,
+                scale: isEnter ? 1.1 : 1,
+                duration: 0.3
+            });
+        }
+    };
     const [openFaq, setOpenFaq] = useState(null);
 
     const toggleFaq = (index) => {
@@ -139,7 +354,7 @@ const SEOCopywriting = () => {
     ];
 
     return (
-        <div className="bg-white text-slate-900">
+        <div ref={pageRef} className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
             {/* <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -150,6 +365,8 @@ const SEOCopywriting = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     
                     <div className="text-left relative z-10 text-white">
+                   
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             SEO Copywriting Services
                         </h1>
@@ -165,22 +382,24 @@ const SEOCopywriting = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                    
                     <div className="flex justify-center md:justify-end relative z-10">
+                   
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={seocopywritinghero}
@@ -205,7 +424,7 @@ const SEOCopywriting = () => {
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
     {/* LEFT CONTENT */}
-    <div className="text-left max-w-[600px] space-y-6">
+    <div ref={heroContentRef} className="text-left max-w-[600px] space-y-6">
       <h2 className="text-4xl md:text-5xl font-bold leading-tight">
         <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
           SEO Copywriting Services
@@ -247,7 +466,7 @@ const SEOCopywriting = () => {
 
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end relative z-10">
-      <div className="relative group w-full max-w-[450px]">
+      <div ref={heroImageRef} className="relative group w-full max-w-[450px]">
         <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
         <img
           src={seocopywritinghero}
@@ -279,7 +498,11 @@ const SEOCopywriting = () => {
                             "Answer real user questions comprehensively",
                             "Guide visitors toward meaningful action"
                         ].map((point, index) => (
-                            <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 font-semibold text-slate-900 group transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-2">
+                            <div
+                                key={index}
+                                ref={el => whyBenefitsRef.current[index] = el}
+                                className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 font-semibold text-slate-900 group transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-2 cursor-default"
+                            >
                                 <CheckCircle2 className="mx-auto mb-4 text-[#0066CC] group-hover:text-white transition-colors" size={28} />
                                 {point}
                             </div>
@@ -296,7 +519,7 @@ const SEOCopywriting = () => {
             </section>
 
             {/* Services Section */}
-            <section className="py-24 bg-slate-50">
+            <section id="services" className="py-24 bg-slate-50">
                 <div className="container px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-[36px] font-bold text-slate-900 mb-5 leading-tight">Our SEO Copywriting Services</h2>
@@ -304,8 +527,14 @@ const SEOCopywriting = () => {
 
                     <div className="flex flex-wrap justify-center gap-10">
                         {services.map((item, index) => (
-                            <div key={index} className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 w-full md:w-[calc(33.333%-27px)] min-w-[300px] max-w-[400px] grow cursor-pointer group hover:border-[#0066CC] hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)] flex flex-col shadow-sm">
-                                <div className="w-16 h-16 bg-gradient-to-br from-[#0066CC] to-[#004999] rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform mb-8 shadow-md">
+                            <div
+                                key={index}
+                                ref={el => serviceCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white border-2 border-slate-100 rounded-2xl p-8 transition-all duration-300 w-full md:w-[calc(33.333%-27px)] min-w-[300px] max-w-[400px] grow cursor-pointer group hover:border-[#0066CC] hover:shadow-[0_20px_40px_rgba(0,102,204,0.15)] flex flex-col shadow-sm"
+                            >
+                                <div className="icon-container w-16 h-16 bg-gradient-to-br from-[#0066CC] to-[#004999] rounded-xl flex items-center justify-center text-white mb-8 shadow-md">
                                     {item.icon}
                                 </div>
                                 <h3 className="text-[22px] font-semibold text-slate-900 mb-4 group-hover:text-[#0066CC] transition-colors leading-tight uppercase tracking-tight">
@@ -328,8 +557,14 @@ const SEOCopywriting = () => {
                     </div>
                     <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
                         {strategySteps.map((item, index) => (
-                            <div key={index} className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                                <div className="text-blue-500 font-extrabold text-4xl mb-6 group-hover:scale-110 transition-transform opacity-50">{item.step}</div>
+                            <div
+                                key={index}
+                                ref={el => strategyStepsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group cursor-pointer"
+                            >
+                                <div className="text-blue-500 font-extrabold text-4xl mb-6 transition-transform opacity-50 group-hover:scale-110">{item.step}</div>
                                 <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white group-hover:text-blue-400 transition-colors leading-tight">
                                     {item.title}
                                 </h3>
@@ -353,7 +588,11 @@ const SEOCopywriting = () => {
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {differentiators.map((item, index) => (
-                            <div key={index} className="bg-white p-8 rounded-2xl shadow-[0_4px_15px_rgba(0,0,0,0.05)] border border-slate-100 hover:shadow-xl transition-all duration-300 group text-center flex flex-col">
+                            <div
+                                key={index}
+                                ref={el => diffCardsRef.current[index] = el}
+                                className="bg-white p-8 rounded-2xl shadow-[0_4px_15px_rgba(0,0,0,0.05)] border border-slate-100 hover:shadow-xl transition-all duration-300 group text-center flex flex-col cursor-default"
+                            >
                                 <div className="w-14 h-14 bg-blue-50 text-[#0066CC] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0066CC] group-hover:text-white transition-all shadow-sm">
                                     <ShieldCheck size={28} />
                                 </div>
@@ -373,7 +612,11 @@ const SEOCopywriting = () => {
                     <h2 className="text-[36px] font-bold text-slate-900 mb-10 text-center leading-tight">Industries We Serve</h2>
                     <div className="flex flex-wrap justify-center gap-4 mb-12">
                         {industries.map((industry, index) => (
-                            <div key={index} className="px-8 py-5 bg-white border-2 border-slate-100 rounded-xl font-semibold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm">
+                            <div
+                                key={index}
+                                ref={el => industryTagsRef.current[index] = el}
+                                className="px-8 py-5 bg-white border-2 border-slate-100 rounded-xl font-semibold text-slate-900 transition-all hover:border-[#0066CC] hover:text-[#0066CC] hover:-translate-y-1 shadow-sm cursor-default"
+                            >
                                 {industry}
                             </div>
                         ))}
@@ -394,7 +637,11 @@ const SEOCopywriting = () => {
                     </div>
                     <div className="flex flex-wrap justify-center gap-6">
                         {results.map((point, index) => (
-                            <div key={index} className="px-10 py-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl font-black text-xl hover:bg-blue-600 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
+                            <div
+                                key={index}
+                                ref={el => resultBlocksRef.current[index] = el}
+                                className="px-10 py-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl font-black text-xl hover:bg-blue-600 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2 cursor-default"
+                            >
                                 {point}
                             </div>
                         ))}
@@ -408,7 +655,11 @@ const SEOCopywriting = () => {
                     <h2 className="text-[36px] font-bold text-slate-900 mb-12 text-center">Frequently Asked Questions</h2>
                     <div className="space-y-4">
                         {faqs.map((faq, index) => (
-                            <div key={index} className="border-2 border-slate-100 rounded-2xl overflow-hidden hover:border-blue-100 transition-colors">
+                            <div
+                                key={index}
+                                ref={el => faqItemsRef.current[index] = el}
+                                className="border-2 border-slate-100 rounded-2xl overflow-hidden hover:border-blue-100 transition-colors"
+                            >
                                 <button
                                     onClick={() => toggleFaq(index)}
                                     className="w-full p-8 text-left flex justify-between items-center bg-white hover:bg-slate-50 transition-colors"

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     Link2,
     Search,
@@ -28,11 +30,313 @@ import {
     ChevronUp
 } from 'lucide-react';
 import linkbuildingseo from '../../../assets/SEO/linkbuildinghero.png';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const LinkBuildingServices = () => {
     const [openFaq, setOpenFaq] = useState(null);
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whySectionRef = useRef(null);
+    const whyCardRef = useRef(null);
+    const whyPointsRef = useRef([]);
+    const frameworkCardsRef = useRef([]);
+    const diffCardsRef = useRef([]);
+    const industryRef = useRef(null);
+    const industryItemsRef = useRef([]);
+    const integrationRef = useRef(null);
+    const integrationTagsRef = useRef([]);
+    const resultsRef = useRef(null);
+    const resultsCardsRef = useRef([]);
+    const faqRef = useRef(null);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Authority Bridge
+            gsap.fromTo(heroContentRef.current,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { scale: 0.8, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1.5,
+                    ease: "back.out(1.2)",
+                    delay: 0.3,
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Why Section - Connectivity Flow
+            gsap.fromTo(whySectionRef.current,
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: whySectionRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(whyCardRef.current,
+                { x: -50, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: whyCardRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            whyPointsRef.current.forEach((point, i) => {
+                gsap.fromTo(point,
+                    { x: 20, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: point,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Framework - Building Bridges
+            frameworkCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.7,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Differentiators - Signal Pop
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { scale: 0.9, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Industries - Authority Map
+            gsap.fromTo(industryRef.current,
+                { opacity: 0, x: -30 },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: industryRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            industryItemsRef.current.forEach((item, i) => {
+                gsap.fromTo(item,
+                    { opacity: 0, scale: 0.9 },
+                    {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.5,
+                        delay: i * 0.05,
+                        scrollTrigger: {
+                            trigger: item,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Integration - Linkage
+            gsap.fromTo(integrationRef.current,
+                { opacity: 0, x: 30 },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: integrationRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            integrationTagsRef.current.forEach((tag, i) => {
+                gsap.fromTo(tag,
+                    { opacity: 0, y: 10 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.4,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: tag,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Results
+            gsap.fromTo(resultsRef.current,
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: resultsRef.current,
+                        start: "top 90%",
+                        end: "bottom 10%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            resultsCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { scale: 0.8, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 0.5,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 95%",
+                            end: "bottom 5%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // FAQ
+            gsap.fromTo(faqRef.current,
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: faqRef.current,
+                        start: "top 85%",
+                        end: "bottom 15%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // CTA
+            gsap.fromTo(ctaRef.current,
+                { opacity: 0, scale: 0.95 },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ctaRef.current,
+                        start: "top 90%",
+                        end: "bottom 10%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Image Float (Bridge sway)
+            gsap.to(heroImageRef.current, {
+                y: -15,
+                x: 10,
+                duration: 4,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
 
     const toggleFaq = (i) => {
         setOpenFaq(openFaq === i ? null : i);
+    };
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            y: isEnter ? -10 : 0,
+            scale: isEnter ? 1.02 : 1,
+            backgroundColor: isEnter ? "#f0f9ff" : "white",
+            borderColor: isEnter ? "#0066CC" : "#e2e8f0",
+            duration: 0.3
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                scale: isEnter ? 1.2 : 1,
+                rotationY: isEnter ? 180 : 0,
+                duration: 0.5
+            });
+        }
     };
 
     const linkFramework = [
@@ -135,7 +439,7 @@ const LinkBuildingServices = () => {
     ];
 
     return (
-        <div style={{ backgroundColor: '#fff' }}>
+        <div ref={pageRef} style={{ backgroundColor: '#fff' }} className="overflow-hidden">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -144,7 +448,7 @@ const LinkBuildingServices = () => {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10 text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1px] text-white">
                             Link Building Services
                         </h1>
@@ -161,21 +465,21 @@ const LinkBuildingServices = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={linkbuildingseo}
@@ -190,7 +494,7 @@ const LinkBuildingServices = () => {
             {/* Why Link Building Section */}
             <section className="pt-32 pb-24 bg-white">
                 <div className="container">
-                    <div className="text-center mb-[60px]">
+                    <div className="text-center mb-[60px]" ref={whySectionRef}>
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
                             Why Link Building Still Defines SEO Success
                         </h2>
@@ -200,42 +504,44 @@ const LinkBuildingServices = () => {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="bg-[#0066cc] text-white p-[50px] rounded-[40px] shadow-[0_20px_40px_rgba(0,102,204,0.15)]">
-                            <h3 className="text-[28px] font-semibold mb-[30px]">Modern Link Building Strategy</h3>
-                            <p className="text-[16px] md:text-[18px] mb-6 opacity-90 leading-[1.8] text-white font-medium">
-                                It’s no longer about volume—it’s about context, quality, and strategic placement. Adkryoss designs link acquisition frameworks that focus on:
-                            </p>
-                            <div className="space-y-6">
-                                {[
-                                    "High-authority editorial placements",
-                                    "Niche-relevant contextual backlinks",
-                                    "Digital PR-driven authority growth",
-                                    "Organic anchor text diversification",
-                                    "Sustainable long-term ranking stability"
-                                ].map((item, i) => (
-                                    <div key={i} className="flex gap-[15px] items-center">
-                                        <div className="bg-[rgba(255,255,255,0.2)] p-[5px] rounded-full">
-                                            <CheckCircle2 size={18} />
+                        <div ref={whyCardRef} className="bg-[#0066cc] text-white p-[50px] rounded-[40px] shadow-[0_20px_40px_rgba(0,102,204,0.15)] relative overflow-hidden group">
+                            <div className="relative z-10">
+                                <h3 className="text-[28px] font-semibold mb-[30px] transition-transform group-hover:translate-x-2">Modern Link Building Strategy</h3>
+                                <p className="text-[16px] md:text-[18px] mb-6 opacity-90 leading-[1.8] text-white font-medium">
+                                    It’s no longer about volume—it’s about context, quality, and strategic placement. Adkryoss designs link acquisition frameworks that focus on:
+                                </p>
+                                <div className="space-y-6">
+                                    {[
+                                        "High-authority editorial placements",
+                                        "Niche-relevant contextual backlinks",
+                                        "Digital PR-driven authority growth",
+                                        "Organic anchor text diversification",
+                                        "Sustainable long-term ranking stability"
+                                    ].map((item, i) => (
+                                        <div key={i} ref={el => whyPointsRef.current[i] = el} className="flex gap-[15px] items-center">
+                                            <div className="bg-[rgba(255,255,255,0.2)] p-[5px] rounded-full">
+                                                <CheckCircle2 size={18} />
+                                            </div>
+                                            <span className="text-[17px] font-medium">{item}</span>
                                         </div>
-                                        <span className="text-[17px] font-medium">{item}</span>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
                         </div>
                         <div className="space-y-8">
-                            <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa]">
+                            <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa] transition-all hover:bg-white hover:shadow-lg">
                                 <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                                     Contextual Relevance
                                 </p>
                                 <p className="text-[#666] leading-[1.6] font-medium">We ensure links come from pages related to your business to maximize ranking power.</p>
                             </div>
-                            <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa]">
+                            <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa] transition-all hover:bg-white hover:shadow-lg">
                                 <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                                     Authority Growth
                                 </p>
                                 <p className="text-[#666] leading-[1.6] font-medium">Every link we build aims to increase your overall domain rating and trust score.</p>
                             </div>
-                            <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa]">
+                            <div className="p-[30px] border-l-4 border-[#0066cc] bg-[#f8f9fa] transition-all hover:bg-white hover:shadow-lg">
                                 <p className="text-[16px] md:text-[18px] mb-6 font-medium">
                                     Risk Management
                                 </p>
@@ -247,7 +553,7 @@ const LinkBuildingServices = () => {
             </section>
 
             {/* Framework Section */}
-            <section className="py-[100px] bg-[#f1f5f9]">
+            <section id="services" className="py-[100px] bg-[#f1f5f9]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">
@@ -262,9 +568,12 @@ const LinkBuildingServices = () => {
                         {linkFramework.map((item, i) => (
                             <div
                                 key={i}
-                                className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 group hover:-translate-y-[10px] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:border-[#0066cc]"
+                                ref={el => frameworkCardsRef.current[i] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 group cursor-pointer"
                             >
-                                <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
+                                <div className="text-[#0066cc] mb-[20px] card-icon">{item.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
                                 <p className="text-[#666] mb-[20px] leading-[1.6] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0 mt-[20px]">
@@ -284,9 +593,12 @@ const LinkBuildingServices = () => {
                         {additionalFramework.map((item, i) => (
                             <div
                                 key={i}
-                                className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 group hover:-translate-y-[10px] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:border-[#0066cc]"
+                                ref={el => frameworkCardsRef.current[i + 3] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 group cursor-pointer"
                             >
-                                <div className="text-[#0066cc] mb-[20px]">{item.icon}</div>
+                                <div className="text-[#0066cc] mb-[20px] card-icon">{item.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-[15px] text-[#1a1a1a]">{item.title}</h3>
                                 <p className="text-[#666] mb-[20px] leading-[1.6] font-medium">{item.desc}</p>
                                 <ul className="list-none p-0">
@@ -315,7 +627,7 @@ const LinkBuildingServices = () => {
                     </div>
                     <div className="grid md:grid-cols-4 gap-8">
                         {differentiators.map((item, i) => (
-                            <div key={i} className="text-center p-[30px] bg-[#f8f9fa] rounded-[20px] border border-[#eee]">
+                            <div key={i} ref={el => diffCardsRef.current[i] = el} className="text-center p-[30px] bg-[#f8f9fa] rounded-[20px] border border-[#eee] transition-all hover:border-[#0066cc] hover:bg-white hover:shadow-lg">
                                 <div className="text-[#0066cc] mb-[15px] flex justify-center">{item.icon}</div>
                                 <h4 className="text-[20px] font-semibold text-[#1a1a1a] mb-[10px]">{item.title}</h4>
                                 <p className="text-[15px] text-[#666] leading-[1.6] font-medium">{item.desc}</p>
@@ -329,8 +641,8 @@ const LinkBuildingServices = () => {
             <section className="py-[100px] bg-[#0f172a] text-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16">
-                        <div>
-                            <h2 className="text-[36px] font-bold mb-[40px] text-white">Industries We Build Authority For</h2>
+                        <div ref={industryRef}>
+                            <h2 className="text-[36px] font-bold mb-[40px] text-white transition-transform duration-500">Industries We Build Authority For</h2>
                             <div className="flex flex-wrap gap-4">
                                 {[
                                     { name: "E-commerce & D2C", icon: <ShoppingCart size={18} /> },
@@ -343,7 +655,8 @@ const LinkBuildingServices = () => {
                                 ].map((item, i) => (
                                     <div
                                         key={i}
-                                        className={`flex items-center gap-[10px] bg-[rgba(255,255,255,0.05)] p-[15px] rounded-[12px] ${i === 6 ? 'w-full justify-center' : 'w-[calc(50%-8px)] justify-start'}`}
+                                        ref={el => industryItemsRef.current[i] = el}
+                                        className={`flex items-center gap-[10px] bg-[rgba(255,255,255,0.05)] p-[15px] rounded-[12px] transition-all hover:bg-[rgba(255,255,255,0.1)] ${i === 6 ? 'w-full justify-center' : 'w-[calc(50%-8px)] justify-start'}`}
                                     >
                                         <span className="text-blue-400">{item.icon}</span>
                                         <span>{item.name}</span>
@@ -351,7 +664,7 @@ const LinkBuildingServices = () => {
                                 ))}
                             </div>
                         </div>
-                        <div>
+                        <div ref={integrationRef}>
                             <h2 className="text-[36px] font-bold mb-[40px] text-white">SEO + Link Building = Scalable Growth</h2>
                             <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white font-medium">
                                 Link building works best when integrated with complete SEO architecture. At Adkryoss, we align link acquisition with:
@@ -364,7 +677,7 @@ const LinkBuildingServices = () => {
                                     "Digital PR",
                                     "Performance Analytics"
                                 ].map((tag, i) => (
-                                    <span key={i} className="py-[8px] px-[20px] bg-[rgba(59,130,246,0.1)] text-[#60a5fa] rounded-[50px] text-[14px] font-semibold border border-[rgba(59,130,246,0.2)]">
+                                    <span key={i} ref={el => integrationTagsRef.current[i] = el} className="py-[8px] px-[20px] bg-[rgba(59,130,246,0.1)] text-[#60a5fa] rounded-[50px] text-[14px] font-semibold border border-[rgba(59,130,246,0.2)] transition-all hover:bg-[#60a5fa] hover:text-white cursor-default">
                                         {tag}
                                     </span>
                                 ))}
@@ -376,7 +689,7 @@ const LinkBuildingServices = () => {
 
             {/* Results Section */}
             <section className="py-[100px] bg-white">
-                <div className="container">
+                <div className="container" ref={resultsRef}>
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold text-[#1a1a1a] mb-[20px]">Results You Can Expect</h2>
                         <p className="text-[16px] md:text-[18px] mb-6 font-medium">
@@ -391,7 +704,7 @@ const LinkBuildingServices = () => {
                             { label: "Brand Credibility", val: "Industry Trust" },
                             { label: "Long-Term ROI", val: "SEO Momentum" }
                         ].map((res, i) => (
-                            <div key={i} className="text-center p-[30px] bg-[#f8f9fa] rounded-[24px] border border-[#eee]">
+                            <div key={i} ref={el => resultsCardsRef.current[i] = el} className="text-center p-[30px] bg-[#f8f9fa] rounded-[24px] border border-[#eee] transition-transform hover:-translate-y-2 hover:border-[#0066cc]">
                                 <div className="text-[24px] font-bold text-[#0066cc] mb-[5px]">{res.label}</div>
                                 <div className="text-[14px] text-[#666] font-medium">{res.val}</div>
                             </div>
@@ -401,7 +714,7 @@ const LinkBuildingServices = () => {
             </section>
 
             {/* FAQs */}
-            <section className="py-[100px] bg-[#f8f9fa]">
+            <section ref={faqRef} className="py-[100px] bg-[#f8f9fa]">
                 <div className="container px-6 mx-auto">
                     <h2 className="text-[36px] font-bold text-center mb-[50px]">Frequently Asked Questions</h2>
                     <div className="max-w-[800px] mx-auto">
@@ -426,7 +739,7 @@ const LinkBuildingServices = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
+            <section ref={ctaRef} className="py-[80px] bg-gradient-to-br from-[#0066cc] to-[#004999] text-white text-center">
                 <div className="container">
                     <h2 className="text-[36px] font-bold mb-[20px] text-white">Let’s Build Authority That Compounds</h2>
                     <p className="text-[16px] md:text-[18px] mb-6 opacity-90 text-white font-medium">
@@ -434,7 +747,7 @@ const LinkBuildingServices = () => {
                     </p>
                     <Link
                         to="/contact"
-                        className="inline-flex items-center gap-[10px] bg-white text-[#0066cc] py-[18px] px-[40px] rounded-[50px] font-semibold no-underline transition-all duration-300 hover:scale-[1.05]"
+                        className="inline-flex items-center gap-[10px] bg-white text-[#0066cc] py-[18px] px-[40px] rounded-[50px] font-semibold no-underline transition-all duration-300 hover:scale-[1.05] hover:shadow-xl"
                     >
                         Start Building Smarter Links Today <ArrowRight size={20} />
                     </Link>
@@ -445,3 +758,4 @@ const LinkBuildingServices = () => {
 };
 
 export default LinkBuildingServices;
+

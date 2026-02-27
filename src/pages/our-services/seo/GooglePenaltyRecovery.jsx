@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     AlertTriangle,
     Shield,
@@ -25,12 +27,288 @@ import {
     ChevronUp
 } from 'lucide-react';
 import googlepenaltyrecovery from '../../../assets/SEO/googlepenaltyhero.png';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const GooglePenaltyRecovery = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const messageRef = useRef(null);
+    const reasonsRef = useRef(null);
+    const typeCardsRef = useRef([]);
+    const phaseCardsRef = useRef([]);
+    const signsContentRef = useRef(null);
+    const signsGridRef = useRef(null);
+    const approachRef = useRef(null);
+    const toolsRef = useRef(null);
+    const industriesRef = useRef(null);
+    const timelineCardsRef = useRef([]);
+    const faqRef = useRef(null);
+    const ctaRef = useRef(null);
+
     const [openFaq, setOpenFaq] = useState(null);
 
     const toggleFaq = (i) => {
         setOpenFaq(openFaq === i ? null : i);
     };
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Rising from Depths
+            gsap.fromTo(heroContentRef.current,
+                { x: -100, opacity: 0 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: heroContentRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+            gsap.fromTo(heroImageRef.current,
+                { x: 100, opacity: 0, scale: 0.8 },
+                {
+                    x: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1.5,
+                    ease: "elastic.out(1, 0.75)",
+                    scrollTrigger: {
+                        trigger: heroImageRef.current,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                }
+            );
+
+            // Message & Reasons - Cleaning Reveal
+            if (messageRef.current) {
+                gsap.fromTo(messageRef.current,
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: messageRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            }
+            if (reasonsRef.current) {
+                gsap.fromTo(reasonsRef.current,
+                    { scale: 0.9, opacity: 0, filter: "blur(10px)" },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        filter: "blur(0px)",
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: reasonsRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            }
+
+            // Penalty Types - Distinct Identity
+            typeCardsRef.current.forEach((card, i) => {
+                if (!card) return;
+                gsap.fromTo(card,
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        delay: i * 0.15,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Framework - Sequential Progression
+            phaseCardsRef.current.forEach((card, i) => {
+                if (!card) return;
+                gsap.fromTo(card,
+                    { x: i % 2 === 0 ? -50 : 50, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Signs - Red Alert
+            if (signsContentRef.current) {
+                gsap.fromTo(signsContentRef.current,
+                    { x: -50, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: signsContentRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            }
+            if (signsGridRef.current) {
+                gsap.fromTo(signsGridRef.current.children,
+                    { scale: 0, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        stagger: 0.1,
+                        duration: 0.6,
+                        scrollTrigger: {
+                            trigger: signsGridRef.current,
+                            start: "top 85%",
+                            end: "bottom 15%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            }
+
+            // Approach - Unified Badge
+            if (approachRef.current) {
+                gsap.fromTo(approachRef.current.children,
+                    { y: 20, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        stagger: 0.05,
+                        duration: 0.5,
+                        scrollTrigger: {
+                            trigger: approachRef.current,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            }
+
+            // Tools & Industries - Logic Grid
+            if (toolsRef.current) {
+                gsap.fromTo(toolsRef.current,
+                    { x: -40, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: toolsRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            }
+            if (industriesRef.current) {
+                gsap.fromTo(industriesRef.current,
+                    { x: 40, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: industriesRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            }
+
+            // Timeline - Recovery Path
+            timelineCardsRef.current.forEach((card, i) => {
+                if (!card) return;
+                gsap.fromTo(card,
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: i * 0.2,
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // FAQ - Knowledge Reveal
+            if (faqRef.current) {
+                gsap.fromTo(faqRef.current,
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: faqRef.current,
+                            start: "top 80%",
+                            end: "bottom 20%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            }
+
+            // CTA - Final Triumph
+            if (ctaRef.current) {
+                gsap.fromTo(ctaRef.current,
+                    { scale: 0.9, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 1.2,
+                        scrollTrigger: {
+                            trigger: ctaRef.current,
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            }
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
 
     const commonReasons = [
         { title: "Toxic Backlinks", desc: "Spammy or low-quality inbound links.", icon: <AlertTriangle size={24} /> },
@@ -96,8 +374,31 @@ const GooglePenaltyRecovery = () => {
         "Backlink spike from unknown sources"
     ];
 
+    const faqs = [
+        {
+            q: "What is a Google Penalty?",
+            a: "A Google penalty is a negative impact on a website's search rankings based on updates to Google's search algorithms or manual review. It's intended to lower the rankings of sites that violate search quality guidelines."
+        },
+        {
+            q: "How do I know if my site has been penalized?",
+            a: "Signs include a sudden and sharp drop in organic traffic, your website disappearing from search results for your brand name, and manual action notifications in Google Search Console."
+        },
+        {
+            q: "Can you recover from a Manual Action?",
+            a: "Yes. Manual actions require identifying the violation, fixing it across the entire site, and submitting a reconsideration request to Google with documentation of the cleanup."
+        },
+        {
+            q: "How long does the recovery process take?",
+            a: "Recovery timelines vary. Minor algorithmic issues can take 4-8 weeks, while manual actions or severe link penalties can take 2-6 months depending on the extent of the damage and cleanup required."
+        },
+        {
+            q: "Do I need to delete my whole website and start over?",
+            a: "Rarely. Most penalties can be recovered from by pruning toxic content, removing bad backlinks, and improving overall site quality and authority (E-E-A-T)."
+        }
+    ];
+
     return (
-        <div className="bg-white">
+        <div ref={pageRef} className="bg-white">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -107,7 +408,7 @@ const GooglePenaltyRecovery = () => {
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10 text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] leading-[1.1] text-white">
                             Google Penalty Recovery Services
                         </h1>
@@ -124,22 +425,22 @@ const GooglePenaltyRecovery = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={googlepenaltyrecovery}
@@ -155,7 +456,7 @@ const GooglePenaltyRecovery = () => {
             <section className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] items-center">
-                        <div>
+                        <div ref={messageRef}>
                             <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
                                 We Don't Just Remove Penalties. We Rebuild Your DNA.
                             </h2>
@@ -163,7 +464,7 @@ const GooglePenaltyRecovery = () => {
                                 Google's ecosystem evolves constantly. Updates like SpamCore, Helpful Content, and Core Algorithm changes are designed to reward quality. If you've been hit, it's a signal that your SEO foundation needs more than just a quick fix.
                             </p>
                         </div>
-                        <div className="bg-[#f8fafc] p-10 rounded-[30px] border border-[#e2e8f0]">
+                        <div ref={reasonsRef} className="bg-[#f8fafc] p-10 rounded-[30px] border border-[#e2e8f0]">
                             <h3 className="text-[24px] font-semibold mb-[30px] text-[#0f172a]">Why Penalties Happen:</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 {commonReasons.map((reason, i) => (
@@ -189,7 +490,7 @@ const GooglePenaltyRecovery = () => {
                     </h2>
                     <div className="flex flex-wrap justify-center gap-[30px]">
                         {penaltyTypes.map((type, i) => (
-                            <div key={i} className="w-[calc(50%-15px)] min-w-[320px] bg-white p-10 rounded-[24px] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc] border border-transparent">
+                            <div ref={el => typeCardsRef.current[i] = el} key={i} className="w-[calc(50%-15px)] min-w-[320px] bg-white p-10 rounded-[24px] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc] border border-transparent">
                                 <div className="text-[#0066cc] mb-6">{type.icon}</div>
                                 <h3 className="text-[22px] font-semibold mb-4 text-[#0f172a]">{type.title}</h3>
                                 <p className="text-base text-[#64748b] leading-[1.7] font-medium">{type.desc}</p>
@@ -200,7 +501,7 @@ const GooglePenaltyRecovery = () => {
             </section>
 
             {/* Framework Section */}
-            <section id="audit" className="py-20 bg-white">
+            <section id="services" className="py-20 bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-5 text-[#0f172a]">
@@ -212,7 +513,7 @@ const GooglePenaltyRecovery = () => {
                     </div>
                     <div className="flex flex-wrap justify-center gap-[30px]">
                         {phases.map((phase, i) => (
-                            <div key={i} className="w-[calc(25%-23px)] min-w-[280px] bg-[#f8fafc] p-[30px] rounded-[20px] border border-[#e2e8f0] grow transition-all duration-300 hover:border-[#0066cc] hover:bg-white hover:shadow-lg">
+                            <div ref={el => phaseCardsRef.current[i] = el} key={i} className="w-[calc(25%-23px)] min-w-[280px] bg-[#f8fafc] p-[30px] rounded-[20px] border border-[#e2e8f0] grow transition-all duration-300 hover:border-[#0066cc] hover:bg-white hover:shadow-lg">
                                 <span className="text-sm font-bold text-[#0066cc] mb-4 block uppercase tracking-wider">Phase 0{i + 1}</span>
                                 <h3 className="text-[20px] font-semibold mb-4 text-[#0f172a]">{phase.title}</h3>
                                 <p className="text-[15px] text-[#475569] mb-5 leading-[1.6] font-medium">{phase.desc}</p>
@@ -234,7 +535,7 @@ const GooglePenaltyRecovery = () => {
             <section className="py-20 bg-[#0f172a] text-white">
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-[60px] items-center">
-                        <div>
+                        <div ref={signsContentRef}>
                             <h2 className="text-[36px] font-bold text-white mb-[30px]">
                                 Signs You Need Immediate Penalty Recovery
                             </h2>
@@ -245,7 +546,7 @@ const GooglePenaltyRecovery = () => {
                                 Get a Free Analysis <ArrowRight size={20} />
                             </Link>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div ref={signsGridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             {signs.map((sign, i) => (
                                 <div key={i} className="p-6 bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-[20px] transition-all duration-300 hover:bg-[rgba(255,255,255,0.1)]">
                                     <AlertTriangle size={24} className="text-[#f59e0b] mb-4" />
@@ -263,7 +564,7 @@ const GooglePenaltyRecovery = () => {
                     <h2 className="text-[36px] font-bold mb-[60px] text-[#0f172a]">
                         What Makes Our Recovery Approach Different?
                     </h2>
-                    <div className="flex flex-wrap justify-center gap-5">
+                    <div ref={approachRef} className="flex flex-wrap justify-center gap-5">
                         {[
                             "AI-driven SERP evolution analysis",
                             "Entity-based SEO cleanup",
@@ -273,7 +574,7 @@ const GooglePenaltyRecovery = () => {
                             "E-E-A-T reinforcement"
                         ].map((item, i) => (
                             <div key={i} className="py-4 px-8 bg-[#f8fafc] rounded-full border border-[#e2e8f0] font-bold text-[#0f172a] shadow-sm transition-all hover:border-[#0066cc] hover:text-[#0066cc] cursor-default">
-                                ✔ {item}
+                                ✓ {item}
                             </div>
                         ))}
                     </div>
@@ -287,7 +588,7 @@ const GooglePenaltyRecovery = () => {
             <section className="py-20 bg-[#f8fafc]">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
+                        <div ref={toolsRef}>
                             <h2 className="text-[36px] font-bold mb-8 text-[#0f172a] leading-tight">
                                 Our Tools & Intelligence Stack
                             </h2>
@@ -310,7 +611,7 @@ const GooglePenaltyRecovery = () => {
                                 Every decision is backed by data.
                             </p>
                         </div>
-                        <div className="bg-white p-10 rounded-[30px] border border-[#e2e8f0] shadow-xl shadow-blue-900/5">
+                        <div ref={industriesRef} className="bg-white p-10 rounded-[30px] border border-[#e2e8f0] shadow-xl shadow-blue-900/5">
                             <h2 className="text-[32px] font-bold mb-8 text-[#0f172a] leading-tight">
                                 Industries We've Supported in Recovery
                             </h2>
@@ -332,7 +633,7 @@ const GooglePenaltyRecovery = () => {
                                 ))}
                             </div>
                             <p className="mt-8 text-[16px] font-semibold text-[#0f172a] border-l-4 border-[#0066cc] pl-4 italic">
-                                Search penalties don’t discriminate — but recovery requires expertise.
+                                Search penalties don't discriminate — but recovery requires expertise.
                             </p>
                         </div>
                     </div>
@@ -344,18 +645,18 @@ const GooglePenaltyRecovery = () => {
                 <div className="container text-center">
                     <h2 className="text-[36px] font-bold mb-[50px] text-[#0f172a]">Recovery Timeline</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
-                        <div className="p-10 bg-white rounded-[24px] shadow-[0_4px_6px_rgba(0,0,0,0.05)] border border-transparent transition-all hover:border-[#0066cc]/20">
+                        <div ref={el => timelineCardsRef.current[0] = el} className="p-10 bg-white rounded-[24px] shadow-[0_4px_6px_rgba(0,0,0,0.05)] border border-transparent transition-all hover:border-[#0066cc]/20">
                             <h3 className="text-[20px] font-semibold text-[#0066cc] mb-4">Minor Algorithmic Issue</h3>
                             <p className="text-[32px] font-medium text-[#0f172a] mb-2.5">4–8 Weeks</p>
                             <p className="text-[#64748b] leading-relaxed font-medium">Focused cleanup and quality improvement.</p>
                         </div>
-                        <div className="p-10 bg-white rounded-[24px] border-2 border-[#0066cc] shadow-xl shadow-blue-900/5 relative overflow-hidden">
+                        <div ref={el => timelineCardsRef.current[1] = el} className="p-10 bg-white rounded-[24px] border-2 border-[#0066cc] shadow-xl shadow-blue-900/5 relative overflow-hidden">
                             <div className="absolute top-0 right-0 bg-[#0066cc] text-white text-[10px] px-3 py-1 font-bold uppercase tracking-widest">Crucial</div>
                             <h3 className="text-[20px] font-semibold text-[#0066cc] mb-4">Manual Action</h3>
                             <p className="text-[32px] font-medium text-[#0f172a] mb-2.5">2–4 Months</p>
                             <p className="text-[#64748b] leading-relaxed font-medium">Outreach, cleanup, and reconsideration process.</p>
                         </div>
-                        <div className="p-10 bg-white rounded-[24px] shadow-[0_4px_6px_rgba(0,0,0,0.05)] border border-transparent transition-all hover:border-[#0066cc]/20">
+                        <div ref={el => timelineCardsRef.current[2] = el} className="p-10 bg-white rounded-[24px] shadow-[0_4px_6px_rgba(0,0,0,0.05)] border border-transparent transition-all hover:border-[#0066cc]/20">
                             <h3 className="text-[20px] font-semibold text-[#0066cc] mb-4">Severe Link Penalty</h3>
                             <p className="text-[32px] font-medium text-[#0f172a] mb-2.5">3–6 Months</p>
                             <p className="text-[#64748b] leading-relaxed font-medium">Extensive forensic link audit and authority rebuilding.</p>
@@ -365,7 +666,7 @@ const GooglePenaltyRecovery = () => {
             </section>
 
             {/* FAQ Section */}
-            <section className="py-20 bg-white">
+            <section ref={faqRef} className="py-20 bg-white">
                 <div className="container px-6 mx-auto">
                     <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">Recovery Intelligence (FAQs)</h2>
                     <div className="max-w-[800px] mx-auto">
@@ -390,7 +691,7 @@ const GooglePenaltyRecovery = () => {
             </section>
 
             {/* Final CTA */}
-            <section className="py-24 text-center bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white">
+            <section ref={ctaRef} className="py-24 text-center bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white">
                 <div className="container">
                     <h2 className="text-[36px] font-bold text-white mb-6 leading-tight">
                         Ready to Take Control of Your Rankings?

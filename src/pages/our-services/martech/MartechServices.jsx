@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import martechhero from "../../../assets/martech/martechhero.png";
 import {
     BarChart3,
@@ -15,7 +17,236 @@ import {
     Cpu
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const MartechServices = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const futureTextRef = useRef(null);
+    const futureCardsRef = useRef([]);
+    const capabilityCardsRef = useRef([]);
+    const bannerRef = useRef(null);
+    const diffCardsRef = useRef([]);
+    const processStepsRef = useRef([]);
+    const industryTagsRef = useRef([]);
+    const advantageItemsRef = useRef([]);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero Animations
+            gsap.fromTo(heroContentRef.current, {
+                y: -50,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: heroContentRef.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
+            });
+            gsap.fromTo(heroImageRef.current, {
+                x: 50,
+                opacity: 0
+            }, {
+                x: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: "power3.out",
+                delay: 0.2,
+                scrollTrigger: {
+                    trigger: heroImageRef.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
+            });
+
+            // Future Section
+            gsap.fromTo(futureTextRef.current, {
+                y: 30,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: futureTextRef.current,
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
+            });
+            futureCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card, {
+                    scale: 0.8,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    ease: "back.out(1.7)",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                });
+            });
+
+            // Capability Cards - 3D Rotation
+            capabilityCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card, {
+                    rotationY: 45,
+                    opacity: 0,
+                    y: 50
+                }, {
+                    rotationY: 0,
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                });
+            });
+
+            // Banner Section
+            gsap.fromTo(bannerRef.current, {
+                scale: 0.9,
+                opacity: 0
+            }, {
+                scale: 1,
+                opacity: 1,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: bannerRef.current,
+                    start: "top 85%",
+                    end: "bottom 20%",
+                    toggleActions: "play reverse play reverse"
+                }
+            });
+
+            // Differentiators
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.fromTo(card, {
+                    x: -30,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.5,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                });
+            });
+
+            // Process Steps
+            processStepsRef.current.forEach((step, i) => {
+                gsap.fromTo(step, {
+                    y: 40,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: step,
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                });
+            });
+
+            // Industries
+            industryTagsRef.current.forEach((tag, i) => {
+                gsap.fromTo(tag, {
+                    scale: 0,
+                    opacity: 0
+                }, {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 0.4,
+                    delay: i * 0.05,
+                    ease: "back.out(2)",
+                    scrollTrigger: {
+                        trigger: tag,
+                        start: "top 95%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                });
+            });
+
+            // Advantages
+            advantageItemsRef.current.forEach((item, i) => {
+                gsap.fromTo(item, {
+                    x: 20,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.4,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 95%",
+                        end: "bottom 20%",
+                        toggleActions: "play reverse play reverse"
+                    }
+                });
+            });
+
+            // Hero Image Floating
+            gsap.to(heroImageRef.current, {
+                y: -15,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            scale: isEnter ? 1.05 : 1,
+            y: isEnter ? -10 : 0,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+        const iconContainer = e.currentTarget.querySelector('.icon-container');
+        if (iconContainer) {
+            gsap.to(iconContainer, {
+                rotate: isEnter ? 10 : 0,
+                scale: isEnter ? 1.1 : 1,
+                duration: 0.3
+            });
+        }
+    };
+
     const capabilities = [
         {
             icon: <Settings size={32} />,
@@ -127,7 +358,7 @@ const MartechServices = () => {
     const advantages = ["360° customer visibility", "Faster lead-to-sale cycles", "Higher marketing ROI", "Reduced operational cost", "Improved campaign efficiency", "Predictive revenue growth"];
 
     return (
-        <div className="bg-white text-slate-900 overflow-hidden">
+        <div ref={pageRef} className="bg-white text-slate-900 overflow-hidden">
             {/* Hero Section */}
             {/* <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -138,6 +369,8 @@ const MartechServices = () => {
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                    
                     <div className="text-left relative z-10 animate-fade-in-up text-white">
+                   
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             Engineer Your Marketing. Accelerate Your Growth.
                         </h1>
@@ -151,20 +384,25 @@ const MartechServices = () => {
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <a
                                 href="/contact"
+                        <div className="flex flex-col sm:flex-row gap-4 mt-6">
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                    
                     <div className="flex justify-center md:justify-end relative z-10">
+                    
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={martechhero}
@@ -197,7 +435,7 @@ const MartechServices = () => {
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
     {/* LEFT CONTENT */}
-    <div className="text-left max-w-[600px] space-y-6">
+    <div ref={heroContentRef} className="text-left max-w-[600px] space-y-6">
 
       <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
         <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
@@ -232,7 +470,7 @@ const MartechServices = () => {
 
     {/* RIGHT IMAGE */}
     <div className="flex justify-center md:justify-end relative z-10">
-      <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+      <div ref={heroImageRef} className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
 
         {/* Image Glow */}
         <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
@@ -267,7 +505,7 @@ const MartechServices = () => {
             <section className="pt-32 pb-24 bg-slate-50">
                 <div className="container px-6 mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
+                        <div ref={futureTextRef}>
                             <h2 className="text-[36px] font-bold text-slate-900 mb-8 leading-tight tracking-tight">
                                 The Future of Marketing is Martech-Led
                             </h2>
@@ -290,8 +528,14 @@ const MartechServices = () => {
                                 { title: "Scale Fast", icon: <Rocket /> },
                                 { title: "AI Powered", icon: <Brain /> }
                             ].map((item, index) => (
-                                <div key={index} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center gap-4 text-center group hover:shadow-xl hover:-translate-y-2 transition-all">
-                                    <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                <div
+                                    key={index}
+                                    ref={el => futureCardsRef.current[index] = el}
+                                    onMouseEnter={(e) => handleHover(e, true)}
+                                    onMouseLeave={(e) => handleHover(e, false)}
+                                    className="cursor-pointer bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center gap-4 text-center group hover:shadow-xl hover:-translate-y-2 transition-all transition-duration-300"
+                                >
+                                    <div className="icon-container w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all transition-duration-300">
                                         {item.icon}
                                     </div>
                                     <h3 className="font-semibold text-slate-900">{item.title}</h3>
@@ -303,15 +547,21 @@ const MartechServices = () => {
             </section>
 
             {/* Our Martech Capabilities */}
-            <section className="py-24 bg-slate-900 text-white">
+            <section id="services" className="py-24 bg-slate-900 text-white">
                 <div className="container px-6 mx-auto text-center mb-16">
                     <h2 className="text-[36px] font-bold mb-6 tracking-tight text-white">Our Martech Capabilities</h2>
                     <div className="w-24 h-2 bg-blue-500 mx-auto rounded-full"></div>
                 </div>
                 <div className="container px-6 mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {capabilities.map((item, index) => (
-                        <div key={index} className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                            <div className="text-blue-400 mb-8 group-hover:scale-110 transition-transform inline-block">
+                        <div
+                            key={index}
+                            ref={el => capabilityCardsRef.current[index] = el}
+                            onMouseEnter={(e) => handleHover(e, true)}
+                            onMouseLeave={(e) => handleHover(e, false)}
+                            className="p-10 rounded-[40px] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group cursor-pointer"
+                        >
+                            <div className="icon-container text-blue-400 mb-8 transition-transform inline-block">
                                 {item.icon}
                             </div>
                             <h3 className="text-[20px] md:text-[24px] mb-4 font-semibold text-white tracking-tight">
@@ -334,7 +584,7 @@ const MartechServices = () => {
             {/* Performance & Martech Integration Banner */}
             <section className="py-24 bg-white">
                 <div className="container px-6 mx-auto">
-                    <div className="max-w-6xl mx-auto rounded-[50px] bg-gradient-to-br from-[#0066CC] to-[#004999] p-16 text-white relative shadow-[0_30px_60px_-12px_rgba(0,102,204,0.4)] overflow-hidden">
+                    <div ref={bannerRef} className="max-w-6xl mx-auto rounded-[50px] bg-gradient-to-br from-[#0066CC] to-[#004999] p-16 text-white relative shadow-[0_30px_60px_-12px_rgba(0,102,204,0.4)] overflow-hidden">
                         <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -mr-40 -mt-40 blur-3xl"></div>
                         <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">Performance & Martech Integration</h2>
                         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -348,7 +598,7 @@ const MartechServices = () => {
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 {["CRM Integration", "Ad System Sync", "E-com Bridging", "Automation Hub"].map((item, idx) => (
-                                    <div key={idx} className="bg-white/10 p-5 rounded-2xl flex items-center justify-center text-center font-semibold backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all">
+                                    <div key={idx} className="bg-white/10 p-5 rounded-2xl flex items-center justify-center text-center font-semibold backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all cursor-pointer">
                                         {item}
                                     </div>
                                 ))}
@@ -366,8 +616,14 @@ const MartechServices = () => {
                     </h2>
                     <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
                         {differentiators.map((item, index) => (
-                            <div key={index} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col gap-4 group hover:shadow-xl hover:-translate-y-2 transition-all">
-                                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                            <div
+                                key={index}
+                                ref={el => diffCardsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="cursor-pointer bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col gap-4 group hover:shadow-xl hover:-translate-y-2 transition-all transition-duration-300"
+                            >
+                                <div className="icon-container w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all transition-duration-300">
                                     <CheckCircle2 size={24} />
                                 </div>
                                 <div>
@@ -388,7 +644,13 @@ const MartechServices = () => {
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
                         {process.map((item, index) => (
-                            <div key={index} className="relative p-10 bg-slate-50 rounded-[40px] border border-slate-100 transition-all hover:bg-white hover:shadow-2xl group">
+                            <div
+                                key={index}
+                                ref={el => processStepsRef.current[index] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="cursor-pointer relative p-10 bg-slate-50 rounded-[40px] border border-slate-100 transition-all hover:bg-white hover:shadow-2xl group transition-duration-300"
+                            >
                                 <div className="text-[48px] font-extrabold text-blue-600/10 absolute top-6 right-8 leading-none group-hover:text-blue-600/20 transition-all italic">
                                     {item.step}
                                 </div>
@@ -409,7 +671,13 @@ const MartechServices = () => {
                             <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">Industries We Empower</h2>
                             <div className="flex flex-wrap gap-4">
                                 {industries.map((item, index) => (
-                                    <div key={index} className="px-8 py-5 bg-white text-slate-900 rounded-2xl font-black transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1">
+                                    <div
+                                        key={index}
+                                        ref={el => industryTagsRef.current[index] = el}
+                                        onMouseEnter={(e) => handleHover(e, true)}
+                                        onMouseLeave={(e) => handleHover(e, false)}
+                                        className="cursor-pointer px-8 py-5 bg-white text-slate-900 rounded-2xl font-semibold transition-all hover:bg-blue-600 hover:text-white hover:-translate-y-1 transition-duration-300"
+                                    >
                                         {item}
                                     </div>
                                 ))}
@@ -423,11 +691,15 @@ const MartechServices = () => {
                             <h2 className="text-[36px] font-bold mb-10 text-white tracking-tight">The Martech Advantage</h2>
                             <div className="space-y-6">
                                 {advantages.map((item, index) => (
-                                    <div key={index} className="flex items-center gap-5 group">
+                                    <div
+                                        key={index}
+                                        ref={el => advantageItemsRef.current[index] = el}
+                                        className="flex items-center gap-5 group"
+                                    >
                                         <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-black group-hover:scale-110 transition-transform">
                                             ✔
                                         </div>
-                                        <span className="font-bold text-lg text-white opacity-90 group-hover:opacity-100 transition-opacity">{item}</span>
+                                        <span className="font-semibold text-lg text-white opacity-90 group-hover:opacity-100 transition-opacity">{item}</span>
                                     </div>
                                 ))}
                             </div>
@@ -441,10 +713,10 @@ const MartechServices = () => {
 
             {/* Final CTA Section */}
             <section className="py-24 bg-gradient-to-br from-[#0066CC] to-[#004999] text-white text-center px-6">
-                <div className="container max-w-4xl mx-auto animate-fade-in text-left md:text-center">
+                <div className="container max-w-4xl mx-auto text-left md:text-center">
                     <h2 className="text-[36px] font-bold mb-10 leading-tight text-white tracking-tight">Ready to Build a Smarter Marketing Engine?</h2>
                     <div className="space-y-12">
-                        <div className="text-2xl  font-bold opacity-90 max-w-3xl text-white mx-auto leading-relaxed">
+                        <div className="text-2xl font-bold opacity-90 max-w-3xl text-white mx-auto leading-relaxed">
                             <p className="text-[16px] md:text-[18px] mb-6 text-white font-medium">
                                 Technology is only powerful when it is structured.
                             </p>
