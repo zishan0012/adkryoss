@@ -2,6 +2,13 @@ import React from "react";
 import amazon from "../../../assets/Amazon.jpg";
 import { useState } from "react";
 import { motion } from "framer-motion";
+
+import PricingIntelligenceImage from "../../../assets/PricingIntelligence.png"
+import ListingConversionStrategyImage from "../../../assets/ListingConversionStrategy.png"
+import InventoryPlanningAlignmentImage from "../../../assets/InventoryPlanningAlignment.png"
+import FunnelBasedSegmentationImage from "../../../assets/FunnelBasedSegmentation.png"
+import AdvertisingPerformanceImage from "../../../assets/AdvertisingPerformance.png"
+
 import {
   Megaphone,
   Radar,
@@ -412,27 +419,27 @@ const AmazonAdvertising = () => {
               {
                 title: "Advertising Performance",
                 desc: "Campaign-level profitability tracking and ROAS scaling.",
-                img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+                img: AdvertisingPerformanceImage
               },
               {
                 title: "Listing Conversion Strategy",
                 desc: "Optimized product listings built for maximum conversion.",
-                img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
+                img: ListingConversionStrategyImage
               },
               {
                 title: "Pricing Intelligence",
                 desc: "Dynamic pricing insights aligned with competition.",
-                img: "https://images.unsplash.com/photo-1589758438368-0ad531db3366",
+                img: PricingIntelligenceImage
               },
               {
                 title: "Inventory Planning Alignment",
                 desc: "Advertising aligned with stock forecasting systems.",
-                img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
+                img: InventoryPlanningAlignmentImage
               },
               {
                 title: "Funnel-Based Segmentation",
                 desc: "Audience targeting structured by buying stage.",
-                img: "https://images.unsplash.com/photo-1552664730-d307ca884978",
+                img: FunnelBasedSegmentationImage
               },
             ].map((item, index) => (
               <div
