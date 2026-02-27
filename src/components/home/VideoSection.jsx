@@ -270,7 +270,7 @@ const VideoSection = () => {
         </p>
 
         {/* Button */}
-        <button
+        {/* <button
           ref={buttonRef}
           style={{
             backgroundColor: "#ea580c",
@@ -286,7 +286,7 @@ const VideoSection = () => {
           onMouseLeave={(e) => handleButtonHover(e, false)}
         >
           Speak to an Expert
-        </button>
+        </button> */}
       </div>
     </motion.section>
   );
