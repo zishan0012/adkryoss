@@ -371,10 +371,7 @@ const AgenticAISEO = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white/90 font-medium">
                             Search is evolving from keywords to intelligence. We build AI-driven SEO systems that don’t just optimize pages — they think, learn, and adapt in real time to dominate modern search ecosystems.
                         </p>
-<<<<<<< HEAD
                        
-=======
->>>>>>> 0e4cdff641e566392719b2bd6c7c6594d6c9aa43
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <Link

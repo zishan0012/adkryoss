@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import seoresellerhero from "../../../assets/SEO/seoresellerhero.png";
@@ -293,7 +294,7 @@ const SEOResellerServices = () => {
   return (
     <div ref={pageRef}>
       {/* Hero Section */}
-      <section
+      {/* <section
         className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
         style={{
           backgroundImage:
@@ -302,7 +303,7 @@ const SEOResellerServices = () => {
       >
         <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
 
-          {/* LEFT CONTENT */}
+          
           <div ref={heroContentRef} className="text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6">
               SEO Reseller Services
@@ -334,7 +335,7 @@ const SEOResellerServices = () => {
             </div>
           </div>
 
-          {/* RIGHT IMAGE */}
+         
           <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
             <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
               <img
@@ -346,7 +347,100 @@ const SEOResellerServices = () => {
           </div>
 
         </div>
-      </section>
+      </section> */}
+
+      <motion.section
+ 
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+>
+
+  {/* Dark Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  {/* Animated Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+
+  <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full z-10">
+
+    {/* LEFT CONTENT */}
+    <div ref={heroContentRef} className="text-left max-w-[600px]">
+
+      <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          SEO Reseller Services
+        </span>
+      </h2>
+
+      <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+        Scale Your Agency. Deliver Results. Stay Invisible.
+      </h3>
+
+      <p className="text-gray-200 text-md md:text-lg leading-relaxed mb-8">
+        White-label SEO solutions designed to help agencies expand revenue,
+        retain clients, and dominate search —
+        without hiring an in-house team.
+      </p>
+
+      {/* Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4">
+        <Link
+          to="/contact"
+          className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+        >
+          Speak to Our Expert →
+        </Link>
+
+        <Link
+          to="#services"
+          className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:bg-blue-400 hover:-translate-y-1 hover:shadow-xl text-center"
+        >
+          Our Services →
+        </Link>
+      </div>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end">
+
+      <div ref={heroImageRef} className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+
+        {/* Image Glow */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+        <img
+          src={seoresellerhero}
+          alt="SEO Reseller Services"
+          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
+                     transform group-hover:-translate-y-2 transition duration-500"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+  {/* Floating Animation */}
+  <style>
+    {`
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(30px); }
+      }
+    `}
+  </style>
+
+</motion.section>
 
       {/* Why SEO Reseller Services? */}
       <section className="bg-white pt-32 pb-24">

@@ -362,7 +362,7 @@ const IBP = () => {
           <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
 
           <img
-            src={approach}
+            src={ibphero}
             alt="Become our IBP"
             className="relative w-full rounded-2xl shadow-2xl 
                        transform group-hover:-translate-y-2 transition duration-500"
