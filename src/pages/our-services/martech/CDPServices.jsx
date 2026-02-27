@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import cdpservicehero from "../../../assets/martech/cdpservicehero.png";
@@ -407,14 +408,16 @@ const CDPServices = () => {
     return (
         <div ref={pageRef} className="bg-white text-slate-900 overflow-hidden" style={{ perspective: "1000px" }}>
             {/* Hero Section */}
-            <section
+            {/* <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    {/* LEFT CONTENT */}
+                   
+                    <div className="text-left relative z-10 animate-fade-in-up text-white">
+                  
                     <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-tight leading-[1.1] text-white">
                             Customer Data Platform (CDP) Services
@@ -429,6 +432,9 @@ const CDPServices = () => {
                             <p className="text-[16px] md:text-[18px] mb-2 text-white font-medium opacity-95 text-justify">
                                 Build a 360° customer view, personalize every interaction, and activate real-time journeys with advanced CDP solutions. At Adkryoss managed by <span className="font-bold ">Clink Consultancy Services Private Limited</span>, we help you master your first-party data.
                             </p>
+                        </div>
+                        <div className="flex flex-wrap gap-4">
+                           
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -446,7 +452,9 @@ const CDPServices = () => {
                             </Link>
                         </div>
                     </div>
-                    {/* RIGHT IMAGE */}
+                   
+                    <div className="flex justify-center md:justify-end relative z-10">
+                   
                     <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
@@ -457,7 +465,101 @@ const CDPServices = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
+
+<motion.section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+>
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  {/* Floating Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div ref={heroContentRef} className="text-left max-w-[600px] space-y-6">
+
+      <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          Customer Data Platform (CDP) Services
+        </span>
+      </h2>
+
+      <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+        Unify. Understand. Activate.
+      </h3>
+
+      <p className="text-gray-200 text-md md:text-lg leading-relaxed font-semibold">
+        Turn fragmented customer data into revenue-driving intelligence.
+      </p>
+      <p className="text-gray-200 text-md md:text-lg leading-relaxed font-medium text-justify">
+        Build a 360° customer view, personalize every interaction, and activate real-time journeys with advanced CDP solutions. At <span className="font-bold">Adkryoss managed by Clink Consultancy Services Private Limited</span>, we help you master your first-party data.
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 pt-2">
+        <a
+          href="/contact"
+          className="inline-flex items-center justify-center bg-white text-black font-semibold px-8 py-4 rounded-full 
+                     transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Speak to Our Expert →
+        </a>
+
+        <a
+          href="#services"
+          className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold 
+                     transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Our Services →
+        </a>
+      </div>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end relative z-10">
+      <div ref={heroImageRef} className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+
+        {/* Image Glow */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+        <img
+          src={cdpservicehero}
+          alt="CDP Services"
+          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
+                     transform group-hover:-translate-y-2 transition duration-500"
+        />
+
+      </div>
+    </div>
+
+  </div>
+
+  {/* Floating Animation */}
+  <style>
+    {`
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(30px); }
+      }
+    `}
+  </style>
+
+</motion.section>
+
 
             {/* Why Your Business Needs a CDP Now */}
             <section className="pt-32 pb-24 bg-slate-50">

@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import agenticaihero from "../../../assets/SEO/agenticaihero.jpeg";
@@ -353,7 +354,7 @@ const AgenticAISEO = () => {
     return (
         <div ref={pageRef} className="overflow-hidden bg-white">
             {/* Hero Section */}
-            <section
+            {/* <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
@@ -370,6 +371,10 @@ const AgenticAISEO = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white/90 font-medium">
                             Search is evolving from keywords to intelligence. We build AI-driven SEO systems that don’t just optimize pages — they think, learn, and adapt in real time to dominate modern search ecosystems.
                         </p>
+<<<<<<< HEAD
+                       
+=======
+>>>>>>> 0e4cdff641e566392719b2bd6c7c6594d6c9aa43
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
                             <Link
@@ -396,7 +401,87 @@ const AgenticAISEO = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
+
+
+<motion.section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+>
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  {/* Floating Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+
+  <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-20 xl:px-28 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div className="text-left relative z-10 max-w-[600px] space-y-6">
+
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-[-1px] leading-[1.1]">
+        Agentic AI SEO Services
+      </h1>
+
+      <h3 className="text-xl md:text-2xl font-medium text-blue-100">
+        The Search for Tomorrow. Driven by Autonomous Intelligence.
+      </h3>
+
+      <p className="text-base md:text-lg font-medium text-gray-200 leading-relaxed">
+        Search is evolving from keywords to intelligence. We build AI-driven SEO systems that don’t just optimize pages — they think, learn, and adapt in real time to dominate modern search ecosystems.
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 mt-2">
+        <Link to="/contact">
+          <button className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            Speak to Our Expert →
+          </button>
+        </Link>
+
+        <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl">
+          Our Services →
+        </button>
+      </div>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end relative z-10">
+      <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm w-full max-w-[450px] h-[260px] sm:h-[320px] md:h-[360px] flex items-center justify-center">
+        <img
+          src={agenticaihero}
+          alt="Agentic AI SEO Services"
+          className="max-w-full max-h-full object-contain rounded-xl drop-shadow-2xl"
+        />
+      </div>
+    </div>
+
+  </div>
+
+  {/* Floating Animation */}
+  <style>
+    {`
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(30px); }
+      }
+    `}
+  </style>
+
+</motion.section>
+
+
+
 
             {/* What is Agentic SEO Section */}
             <section ref={whatRef} className="pt-32 pb-24 bg-white">

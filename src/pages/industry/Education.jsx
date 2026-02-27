@@ -8,6 +8,13 @@ import Coaching from "../../assets/coaching.jpg";
 import Skills from "../../assets/skill.jpg";
 import Abroad from "../../assets/abroad.jpg";
 import Future from "../../assets/future.png";
+import TheDigitalShiftinEducationImage from "../../assets/TheDigitalShiftinEducation.png"
+import SchoolsInternationalSchoolsImage from "../../assets/SchoolsInternationalSchools.png"
+import CollegesUniversitiesImage from "../../assets/CollegesUniversities.png"
+import EdTechPlatformsImage from "../../assets/EdTechPlatforms.png"
+import CoachingInstitutesImage from "../../assets/CoachingInstitutes.png"
+import SkillDevelopmentCertificationImage from "../../assets/SkillDevelopmentCertification.png"
+import FutureReadyDigitalGrowthImage from "../../assets/FutureReadyDigitalGrowth.png"
 // import education from "../../assets/education.png"
 
 import {
@@ -20,6 +27,7 @@ import {
   Globe,
   CheckCircle,
 } from "lucide-react";
+import DigitalMarketingServices from "../our-services/digital-marketing/DigitalMarketingServices";
 const educationApproachCards = [
   {
     title: "Deep Market & Audience Research",
@@ -113,27 +121,27 @@ const educationSolutions = [
 const educationClients = [
   {
     title: "Schools & International Schools",
-    img: school,
+    img: SchoolsInternationalSchoolsImage,
     desc: "Increase admissions, improve parent engagement, and strengthen institutional branding through performance-driven digital strategies.",
   },
   {
     title: "Colleges & Universities",
-    img: College,
+    img: CollegesUniversitiesImage,
     desc: "Drive course inquiries, boost enrollment numbers, and build long-term academic authority in competitive markets.",
   },
   {
     title: "EdTech Platforms",
-    img: Edtech,
+    img: EdTechPlatformsImage,
     desc: "Scale student acquisition with ROI-focused paid campaigns, SEO strategies, and optimized conversion funnels.",
   },
   {
     title: "Coaching Institutes",
-    img: Coaching,
+    img: CoachingInstitutesImage,
     desc: "Generate high-intent leads and increase enrollments with hyper-targeted local and national campaigns.",
   },
   {
     title: "Skill Development & Certification Providers",
-    img: Skills,
+    img: SkillDevelopmentCertificationImage,
     desc: "Position your courses for career-focused audiences and maximize registrations with structured digital funnels.",
   },
   {
@@ -146,57 +154,110 @@ const educationClients = [
 const Education = () => {
   return (
     <>
-      <section
-        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
-        style={{
-          backgroundImage:
-            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
-        }}
-      >
-        {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-blue-900/80"></div> */}
+     
 
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-          {/* LEFT CONTENT */}
-          <div className="text-left text-white">
-            <h2 className="text-4xl md:text-4xl font-bold leading-tight text-white">
-              Education Industry Digital Marketing Services
-            </h2>
 
-            <h2 className="text-2xl md:text-xl font-semibold leading-snug text-white">
-              Empowering Educational Institutions to Lead in the Digital Era
-            </h2>
+<section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+>
 
-            <p className="text-white md:text-md leading-relaxed max-w-[600px]">
-              Smarter strategies. Measurable growth. Future-ready enrollments.
-              {/* </p>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
 
-              <p className="text-gray-300 leading-relaxed"> */}
-              <span className="font-bold text-white">
-                Adkryoss managed by Clink Consultancy Services Private Limited
-              </span>{" "}
-              helps schools, colleges, universities, edtech platforms, and
-              coaching institutes attract the right students, increase
-              admissions, and build long-term digital authority through
-              data-driven marketing strategies.
-            </p>
+  {/* Animated Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
 
-          </div>
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-          {/* RIGHT IMAGE */}
-          <div className="flex justify-center md:justify-end">
-            <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
-              <img
-                src={industryeducation}
-                alt="Section Image"
-                className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
+    {/* LEFT CONTENT */}
+    <div className="text-left opacity-0 animate-[fadeUp_0.8s_ease-out_forwards]">
 
-      </section>
+      <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          Education Industry Digital Marketing Services
+        </span>
+      </h2>
+
+      <h3 className="text-xl md:text-2xl font-semibold leading-snug mb-6 text-blue-100">
+        Empowering Educational Institutions to Lead in the Digital Era
+      </h3>
+
+      <p className="text-gray-200 text-md leading-relaxed max-w-[600px]">
+        Smarter strategies. Measurable growth. Future-ready enrollments.
+        <br /><br />
+        <span className="font-bold text-white">
+          Adkryoss managed by Clink Consultancy Services Private Limited
+        </span>{" "}
+        helps schools, colleges, universities, edtech platforms, and coaching institutes attract the right students, increase admissions, and build long-term digital authority through data-driven marketing strategies.
+      </p>
+
+      <div className="flex gap-4 pt-6">
+        <button className="bg-white text-blue-700 px-7 py-3 rounded-full font-semibold hover:bg-blue-100 transition">
+          Speak to an Expert →
+        </button>
+
+        <button className="border border-white px-7 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-700 transition">
+          Our Services →
+        </button>
+      </div>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end opacity-0 animate-[fadeUp_1.2s_ease-out_forwards]">
+
+      <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+
+        {/* Image Glow */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+        <img
+          src={industryeducation}
+          alt="Education Industry Digital Marketing Services"
+          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
+                     transform group-hover:-translate-y-2 transition duration-500"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+  {/* Custom Animations */}
+  <style>
+    {`
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(30px);
+        }
+      }
+    `}
+  </style>
+
+</section>
+
+
       {/* Why */}
       <section className="bg-gray-100 py-28">
         <div className="px-8 lg:px-16">
@@ -228,7 +289,7 @@ const Education = () => {
             {/* RIGHT IMAGE */}
             <div className="flex justify-end">
               <img
-                src={Edu}
+                src={TheDigitalShiftinEducationImage}
                 alt="Digital Shift in Education"
                 className="w-125 h-125 object-cover rounded-2xl shadow-xl"
               />

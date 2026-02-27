@@ -1,6 +1,21 @@
 import React from 'react';
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import socialmedia from "../../../assets/socialmedia.jpg"
+import WhySocialMediaAdvertisingMattersTodayImage from "../../../assets/WhySocialMediaAdvertisingMattersToday.png"
+import ROIFocusedMediaBuyingImage from "../../../assets/ROIFocusedMediaBuying.png"
+// import AdvancedPixelConversionTrackingImage from "../../../assets/AdvancedPixelConversionTracking.png"
+// import ConversionRateOptimizationIntegrationImage from "../../../assets/ConversionRateOptimizationIntegration.png"
+// import DedicatedCampaignManagerImage from "../../../assets/DedicatedCampaignManager.png"
+// import PerformanceCreativeTestingFrameworkImage from "../../../assets/PerformanceCreativeTestingFramework.png"
+// import TransparentWeeklyReportingImage from "../../../assets/TransparentWeeklyReporting.png"
+import RealEstate2Image from "../../../assets/RealEstate2.png"
+import ECommerceD2CBrandsImage from "../../../assets/ECommerceD2CBrands.png"
+import EducationEdTechImage from "../../../assets/EducationEdTech.png"
+import CorporateB2BServicesImage from "../../../assets/CorporateB2BServices.png"
+import HealthcareClinicsImage from "../../../assets/HealthcareClinics.png"
+import StartupsSMEsImage from "../../../assets/StartupsSMEs.png"
+
 import {
   Facebook,
   Linkedin,
@@ -30,6 +45,7 @@ import {
   Percent,
   Repeat,
 } from "lucide-react";
+import { image } from 'framer-motion/client';
 const platforms = [
   {
     title: "Facebook & Instagram Advertising",
@@ -83,8 +99,10 @@ const approach = [
   },
 ];
 const points = [
+
+
   "ROI-Focused Media Buying",
-  "Advanced Pixel & Conversion Tracking",
+ "Advanced Pixel & Conversion Tracking",
   "Conversion Rate Optimization Integration",
   "Performance Creative Testing Framework",
   "Transparent Weekly Reporting",
@@ -93,27 +111,27 @@ const points = [
 const industries = [
   {
     title: "E-Commerce & D2C Brands",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
+    image: ECommerceD2CBrandsImage
   },
   {
     title: "Education & EdTech",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+    image:EducationEdTechImage
   },
   {
     title: "Healthcare & Clinics",
-    image: "https://images.unsplash.com/photo-1588776814546-ec7e59f1f6b8",
+    image: HealthcareClinicsImage
   },
   {
     title: "Real Estate",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
+    image: RealEstate2Image
   },
   {
     title: "Corporate & B2B Services",
-    image: "https://images.unsplash.com/photo-1556761175-4b46a572b786",
+    image: CorporateB2BServicesImage
   },
   {
     title: "Startups & SMEs",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+    image: StartupsSMEsImage
   },
 ];
 
@@ -166,6 +184,8 @@ const point = [
 const SocialMediaAdvertising = () => {
   return (
     <>
+      {/* <section
+        className="relative py-16 md:py-20 lg:py-24 text-white bg-cover bg-center"
       <section
         className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
         style={{
@@ -173,11 +193,65 @@ const SocialMediaAdvertising = () => {
             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
         }}
       >
-        {/* <div className="absolute inset-0 bg-blue-900/85"></div> */}
+      
+        <div className="absolute inset-0 bg-blue-900/85"></div>
+ 
+        <div className="relative w-full px-4 sm:px-6 lg:px-20 xl:px-28">
+ 
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+ 
+            
+            <div className="space-y-6 text-left">
+ 
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                Social Media Advertising Services
+              </h1>
+ 
+              <p className="text-lg md:text-xl font-semibold text-blue-100">
+                Drive Revenue. Not Just Reach.
+              </p>
+ 
+              <p className="text-blue-100 text-base md:text-lg max-w-xl">
+                Turn attention into action with data-driven, performance-focused
+                social media advertising campaigns built to scale your business
+                faster and smarter.
+              </p>
+ 
+              <p className="text-white font-semibold text-base md:text-lg">
+                Paid Social That Performs — Across Platforms, Audiences & Funnel Stages.
+              </p>
+        
+ 
+              <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                <a
+                  href="/contact"
+                  className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                >
+                  Speak to Our Expert →
+                </a>
+                <a
+                  href="#services"
+                  className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+                >
+                  Our Services →
+                </a>
+              </div>
+            </div>
+ 
+           
+            <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
+              <img
+                src={socialmedia}
+                alt="Social Media Advertising"
+                className="w-200 h-100 object-contain"
+              />
+            </div>
+ 
+      
 
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-          {/* LEFT CONTENT */}
+         
           <div className="text-left relative z-10 text-white leading-tight">
 
             <h1 className="text-[28px] md:text-[36px] lg:text-[48px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
@@ -214,7 +288,6 @@ const SocialMediaAdvertising = () => {
             </div>
           </div>
 
-          {/* RIGHT IMAGE */}
           <div className="flex justify-center md:justify-end">
             <img
               src={socialmedia}
@@ -224,7 +297,80 @@ const SocialMediaAdvertising = () => {
           </div>
 
         </div>
-      </section>
+      </section> */}
+
+
+
+ {/* Social Media Advertising Section */}
+      <motion.section
+        className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+        }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+          <div className="text-left max-w-[600px] space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+              <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+                Social Media Advertising Services
+              </span>
+            </h2>
+
+            <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+              Drive Revenue. Not Just Reach.
+            </h3>
+
+            <p className="text-gray-200 text-md md:text-lg leading-relaxed">
+              Turn attention into action with data-driven, performance-focused social media advertising campaigns built to scale your business faster and smarter.
+            </p>
+
+            <p className="text-blue-100 font-semibold text-md md:text-lg">
+              Paid Social That Performs — Across Platforms, Audiences & Funnel Stages.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <a href="/contact">
+                <button className="inline-flex items-center justify-center bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  Speak to Our Expert →
+                </button>
+              </a>
+
+              <button
+                onClick={() => navigate("/contact")}
+                className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl"
+              >
+                Our Services →
+              </button>
+            </div>
+          </div>
+
+          <div className="flex justify-center md:justify-end relative z-10">
+            <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+              <img
+                src={socialmedia}
+                alt="Social Media Advertising"
+                className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
+              />
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+
+
+
+ 
+
 
       <section className="bg-white py-16 md:py-20">
         <div className="container grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
@@ -260,7 +406,7 @@ const SocialMediaAdvertising = () => {
           {/* RIGHT IMAGE */}
           <div className="flex justify-center lg:justify-end">
             <img
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296"
+              src={WhySocialMediaAdvertisingMattersTodayImage}
               alt="Social Media Advertising"
               className="w-full max-w-md lg:max-w-lg rounded-2xl shadow-lg object-cover"
             />
@@ -456,7 +602,7 @@ const SocialMediaAdvertising = () => {
               >
                 {/* Image Left */}
                 <img
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692"
+                  src={ROIFocusedMediaBuyingImage}
                   alt="Paid Social Strategy"
                   className="
               w-full sm:w-48 md:w-56

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
@@ -376,6 +377,8 @@ const EcommerceSEO = () => {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
+                    
+                    <div className="text-left relative z-10 text-white">
                     {/* LEFT CONTENT */}
                     <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1px] text-white">
@@ -419,7 +422,10 @@ const EcommerceSEO = () => {
                         </div>
                     </div>
                 </div>
+                </div>
             </section>
+
+
 
             {/* Why Ecommerce SEO */}
             <section className="pt-32 pb-24 bg-white">

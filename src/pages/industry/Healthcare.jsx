@@ -1,3 +1,22 @@
+// import React from 'react';
+// import Health from "../../assets/health.jpg"
+// import dental from "../../assets/dental.jpg"
+// import Ivf from "../../assets/ivf.jpg"
+// import Phara from "../../assets/phara.jpg"
+// import Healthtech from "../../assets/healthtech.jpg"
+// import Multi from "../../assets/multi.jpg"
+// import Diag from "../../assets/diagnisttic.jpg"
+// import healthindus from "../../assets/industryhealth.png"
+// import Cosmetic from "../../assets/cosmetic.jpg"
+// import industryhealth from "../../assets/industryhealth.png"
+import DigitalTransformationfortheHealthcareIndustryImage from "../../assets/DigitalTransformationfortheHealthcareIndustry.png"
+import MultiSpecialtyHospitalsImage from "../../assets/MultiSpecialtyHospitals.png"
+import IVFFertilityClinicsImage from "../../assets/IVFFertilityClinics.png"
+import DentalClinicsImage from "../../assets/DentalClinics.png"
+import CosmeticAestheticCentersImage from "../../assets/CosmeticAestheticCenters.png"
+import DiagnosticLabsImage from "../../assets/DiagnosticLabs.png"
+import HealthTechTelemedicinePlatformsImage from "../../assets/HealthTechTelemedicinePlatforms.png"
+import PharmaceuticalCompaniesImage from "../../assets/PharmaceuticalCompanies.png"
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -143,39 +162,41 @@ const healthcareFramework = [
 const healthcareClients = [
   {
     title: "Multi-Specialty Hospitals",
-    img: Multi,
-    desc: "Comprehensive digital strategies to increase patient inflow and strengthen institutional trust.",
+    img: MultiSpecialtyHospitalsImage,
+    desc: "Comprehensive digital strategies to increase patient inflow and strengthen institutional trust."
   },
   {
     title: "IVF & Fertility Clinics",
-    img: Ivf,
-    desc: "High-intent patient acquisition campaigns focused on sensitivity, privacy, and credibility.",
+    img: IVFFertilityClinicsImage,
+    desc: "High-intent patient acquisition campaigns focused on sensitivity, privacy, and credibility."
   },
   {
     title: "Dental Clinics",
-    img: dental,
-    desc: "Localized SEO and appointment-driven paid campaigns to increase treatment bookings.",
+    img: DentalClinicsImage,
+    desc: "Localized SEO and appointment-driven paid campaigns to increase treatment bookings."
   },
   {
     title: "Cosmetic & Aesthetic Centers",
-    img: Cosmetic,
-    desc: "Brand-focused digital strategies that balance performance marketing with premium positioning.",
+    img: CosmeticAestheticCentersImage,
+    desc: "Brand-focused digital strategies that balance performance marketing with premium positioning."
   },
   {
     title: "Diagnostic Labs",
-    img: Diag,
-    desc: "Search visibility and conversion optimization for health checkups and test bookings.",
+    img: DiagnosticLabsImage,
+    desc: "Search visibility and conversion optimization for health checkups and test bookings."
   },
   {
     title: "Pharmaceutical Companies",
-    img: Phara,
-    desc: "Compliance-aware digital marketing strategies that enhance brand credibility and awareness.",
+    img: PharmaceuticalCompaniesImage,
+    desc: "Compliance-aware digital marketing strategies that enhance brand credibility and awareness."
   },
   {
     title: "HealthTech & Telemedicine Platforms",
-    img: Healthtech,
-    desc: "Scalable performance campaigns designed to drive app installs, consultations, and digital adoption.",
+    img: HealthTechTelemedicinePlatformsImage,
+    desc: "Scalable performance campaigns designed to drive app installs, consultations, and digital adoption."
   },
+   
+
 ];
 
 const futureHealthcare = [
@@ -187,6 +208,9 @@ const futureHealthcare = [
 ];
 
 const Healthcare = () => {
+   
+
+
   // ========== REFS FOR ALL SECTIONS ==========
   const heroSectionRef = useRef(null);
   const heroHeadingRef = useRef(null);
@@ -201,6 +225,7 @@ const Healthcare = () => {
   const digitalTransPara3Ref = useRef(null);
   const digitalTransImageRef = useRef(null);
 
+
   const expertiseCardsRef = useRef([]);
   const expertiseHeaderRef = useRef(null);
   const expertiseSubHeaderRef = useRef(null);
@@ -208,6 +233,9 @@ const Healthcare = () => {
   const frameworkCardsRef = useRef([]);
   const frameworkHeaderRef = useRef(null);
   const frameworkSubHeaderRef = useRef(null);
+
+      
+
 
   const clientsCardsRef = useRef([]);
   const clientsHeaderRef = useRef(null);
@@ -536,7 +564,7 @@ const Healthcare = () => {
   return (
     <>
       {/* HERO SECTION */}
-      <section
+      {/* <section
         ref={heroSectionRef}
         className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
         style={{
@@ -570,7 +598,95 @@ const Healthcare = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+<section
+ref={heroSectionRef}
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+>
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  {/* Animated Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div className="text-left opacity-0 animate-[fadeUp_0.8s_ease-out_forwards]">
+
+      <h2 ref={heroHeadingRef} className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          Healthcare Digital Marketing Services
+        </span>
+      </h2>
+
+      <h3 ref={heroSubHeadingRef} className="text-xl md:text-2xl font-semibold leading-snug mb-6 text-blue-100">
+        Data-Driven Growth for Hospitals, Clinics & Healthcare Brands
+      </h3>
+
+      <p ref={heroParagraphRef} className="text-gray-200 text-md leading-relaxed max-w-[600px]">
+        Drive More Appointments. Build Patient Trust. Stay Compliant.
+        <br /><br />
+        In today’s digital-first healthcare ecosystem, patients search, compare, and decide online. We help healthcare providers become the first and most trusted choice across search engines, social platforms, and digital touchpoints.
+      </p>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div ref={heroImageRef} className="flex justify-center md:justify-end opacity-0 animate-[fadeUp_1.2s_ease-out_forwards]">
+
+      <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+
+        {/* Image Glow */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+        <img
+          src={industryhealth}
+          alt="Healthcare Digital Marketing Services"
+          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
+                     transform group-hover:-translate-y-2 transition duration-500"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+  {/* Custom Animations */}
+  <style>
+    {`
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(30px);
+        }
+      }
+    `}
+  </style>
+
+</section>
+
 
       {/* DIGITAL TRANSFORMATION SECTION */}
       <section ref={digitalTransSectionRef} className="bg-gray-150 py-28">
@@ -597,9 +713,9 @@ const Healthcare = () => {
                 acquisition while maintaining ethical communication standards.
               </p>
             </div>
-            <div ref={digitalTransImageRef} className="flex justify-end">
+            <div ref={heroImageRef} className="flex justify-end">
               <img
-                src={Health}
+                src={DigitalTransformationfortheHealthcareIndustryImage}
                 alt="Healthcare Digital Transformation"
                 loading="lazy"
                 className="w-130 h-120 lg:w-150 lg:h-130 rounded-2xl shadow-2xl object-fit"

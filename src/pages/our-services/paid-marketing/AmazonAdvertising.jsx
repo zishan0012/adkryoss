@@ -1,6 +1,7 @@
 import React from "react";
 import amazon from "../../../assets/Amazon.jpg";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Megaphone,
   Radar,
@@ -125,67 +126,174 @@ const AmazonAdvertising = () => {
   };
   return (
     <>
-      <section
-        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
-        style={{
-          backgroundImage:
-            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-        }}
-      >
-        {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-blue-900/85"></div> */}
+      {/* <section
+  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-[480px] flex items-center relative text-white"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp%27)%22"
+  }}
+>
+  
+  <div className="absolute inset-0 bg-blue-900/85"></div>
+ 
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+ 
+    
+    <div className="text-left text-white max-w-[600px]">
+ 
+      <h2 className="text-white md:text-[48px] font-bold mb-4 leading-tight">
+        Amazon Advertising Services
+      </h2>
+ 
+      <h3 className="text-[20px] md:text-[24px] font-semibold mb-4">
+        Scale Faster. Sell Smarter. Dominate Amazon.
+      </h3>
+ 
+      <p className="text-[16px] md:text-[18px] text-white/90 leading-relaxed">
+        Turn product visibility into predictable revenue with performance-driven
+        Amazon Advertising strategies. We combine data science, creative optimization,
+        and marketplace intelligence to help you win the Buy Box, outrank competitors,
+        and maximize ROAS.
+      </p>
+ 
+      <div className="mt-6 flex flex-col sm:flex-row gap-4">
+        <Link to="/contact">
+          <button className="bg-[#ff7a00] text-white px-6 py-3 rounded-full font-semibold">
+            Speak to Our Expert →
+          </button>
+        </Link>
+ 
+        <button
+          onClick={() => navigate("/contact")}
+          className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold bg-transparent"
+        >
+          Our Services →
+        </button>
+      </div>
+ 
+    </div>
+ 
+    
+    <div className="flex justify-center md:justify-end">
+      <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+        <img
+          src={amazon}
+          alt="Amazon Advertising Services"
+          className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+        />
+      </div>
+    </div>
+ 
+  </div>
+</section> */}
 
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-          {/* LEFT CONTENT */}
-          <div className="text-left relative z-10 text-white leading-tight">
+<motion.section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+>
 
-            <h1 className="text-[28px] md:text-[36px] lg:text-[48px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
-              Amazon Advertising Services
-            </h1>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
 
-            <h3 className="text-[20px] md:text-[24px] font-semibold mb-4 text-white">
-              Scale Faster. Sell Smarter. Dominate Amazon.
-            </h3>
+  {/* Floating Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
 
-            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white/90 max-w-xl">
-              Turn product visibility into predictable revenue with performance-driven
-              Amazon Advertising strategies. We combine data science, creative optimization,
-              and marketplace intelligence to help you win the Buy Box, outrank competitors,
-              and maximize ROAS.
-            </p>
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-2">
-              <Link
-                to="/contact"
-                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
-              >
-                Speak to Our Expert →
-              </Link>
-              <Link
-                to="#services"
-                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
-              >
-                Our Services →
-              </Link>
-            </div>
+    {/* LEFT CONTENT */}
+    <div className="text-left max-w-[600px] space-y-6">
 
-          </div>
+      <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          Amazon Advertising Services
+        </span>
+      </h2>
 
-          {/* RIGHT IMAGE */}
-          <div className="flex justify-center md:justify-end">
-            <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
-              <img
-                src={amazon}
-                alt="Amazon Advertising Services"
-                className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
-              />
-            </div>
-          </div>
+      <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+        Scale Faster. Sell Smarter. Dominate Amazon.
+      </h3>
 
-        </div>
-      </section>
-      <div className="h-6 bg-white"></div>
+      <p className="text-gray-200 text-md md:text-lg leading-relaxed">
+        Turn product visibility into predictable revenue with performance-driven Amazon Advertising strategies. We combine data science, creative optimization, and marketplace intelligence to help you win the Buy Box, outrank competitors, and maximize ROAS.
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 pt-2">
+        <Link to="/contact">
+          <button className="inline-flex items-center justify-center bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            Speak to Our Expert →
+          </button>
+        </Link>
+
+        <button
+          onClick={() => navigate("/contact")}
+          className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Our Services →
+        </button>
+      </div>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end relative z-10">
+      <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+
+        {/* Image Glow */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+        <img
+          src={amazon}
+          alt="Amazon Advertising Services"
+          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
+        />
+
+      </div>
+    </div>
+
+  </div>
+
+  {/* Floating Animation */}
+  <style>
+    {`
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(30px); }
+      }
+    `}
+  </style>
+
+</motion.section>
+
+
+
+
+
+
+ 
+<div className="h-6 bg-white"></div>
+ 
+{/* <section className="bg-white pt-10 sm:pt-12 md:pt-16 pb-16 sm:pb-20 md:pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="mb-12 max-w-4xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+              Our Amazon Advertising Solutions
+            </h2>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+              Performance-driven Amazon advertising solutions designed to scale
+              visibility, conversions, and long-term profitability.
+     
+      <div className="h-6 bg-white"></div> */}
 
 
       <section id="services" className="bg-blue-50 pt-20 sm:pt-24 md:pt-28 pb-36 sm:pb-40 md:pb-44">

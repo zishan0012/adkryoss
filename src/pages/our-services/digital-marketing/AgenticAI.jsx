@@ -36,72 +36,11 @@ const AgenticAI = () => {
 
 
 
+
+
+
+
 {/* <section
-  className="relative flex items-center min-h-[70vh] bg-cover bg-center"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-  }}
->
-  <div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4">
-
-   
-  <div className="text-left lg:text-left text-white space-y-6 mx-auto lg:mx-0">
-
-      <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white">
-        Agentic AI Digital Marketing Services
-      </h2>
-
-      <h3 className="text-2xl md:text-3xl font-semibold leading-snug">
-        Autonomous Growth Systems. Intelligent Decisions. Real Business Impact.
-      </h3>
-
-      <p className="text-white md:text-md leading-relaxed max-w-[600px]">
-        AI is no longer a support tool — it’s the strategist, the optimizer, and the growth driver.
-        <br />
-        We build self-learning, goal-oriented marketing ecosystems that plan, execute, optimize, and scale campaigns in real time.
-        <br /><br />
-        <span className="font-bold">
-          Welcome to the era of Agentic AI Marketing.
-        </span>
-      </p>
-
-    
-                        <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
-                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
-                            >
-                                Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
-                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
-                            >
-                                Our Services →
-                            </a>
-                        </div>
-</div>
-
-   
-
-
-    <div className="flex justify-center lg:justify-end mt-10 lg:mt-0">
-    <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
-    <img
-      src={AgenticImage}
-      alt="Section Image"
-      className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
-    />
-  </div>
-</div>
-
-  </div>
-</section> */}
-
-
-
-<section
   className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
   style={{
     backgroundImage:
@@ -156,6 +95,76 @@ const AgenticAI = () => {
           src={AgenticImage}
           alt="Section Image"
           className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+        />
+      </div>
+    </div>
+
+  </div>
+</section> */}
+
+
+<section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+  {/* Dark Overlay for readability */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div className="text-left max-w-[600px] space-y-6">
+      <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          Agentic AI Digital Marketing Services
+        </span>
+      </h2>
+
+      <h3 className="text-xl md:text-2xl font-semibold text-blue-100">
+        Autonomous Growth Systems. Intelligent Decisions. Real Business Impact.
+      </h3>
+
+      <p className="text-gray-200 leading-relaxed font-medium">
+        AI is no longer a support tool — it’s the strategist, the optimizer, and the growth driver.
+        <br />
+        We build self-learning, goal-oriented marketing ecosystems that plan, execute, optimize, and scale campaigns in real time.
+        <br />
+        <span className="font-bold text-white">
+          Welcome to the era of Agentic AI Marketing.
+        </span>
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 pt-2">
+        <a
+          href="/contact"
+          className="inline-flex items-center justify-center bg-white text-black font-semibold px-8 py-4 rounded-full 
+                     transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Speak to Our Expert →
+        </a>
+
+        <a
+          href="#services"
+          className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold 
+                     transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Our Services →
+        </a>
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end relative z-10">
+      <div className="relative group w-full max-w-[400px]">
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+        <img
+          src={AgenticImage}
+          alt="Agentic AI Digital Marketing Services"
+          className="relative w-full object-contain rounded-2xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
         />
       </div>
     </div>

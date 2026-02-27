@@ -1,15 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import mobile from "../../../assets/mobile.jpg";
-import mobile1 from "../../../assets/mobile1.jpg";
-import mobile2 from "../../../assets/mobile3.png";
-import ecommerce1 from "../../../assets/e-commerce.png";
-import real from "../../../assets/realestate.png";
-import education from "../../../assets/education.png";
-import health from "../../../assets/healthcare.png";
-import saas from "../../../assets/saas.png";
-import finance from "../../../assets/finance.png";
+// import mobile1 from "../../../assets/mobile1.jpg";
+// import mobile2 from "../../../assets/mobile3.png";
+// import ecommerce1 from "../../../assets/e-commerce.png";
+// import real from "../../../assets/realestate.png";
+// import education from "../../../assets/education.png";
+// import health from "../../../assets/healthcare.png";
+// import saas from "../../../assets/saas.png";
+// import finance from "../../../assets/finance.png";
+import WhyMobileAdvertisingisNonNegotiableImage from "../../../assets/WhyMobileAdvertisingisNonNegotiable.png"
+import OurApproachStrategyImage from "../../../assets/OurApproachStrategy.png"
+import  RealEstate1Image from "../../../assets/RealEstate1.png"
+import Ecommerce1Image from "../../../assets/Ecommerce1.png"
+import Education2Image from "../../../assets/Education2.png"
+import Finance1Image from "../../../assets/Finance1.png"
+import Healthcare1Image from "../../../assets/Healthcare1.png"
+import SaaSTechImage from "../../../assets/SaaSTech.png"
+
 import {
   Smartphone,
   Search,
@@ -90,27 +100,27 @@ const mobileServices = [
 const industries = [
   {
     title: "E-commerce",
-    image: ecommerce1,
+    image: Ecommerce1Image,
   },
   {
     title: "Real Estate",
-    image: real,
+    image: RealEstate1Image,
   },
   {
     title: "Education",
-    image: education,
+    image: Education2Image,
   },
   {
     title: "Healthcare",
-    image: health,
+    image: Healthcare1Image,
   },
   {
     title: "SaaS & Tech",
-    image: saas,
+    image: SaaSTechImage,
   },
   {
     title: "Finance",
-    image: finance,
+    image: Finance1Image,
   },
 ];
 
@@ -197,65 +207,102 @@ const MobileAdvertising = () => {
 
   return (
     <>
-      <section
-        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
-        style={{
-          backgroundImage:
-            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-        }}
-      >
-        {/* <div className="absolute inset-0 bg-blue-900/85"></div> */}
+      
+ 
+         
 
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+       
+         
 
-          {/* LEFT CONTENT */}
-          <div className="text-left relative z-10 text-white leading-tight">
+<motion.section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+>
 
-            <h1 className="text-[28px] md:text-[36px] lg:text-[48px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
-              Mobile Advertising
-              <span className="block text-blue-300">
-                Services That Convert
-              </span>
-            </h1>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
 
-            <h3 className="text-[20px] md:text-[24px] font-semibold mb-6 text-blue-200">
-              Reach. Engage. Convert — On Every Screen.
-            </h3>
+  {/* Floating Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
 
-            <p className="text-[16px] md:text-[18px] mb-8 leading-[1.8] text-white/90 max-w-xl">
-              Your audience lives on mobile. Your growth should too.
-              Drive real business impact with performance-focused mobile
-              advertising strategies designed to convert micro-moments
-              into measurable revenue.
-            </p>
+  <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-20 xl:px-28 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-2">
-              <Link
-                to="/contact"
-                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
-              >
-                Speak to Our Expert →
-              </Link>
-              <Link
-                to="#services"
-                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
-              >
-                Our Services →
-              </Link>
-            </div>
-          </div>
+    {/* LEFT CONTENT */}
+    <div className="text-left max-w-[600px] space-y-6">
 
-          {/* RIGHT IMAGE */}
-          <div className="flex justify-center md:justify-end">
-            <img
-              src={mobile}
-              alt="Mobile Advertising Services"
-              className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)]"
-            />
-          </div>
+      <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          Mobile Advertising Services That Convert
+        </span>
+      </h2>
 
-        </div>
-      </section>
+      <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+        Reach. Engage. Convert — On Every Screen.
+      </h3>
+
+      <p className="text-gray-200 text-md md:text-lg leading-relaxed">
+        Your audience lives on mobile. Your growth should too. Drive real business impact with performance-focused mobile advertising strategies designed to convert micro-moments into measurable revenue.
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-5 pt-2">
+        <Link to="/contact">
+          <button className="inline-flex items-center justify-center bg-white text-blue-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            Speak to a Mobile Ads Expert →
+          </button>
+        </Link>
+
+        <button
+          className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 hover:text-blue-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          Our Mobile Advertising Services →
+        </button>
+      </div>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="flex justify-center md:justify-end relative z-10">
+      <div className="relative group w-full max-w-[450px] h-[260px] sm:h-[320px] md:h-[360px] flex items-center justify-center">
+
+        {/* Image Glow */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+        <img
+          src={mobile}
+          alt="Mobile Advertising Services"
+          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
+        />
+
+      </div>
+    </div>
+
+  </div>
+
+  {/* Floating Animation */}
+  <style>
+    {`
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(30px); }
+      }
+    `}
+  </style>
+
+</motion.section>
+
+
+
+
+ 
 
       <section className="bg-white pt-24 md:pt-28 lg:pt-32 pb-32 md:pb-36 lg:pb-40">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -301,7 +348,7 @@ const MobileAdvertising = () => {
           {/* RIGHT IMAGE */}
           <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
             <img
-              src={mobile1}
+              src={WhyMobileAdvertisingisNonNegotiableImage}
               alt="Mobile Advertising Growth"
               className="w-[600px] h-[400px] object-fit-cover rounded-xl"
             />
@@ -457,7 +504,7 @@ const MobileAdvertising = () => {
           {/* RIGHT IMAGE */}
           <div className="flex justify-end pr-6 lg:pr-12 xl:pr-20 mt-10 lg:mt-0">
             <img
-              src={mobile2}
+              src={OurApproachStrategyImage}
               alt="Marketing Strategy Analytics"
               className="w-full max-w-xl lg:max-w-2xl rounded-3xl shadow-xl object-cover"
             />

@@ -154,6 +154,11 @@ const BFSI = () => {
         });
       }
 
+   
+  
+
+
+
       // ----- WHY BFSI NEEDS SPECIALIZED -----
       if (whySpecialSectionRef.current) {
         gsap.set([whySpecialHeadingRef.current, whySpecialParagraphRef.current, whySpecialBottomRef.current], { opacity: 0, y: baseY });
@@ -191,6 +196,7 @@ const BFSI = () => {
         });
       }
 
+
       // ----- SOLUTIONS SECTION (products grid and approach points) -----
       if (solutionsSectionRef.current) {
         gsap.set([solutionsHeadingRef.current, solutionsSubHeadingRef.current], { opacity: 0, y: baseY });
@@ -215,6 +221,7 @@ const BFSI = () => {
           .to(approachPointsRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.8, stagger: staggerDelay, ease: "power2.out" }, "-=0.6")
           .to(approachStatementRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" }, "-=0.3");
 
+   
         productsGridRef.current.forEach((card, i) => {
           if (card) {
             gsap.to(card, {
@@ -291,6 +298,15 @@ const BFSI = () => {
         });
       }
 
+   
+    
+
+
+
+
+
+
+
       // ----- CONTENT MARKETING SECTION -----
       if (contentSectionRef.current) {
         gsap.set([contentHeadingRef.current, contentSubHeadingRef.current, contentBottomRef.current], { opacity: 0, y: baseY });
@@ -345,6 +361,7 @@ const BFSI = () => {
           },
         });
       }
+
 
       // ----- SOCIAL MEDIA SECTION -----
       if (socialSectionRef.current) {
@@ -645,7 +662,7 @@ const BFSI = () => {
   return (
     <>
       {/* HERO SECTION */}
-      <section
+      {/* <section
         ref={heroSectionRef}
         className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
         style={{
@@ -680,8 +697,107 @@ const BFSI = () => {
               />
             </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div> 
+      </section> */}
+
+
+      <section
+      ref={heroSectionRef}
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+  }}
+>
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  {/* Animated Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+    {/* LEFT CONTENT */}
+    <div className="text-left opacity-0 animate-[fadeUp_0.8s_ease-out_forwards]">
+
+      <h2 ref={heroHeadingRef} className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+          BFSI Digital Marketing Services
+        </span>
+      </h2>
+
+      <h3 ref={heroSubHeadingRef} className="text-xl md:text-2xl font-semibold leading-snug mb-6 text-blue-100">
+        Accelerate Growth. Strengthen Trust. Lead the Digital-First Financial Era.
+      </h3>
+
+      <p ref={heroParagraphRef} className="text-gray-200 text-md leading-relaxed max-w-[600px]">
+        The BFSI sector is evolving faster than ever. Customers expect seamless digital journeys, instant responses, data security, and personalized financial experiences.
+        <br /><br />
+        <span className="font-bold text-white">
+          Adkryoss managed by Clink Consultancy Services Private Limited
+        </span>{" "}
+        helps banks, NBFCs, fintech brands, insurance providers, and investment firms scale with performance-driven, compliance-ready digital marketing strategies.
+        <br /><br />
+        We don’t just generate traffic — we build credibility, qualified leads, and long-term customer value.
+      </p>
+
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div ref={heroImageRef} className="flex justify-center md:justify-end opacity-0 animate-[fadeUp_1.2s_ease-out_forwards]">
+
+      <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+
+        {/* Image Glow */}
+        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+        <img
+          src={BFSIImage}
+          alt="Section Image"
+          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
+                     transform group-hover:-translate-y-2 transition duration-500"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+  {/* Custom Animations */}
+  <style>
+    {`
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(30px);
+        }
+      }
+    `}
+  </style>
+
+</section>
+
+
+
+
+
 
       {/* WHY BFSI NEEDS SPECIALIZED DIGITAL MARKETING */}
       <section ref={whySpecialSectionRef} className="bg-gradient-to-r from-gray-50 to-blue-50 py-20 px-6">
@@ -798,6 +914,11 @@ const BFSI = () => {
           </div>
         </div>
       </section>
+
+    
+   
+
+
 
       {/* SEO FOR BFSI BRANDS */}
       <section ref={seoSectionRef} className="bg-white py-20 px-6">
@@ -1012,6 +1133,8 @@ const BFSI = () => {
         </div>
       </section>
 
+    
+     
       {/* OUR STRATEGIC APPROACH */}
       <section ref={processSectionRef} className="bg-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
@@ -1100,6 +1223,8 @@ const BFSI = () => {
         </div>
       </section>
 
+       
+        
       {/* WHY CHOOSE US FOR BFSI MARKETING */}
       <section ref={whyChooseSectionRef} className="bg-gradient-to-b from-white to-blue-50 py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -1168,6 +1293,11 @@ const BFSI = () => {
           </div>
         </div>
       </section>
+
+    
+
+
+
 
       {/* FINAL CTA */}
       <section ref={ctaSectionRef} className="bg-gradient-to-r from-blue-800 to-indigo-800 py-16 px-6 text-white text-center">

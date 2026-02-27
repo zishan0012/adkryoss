@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import heroImage from "../../../assets/ppcservice.jpg";
 import whyPPC from "../../../assets/output.jpg"
 import Output from "../../../assets/approach.jpg"
 import Process from "../../../assets/process.png"
+import WhatMakesOurPPCDifferentImage from "../../../assets/WhatMakesOurPPCDifferent.png"
+import WhyPPCisGrowthEngineTodayImage from "../../../assets/WhyPPCisGrowthEngineToday.png"
 // import ppc from "../../../assets/Ppc1.jpg"
 import {
   Search,
@@ -139,9 +142,11 @@ const industries = [
   },
 ];
 const PPCServices = () => {
-  return (
-    <>
-      {/* Hero section */}
+    return (
+        <>
+        
+ {/* <section
+       
       <section
         className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
         style={{
@@ -161,6 +166,7 @@ const PPCServices = () => {
               through transparent, ROI-focused advertising that builds long-term
               trust and performance.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
               <Link
                 to="/contact"
@@ -184,7 +190,76 @@ const PPCServices = () => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
+
+
+ {/* PPC Service Section */}
+      <motion.section
+        className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+        }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+        {/* Floating Glows */}
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+          {/* LEFT CONTENT */}
+          <div className="text-left max-w-[600px] space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+              <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+                PPC Services
+              </span>
+            </h2>
+
+            <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+              Increase ROI with India’s Leading PPC Agency
+            </h3>
+
+            <p className="text-gray-200 text-md md:text-lg leading-relaxed">
+              Partner with us, the leading PPC company in India, for campaigns that deliver measurable results, qualified leads, and higher ROI. Backed by data-driven insights and years of expertise, we help brands grow through transparent, ROI-focused advertising that builds long-term trust and performance.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <Link to="/contact">
+                <button className="inline-flex items-center justify-center bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  Speak to Our Expert →
+                </button>
+              </Link>
+
+              <button
+                onClick={() => navigate("/contact")}
+                className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl"
+              >
+                Our Services →
+              </button>
+            </div>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center md:justify-end relative z-10">
+            <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+              <img
+                src={ heroImage}
+                alt="PPC Services"
+                className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
+              />
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+
       {/*why ppc*/}
       <section className="py-16 md:py-24 bg-white">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -227,7 +302,7 @@ const PPCServices = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <img
-                src={whyPPC}
+                src={WhyPPCisGrowthEngineTodayImage}
                 alt="PPC Growth"
                 className="rounded-2xl shadow-xl w-full max-w-md"
               />
@@ -441,7 +516,7 @@ const PPCServices = () => {
             {/* RIGHT SIDE IMAGE */}
             <div className="flex justify-end">
               <img
-                src={Output}
+                src={WhatMakesOurPPCDifferentImage}
                 alt="PPC Strategy"
                 className="w-full max-w-lg rounded-2xl shadow-xl object-cover"
               />

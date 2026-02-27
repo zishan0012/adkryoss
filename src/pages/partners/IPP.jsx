@@ -237,6 +237,8 @@ const IPP = () => {
     return (
         <div className="bg-white text-slate-900" ref={mainRef}>
             {/* Hero Section */}
+            
+            {/* <section c className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
             <section className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
                 style={{
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
@@ -245,7 +247,9 @@ const IPP = () => {
 
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="grid md:grid-cols-2 items-center gap-12">
-                        {/* LEFT CONTENT */}
+                      
+                        <div className="text-left animate-fadeInLeft">
+                       
                         <div className="text-left hero-content">
                             <h1 className="text-[36px] md:text-[48px] font-bold mb-4 leading-tight">
                                 Become Our <span className="text-blue-200">IPP</span>
@@ -267,7 +271,9 @@ const IPP = () => {
                             </div>
                         </div>
 
-                        {/* RIGHT IMAGE */}
+                        
+                        <div className="flex justify-center md:justify-end relative z-10">
+                       
                         <div className="flex justify-center md:justify-end relative z-10 hero-image">
                             <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                                 <img
@@ -279,7 +285,110 @@ const IPP = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
+
+
+
+
+<section
+  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+  style={{
+    backgroundImage:
+      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+  }}
+>
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+  {/* Animated Glow Effects */}
+  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+
+  <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <div className="grid md:grid-cols-2 items-center gap-12">
+
+      {/* LEFT CONTENT */}
+      <div className="text-left max-w-[600px]">
+
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+          Become Our{" "}
+          <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+            IPP
+          </span>
+        </h1>
+
+        <h2 className="text-xl md:text-2xl font-semibold text-blue-100 mb-6">
+          Build Your Own Digital Marketing Company — Powered by Experts
+        </h2>
+
+        <p className="text-gray-200 mb-8 leading-relaxed">
+          <strong>Start. Scale. Succeed.</strong>
+          <br /><br />
+          Launch your own digital marketing venture with a proven backend, 
+          powerful systems, and a high-performance team — without building 
+          everything from scratch.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center gap-2 bg-white text-[#0066cc] py-4 px-8 rounded-full font-bold text-lg 
+                       hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+          >
+            Apply Now <ArrowRight size={20} />
+          </Link>
+
+          <Link
+            to="#how-it-works"
+            className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white py-4 px-8 rounded-full font-bold text-lg 
+                       hover:bg-white/10 transition-all backdrop-blur-sm"
+          >
+            How It Works
+          </Link>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT IMAGE */}
+      <div className="flex justify-center md:justify-end">
+
+        <div className="relative group w-full max-w-[420px]">
+
+          {/* Image Glow */}
+          <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+          <img
+            src={approach}
+            alt="Become our IPP"
+            className="relative w-full rounded-2xl shadow-2xl 
+                       transform group-hover:-translate-y-2 transition duration-500"
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  {/* Floating Animation */}
+  <style>
+    {`
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(30px); }
+      }
+    `}
+  </style>
+
+</section>
+
+
+
+
 
             {/* What is IPP Section */}
             <section className="py-24 bg-white">
