@@ -1,5 +1,6 @@
 import React from 'react';
 import MobileImage from "../../../assets/Mobile.png";
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import WhyMobileAppMarketingNeedsStrategicEdgeImage from "../../../assets/WhyMobileAppMarketingNeedsStrategicEdge.png"
 import WhyChooseUsforMobileAppMarketingImage from '../../../assets/WhyChooseUsforMobileAppMarketing.png'
@@ -129,7 +130,7 @@ const MobileAppMarketing = () => {
         <img
           src={MobileImage}
           alt="Mobile App Marketing Services"
-          className="relative w-full object-contain rounded-2xl shadow-2xl 
+          className="relative w-full object-contain rounded-2xl  
                      transform group-hover:-translate-y-2 transition duration-500"
         />
 
