@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     Globe,
     Languages,
@@ -17,7 +19,155 @@ import {
     Target
 } from 'lucide-react';
 import multilingualseoservices from '../../../assets/SEO/multilingualhero.png';
+
+gsap.registerPlugin(ScrollTrigger);
+
 const MultilingualSEOServices = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whyRef = useRef(null);
+    const whyBenefitsRef = useRef([]);
+    const approachCardsRef = useRef([]);
+    const whoBadgesRef = useRef([]);
+    const chooseItemsRef = useRef([]);
+    const modelRef = useRef(null);
+    const modelStepsRef = useRef([]);
+    const futureItemsRef = useRef([]);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Global Expansion
+            gsap.from(heroContentRef.current, {
+                x: -60,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out"
+            });
+            gsap.from(heroImageRef.current, {
+                scale: 0.8,
+                opacity: 0,
+                duration: 1.5,
+                ease: "power2.out"
+            });
+
+            // Why Section - Rhythmic staggers
+            if (whyRef.current) {
+                gsap.from(whyRef.current.querySelector('h2'), {
+                    y: 30,
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: whyRef.current,
+                        start: "top 80%"
+                    }
+                });
+            }
+            whyBenefitsRef.current.forEach((card, i) => {
+                if (!card) return;
+                gsap.from(card, {
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Approach - Fluid staggers
+            approachCardsRef.current.forEach((card, i) => {
+                if (!card) return;
+                gsap.from(card, {
+                    x: i % 2 === 0 ? -40 : 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: (i % 3) * 0.15,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%"
+                    }
+                });
+            });
+
+            // Who Needs - Expanding badges
+            whoBadgesRef.current.forEach((badge, i) => {
+                if (!badge) return;
+                gsap.from(badge, {
+                    scale: 0.8,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.08,
+                    scrollTrigger: {
+                        trigger: badge,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Why Choose - Row connections
+            chooseItemsRef.current.forEach((item, i) => {
+                if (!item) return;
+                gsap.from(item, {
+                    x: -20,
+                    opacity: 0,
+                    duration: 0.4,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Working Model - Connection flow
+            modelStepsRef.current.forEach((step, i) => {
+                if (!step) return;
+                gsap.from(step, {
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.2,
+                    scrollTrigger: {
+                        trigger: modelRef.current,
+                        start: "top 80%"
+                    }
+                });
+            });
+
+            // Future Ready - Pulsing signals
+            futureItemsRef.current.forEach((item, i) => {
+                if (!item) return;
+                gsap.from(item, {
+                    scale: 0.9,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // CTA - Final Expansion
+            if (ctaRef.current) {
+                gsap.from(ctaRef.current, {
+                    scale: 0.95,
+                    opacity: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ctaRef.current,
+                        start: "top 90%"
+                    }
+                });
+            }
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
 
     const approach = [
         {
@@ -36,7 +186,7 @@ const MultilingualSEOServices = () => {
         {
             title: "Multilingual Keyword Intelligence",
             icon: <Search size={32} />,
-            desc: "Direct translation of keywords doesn’t work. We conduct native-language research.",
+            desc: "Direct translation of keywords doesn't work. We conduct native-language research.",
             points: [
                 "Native-language keyword research",
                 "Semantic & contextual search mapping",
@@ -63,7 +213,7 @@ const MultilingualSEOServices = () => {
         {
             title: "Content Localization & Optimization",
             icon: <Languages size={32} />,
-            desc: "Translation alone doesn’t convert. Localization does. Every piece is optimized for engagement.",
+            desc: "Translation alone doesn't convert. Localization does. Every piece is optimized for engagement.",
             points: [
                 "Culturally adapted website content",
                 "Region-specific landing pages",
@@ -110,7 +260,7 @@ const MultilingualSEOServices = () => {
     ];
 
     return (
-        <div className="bg-white">
+        <div ref={pageRef} className="bg-white">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -121,7 +271,7 @@ const MultilingualSEOServices = () => {
                 <div className="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/world-map.png')]"></div>
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
                     {/* LEFT CONTENT */}
-                    <div className="text-left relative z-10 text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             Multilingual SEO Services
                         </h1>
@@ -138,22 +288,22 @@ const MultilingualSEOServices = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* RIGHT IMAGE */}
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={multilingualseoservices}
@@ -166,14 +316,14 @@ const MultilingualSEOServices = () => {
             </section>
 
             {/* Why Multilingual SEO */}
-            <section className="pt-32 pb-24 bg-white">
+            <section ref={whyRef} className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
                             Why Multilingual SEO is a Growth Multiplier
                         </h2>
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] max-w-[900px] mx-auto font-medium">
-                            Global users don’t just translate keywords — they search differently. Search intent varies by culture, phrasing differs by region, and even buying behavior shifts across markets.
+                            Global users don't just translate keywords — they search differently. Search intent varies by culture, phrasing differs by region, and even buying behavior shifts across markets.
                         </p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-5 mb-[60px]">
@@ -184,7 +334,7 @@ const MultilingualSEOServices = () => {
                             "Stronger brand credibility in local markets",
                             "Sustainable global expansion"
                         ].map((benefit, i) => (
-                            <div key={i} className="p-6 bg-[#eff6ff] rounded-[15px] flex items-center gap-[15px] w-[calc(33.333%-14px)] min-w-[280px] grow max-w-[350px] transition-all duration-300 hover:-translate-y-1.5 hover:bg-[#0066cc] hover:text-white group">
+                            <div ref={el => whyBenefitsRef.current[i] = el} key={i} className="p-6 bg-[#eff6ff] rounded-[15px] flex items-center gap-[15px] w-[calc(33.333%-14px)] min-w-[280px] grow max-w-[350px] transition-all duration-300 hover:-translate-y-1.5 hover:bg-[#0066cc] hover:text-white group">
                                 <CheckCircle2 size={24} className="text-[#0066cc] group-hover:text-white" />
                                 <span className="font-bold">{benefit}</span>
                             </div>
@@ -192,21 +342,21 @@ const MultilingualSEOServices = () => {
                     </div>
                     <div className="text-center">
                         <p className="text-[16px] md:text-[18px] mb-6 font-medium">
-                            This isn’t translation. This is strategic localization powered by data.
+                            This isn't translation. This is strategic localization powered by data.
                         </p>
                     </div>
                 </div>
             </section>
 
             {/* Approach Section */}
-            <section className="py-20 bg-[#f8fafc]">
+            <section id="services" className="py-20 bg-[#f8fafc]">
                 <div className="container">
                     <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">
                         Our Multilingual SEO Approach
                     </h2>
                     <div className="flex flex-wrap justify-center gap-[30px]">
                         {approach.map((item, i) => (
-                            <div key={i} className="bg-white p-10 rounded-[24px] border border-[#e2e8f0] w-[calc(33.333%-20px)] min-w-[320px] grow max-w-[400px] transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
+                            <div ref={el => approachCardsRef.current[i] = el} key={i} className="bg-white p-10 rounded-[24px] border border-[#e2e8f0] w-[calc(33.333%-20px)] min-w-[320px] grow max-w-[400px] transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-5">{item.icon}</div>
                                 <h3 className="text-[22px] font-semibold mb-[15px] text-[#0f172a]">
                                     {i + 1}. {item.title}
@@ -235,7 +385,7 @@ const MultilingualSEOServices = () => {
                     <h2 className="text-[36px] font-bold text-center mb-[60px] text-[#0f172a]">Who Needs Multilingual SEO?</h2>
                     <div className="flex flex-wrap justify-center gap-[15px]">
                         {needsMultilingual.map((need, i) => (
-                            <div key={i} className="py-4 px-10 bg-[#eff6ff] text-[#0f172a] rounded-full font-bold border border-[#e2e8f0] transition-all duration-300 hover:bg-[#0066cc] hover:text-white hover:scale-105 cursor-default">
+                            <div ref={el => whoBadgesRef.current[i] = el} key={i} className="py-4 px-10 bg-[#eff6ff] text-[#0f172a] rounded-full font-bold border border-[#e2e8f0] transition-all duration-300 hover:bg-[#0066cc] hover:text-white hover:scale-105 cursor-default">
                                 {need}
                             </div>
                         ))}
@@ -259,7 +409,7 @@ const MultilingualSEOServices = () => {
                             "Conversion-first content localization",
                             "Transparent performance tracking"
                         ].map((item, i) => (
-                            <div key={i} className="p-6 bg-white/5 rounded-[15px] border border-white/10 flex items-center gap-[15px] w-[calc(33.333%-14px)] min-w-[300px] grow max-w-[380px] transition-all duration-300 hover:bg-[#0066cc]/20 hover:border-[#0066cc]">
+                            <div ref={el => chooseItemsRef.current[i] = el} key={i} className="p-6 bg-white/5 rounded-[15px] border border-white/10 flex items-center gap-[15px] w-[calc(33.333%-14px)] min-w-[300px] grow max-w-[380px] transition-all duration-300 hover:bg-[#0066cc]/20 hover:border-[#0066cc]">
                                 <CheckCircle2 size={24} className="text-[#0066cc]" />
                                 <span className="font-bold text-[16px]">{item}</span>
                             </div>
@@ -269,13 +419,13 @@ const MultilingualSEOServices = () => {
             </section>
 
             {/* Working Model */}
-            <section className="py-20 bg-white">
+            <section ref={modelRef} className="py-20 bg-white">
                 <div className="container text-center">
                     <h2 className="text-[36px] font-bold mb-[60px] text-[#0f172a]">Our Working Model</h2>
                     <div className="flex justify-center items-center flex-wrap gap-5">
                         {["Discover", "Strategize", "Localize", "Optimize", "Scale"].map((step, i) => (
                             <React.Fragment key={i}>
-                                <div className="py-6 px-12 bg-[#0066cc] text-white rounded-[12px] font-bold text-[20px] shadow-[0_10px_20px_rgba(0,102,204,0.2)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(0,102,204,0.3)]">
+                                <div ref={el => modelStepsRef.current[i] = el} className="py-6 px-12 bg-[#0066cc] text-white rounded-[12px] font-bold text-[20px] shadow-[0_10px_20px_rgba(0,102,204,0.2)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(0,102,204,0.3)]">
                                     {step}
                                 </div>
                                 {i < 4 && <ArrowRight size={30} className="text-[#0066cc] opacity-50 hidden md:block" />}
@@ -307,7 +457,7 @@ const MultilingualSEOServices = () => {
                                     { label: "Structured data implementation", icon: <Settings size={18} /> },
                                     { label: "E-E-A-T enhancement for international credibility", icon: <Shield size={18} /> }
                                 ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-4 p-5 bg-white/5 rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-[#0066cc]">
+                                    <div ref={el => futureItemsRef.current[i] = el} key={i} className="flex items-center gap-4 p-5 bg-white/5 rounded-xl border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-[#0066cc]">
                                         <div className="text-[#0066cc] shrink-0">{item.icon}</div>
                                         <span className="font-medium text-white/90">{item.label}</span>
                                     </div>
@@ -325,13 +475,13 @@ const MultilingualSEOServices = () => {
 
 
             {/* Final CTA */}
-            <section className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white">
+            <section ref={ctaRef} className="py-24 text-center bg-gradient-to-br from-[#0066cc] to-[#004e92] text-white">
                 <div className="container">
                     <h2 className="text-[36px] font-bold mb-6 text-white leading-tight">
                         Ready to Go Global?
                     </h2>
                     <p className="text-[22px] mb-10 max-w-[800px] mx-auto text-[#eff6ff] opacity-90 leading-relaxed font-medium">
-                        Your next customer may not speak your language — but your website should speak theirs. Let’s build a multilingual SEO strategy that expands your reach and increases international traffic.
+                        Your next customer may not speak your language — but your website should speak theirs. Let's build a multilingual SEO strategy that expands your reach and increases international traffic.
                     </p>
                     <Link to="/contact" className="inline-flex items-center gap-3.5 bg-white text-[#0066cc] py-5 px-12 rounded-full text-[18px] font-bold no-underline transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1.5 hover:scale-[1.05] hover:shadow-white/20">
                         Connect With Us Today

@@ -15,6 +15,7 @@ import EdTechPlatformsImage from "../../assets/EdTechPlatforms.png"
 import CoachingInstitutesImage from "../../assets/CoachingInstitutes.png"
 import SkillDevelopmentCertificationImage from "../../assets/SkillDevelopmentCertification.png"
 import FutureReadyDigitalGrowthImage from "../../assets/FutureReadyDigitalGrowth.png"
+import StudyAbroadConsultantsImage from "../../assets/StudyAbroadConsultants.png"
 
 import {
   Search,
@@ -145,7 +146,7 @@ const educationClients = [
   },
   {
     title: "Study Abroad Consultants",
-    img: Abroad,
+    img: StudyAbroadConsultantsImage,
     desc: "Capture aspirational students through search visibility, paid campaigns, and trust-driven branding strategies.",
   },
 ];
@@ -635,7 +636,7 @@ const Education = () => {
             {/* RIGHT IMAGE */}
             <div className="flex justify-center lg:justify-end">
               <img
-                src={Future}
+                src={FutureReadyDigitalGrowthImage}
                 alt="Future Ready Education Marketing"
                 className="w-96 lg:w-125 object-contain drop-shadow-2xl"
               />

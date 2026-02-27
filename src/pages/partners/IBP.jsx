@@ -27,7 +27,7 @@ import {
     Handshake,
     MonitorSmartphone
 } from 'lucide-react';
-import approach from "../../assets/approach.jpg";
+import ibphero from "../../assets/partner/ibphero.png";
 
 const IBP = () => {
 
@@ -168,7 +168,7 @@ const IBP = () => {
                         <div className="flex justify-center md:justify-end relative z-10">
                             <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                                 <img
-                                    src={approach}
+                                    src={ibphero}
                                     alt="Become our IBP"
                                     className="max-w-[350px] w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.25)]"
                                 />

@@ -1,114 +1,10 @@
-// import React, { useRef } from "react";
-// import { Link } from "react-router-dom";
-// import aiImage from "../../assets/ai.png"
-// import { motion } from "framer-motion";
-// const CaseStudySection = () => {
-//   const scrollRef = useRef(null);
-
-//   const scrollNext = () => {
-//     if (scrollRef.current) {
-//       scrollRef.current.scrollBy({
-//         left: scrollRef.current.clientWidth,
-//         behavior: "smooth",
-//       });
-//     }
-//   };
-
-//   return (
-//    <motion.section className="py-16 bg-[#f4f7fb]"
-   
-//  initial={{ opacity: 0, y: 50 }}
-//       whileInView={{ opacity: 1, y: 0 }}
-//       viewport={{ once: true }}
-//       transition={{ duration: 1 }}
-//    >
-//       <div className="max-w-7xl mx-auto px-6">
-
-//         {/* Top Heading */}
-//         <div className="text-center mb-14">
-//           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-//             Future-Ready Marketing with AI & Automation
-//           </h2>
-//           <p className="text-gray-600 mt-4 text-base md:text-lg">
-//             The digital landscape is evolving — and so are we.
-//           </p>
-//         </div>
-
-//         {/* Two-column Content */}
-//         <div className="grid md:grid-cols-2 gap-10 items-center mb-10">
-//           {/* LEFT SIDE - Heading + Points */}
-//           <div>
-//             <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
-//               Adkryoss integrates:
-//             </h3>
-//             <ul className="list-disc pl-5 text-gray-700 space-y-2 text-lg">
-//               <li className="py-2">AI-powered keyword research</li>
-//               <li className="py-2">Predictive audience targeting</li>
-//               <li className="py-2">Marketing automation workflows</li>
-//               <li className="py-2">Data-driven personalization</li>
-//               <li className="py-2">Advanced analytics dashboards</li>
-//             </ul>
-//           </div>
-
-//           {/* RIGHT SIDE - Image */}
-//           <div className="flex justify-center">
-//             <img
-//             src={aiImage}
-//                 alt="Future Marketing"
-//               className="w-full max-w-md object-contain rounded-4xl"
-//             />
-//           </div>
-//         </div>
-
-//         {/* Paragraph Below Full Width */}
-//         <p className="text-center text-gray-600 text-lg max-w-3xl mx-auto">
-//           We blend creativity with technology to stay ahead of algorithms and competitors.
-//         </p>
-//       </div>
-//     </motion.section>
-//   );
-// };
-
-// export default CaseStudySection;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useRef, useLayoutEffect } from "react";
 import aiImage from "../../assets/ai.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
- 
+
 gsap.registerPlugin(ScrollTrigger);
- 
+
 const CaseStudySection = () => {
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
@@ -117,26 +13,31 @@ const CaseStudySection = () => {
   const bulletsRef = useRef([]);
   const imageRef = useRef(null);
   const bottomTextRef = useRef(null);
- 
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
- 
-      // === SECTION PUSH EFFECT (PARALLAX) ===
-      gsap.fromTo(sectionRef.current,
-        { y: 0 },
-        {
-          y: -30,
-          ease: "none",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1.2,
+      ScrollTrigger.getAll().forEach(st => st.kill());
+
+      const isMobile = window.innerWidth < 768;
+
+      // === SECTION PUSH EFFECT (slower, later) ===
+      if (!isMobile) {
+        gsap.fromTo(sectionRef.current,
+          { y: 0 },
+          {
+            y: -30,
+            ease: "none",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 1.2,
+            }
           }
-        }
-      );
- 
-      // === MAIN HEADING PREMIUM ANIMATION ===
+        );
+      }
+
+      // === MAIN HEADING (slower, starts later) ===
       gsap.fromTo(headingRef.current,
         {
           opacity: 0,
@@ -147,18 +48,18 @@ const CaseStudySection = () => {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 1.4,
-          ease: "power4.out",
+          duration: isMobile ? 1.4 : 2.0,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: headingRef.current,
-            start: "top 85%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
+            start: "top 75%",        // later than 85%
+            end: "bottom 30%",
+            toggleActions: "play reverse play reverse",
           }
         }
       );
- 
-      // === SUBHEADING PREMIUM ANIMATION ===
+
+      // === SUBHEADING (starts later) ===
       gsap.fromTo(subHeadingRef.current,
         {
           opacity: 0,
@@ -167,19 +68,19 @@ const CaseStudySection = () => {
         {
           opacity: 1,
           y: 0,
-          duration: 1.2,
+          duration: isMobile ? 1.2 : 1.8,
           delay: 0.2,
-          ease: "power3.out",
+          ease: "power2.out",
           scrollTrigger: {
             trigger: subHeadingRef.current,
-            start: "top 85%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
+            start: "top 75%",
+            end: "bottom 30%",
+            toggleActions: "play reverse play reverse",
           }
         }
       );
- 
-      // === LEFT HEADING ANIMATION ===
+
+      // === LEFT HEADING (later, with slower rotation) ===
       gsap.fromTo(leftHeadingRef.current,
         {
           opacity: 0,
@@ -190,18 +91,18 @@ const CaseStudySection = () => {
           opacity: 1,
           x: 0,
           rotate: 0,
-          duration: 1.3,
+          duration: isMobile ? 1.2 : 1.8,
           ease: "back.out(1.2)",
           scrollTrigger: {
             trigger: leftHeadingRef.current,
-            start: "top 85%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
+            start: "top 75%",
+            end: "bottom 30%",
+            toggleActions: "play reverse play reverse",
           }
         }
       );
- 
-      // === BULLET POINTS PREMIUM STAGGER ANIMATION ===
+
+      // === BULLET POINTS (staggered, later) ===
       gsap.fromTo(bulletsRef.current,
         {
           opacity: 0,
@@ -212,22 +113,19 @@ const CaseStudySection = () => {
           opacity: 1,
           x: 0,
           scale: 1,
-          duration: 1.2,
-          stagger: {
-            amount: 1.5,
-            from: "start",
-          },
+          duration: isMobile ? 1.0 : 1.5,
+          stagger: isMobile ? 0.1 : 0.2,
           ease: "back.out(1.2)",
           scrollTrigger: {
             trigger: leftHeadingRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
+            start: "top 70%",
+            end: "bottom 30%",
+            toggleActions: "play reverse play reverse",
           }
         }
       );
- 
-      // === IMAGE PREMIUM REVEAL ===
+
+      // === IMAGE (later, with more dramatic pop) ===
       gsap.fromTo(imageRef.current,
         {
           opacity: 0,
@@ -240,18 +138,18 @@ const CaseStudySection = () => {
           x: 0,
           scale: 1,
           rotate: 0,
-          duration: 1.6,
+          duration: isMobile ? 1.3 : 2.0,
           ease: "back.out(1.4)",
           scrollTrigger: {
             trigger: imageRef.current,
-            start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
+            start: "top 75%",
+            end: "bottom 30%",
+            toggleActions: "play reverse play reverse",
           }
         }
       );
- 
-      // === BOTTOM TEXT PREMIUM ANIMATION ===
+
+      // === BOTTOM TEXT (later) ===
       gsap.fromTo(bottomTextRef.current,
         {
           opacity: 0,
@@ -262,22 +160,26 @@ const CaseStudySection = () => {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 1.4,
-          ease: "power4.out",
+          duration: isMobile ? 1.2 : 1.8,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: bottomTextRef.current,
-            start: "top 85%",
-            end: "bottom 20%",
-            toggleActions: "restart reverse restart reverse",
+            start: "top 75%",
+            end: "bottom 30%",
+            toggleActions: "play reverse play reverse",
           }
         }
       );
- 
+
+      ScrollTrigger.refresh();
     }, sectionRef);
- 
-    return () => ctx.revert();
+
+    return () => {
+      ctx.revert();
+      ScrollTrigger.getAll().forEach(st => st.kill());
+    };
   }, []);
- 
+
   return (
     <section
       ref={sectionRef}
@@ -287,9 +189,9 @@ const CaseStudySection = () => {
       <div className="absolute top-20 left-10 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl -z-10"></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-100/10 to-purple-100/10 rounded-full blur-3xl -z-10"></div>
- 
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
- 
+
         {/* Top Heading */}
         <div className="text-center mb-14">
           <h2
@@ -305,7 +207,7 @@ const CaseStudySection = () => {
             The digital landscape is evolving — and so are we.
           </p>
         </div>
- 
+
         {/* Two-column Content */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-10">
           {/* LEFT SIDE - Heading + Points */}
@@ -335,7 +237,7 @@ const CaseStudySection = () => {
               ))}
             </ul>
           </div>
- 
+
           {/* RIGHT SIDE - Image */}
           <div className="flex justify-center">
             <img
@@ -346,7 +248,7 @@ const CaseStudySection = () => {
             />
           </div>
         </div>
- 
+
         {/* Paragraph Below Full Width */}
         <p
           ref={bottomTextRef}
@@ -355,9 +257,10 @@ const CaseStudySection = () => {
           We blend creativity with technology to stay ahead of algorithms and competitors.
           <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"></span>
         </p>
- 
+
       </div>
     </section>
   );
 };
- export default CaseStudySection;
+
+export default CaseStudySection;

@@ -19,6 +19,7 @@ const CaseStudyDetail = () => {
                     backgroundImage: "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
                 }}
             >
+                <div className="absolute inset-0 bg-black/40 z-0"></div>
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
                     {/* LEFT CONTENT */}
                     <div className="text-left text-white">
@@ -41,9 +42,9 @@ const CaseStudyDetail = () => {
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center md:justify-end">
                         <img
-                            src={study.snapshot.image}
+                            src={study.hero.bgImage}
                             alt={study.title}
-                            className="max-w-[350px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                            className="max-w-[450px] w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] rounded-2xl"
                         />
                     </div>
                 </div>

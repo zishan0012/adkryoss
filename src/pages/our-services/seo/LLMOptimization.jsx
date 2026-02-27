@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import llmoptimizationhero from "../../../assets/SEO/llmoptimizationhero.png";
 import {
     Brain,
@@ -26,7 +28,182 @@ import {
     Lightbulb
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const LLMOptimization = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whatRef = useRef(null);
+    const whatFeaturesRef = useRef([]);
+    const whatImportanceRef = useRef(null);
+    const approachCardsRef = useRef([]);
+    const strategyRef = useRef(null);
+    const techStackRef = useRef(null);
+    const techItemsRef = useRef([]);
+    const benefitCardsRef = useRef([]);
+    const audienceBadgesRef = useRef([]);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Semantic assembly
+            gsap.from(heroContentRef.current, {
+                y: 50,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out"
+            });
+            gsap.from(heroImageRef.current, {
+                scale: 0.8,
+                opacity: 0,
+                duration: 1.5,
+                ease: "elastic.out(1, 0.75)"
+            });
+
+            // What is LLM - Node reveals
+            if (whatRef.current) {
+                gsap.from(whatRef.current.querySelector('h2'), {
+                    opacity: 0,
+                    x: -30,
+                    scrollTrigger: {
+                        trigger: whatRef.current,
+                        start: "top 80%"
+                    }
+                });
+            }
+            whatFeaturesRef.current.forEach((feat, i) => {
+                if (!feat) return;
+                gsap.from(feat, {
+                    scale: 0.9,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: feat,
+                        start: "top 95%"
+                    }
+                });
+            });
+            if (whatImportanceRef.current) {
+                gsap.from(whatImportanceRef.current, {
+                    x: 40,
+                    opacity: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: whatImportanceRef.current,
+                        start: "top 85%"
+                    }
+                });
+            }
+
+            // Approach - Flowing staggers
+            approachCardsRef.current.forEach((card, i) => {
+                if (!card) return;
+                gsap.from(card, {
+                    y: 60,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: i * 0.15,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Strategy & Tech - Contextual connections
+            if (strategyRef.current) {
+                gsap.from(strategyRef.current, {
+                    x: -40,
+                    opacity: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: strategyRef.current,
+                        start: "top 85%"
+                    }
+                });
+            }
+            if (techStackRef.current) {
+                gsap.from(techStackRef.current, {
+                    x: 40,
+                    opacity: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: techStackRef.current,
+                        start: "top 85%"
+                    }
+                });
+            }
+            techItemsRef.current.forEach((item, i) => {
+                if (!item) return;
+                gsap.from(item, {
+                    y: 20,
+                    opacity: 0,
+                    duration: 0.4,
+                    delay: 0.2 + (i * 0.08),
+                    scrollTrigger: {
+                        trigger: techStackRef.current,
+                        start: "top 85%"
+                    }
+                });
+            });
+
+            // Benefits - Authority growth
+            benefitCardsRef.current.forEach((card, i) => {
+                if (!card) return;
+                gsap.from(card, {
+                    scale: 0.9,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Audiences - Distributed signals
+            audienceBadgesRef.current.forEach((badge, i) => {
+                if (!badge) return;
+                gsap.from(badge, {
+                    y: 20,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.08,
+                    scrollTrigger: {
+                        trigger: badge,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // CTA - Neural pulse
+            if (ctaRef.current) {
+                gsap.from(ctaRef.current, {
+                    y: 40,
+                    opacity: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ctaRef.current,
+                        start: "top 90%"
+                    }
+                });
+            }
+
+            // Brain drift
+            gsap.to('.brain-icon', {
+                y: -10,
+                duration: 3,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
 
     const offerings = [
         {
@@ -116,7 +293,7 @@ const LLMOptimization = () => {
     ];
 
     return (
-        <div className="bg-white">
+        <div ref={pageRef} className="bg-white">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -125,7 +302,7 @@ const LLMOptimization = () => {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10 text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             LLM Optimization Services
                         </h1>
@@ -142,21 +319,21 @@ const LLMOptimization = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={llmoptimizationhero}
@@ -169,7 +346,7 @@ const LLMOptimization = () => {
             </section>
 
             {/* What is LLM Optimization */}
-            <section className="pt-32 pb-24 bg-white">
+            <section ref={whatRef} className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-[1fr_1.2fr] gap-[60px] items-center">
                         <div>
@@ -186,14 +363,14 @@ const LLMOptimization = () => {
                                     { t: "Knowledge Graphs", i: <Database size={20} /> },
                                     { t: "AI Authority Hubs", i: <Shield size={20} /> }
                                 ].map((item, i) => (
-                                    <div key={i} className="p-[15px] bg-[#f8fafc] rounded-[12px] flex gap-[10px] items-center border border-[#e2e8f0]">
+                                    <div ref={el => whatFeaturesRef.current[i] = el} key={i} className="p-[15px] bg-[#f8fafc] rounded-[12px] flex gap-[10px] items-center border border-[#e2e8f0]">
                                         <div className="text-[#0066cc]">{item.i}</div>
                                         <span className="font-semibold text-sm text-[#0f172a]">{item.t}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="bg-[#f8fafc] p-10 rounded-[30px] border border-[#e2e8f0]">
+                        <div ref={whatImportanceRef} className="bg-[#f8fafc] p-10 rounded-[30px] border border-[#e2e8f0]">
                             <h3 className="text-[24px] font-semibold mb-[30px] text-[#0f172a]">Why It Matters Now:</h3>
                             <div className="space-y-6">
                                 {[
@@ -219,7 +396,7 @@ const LLMOptimization = () => {
             </section>
 
             {/* Approach Section */}
-            <section className="py-20 bg-[#f8fafc]">
+            <section id="services" className="py-20 bg-[#f8fafc]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-5 text-[#0f172a]">Our LLM Optimization Approach</h2>
@@ -229,7 +406,7 @@ const LLMOptimization = () => {
                     </div>
                     <div className="flex flex-wrap justify-center gap-10">
                         {offerings.map((step, i) => (
-                            <div key={i} className="w-[calc(33.333%-27px)] min-w-[350px] bg-white p-[50px_40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 flex-grow max-w-[380px] hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
+                            <div ref={el => approachCardsRef.current[i] = el} key={i} className="w-[calc(33.333%-27px)] min-w-[350px] bg-white p-[50px_40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 flex-grow max-w-[380px] hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,102,204,0.1)] hover:border-[#0066cc]">
                                 <div className="text-[#0066cc] mb-6">{step.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-5 text-[#0f172a]">{step.title}</h3>
                                 <p className="text-[16px] text-[#475569] mb-[30px] leading-[1.6] font-medium">{step.desc}</p>
@@ -251,7 +428,7 @@ const LLMOptimization = () => {
             <section className="py-20 bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-12">
-                        <div className="bg-[#f8fafc] p-[50px] rounded-[40px] border border-[#e2e8f0]">
+                        <div ref={strategyRef} className="bg-[#f8fafc] p-[50px] rounded-[40px] border border-[#e2e8f0]">
                             <div className="flex items-center gap-[15px] mb-[30px]">
                                 <Microscope size={32} className="text-[#0066cc]" />
                                 <h3 className="text-[28px] font-semibold text-[#0f172a]">What Makes Our Strategy Different</h3>
@@ -260,21 +437,20 @@ const LLMOptimization = () => {
                                 {strategyDifferent.map((item, i) => (
                                     <div key={i}>
                                         <h4 className="text-[18px] font-semibold text-[#0f172a] mb-6">{item.t}</h4>
-
                                     </div>
                                 ))}
-                                <p className="text-[15px] text-[#475569] leading-[1.6] font-bold">We don’t just optimize for clicks.
+                                <p className="text-[15px] text-[#475569] leading-[1.6] font-bold">We don't just optimize for clicks.
                                     We optimize for AI trust. </p>
                             </div>
                         </div>
-                        <div className="bg-[#f8fafc] p-[50px] rounded-[40px] border border-[#e2e8f0]">
+                        <div ref={techStackRef} className="bg-[#f8fafc] p-[50px] rounded-[40px] border border-[#e2e8f0]">
                             <div className="flex items-center gap-[15px] mb-[30px]">
                                 <Cpu size={32} className="text-[#0066cc]" />
                                 <h3 className="text-[28px] font-semibold text-[#0f172a]">Technology & Research Stack</h3>
                             </div>
                             <div className="grid grid-cols-2 gap-4">
                                 {techStack.map((item, i) => (
-                                    <div key={i} className="p-[25px] bg-white rounded-[20px] border border-[#e2e8f0] text-center transition-all duration-300 hover:shadow-lg">
+                                    <div ref={el => techItemsRef.current[i] = el} key={i} className="p-[25px] bg-white rounded-[20px] border border-[#e2e8f0] text-center transition-all duration-300 hover:shadow-lg">
                                         <div className="text-[#0066cc] mb-[15px] flex justify-center">{item.icon}</div>
                                         <span className="text-sm font-semibold text-[#0f172a]">{item.name}</span>
                                     </div>
@@ -294,7 +470,7 @@ const LLMOptimization = () => {
                     </p>
                     <div className="flex flex-wrap justify-center gap-[30px]">
                         {benefits.map((item, i) => (
-                            <div key={i} className="w-[calc(33.333%-20px)] min-w-[300px] p-10 bg-white rounded-[30px] border border-[#e2e8f0] text-left transition-all duration-300 hover:-translate-y-[5px] hover:border-[#0066cc]">
+                            <div ref={el => benefitCardsRef.current[i] = el} key={i} className="w-[calc(33.333%-20px)] min-w-[300px] p-10 bg-white rounded-[30px] border border-[#e2e8f0] text-left transition-all duration-300 hover:-translate-y-[5px] hover:border-[#0066cc]">
                                 <div className="bg-[#e0f2fe] w-[50px] h-[50px] rounded-[15px] flex items-center justify-center mb-6">
                                     <CheckCircle2 size={24} className="text-[#0066cc]" />
                                 </div>
@@ -315,7 +491,7 @@ const LLMOptimization = () => {
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-[30px]">
                         {audiences.map((aud, i) => (
-                            <div key={i} className="p-[30px] bg-[rgba(255,255,255,0.05)] rounded-[20px] border border-[rgba(255,255,255,0.1)] transition-all duration-300 hover:bg-[rgba(255,255,255,0.1)]">
+                            <div ref={el => audienceBadgesRef.current[i] = el} key={i} className="p-[30px] bg-[rgba(255,255,255,0.05)] rounded-[20px] border border-[rgba(255,255,255,0.1)] transition-all duration-300 hover:bg-[rgba(255,255,255,0.1)]">
                                 <div className="text-[#60a5fa] mb-[15px] flex justify-center">{aud.icon}</div>
                                 <h4 className="text-[18px] font-semibold">{aud.name}</h4>
                             </div>
@@ -327,8 +503,8 @@ const LLMOptimization = () => {
             {/* Final CTA */}
             <section className="py-[100px] text-center bg-white">
                 <div className="container">
-                    <div className="bg-[#f8fafc] p-[80px_40px] rounded-[40px] border border-[#e2e8f0]">
-                        <Bot size={60} className="text-[#0066cc] mx-auto mb-6" />
+                    <div ref={ctaRef} className="bg-[#f8fafc] p-[80px_40px] rounded-[40px] border border-[#e2e8f0]">
+                        <Bot size={60} className="text-[#0066cc] mx-auto mb-6 brain-icon" />
                         <h2 className="text-[36px] font-bold text-[#0f172a] mb-6">Ready to Become AI-Discoverable?</h2>
                         <p className="text-[16px] md:text-[18px] mb-6 max-w-[800px] mx-auto font-medium">
                             Search engines are evolving into answer engines. Businesses that adapt now will dominate tomorrow. Let's optimize your presence for the next generation of discovery.

@@ -81,6 +81,14 @@ const Testimonial = () => {
                         <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white">
                             We don’t just deliver campaigns — we build measurable growth engines. Here’s what our clients say about working with us.
                         </p>
+                        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                            <Link
+                                to="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </Link>
+                        </div>
                     </div>
                     <div className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">

@@ -1,3 +1,4 @@
+// blog.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Skills from "../assets/skill.jpg";

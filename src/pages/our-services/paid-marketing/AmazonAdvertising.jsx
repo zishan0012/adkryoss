@@ -17,7 +17,7 @@ import {
   X,
 } from "lucide-react";
 import { Link } from "react-router-dom";
- 
+
 const amazonServices = [
   {
     title: "Sponsored Ads Management",
@@ -117,76 +117,73 @@ const faqs = [
       "Yes. We manage campaigns across multiple Amazon marketplaces globally.",
   },
 ];
- 
+
 const AmazonAdvertising = () => {
   const [openIndex, setOpenIndex] = useState(null);
- 
+
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
     <>
       {/* <section
-  className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-[480px] flex items-center relative text-white"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp%27)%22"
-  }}
->
-  
-  <div className="absolute inset-0 bg-blue-900/85"></div>
- 
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
- 
-    
-    <div className="text-left text-white max-w-[600px]">
- 
-      <h2 className="text-white md:text-[48px] font-bold mb-4 leading-tight">
-        Amazon Advertising Services
-      </h2>
- 
-      <h3 className="text-[20px] md:text-[24px] font-semibold mb-4">
-        Scale Faster. Sell Smarter. Dominate Amazon.
-      </h3>
- 
-      <p className="text-[16px] md:text-[18px] text-white/90 leading-relaxed">
-        Turn product visibility into predictable revenue with performance-driven
-        Amazon Advertising strategies. We combine data science, creative optimization,
-        and marketplace intelligence to help you win the Buy Box, outrank competitors,
-        and maximize ROAS.
-      </p>
- 
-      <div className="mt-6 flex flex-col sm:flex-row gap-4">
-        <Link to="/contact">
-          <button className="bg-[#ff7a00] text-white px-6 py-3 rounded-full font-semibold">
-            Speak to Our Expert →
-          </button>
-        </Link>
- 
-        <button
-          onClick={() => navigate("/contact")}
-          className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold bg-transparent"
-        >
-          Our Services →
-        </button>
-      </div>
- 
-    </div>
- 
-    
-    <div className="flex justify-center md:justify-end">
-      <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
-        <img
-          src={amazon}
-          alt="Amazon Advertising Services"
-          className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
-        />
-      </div>
-    </div>
- 
-  </div>
-</section> */}
+        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+        }}
+      >
+       
 
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+
+          <div className="text-left relative z-10 text-white leading-tight">
+
+            <h1 className="text-[28px] md:text-[36px] lg:text-[48px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
+              Amazon Advertising Services
+            </h1>
+
+            <h3 className="text-[20px] md:text-[24px] font-semibold mb-4 text-white">
+              Scale Faster. Sell Smarter. Dominate Amazon.
+            </h3>
+
+            <p className="text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white/90 max-w-xl">
+              Turn product visibility into predictable revenue with performance-driven
+              Amazon Advertising strategies. We combine data science, creative optimization,
+              and marketplace intelligence to help you win the Buy Box, outrank competitors,
+              and maximize ROAS.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <Link
+                to="/contact"
+                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Speak to Our Expert →
+              </Link>
+              <Link
+                to="#services"
+                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Our Services →
+              </Link>
+            </div>
+
+          </div>
+
+         
+          <div className="flex justify-center md:justify-end">
+            <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+              <img
+                src={amazon}
+                alt="Amazon Advertising Services"
+                className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+
+        </div>
+      </section> */}
 
 <motion.section
   className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
@@ -275,70 +272,11 @@ const AmazonAdvertising = () => {
 </motion.section>
 
 
+      <div className="h-6 bg-white"></div>
 
 
-
-
- 
-<div className="h-6 bg-white"></div>
- 
-<section className="bg-white pt-10 sm:pt-12 md:pt-16 pb-16 sm:pb-20 md:pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Heading */}
-          <div className="mb-12 max-w-4xl">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-              Our Amazon Advertising Solutions
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
-              Performance-driven Amazon advertising solutions designed to scale
-              visibility, conversions, and long-term profitability.
-            </p>
-          </div>
- 
-          {/* Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {amazonServices.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div
-                  key={index}
-                  className="group flex flex-col justify-between
-            bg-white border border-blue-100 rounded-2xl p-6 md:p-8
-            transition-all duration-500
-            hover:bg-teal-700 hover:shadow-xl hover:-translate-y-1"
-                >
-                  <div>
-                    <div
-                      className="w-12 h-12 rounded-full bg-gray-100
-                flex items-center justify-center mb-5
-                group-hover:bg-white/20 transition"
-                    >
-                      <Icon className="w-6 h-6 text-teal-700 group-hover:text-white" />
-                    </div>
- 
-                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 group-hover:text-white">
-                      {service.title}
-                    </h3>
- 
-                    <p className="text-sm text-gray-600 leading-relaxed mb-4 group-hover:text-white/90">
-                      {service.desc}
-                    </p>
- 
-                    <ul className="space-y-2 text-sm text-gray-600 group-hover:text-white/90">
-                      {service.points.map((point, i) => (
-                        <li key={i}>• {point}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
- 
-      <section className="bg-blue-50 pt-20 sm:pt-24 md:pt-28 pb-36 sm:pb-40 md:pb-44">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="services" className="bg-blue-50 pt-20 sm:pt-24 md:pt-28 pb-36 sm:pb-40 md:pb-44">
+        <div className="container">
           {/* Heading */}
           <div className="mb-12 max-w-4xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
@@ -349,7 +287,7 @@ const AmazonAdvertising = () => {
               advertising efficiently and profitably.
             </p>
           </div>
- 
+
           {/* Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {strategicApproach.map((item, index) => {
@@ -367,11 +305,11 @@ const AmazonAdvertising = () => {
                   <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-5">
                     <Icon className="w-6 h-6 text-blue-700" />
                   </div>
- 
+
                   <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3">
                     {item.title}
                   </h3>
- 
+
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {item.desc}
                   </p>
@@ -382,9 +320,9 @@ const AmazonAdvertising = () => {
         </div>
       </section>
       <div className="bg-gray-50 h-6"></div>
- 
+
       <section className="bg-gray-50 pt-12 sm:pt-16 md:pt-20 pb-20 sm:pb-24 md:pb-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container">
           {/* Heading */}
           <div className="mb-12 max-w-4xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -395,7 +333,7 @@ const AmazonAdvertising = () => {
               Amazon revenue efficiently.
             </p>
           </div>
- 
+
           {/* Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
             {whyChooseAmazon.map((item, index) => (
@@ -416,7 +354,7 @@ const AmazonAdvertising = () => {
               </div>
             ))}
           </div>
- 
+
           {/* Closing Statement */}
           <div className="border-l-4 border-blue-700 pl-6 max-w-4xl">
             <p className="text-gray-700 text-base md:text-lg leading-relaxed">
@@ -431,22 +369,22 @@ const AmazonAdvertising = () => {
           </div>
         </div>
       </section>
- 
+
       <section className="bg-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container">
           {/* Heading */}
           <div className="max-w-4xl mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What Makes Our Framework Different?
             </h2>
- 
+
             <p className="text-lg text-gray-700">Most agencies optimize ads.</p>
- 
+
             <p className="text-xl font-semibold text-gray-900">
               We optimize revenue systems.
             </p>
           </div>
- 
+
           {/* Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {[
@@ -485,7 +423,7 @@ const AmazonAdvertising = () => {
                   alt={item.title}
                   className="w-full h-40 object-fit"
                 />
- 
+
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {item.title}
@@ -497,53 +435,53 @@ const AmazonAdvertising = () => {
               </div>
             ))}
           </div>
- 
+
           <p className="text-gray-700 text-lg max-w-4xl">
             This ensures long-term brand equity and sustained profitability.
           </p>
         </div>
       </section>
- 
- 
-     <section className="bg-blue-50 pt-20 sm:pt-24 md:pt-28 pb-32 sm:pb-36 md:pb-40">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
- 
-    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-16">
-      Frequently Asked Questions
-    </h2>
- 
-    <div className="space-y-0">
-      {faqs.map((faq, index) => (
-        <div key={index} className="border-b border-black">
-          <button
-            onClick={() => toggleFAQ(index)}
-            className="w-full flex justify-between items-center py-7 sm:py-8 text-left"
-          >
-            <span className="text-base sm:text-lg font-semibold text-gray-900 pr-6">
-              {faq.question}
-            </span>
- 
-            <span className="shrink-0">
-              {openIndex === index ? (
-                <X className="w-5 h-5 text-black" />
-              ) : (
-                <Plus className="w-5 h-5 text-black" />
-              )}
-            </span>
-          </button>
- 
-          {openIndex === index && (
-            <div className="pb-8 text-gray-700 text-sm sm:text-base leading-relaxed max-w-4xl">
-              {faq.answer}
-            </div>
-          )}
+
+
+      <section className="bg-blue-50 pt-20 sm:pt-24 md:pt-28 pb-32 sm:pb-36 md:pb-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-16">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-0">
+            {faqs.map((faq, index) => (
+              <div key={index} className="border-b border-black">
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full flex justify-between items-center py-7 sm:py-8 text-left"
+                >
+                  <span className="text-base sm:text-lg font-semibold text-gray-900 pr-6">
+                    {faq.question}
+                  </span>
+
+                  <span className="shrink-0">
+                    {openIndex === index ? (
+                      <X className="w-5 h-5 text-black" />
+                    ) : (
+                      <Plus className="w-5 h-5 text-black" />
+                    )}
+                  </span>
+                </button>
+
+                {openIndex === index && (
+                  <div className="pb-8 text-gray-700 text-sm sm:text-base leading-relaxed max-w-4xl">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
         </div>
-      ))}
-    </div>
- 
-  </div>
-</section>
-         
+      </section>
+
       <section className="bg-linear-to-r from-blue-700 to-blue-900 py-20">
         <div className="max-w-5xl mx-auto px-6 text-center text-white">
           <h2 className="text-white md:text-4xl font-bold mb-6">
@@ -555,11 +493,11 @@ const AmazonAdvertising = () => {
             with experts who understand both performance marketing and
             marketplace psychology.
           </p>
- 
+
           <p className="text-white font-semibold mb-10">
             Let’s turn your Amazon store into a scalable profit channel.
           </p>
- 
+
           <div>
             <button
               className="
@@ -578,6 +516,5 @@ const AmazonAdvertising = () => {
     </>
   );
 };
- 
+
 export default AmazonAdvertising;
- 

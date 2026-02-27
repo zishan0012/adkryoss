@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import seoaudithero from "../../../assets/SEO/seoaudithero.png";
 import {
     Settings,
@@ -18,7 +20,221 @@ import {
     Zap
 } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const SEOAudit = () => {
+    const pageRef = useRef(null);
+    const heroContentRef = useRef(null);
+    const heroImageRef = useRef(null);
+    const whyAuditRef = useRef(null);
+    const whyItemsRef = useRef([]);
+    const deliverablesRef = useRef(null);
+    const frameworkRef = useRef(null);
+    const frameworkCardsRef = useRef([]);
+    const diffRef = useRef(null);
+    const diffCardsRef = useRef([]);
+    const industryRef = useRef(null);
+    const industryCardsRef = useRef([]);
+    const whenToAuditRef = useRef(null);
+    const whenToAuditCardsRef = useRef([]);
+    const toolsRef = useRef(null);
+    const toolsItemsRef = useRef([]);
+    const processRef = useRef(null);
+    const processStepsRef = useRef([]);
+    const ctaRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            // Hero - Prism reveal
+            gsap.from(heroContentRef.current, {
+                x: -100,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power4.out"
+            });
+            gsap.from(heroImageRef.current, {
+                x: 100,
+                opacity: 0,
+                scale: 0.9,
+                duration: 1.2,
+                ease: "power4.out"
+            });
+
+            // Why Audit - Scanning reveal
+            gsap.from(whyAuditRef.current, {
+                opacity: 0,
+                y: 30,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: whyAuditRef.current,
+                    start: "top 80%"
+                }
+            });
+            whyItemsRef.current.forEach((item, i) => {
+                gsap.from(item, {
+                    x: -20,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 95%"
+                    }
+                });
+            });
+            gsap.from(deliverablesRef.current, {
+                scale: 0.95,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: deliverablesRef.current,
+                    start: "top 75%"
+                }
+            });
+
+            // Framework - Prismatic cards
+            gsap.from(frameworkRef.current, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: frameworkRef.current,
+                    start: "top 85%"
+                }
+            });
+            frameworkCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    y: 40,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: i * 0.15,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // Differentiators - Data spectrum
+            gsap.from(diffRef.current, {
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: diffRef.current,
+                    start: "top 85%"
+                }
+            });
+            diffCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    opacity: 0,
+                    scale: 0.8,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Industries
+            industryCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.5,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // When to Audit - Alert pulse
+            whenToAuditCardsRef.current.forEach((card, i) => {
+                gsap.from(card, {
+                    x: i % 2 === 0 ? -30 : 30,
+                    opacity: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Tools - Glass bubbling
+            toolsItemsRef.current.forEach((tool, i) => {
+                gsap.from(tool, {
+                    scale: 0.5,
+                    opacity: 0,
+                    duration: 0.5,
+                    delay: i * 0.05,
+                    scrollTrigger: {
+                        trigger: tool,
+                        start: "top 95%"
+                    }
+                });
+            });
+
+            // Process - Step sequence
+            processStepsRef.current.forEach((step, i) => {
+                gsap.from(step, {
+                    x: -50,
+                    opacity: 0,
+                    duration: 0.7,
+                    delay: i * 0.2,
+                    scrollTrigger: {
+                        trigger: step,
+                        start: "top 90%"
+                    }
+                });
+            });
+
+            // CTA
+            gsap.from(ctaRef.current, {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ctaRef.current,
+                    start: "top 90%"
+                }
+            });
+
+            // Image Float (Refraction sway)
+            gsap.to(heroImageRef.current, {
+                y: -20,
+                x: 10,
+                duration: 5,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }, pageRef);
+
+        return () => ctx.revert();
+    }, []);
+
+    const handleHover = (e, isEnter) => {
+        gsap.to(e.currentTarget, {
+            y: isEnter ? -10 : 0,
+            scale: isEnter ? 1.02 : 1,
+            backgroundColor: isEnter ? "#f0f9ff" : "white",
+            borderColor: isEnter ? "#0066CC" : "#e2e8f0",
+            duration: 0.3
+        });
+        const icon = e.currentTarget.querySelector('.card-icon');
+        if (icon) {
+            gsap.to(icon, {
+                rotateY: isEnter ? 180 : 0,
+                scale: isEnter ? 1.2 : 1,
+                duration: 0.5
+            });
+        }
+    };
 
     const auditFramework = [
         {
@@ -133,7 +349,7 @@ const SEOAudit = () => {
     ];
 
     return (
-        <div style={{ backgroundColor: '#fff' }}>
+        <div ref={pageRef} style={{ backgroundColor: '#fff' }} className="overflow-hidden">
             {/* Hero Section */}
             <section
                 className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -142,7 +358,7 @@ const SEOAudit = () => {
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full">
-                    <div className="text-left relative z-10 text-white">
+                    <div ref={heroContentRef} className="text-left relative z-10 text-white">
                         <h1 className="text-[28px] md:text-[36px] mb-3 font-bold tracking-[-1.5px] text-white leading-[1.1]">
                             SEO Audit Services
                         </h1>
@@ -159,21 +375,21 @@ const SEOAudit = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Speak to Our Expert →
-                            </a>
-                            <a
-                                href="#services"
+                            </Link>
+                            <Link
+                                to="#services"
                                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
                             >
                                 Our Services →
-                            </a>
+                            </Link>
                         </div>
                     </div>
-                    <div className="flex justify-center md:justify-end relative z-10">
+                    <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
                         <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
                             <img
                                 src={seoaudithero}
@@ -189,7 +405,7 @@ const SEOAudit = () => {
             <section className="pt-32 pb-24 bg-white">
                 <div className="container">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div>
+                        <div ref={whyAuditRef}>
                             <h2 className="text-[36px] font-bold mb-[30px] text-[#0f172a]">
                                 Why Your Website Needs an Advanced SEO Audit
                             </h2>
@@ -211,7 +427,7 @@ const SEOAudit = () => {
                                     "Enhance user experience signals",
                                     "Discover missed traffic opportunities"
                                 ].map((item, i) => (
-                                    <div key={i} className="flex gap-[12px] items-center">
+                                    <div key={i} ref={el => whyItemsRef.current[i] = el} className="flex gap-[12px] items-center">
                                         <CheckCircle2 size={20} className="text-[#0066cc]" />
                                         <span className="text-[16px] font-medium text-[#334155]">{item}</span>
                                     </div>
@@ -221,11 +437,11 @@ const SEOAudit = () => {
                                 This isn’t a checklist audit. It’s a performance blueprint.
                             </div>
                         </div>
-                        <div className="bg-[#f8fafc] p-[40px] rounded-[30px] border border-[#e2e8f0]">
+                        <div ref={deliverablesRef} className="bg-[#f8fafc] p-[40px] rounded-[30px] border border-[#e2e8f0] shadow-xl hover:shadow-blue-100/50 transition-shadow duration-500">
                             <h3 className="text-[24px] font-semibold mb-[30px] text-[#0f172a]">Deliverables You Receive</h3>
                             <ul className="space-y-4">
                                 {deliverables.map((item, i) => (
-                                    <li key={i} className="flex gap-[10px] text-[16px] text-[#475569] font-medium">
+                                    <li key={i} className="flex gap-[10px] text-[16px] text-[#475569] font-medium transition-transform hover:translate-x-2">
                                         <CheckCircle2 size={20} className="text-[#0066cc]" /> {item}
                                     </li>
                                 ))}
@@ -239,7 +455,7 @@ const SEOAudit = () => {
             </section>
 
             {/* Framework Section */}
-            <section className="py-[80px] bg-[#f8fafc]">
+            <section id="services" ref={frameworkRef} className="py-[80px] bg-[#f8fafc]">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-[20px] text-[#0f172a]">Our Strategic SEO Audit Framework</h2>
@@ -251,9 +467,12 @@ const SEOAudit = () => {
                         {auditFramework.map((phase, i) => (
                             <div
                                 key={i}
-                                className="w-[calc(50%-20px)] min-w-[320px] bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 grow max-w-[550px] group hover:-translate-y-[5px] hover:border-[#0066cc] hover:shadow-[0_10px_30px_rgba(0,102,204,0.1)]"
+                                ref={el => frameworkCardsRef.current[i] = el}
+                                onMouseEnter={(e) => handleHover(e, true)}
+                                onMouseLeave={(e) => handleHover(e, false)}
+                                className="w-[calc(50%-20px)] min-w-[320px] bg-white p-[40px] rounded-[24px] border border-[#e2e8f0] transition-all duration-300 grow max-w-[550px] group cursor-pointer"
                             >
-                                <div className="text-[#0066cc] mb-[20px]">{phase.icon}</div>
+                                <div className="text-[#0066cc] mb-[20px] card-icon">{phase.icon}</div>
                                 <h3 className="text-[24px] font-semibold mb-[16px] text-[#0f172a]">{phase.title}</h3>
                                 <p className="text-[16px] text-[#475569] mb-[24px] font-medium">{phase.desc}</p>
                                 <ul className="space-y-3 mb-6">
@@ -272,7 +491,7 @@ const SEOAudit = () => {
             </section>
 
             {/* Differentiators */}
-            <section className="py-[80px] bg-[#0f172a] text-white">
+            <section ref={diffRef} className="py-[80px] bg-[#0f172a] text-white">
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-[20px] text-white">What Makes Our SEO Audit Different</h2>
@@ -284,7 +503,8 @@ const SEOAudit = () => {
                         {differentiators.map((diff, i) => (
                             <div
                                 key={i}
-                                className="px-[32px] py-[24px] bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-[15px] text-[18px] font-medium text-[#60a5fa] transition-all duration-300 hover:border-[#fff] hover:-translate-y-[5px]"
+                                ref={el => diffCardsRef.current[i] = el}
+                                className="px-[32px] py-[24px] bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-[15px] text-[18px] font-medium text-[#60a5fa] transition-all duration-300 hover:border-[#fff] hover:-translate-y-[5px] hover:bg-[rgba(255,255,255,0.1)]"
                             >
                                 {diff}
                             </div>
@@ -300,13 +520,14 @@ const SEOAudit = () => {
 
             {/* Industries We Audit */}
             <section className="py-[80px] bg-white">
-                <div className="container text-center">
+                <div className="container text-center" ref={industryRef}>
                     <h2 className="text-[36px] font-bold mb-[20px] text-[#0f172a]">Industries We Audit</h2>
                     <div className="flex flex-wrap justify-center gap-[30px] mb-[40px]">
                         {industries.map((ind, i) => (
                             <div
                                 key={i}
-                                className="px-[40px] py-[24px] bg-[#f8fafc] rounded-[15px] border border-[#e2e8f0] flex items-center gap-[15px] transition-all duration-300 hover:border-[#0066cc] hover:-translate-y-[5px]"
+                                ref={el => industryCardsRef.current[i] = el}
+                                className="px-[40px] py-[24px] bg-[#f8fafc] rounded-[15px] border border-[#e2e8f0] flex items-center gap-[15px] transition-all duration-300 hover:border-[#0066cc] hover:-translate-y-[5px] hover:shadow-lg"
                             >
                                 <div className="text-[#0066cc]">{ind.icon}</div>
                                 <span className="text-[18px] font-semibold text-[#0f172a]">{ind.name}</span>
@@ -320,7 +541,7 @@ const SEOAudit = () => {
             </section>
 
             {/* When to Audit */}
-            <section className="py-[80px] bg-[#f1f5f9]">
+            <section className="py-[80px] bg-[#f1f5f9]" ref={whenToAuditRef}>
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-[20px] text-[#0f172a]">When Should You Get an SEO Audit?</h2>
@@ -329,7 +550,8 @@ const SEOAudit = () => {
                         {whenToAudit.map((item, i) => (
                             <div
                                 key={i}
-                                className="px-[30px] py-[20px] bg-white rounded-[12px] border border-[#cbd5e1] text-[16px] font-medium text-[#334155] flex items-center gap-[10px] transition-all duration-300 hover:border-[#0066cc] hover:-translate-y-[5px]"
+                                ref={el => whenToAuditCardsRef.current[i] = el}
+                                className="px-[30px] py-[20px] bg-white rounded-[12px] border border-[#cbd5e1] text-[16px] font-medium text-[#334155] flex items-center gap-[10px] transition-all duration-300 hover:border-[#0066cc] hover:-translate-y-[5px] hover:shadow-md"
                             >
                                 <Zap size={20} className="text-[#ef4444]" />
                                 {item}
@@ -345,7 +567,7 @@ const SEOAudit = () => {
             </section>
 
             {/* Tools Section */}
-            <section className="py-[80px] bg-white">
+            <section className="py-[80px] bg-white" ref={toolsRef}>
                 <div className="container text-center">
                     <h2 className="text-[36px] font-bold mb-[40px] text-[#0f172a]">Tools We Use</h2>
                     <p className="text-[16px] md:text-[18px] mb-6 font-medium">
@@ -355,7 +577,8 @@ const SEOAudit = () => {
                         {tools.map((tool, i) => (
                             <span
                                 key={i}
-                                className="text-[18px] font-medium text-[#0f172a] px-[30px] py-[15px] bg-[#f8fafc] rounded-[50px] border border-[#e2e8f0] transition-all duration-300 hover:border-[#0066cc] hover:-translate-y-[5px]"
+                                ref={el => toolsItemsRef.current[i] = el}
+                                className="text-[18px] font-medium text-[#0f172a] px-[30px] py-[15px] bg-[#f8fafc] rounded-[50px] border border-[#e2e8f0] transition-all duration-300 hover:border-[#0066cc] hover:-translate-y-[5px] hover:bg-white hover:shadow-lg cursor-default"
                             >
                                 {tool}
                             </span>
@@ -368,7 +591,7 @@ const SEOAudit = () => {
             </section>
 
             {/* Process Section */}
-            <section className="py-[80px] bg-[#f8fafc]">
+            <section className="py-[80px] bg-[#f8fafc]" ref={processRef}>
                 <div className="container">
                     <div className="text-center mb-[60px]">
                         <h2 className="text-[36px] font-bold mb-[20px] text-[#0f172a]">Our Process</h2>
@@ -377,7 +600,8 @@ const SEOAudit = () => {
                         {auditProcess.map((step, i) => (
                             <div
                                 key={i}
-                                className="px-[40px] py-[30px] bg-white rounded-[20px] border border-[#e2e8f0] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] relative"
+                                ref={el => processStepsRef.current[i] = el}
+                                className="px-[40px] py-[30px] bg-white rounded-[20px] border border-[#e2e8f0] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] relative transition-all hover:shadow-xl hover:border-[#0066cc]"
                             >
                                 <div className="absolute top-[-15px] left-[30px] bg-[#0066cc] text-white w-[30px] h-[30px] rounded-full flex items-center justify-center font-semibold">
                                     {i + 1}
@@ -394,11 +618,9 @@ const SEOAudit = () => {
                 </div>
             </section>
 
-
-
             {/* CTA */}
-            <section className="py-[100px] text-center bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white">
-                <div className="container">
+            <section ref={ctaRef} className="py-[100px] text-center bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white overflow-hidden">
+                <div className="container relative z-10">
                     <h2 className="text-[36px] font-bold mb-[24px] text-white">Let’s Diagnose Before You Invest More</h2>
                     <p className="text-[22px] mb-[20px] text-[#cbd5e1] max-w-[800px] mx-auto font-medium">
                         Stop spending on ads while your foundation leaks traffic.
@@ -411,7 +633,7 @@ const SEOAudit = () => {
                     </p>
                     <Link
                         to="/contact"
-                        className="inline-flex items-center gap-[12px] bg-[#0066cc] text-white py-[20px] px-[60px] rounded-[50px] text-[20px] font-bold no-underline transition-all duration-300 hover:-translate-y-[5px] hover:scale-[1.05]"
+                        className="inline-flex items-center gap-[12px] bg-[#0066cc] text-white py-[20px] px-[60px] rounded-[50px] text-[20px] font-bold no-underline transition-all duration-300 hover:-translate-y-[5px] hover:scale-[1.05] hover:shadow-[0_20px_40px_rgba(0,102,204,0.3)]"
                     >
                         Book Your SEO Audit Consultation Today <ArrowRight size={24} />
                     </Link>
@@ -425,3 +647,4 @@ const SEOAudit = () => {
 };
 
 export default SEOAudit;
+

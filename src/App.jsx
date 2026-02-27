@@ -75,7 +75,7 @@ import B2BCRO from './pages/our-services/martech/B2BCRO';
 import Company from './pages/company';
 import AboutUs from './pages/company/AboutUs';
 import Careers from './pages/company/Careers';
-import Awards from './pages/company/Awards';
+// import Awards from './pages/company/Awards';
 import PressReleases from './pages/company/PressReleases';
 import BestPlaceToWork from './pages/company/BestPlaceToWork';
 
@@ -101,6 +101,13 @@ import IBP from './pages/partners/IBP';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import RequestQuote from './pages/RequestQuote';
+import TermsAndConditions from './pages/TermsAndConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import RefundAndCancellation from './pages/RefundAndCancellation';
+import Sitemap from './pages/Sitemap';
+import SEOROICalculator from './pages/tools/SEOROICalculator';
+import CROCalculator from './pages/tools/CROCalculator';
+import PPCROICalculator from './pages/tools/PPCROICalculator';
 
 import Future from "./pages/blog/Future";
 import Perfomance from './pages/blog/Perfomance';
@@ -114,10 +121,17 @@ import Local from './pages/blog/Local';
 import Data from './pages/blog/Data';
 // Scroll to top on route change
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace('#', ''));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash]);
   return null;
 };
 
@@ -137,8 +151,7 @@ const PageWrapper = ({ children }) => {
 
 
 function App() {
-  
-    
+
   return (
     <Layout>
       <ScrollToTop />
@@ -150,15 +163,16 @@ function App() {
         <Route path="/" element={<Home />} />
 
         {/* ==================== COMPANY ROUTES ==================== */}
-        <Route path="/company" element={<PageWrapper><Company /></PageWrapper> } />
+        <Route path="/company" element={<PageWrapper><Company /></PageWrapper>} />
         <Route path="/company/about-us" element={<PageWrapper><AboutUs /></PageWrapper>} />
         <Route path="/company/careers" element={<PageWrapper><Careers /></PageWrapper>} />
-        <Route path="/company/awards" element={<Awards />} />
+        {/* <Route path="/company/awards" element={<Awards />} /> */}
         <Route path="/company/press-releases" element={<PageWrapper><PressReleases /></PageWrapper>} />
         <Route path="/company/best-place-to-work" element={<PageWrapper><BestPlaceToWork /></PageWrapper>} />
 
         {/* ==================== SERVICES ROUTES ==================== */}
         <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
+
 
         {/* SEO Services (18 pages) */}
         <Route path="/services/seo" element={<PageWrapper><SEO /></PageWrapper>} />
@@ -256,13 +270,20 @@ function App() {
         <Route path="/blog/Ecommerce" element={<ECOmmerce />} />
         <Route path="/blog/local" element={<Local />} />
         <Route path="/blog/data" element={<Data />} />
+        <Route path="/terms-conditions" element={<TermsAndConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/refund-cancellation" element={<RefundAndCancellation />} />
+        <Route path="/sitemap" element={<Sitemap />} />
+        <Route path="/tools/seo-roi" element={<PageWrapper><SEOROICalculator /></PageWrapper>} />
+        <Route path="/tools/cro-roi" element={<PageWrapper><CROCalculator /></PageWrapper>} />
+        <Route path="/tools/ppc-roi" element={<PageWrapper><PPCROICalculator /></PageWrapper>} />
 
 
       </Routes>
 
 
 
-       
+
     </Layout>
   );
 }

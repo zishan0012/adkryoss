@@ -2126,28 +2126,3 @@ const BFSI = () => {
 };
 
 export default BFSI;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

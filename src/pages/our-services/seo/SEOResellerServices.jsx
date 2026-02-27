@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import seoresellerhero from "../../../assets/SEO/seoresellerhero.png";
 import {
   CheckCircle2,
@@ -10,146 +12,218 @@ import {
   Settings,
   Target,
   Search,
+  Zap,
+  Briefcase,
+  Layers,
+  Code,
+  TrendingUp,
+  Ghost,
+  Globe
 } from "lucide-react";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const SEOResellerServices = () => {
+  const pageRef = useRef(null);
+  const heroContentRef = useRef(null);
+  const heroImageRef = useRef(null);
+  const whyRef = useRef(null);
+  const offeringCardsRef = useRef([]);
+  const solutionsRef = useRef(null);
+  const frameworkItemsRef = useRef([]);
+  const modelStepsRef = useRef([]);
+  const whoCardsRef = useRef([]);
+  const differentCardsRef = useRef([]);
+  const industryCardsRef = useRef([]);
+  const ctaRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Hero - Ghost reveal
+      gsap.from(heroContentRef.current, {
+        x: -100,
+        opacity: 0,
+        filter: "blur(20px)",
+        duration: 1.5,
+        ease: "power4.out"
+      });
+      gsap.from(heroImageRef.current, {
+        x: 100,
+        opacity: 0,
+        scale: 0.8,
+        duration: 1.5,
+        ease: "power4.out"
+      });
+
+      // Why - Invisible rise
+      if (whyRef.current) {
+        gsap.from(whyRef.current, {
+          y: 50,
+          opacity: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: whyRef.current,
+            start: "top 85%"
+          }
+        });
+      }
+
+      // Offerings - Rapid scaling stagger
+      offeringCardsRef.current.forEach((card, i) => {
+        if (!card) return;
+        gsap.from(card, {
+          scale: 0.9,
+          opacity: 0,
+          filter: "blur(10px)",
+          duration: 0.8,
+          delay: i * 0.1,
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%"
+          }
+        });
+      });
+
+      // Solutions - Slide in
+      if (solutionsRef.current) {
+        const textSide = solutionsRef.current.querySelector('.text-side');
+        const imageSide = solutionsRef.current.querySelector('.image-side');
+        if (textSide) {
+          gsap.from(textSide, {
+            x: -50,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+              trigger: solutionsRef.current,
+              start: "top 80%"
+            }
+          });
+        }
+        if (imageSide) {
+          gsap.from(imageSide, {
+            x: 50,
+            opacity: 0,
+            duration: 1,
+            scrollTrigger: {
+              trigger: solutionsRef.current,
+              start: "top 80%"
+            }
+          });
+        }
+      }
+
+      // Framework Items
+      frameworkItemsRef.current.forEach((item, i) => {
+        if (!item) return;
+        gsap.from(item, {
+          y: 30,
+          opacity: 0,
+          duration: 0.6,
+          delay: i * 0.1,
+          scrollTrigger: {
+            trigger: item,
+            start: "top 95%"
+          }
+        });
+      });
+
+      // Model Steps
+      modelStepsRef.current.forEach((step, i) => {
+        if (!step) return;
+        gsap.from(step, {
+          y: 30,
+          opacity: 0,
+          duration: 0.6,
+          delay: i * 0.1,
+          scrollTrigger: {
+            trigger: step,
+            start: "top 95%"
+          }
+        });
+      });
+
+      // Who Cards
+      whoCardsRef.current.forEach((card, i) => {
+        if (!card) return;
+        gsap.from(card, {
+          y: 30,
+          opacity: 0,
+          duration: 0.6,
+          delay: i * 0.1,
+          scrollTrigger: {
+            trigger: card,
+            start: "top 95%"
+          }
+        });
+      });
+
+      // Different Cards
+      differentCardsRef.current.forEach((card, i) => {
+        if (!card) return;
+        gsap.from(card, {
+          x: i % 2 === 0 ? -30 : 30,
+          opacity: 0,
+          duration: 0.8,
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%"
+          }
+        });
+      });
+
+      // Industry Cards
+      industryCardsRef.current.forEach((card, i) => {
+        if (!card) return;
+        gsap.from(card, {
+          scale: 0.9,
+          opacity: 0,
+          duration: 0.6,
+          delay: i * 0.1,
+          scrollTrigger: {
+            trigger: card,
+            start: "top 95%"
+          }
+        });
+      });
+
+      // CTA - Portal expand
+      if (ctaRef.current) {
+        gsap.from(ctaRef.current, {
+          scale: 0.95,
+          opacity: 0,
+          duration: 1.2,
+          scrollTrigger: {
+            trigger: ctaRef.current,
+            start: "top 90%"
+          }
+        });
+      }
+    }, pageRef);
+
+    return () => ctx.revert();
+  }, []);
+
   const offerings = [
     {
       title: "White-Label SEO Execution",
-      icon: <Settings size={32} />,
-      desc: "End-to-end SEO delivered under your agency’s brand — from strategy to reporting.",
+      desc: "End-to-end SEO delivered under your agency's brand — from strategy to reporting."
     },
     {
       title: "Dedicated SEO Team",
-      icon: <Users size={32} />,
-      desc: "Access SEO strategists, technical experts, content specialists, and link-building professionals.",
+      desc: "Access strategists, technical experts, content specialists, and link-building professionals."
     },
     {
       title: "Transparent Reporting",
-      icon: <BarChart3 size={32} />,
-      desc: "Custom-branded reports with real metrics — rankings, traffic growth, leads, and performance insights.",
+      desc: "Custom-branded reports with rankings, traffic growth, leads & insights."
     },
     {
       title: "Scalable Delivery Model",
-      icon: <Target size={32} />,
-      desc: "From 1 client to 100+ clients — our systems scale as your agency grows.",
-    },
-  ];
-
-  const whoItsFor = [
-    "Digital marketing agencies",
-    "Web development companies",
-    "Freelancers managing multiple SEO clients",
-    "Branding agencies adding SEO services",
-    "International agencies outsourcing SEO",
-  ];
-  const resellerSolutions = [
-    {
-      title: "SEO Strategy & Roadmap",
-      points: [
-        "Competitor benchmarking",
-        "Keyword gap analysis",
-        "Search intent mapping",
-        "Custom SEO growth plan",
-      ],
-    },
-    {
-      title: "On-Page SEO",
-      points: [
-        "Technical optimization",
-        "Schema implementation",
-        "Content structuring",
-        "Internal linking frameworks",
-      ],
-    },
-    {
-      title: "Technical SEO",
-      points: [
-        "Site audits & error fixes",
-        "Core Web Vitals optimization",
-        "Crawlability & indexability",
-        "Site architecture improvements",
-      ],
-    },
-    {
-      title: "Content Marketing",
-      points: [
-        "SEO-optimized blog creation",
-        "Landing page content",
-        "Topic cluster strategy",
-        "AI-assisted + human-optimized writing",
-      ],
-    },
-    {
-      title: "Authority Building",
-      points: [
-        "High-quality backlinks",
-        "Digital PR outreach",
-        "Niche edits & guest posts",
-        "Brand mentions",
-      ],
-    },
-    {
-      title: "Local & Enterprise SEO",
-      points: [
-        "Google Business Profile optimization",
-        "Multi-location SEO",
-        "Enterprise site management",
-        "Large-scale technical implementation",
-      ],
-    },
-  ];
-  const resellerWorkflow = [
-    {
-      step: "Onboarding & Discovery",
-      desc: "We understand your agency goals, client niche, and pricing model.",
-    },
-    {
-      step: "Strategy Development",
-      desc: "A custom SEO roadmap is prepared for each client.",
-    },
-    {
-      step: "Execution",
-      desc: "Our team handles audits, content, links, and optimization.",
-    },
-    {
-      step: "Reporting & Scaling",
-      desc: "Branded monthly reports with clear KPIs and strategic recommendations.",
-    },
-  ];
-  const differentiators = [
-    {
-      title: "Performance-First Approach",
-      desc: "We track rankings, traffic, leads, and ROI — not vanity metrics.",
-    },
-    {
-      title: "Process-Driven Execution",
-      desc: "Clear SOPs, defined timelines, and measurable milestones.",
-    },
-    {
-      title: "Ethical SEO Only",
-      desc: "White-hat techniques aligned with Google’s latest updates.",
-    },
-    {
-      title: "Modern SEO Stack",
-      desc: "AI insights, automation tools, and real-time analytics to stay ahead of algorithm shifts.",
-    },
-    {
-      title: "Complete Confidentiality",
-      desc: "100% white-label delivery. Your brand always stays in front.",
-    },
-  ];
-  const seoTools = [
-    "Google Search Console & Analytics 4",
-    "SEMrush / Ahrefs",
-    "Screaming Frog",
-    "Surfer SEO",
-    "AI-driven content research tools",
-    "Advanced reporting dashboards",
+      desc: "From 1 client to 100+ — our systems scale as your agency grows."
+    }
   ];
 
   return (
-    <>
+    <div ref={pageRef}>
       {/* Hero Section */}
       <section
         className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
@@ -158,13 +232,10 @@ const SEOResellerServices = () => {
             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
         }}
       >
-        {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-slate-900/80"></div> */}
-
         <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
 
           {/* LEFT CONTENT */}
-          <div className="text-left">
+          <div ref={heroContentRef} className="text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6">
               SEO Reseller Services
             </h1>
@@ -178,49 +249,25 @@ const SEOResellerServices = () => {
               revenue, retain clients, and dominate search — without hiring an
               in-house team.
             </p>
-            {/* 
-      <div className="flex flex-col sm:flex-row gap-4">
-        <a
-          href="/contact"
-          className="bg-blue-600 hover:bg-green-500
-          text-white font-bold
-          px-8 py-4 rounded-full
-          transition-all duration-300
-          hover:-translate-y-1 hover:shadow-xl text-center"
-        >
-          Speak to an Expert →
-        </a>
-
-        <a
-          href="#solutions"
-          className="border-2 border-blue-500
-          text-blue-400
-          px-8 py-4 rounded-full font-bold
-          transition-all duration-300
-          hover:bg-green-500 hover:text-white hover:border-green-500 text-center"
-        >
-          Our Solutions →
-        </a>
-      </div> */}
 
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
               >
                 Speak to Our Expert →
-              </a>
-              <a
-                href="#services"
+              </Link>
+              <Link
+                to="#services"
                 className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
               >
                 Our Services →
-              </a>
+              </Link>
             </div>
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex justify-center md:justify-end relative z-10">
+          <div ref={heroImageRef} className="flex justify-center md:justify-end relative z-10">
             <div className="relative rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm">
               <img
                 src={seoresellerhero}
@@ -232,11 +279,13 @@ const SEOResellerServices = () => {
 
         </div>
       </section>
+
+      {/* Why SEO Reseller Services? */}
       <section className="bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center">
 
           {/* LEFT CONTENT */}
-          <div className="pr-0 lg:pr-10">
+          <div ref={whyRef} className="pr-0 lg:pr-10 px-6">
 
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
               Why SEO Reseller Services?
@@ -248,7 +297,7 @@ const SEOResellerServices = () => {
             </p>
 
             <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-5">
-              That’s where{" "}
+              That's where{" "}
               <span className="font-semibold text-gray-900">
                 Adkryoss managed by Clink Consultancy Services Private Limited
               </span>{" "}
@@ -265,7 +314,7 @@ const SEOResellerServices = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="mt-10 lg:mt-0 flex justify-start lg:justify-end">
+          <div className="mt-10 lg:mt-0 flex justify-start lg:justify-end px-6">
             <img
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
               alt="SEO Analytics Dashboard"
@@ -275,7 +324,9 @@ const SEOResellerServices = () => {
 
         </div>
       </section>
-      <section className="bg-white py-20">
+
+      {/* What We Offer */}
+      <section id="services" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
@@ -284,25 +335,8 @@ const SEOResellerServices = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            {[
-              {
-                title: "White-Label SEO Execution",
-                desc: "End-to-end SEO delivered under your agency’s brand — from strategy to reporting."
-              },
-              {
-                title: "Dedicated SEO Team",
-                desc: "Access strategists, technical experts, content specialists, and link-building professionals."
-              },
-              {
-                title: "Transparent Reporting",
-                desc: "Custom-branded reports with rankings, traffic growth, leads & insights."
-              },
-              {
-                title: "Scalable Delivery Model",
-                desc: "From 1 client to 100+ — our systems scale as your agency grows."
-              }
-            ].map((item, i) => (
-              <div key={i}
+            {offerings.map((item, i) => (
+              <div ref={el => offeringCardsRef.current[i] = el} key={i}
                 className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
@@ -317,17 +351,19 @@ const SEOResellerServices = () => {
           </div>
         </div>
       </section>
-      <section className="bg-blue-50 py-24">
+
+      {/* Our SEO Reseller Solutions */}
+      <section ref={solutionsRef} className="bg-blue-50 py-24">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
           {/* Left Content */}
-          <div>
+          <div className="text-side">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Our SEO Reseller Solutions
             </h2>
 
             <p className="text-lg text-gray-700 mb-6">
-              We don’t just offer SEO services. We offer structured growth systems.
+              We don't just offer SEO services. We offer structured growth systems.
             </p>
 
             <ul className="space-y-3 text-gray-700">
@@ -341,7 +377,7 @@ const SEOResellerServices = () => {
           </div>
 
           {/* Right Image */}
-          <div className="flex justify-center lg:justify-end">
+          <div className="image-side flex justify-center lg:justify-end">
             <img
               src="https://images.unsplash.com/photo-1551434678-e076c223a692"
               alt="SEO Growth Strategy"
@@ -351,6 +387,8 @@ const SEOResellerServices = () => {
 
         </div>
       </section>
+
+      {/* Complete SEO Execution Framework */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
 
@@ -368,7 +406,7 @@ const SEOResellerServices = () => {
               "High-quality backlinks & digital PR outreach",
               "Google Business Profile & enterprise SEO"
             ].map((item, i) => (
-              <div key={i}
+              <div ref={el => frameworkItemsRef.current[i] = el} key={i}
                 className="bg-white border border-blue-100 rounded-2xl p-8 hover:bg-teal-700 hover:text-white transition"
               >
                 {item}
@@ -379,6 +417,8 @@ const SEOResellerServices = () => {
 
         </div>
       </section>
+
+      {/* How Our Reseller Model Works */}
       <section className="bg-slate-50 py-24">
         <div className="max-w-7xl mx-auto px-6">
 
@@ -394,7 +434,7 @@ const SEOResellerServices = () => {
               "Execution",
               "Reporting & Scaling"
             ].map((step, i) => (
-              <div key={i}
+              <div ref={el => modelStepsRef.current[i] = el} key={i}
                 className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition"
               >
                 <span className="text-sm font-bold text-blue-700">
@@ -409,6 +449,8 @@ const SEOResellerServices = () => {
           </div>
         </div>
       </section>
+
+      {/* Who Is This For? */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
 
@@ -419,22 +461,22 @@ const SEOResellerServices = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {[
-              "Digital Marketing Agencies",
-              "Web Development Companies",
-              "Freelancers",
-              "Branding Agencies",
-              "International Agencies"
+              { name: "Digital Marketing Agencies", img: "https://images.unsplash.com/photo-1556761175-b413da4baf72" },
+              { name: "Web Development Companies", img: "https://images.unsplash.com/photo-1551434678-e076c223a692" },
+              { name: "Freelancers", img: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8" },
+              { name: "Branding Agencies", img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0" },
+              { name: "International Agencies", img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f" }
             ].map((item, i) => (
-              <div key={i}
+              <div ref={el => whoCardsRef.current[i] = el} key={i}
                 className="rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72"
-                  alt={item}
+                  src={item.img}
+                  alt={item.name}
                   className="h-40 w-full object-cover"
                 />
                 <div className="p-6 font-semibold text-gray-900">
-                  {item}
+                  {item.name}
                 </div>
               </div>
             ))}
@@ -442,6 +484,8 @@ const SEOResellerServices = () => {
           </div>
         </div>
       </section>
+
+      {/* What Makes Us Different */}
       <section className="bg-blue-50 py-24">
         <div className="max-w-7xl mx-auto px-6">
 
@@ -458,7 +502,7 @@ const SEOResellerServices = () => {
               "Modern SEO Stack",
               "Complete Confidentiality"
             ].map((item, i) => (
-              <div key={i}
+              <div ref={el => differentCardsRef.current[i] = el} key={i}
                 className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition"
               >
                 {item}
@@ -469,6 +513,8 @@ const SEOResellerServices = () => {
 
         </div>
       </section>
+
+      {/* Industries We Serve */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
 
@@ -479,24 +525,24 @@ const SEOResellerServices = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {[
-              "E-commerce",
-              "SaaS & Tech",
-              "Healthcare",
-              "Real Estate",
-              "Education",
-              "Finance",
-              "B2B Services"
+              { name: "E-commerce", img: "https://images.unsplash.com/photo-1492724441997-5dc865305da7" },
+              { name: "SaaS & Tech", img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c" },
+              { name: "Healthcare", img: "https://images.unsplash.com/photo-1505751172107-5962297c279d" },
+              { name: "Real Estate", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa" },
+              { name: "Education", img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1" },
+              { name: "Finance", img: "https://images.unsplash.com/photo-1454165833767-131438967469" },
+              { name: "B2B Services", img: "https://images.unsplash.com/photo-1552664730-d307ca884978" }
             ].map((industry, i) => (
-              <div key={i}
+              <div ref={el => industryCardsRef.current[i] = el} key={i}
                 className="rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
-                  alt={industry}
+                  src={industry.img}
+                  alt={industry.name}
                   className="h-40 w-full object-cover"
                 />
                 <div className="p-6 font-semibold text-gray-900">
-                  {industry}
+                  {industry.name}
                 </div>
               </div>
             ))}
@@ -504,7 +550,9 @@ const SEOResellerServices = () => {
           </div>
         </div>
       </section>
-      <section className="bg-linear-to-r from-blue-700 to-blue-900 py-24 text-white">
+
+      {/* Final CTA */}
+      <section ref={ctaRef} className="bg-gradient-to-r from-blue-700 to-blue-900 py-24 text-white">
 
         <div className="max-w-5xl mx-auto px-6 text-center">
 
@@ -513,17 +561,16 @@ const SEOResellerServices = () => {
           </h2>
 
           <p className="text-white mb-10">
-            Turn SEO into your agency’s strongest recurring revenue stream.
+            Turn SEO into your agency's strongest recurring revenue stream.
           </p>
 
-          <button className="bg-white text-blue-700 px-8 py-4 rounded-full font-semibold hover:bg-blue-100 transition">
+          <Link to="/contact" className="bg-white text-blue-700 px-8 py-4 rounded-full font-semibold hover:bg-blue-100 transition inline-block no-underline">
             Partner With Us →
-          </button>
+          </Link>
 
         </div>
       </section>
-
-    </>
+    </div>
   );
 };
 

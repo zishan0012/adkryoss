@@ -496,4 +496,3 @@ const Ship = ({ size = 24 }) => (
 );
 
 export default MartechServices;
-
