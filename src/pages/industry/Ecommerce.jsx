@@ -1,7 +1,5 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import EcommerceImage from "../../assets/Ecommerce.png";
 import TheEcommerceGrowthChallengeImage from "../../assets/TheEcommerceGrowthChallenge.png";
 import WhyChooseAdkryossImage from "../../assets/WhyChooseAdkryoss.png";
@@ -24,555 +22,118 @@ import ImprovedConversionRatesImage from "../../assets/ImprovedConversionRates.p
 import EnhancedCustomerLifetimeValueImage from "../../assets/EnhancedCustomerLifetimeValue.png";
 import HealthcareWellnessImage from "../../assets/HealthcareWellness.png";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Ecommerce = () => {
   const navigate = useNavigate();
+  const [visibleSections, setVisibleSections] = useState({});
 
-  // ========== REFS FOR ALL SECTIONS ==========
-  const heroSectionRef = useRef(null);
-  const heroHeadingRef = useRef(null);
-  const heroSubHeadingRef = useRef(null);
-  const heroParagraphRef = useRef(null);
-  const heroImageRef = useRef(null);
-
-  const challengeSectionRef = useRef(null);
-  const challengeHeadingRef = useRef(null);
-  const challengeSubHeadingRef = useRef(null);
-  const challengeListRef = useRef([]);
-  const challengeQuoteRef = useRef(null);
-  const challengeBrandRef = useRef(null);
-  const challengeImageRef = useRef(null);
-
-  const solutionsCardsRef = useRef([]);
-  const solutionsHeaderRef = useRef(null);
-  const solutionsSubHeaderRef = useRef(null);
-
-  const frameworkCardsRef = useRef([]);
-  const frameworkHeaderRef = useRef(null);
-
-  const whyChooseSectionRef = useRef(null);
-  const whyChooseHeadingRef = useRef(null);
-  const whyChoosePointsRef = useRef([]);
-  const whyChooseImageRef = useRef(null);
-
-  const industriesCardsRef = useRef([]);
-  const industriesHeaderRef = useRef(null);
-
-  const techCardsRef = useRef([]);
-  const techHeaderRef = useRef(null);
-  const techSubTextRef = useRef(null);
-
-  const resultsCardsRef = useRef([]);
-  const resultsHeaderRef = useRef(null);
-  const resultsSubTextRef = useRef(null);
-
-  const ctaSectionRef = useRef(null);
-  const ctaHeadingRef = useRef(null);
-  const ctaPara1Ref = useRef(null);
-  const ctaPara2Ref = useRef(null);
-  const ctaPara3Ref = useRef(null);
-  const ctaButtonRef = useRef(null);
-
+  // Intersection Observer for scroll animations
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      ScrollTrigger.getAll().forEach(st => st.kill());
-
-      const isMobile = window.innerWidth < 768;
-      const baseDuration = isMobile ? 0.9 : 1.2;
-      const baseY = isMobile ? 30 : 50;
-      const staggerDelay = isMobile ? 0.1 : 0.15;
-      const floatAmount = isMobile ? 4 : 8;
-      const floatDuration = isMobile ? 3 : 2.5;
-
-      // ----- HERO SECTION -----
-      if (heroSectionRef.current) {
-        gsap.set([heroHeadingRef.current, heroSubHeadingRef.current, heroParagraphRef.current, heroImageRef.current], {
-          opacity: 0,
-          y: baseY,
-        });
-        gsap.set(heroImageRef.current, { scale: 0.95 });
-
-        const heroTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: heroSectionRef.current,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        heroTl
-          .to(heroHeadingRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(heroSubHeadingRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.9, ease: "power2.out" }, "-=0.6")
-          .to(heroParagraphRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.9, ease: "power2.out" }, "-=0.5")
-          .to(heroImageRef.current, { opacity: 1, y: 0, scale: 1, duration: baseDuration * 1.2, ease: "back.out(1.2)" }, "-=0.5");
-
-        // Floating hero image
-        gsap.to(heroImageRef.current, {
-          y: -floatAmount,
-          duration: floatDuration,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-          delay: 1.5,
-          scrollTrigger: {
-            trigger: heroSectionRef.current,
-            start: "top 70%",
-            end: "bottom 30%",
-            toggleActions: "play none none reverse",
-          },
-        });
-      }
-
-      // ----- THE ECOMMERCE GROWTH CHALLENGE SECTION -----
-      if (challengeSectionRef.current) {
-        gsap.set([challengeHeadingRef.current, challengeSubHeadingRef.current, challengeQuoteRef.current, challengeBrandRef.current], {
-          opacity: 0,
-          y: baseY,
-        });
-        gsap.set(challengeListRef.current, { opacity: 0, y: 20 });
-        gsap.set(challengeImageRef.current, { opacity: 0, x: 50, scale: 0.95 });
-
-        const challengeTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: challengeSectionRef.current,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        challengeTl
-          .to(challengeHeadingRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(challengeSubHeadingRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.8, ease: "power2.out" }, "-=0.5")
-          .to(challengeListRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "power2.out" }, "-=0.4")
-          .to(challengeImageRef.current, { opacity: 1, x: 0, scale: 1, duration: baseDuration * 1.2, ease: "back.out(1.2)" }, "-=0.8")
-          .to([challengeQuoteRef.current, challengeBrandRef.current], { opacity: 1, y: 0, duration: baseDuration * 0.8, stagger: 0.1, ease: "power2.out" }, "-=0.2");
-
-  
- 
-
-
-
-        // Floating image
-        gsap.to(challengeImageRef.current, {
-          y: -floatAmount,
-          duration: floatDuration,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-          delay: 2,
-          scrollTrigger: {
-            trigger: challengeSectionRef.current,
-            start: "top 70%",
-            end: "bottom 30%",
-            toggleActions: "play none none reverse",
-          },
-        });
-      }
-
-      // ----- SOLUTIONS CARDS (6 cards) -----
-      if (solutionsCardsRef.current.length) {
-        gsap.set([solutionsHeaderRef.current, solutionsSubHeaderRef.current], { opacity: 0, y: baseY });
-        gsap.set(solutionsCardsRef.current, { opacity: 0, y: 50, scale: 0.9 });
-
-        const solTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: solutionsCardsRef.current[0]?.parentElement,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        solTl
-          .to(solutionsHeaderRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(solutionsSubHeaderRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.8, ease: "power2.out" }, "-=0.5")
-          .to(solutionsCardsRef.current, { opacity: 1, y: 0, scale: 1, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "back.out(1.2)" }, "-=0.4");
-
-        solutionsCardsRef.current.forEach((card, i) => {
-          if (card) {
-            gsap.to(card, {
-              y: -floatAmount * 0.6,
-              duration: floatDuration + i * 0.2,
-              repeat: -1,
-              yoyo: true,
-              ease: "sine.inOut",
-              delay: 2 + i * 0.1,
-              scrollTrigger: {
-                trigger: card,
-                start: "top 80%",
-                end: "bottom 30%",
-                toggleActions: "play none none reverse",
-              },
-            });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleSections((prev) => ({
+              ...prev,
+              [entry.target.dataset.section]: true,
+            }));
+          } else {
+            // Reset when out of view for re-animation on scroll up
+            setVisibleSections((prev) => ({
+              ...prev,
+              [entry.target.dataset.section]: false,
+            }));
           }
         });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px", // Adjust trigger point
       }
+    );
 
-      // ----- FRAMEWORK CARDS (4 cards) -----
-      if (frameworkCardsRef.current.length) {
-        gsap.set(frameworkHeaderRef.current, { opacity: 0, y: baseY });
-        gsap.set(frameworkCardsRef.current, { opacity: 0, y: 50, scale: 0.9 });
+    // Observe all sections with data-section attribute
+    document.querySelectorAll("[data-section]").forEach((section) => {
+      observer.observe(section);
+    });
 
-        const fwTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: frameworkCardsRef.current[0]?.parentElement,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        fwTl
-          .to(frameworkHeaderRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(frameworkCardsRef.current, { opacity: 1, y: 0, scale: 1, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "back.out(1.2)" }, "-=0.4");
-
-        frameworkCardsRef.current.forEach((card, i) => {
-          if (card) {
-            gsap.to(card, {
-              y: -floatAmount * 0.6,
-              duration: floatDuration + i * 0.2,
-              repeat: -1,
-              yoyo: true,
-              ease: "sine.inOut",
-              delay: 2 + i * 0.1,
-              scrollTrigger: {
-                trigger: card,
-                start: "top 80%",
-                end: "bottom 30%",
-                toggleActions: "play none none reverse",
-              },
-            });
-          }
-        });
-      }
-
-      // ----- WHY CHOOSE ADKRYOSS SECTION -----
-      if (whyChooseSectionRef.current) {
-        gsap.set([whyChooseHeadingRef.current, whyChooseImageRef.current], { opacity: 0, y: baseY });
-        gsap.set(whyChoosePointsRef.current, { opacity: 0, y: 20 });
-
-        const chooseTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: whyChooseSectionRef.current,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        chooseTl
-          .to(whyChooseHeadingRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(whyChoosePointsRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "power2.out" }, "-=0.5")
-          .to(whyChooseImageRef.current, { opacity: 1, y: 0, duration: baseDuration * 1.2, ease: "back.out(1.2)" }, "-=0.8");
-
-        // Floating image
-        gsap.to(whyChooseImageRef.current, {
-          y: -floatAmount,
-          duration: floatDuration,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-          delay: 2,
-          scrollTrigger: {
-            trigger: whyChooseSectionRef.current,
-            start: "top 70%",
-            end: "bottom 30%",
-            toggleActions: "play none none reverse",
-          },
-        });
-      }
-
-      // ----- INDUSTRIES CARDS (7 cards) -----
-      if (industriesCardsRef.current.length) {
-        gsap.set(industriesHeaderRef.current, { opacity: 0, y: baseY });
-        gsap.set(industriesCardsRef.current, { opacity: 0, y: 50, scale: 0.9 });
-
-        const indTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: industriesCardsRef.current[0]?.parentElement,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        indTl
-          .to(industriesHeaderRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(industriesCardsRef.current, { opacity: 1, y: 0, scale: 1, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "back.out(1.2)" }, "-=0.4");
-
-        industriesCardsRef.current.forEach((card, i) => {
-          if (card) {
-            gsap.to(card, {
-              y: -floatAmount * 0.5,
-              duration: floatDuration + i * 0.2,
-              repeat: -1,
-              yoyo: true,
-              ease: "sine.inOut",
-              delay: 2 + i * 0.1,
-              scrollTrigger: {
-                trigger: card,
-                start: "top 80%",
-                end: "bottom 30%",
-                toggleActions: "play none none reverse",
-              },
-            });
-          }
-        });
-      }
-
-      // ----- TECHNOLOGY PLATFORMS CARDS (6 cards) -----
-      if (techCardsRef.current.length) {
-        gsap.set([techHeaderRef.current, techSubTextRef.current], { opacity: 0, y: baseY });
-        gsap.set(techCardsRef.current, { opacity: 0, y: 50, scale: 0.9 });
-
-        const techTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: techCardsRef.current[0]?.parentElement,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        techTl
-          .to(techHeaderRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(techSubTextRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.8, ease: "power2.out" }, "-=0.5")
-          .to(techCardsRef.current, { opacity: 1, y: 0, scale: 1, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "back.out(1.2)" }, "-=0.4");
-
-        techCardsRef.current.forEach((card, i) => {
-          if (card) {
-            gsap.to(card, {
-              y: -floatAmount * 0.5,
-              duration: floatDuration + i * 0.2,
-              repeat: -1,
-              yoyo: true,
-              ease: "sine.inOut",
-              delay: 2 + i * 0.1,
-              scrollTrigger: {
-                trigger: card,
-                start: "top 80%",
-                end: "bottom 30%",
-                toggleActions: "play none none reverse",
-              },
-            });
-          }
-        });
-      }
-
-      // ----- RESULTS THAT MATTER CARDS (5 cards) -----
-      if (resultsCardsRef.current.length) {
-        gsap.set(resultsHeaderRef.current, { opacity: 0, y: baseY });
-        gsap.set(resultsCardsRef.current, { opacity: 0, y: 50, scale: 0.9 });
-        gsap.set(resultsSubTextRef.current, { opacity: 0, y: 30 });
-
-        const resTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: resultsCardsRef.current[0]?.parentElement,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        resTl
-          .to(resultsHeaderRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(resultsCardsRef.current, { opacity: 1, y: 0, scale: 1, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "back.out(1.2)" }, "-=0.4")
-          .to(resultsSubTextRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" }, "-=0.2");
-
-        resultsCardsRef.current.forEach((card, i) => {
-          if (card) {
-            gsap.to(card, {
-              y: -floatAmount * 0.5,
-              duration: floatDuration + i * 0.2,
-              repeat: -1,
-              yoyo: true,
-              ease: "sine.inOut",
-              delay: 2 + i * 0.1,
-              scrollTrigger: {
-                trigger: card,
-                start: "top 80%",
-                end: "bottom 30%",
-                toggleActions: "play none none reverse",
-              },
-            });
-          }
-        });
-      }
-
-      // ----- CTA SECTION -----
-      if (ctaSectionRef.current) {
-        gsap.set([ctaHeadingRef.current, ctaPara1Ref.current, ctaPara2Ref.current, ctaPara3Ref.current, ctaButtonRef.current], {
-          opacity: 0,
-          y: baseY,
-        });
-
-        const ctaTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ctaSectionRef.current,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        ctaTl
-          .to(ctaHeadingRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to([ctaPara1Ref.current, ctaPara2Ref.current, ctaPara3Ref.current], { opacity: 1, y: 0, duration: baseDuration * 0.8, stagger: 0.1, ease: "power2.out" }, "-=0.5")
-          .to(ctaButtonRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.8, ease: "power2.out" }, "-=0.3");
-      }
-
-      ScrollTrigger.refresh();
-    }, [
-      heroSectionRef,
-      challengeSectionRef,
-      solutionsCardsRef,
-      frameworkCardsRef,
-      whyChooseSectionRef,
-      industriesCardsRef,
-      techCardsRef,
-      resultsCardsRef,
-      ctaSectionRef,
-    ]);
-
-    return () => {
-      ctx.revert();
-      ScrollTrigger.getAll().forEach(st => st.kill());
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
     <>
       {/* HERO SECTION */}
-      {/* <section
-        ref={heroSectionRef}
-        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+      <section
+        data-section="hero"
+        className={`relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden transition-all duration-700 ease-out ${
+          visibleSections.hero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
         style={{
           backgroundImage:
             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
         }}
       >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+        {/* Animated Glow Effects */}
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-float-slower"></div>
+
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
-          <div className="text-left text-white">
-            <h2 ref={heroHeadingRef} className="text-4xl md:text-4xl font-bold leading-tight text-white">
-              Ecommerce Digital Marketing Services
+
+          {/* LEFT CONTENT */}
+          <div className="text-left max-w-[600px] space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+                Ecommerce Digital Marketing Services
+              </span>
             </h2>
-            <h3 ref={heroSubHeadingRef} className="text-2xl md:text-xl font-semibold leading-snug">
+
+            <h3 className="text-xl md:text-2xl font-semibold leading-snug mb-6 text-blue-100 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               Drive Sales. Scale Faster. Dominate Marketplaces.
             </h3>
-            <p ref={heroParagraphRef} className="text-white md:text-md leading-relaxed max-w-[600px]">
+
+            <p className="text-gray-200 text-md leading-relaxed max-w-[600px] animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               The ecommerce landscape is evolving at lightning speed. Competition is fierce, customer journeys are fragmented, and performance marketing costs are rising.
-              <br />
+              <br /><br />
               <span className="font-bold text-white">
                 At Adkryoss managed by Clink Consultancy Services Private Limited
-              </span> we build high-performance ecommerce marketing ecosystems that increase visibility, improve conversion rates, and maximize customer lifetime value. From SEO and paid media to CRO and retention automation — we engineer growth that compounds.
+              </span>{" "}
+              we build high-performance ecommerce marketing ecosystems that increase visibility, improve conversion rates, and maximize customer lifetime value. From SEO and paid media to CRO and retention automation — we engineer growth that compounds.
             </p>
           </div>
-          <div ref={heroImageRef} className="flex justify-center md:justify-end">
-            <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center md:justify-end">
+            <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center animate-float" style={{ animationDelay: "0.4s" }}>
+              {/* Image Glow */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
               <img
                 src={EcommerceImage}
-                alt="Ecommerce Digital Marketing"
+                alt="Ecommerce Digital Marketing Services"
                 loading="lazy"
-                className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+                className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
+                           transform group-hover:-translate-y-2 transition duration-500"
               />
             </div>
           </div>
         </div>
-      </section> */}
-
-<section
-ref={heroSectionRef}
-  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
-  }}
->
-
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
-
-  {/* Animated Glow Effects */}
-  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
-  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
-
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
-
-    {/* LEFT CONTENT */}
-    <div className="text-left opacity-0 animate-[fadeUp_0.8s_ease-out_forwards]">
-
-      <h2 ref={heroHeadingRef} className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
-          Ecommerce Digital Marketing Services
-        </span>
-      </h2>
-
-      <h3 ref={heroSubHeadingRef} className="text-xl md:text-2xl font-semibold leading-snug mb-6 text-blue-100">
-        Drive Sales. Scale Faster. Dominate Marketplaces.
-      </h3>
-
-      <p ref={heroParagraphRef} className="text-gray-200 text-md leading-relaxed max-w-[600px]">
-        The ecommerce landscape is evolving at lightning speed. Competition is fierce, customer journeys are fragmented, and performance marketing costs are rising.
-        <br /><br />
-        <span className="font-bold text-white">
-          At Adkryoss managed by Clink Consultancy Services Private Limited
-        </span>{" "}
-        we build high-performance ecommerce marketing ecosystems that increase visibility, improve conversion rates, and maximize customer lifetime value. From SEO and paid media to CRO and retention automation — we engineer growth that compounds.
-      </p>
-
-    </div>
-
-    {/* RIGHT IMAGE */}
-    <div ref={heroImageRef} className="flex justify-center md:justify-end opacity-0 animate-[fadeUp_1.2s_ease-out_forwards]">
-
-      <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
-
-        {/* Image Glow */}
-        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
-
-        <img
-          src={EcommerceImage}
-          alt="Ecommerce Digital Marketing Services"
-          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
-                     transform group-hover:-translate-y-2 transition duration-500"
-        />
-
-      </div>
-
-    </div>
-
-  </div>
-
-  {/* Custom Animations */}
-  <style>
-    {`
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(40px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes float {
-        0%, 100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(30px);
-        }
-      }
-    `}
-  </style>
-
-</section>
-
+      </section>
 
       {/* THE ECOMMERCE GROWTH CHALLENGE */}
-      <section ref={challengeSectionRef} className="bg-white py-16 sm:py-20 px-4 sm:px-6">
+      <section
+        data-section="challenge"
+        className={`bg-white py-16 sm:py-20 px-4 sm:px-6 transition-all duration-700 ease-out ${
+          visibleSections.challenge ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 ref={challengeHeadingRef} className="text-2xl sm:text-3xl md:text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold text-gray-900 mb-8 animate-fade-in-right">
               The Ecommerce Growth Challenge
             </h2>
-            <p ref={challengeSubHeadingRef} className="text-gray-600 mb-8 text-base sm:text-lg">
+            <p className="text-gray-600 mb-8 text-base sm:text-lg animate-fade-in-right" style={{ animationDelay: "0.1s" }}>
               Ecommerce brands today struggle with:
             </p>
             <div className="space-y-6">
@@ -584,7 +145,7 @@ ref={heroSectionRef}
                 { text: "Poor repeat purchase rates", icon: <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" /> },
                 { text: "Ineffective attribution tracking", icon: <path d="M4 20V10M10 20V4M16 20v-6M22 20V14" /> },
               ].map((item, idx) => (
-                <div key={idx} ref={el => (challengeListRef.current[idx] = el)} className="flex items-start gap-4">
+                <div key={idx} className="flex items-start gap-4 animate-fade-in-right" style={{ animationDelay: `${0.2 + idx * 0.1}s` }}>
                   <svg className="w-6 h-6 text-red-600 mt-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     {item.icon}
                   </svg>
@@ -593,17 +154,17 @@ ref={heroSectionRef}
               ))}
             </div>
             <div className="mt-10 space-y-6">
-              <p ref={challengeQuoteRef} className="text-lg font-semibold text-gray-900">
-                Random campaigns don’t scale ecommerce businesses. Data-driven ecosystems do.
+              <p className="text-lg font-semibold text-gray-900 animate-fade-in-right" style={{ animationDelay: "0.8s" }}>
+                Random campaigns don't scale ecommerce businesses. Data-driven ecosystems do.
               </p>
-              <p ref={challengeBrandRef} className="text-gray-700 leading-relaxed">
-                That’s where <span className="font-semibold text-gray-900">
+              <p className="text-gray-700 leading-relaxed animate-fade-in-right" style={{ animationDelay: "0.9s" }}>
+                That's where <span className="font-semibold text-gray-900">
                   Adkryoss managed by Clink Consultancy Services Private Limited
                 </span> steps in — combining strategy, creativity, automation, and performance analytics into one integrated growth engine.
               </p>
             </div>
           </div>
-          <div ref={challengeImageRef} className="relative">
+          <div className="relative animate-float" style={{ animationDelay: "0.3s" }}>
             <img
               src={TheEcommerceGrowthChallengeImage}
               alt="Ecommerce Growth Strategy"
@@ -615,13 +176,18 @@ ref={heroSectionRef}
       </section>
 
       {/* OUR ECOMMERCE DIGITAL MARKETING SOLUTIONS */}
-      <section className="bg-gray-50 py-16 sm:py-20 px-4 sm:px-6">
+      <section
+        data-section="solutions"
+        className={`bg-gray-50 py-16 sm:py-20 px-4 sm:px-6 transition-all duration-700 ease-out ${
+          visibleSections.solutions ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <h2 ref={solutionsHeaderRef} className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in-up">
               Our Ecommerce Digital Marketing Solutions
             </h2>
-            <p ref={solutionsSubHeaderRef} className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
+            <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               We create performance-led strategies tailored for D2C brands, marketplaces, omnichannel retailers, and global ecommerce businesses.
             </p>
           </div>
@@ -659,7 +225,7 @@ ref={heroSectionRef}
                 title: "Ecommerce Content & Creative Strategy",
                 desc1: "Modern ecommerce thrives on storytelling.",
                 items: ["High-converting product descriptions", "Performance ad creatives", "Video commerce strategy", "Influencer & UGC campaigns", "SEO-optimized blogs"],
-                desc2: "Content is not just creative — it’s revenue-driven.",
+                desc2: "Content is not just creative — it's revenue-driven.",
                 icon: <><path d="M4 4h16v16H4z" /><path d="M8 8h8M8 12h6M8 16h4" /></>,
               },
               {
@@ -672,8 +238,8 @@ ref={heroSectionRef}
             ].map((item, idx) => (
               <div
                 key={idx}
-                ref={el => (solutionsCardsRef.current[idx] = el)}
-                className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300"
+                className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
               >
                 <svg className="w-10 h-10 text-blue-700 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   {item.icon}
@@ -691,10 +257,15 @@ ref={heroSectionRef}
       </section>
 
       {/* OUR ECOMMERCE GROWTH FRAMEWORK */}
-      <section className="bg-gray-50 py-16 sm:py-20 px-4 sm:px-6">
+      <section
+        data-section="framework"
+        className={`bg-gray-50 py-16 sm:py-20 px-4 sm:px-6 transition-all duration-700 ease-out ${
+          visibleSections.framework ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
-            <h2 ref={frameworkHeaderRef} className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in-up">
               Our Ecommerce Growth Framework
             </h2>
           </div>
@@ -707,8 +278,8 @@ ref={heroSectionRef}
             ].map((item, idx) => (
               <div
                 key={idx}
-                ref={el => (frameworkCardsRef.current[idx] = el)}
-                className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300"
+                className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
               >
                 <svg className="w-10 h-10 text-blue-600 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   {item.icon}
@@ -722,10 +293,15 @@ ref={heroSectionRef}
       </section>
 
       {/* WHY CHOOSE ADKRYOSS */}
-      <section ref={whyChooseSectionRef} className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
+      <section
+        data-section="why-choose"
+        className={`py-16 sm:py-20 px-4 sm:px-6 bg-gray-50 transition-all duration-700 ease-out ${
+          visibleSections["why-choose"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 ref={whyChooseHeadingRef} className="text-3xl sm:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 animate-fade-in-up">
               Why Choose Adkryoss?
             </h2>
           </div>
@@ -739,15 +315,15 @@ ref={heroSectionRef}
                 "Omnichannel marketing expertise",
                 "Transparent reporting dashboards",
               ].map((point, idx) => (
-                <p key={idx} ref={el => (whyChoosePointsRef.current[idx] = el)} className="text-gray-700">
+                <p key={idx} className="text-gray-700 animate-fade-in-left" style={{ animationDelay: `${0.1 + idx * 0.1}s` }}>
                   ✔ {point}
                 </p>
               ))}
-              <p className="text-gray-700 mt-4">
+              <p className="text-gray-700 mt-4 animate-fade-in-left" style={{ animationDelay: "0.7s" }}>
                 Adkryoss managed by Clink Consultancy Services Private Limited does not believe in isolated campaigns. We create integrated growth systems that align acquisition, conversion, and retention.
               </p>
             </div>
-            <div ref={whyChooseImageRef} className="lg:w-1/2">
+            <div className="lg:w-1/2 animate-float" style={{ animationDelay: "0.3s" }}>
               <img
                 src={WhyChooseAdkryossImage}
                 alt="Ecommerce growth illustration"
@@ -760,9 +336,14 @@ ref={heroSectionRef}
       </section>
 
       {/* INDUSTRIES WE SERVE IN ECOMMERCE */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
+      <section
+        data-section="industries"
+        className={`py-16 sm:py-20 px-4 sm:px-6 bg-white transition-all duration-700 ease-out ${
+          visibleSections.industries ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-7xl mx-auto text-center">
-          <h2 ref={industriesHeaderRef} className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 animate-fade-in-up">
             Industries We Serve in Ecommerce
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -777,8 +358,8 @@ ref={heroSectionRef}
             ].map((item, idx) => (
               <div
                 key={idx}
-                ref={el => (industriesCardsRef.current[idx] = el)}
-                className="flex flex-col items-center bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition"
+                className="flex flex-col items-center bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
               >
                 <img src={item.img} alt={item.title} className="mb-4" loading="lazy" />
                 <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
@@ -789,9 +370,14 @@ ref={heroSectionRef}
       </section>
 
       {/* TECHNOLOGY PLATFORMS WE WORK WITH */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
+      <section
+        data-section="technology"
+        className={`py-16 sm:py-20 px-4 sm:px-6 bg-gray-50 transition-all duration-700 ease-out ${
+          visibleSections.technology ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-7xl mx-auto text-center">
-          <h2 ref={techHeaderRef} className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 animate-fade-in-up">
             Technology Platforms We Work With
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -805,24 +391,29 @@ ref={heroSectionRef}
             ].map((item, idx) => (
               <div
                 key={idx}
-                ref={el => (techCardsRef.current[idx] = el)}
-                className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition h-50"
+                className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition h-50 animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
               >
                 <img src={item.img} alt={item.title} className="mb-4 h-30" loading="lazy" />
                 <h3 className="text-xl font-bold text-gray-800">{item.title}</h3>
               </div>
             ))}
           </div>
-          <p ref={techSubTextRef} className="mt-12 text-gray-700 text-lg max-w-3xl mx-auto">
+          <p className="mt-12 text-gray-700 text-lg max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
             Our team adapts strategies based on platform architecture and algorithm updates.
           </p>
         </div>
       </section>
 
       {/* RESULTS THAT MATTER */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50 overflow-hidden">
+      <section
+        data-section="results"
+        className={`py-16 sm:py-20 px-4 sm:px-6 bg-gray-50 overflow-hidden transition-all duration-700 ease-out ${
+          visibleSections.results ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-7xl mx-auto text-center">
-          <h2 ref={resultsHeaderRef} className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 animate-fade-in-up">
             Results That Matter
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -835,44 +426,172 @@ ref={heroSectionRef}
             ].map((item, idx) => (
               <div
                 key={idx}
-                ref={el => (resultsCardsRef.current[idx] = el)}
-                className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+                className="flex flex-col items-center bg-white p-6 rounded-xl shadow hover:shadow-lg transition animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
               >
                 <img src={item.img} alt={item.title} className="mb-4" loading="lazy" />
                 <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
               </div>
             ))}
           </div>
-          <p ref={resultsSubTextRef} className="mt-12 text-gray-700 text-lg max-w-3xl mx-auto">
-            Growth isn’t about short-term spikes — it’s about sustainable scalability.
+          <p className="mt-12 text-gray-700 text-lg max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
+            Growth isn't about short-term spikes — it's about sustainable scalability.
           </p>
         </div>
       </section>
 
       {/* CTA SECTION */}
-      <section ref={ctaSectionRef} className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+      <section
+        data-section="cta"
+        className={`py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white transition-all duration-700 ease-out ${
+          visibleSections.cta ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
-          <h2 ref={ctaHeadingRef} className="text-4xl sm:text-5xl font-bold mb-8 text-white">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white animate-fade-in-up">
             Ready to Scale Your Ecommerce Business?
           </h2>
-          <p ref={ctaPara1Ref} className="text-lg sm:text-xl mb-6 text-white">
-            If you want measurable growth, stronger brand positioning, and consistent revenue acceleration, it’s time to work with experts who understand the modern ecommerce ecosystem.
+          <p className="text-lg sm:text-xl mb-6 text-white animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            If you want measurable growth, stronger brand positioning, and consistent revenue acceleration, it's time to work with experts who understand the modern ecommerce ecosystem.
           </p>
-          <p ref={ctaPara2Ref} className="text-lg sm:text-xl mb-6 text-white font-bold">
+          <p className="text-lg sm:text-xl mb-6 text-white font-bold animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             Partner with Adkryoss managed by Clink Consultancy Services Private Limited and build a future-ready ecommerce growth engine.
           </p>
-          <p ref={ctaPara3Ref} className="text-lg sm:text-xl mb-10 font-medium text-white">
-            Let’s transform clicks into customers — and customers into loyal advocates.
+          <p className="text-lg sm:text-xl mb-10 font-medium text-white animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            Let's transform clicks into customers — and customers into loyal advocates.
           </p>
           <button
-            ref={ctaButtonRef}
             onClick={() => navigate("/contact?service=ecommerce")}
-            className="inline-block bg-white text-blue-700 font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition"
+            className="inline-block bg-white text-blue-700 font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition animate-fade-in-up"
+            style={{ animationDelay: "0.4s" }}
           >
             Explore Opportunities
           </button>
         </div>
       </section>
+
+      {/* Add animation styles */}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes fadeInRight {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes scaleIn {
+          from {
+            opacity: 0;
+            transform: scale(0.9);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+
+        @keyframes float-slow {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(30px);
+          }
+        }
+
+        @keyframes float-slower {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(40px);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fadeInUp 0.6s ease-out forwards;
+          opacity: 0;
+        }
+
+        .animate-fade-in-left {
+          animation: fadeInLeft 0.6s ease-out forwards;
+          opacity: 0;
+        }
+
+        .animate-fade-in-right {
+          animation: fadeInRight 0.6s ease-out forwards;
+          opacity: 0;
+        }
+
+        .animate-fade-in {
+          animation: fadeIn 0.4s ease-out forwards;
+        }
+
+        .animate-scale-in {
+          animation: scaleIn 0.4s ease-out forwards;
+        }
+
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-float-slow {
+          animation: float-slow 8s ease-in-out infinite;
+        }
+
+        .animate-float-slower {
+          animation: float-slower 10s ease-in-out infinite;
+        }
+
+        /* Ensure animations play on scroll up by re-triggering */
+        [data-section] {
+          will-change: transform, opacity;
+        }
+      `}</style>
     </>
   );
 };

@@ -1,547 +1,130 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import B2BImage from "../../assets/B2B.jpeg";
 import B2BMarketingIsDifferentImage from "../../assets/B2BMarketingIsDifferent.png";
 import WhyB2BBrandsChooseUsImage from "../../assets/WhyB2BBrandsChooseUs.png";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const B2B = () => {
   const navigate = useNavigate();
+  const [visibleSections, setVisibleSections] = useState({});
 
-
-  // ========== REFS FOR ALL SECTIONS ==========
-  const heroSectionRef = useRef(null);
-  const heroHeadingRef = useRef(null);
-  const heroSubHeadingRef = useRef(null);
-  const heroParagraphRef = useRef(null);
-  const heroImageRef = useRef(null);
-
-  const diffSectionRef = useRef(null);
-  const diffHeadingRef = useRef(null);
-  const diffLine1Ref = useRef(null);
-  const diffLine2Ref = useRef(null);
-  const diffLine3Ref = useRef(null);
-  const diffLine4Ref = useRef(null);
-  const diffPointsRef = useRef([]);
-  const diffImageRef = useRef(null);
-  const diffClosingRef = useRef(null);
-
-  const frameworkCardsRef = useRef([]);
-  const frameworkHeaderRef = useRef(null);
-
-  const servicesCardsRef = useRef([]);
-  const servicesHeaderRef = useRef(null);
-
-  const industriesCardsRef = useRef([]);
-  const industriesHeaderRef = useRef(null);
-  const industriesStatementRef = useRef(null);
-
-  const whyChooseSectionRef = useRef(null);
-  const whyChooseHeadingRef = useRef(null);
-  const whyChooseListRef = useRef([]);
-  const whyChooseImageRef = useRef(null);
-  const whyChooseClosingRef = useRef(null);
-
-  const techCardsRef = useRef([]);
-  const techHeaderRef = useRef(null);
-  const techParagraphRef = useRef(null);
-
-  const ctaSectionRef = useRef(null);
-  const ctaHeadingRef = useRef(null);
-  const ctaLine1Ref = useRef(null);
-  const ctaLine2Ref = useRef(null);
-  const ctaLine3Ref = useRef(null);
-  const ctaBrandRef = useRef(null);
-  const ctaButtonRef = useRef(null);
-  const ctaFinalRef = useRef(null);
-
+  // Intersection Observer for scroll animations
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      ScrollTrigger.getAll().forEach(st => st.kill());
-
-      const isMobile = window.innerWidth < 768;
-      const baseDuration = isMobile ? 0.9 : 1.2;
-      const baseY = isMobile ? 30 : 50;
-      const staggerDelay = isMobile ? 0.1 : 0.15;
-      const floatAmount = isMobile ? 4 : 8;
-      const floatDuration = isMobile ? 3 : 2.5;
-
-      // ----- HERO SECTION -----
-      if (heroSectionRef.current) {
-        gsap.set([heroHeadingRef.current, heroSubHeadingRef.current, heroParagraphRef.current, heroImageRef.current], {
-          opacity: 0,
-          y: baseY,
-        });
-        gsap.set(heroImageRef.current, { scale: 0.95 });
-
-        const heroTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: heroSectionRef.current,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        heroTl
-          .to(heroHeadingRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(heroSubHeadingRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.9, ease: "power2.out" }, "-=0.6")
-          .to(heroParagraphRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.9, ease: "power2.out" }, "-=0.5")
-          .to(heroImageRef.current, { opacity: 1, y: 0, scale: 1, duration: baseDuration * 1.2, ease: "back.out(1.2)" }, "-=0.5");
-
-        // Floating hero image
-        gsap.to(heroImageRef.current, {
-          y: -floatAmount,
-          duration: floatDuration,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-          delay: 1.5,
-          scrollTrigger: {
-            trigger: heroSectionRef.current,
-            start: "top 70%",
-            end: "bottom 30%",
-            toggleActions: "play none none reverse",
-          },
-        });
-      }
-
-      // ----- B2B MARKETING IS DIFFERENT SECTION -----
-      if (diffSectionRef.current) {
-        gsap.set([diffHeadingRef.current, diffLine1Ref.current, diffLine2Ref.current, diffLine3Ref.current, diffLine4Ref.current, diffClosingRef.current], {
-          opacity: 0,
-          y: baseY,
-        });
-        gsap.set(diffPointsRef.current, { opacity: 0, y: 20 });
-        gsap.set(diffImageRef.current, { opacity: 0, x: 50, scale: 0.95 });
-
-        const diffTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: diffSectionRef.current,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        diffTl
-          .to(diffHeadingRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to([diffLine1Ref.current, diffLine2Ref.current, diffLine3Ref.current, diffLine4Ref.current], { opacity: 1, y: 0, duration: baseDuration * 0.8, stagger: 0.1, ease: "power2.out" }, "-=0.5")
-          .to(diffPointsRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "power2.out" }, "-=0.4")
-          .to(diffImageRef.current, { opacity: 1, x: 0, scale: 1, duration: baseDuration * 1.2, ease: "back.out(1.2)" }, "-=0.8")
-          .to(diffClosingRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" }, "-=0.2");
-
-        // Floating image
-        gsap.to(diffImageRef.current, {
-          y: -floatAmount,
-          duration: floatDuration,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-          delay: 2,
-          scrollTrigger: {
-            trigger: diffSectionRef.current,
-            start: "top 70%",
-            end: "bottom 30%",
-            toggleActions: "play none none reverse",
-          },
-        });
-      }
-
-      // ----- FRAMEWORK CARDS (5 cards) -----
-      if (frameworkCardsRef.current.length) {
-        gsap.set(frameworkHeaderRef.current, { opacity: 0, y: baseY });
-        gsap.set(frameworkCardsRef.current, { opacity: 0, y: 50, scale: 0.9 });
-
-        const fwTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: frameworkCardsRef.current[0]?.parentElement,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        fwTl
-          .to(frameworkHeaderRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(frameworkCardsRef.current, { opacity: 1, y: 0, scale: 1, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "back.out(1.2)" }, "-=0.4");
-
-   
-   
-
-
-
-
-
-        // Floating cards
-        frameworkCardsRef.current.forEach((card, i) => {
-          if (card) {
-            gsap.to(card, {
-              y: -floatAmount * 0.6,
-              duration: floatDuration + i * 0.2,
-              repeat: -1,
-              yoyo: true,
-              ease: "sine.inOut",
-              delay: 2 + i * 0.1,
-              scrollTrigger: {
-                trigger: card,
-                start: "top 80%",
-                end: "bottom 30%",
-                toggleActions: "play none none reverse",
-              },
-            });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleSections((prev) => ({
+              ...prev,
+              [entry.target.dataset.section]: true,
+            }));
+          } else {
+            // Reset when out of view for re-animation on scroll up
+            setVisibleSections((prev) => ({
+              ...prev,
+              [entry.target.dataset.section]: false,
+            }));
           }
         });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px", // Adjust trigger point
       }
+    );
 
-      // ----- SERVICES CARDS (6 cards) -----
-      if (servicesCardsRef.current.length) {
-        gsap.set(servicesHeaderRef.current, { opacity: 0, y: baseY });
-        gsap.set(servicesCardsRef.current, { opacity: 0, y: 50, scale: 0.9 });
+    // Observe all sections with data-section attribute
+    document.querySelectorAll("[data-section]").forEach((section) => {
+      observer.observe(section);
+    });
 
-        const servTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: servicesCardsRef.current[0]?.parentElement,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        servTl
-          .to(servicesHeaderRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(servicesCardsRef.current, { opacity: 1, y: 0, scale: 1, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "back.out(1.2)" }, "-=0.4");
-
-
-
-
-
-
-        // Floating cards
-        servicesCardsRef.current.forEach((card, i) => {
-          if (card) {
-            gsap.to(card, {
-              y: -floatAmount * 0.6,
-              duration: floatDuration + i * 0.2,
-              repeat: -1,
-              yoyo: true,
-              ease: "sine.inOut",
-              delay: 2 + i * 0.1,
-              scrollTrigger: {
-                trigger: card,
-                start: "top 80%",
-                end: "bottom 30%",
-                toggleActions: "play none none reverse",
-              },
-            });
-          }
-        });
-      }
-
-      // ----- INDUSTRIES CARDS (6 cards) -----
-      if (industriesCardsRef.current.length) {
-        gsap.set(industriesHeaderRef.current, { opacity: 0, y: baseY });
-        gsap.set(industriesCardsRef.current, { opacity: 0, y: 50, scale: 0.9 });
-        gsap.set(industriesStatementRef.current, { opacity: 0, y: 30 });
-
-        const indTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: industriesCardsRef.current[0]?.parentElement,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        indTl
-          .to(industriesHeaderRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(industriesCardsRef.current, { opacity: 1, y: 0, scale: 1, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "back.out(1.2)" }, "-=0.4")
-          .to(industriesStatementRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" }, "-=0.2");
-
-        industriesCardsRef.current.forEach((card, i) => {
-          if (card) {
-            gsap.to(card, {
-              y: -floatAmount * 0.5,
-              duration: floatDuration + i * 0.2,
-              repeat: -1,
-              yoyo: true,
-              ease: "sine.inOut",
-              delay: 2 + i * 0.1,
-              scrollTrigger: {
-                trigger: card,
-                start: "top 80%",
-                end: "bottom 30%",
-                toggleActions: "play none none reverse",
-              },
-            });
-          }
-        });
-      }
-
-      // ----- WHY CHOOSE US SECTION -----
-      if (whyChooseSectionRef.current) {
-        gsap.set([whyChooseHeadingRef.current, whyChooseClosingRef.current], { opacity: 0, y: baseY });
-        gsap.set(whyChooseListRef.current, { opacity: 0, y: 20 });
-        gsap.set(whyChooseImageRef.current, { opacity: 0, x: 50, scale: 0.95 });
-
-        const chooseTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: whyChooseSectionRef.current,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        chooseTl
-          .to(whyChooseHeadingRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(whyChooseListRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "power2.out" }, "-=0.5")
-          .to(whyChooseImageRef.current, { opacity: 1, x: 0, scale: 1, duration: baseDuration * 1.2, ease: "back.out(1.2)" }, "-=0.8")
-          .to(whyChooseClosingRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" }, "-=0.2");
-
-        // Floating image
-        gsap.to(whyChooseImageRef.current, {
-          y: -floatAmount,
-          duration: floatDuration,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-          delay: 2,
-          scrollTrigger: {
-            trigger: whyChooseSectionRef.current,
-            start: "top 70%",
-            end: "bottom 30%",
-            toggleActions: "play none none reverse",
-          },
-        });
-      }
-
-      // ----- TECHNOLOGY CARDS (5 cards) -----
-      if (techCardsRef.current.length) {
-        gsap.set([techHeaderRef.current, techParagraphRef.current], { opacity: 0, y: baseY });
-        gsap.set(techCardsRef.current, { opacity: 0, y: 50, scale: 0.9 });
-
-        const techTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: techCardsRef.current[0]?.parentElement,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        techTl
-          .to(techHeaderRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to(techParagraphRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.8, ease: "power2.out" }, "-=0.5")
-          .to(techCardsRef.current, { opacity: 1, y: 0, scale: 1, duration: baseDuration * 0.9, stagger: staggerDelay, ease: "back.out(1.2)" }, "-=0.4");
-
-        techCardsRef.current.forEach((card, i) => {
-          if (card) {
-            gsap.to(card, {
-              y: -floatAmount * 0.5,
-              duration: floatDuration + i * 0.2,
-              repeat: -1,
-              yoyo: true,
-              ease: "sine.inOut",
-              delay: 2 + i * 0.1,
-              scrollTrigger: {
-                trigger: card,
-                start: "top 80%",
-                end: "bottom 30%",
-                toggleActions: "play none none reverse",
-              },
-            });
-          }
-        });
-      }
-
-      // ----- CTA SECTION -----
-      if (ctaSectionRef.current) {
-        gsap.set([ctaHeadingRef.current, ctaLine1Ref.current, ctaLine2Ref.current, ctaLine3Ref.current, ctaBrandRef.current, ctaButtonRef.current, ctaFinalRef.current], {
-          opacity: 0,
-          y: baseY,
-        });
-
-        const ctaTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ctaSectionRef.current,
-            start: "top 80%",
-            end: "bottom 30%",
-            toggleActions: "play reverse play reverse",
-          },
-        });
-        ctaTl
-          .to(ctaHeadingRef.current, { opacity: 1, y: 0, duration: baseDuration, ease: "power2.out" })
-          .to([ctaLine1Ref.current, ctaLine2Ref.current, ctaLine3Ref.current], { opacity: 1, y: 0, duration: baseDuration * 0.8, stagger: 0.1, ease: "power2.out" }, "-=0.5")
-          .to(ctaBrandRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.9, ease: "power2.out" }, "-=0.4")
-          .to(ctaButtonRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.9, ease: "power2.out" }, "-=0.3")
-          .to(ctaFinalRef.current, { opacity: 1, y: 0, duration: baseDuration * 0.8, ease: "power2.out" }, "-=0.2");
-      }
-
-      ScrollTrigger.refresh();
-    }, [
-      heroSectionRef,
-      diffSectionRef,
-      frameworkCardsRef,
-      servicesCardsRef,
-      industriesCardsRef,
-      whyChooseSectionRef,
-      techCardsRef,
-      ctaSectionRef,
-    ]);
-
-    return () => {
-      ctx.revert();
-      ScrollTrigger.getAll().forEach(st => st.kill());
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
     <>
       {/* HERO SECTION */}
-      {/* <section
-        ref={heroSectionRef}
-        className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
+      <section
+        data-section="hero"
+        className={`relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden transition-all duration-700 ease-out ${
+          visibleSections.hero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
         style={{
           backgroundImage:
             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
         }}
       >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+
+        {/* Animated Glow Effects */}
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-float-slower"></div>
+
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
-          <div className="text-left text-white">
-            <h2 ref={heroHeadingRef} className="text-4xl md:text-4xl font-bold leading-tight text-white">
-              B2B Digital Marketing Services
+
+          {/* LEFT CONTENT */}
+          <div className="text-left max-w-[600px] space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+                B2B Digital Marketing Services
+              </span>
             </h2>
-            <h3 ref={heroSubHeadingRef} className="text-2xl md:text-xl font-semibold leading-snug">
+
+            <h3 className="text-xl md:text-2xl font-semibold leading-snug mb-6 text-blue-100 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               Growth That Converts Conversations Into Contracts
             </h3>
-            <p ref={heroParagraphRef} className="text-white md:text-md leading-relaxed max-w-[600px]">
+
+            <p className="text-gray-200 text-md leading-relaxed max-w-[600px] animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               In B2B, decisions are not emotional — they are strategic, data-driven, and value-focused. Your buyers are decision-makers, procurement heads, CXOs, and business influencers who demand proof before partnership.
-              <br />
+              <br /><br />
               <span className="font-bold text-white">
                 Adkryoss managed by Clink Consultancy Services Private Limited
-              </span> builds intelligent B2B marketing ecosystems that generate qualified leads, shorten sales cycles, and drive measurable revenue growth.
+              </span>{" "}
+              builds intelligent B2B marketing ecosystems that generate qualified leads, shorten sales cycles, and drive measurable revenue growth.
             </p>
           </div>
-          <div ref={heroImageRef} className="flex justify-center md:justify-end">
-            <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center">
+
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center md:justify-end">
+            <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center animate-float" style={{ animationDelay: "0.4s" }}>
+              {/* Image Glow */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
               <img
                 src={B2BImage}
-                alt="B2B Digital Marketing"
+                alt="B2B Digital Marketing Services"
                 loading="lazy"
-                className="max-w-full max-h-full object-contain rounded-xl shadow-lg"
+                className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
+                           transform group-hover:-translate-y-2 transition duration-500"
               />
             </div>
           </div>
         </div>
-      </section> */}
-
-
-<section
- ref={heroSectionRef}
-  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
-  }}
->
-
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
-
-  {/* Animated Glow Effects */}
-  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
-  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
-
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
-
-    {/* LEFT CONTENT */}
-    <div className="text-left opacity-0 animate-[fadeUp_0.8s_ease-out_forwards]">
-
-      <h2 ref={heroHeadingRef} className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
-          B2B Digital Marketing Services
-        </span>
-      </h2>
-
-      <h3 ref={heroSubHeadingRef} className="text-xl md:text-2xl font-semibold leading-snug mb-6 text-blue-100">
-        Growth That Converts Conversations Into Contracts
-      </h3>
-
-      <p ref={heroParagraphRef} className="text-gray-200 text-md leading-relaxed max-w-[600px]">
-        In B2B, decisions are not emotional — they are strategic, data-driven, and value-focused. Your buyers are decision-makers, procurement heads, CXOs, and business influencers who demand proof before partnership.
-        <br /><br />
-        <span className="font-bold text-white">
-          Adkryoss managed by Clink Consultancy Services Private Limited
-        </span>{" "}
-        builds intelligent B2B marketing ecosystems that generate qualified leads, shorten sales cycles, and drive measurable revenue growth.
-      </p>
-
-    </div>
-
-    {/* RIGHT IMAGE */}
-    <div ref={heroImageRef} className="flex justify-center md:justify-end opacity-0 animate-[fadeUp_1.2s_ease-out_forwards]">
-
-      <div className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
-
-        {/* Image Glow */}
-        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
-
-        <img
-          src={B2BImage}
-          alt="B2B Digital Marketing Services"
-          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
-                     transform group-hover:-translate-y-2 transition duration-500"
-        />
-
-      </div>
-
-    </div>
-
-  </div>
-
-  {/* Custom Animations */}
-  <style>
-    {`
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(40px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes float {
-        0%, 100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(30px);
-        }
-      }
-    `}
-  </style>
-
-</section>
-
-
+      </section>
 
       {/* B2B MARKETING IS DIFFERENT SECTION */}
-      <section ref={diffSectionRef} className="bg-gray-50 py-16 sm:py-20 px-4 sm:px-6">
+      <section
+        data-section="different"
+        className={`bg-gray-50 py-16 sm:py-20 px-4 sm:px-6 transition-all duration-700 ease-out ${
+          visibleSections.different ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-4xl mx-auto mb-14 space-y-6">
-            <h2 ref={diffHeadingRef} className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 animate-fade-in-up">
               B2B Marketing Is Different. Your Strategy Should Be Too.
             </h2>
-            <p ref={diffLine1Ref} className="text-gray-800 text-lg sm:text-xl font-medium">
-              B2B marketing is not about impressions — it’s about influence.
+            <p className="text-gray-800 text-lg sm:text-xl font-medium animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+              B2B marketing is not about impressions — it's about influence.
             </p>
-            <p ref={diffLine2Ref} className="text-gray-800 text-lg sm:text-xl font-medium">
-              It’s not about traffic — it’s about pipeline.
+            <p className="text-gray-800 text-lg sm:text-xl font-medium animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+              It's not about traffic — it's about pipeline.
             </p>
-            <p ref={diffLine3Ref} className="text-gray-800 text-lg sm:text-xl font-medium">
-              It’s not about followers — it’s about long-term business relationships.
+            <p className="text-gray-800 text-lg sm:text-xl font-medium animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              It's not about followers — it's about long-term business relationships.
             </p>
-            <p ref={diffLine4Ref} className="text-gray-700 text-base sm:text-lg leading-relaxed pt-4">
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed pt-4 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
               At Adkryoss managed by Clink Consultancy Services Private Limited, we design performance-led B2B frameworks powered by:
             </p>
           </div>
@@ -557,7 +140,7 @@ const B2B = () => {
                   "Marketing automation workflows",
                   "CRM-integrated lead nurturing",
                 ].map((point, idx) => (
-                  <li key={idx} ref={el => (diffPointsRef.current[idx] = el)} className="flex items-start gap-3">
+                  <li key={idx} className="flex items-start gap-3 animate-fade-in-left" style={{ animationDelay: `${0.3 + idx * 0.1}s` }}>
                     <svg
                       className="w-6 h-6 text-blue-700 mt-1 flex-shrink-0"
                       fill="none"
@@ -572,7 +155,7 @@ const B2B = () => {
                 ))}
               </ul>
             </div>
-            <div ref={diffImageRef} className="flex justify-center">
+            <div className="flex justify-center animate-float" style={{ animationDelay: "1s" }}>
               <img
                 src={B2BMarketingIsDifferentImage}
                 alt="B2B Marketing"
@@ -581,7 +164,7 @@ const B2B = () => {
               />
             </div>
           </div>
-          <div ref={diffClosingRef} className="text-center mt-16 max-w-4xl mx-auto">
+          <div className="text-center mt-16 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: "1.2s" }}>
             <p className="text-gray-900 text-base sm:text-lg leading-relaxed font-medium">
               We align marketing with sales to ensure every campaign contributes to revenue — not just visibility.
             </p>
@@ -590,10 +173,15 @@ const B2B = () => {
       </section>
 
       {/* OUR B2B DIGITAL MARKETING FRAMEWORK */}
-      <section className="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
+      <section
+        data-section="framework"
+        className={`bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden transition-all duration-700 ease-out ${
+          visibleSections.framework ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-14">
-            <h2 ref={frameworkHeaderRef} className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900 animate-fade-in-up">
               Our B2B Digital Marketing Framework
             </h2>
           </div>
@@ -627,8 +215,8 @@ const B2B = () => {
             ].map((item, idx) => (
               <div
                 key={idx}
-                ref={el => (frameworkCardsRef.current[idx] = el)}
-                className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300"
+                className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
               >
                 <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   {item.icon}
@@ -646,10 +234,15 @@ const B2B = () => {
       </section>
 
       {/* OUR CORE B2B DIGITAL MARKETING SERVICES */}
-      <section className="bg-gray-50 py-16 sm:py-20 px-4 sm:px-6">
+      <section
+        data-section="services"
+        className={`bg-gray-50 py-16 sm:py-20 px-4 sm:px-6 transition-all duration-700 ease-out ${
+          visibleSections.services ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <h2 ref={servicesHeaderRef} className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 animate-fade-in-up">
               Our Core B2B Digital Marketing Services
             </h2>
           </div>
@@ -688,8 +281,8 @@ const B2B = () => {
             ].map((item, idx) => (
               <div
                 key={idx}
-                ref={el => (servicesCardsRef.current[idx] = el)}
-                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300"
+                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
               >
                 <svg className="w-10 h-10 text-blue-700 mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   {item.icon}
@@ -703,10 +296,15 @@ const B2B = () => {
       </section>
 
       {/* INDUSTRIES WE EMPOWER IN B2B */}
-      <section className="bg-white py-16 sm:py-20 px-4 sm:px-6">
+      <section
+        data-section="industries"
+        className={`bg-white py-16 sm:py-20 px-4 sm:px-6 transition-all duration-700 ease-out ${
+          visibleSections.industries ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <h2 ref={industriesHeaderRef} className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 animate-fade-in-up">
               Industries We Empower in B2B
             </h2>
           </div>
@@ -721,8 +319,8 @@ const B2B = () => {
             ].map((item, idx) => (
               <div
                 key={idx}
-                ref={el => (industriesCardsRef.current[idx] = el)}
-                className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 text-center"
+                className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 text-center animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
               >
                 <svg className="w-10 h-10 text-blue-700 mx-auto mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   {item.icon}
@@ -731,21 +329,26 @@ const B2B = () => {
               </div>
             ))}
           </div>
-          <div ref={industriesStatementRef} className="mt-16 text-center max-w-3xl mx-auto">
+          <div className="mt-16 text-center max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
               <span className="font-semibold text-gray-900">
                 Adkryoss managed by Clink Consultancy Services Private Limited
-              </span> creates customized B2B strategies tailored to each industry’s buying behavior and competitive landscape.
+              </span> creates customized B2B strategies tailored to each industry's buying behavior and competitive landscape.
             </p>
           </div>
         </div>
       </section>
 
       {/* WHY B2B BRANDS CHOOSE US */}
-      <section ref={whyChooseSectionRef} className="bg-gray-50 py-16 sm:py-20 px-4 sm:px-6">
+      <section
+        data-section="why-choose"
+        className={`bg-gray-50 py-16 sm:py-20 px-4 sm:px-6 transition-all duration-700 ease-out ${
+          visibleSections["why-choose"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 ref={whyChooseHeadingRef} className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8 animate-fade-in-right">
               Why B2B Brands Choose Us
             </h2>
             <div className="space-y-6">
@@ -757,7 +360,7 @@ const B2B = () => {
                 { text: "Scalable multi-channel growth framework", icon: <><path d="M3 3h18v18H3z" /><path d="M7 13l3 3 7-7" /></> },
                 { text: "Long-term authority building approach", icon: <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" /> },
               ].map((item, idx) => (
-                <div key={idx} ref={el => (whyChooseListRef.current[idx] = el)} className="flex items-start gap-4">
+                <div key={idx} className="flex items-start gap-4 animate-fade-in-right" style={{ animationDelay: `${0.1 + idx * 0.1}s` }}>
                   <svg className="w-6 h-6 text-blue-700 mt-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     {item.icon}
                   </svg>
@@ -765,13 +368,13 @@ const B2B = () => {
                 </div>
               ))}
             </div>
-            <div ref={whyChooseClosingRef} className="mt-10">
+            <div className="mt-10 animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
               <p className="text-lg font-semibold text-gray-900">
-                We don’t just generate leads — we build predictable revenue systems.
+                We don't just generate leads — we build predictable revenue systems.
               </p>
             </div>
           </div>
-          <div ref={whyChooseImageRef} className="relative">
+          <div className="relative animate-float" style={{ animationDelay: "0.3s" }}>
             <img
               src={WhyB2BBrandsChooseUsImage}
               alt="B2B Revenue Growth Strategy"
@@ -783,13 +386,18 @@ const B2B = () => {
       </section>
 
       {/* OUR TECHNOLOGY-DRIVEN ADVANTAGE */}
-      <section className="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
+      <section
+        data-section="technology"
+        className={`bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden transition-all duration-700 ease-out ${
+          visibleSections.technology ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-14">
-            <h2 ref={techHeaderRef} className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900 animate-fade-in-up">
               Our Technology-Driven Advantage
             </h2>
-            <p ref={techParagraphRef} className="text-gray-600 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg">
+            <p className="text-gray-600 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               We leverage:
             </p>
           </div>
@@ -803,8 +411,8 @@ const B2B = () => {
             ].map((item, idx) => (
               <div
                 key={idx}
-                ref={el => (techCardsRef.current[idx] = el)}
-                className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300"
+                className="bg-gray-50 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-lg transition duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
               >
                 <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-700 mb-4 sm:mb-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   {item.icon}
@@ -813,7 +421,7 @@ const B2B = () => {
               </div>
             ))}
           </div>
-          <div className="mt-12 sm:mt-16 text-center max-w-3xl mx-auto">
+          <div className="mt-12 sm:mt-16 text-center max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
             <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
               Modern B2B marketing requires precision, speed, and adaptability. Our approach ensures your brand stays ahead of evolving industry trends and digital transformation shifts.
             </p>
@@ -822,36 +430,164 @@ const B2B = () => {
       </section>
 
       {/* READY TO ACCELERATE YOUR B2B GROWTH */}
-      <section ref={ctaSectionRef} className="bg-gradient-to-r from-blue-900 to-blue-700 py-20 px-4 sm:px-6 text-white">
+      <section
+        data-section="cta"
+        className={`bg-gradient-to-r from-blue-900 to-blue-700 py-20 px-4 sm:px-6 text-white transition-all duration-700 ease-out ${
+          visibleSections.cta ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-4xl mx-auto text-center">
-          <h2 ref={ctaHeadingRef} className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 text-white animate-fade-in-up">
             Ready to Accelerate Your B2B Growth?
           </h2>
           <div className="space-y-4 text-lg sm:text-xl text-white mb-10">
-            <p ref={ctaLine1Ref} className="text-white">Complex sales require smarter marketing.</p>
-            <p ref={ctaLine2Ref} className="text-white">High-value deals demand strategic visibility.</p>
-            <p ref={ctaLine3Ref} className="text-white">Sustainable growth needs performance architecture.</p>
+            <p className="text-white animate-fade-in-up" style={{ animationDelay: "0.1s" }}>Complex sales require smarter marketing.</p>
+            <p className="text-white animate-fade-in-up" style={{ animationDelay: "0.15s" }}>High-value deals demand strategic visibility.</p>
+            <p className="text-white animate-fade-in-up" style={{ animationDelay: "0.2s" }}>Sustainable growth needs performance architecture.</p>
           </div>
-          <p ref={ctaBrandRef} className="text-base sm:text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed mb-12">
+          <p className="text-base sm:text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed mb-12 animate-fade-in-up" style={{ animationDelay: "0.25s" }}>
             Partner with <span className="font-semibold text-white">
               Adkryoss managed by Clink Consultancy Services Private Limited
             </span> to transform your B2B marketing into a measurable revenue engine.
           </p>
-          <div ref={ctaButtonRef}>
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <button
               onClick={() => navigate("/contact?service=b2b")}
-              className="bg-white text-blue-800 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-blue-100 transition duration-300"
+              className="bg-white text-blue-800 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-blue-100 transition duration-300 hover:scale-105"
             >
-              Let’s Build Your Growth Strategy
+              Let's Build Your Growth Strategy
             </button>
           </div>
-          <div ref={ctaFinalRef} className="mt-10">
+          <div className="mt-10 animate-fade-in-up" style={{ animationDelay: "0.35s" }}>
             <p className="text-blue-200 text-sm sm:text-base">
-              Let’s build your next growth milestone.
+              Let's build your next growth milestone.
             </p>
           </div>
         </div>
       </section>
+
+      {/* Add animation styles */}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes fadeInRight {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes scaleIn {
+          from {
+            opacity: 0;
+            transform: scale(0.9);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+
+        @keyframes float-slow {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(30px);
+          }
+        }
+
+        @keyframes float-slower {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(40px);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fadeInUp 0.6s ease-out forwards;
+          opacity: 0;
+        }
+
+        .animate-fade-in-left {
+          animation: fadeInLeft 0.6s ease-out forwards;
+          opacity: 0;
+        }
+
+        .animate-fade-in-right {
+          animation: fadeInRight 0.6s ease-out forwards;
+          opacity: 0;
+        }
+
+        .animate-fade-in {
+          animation: fadeIn 0.4s ease-out forwards;
+        }
+
+        .animate-scale-in {
+          animation: scaleIn 0.4s ease-out forwards;
+        }
+
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-float-slow {
+          animation: float-slow 8s ease-in-out infinite;
+        }
+
+        .animate-float-slower {
+          animation: float-slower 10s ease-in-out infinite;
+        }
+
+        /* Ensure animations play on scroll up by re-triggering */
+        [data-section] {
+          will-change: transform, opacity;
+        }
+      `}</style>
     </>
   );
 };
