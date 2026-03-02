@@ -68,6 +68,7 @@ const AppCRO = () => {
 
 
 
+<<<<<<< Updated upstream
 <section
   className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
   style={{
@@ -75,6 +76,22 @@ const AppCRO = () => {
       "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
   }}
 >
+=======
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <a
+                href="/contact"
+                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Speak to Our Expert →
+              </a>
+              <a
+                href="#services"
+                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Our Services →
+              </a>
+            </div>
+>>>>>>> Stashed changes
 
   {/* Dark Overlay */}
   <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
@@ -209,7 +226,7 @@ const AppCRO = () => {
           <div className="lg:w-1/2 flex justify-center">
             <img
               src={WhyAPCROIsNonNegotiableImage}
-                alt="CRO performance illustration"
+              alt="CRO performance illustration"
               className="w-full max-w-md"
             />
           </div>
@@ -597,8 +614,8 @@ const AppCRO = () => {
           {/* Right: Image */}
           <div className="flex-1">
             <img
-              src={WhenShouldYouInvestinAPCROImage}  
-                alt="AP CRO Investment Illustration"
+              src={WhenShouldYouInvestinAPCROImage}
+              alt="AP CRO Investment Illustration"
               className="w-full h-auto"
             />
           </div>
@@ -626,12 +643,12 @@ const AppCRO = () => {
             Let’s engineer your growth.
           </p>
 
-          <Link
-            to="/contact?service=cro"
+          <a
+            href="/contact?service=cro"
             className="mt-6 inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300"
           >
             Speak to Our Expert →
-          </Link>
+          </a>
         </div>
       </section>
 

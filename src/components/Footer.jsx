@@ -25,7 +25,7 @@ const Footer = () => {
                             {[
                                 { Icon: Facebook, href: '#' },
                                 { Icon: Twitter, href: '#' },
-                                { Icon: Linkedin, href: '#' },
+                                { Icon: Linkedin, href: 'https://www.linkedin.com/company/adryoss/about/?viewAsMember=true' },
                                 { Icon: Instagram, href: '#' },
                                 { Icon: Youtube, href: '#' }
                             ].map(({ Icon, href }, idx) => (
@@ -137,7 +137,8 @@ const Footer = () => {
                                 { name: 'BFSI', path: '/industry/bfsi' },
                                 { name: 'B2B', path: '/industry/b2b' },
                                 { name: 'Education', path: '/industry/education' },
-                                { name: 'Healthcare', path: '/industry/healthcare' }
+                                { name: 'Healthcare', path: '/industry/healthcare' },
+                                { name: 'E-commerce', path: '/industry/ecommerce' },
                             ].map(industry => (
                                 <li key={industry.name}>
                                     <Link to={industry.path} className="text-[#ccc] text-sm transition-colors duration-200 no-underline hover:text-white flex items-center group">

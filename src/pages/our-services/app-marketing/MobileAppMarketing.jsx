@@ -58,6 +58,23 @@ const MobileAppMarketing = () => {
  
 
 
+<<<<<<< Updated upstream
+=======
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <a
+                href="/contact"
+                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Speak to Our Expert →
+              </a>
+              <a
+                href="#services"
+                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:-translate-y-1 hover:shadow-xl text-center"
+              >
+                Our Services →
+              </a>
+            </div>
+>>>>>>> Stashed changes
 
 <section
   className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
@@ -445,7 +462,7 @@ const MobileAppMarketing = () => {
           {/* Right: Image */}
           <div className="lg:w-1/2 flex justify-center">
             <img
-              src={WhyChooseUsforMobileAppMarketingImage}  alt="Mobile app marketing illustration"
+              src={WhyChooseUsforMobileAppMarketingImage} alt="Mobile app marketing illustration"
               className="w-full max-w-md"
             />
           </div>
@@ -466,12 +483,12 @@ const MobileAppMarketing = () => {
           <p className="text-lg md:text-xl text-white">
             Partner with Adkryoss managed by Clink Consultancy Services Private Limited to build a mobile app marketing engine that delivers measurable impact.
           </p>
-          <Link
-            to="/contact?service=mobile-app-marketing"
+          <a
+            href="/contact?service=mobile-app-marketing"
             className="mt-4 inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300"
           >
             Speak to Our Expert →
-          </Link>
+          </a>
         </div>
       </section>
 
