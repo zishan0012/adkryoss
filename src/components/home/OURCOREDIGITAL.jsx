@@ -9,10 +9,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const tabs = [
   "Search Engine Optimization",
-  "Performance Marketing (PPC & Paid Media)",
+  "Content & Inbound Marketing",
   "Social Media Marketing",
-  "E-Commerce Marketing ",
-  "Content & Inbound Marketing ",
+  "E-Commerce Marketing",
+  "Performance Marketing (PPC & Paid Media)",
   "Conversion Rate Optimization (CRO)"
 ];
 
@@ -22,31 +22,37 @@ const tabContent = {
     desc: "Dominate search rankings with technical SEO, content strategy, high-authority link building, and AI-optimized search frameworks.",
     image: SEOImage
   },
-  "Performance Marketing (PPC & Paid Media)": {
+
+   "Performance Marketing (PPC & Paid Media)": {
     title: "Performance Marketing (PPC & Paid Media)",
     desc: "Google Ads, Meta Ads, LinkedIn Ads & programmatic campaigns engineered for maximum ROI.",
     image: PPCImage
   },
+
+
   "Social Media Marketing": {
     title: "Social Media Marketing",
     desc: "We build engagement and conversions across Instagram, LinkedIn, Facebook, and emerging platforms.",
     image: SocialMediaImage
   },
-  "E-Commerce Marketing ": {
+
+  "E-Commerce Marketing": {
     title: "E-Commerce Marketing",
     desc: "Marketplace optimization, dynamic ads, and scaling strategies for Shopify & Amazon brands.",
     image: ecomarceImage
   },
-  "Content & Inbound Marketing ": {
+
+  "Content & Inbound Marketing": {
     title: "Content & Inbound Marketing",
     desc: "SEO blogs, video marketing, and funnel-driven content that converts.",
     image: contentImage
   },
+
   "Conversion Rate Optimization (CRO)": {
     title: "Conversion Rate Optimization (CRO)",
     desc: "Heatmaps, A/B testing, UX audits, and behavioral analytics.",
     image: CROImage
-  },
+  }
 };
 
 const fade = {
@@ -55,13 +61,10 @@ const fade = {
 };
 
 const ServicesTabs = () => {
-
   const [activeTab, setActiveTab] = useState(tabs[0]);
-
   const content = tabContent[activeTab];
 
   return (
-
     <motion.section
       initial="hidden"
       whileInView="show"
@@ -69,10 +72,7 @@ const ServicesTabs = () => {
       variants={fade}
       className="bg-white py-12 sm:py-16 overflow-hidden relative"
     >
-
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
-
-        {/* Heading */}
 
         <motion.h2
           variants={fade}
@@ -95,37 +95,34 @@ const ServicesTabs = () => {
           We provide 360° digital marketing services tailored to startups, SMEs, enterprises, and D2C brands.
         </motion.p>
 
-
         {/* Tabs */}
-
         <div className="flex flex-wrap justify-center gap-3 mt-10">
 
           {tabs.map((tab) => (
-
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className="
+              className={`
                 px-6 py-2.5 rounded-full
                 text-sm font-medium
-                bg-[#0066CC] text-white
-                hover:bg-[#0052a3]
+                whitespace-nowrap
                 transition
-                shadow-md
-              "
+                ${
+                  activeTab === tab
+                    ? "bg-[#0066CC] text-white shadow-md"
+                    : "bg-blue-100 text-[#0066CC]"
+                }
+                hover:bg-[#0052a3] hover:text-white
+              `}
             >
               {tab}
             </button>
-
           ))}
 
         </div>
 
-
-        {/* Content Box */}
-
+        {/* Content */}
         <AnimatePresence mode="wait">
-
           <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 20 }}
@@ -135,10 +132,7 @@ const ServicesTabs = () => {
             className="mt-12 bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 sm:p-10 md:p-14 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center border border-blue-100 shadow-xl"
           >
 
-            {/* Left */}
-
             <div className="space-y-4">
-
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
                 {content.title}
               </h3>
@@ -146,32 +140,23 @@ const ServicesTabs = () => {
               <p className="text-gray-600">
                 {content.desc}
               </p>
-
             </div>
 
-
-            {/* Right */}
-
             <div className="flex justify-center lg:justify-end">
-
               <img
                 src={content.image}
                 alt={content.title}
                 className="max-w-[300px] w-full"
               />
-
             </div>
 
           </motion.div>
-
         </AnimatePresence>
 
       </div>
-
     </motion.section>
-
   );
-
 };
 
 export default ServicesTabs;
+

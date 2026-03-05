@@ -459,25 +459,27 @@ const AwardsSection = () => {
           What makes Adkryoss different from traditional marketing agencies?
         </p>
  
-        <ul className="space-y-6">
-          {[
-            "Data-first strategy, not guesswork",
-            "ROI-focused execution",
-            "Transparent reporting dashboards",
-            "AI-powered optimization systems",
-            "Agile marketing frameworks",
-            "Dedicated growth team for every client",
-          ].map((text, index) => (
-            <li key={index} className="flex items-start gap-4 mb-4 why-point">
-              <div className="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold">
-                ✓
-              </div>
-              <span className="text-gray-800 font-medium">
-                {text}
-              </span>
-            </li>
-          ))}
-        </ul>
+<ul className="space-y-6">
+  {[
+    "ROI-focused execution",
+    "Agile marketing frameworks",
+    "AI-powered optimization systems",
+    "Transparent reporting dashboards",
+    "Data-first strategy, not guesswork",
+    "Dedicated growth team for every client",
+  ].map((text, index) => (
+    <li key={index} className="flex items-start gap-4 mb-4 why-point">
+      <div className="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold">
+        ✓
+      </div>
+
+      <span className="text-gray-800 font-medium">
+        {text}
+      </span>
+    </li>
+  ))}
+</ul>
+
       </div>
  
       {/* RIGHT IMAGE */}

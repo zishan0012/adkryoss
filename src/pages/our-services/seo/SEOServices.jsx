@@ -338,16 +338,17 @@ const SEOServices = () => {
         }
     ];
 
-    const industries = [
-        { icon: <ShoppingCart size={24} />, name: "E-commerce" },
-        { icon: <GraduationCap size={24} />, name: "Education & EdTech" },
-        { icon: <Heart size={24} />, name: "Healthcare" },
-        { icon: <Building2 size={24} />, name: "Real Estate" },
-        { icon: <Briefcase size={24} />, name: "Finance & FinTech" },
-        { icon: <Code size={24} />, name: "SaaS & Technology" },
-        { icon: <Building2 size={24} />, name: "Manufacturing" },
-        { icon: <Users size={24} />, name: "Professional Services" }
-    ];
+const industries = [
+  { icon: <ShoppingCart size={24} className="text-orange-500" />, name: "E-commerce" },
+  { icon: <GraduationCap size={24} className="text-blue-500" />, name: "Education & EdTech" },
+  { icon: <Heart size={24} className="text-red-500" />, name: "Healthcare" },
+  { icon: <Building2 size={24} className="text-purple-500" />, name: "Real Estate" },
+  { icon: <Briefcase size={24} className="text-green-600" />, name: "Finance & FinTech" },
+  { icon: <Code size={24} className="text-indigo-500" />, name: "SaaS & Technology" },
+  { icon: <Building2 size={24} className="text-yellow-600" />, name: "Manufacturing" },
+  { icon: <Users size={24} className="text-pink-500" />, name: "Professional Services" }
+];
+
 
     const processSteps = [
         "Business Discovery & Goal Mapping",
@@ -666,7 +667,7 @@ const SEOServices = () => {
                             <div key={index}
                                 ref={el => industryCardsRef.current[index] = el}
                                 className="bg-white p-7 rounded-2xl text-center transition-all duration-300 cursor-pointer border-2 border-transparent w-full md:w-[calc(25%-18px)] min-w-[200px] max-w-[280px] grow hover:border-[#0066CC] hover:shadow-[0_10px_30px_rgba(0,102,204,0.1)] group">
-                                <div className="text-[#0066CC] mb-3 flex justify-center card-icon transition-transform">
+                               <div className="mb-3 flex justify-center card-icon transition-transform group-hover:scale-110">
                                     {industry.icon}
                                 </div>
                                 <p className="text-[16px] font-medium text-slate-900 m-0 group-hover:text-[#0066CC] transition-colors">
