@@ -117,33 +117,7 @@ const CaseStudySection = () => {
               Adkryoss integrates:
             </motion.h3>
 
-            <ul className="space-y-3 text-lg">
-
-              {[
-                "AI-powered keyword research",
-                "Predictive audience targeting",
-                "Marketing automation workflows",
-                "Data-driven personalization",
-                "Advanced analytics dashboards",
-              ].map((text, i) => (
-
-                <motion.li
-                  key={i}
-                  variants={item}
-                  className="py-2 flex items-center gap-3"
-                >
-
-                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-
-                  <span className="text-gray-700">
-                    {text}
-                  </span>
-
-                </motion.li>
-
-              ))}
-
-            </ul>
+            <ul className="space-y-3 text-lg"> {[ "Data-driven personalization", "Predictive audience targeting", "AI-powered keyword research", "Advanced analytics dashboards", "Marketing automation workflows", ].map((text, i) => ( <motion.li key={i} variants={item} className="py-2 flex items-center gap-3" > <span className="w-2 h-2 bg-blue-500 rounded-full"></span> <span className="text-gray-700"> {text} </span> </motion.li> ))} </ul>
 
           </motion.div>
 
