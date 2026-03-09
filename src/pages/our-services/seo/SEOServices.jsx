@@ -338,16 +338,16 @@ const SEOServices = () => {
         }
     ];
 
-const industries = [
-  { icon: <ShoppingCart size={24} className="text-orange-500" />, name: "E-commerce" },
-  { icon: <GraduationCap size={24} className="text-blue-500" />, name: "Education & EdTech" },
-  { icon: <Heart size={24} className="text-red-500" />, name: "Healthcare" },
-  { icon: <Building2 size={24} className="text-purple-500" />, name: "Real Estate" },
-  { icon: <Briefcase size={24} className="text-green-600" />, name: "Finance & FinTech" },
-  { icon: <Code size={24} className="text-indigo-500" />, name: "SaaS & Technology" },
-  { icon: <Building2 size={24} className="text-yellow-600" />, name: "Manufacturing" },
-  { icon: <Users size={24} className="text-pink-500" />, name: "Professional Services" }
-];
+    const industries = [
+        { icon: <ShoppingCart size={24} className="text-orange-500" />, name: "E-commerce" },
+        { icon: <GraduationCap size={24} className="text-blue-500" />, name: "Education & EdTech" },
+        { icon: <Heart size={24} className="text-red-500" />, name: "Healthcare" },
+        { icon: <Building2 size={24} className="text-purple-500" />, name: "Real Estate" },
+        { icon: <Briefcase size={24} className="text-green-600" />, name: "Finance & FinTech" },
+        { icon: <Code size={24} className="text-indigo-500" />, name: "SaaS & Technology" },
+        { icon: <Building2 size={24} className="text-yellow-600" />, name: "Manufacturing" },
+        { icon: <Users size={24} className="text-pink-500" />, name: "Professional Services" }
+    ];
 
 
     const processSteps = [
@@ -462,107 +462,107 @@ const industries = [
 
 
             <motion.section
- 
-  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
-  }}
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 1 }}
->
 
-  {/* Dark Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/95 via-black/85 to-indigo-950/95"></div>
+                className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+                style={{
+                    backgroundImage:
+                        "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+                }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+            >
 
-  {/* Animated Glow Effects */}
-  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
-  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+                {/* Dark Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-950/95 via-black/85 to-indigo-950/95"></div>
 
-  <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full z-10">
+                {/* Animated Glow Effects */}
+                <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+                <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
 
-    {/* LEFT CONTENT */}
-    <div ref={heroContentRef} className="text-left max-w-[650px]">
+                <div className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full z-10">
 
-      <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
-          SEO Services
-        </span>
-      </h1>
+                    {/* LEFT CONTENT */}
+                    <div ref={heroContentRef} className="text-left max-w-[650px]">
 
-      <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
-        Drive Organic Growth. Build Authority. Dominate Search.
-      </h3>
+                        <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                            <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+                                SEO Services
+                            </span>
+                        </h1>
 
-      <p className="text-gray-200 text-md md:text-lg leading-relaxed mb-4">
-        In today's search-first world, visibility is not optional — it's survival.
-        Customers don't scroll endlessly; they click what ranks,
-        what builds trust, and what delivers value instantly.
-      </p>
+                        <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+                            Drive Organic Growth. Build Authority. Dominate Search.
+                        </h3>
 
-      <p className="text-lg leading-relaxed text-white font-medium mb-8">
-        Adkryoss managed by{" "}
-        <span className="font-bold text-white">
-          Clink Consultancy Services Private Limited
-        </span>{" "}
-        delivers data-driven, performance-focused SEO services designed to
-        increase traffic, improve rankings, and convert search intent into
-        measurable revenue.
-      </p>
+                        <p className="text-gray-200 text-md md:text-lg leading-relaxed mb-4">
+                            In today's search-first world, visibility is not optional — it's survival.
+                            Customers don't scroll endlessly; they click what ranks,
+                            what builds trust, and what delivers value instantly.
+                        </p>
 
-      {/* Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4">
-        <Link
-          to="/contact"
-          className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
-        >
-          Speak to Our Expert →
-        </Link>
+                        <p className="text-lg leading-relaxed text-white font-medium mb-8">
+                            Adkryoss managed by{" "}
+                            <span className="font-bold text-white">
+                                Clink Consultancy Services Private Limited
+                            </span>{" "}
+                            delivers data-driven, performance-focused SEO services designed to
+                            increase traffic, improve rankings, and convert search intent into
+                            measurable revenue.
+                        </p>
 
-        <Link
-          to="#services"
-          className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:bg-blue-400 hover:-translate-y-1 hover:shadow-xl text-center"
-        >
-          Our Services →
-        </Link>
-      </div>
+                        {/* Buttons */}
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Link
+                                to="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </Link>
 
-    </div>
+                            <Link
+                                to="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:bg-blue-400 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </Link>
+                        </div>
 
-    {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end">
+                    </div>
 
-      <div ref={heroImageRef} className="relative group w-full max-w-[460px] h-[280px] sm:h-[320px] md:h-[360px] flex items-center justify-center">
+                    {/* RIGHT IMAGE */}
+                    <div className="flex justify-center md:justify-end">
 
-        {/* Image Glow */}
-        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                        <div ref={heroImageRef} className="relative group w-full max-w-[460px] h-[280px] sm:h-[320px] md:h-[360px] flex items-center justify-center">
 
-        <img
-          src={seoservices}
-          alt="SEO Services"
-          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
+                            {/* Image Glow */}
+                            <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+
+                            <img
+                                src={seoservices}
+                                alt="SEO Services"
+                                className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
                      transform group-hover:-translate-y-2 transition duration-500"
-        />
+                            />
 
-      </div>
+                        </div>
 
-    </div>
+                    </div>
 
-  </div>
+                </div>
 
-  {/* Floating Animation */}
-  <style>
-    {`
+                {/* Floating Animation */}
+                <style>
+                    {`
       @keyframes float {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(30px); }
       }
     `}
-  </style>
+                </style>
 
-</motion.section>
+            </motion.section>
 
             {/* Why SEO Section */}
             <section className="pt-32 pb-24 bg-slate-50">
@@ -667,7 +667,7 @@ const industries = [
                             <div key={index}
                                 ref={el => industryCardsRef.current[index] = el}
                                 className="bg-white p-7 rounded-2xl text-center transition-all duration-300 cursor-pointer border-2 border-transparent w-full md:w-[calc(25%-18px)] min-w-[200px] max-w-[280px] grow hover:border-[#0066CC] hover:shadow-[0_10px_30px_rgba(0,102,204,0.1)] group">
-                               <div className="mb-3 flex justify-center card-icon transition-transform group-hover:scale-110">
+                                <div className="mb-3 flex justify-center card-icon transition-transform group-hover:scale-110">
                                     {industry.icon}
                                 </div>
                                 <p className="text-[16px] font-medium text-slate-900 m-0 group-hover:text-[#0066CC] transition-colors">

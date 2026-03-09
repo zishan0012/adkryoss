@@ -157,7 +157,7 @@ const Footer = () => {
                         <div className="flex gap-4 items-center group">
                             <Building size={20} className="text-[#999] transition-all duration-300 group-hover:text-blue-600 shrink-0" />
                             <p className="text-[#999] text-sm m-0 transition-colors duration-300 group-hover:text-white font-medium">
-                                Clink Consultancy Service Private Limited
+                                Clink Consultancy Services Private Limited
                             </p>
                         </div>
                         <div className="flex gap-4 items-center group max-w-md">
