@@ -112,11 +112,10 @@ const Careers = () => {
       {/* HERO SECTION */}
       <section
         data-section="hero"
-        className={`relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden transition-all duration-700 ease-out ${
-          visibleSections.hero
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
+        className={`relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden transition-all duration-700 ease-out ${visibleSections.hero
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+          }`}
         style={{
           backgroundImage:
             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
@@ -188,11 +187,10 @@ const Careers = () => {
       {/* WHY WORK WITH US SECTION */}
       <section
         data-section="why"
-        className={`relative py-24 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-white transition-all duration-700 ease-out ${
-          visibleSections.why
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
+        className={`relative py-24 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-white transition-all duration-700 ease-out ${visibleSections.why
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-20"></div>
         <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-200 rounded-full blur-3xl opacity-20"></div>
@@ -271,11 +269,10 @@ const Careers = () => {
       {/* WORK CULTURE SECTION */}
       <section
         data-section="culture"
-        className={`relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-white transition-all duration-700 ease-out ${
-          visibleSections.culture
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
+        className={`relative py-20 overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-white transition-all duration-700 ease-out ${visibleSections.culture
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-blue-200 opacity-20 blur-3xl rounded-full"></div>
         <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-orange-200 opacity-20 blur-3xl rounded-full"></div>
@@ -352,11 +349,10 @@ const Careers = () => {
       {/* WHO WE'RE LOOKING FOR */}
       <section
         data-section="looking"
-        className={`py-14 bg-white transition-all duration-700 ease-out ${
-          visibleSections.looking
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
+        className={`py-14 bg-white transition-all duration-700 ease-out ${visibleSections.looking
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center">
@@ -416,11 +412,10 @@ const Careers = () => {
       {/* OUR HIRING PHILOSOPHY */}
       <section
         data-section="philosophy"
-        className={`py-24 bg-gradient-to-br from-gray-50 via-blue-50 to-white transition-all duration-700 ease-out ${
-          visibleSections.philosophy
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
+        className={`py-24 bg-gradient-to-br from-gray-50 via-blue-50 to-white transition-all duration-700 ease-out ${visibleSections.philosophy
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -477,11 +472,10 @@ const Careers = () => {
       {/* GROWTH & LEARNING OPPORTUNITIES */}
       <section
         data-section="growth"
-        className={`py-12 bg-gradient-to-br from-blue-50 via-white to-blue-50 transition-all duration-700 ease-out ${
-          visibleSections.growth
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
+        className={`py-12 bg-gradient-to-br from-blue-50 via-white to-blue-50 transition-all duration-700 ease-out ${visibleSections.growth
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-[1500px] mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -540,11 +534,10 @@ const Careers = () => {
       {/* LIFE AT ADKRYOSS */}
       <section
         data-section="life"
-        className={`py-24 bg-gradient-to-br from-white via-blue-50 to-white transition-all duration-700 ease-out ${
-          visibleSections.life
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
+        className={`py-24 bg-gradient-to-br from-white via-blue-50 to-white transition-all duration-700 ease-out ${visibleSections.life
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-6">
@@ -623,11 +616,10 @@ const Careers = () => {
       {/* CURRENT OPENINGS */}
       <section
         data-section="openings"
-        className={`py-0 bg-gray-50 transition-all duration-700 ease-out ${
-          visibleSections.openings
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
+        className={`py-0 bg-gray-50 transition-all duration-700 ease-out ${visibleSections.openings
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-5xl font-bold text-center mb-12 animate-fade-in-up">
@@ -690,11 +682,10 @@ const Careers = () => {
       {/* INTERNSHIP PROGRAM */}
       <section
         data-section="internship"
-        className={`py-28 bg-white transition-all duration-700 ease-out ${
-          visibleSections.internship
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
+        className={`py-28 bg-white transition-all duration-700 ease-out ${visibleSections.internship
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
@@ -754,11 +745,10 @@ const Careers = () => {
       {/* CAREER PATH */}
       <section
         data-section="career"
-        className={`relative py-28 overflow-hidden transition-all duration-700 ease-out ${
-          visibleSections.career
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
+        className={`relative py-16 overflow-hidden transition-all duration-700 ease-out ${visibleSections.career
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-orange-500 to-blue-600 bg-[length:200%_200%] animate-bgMove opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-6">
@@ -795,14 +785,13 @@ const Careers = () => {
       {/* DIVERSITY & INCLUSION */}
       <section
         data-section="diversity"
-        className={`py-12 bg-gray-50 transition-all duration-700 ease-out ${
-          visibleSections.diversity
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
+        className={`py-12 bg-gray-50 transition-all duration-700 ease-out ${visibleSections.diversity
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+          }`}
       >
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="group relative rounded-2xl p-[2px] bg-gradient-to-r from-blue-600 via-orange-500 to-blue-600 bg-[length:200%_200%] animate-borderMove transition-all duration-500 hover:-translate-y-2 animate-fade-in-up">
+        <div className="max-w-6xl mx-auto px-6 animate-fade-in-up">
+          <div className="group relative rounded-2xl p-[2px] bg-gradient-to-r from-blue-600 via-orange-500 to-blue-600 bg-[length:200%_200%] animate-borderMove transition-all duration-500 hover:-translate-y-2">
             <div className="bg-white rounded-2xl shadow-lg p-12 text-center transition-all duration-500 group-hover:shadow-2xl">
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
                 Diversity & Inclusion
@@ -819,11 +808,10 @@ const Careers = () => {
       {/* CTA SECTION */}
       <section
         data-section="cta"
-        className={`py-18 bg-gray-100 transition-all duration-700 ease-out ${
-          visibleSections.cta
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
+        className={`py-18 bg-gray-100 transition-all duration-700 ease-out ${visibleSections.cta
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 items-center gap-16">

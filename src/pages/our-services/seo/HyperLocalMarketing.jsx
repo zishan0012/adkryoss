@@ -411,96 +411,96 @@ const HyperLocalMarketing = () => {
 
             <motion.section
 
-  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
-  }}
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 1 }}
->
+                className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+                style={{
+                    backgroundImage:
+                        "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')"
+                }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+            >
 
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
 
-  {/* Animated Glow Effects */}
-  <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
-  <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
+                {/* Animated Glow Effects */}
+                <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-[float_8s_ease-in-out_infinite]"></div>
+                <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-500/30 rounded-full blur-3xl animate-[float_10s_ease-in-out_infinite]"></div>
 
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+                <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-    {/* LEFT CONTENT */}
-    <div ref={heroContentRef} className="text-left max-w-[600px]">
+                    {/* LEFT CONTENT */}
+                    <div ref={heroContentRef} className="text-left max-w-[600px]">
 
-      <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
-          Hyperlocal Marketing Services
-        </span>
-      </h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                            <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+                                Hyperlocal Marketing Services
+                            </span>
+                        </h2>
 
-      <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
-        Dominate Your Neighborhood. Be the first choice when your customers search “near me.”
-      </h3>
+                        <h3 className="text-xl md:text-2xl font-semibold mb-6 text-blue-100">
+                            Dominate Your Neighborhood. Be the first choice when your customers search “near me.”
+                        </h3>
 
-      <p className="text-gray-200 text-md md:text-lg leading-relaxed mb-6">
-        Turn proximity into profit with data-driven hyperlocal marketing strategies
-        that put your business exactly where buying decisions happen —
-        on local searches, maps, feeds, and mobile screens.
-      </p>
+                        <p className="text-gray-200 text-md md:text-lg leading-relaxed mb-6">
+                            Turn proximity into profit with data-driven hyperlocal marketing strategies
+                            that put your business exactly where buying decisions happen —
+                            on local searches, maps, feeds, and mobile screens.
+                        </p>
 
-      {/* Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 mt-4">
-        <Link
-          to="/contact"
-          className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
-        >
-          Speak to Our Expert →
-        </Link>
+                        {/* Buttons */}
+                        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+                            <Link
+                                to="/contact"
+                                className="bg-white text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Speak to Our Expert →
+                            </Link>
 
-        <Link
-          to="#services"
-          className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:bg-blue-400 hover:-translate-y-1 hover:shadow-xl text-center"
-        >
-          Our Services →
-        </Link>
-      </div>
+                            <Link
+                                to="#services"
+                                className="border-2 border-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:text-black hover:bg-blue-400 hover:-translate-y-1 hover:shadow-xl text-center"
+                            >
+                                Our Services →
+                            </Link>
+                        </div>
 
-    </div>
+                    </div>
 
-    {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end">
+                    {/* RIGHT IMAGE */}
+                    <div className="flex justify-center md:justify-end">
 
-      <div ref={heroImageRef} className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
+                        <div ref={heroImageRef} className="relative group w-full max-w-[420px] h-[260px] sm:h-[300px] md:h-[340px] flex items-center justify-center">
 
-        {/* Image Glow */}
-        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                            {/* Image Glow */}
+                            <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
 
-        <img
-          src={hyperlocalhero}
-          alt="Hyperlocal Marketing Services"
-          className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
+                            <img
+                                src={hyperlocalhero}
+                                alt="Hyperlocal Marketing Services"
+                                className="relative max-w-full max-h-full object-contain rounded-xl shadow-2xl 
                      transform group-hover:-translate-y-2 transition duration-500"
-        />
+                            />
 
-      </div>
+                        </div>
 
-    </div>
+                    </div>
 
-  </div>
+                </div>
 
-  {/* Floating Animation */}
-  <style>
-    {`
+                {/* Floating Animation */}
+                <style>
+                    {`
       @keyframes float {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(30px); }
       }
     `}
-  </style>
+                </style>
 
-</motion.section>
+            </motion.section>
 
             {/* What is Hyperlocal Section */}
             <section ref={whatRef} className="pt-28 pb-20 bg-white">
@@ -662,7 +662,7 @@ const HyperLocalMarketing = () => {
                     </div>
                     <div className="flex flex-wrap justify-center gap-8">
                         {workingApproach.map((item, i) => (
-                            <div key={i} ref={el => approachStepsRef.current[i] = el} className="flex-auto max-w-[280px] bg-[#f8f9fa] p-[40px] rounded-[32px] text-center border border-[#eee] hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                            <div key={i} ref={el => approachStepsRef.current[i] = el} className="flex-auto max-w-[280px] bg-gray-200 p-[40px] rounded-[32px] text-center border border-[#eee] hover:bg-indigo-100 hover:shadow-xl transition-all duration-300 group">
                                 <div className="text-lg font-black text-[#0066cc]/20 group-hover:text-[#0066cc] transition-colors mb-4">{item.step}</div>
                                 <h4 className="text-[20px] font-bold text-[#1a1a1a] mb-4 group-hover:translate-y-[-5px] transition-transform">{item.title}</h4>
                                 <p className="text-[14px] text-[#666] leading-[1.8] font-medium">{item.desc}</p>
