@@ -153,7 +153,7 @@ const techStack = [
 const AIMarketing = () => {
   return (
     <>
-{/* <section
+      {/* <section
   className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
   style={{
     backgroundImage:
@@ -217,64 +217,64 @@ const AIMarketing = () => {
 
 
 
-<section
-  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-  }}
->
-  {/* Dark overlay for readability */}
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+      <section
+        className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+        }}
+      >
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
 
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-    {/* LEFT CONTENT */}
-    <div className="space-y-6 max-w-[600px]">
-      <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-        AI-Powered Digital Marketing Agency <br />
-        <span className="text-blue-300 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-          for Smarter, Faster Growth
-        </span>
-      </h1>
+          {/* LEFT CONTENT */}
+          <div className="space-y-6 max-w-[600px]">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              AI-Powered Digital Marketing Agency <br />
+              <span className="text-blue-300 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                for Smarter, Faster Growth
+              </span>
+            </h1>
 
-      <p className="text-white md:text-md leading-relaxed">
-        Grow your business with AI-driven marketing strategies that deliver faster results, smarter campaigns, and high-intent leads built for sustainable growth.
-      </p>
+            <p className="text-white md:text-md leading-relaxed">
+              Grow your business with AI-driven marketing strategies that deliver faster results, smarter campaigns, and high-intent leads built for sustainable growth.
+            </p>
 
-      {/* CTA Buttons */}
-      <div className="flex flex-wrap gap-4">
-        <a
-          href="/contact"
-          className="bg-white text-blue-800 font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:bg-blue-100 hover:shadow-xl inline-block text-center"
-        >
-          Speak to an Expert →
-        </a>
-        <a
-          href="#services"
-          className="border border-white font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:bg-white hover:text-blue-800 inline-block text-center"
-        >
-          Our Services →
-        </a>
-      </div>
-    </div>
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="/contact"
+                className="bg-white text-blue-800 font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:bg-blue-100 hover:shadow-xl inline-block text-center"
+              >
+                Speak to an Expert →
+              </a>
+              <a
+                href="#services"
+                className="border border-white font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:bg-white hover:text-blue-800 inline-block text-center"
+              >
+                Our Services →
+              </a>
+            </div>
+          </div>
 
-    {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end relative z-10">
-      <div className="relative group w-full max-w-[400px]">
-        <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
-        <img
-          src={digi}
-          alt="AI Digital Marketing"
-          className="relative w-full h-[260px] sm:h-[300px] md:h-[320px] object-cover rounded-xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
-        />
-      </div>
-    </div>
-
-  </div>
-</section>
           {/* RIGHT IMAGE */}
-          {/* <div className="flex justify-center md:justify-end">
+          <div className="flex justify-center md:justify-end relative z-10">
+            <div className="relative group w-full max-w-[400px]">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+              <img
+                src={digi}
+                alt="AI Digital Marketing"
+                className="relative w-full h-[260px] sm:h-[300px] md:h-[320px] object-cover rounded-xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
+              />
+            </div>
+          </div>
+
+        </div>
+      </section>
+      {/* RIGHT IMAGE */}
+      {/* <div className="flex justify-center md:justify-end">
             <img
               src={digi}
               alt="Digital Marketing"
@@ -286,44 +286,74 @@ const AIMarketing = () => {
 
 
 
-      <div className="max-w-7xl mx-auto px-6 pt-6 text-sm text-gray-500">
-        <span className="hover:text-blue-600 cursor-pointer">Home</span>
-        <span className="mx-2">›</span>
-        <span className="hover:text-blue-600 cursor-pointer">
-          Digital Marketing
-        </span>
-        <span className="mx-2">›</span>
-        <span className="text-gray-900 font-medium">AI Digital Marketing</span>
-      </div>
-      <section className="bg-white py-16">
+
+      <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-blue-50 rounded-2xl p-10 max-w-5xl">
-            <div className="space-y-5">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Why AI is Redefining Digital Marketing
-              </h2>
-              <p className="text-gray-700 text-lg">
-                Traditional marketing reacts.{" "}
-                <span className="font-semibold text-gray-900">
-                  AI marketing predicts.
-                </span>
-              </p>
-              <p className="text-gray-700">
-                With intelligent algorithms, real-time data analysis, and
-                automated optimization, AI-driven marketing helps brands:
-              </p>
-              <ul className="space-y-3 text-gray-700">
-                <li>• Predict customer behavior before it happens</li>
-                <li>• Personalize experiences at scale</li>
-                <li>• Optimize ad spend in real time</li>
-                <li>• Improve conversion rates with data-backed decisions</li>
-                <li>• Reduce customer acquisition costs</li>
-                <li>• Increase lifetime value</li>
-              </ul>
-              <p className="text-gray-800 font-medium text-lg">
-                AI doesn’t replace strategy —{" "}
-                <span className="text-blue-700">it amplifies it.</span>
-              </p>
+
+          <div className="bg-blue-50 rounded-3xl p-10 md:p-14">
+
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+
+              {/* LEFT CONTENT */}
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                  Why AI is Redefining Digital Marketing
+                </h2>
+
+                <p className="text-gray-700 text-lg mt-4">
+                  Traditional marketing reacts.{" "}
+                  <span className="font-semibold text-gray-900">
+                    AI marketing predicts.
+                  </span>
+                </p>
+
+                <p className="text-gray-600 mt-6">
+                  With intelligent algorithms, real-time data analysis, and
+                  automated optimization, AI-driven marketing helps brands:
+                </p>
+
+                <p className="mt-8 text-lg font-medium text-gray-800">
+                  AI doesn’t replace strategy —{" "}
+                  <span className="text-blue-700 font-semibold">
+                    it amplifies it.
+                  </span>
+                </p>
+              </div>
+
+              {/* RIGHT FLOW LIST */}
+              <div className="relative">
+
+                {/* Vertical Line */}
+                <div className="absolute left-4 top-0 h-full w-[2px] bg-blue-200"></div>
+
+                <div className="space-y-8">
+                  {[
+                    "Predict customer behavior before it happens",
+                    "Personalize experiences at scale",
+                    "Optimize ad spend in real time",
+                    "Improve conversion rates with data-backed decisions",
+                    "Reduce customer acquisition costs",
+                    "Increase lifetime value"
+                  ].map((item, i) => (
+
+                    <div key={i} className="relative flex items-start gap-4">
+
+                      {/* Dot */}
+                      <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold z-10">
+                        {i + 1}
+                      </div>
+
+                      {/* Text */}
+                      <p className="text-gray-700 pt-1">
+                        {item}
+                      </p>
+
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+
             </div>
           </div>
         </div>
@@ -407,17 +437,19 @@ const AIMarketing = () => {
               your digital growth.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {aiServices.map((service, index) => {
               const Icon = service.icon;
 
               return (
                 <div
                   key={index}
+
                   className="group flex flex-col justify-between min-h-105
-                rounded-2xl p-8 bg-white border border-blue-100
-                transition-all duration-500
-                hover:bg-teal-700 hover:shadow-xl hover:-translate-y-1"
+  w-full sm:w-[48%] lg:w-[30%]
+  rounded-2xl p-8 bg-white border border-blue-100
+  transition-all duration-500
+  hover:bg-teal-700 hover:shadow-xl hover:-translate-y-1"
                 >
                   <div>
                     <div

@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import socialmedia from "../../../assets/socialmedia.jpg"
 import WhySocialMediaAdvertisingMattersTodayImage from "../../../assets/WhySocialMediaAdvertisingMattersToday.png"
 import ROIFocusedMediaBuyingImage from "../../../assets/ROIFocusedMediaBuying.png"
-// import AdvancedPixelConversionTrackingImage from "../../../assets/AdvancedPixelConversionTracking.png"
-// import ConversionRateOptimizationIntegrationImage from "../../../assets/ConversionRateOptimizationIntegration.png"
-// import DedicatedCampaignManagerImage from "../../../assets/DedicatedCampaignManager.png"
-// import PerformanceCreativeTestingFrameworkImage from "../../../assets/PerformanceCreativeTestingFramework.png"
-// import TransparentWeeklyReportingImage from "../../../assets/TransparentWeeklyReporting.png"
+import AdvancedPixelConversionTrackingImage from "../../../assets/AdvancedPixel&ConversionTracking.png"
+import ConversionRateOptimizationIntegrationImage from "../../../assets/ConversionRateOptimizationIntegration.png"
+import DedicatedCampaignManagerImage from "../../../assets/DedicatedCampaignManager.png"
+import PerformanceCreativeTestingFrameworkImage from "../../../assets/PerformanceCreativeTestingFramework.png"
+import TransparentWeeklyReportingImage from "../../../assets/TransparentWeeklyReporting.png"
 import RealEstate2Image from "../../../assets/RealEstate2.png"
 import ECommerceD2CBrandsImage from "../../../assets/ECommerceD2CBrands.png"
 import EducationEdTechImage from "../../../assets/EducationEdTech.png"
@@ -99,14 +99,12 @@ const approach = [
   },
 ];
 const points = [
-
-
-  "ROI-Focused Media Buying",
- "Advanced Pixel & Conversion Tracking",
-  "Conversion Rate Optimization Integration",
-  "Performance Creative Testing Framework",
-  "Transparent Weekly Reporting",
-  "Dedicated Campaign Manager",
+  { title: "ROI-Focused Media Buying", image: ROIFocusedMediaBuyingImage },
+  { title: "Advanced Pixel & Conversion Tracking", image: AdvancedPixelConversionTrackingImage },
+  { title: "Conversion Rate Optimization Integration", image: ConversionRateOptimizationIntegrationImage },
+  { title: "Performance Creative Testing Framework", image: PerformanceCreativeTestingFrameworkImage },
+  { title: "Transparent Weekly Reporting", image: TransparentWeeklyReportingImage },
+  { title: "Dedicated Campaign Manager", image: DedicatedCampaignManagerImage },
 ];
 const industries = [
   {
@@ -115,7 +113,7 @@ const industries = [
   },
   {
     title: "Education & EdTech",
-    image:EducationEdTechImage
+    image: EducationEdTechImage
   },
   {
     title: "Healthcare & Clinics",
@@ -301,7 +299,7 @@ const SocialMediaAdvertising = () => {
 
 
 
- {/* Social Media Advertising Section */}
+      {/* Social Media Advertising Section */}
       <motion.section
         className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
         style={{
@@ -369,7 +367,7 @@ const SocialMediaAdvertising = () => {
 
 
 
- 
+
 
 
       <section className="bg-white py-16 md:py-20">
@@ -587,7 +585,7 @@ const SocialMediaAdvertising = () => {
           </div>
 
           {/* Horizontal Cards */}
-          <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             {points.map((item, index) => (
               <div
@@ -595,26 +593,27 @@ const SocialMediaAdvertising = () => {
                 className="
             bg-white border border-gray-200 rounded-xl
             overflow-hidden
-            flex flex-col sm:flex-row
+            flex flex-col
             transition-all duration-300
             hover:shadow-md hover:-translate-y-1
           "
               >
-                {/* Image Left */}
-                <img
-                  src={ROIFocusedMediaBuyingImage}
-                  alt="Paid Social Strategy"
-                  className="
-              w-full sm:w-48 md:w-56
-              h-40 sm:h-auto
-              object-cover
-            "
-                />
+                {/* Image Top */}
+                <div className="h-48 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="
+                w-full h-full
+                object-cover
+              "
+                  />
+                </div>
 
-                {/* Text Right */}
-                <div className="p-6 flex items-center">
+                {/* Text Bottom */}
+                <div className="p-6">
                   <p className="text-sm sm:text-base font-medium text-gray-800 leading-relaxed">
-                    {item}
+                    {item.title}
                   </p>
                 </div>
               </div>
@@ -670,18 +669,18 @@ const SocialMediaAdvertising = () => {
             Our Social Media Advertising Services Include
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-14">
+          <div className="flex flex-wrap justify-center gap-8 mb-14">
             {services.map((service, index) => {
               const Icon = service.icon;
 
               return (
                 <div
                   key={index}
-                  className="
-                  group bg-white border border-blue-100 rounded-2xl p-8
-                  transition-all duration-500
-                  hover:bg-teal-700 hover:shadow-xl hover:-translate-y-1
-                "
+                  className="group flex flex-col justify-between min-h-30
+  w-full sm:w-[48%] lg:w-[30%]
+  rounded-2xl p-8 bg-white border border-blue-100
+  transition-all duration-500
+  hover:bg-teal-700 hover:shadow-xl hover:-translate-y-1"
                 >
                   <div
                     className="
@@ -799,7 +798,7 @@ const SocialMediaAdvertising = () => {
               >
                 <CheckCircle className="w-6 h-6 text-green-600 shrink-0 mt-1" />
                 <p className="text-base font-medium text-gray-800">
-                  {point}
+                  {point.title}
                 </p>
               </div>
             ))}

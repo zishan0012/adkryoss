@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import HerobgImage from "../../assets/Herobg1.jpg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
- 
+
 gsap.registerPlugin(ScrollTrigger);
- 
+
 const HeroSection = () => {
   const navigate = useNavigate();
   const sectionRef = useRef(null);
@@ -13,10 +13,10 @@ const HeroSection = () => {
   const paragraphRef = useRef(null);
   const buttonContainerRef = useRef(null);
   const buttonsRef = useRef([]);
- 
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
- 
+
       // === SECTION PARALLAX EFFECT ===
       gsap.to(sectionRef.current, {
         scrollTrigger: {
@@ -27,10 +27,10 @@ const HeroSection = () => {
         },
         y: -80,
       });
- 
+
       // === HEADING PREMIUM ANIMATION ===
       gsap.fromTo(headingRef.current,
-        { 
+        {
           opacity: 0,
           y: 80,
         },
@@ -47,10 +47,10 @@ const HeroSection = () => {
           }
         }
       );
- 
+
       // === PARAGRAPH PREMIUM ANIMATION ===
       gsap.fromTo(paragraphRef.current,
-        { 
+        {
           opacity: 0,
           y: 50,
         },
@@ -68,10 +68,10 @@ const HeroSection = () => {
           }
         }
       );
- 
+
       // === BUTTONS STAGGER ANIMATION ===
       gsap.fromTo(buttonsRef.current,
-        { 
+        {
           opacity: 0,
           y: 40,
           scale: 0.95,
@@ -91,12 +91,12 @@ const HeroSection = () => {
           }
         }
       );
- 
+
     }, sectionRef);
- 
+
     return () => ctx.revert();
   }, []);
- 
+
   // Premium hover effect for buttons
   const handleButtonHover = (e, isEnter, isOrange = true) => {
     if (isOrange) {
@@ -119,72 +119,72 @@ const HeroSection = () => {
       });
     }
   };
- 
+
   return (
-<section
+    <section
       ref={sectionRef}
       className="relative flex items-center min-h-[90vh] bg-cover bg-left bg-no-repeat overflow-hidden"
       style={{
         backgroundImage: `url(${HerobgImage})`,
       }}
->
+    >
       {/* Dark overlay for better text readability */}
-<div className="absolute inset-0 bg-black/30 z-0"></div>
- 
+      <div className="absolute inset-0 bg-black/30 z-0"></div>
+
       {/* Decorative overlay elements */}
-<div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl z-0"></div>
-<div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl z-0"></div>
- 
+      <div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl z-0"></div>
+      <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl z-0"></div>
+
       {/* Content Container */}
-<div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4">
+      <div className="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4">
         {/* LEFT SIDE */}
-<div className="text-left lg:text-left text-white space-y-6 mx-auto lg:mx-0">
-<h1 
+        <div className="text-left lg:text-left text-white space-y-6 mx-auto lg:mx-0">
+          <h1
             ref={headingRef}
             className="text-[36px] md:text-[48px] font-extrabold mt-5 leading-[1.2]"
->
+          >
             We Build Digital Growth Systems <span className="text-[#ff7a00]">That Drive Revenue.</span>
-</h1>
- 
-          <p 
+          </h1>
+
+          <p
             ref={paragraphRef}
             className="mt-[25px] text-[18px] max-w-[550px] text-white/90 leading-relaxed"
->
+          >
             Not just traffic. Not just engagement.
-<br />
+            <br />
             We engineer data-driven marketing strategies that turn clicks
             into customers and brands into market leaders.
-</p>
- 
+          </p>
+
           {/* Buttons */}
-<div 
+          <div
             ref={buttonContainerRef}
             className="mt-[35px] flex flex-col sm:flex-row gap-5"
->
-<button 
+          >
+            <button
               ref={el => buttonsRef.current[0] = el}
               onClick={() => navigate("/contact")}
               className="bg-[#ff7a00] text-white px-[28px] py-[14px] rounded-[40px] font-semibold text-[15px] transition-all duration-300"
               onMouseEnter={(e) => handleButtonHover(e, true, true)}
               onMouseLeave={(e) => handleButtonHover(e, false, true)}
->
-              Get a Free Growth Audit →
-</button>
- 
-            <button 
+            >
+              Talk to a Growth Strategist →
+            </button>
+
+            <button
               ref={el => buttonsRef.current[1] = el}
-              onClick={() => navigate("/contact")}
+              onClick={() => navigate("/request-quote")}
               className="border-2 border-white text-white px-[28px] py-[14px] rounded-[40px] font-semibold text-[15px] bg-transparent transition-all duration-300"
               onMouseEnter={(e) => handleButtonHover(e, true, false)}
               onMouseLeave={(e) => handleButtonHover(e, false, false)}
->
-              Talk to a Growth Strategist →
-</button>
-</div>
-</div>
-</div>
-</section>
+            >
+              Get a Free Growth Audit→
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
- 
+
 export default HeroSection;
