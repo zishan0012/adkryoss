@@ -143,10 +143,10 @@ const DigitalMarketingServices = () => {
   return (
     <>
       {/* HERO SECTION */}
-      
 
 
-{/* <section
+
+      {/* <section
   className="bg-cover bg-center bg-no-repeat py-20 min-h-[500px] md:h-120 flex items-center relative text-white"
   style={{
     backgroundImage:
@@ -202,7 +202,7 @@ const DigitalMarketingServices = () => {
     </div>
   </div>
   </section> */}
-          {/* <div className="flex justify-center md:justify-end">
+      {/* <div className="flex justify-center md:justify-end">
             <div className="w-full max-w-[400px] h-[260px] sm:h-[300px] md:h-[320px] flex items-center justify-center rounded-xl shadow-lg bg-white/10">
               <img src={DigitalMarketingImage} alt="Digital Marketing" className="max-w-full max-h-full object-contain rounded-xl" />
             </div>
@@ -212,86 +212,78 @@ const DigitalMarketingServices = () => {
 
 
 
-<section
-  className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
-  style={{
-    backgroundImage:
-      "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
-  }}
->
-  {/* Dark + Gradient Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
+      <section
+        className="relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
+        }}
+      >
+        {/* Dark + Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-black/80 to-indigo-950/90"></div>
 
-  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12 w-full relative z-10">
 
-    {/* LEFT CONTENT */}
-    <div className="text-left max-w-[600px] space-y-6">
-      <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-        <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
-          Digital Marketing Services
-        </span>
-      </h2>
+          {/* LEFT CONTENT */}
+          <div className="text-left max-w-[600px] space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              <span className="bg-gradient-to-r from-blue-400 to-orange-400 bg-clip-text text-transparent">
+                Digital Marketing Services
+              </span>
+            </h2>
 
-      <h3 className="text-xl md:text-2xl font-semibold text-blue-100">
-        Accelerate Growth. Maximize Visibility. Dominate Digital.
-      </h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-blue-100">
+              Accelerate Growth. Maximize Visibility. Dominate Digital.
+            </h3>
 
-      <p className="text-gray-200 leading-relaxed font-medium">
-        Your audience is online. Your competitors are investing. The real question is — <span className="font-semibold">are you growing strategically?</span>
-      </p>
+            <p className="text-gray-200 leading-relaxed font-medium">
+              Your audience is online. Your competitors are investing. The real question is — <span className="font-semibold">are you growing strategically?</span>
+            </p>
 
-      <p className="text-gray-200 leading-relaxed font-medium">
-        Adkryoss managed by <span className="font-semibold text-white">Clink Consultancy Services Private Limited</span> delivers performance-focused digital marketing solutions that generate traffic, leads, and real revenue.
-        <br />
-        <span className="font-semibold">We don’t chase clicks. We build growth systems.</span>
-      </p>
+            <p className="text-gray-200 leading-relaxed font-medium">
+              Adkryoss managed by <span className="font-semibold text-white">Clink Consultancy Services Private Limited</span> delivers performance-focused digital marketing solutions that generate traffic, leads, and real revenue.
+              <br />
+              <span className="font-semibold">We don’t chase clicks. We build growth systems.</span>
+            </p>
 
-      {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row gap-4 pt-2">
-        <a
-          href="/contact"
-          className="inline-flex items-center justify-center bg-white text-black font-semibold px-8 py-4 rounded-full 
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <a
+                href="/contact"
+                className="inline-flex items-center justify-center bg-white text-black font-semibold px-8 py-4 rounded-full 
                      transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-        >
-          Speak to Our Expert →
-        </a>
+              >
+                Speak to Our Expert →
+              </a>
 
-        <a
-          href="#services"
-          className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold 
+              <a
+                href="#services"
+                className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold 
                      transition-all duration-300 hover:bg-white/10 hover:-translate-y-1 hover:shadow-xl"
-        >
-          Our Services →
-        </a>
-      </div>
-    </div>
+              >
+                Our Services →
+              </a>
+            </div>
+          </div>
 
-    {/* RIGHT IMAGE */}
-    <div className="flex justify-center md:justify-end relative z-10">
-      <div className="relative group w-full max-w-[400px]">
-        <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
-        <img
-          src={DigitalMarketingImage}
-          alt="Digital Marketing"
-          className="relative w-full object-contain rounded-2xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
-        />
-      </div>
-    </div>
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center md:justify-end relative z-10">
+            <div className="relative group w-full max-w-[400px]">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-orange-500 rounded-2xl blur-2xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
+              <img
+                src={DigitalMarketingImage}
+                alt="Digital Marketing"
+                className="relative w-full object-contain rounded-2xl shadow-2xl transform group-hover:-translate-y-2 transition duration-500"
+              />
+            </div>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
 
       {/* CONTENT + SERVICES */}
       <section className="bg-white">
-        {/* Breadcrumb */}
-        <div className="max-w-7xl mx-auto px-6 pt-6 text-sm text-gray-500">
-          <span className="hover:text-blue-600 cursor-pointer">Home</span>
-          <span className="mx-2">›</span>
-          <span className="text-gray-900 font-medium">
-            Digital Marketing Services
-          </span>
-        </div>
 
         {/* Intro */}
         <div className="max-w-4xl mx-auto px-6 pt-14 text-center">

@@ -50,9 +50,8 @@ const BFSI = () => {
       {/* HERO SECTION */}
       <section
         data-section="hero"
-        className={`relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden transition-all duration-700 ease-out ${
-          visibleSections.hero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`relative bg-cover bg-center bg-no-repeat py-24 min-h-[660px] flex items-center text-white overflow-hidden transition-all duration-700 ease-out ${visibleSections.hero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
         style={{
           backgroundImage:
             "url('https://www.techmagnate.com/wp-content/themes/techmagnate/images/services-images/service-back-img-mob.webp')",
@@ -112,9 +111,8 @@ const BFSI = () => {
       {/* WHY BFSI NEEDS SPECIALIZED DIGITAL MARKETING */}
       <section
         data-section="why-special"
-        className={`bg-gradient-to-r from-gray-50 to-blue-50 py-20 px-6 transition-all duration-700 ease-out ${
-          visibleSections["why-special"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`bg-gradient-to-r from-gray-50 to-blue-50 py-20 px-6 transition-all duration-700 ease-out ${visibleSections["why-special"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -141,8 +139,8 @@ const BFSI = () => {
             <p className="text-gray-700 leading-relaxed animate-fade-in-right" style={{ animationDelay: "0.7s" }}>
               At <span className="font-semibold text-blue-700">
                 Adkryoss managed by Clink Consultancy Services Private Limited
-              </span>, we design digital ecosystems tailored specifically for BFSI brands — 
-              combining performance marketing, automation, analytics, and brand storytelling 
+              </span>, we design digital ecosystems tailored specifically for BFSI brands —
+              combining performance marketing, automation, analytics, and brand storytelling
               into one measurable growth engine.
             </p>
           </div>
@@ -160,9 +158,8 @@ const BFSI = () => {
       {/* OUR BFSI DIGITAL MARKETING SOLUTIONS */}
       <section
         data-section="solutions"
-        className={`bg-gray-50 py-20 px-6 md:px-20 transition-all duration-700 ease-out ${
-          visibleSections.solutions ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`bg-gray-50 py-20 px-6 md:px-20 transition-all duration-700 ease-out ${visibleSections.solutions ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
@@ -239,9 +236,8 @@ const BFSI = () => {
       {/* SEO FOR BFSI BRANDS */}
       <section
         data-section="seo"
-        className={`bg-white py-20 px-6 transition-all duration-700 ease-out ${
-          visibleSections.seo ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`bg-white py-20 px-6 transition-all duration-700 ease-out ${visibleSections.seo ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-float" style={{ animationDelay: "0.2s" }}>
@@ -289,9 +285,8 @@ const BFSI = () => {
       {/* CONTENT MARKETING THAT BUILDS TRUST */}
       <section
         data-section="content"
-        className={`bg-gray-50 py-20 px-6 transition-all duration-700 ease-out ${
-          visibleSections.content ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`bg-gray-50 py-20 px-6 transition-all duration-700 ease-out ${visibleSections.content ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
@@ -333,9 +328,9 @@ const BFSI = () => {
           </div>
           <div className="text-center max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: "1s" }}>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Our content framework focuses on 
-              <span className="font-semibold text-blue-700"> clarity</span>, 
-              <span className="font-semibold text-blue-700"> compliance</span>, and 
+              Our content framework focuses on
+              <span className="font-semibold text-blue-700"> clarity</span>,
+              <span className="font-semibold text-blue-700"> compliance</span>, and
               <span className="font-semibold text-blue-700"> conversion</span>.
             </p>
           </div>
@@ -345,9 +340,8 @@ const BFSI = () => {
       {/* SOCIAL MEDIA & BRAND AUTHORITY */}
       <section
         data-section="social"
-        className={`bg-gradient-to-r from-blue-50 to-white py-20 px-6 transition-all duration-700 ease-out ${
-          visibleSections.social ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`bg-gradient-to-r from-blue-50 to-white py-20 px-6 transition-all duration-700 ease-out ${visibleSections.social ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -379,9 +373,9 @@ const BFSI = () => {
             </p>
           </div>
           <div className="relative flex justify-center items-center animate-float" style={{ animationDelay: "0.3s" }}>
-            <img 
-              src={SocialMediaBrandAuthorityImage} 
-              alt="Social Media Brand Authority" 
+            <img
+              src={SocialMediaBrandAuthorityImage}
+              alt="Social Media Brand Authority"
               loading="lazy"
             />
           </div>
@@ -391,9 +385,8 @@ const BFSI = () => {
       {/* MARKETING AUTOMATION & LEAD NURTURING */}
       <section
         data-section="automation"
-        className={`bg-white py-20 px-6 transition-all duration-700 ease-out ${
-          visibleSections.automation ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`bg-white py-20 px-6 transition-all duration-700 ease-out ${visibleSections.automation ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -401,7 +394,7 @@ const BFSI = () => {
               Marketing Automation & Lead Nurturing
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              The BFSI sales cycle is long. Strategic automation ensures prospects 
+              The BFSI sales cycle is long. Strategic automation ensures prospects
               are nurtured with the right message at the right time.
             </p>
             <p className="text-gray-800 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
@@ -439,9 +432,8 @@ const BFSI = () => {
       {/* CONVERSION RATE OPTIMIZATION */}
       <section
         data-section="cro"
-        className={`bg-blue-50 py-20 px-6 transition-all duration-700 ease-out ${
-          visibleSections.cro ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`bg-blue-50 py-20 px-6 transition-all duration-700 ease-out ${visibleSections.cro ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -484,9 +476,8 @@ const BFSI = () => {
       {/* OUR STRATEGIC APPROACH */}
       <section
         data-section="process"
-        className={`bg-white py-20 px-6 transition-all duration-700 ease-out ${
-          visibleSections.process ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`bg-white py-20 px-6 transition-all duration-700 ease-out ${visibleSections.process ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -520,11 +511,11 @@ const BFSI = () => {
           </div>
           <div className="text-center max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
             <p className="text-lg text-gray-800 font-medium leading-relaxed">
-              Every strategy is backed by 
-              <span className="text-blue-700 font-semibold"> data</span>, 
-              powered by 
-              <span className="text-blue-700 font-semibold"> creativity</span>, 
-              and aligned with 
+              Every strategy is backed by
+              <span className="text-blue-700 font-semibold"> data</span>,
+              powered by
+              <span className="text-blue-700 font-semibold"> creativity</span>,
+              and aligned with
               <span className="text-blue-700 font-semibold"> measurable business goals</span>.
             </p>
           </div>
@@ -534,9 +525,8 @@ const BFSI = () => {
       {/* INDUSTRIES WE SERVE IN BFSI */}
       <section
         data-section="industries"
-        className={`bg-gray-50 py-20 px-6 transition-all duration-700 ease-out ${
-          visibleSections.industries ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`bg-gray-50 py-20 px-6 transition-all duration-700 ease-out ${visibleSections.industries ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -547,11 +537,11 @@ const BFSI = () => {
               Delivering growth-focused digital strategies across the entire financial ecosystem.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-14">
+          <div className="flex flex-wrap justify-center gap-8 mb-14">
             {[
               { title: "Retail Banking", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M3 10l9-7 9 7v9a2 2 0 01-2 2h-4v-6H9v6H5a2 2 0 01-2-2z" /> },
               { title: "Corporate Banking", icon: <><rect x="3" y="7" width="18" height="13" rx="2" /><path strokeLinecap="round" strokeLinejoin="round" d="M16 3v4M8 3v4" /></> },
-              { title: "NBFCs", icon: <><circle cx="12" cy="12" r="9" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 3" /></> },
+              { title: "Non Banking Financial Company", icon: <><circle cx="12" cy="12" r="9" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 3" /></> },
               { title: "Insurance Providers", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" /> },
               { title: "Fintech Startups", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /> },
               { title: "Investment & Wealth Management Firms", icon: <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l6-6 4 4 8-8" /> },
@@ -559,7 +549,7 @@ const BFSI = () => {
             ].map((industry, idx) => (
               <div
                 key={idx}
-                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 text-center animate-fade-in-up"
+                className="bg-white p-8 rounded-2xl shadow-sm hover:bg-blue-100 max-w-70 hover:shadow-xl hover:-translate-y-1 transition duration-300 text-center animate-fade-in-up"
                 style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
               >
                 <div className="flex justify-center mb-4">
@@ -582,9 +572,8 @@ const BFSI = () => {
       {/* WHY CHOOSE US FOR BFSI MARKETING */}
       <section
         data-section="why-choose"
-        className={`bg-gradient-to-b from-white to-blue-50 py-20 px-6 transition-all duration-700 ease-out ${
-          visibleSections["why-choose"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`bg-gradient-to-b from-white to-blue-50 py-20 px-6 transition-all duration-700 ease-out ${visibleSections["why-choose"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -594,7 +583,7 @@ const BFSI = () => {
             <p className="text-gray-700 text-lg leading-relaxed mb-8 animate-fade-in-right" style={{ animationDelay: "0.1s" }}>
               At <span className="font-semibold text-blue-700">
                 Adkryoss managed by Clink Consultancy Services Private Limited
-              </span>, we combine deep industry insight with cutting-edge digital tools 
+              </span>, we combine deep industry insight with cutting-edge digital tools
               to create scalable growth systems for financial brands.
             </p>
             <ul className="space-y-4 mb-8">
@@ -630,19 +619,18 @@ const BFSI = () => {
       {/* THE FUTURE OF BFSI MARKETING IS DIGITAL */}
       <section
         data-section="future"
-        className={`bg-gray-900 py-24 px-6 text-center transition-all duration-700 ease-out ${
-          visibleSections.future ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`bg-gray-900 py-24 px-6 text-center transition-all duration-700 ease-out ${visibleSections.future ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight animate-fade-in-up">
-            The Future of BFSI Marketing Is 
+            The Future of BFSI Marketing Is
             <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
               {" "}Digital
             </span>
           </h2>
           <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Open banking, AI-driven underwriting, fintech disruption, and hyper-personalization 
+            Open banking, AI-driven underwriting, fintech disruption, and hyper-personalization
             are redefining financial services. The brands that win are the ones that adapt faster.
           </p>
           <p className="text-white text-xl md:text-2xl font-semibold mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
@@ -662,18 +650,17 @@ const BFSI = () => {
       {/* FINAL CTA */}
       <section
         data-section="cta"
-        className={`bg-gradient-to-r from-blue-800 to-indigo-800 py-16 px-6 text-white text-center transition-all duration-700 ease-out ${
-          visibleSections.cta ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`bg-gradient-to-r from-blue-800 to-indigo-800 py-16 px-6 text-white text-center transition-all duration-700 ease-out ${visibleSections.cta ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight text-white animate-fade-in-up">
             Let's Build a High-Performance Financial Growth Engine
           </h2>
           <p className="text-lg md:text-xl leading-relaxed mb-6 text-white animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Partner with 
-            <span className="font-bold"> Adkryoss managed by Clink Consultancy Services Private Limited </span> 
-            and transform your BFSI marketing into a measurable, scalable, 
+            Partner with
+            <span className="font-bold"> Adkryoss managed by Clink Consultancy Services Private Limited </span>
+            and transform your BFSI marketing into a measurable, scalable,
             and future-ready digital system.
           </p>
           <p className="text-lg md:text-xl font-semibold mb-8 text-white animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
